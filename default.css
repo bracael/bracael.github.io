@@ -50,6 +50,18 @@ A {
 }
 
 
+DIV.DIRECTmenu {
+    width: 100vw;
+    height: 56px;
+    background: #2c2d31;
+    float: left;
+}
+IFRAME.FRAMEdrct {
+    height: calc(100vh - 56px);
+    float: left;
+}
+
+
 
 DIV.POSTbox .POSTbtn LI A,
 .PURCHASEbox,
@@ -240,7 +252,7 @@ SECTION.STATICpage {
 .MASTERpost H3.STATICtitle {
     padding: 26px 16px;
 }
-.MASTERpost SECTION.BREADcrumb { padding: 16px 8px 0; }
+.Blog .MASTERpost SECTION.BREADcrumb { padding: 16px 8px 0; }
 .MENUpost { margin: 0 16px; }
 .ITEMpost { padding: 0 16px; }
 .HEADERnav { padding: 0 8px; width: calc(100% + -16px) !IMPORTANT; }
@@ -1520,7 +1532,7 @@ DIV.POSTbox SECTION.POSTup:after {
     z-index: 11;
 }
 SECTION.POSTup.BROKENpost:before {
-    border-color: #00a7b1 transparent !IMPORTANT;
+    border-color: #b10000 transparent !IMPORTANT;
 }
 SECTION.POSTup.free:before {
     border-color: #00bfa5 transparent !IMPORTANT;
