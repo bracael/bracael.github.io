@@ -2358,7 +2358,7 @@ A.BTNit.URLfree {
     width: 16px;
     display: inline-block;
 }
-.PURCHASEbox, .FREEspot {
+.PURCHASEbox, .FREEspot, .STATICbox {
     background: #fff;
     font-family: var(--font-lato);
 }
