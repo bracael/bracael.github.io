@@ -29,7 +29,7 @@ function POSTbox(pID, pURL, pTITLE, pLOCAL, pLABEL, pDATE){
 	var DOCit = new DOMParser().parseFromString(CODEdemo, 'text/html');
 
 
-
+// console.log(DOCit.body.querySelector(".zip").hasAttribute("update"))
 
 if(DOCit.body.querySelector('.demo') > -1 ? false : true){
 
@@ -54,11 +54,11 @@ var BOLLzip =  DOCit.body.querySelector('.zip') > -1 ? false : true;
 var BOLLbaixar =  DOCit.body.querySelector('.baixar') > -1 ? false : true;
 var BOLLdemo =  DOCit.body.querySelector('.demo') > -1 ? false : true;
 
-if(BOLLbaixar && BOLLdemo && BOLLbuy && BOLLzip && DEMOtf && pLOCAL.split('').includes('0','1','2','3','4','5','6','7','8','9')){
+if(BOLLbaixar && BOLLdemo && BOLLbuy && BOLLzip && DEMOtf && pLOCAL.split('').includes('0','1','2','3','4','5','6','7','8','9') && DOCit.body.querySelector('.zip').hasAttribute('update') && DOCit.body.querySelector('.zip').hasAttribute('layout')){
 	// console.log('Normal: '+pTITLE, true) // producto com valor
 	var CHECKpost = true;
 }
-else if(BOLLbaixar && BOLLdemo && BOLLzip && DEMOtf && pLOCAL.split(' ').includes('free')){
+else if(BOLLbaixar && BOLLdemo && BOLLzip && DEMOtf && pLOCAL.split(' ').includes('free') && DOCit.body.querySelector('.zip').hasAttribute('update') && DOCit.body.querySelector('.zip').hasAttribute('layout')){
 	// console.log('Grátis: '+pTITLE, true) // producto com valor
 	var CHECKpost = true;
 }
@@ -273,41 +273,51 @@ if(xc == true){
 if(xd == true){
 	var CHECKOUTbtn = DOCit.body.querySelector('.buy').getAttribute('url');}
 if(xe == true){
-if(DOCit.body.querySelector(".zip").hasAttribute("update") == true){
+if(DOCit.body.querySelector(".zip").hasAttribute("update")){
 	var ITEMupdate = DOCit.body.querySelector('.zip').getAttribute('update').replace(/(-)/gi,'/');}
 	else{ var ITEMupdate = false; }
-if(DOCit.body.querySelector(".zip").hasAttribute("created") == true){
-	var ITEMcreate = DOCit.body.querySelector('.zip').getAttribute('created').replace(/(-)/gi,'/');}
-	else { var ITEMcreate = false}
-if(DOCit.body.querySelector(".zip").hasAttribute("layout") == true){
+if(DOCit.body.querySelector(".zip").hasAttribute("layout")){
 	var ITEMlayout = DOCit.body.querySelector('.zip').getAttribute('layout')[0].toUpperCase() +
 	DOCit.body.querySelector('.zip').getAttribute('layout').slice(1);}
 	else { var ITEMlayout = false }}
 
+// pLOCAL.split('').includes('0','1','2','3','4','5','6','7','8','9')
+console.log(!xb)
+	if(!xa && (TYPEpage.includes('excl') || TYPEpage.includes('free') || pLOCAL.split('').includes('0','1','2','3','4','5','6','7','8','9'))){ var ua = '<li><p class="SLCTit">Encerramento inesperado</p><p class="SLCTit">demo</p><p class="UNICitem">url</p><p>valor</p></li>'; } else { var ua = '' }
+	if(!xb && (TYPEpage.includes('excl') || TYPEpage.includes('free') || pLOCAL.split('').includes('0','1','2','3','4','5','6','7','8','9'))){ var ub = '<li><p class="SLCTit">Encerramento inesperado</p><p class="SLCTit">pre</p><p>-</p><p>texto</p></li>'; } else { var ub = '' }
+	if(!xc && (TYPEpage.includes('free') || pLOCAL.split('').includes('0','1','2','3','4','5','6','7','8','9'))){ var uc = '<li><p class="SLCTit">Encerramento inesperado</p><p class="SLCTit">baixar</p><p class="UNICitem">url</p><p>valor</p></li>'; } else { var uc = '' }
+	if(!xd && (pLOCAL.split('').includes('0','1','2','3','4','5','6','7','8','9'))){ var ud = '<li><p class="SLCTit">Encerramento inesperado</p><p class="SLCTit">buy</p><p class="UNICitem">url</p><p>valor</p></li>'; } else { var ud = '' }
+	if(!xe && (TYPEpage.includes('free') || pLOCAL.split('').includes('0','1','2','3','4','5','6','7','8','9'))){ var ue = '<li><p class="SLCTit">Encerramento inesperado</p><p class="SLCTit">zip</p><p>-</p><p>valor</p></li>'; } else { var ue = '' }
+	if(!ITEMupdate && (TYPEpage.includes('free') || pLOCAL.split('').includes('0','1','2','3','4','5','6','7','8','9'))){ var uf = '<li><p class="SLCTit">Encerramento inesperado</p><p>zip</p><p class="SLCTit">update</p><p>valor</p></li>'; } else { var uf = '' }
+	if(!ITEMlayout && (TYPEpage.includes('free') || pLOCAL.split('').includes('0','1','2','3','4','5','6','7','8','9'))){ var ug = '<li><p class="SLCTit">Encerramento inesperado</p><p>zip</p><p class="SLCTit">layout</p><p>valor</p></li>'; } else { var ug = '' }
 
+	var ERRORpost = '<div class="MSGfailure"><h4>ERRO 500, OPS!<span>Erro Interno do Servidor</span></h4><ul><div class="FAILUREspot"><h5>Descrição</h5><li><p class="report">Os comandos estão digitados de maneira incorreta, por favor, verifique as palavras no texto da postagem.</p></li></div><div class="FAILUREspot"><h5>Relatorio de erros</h5><div class="FAILUREtype"><li>Resumo</li><li>Elemento</li><li>Propriedade</li><li>Tipo</li></div><div class="TYPEinfo">' +ua+ub+uc+ud+ue+uf+ug+ '</div></div><div class="FAILUREspot LASTfail"><h5>Informações adicionais</h5><li><p class="item"><b>Caminho URL</b><span>' + pURL + '</span></p></li><li><p class="item"><b>ID do Post</b><span>' + pID + '</span></p></li><li><p class="item"><b>Título</b><span>' + pTITLE + '</span></p></li><li><p class="item"><b>Data</b><span>' + pDATE + '</span></p></li></div></ul><a class="HOMEurl" href="#">Página inicial</a></div>';
 
 if(TYPEpage.includes('free')){
-if((xa == true) && (xb == true)){
-	summary = '<div class="POSTcontent"><div class="POSTleft"><div class="LEFTinst"><div class="POSTdoor"><img src="'+img[0].src+'"></div><div class="TOOLSpost"><div class="ACTIONpost">' +SHAREpage+ '<div class="LIVEspot"><a class="btn LIVEtemplate" href="' +LIVEtemplate+ '" target="_blank"><div><i class="SEEit"></i><span>Visualizar tema</span></div></a></div></div></div><div class="DESCpost"><h3>' +pTITLE+ '<i class="CROSSicon" feedback=""></i></h3><div class="TYPEfile"><li>Tipo de arquivo<span>ZIP</span></li><li>Layout<span>' +ITEMlayout+ '</span></li><li>Última atualização<span>' +ITEMupdate+ '</span></li></div><p>' +DESCpost+ '</p><div class="FREEdownload"><li><a class="URLfree" href="' +URLfree+ '"><div class="btn-download-left"></div><div class="btn-download-right"><span class="btn-download-right-main">Baixar Grátis</span> <span class="btn-download-right-secondary">versão de avaliação</span></div></a></li><li class="SECURITYitem">Verificado com <b>Antivírus</b></li></div></div><div class="INFORMATIONpage">' +FEATURESthis+CHANGElog+ '</div></div></div><div class="POSTright"><div class="PURCHASEbox"><div class="PURCHASEinst"><h4><span class="LICENSEtxt">Premium</span><a target="_blank" href="#"><i class="CIRCLEhelp"></i></a></h4><div class="PRICEbar"><span class="PREMIUMval">' +pricePost+ '</span><span class="COINhere">BRL</span></div><div class="CHECKOUTwrap"><li>Atualização do template</li><li>Nenhum script criptografado</li><li>3 Meses de suporte</li><li>Para domínios ilimitados</li><li>Remover créditos</li><span class="BUTTONpost"><a href="' +CHECKOUTbtn+ '" rel="nofollow" target="_blank" class="BTNit CHECKout"><i class="CARTit"></i><span>Comprar</span></a></span></div></div></div></div></div>';
+if((xa == true) && (xb == true) && (xc == true) && (xe == true) && (ITEMupdate > -1 ? false : true == true) && (ITEMlayout > -1 ? false : true == true)){
+	summary = '<div class="POSTcontent"><div class="POSTleft"><div class="LEFTinst"><div class="POSTdoor"><img src="'+img[0].src+'"></div><div class="TOOLSpost"><div class="ACTIONpost">' +SHAREpage+ '<div class="LIVEspot"><a class="btn LIVEtemplate" href="' +LIVEtemplate+ '" target="_blank"><div><i class="SEEit"></i><span>Visualizar tema</span></div></a></div></div></div><div class="DESCpost"><h3>' +pTITLE+ '<i class="CROSSicon" feedback=""></i></h3><div class="TYPEfile"><li>Tipo de arquivo<span>ZIP</span></li><li>Layout<span>' +ITEMlayout+ '</span></li><li>Última atualização<span>' +ITEMupdate+ '</span></li></div><p>' +DESCpost+ '</p><div class="FREEdownload"><li><a class="URLfree" href="' +URLfree+ '"><div class="btn-download-left"></div><div class="btn-download-right"><span class="btn-download-right-main">Baixar Grátis</span><span class="btn-download-right-secondary">Download seguro</span></div></a></li><li class="SECURITYitem">Verificado com <b>Antivírus</b></li></div></div><div class="INFORMATIONpage">' +FEATURESthis+CHANGElog+ '</div></div></div><div class="POSTright"><div class="STATICbox"><div class="fb-page" data-href="https://www.facebook.com/bracaelcom" data-tabs="timeline" data-width="" data-height="" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/bracaelcom" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/bracaelcom">Bracael</a></blockquote></div></div></div></div>';
 	div.innerHTML = summary;}
+	else{
+	div.innerHTML = ERRORpost;}
 
 
 console.log('post type grátis');
 }
 else if(TYPEpage.includes('excl')){
 if((xa == true) && (xb == true)){
-	summary = '<div class="POSTcontent"><div class="POSTleft"><div class="LEFTinst"><div class="POSTdoor"><img src="'+img[0].src+'"></div><div class="TOOLSpost"><div class="ACTIONpost">' +SHAREpage+ '<div class="LIVEspot"><a class="btn LIVEtemplate" href="' +LIVEtemplate+ '" target="_blank"><div><i class="SEEit"></i><span>Visualizar tema</span></div></a></div></div></div><div class="DESCpost"><h3>' +pTITLE+ '<i class="CROSSicon" feedback=""></i></h3><div class="TYPEfile"><li>Tipo de arquivo<span>ZIP</span></li><li>Layout<span>' +ITEMlayout+ '</span></li><li>Última atualização<span>' +ITEMupdate+ '</span></li></div><p>' +DESCpost+ '</p><div class="FREEdownload"><li><a class="URLfree" href="' +URLfree+ '"><div class="btn-download-left"></div><div class="btn-download-right"><span class="btn-download-right-main">Baixar Grátis</span> <span class="btn-download-right-secondary">versão de avaliação</span></div></a></li><li class="SECURITYitem">Verificado com <b>Antivírus</b></li></div></div><div class="INFORMATIONpage">' +FEATURESthis+CHANGElog+ '</div></div></div><div class="POSTright"><div class="PURCHASEbox"><div class="PURCHASEinst"><h4><span class="LICENSEtxt">Premium</span><a target="_blank" href="#"><i class="CIRCLEhelp"></i></a></h4><div class="PRICEbar"><span class="PREMIUMval">' +pricePost+ '</span><span class="COINhere">BRL</span></div><div class="CHECKOUTwrap"><li>Atualização do template</li><li>Nenhum script criptografado</li><li>3 Meses de suporte</li><li>Para domínios ilimitados</li><li>Remover créditos</li><span class="BUTTONpost"><a href="' +CHECKOUTbtn+ '" rel="nofollow" target="_blank" class="BTNit CHECKout"><i class="CARTit"></i><span>Comprar</span></a></span></div></div></div></div></div>';
+	summary = '<div class="POSTcontent"><div class="POSTleft"><div class="LEFTinst"><div class="POSTdoor"><img src="'+img[0].src+'"></div><div class="TOOLSpost"><div class="ACTIONpost">' +SHAREpage+ '<div class="LIVEspot"><a class="btn LIVEtemplate" href="' +LIVEtemplate+ '" target="_blank"><div><i class="SEEit"></i><span>Visualizar tema</span></div></a></div></div></div><div class="DESCpost"><h3>' +pTITLE+ '</h3><p>' +DESCpost+ '</p></div><div class="INFORMATIONpage">' +FEATURESthis+CHANGElog+ '</div></div></div><div class="POSTright"><div class="STATICbox"><div class="fb-page" data-href="https://www.facebook.com/bracaelcom" data-tabs="timeline" data-width="" data-height="" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/bracaelcom" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/bracaelcom">Bracael</a></blockquote></div></div></div></div>';
 	div.innerHTML = summary;}
+	else{
+	div.innerHTML = ERRORpost;}
 
 console.log('post type exclusivo');
 }
 else{
 if((xa == true) && (xb == true) && (xc == true) && (xd == true) && (xe == true) && (ITEMupdate > -1 ? false : true == true) && (ITEMlayout > -1 ? false : true == true)){
-	summary = '<div class="POSTcontent"><div class="POSTleft"><div class="LEFTinst"><div class="POSTdoor"><img src="'+img[0].src+'"></div><div class="TOOLSpost"><div class="ACTIONpost">' +SHAREpage+ '<div class="LIVEspot"><a class="btn LIVEtemplate" href="' +LIVEtemplate+ '" target="_blank"><div><i class="SEEit"></i><span>Visualizar tema</span></div></a></div></div></div><div class="DESCpost"><h3>' +pTITLE+ '<i class="CROSSicon" feedback=""></i></h3><div class="TYPEfile"><li>Tipo de arquivo<span>ZIP</span></li><li>Layout<span>' +ITEMlayout+ '</span></li><li>Última atualização<span>' +ITEMupdate+ '</span></li></div><p>' +DESCpost+ '</p><div class="FREEdownload"><li><a class="URLfree" href="' +URLfree+ '"><div class="btn-download-left"></div><div class="btn-download-right"><span class="btn-download-right-main">Baixar Grátis</span> <span class="btn-download-right-secondary">versão de avaliação</span></div></a></li><li class="SECURITYitem">Verificado com <b>Antivírus</b></li></div></div><div class="INFORMATIONpage">' +FEATURESthis+CHANGElog+ '</div></div></div><div class="POSTright"><div class="PURCHASEbox"><div class="PURCHASEinst"><h4><span class="LICENSEtxt">Premium</span><a target="_blank" href="#"><i class="CIRCLEhelp"></i></a></h4><div class="PRICEbar"><span class="PREMIUMval">' +pricePost+ '</span><span class="COINhere">BRL</span></div><div class="CHECKOUTwrap"><li>Atualização do template</li><li>Nenhum script criptografado</li><li>3 Meses de suporte</li><li>Para domínios ilimitados</li><li>Remover créditos</li><span class="BUTTONpost"><a href="' +CHECKOUTbtn+ '" rel="nofollow" target="_blank" class="BTNit CHECKout"><i class="CARTit"></i><span>Comprar</span></a></span></div></div></div></div></div>';
+	summary = '<div class="POSTcontent"><div class="POSTleft"><div class="LEFTinst"><div class="POSTdoor"><img src="'+img[0].src+'"></div><div class="TOOLSpost"><div class="ACTIONpost">' +SHAREpage+ '<div class="LIVEspot"><a class="btn LIVEtemplate" href="' +LIVEtemplate+ '" target="_blank"><div><i class="SEEit"></i><span>Visualizar tema</span></div></a></div></div></div><div class="DESCpost"><h3>' +pTITLE+ '<i class="CROSSicon" feedback=""></i></h3><div class="TYPEfile"><li>Tipo de arquivo<span>ZIP</span></li><li>Layout<span>' +ITEMlayout+ '</span></li><li>Última atualização<span>' +ITEMupdate+ '</span></li></div><p>' +DESCpost+ '</p><div class="FREEdownload"><li><a class="URLfree" href="' +URLfree+ '"><div class="btn-download-left"></div><div class="btn-download-right"><span class="btn-download-right-main">Baixar Grátis</span><span class="btn-download-right-secondary">versão de avaliação</span></div></a></li><li class="SECURITYitem">Verificado com <b>Antivírus</b></li></div></div><div class="INFORMATIONpage">' +FEATURESthis+CHANGElog+ '</div></div></div><div class="POSTright"><div class="PURCHASEbox"><div class="PURCHASEinst"><h4><span class="LICENSEtxt">Premium</span><a target="_blank" href="#"><i class="CIRCLEhelp"></i></a></h4><div class="PRICEbar"><span class="PREMIUMval">' +pricePost+ '</span><span class="COINhere">BRL</span></div><div class="CHECKOUTwrap"><li>Atualização do template</li><li>Nenhum script criptografado</li><li>3 Meses de suporte</li><li>Para domínios ilimitados</li><li>Remover créditos</li><span class="BUTTONpost"><a href="' +CHECKOUTbtn+ '" rel="nofollow" target="_blank" class="BTNit CHECKout"><i class="CARTit"></i><span>Comprar</span></a></span></div></div></div></div></div>';
 	div.innerHTML = summary;}
-else{
-console.log('erro');
-}
+	else{
+	div.innerHTML = ERRORpost;}
 
 console.log('normal, comum, com valor');
 }
