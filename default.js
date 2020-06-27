@@ -18,7 +18,23 @@ console.log(JSON.parse(sessionStorage.CACHEurl)[JSON.parse(sessionStorage.CACHEu
 console.log(JSON.parse(sessionStorage.CACHEurl).length)
 *********************************************/
 
+//DIRECT PAGE
+if(document.body.contains(document.querySelector('.DIRECTmenu'))){
+
+var WINDOWhref = window.location.href; //window.location.href
+var url = new URL(WINDOWhref);
+
+if(url.searchParams.get("url") != ''){
+	var DEMOurl = url.searchParams.get("url");
+	console.log(DEMOurl);}
+	else{
+	window.location.assign(window.location.protocol +'//'+ window.location.hostname);}
+
+	document.querySelector('.DIRECTmenu').insertAdjacentHTML('afterend', '<iframe class="FRAMEdrct" src="' +DEMOurl+ '" width="100%" height="100%"></iframe>');
+}
+
 //EFFECT MODAL
+if(document.body.contains(document.querySelector('[feedback]')) && document.body.contains(document.querySelector('.MODALfeedback'))){
 for(var i = 0; i < document.querySelectorAll('[feedback]').length; i++){
 document.querySelectorAll('[feedback]')[i].addEventListener('click', function(){
 	$('.MODALfeedback').fadeIn(500);
@@ -33,19 +49,20 @@ document.querySelectorAll('.CLOSEmodal')[a].addEventListener('click', function()
 	document.querySelector('.MODALfeedback').classList.remove('ACTIVEit');
 	$('.MODALfeedback').fadeOut(500);
 	if(document.body.contains(document.querySelector('.CLOSEfeed.CLOSEmodal'))){
-	document.querySelector('.CLOSEfeed.CLOSEmodal').remove();}});}});}
+document.querySelector('.CLOSEfeed.CLOSEmodal').remove();}});}});}}
 
 //TOGGLE CATEGORIAS MENUNAV
+if(document.body.contains(document.querySelector('.HREFmost'))){
 document.querySelector('.HREFmost').addEventListener('click', function(){
 	this.classList.toggle('ACTIVEit');
 	$('#LABELspot').animate({ height: "toggle" },{duration: 300});
 if(this.innerHTML === "Mostrar categorias") {
     this.innerHTML = "Ocultar categorias";}
 	else{
-	this.innerHTML = "Mostrar categorias";}});
+	this.innerHTML = "Mostrar categorias";}});}
 
 //SCROLL SELECT CURRENT DIV
-if(document.body.contains(document.querySelector('.ARTICLEsttc')) === true){
+if(document.body.contains(document.querySelector('.ARTICLEsttc'))){
 const target = document.querySelectorAll('[data-text]')
 function animeScroll(){
 const windowTop = window.pageYOffset;
@@ -72,9 +89,10 @@ for(var i = 0; i < OBJname.length; i++){
 ACTIVEpost.classList.add('ACTIVElist');}}}
 
 //RESIZE WIDTH RESPONSIVE
+if(document.body.contains(document.querySelector('HEADER.HEADmenu'))){
 setInterval(function(){
 var HTMLoffset = document.querySelector('HTML');
-document.querySelector('HEADER.HEADmenu').style.width = HTMLoffset.offsetWidth + 'px'; }, 0);
+document.querySelector('HEADER.HEADmenu').style.width = HTMLoffset.offsetWidth + 'px'; }, 0);}
 
 if(document.body.contains(document.querySelector('.NOTIFYit')) === true && document.body.contains(document.querySelector('.SIDEnav')) === true){
 document.querySelector('.SELECTitem').addEventListener('click', function(){
@@ -102,6 +120,7 @@ if(document.querySelector('.PROMOdiv').classList.contains('ACTIVEit') === true){
 	document.querySelector('.TEXT-MENUalert').innerText = "Comentários";}});}
 
 //MENUPUSH LATERAL
+if(document.body.contains(document.querySelector('.BTNhref'))){
 var PUSHmenu = document.querySelector('.PUSHmenu');
 var CONTENTframe = document.getElementById('CONTENTframe');
 document.querySelector('.BTNhref').addEventListener('click', function(){
@@ -117,7 +136,7 @@ document.querySelector('.SWIPEopen').addEventListener('click', function(){
 	document.querySelector('.BTNhref').classList.remove('HREFactive');
 	PUSHmenu.classList.remove('MENUactive');
 	CONTENTframe.classList.remove('SWIPEopen');
-	document.body.removeAttribute('style');});}});
+document.body.removeAttribute('style');});}});}
 
 //TOGLE FOOTER
 if(document.body.contains(document.querySelector('.CROSSdown')) === true){
@@ -138,7 +157,7 @@ document.querySelector('.SEARCHinput').addEventListener('focusout', function(){
 SEARCHbar.classList.remove('ACTIVEit');});});}
 
 //CONTENT TRANSITION POST
-if(document.body.contains(document.querySelector('.ITEMpost')) === true){
+if(document.body.contains(document.querySelector('.ITEMpost'))){
 for(var i = 0; i < document.querySelectorAll('.SELECTtab').length; i++){
 var COMMENTSwid = document.querySelectorAll('.SELECTtab');
 
