@@ -68,7 +68,8 @@ DIV.POSTbox .POSTbtn LI A,
 SPAN.BUTTONpost A,
 .DESCpost,
 .INFORMATIONpage,
-.RELATEDinst A {
+.RELATEDinst A,
+.STATICbox.FACEsec {
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     -ms-border-radius: 3px;
@@ -2361,6 +2362,10 @@ A.BTNit.URLfree {
 .PURCHASEbox, .FREEspot, .STATICbox {
     background: #fff;
     font-family: var(--font-lato);
+}
+.STATICbox.FACEsec {
+    overflow: hidden;
+    margin-top: 22px;
 }
 .TOOLSpost {
     background: #fff;
