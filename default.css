@@ -435,6 +435,75 @@ div#sidebar .widget-content LI A {
 
 
 
+
+
+
+DIV.DIRECTmenu SECTION.SPOTlogo {
+    float: left;
+    width: 176px;
+}
+DIV.DIRECTmenu SECTION.SPOTlogo A {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    float: left;
+}
+
+SECTION.PREMIUMspot {
+    float: left;
+}
+SECTION.PREMIUMspot A.CHECKout {
+    border-radius: 3px;
+}
+SECTION.PREMIUMspot A.CHECKout {
+    color: #fff;
+    padding: 8px 12px 6px;
+    border-width: 0 0 4px;
+    border-style: solid;
+    font-size: 18px;
+    text-align: center;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: all .3s;
+    display: block;
+    margin: 8.5px 0;
+}
+SECTION.PREMIUMspot A.CHECKout I.CARTit, SECTION.PREMIUMspot A.CHECKout I.CARTit::after {
+    height: 14px;
+    width: 14px;
+}
+SECTION.PREMIUMspot A.CHECKout I.CARTit {
+    display: inline-block;
+    top: 1px;
+    margin-right: 8px;
+}
+SECTION.PREMIUMspot A.CHECKout I.CARTit::after {
+    content: '';
+    display: block;
+}
+
+
+DIV.DIRECTmenu SECTION.REMOVEframe {
+    float: left;
+}
+SECTION.REMOVEframe {
+    float: left;
+    padding: 19px;
+}
+SECTION.REMOVEframe, SECTION.REMOVEframe::after {
+    width: 18px;
+    height: 18px;
+}
+SECTION.REMOVEframe::after {
+    content: '';
+    background-size: 18px;
+    display: block;
+}
+
+
+
+
 /*-------------------------------*/
 /*---------- PUSH-MENU ----------*/
 /*-------------------------------*/
@@ -497,7 +566,7 @@ NAV.PUSHmenu LI A::after {
 NAV.PUSHmenu UL LI A:hover { background: var(--white-transparent-bg); }
 NAV.PUSHmenu LI A { color: var(--color-clean); text-decoration: none; display: block; padding: 7px 10px 7px 62px; font-weight: 100; line-height: 26px; font-size: 14px; font-family: var(--font-poppins); }
 NAV.PUSHmenu FOOTER, NAV.PUSHmenu FOOTER * { display: block; }
-NAV.PUSHmenu SECTION {
+NAV.PUSHmenu SECTION, DIV.DIRECTmenu SECTION.SPOTlogo {
     box-shadow: inset 0 -1px hsl(0, 0%, 14%);
     font-weight: bold;
     font-size: 16px;
@@ -953,9 +1022,6 @@ FORM.SEARCHform .SEARCHit {
 }
 .SEARCHpopular {
     font-family: var(--font-lato);
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
     text-align: center;
     margin: 22px 16px 0;
     line-height: 30px;
@@ -963,6 +1029,9 @@ FORM.SEARCHform .SEARCHit {
 }
 .POPULARinst {
     display: inline-block;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 .SEARCHpopular I.CROSSicon, .SEARCHpopular I.LASTsearch {
     display: inline-block;
