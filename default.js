@@ -1,5 +1,38 @@
-window.onload = function(){
+function HTTPXMLresquest(JSONit){
+	var JSONit = JSONit.entry.content.$t.replace(/<[^>]*>?/gm, '');
 
+if(JSONit.substring(0, JSONit.length-JSONit.length+1) == ' '){
+	var JSONit = JSONit.substring(1, JSONit.length);}
+
+	var POSTcode = JSONit.replace(/] \[/gm, ']\n[').replace(/]  \[/gm, ']\n[').replace(/]   \[/gm, ']\n[');
+	var CODEdemo = POSTcode.replace('[demo', '[class="demo"');
+	var CODEdemo = CODEdemo.replace('[pre]', '<pre>');
+	var CODEdemo = CODEdemo.replace('[/pre]', '</pre>');
+	var CODEdemo = CODEdemo.replace('[buy', '[class="buy"');
+	var CODEdemo = CODEdemo.replace('[zip', '[class="zip"');
+	var CODEdemo = CODEdemo.replace('[baixar', '[class="baixar"');
+	var CODEdemo = CODEdemo.replace(/(?:\[changelog)/g, '[class="changelog"');
+	var CODEdemo = CODEdemo.replace(/(?:\"])/g, '"></CAEL>');
+	var CODEdemo = CODEdemo.replace(/(?:\[responsive])/g, '<responsive></responsive>');
+	var CODEdemo = CODEdemo.replace(/(?:\[error])/g, '<error></error>');
+	var CODEdemo = CODEdemo.replace(/(?:\[pagenavi])/g, '<pagenavi></pagenavi>');
+	var CODEdemo = CODEdemo.replace(/(?:\[cookies])/g, '<cookies></cookies>');
+	var CODEdemo = CODEdemo.replace(/(?:\[ads])/g, '<ads></ads>');
+	var CODEdemo = CODEdemo.replace(/(?:\[fav])/g, '<fav></fav>');
+	var CODEdemo = CODEdemo.replace(/(?:\[comments])/g, '<comments></comments>');
+	var CODEdemo = CODEdemo.replace(/(?:\[seo])/g, '<seo></seo>');
+	var CODEdemo = CODEdemo.replace(/(?:\[post])/g, '<post></post>');
+	var CODEdemo = CODEdemo.replace(/(?:\[class=")/g, '<CAEL class="');
+
+	var DOCit = new DOMParser().parseFromString(CODEdemo, 'text/html');
+
+	console.log(DOCit.body.querySelector('.demo').getAttribute('url'))
+	console.log(document.querySelector('.CHECKout'))
+	
+	document.querySelector('.FRAMEdrct').setAttribute('src', DOCit.body.querySelector('.demo').getAttribute('url'))
+}
+
+window.onload = function(){
 //CACHE URL SESSION STORAGE
 if(sessionStorage.CACHEurl === undefined){
 	sessionStorage.setItem('CACHEurl', JSON.stringify([window.location.href]));}
@@ -20,18 +53,14 @@ console.log(JSON.parse(sessionStorage.CACHEurl).length)
 
 //DIRECT PAGE
 if(document.body.contains(document.querySelector('.DIRECTmenu'))){
-
 var WINDOWhref = window.location.href; //window.location.href
 var url = new URL(WINDOWhref);
 
-if(url.searchParams.get("url") != ''){
-	var DEMOurl = url.searchParams.get("url");
-	console.log(DEMOurl);}
+if(url.searchParams.get("id") != ''){
+	var DEMOurl = url.searchParams.get("id");}
 	else{
 	window.location.assign(window.location.protocol +'//'+ window.location.hostname);}
-
-	document.querySelector('.DIRECTmenu').insertAdjacentHTML('afterend', '<iframe class="FRAMEdrct" src="' +DEMOurl+ '" width="100%" height="100%"></iframe>');
-}
+	document.getElementById('HTTPXMLresquest').setAttribute('src', window.location.protocol +'//'+ window.location.hostname+'/feeds/posts/default/' +url.searchParams.get("id")+ '?alt=json-in-script&callback=HTTPXMLresquest');}
 
 //EFFECT MODAL
 if(document.body.contains(document.querySelector('[feedback]')) && document.body.contains(document.querySelector('.MODALfeedback'))){
