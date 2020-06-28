@@ -34,7 +34,7 @@ function POSTbox(pID, pURL, pTITLE, pLOCAL, pLABEL, pDATE){
 if(DOCit.body.querySelector('.demo') > -1 ? false : true){
 
 if(DOCit.body.querySelector('.demo').hasAttribute('url')){
-	var DEMOit = 'p/demo.html?url='+ pID;
+	var DEMOit = 'p/demo.html?id='+ pID;
 	var DEMOtf = true;
 // console.log(DEMOit)
 }else{
