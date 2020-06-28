@@ -60,7 +60,7 @@ if(url.searchParams.get("id") != ''){
 	var DEMOurl = url.searchParams.get("id");}
 	else{
 	window.location.assign(window.location.protocol +'//'+ window.location.hostname);}
-	document.getElementById('HTTPXMLresquest').setAttribute('src', window.location.protocol +'//'+ window.location.hostname+'/feeds/posts/default/' +url.searchParams.get("id")+ '?alt=json-in-script&callback=HTTPXMLresquest');}
+	document.getElementById('HTTPXMLresquest').setAttribute('src', '/feeds/posts/default/' +url.searchParams.get("id")+ '?alt=json-in-script&callback=HTTPXMLresquest');}
 
 //EFFECT MODAL
 if(document.body.contains(document.querySelector('[feedback]')) && document.body.contains(document.querySelector('.MODALfeedback'))){
