@@ -34,7 +34,7 @@ function POSTbox(pID, pURL, pTITLE, pLOCAL, pLABEL, pDATE){
 if(DOCit.body.querySelector('.demo') > -1 ? false : true){
 
 if(DOCit.body.querySelector('.demo').hasAttribute('url')){
-	var DEMOit = 'p/viewport.html?url='+ DOCit.body.querySelector('.demo').getAttribute('url');
+	var DEMOit = 'p/demo.html?url='+ DOCit.body.querySelector('.demo').getAttribute('url');
 	var DEMOtf = true;
 // console.log(DEMOit)
 }else{
@@ -291,7 +291,7 @@ console.log(!xb)
 	if(!ITEMupdate && (TYPEpage.includes('free') || pLOCAL.split('').includes('0','1','2','3','4','5','6','7','8','9'))){ var uf = '<li><p class="SLCTit">Encerramento inesperado</p><p>zip</p><p class="SLCTit">update</p><p>valor</p></li>'; } else { var uf = '' }
 	if(!ITEMlayout && (TYPEpage.includes('free') || pLOCAL.split('').includes('0','1','2','3','4','5','6','7','8','9'))){ var ug = '<li><p class="SLCTit">Encerramento inesperado</p><p>zip</p><p class="SLCTit">layout</p><p>valor</p></li>'; } else { var ug = '' }
 
-	var ERRORpost = '<div class="MSGfailure"><h4>ERRO 500, OPS!<span>Erro Interno do Servidor</span></h4><ul><div class="FAILUREspot"><h5>Descrição</h5><li><p class="report">Os comandos estão digitados de maneira incorreta, por favor, verifique as palavras no texto da postagem.</p></li></div><div class="FAILUREspot"><h5>Relatorio de erros</h5><div class="FAILUREtype"><li>Resumo</li><li>Elemento</li><li>Propriedade</li><li>Tipo</li></div><div class="TYPEinfo">' +ua+ub+uc+ud+ue+uf+ug+ '</div></div><div class="FAILUREspot LASTfail"><h5>Informações adicionais</h5><li><p class="item"><b>Caminho URL</b><span>' + pURL + '</span></p></li><li><p class="item"><b>ID do Post</b><span>' + pID + '</span></p></li><li><p class="item"><b>Título</b><span>' + pTITLE + '</span></p></li><li><p class="item"><b>Data</b><span>' + pDATE + '</span></p></li></div></ul><a class="HOMEurl" href="#">Página inicial</a></div>';
+	var ERRORpost = '<div class="MSGfailure"><h4>ERRO 500, OPS!<span>Erro Interno do Servidor</span></h4><ul><div class="FAILUREspot"><h5>Descrição</h5><li><p class="report">Os comandos estão digitados de maneira incorreta, por favor, verifique as palavras no texto da postagem.</p></li></div><div class="FAILUREspot"><h5>Relatorio de erros</h5><div class="FAILUREtype"><li>Resumo</li><li>Elemento</li><li>Propriedade</li><li>Tipo</li></div><div class="TYPEinfo">' +ua+ub+uc+ud+ue+uf+ug+ '</div></div><div class="FAILUREspot LASTfail"><h5>Informações adicionais</h5><li><p class="item"><b>Caminho URL</b><span>' + pURL + '</span></p></li><li><p class="item"><b>ID do Post</b><span>' + pID + '</span></p></li><li><p class="item"><b>Título</b><span>' + pTITLE + '</span></p></li><li><p class="item"><b>Data</b><span>' +`${day} de ${month} de ${year}`+ '</span></p></li></div></ul><a class="HOMEurl" href="#">Página inicial</a></div>';
 
 if(TYPEpage.includes('free')){
 if((xa == true) && (xb == true) && (xc == true) && (xe == true) && (ITEMupdate > -1 ? false : true == true) && (ITEMlayout > -1 ? false : true == true)){
