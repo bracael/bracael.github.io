@@ -53,12 +53,29 @@ A {
 DIV.DIRECTmenu {
     width: 100vw;
     height: 56px;
-    background: #2c2d31;
+    background: var(--navbar-bg);
     float: left;
+    display: grid;
+    grid-gap: 0px;
+    -ms-grid-columns: minmax(220px,1fr) minmax(0, calc(100% - 440px)) 1fr;
+    grid-template-columns: minmax(176px,1fr) minmax(0, calc(100% - 56px)) 1fr;
+    grid-template-rows: 1fr;
+}
+SECTION.CONTENTit {
+    float: left;
+    width: 100vw;
+background: #45484d; /* Old browsers */
+background: -moz-linear-gradient(45deg,  #45484d 0%, #000000 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(45deg,  #45484d 0%,#000000 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(45deg,  #45484d 0%,#000000 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45484d', endColorstr='#000000',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
 }
 IFRAME.FRAMEdrct {
     height: calc(100vh - 56px);
-    float: left;
+    display: table;
+    transition: width 0.5s linear;
+    margin: 0 auto;
 }
 
 
@@ -438,69 +455,185 @@ div#sidebar .widget-content LI A {
 
 
 
-DIV.DIRECTmenu SECTION.SPOTlogo {
+DIV.DIRECTmenu SECTION.HEADERlogo {
     float: left;
     width: 176px;
 }
-DIV.DIRECTmenu SECTION.SPOTlogo A {
+DIV.DIRECTmenu SECTION.HEADERlogo A {
     width: 100%;
     height: 100%;
     overflow: hidden;
     float: left;
 }
 
-SECTION.PREMIUMspot {
+SECTION.CENTERmenu {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    margin: auto;
+    width: 100%;
+}
+DIV.PREMIUMspot {
+    display: -ms-flexbox;
+    display: flex;
+    margin-left: auto;
+    -ms-flex-align: center;
+    align-items: center;
     float: left;
-}
-SECTION.PREMIUMspot A.CHECKout {
-    border-radius: 3px;
-}
-SECTION.PREMIUMspot A.CHECKout {
-    color: #fff;
-    padding: 8px 12px 6px;
-    border-width: 0 0 4px;
-    border-style: solid;
-    font-size: 18px;
-    text-align: center;
-    font-weight: 500;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    transition: all .3s;
-    display: block;
-    margin: 8.5px 0;
-}
-SECTION.PREMIUMspot A.CHECKout I.CARTit, SECTION.PREMIUMspot A.CHECKout I.CARTit::after {
-    height: 14px;
-    width: 14px;
-}
-SECTION.PREMIUMspot A.CHECKout I.CARTit {
-    display: inline-block;
-    top: 1px;
-    margin-right: 8px;
-}
-SECTION.PREMIUMspot A.CHECKout I.CARTit::after {
-    content: '';
-    display: block;
 }
 
 
 DIV.DIRECTmenu SECTION.REMOVEframe {
     float: left;
+    width: 56px;
+    height: 56px;
 }
-SECTION.REMOVEframe {
-    float: left;
+DIV.DIRECTmenu SECTION.REMOVEframe A {
+    display: block;
+}
+SECTION.REMOVEframe A I.CROSSicon {
     padding: 19px;
 }
-SECTION.REMOVEframe, SECTION.REMOVEframe::after {
+SECTION.REMOVEframe A I.CROSSicon, SECTION.REMOVEframe A i.CROSSicon::after {
     width: 18px;
     height: 18px;
+    display: block;
 }
-SECTION.REMOVEframe::after {
+SECTION.REMOVEframe A I.CROSSicon::after {
     content: '';
     background-size: 18px;
     display: block;
 }
 
+
+NAV.MENUsize {
+    top: 56px;
+    height: calc(100vh - 56px);
+}
+
+
+SECTION.CENTERmenu .FRAMEsize {
+    display: flex;
+    float: left;
+}
+SECTION.CENTERmenu .FRAMEsize LI A {
+    float: left;
+    width: 42px;
+    height: 56px;
+    display: flex;
+}
+SECTION.CENTERmenu .FRAMEsize LI A I.CROSSicon, SECTION.CENTERmenu .FRAMEsize LI A I.CROSSicon::after {
+    display: block;
+    position: relative;
+    height: 20px;
+}
+SECTION.CENTERmenu .FRAMEsize LI A I.CROSSicon {
+    margin: auto;
+}
+SECTION.CENTERmenu .FRAMEsize LI A .CROSSicon::after {
+    content: '';
+    background-repeat: no-repeat;
+}
+SECTION.CENTERmenu .FRAMEsize LI A I.CROSSicon.DESKTOPit, SECTION.CENTERmenu .FRAMEsize LI A I.CROSSicon.DESKTOPit::after {
+    width: 20px;
+}
+SECTION.CENTERmenu .FRAMEsize LI A I.CROSSicon.DESKTOPit::after {
+    background-position: 0 0;
+}
+SECTION.CENTERmenu .FRAMEsize LI A:hover I.CROSSicon.DESKTOPit::after, SECTION.CENTERmenu .FRAMEsize LI A I.CROSSicon.DESKTOPit.ACTIVEit::after {
+    background-position: 0 -20px;
+}
+SECTION.CENTERmenu .FRAMEsize LI A I.CROSSicon.TABLETpn, SECTION.CENTERmenu .FRAMEsize LI A I.CROSSicon.TABLETpn::after {
+    width: 17px;
+}
+SECTION.CENTERmenu .FRAMEsize LI A I.CROSSicon.TABLETpn::after {
+    background-position: -20px 0;
+    top: -3px;
+}
+SECTION.CENTERmenu .FRAMEsize LI A:hover I.CROSSicon.TABLETpn::after, SECTION.CENTERmenu .FRAMEsize LI A I.CROSSicon.TABLETpn.ACTIVEit::after {
+    background-position: -20px -20px;
+}
+SECTION.CENTERmenu .FRAMEsize LI A I.CROSSicon.TABLETrt, SECTION.CENTERmenu .FRAMEsize LI A I.CROSSicon.TABLETrt::after {
+    width: 14px;
+}
+SECTION.CENTERmenu .FRAMEsize LI A I.CROSSicon.TABLETrt::after {
+    background-position: -37px 0;
+    top: -1px;
+}
+SECTION.CENTERmenu .FRAMEsize LI A:hover I.CROSSicon.TABLETrt::after, SECTION.CENTERmenu .FRAMEsize LI A I.CROSSicon.TABLETrt.ACTIVEit::after {
+    background-position: -37px -20px;
+}
+SECTION.CENTERmenu .FRAMEsize LI A I.CROSSicon.MOBILEpn, SECTION.CENTERmenu .FRAMEsize LI A I.CROSSicon.MOBILEpn::after {
+    width: 14px;
+}
+SECTION.CENTERmenu .FRAMEsize LI A I.CROSSicon.MOBILEpn::after {
+    background-position: -51px 0;
+    top: -4px;
+}
+SECTION.CENTERmenu .FRAMEsize LI A:hover I.CROSSicon.MOBILEpn::after, SECTION.CENTERmenu .FRAMEsize LI A I.CROSSicon.MOBILEpn.ACTIVEit::after {
+    background-position: -51px -20px;
+}
+SECTION.CENTERmenu .FRAMEsize LI A I.CROSSicon.MOBILErt, SECTION.CENTERmenu .FRAMEsize LI A I.CROSSicon.MOBILErt::after {
+    width: 11px;
+}
+SECTION.CENTERmenu .FRAMEsize LI A I.CROSSicon.MOBILErt::after {
+    background-position: -65px 0;
+    top: -2px;
+}
+SECTION.CENTERmenu .FRAMEsize LI A:hover I.CROSSicon.MOBILErt::after, SECTION.CENTERmenu .FRAMEsize LI A I.CROSSicon.MOBILErt.ACTIVEit::after {
+    background-position: -65px -20px;
+}
+
+
+
+
+.PREMIUMspot .INFOthis {
+    display: flex;
+    font-family: var(--font-open);
+    text-transform: uppercase;
+}
+.PREMIUMspot .INFOthis LI {
+    line-height: 56px;
+    font-size: 18px;
+    font-family: var(--font-oswald);
+    display: flex;
+}
+.PREMIUMspot .INFOthis LI A {
+    display: flex;
+    padding: 0 19px;
+    height: 56px;
+}
+.PREMIUMspot .INFOthis LI A.CARTit.ACTIVElist {
+    cursor: default;
+}
+.PREMIUMspot .INFOthis LI A.CARTit.ACTIVElist:hover .CROSSicon::after {
+    background-position: 0 0;
+}
+.PREMIUMspot .INFOthis LI I.CROSSicon, .PREMIUMspot .INFOthis LI I.CROSSicon::after {
+    width: 18px;
+    height: 18px;
+    display: block;
+}
+.PREMIUMspot .INFOthis LI I.CROSSicon {
+    margin: auto;
+}
+.PREMIUMspot .INFOthis LI I.CROSSicon::after {
+    content: '';
+    background-repeat: no-repeat;
+    background-position: center 0;
+}
+.PREMIUMspot .INFOthis LI A:hover I.CROSSicon::after {
+    background-position: center -18px;
+}
+.PREMIUMspot .INFOthis LI A SPAN {
+    color: #666;
+    margin-left: 8px;
+    float: left;
+}
+.PREMIUMspot .INFOthis LI A:hover * {
+    color: #fff;
+}
 
 
 
@@ -508,9 +641,12 @@ SECTION.REMOVEframe::after {
 /*---------- PUSH-MENU ----------*/
 /*-------------------------------*/
 NAV.PUSHmenu {
+    top: 0;
+    height: 100vh;
+}
+NAV.PUSHmenu {
     background: var(--navbar-bg);
     position: fixed;
-    top: 0;
     left: 0;
     z-index: 11000;
     width: 240px;
@@ -520,7 +656,6 @@ NAV.PUSHmenu {
     -webkit-transition: var(--ease-tre-time);
     -o-transition: var(--ease-tre-time);
     transition: var(--ease-tre-time);
-    height: 100vh;
 }
 NAV.PUSHmenu[class*=MENUactive] .BTNmenu {
     display: block;
@@ -566,16 +701,23 @@ NAV.PUSHmenu LI A::after {
 NAV.PUSHmenu UL LI A:hover { background: var(--white-transparent-bg); }
 NAV.PUSHmenu LI A { color: var(--color-clean); text-decoration: none; display: block; padding: 7px 10px 7px 62px; font-weight: 100; line-height: 26px; font-size: 14px; font-family: var(--font-poppins); }
 NAV.PUSHmenu FOOTER, NAV.PUSHmenu FOOTER * { display: block; }
-NAV.PUSHmenu SECTION, DIV.DIRECTmenu SECTION.SPOTlogo {
+NAV.PUSHmenu SECTION {
     box-shadow: inset 0 -1px hsl(0, 0%, 14%);
+}
+NAV.PUSHmenu SECTION {
+    background-position: 26px center;
+}
+NAV.PUSHmenu SECTION, DIV.DIRECTmenu SECTION.HEADERlogo {
     font-weight: bold;
     font-size: 16px;
     line-height: 22px;
-    background-position: 26px center;
     background-size: 116px;
     background-repeat: no-repeat;
     font-family: var(--font-open);
     height: 56px;
+}
+DIV.DIRECTmenu SECTION.HEADERlogo {
+    background-position: 19px center;	
 }
 NAV.PUSHmenu FOOTER .GUIDEurl { padding: 16px 20px 0; display: inline-block; }
 NAV.PUSHmenu FOOTER .GUIDEurl A { color: var(--color-menu-secundary); font-family: var(--font-open); line-height: 20px; float: left; }
