@@ -1,10 +1,23 @@
 function HTTPXMLresquest(JSONit){
-	var JSONit = JSONit.entry.content.$t.replace(/<[^>]*>?/gm, '');
+	var url = new URL(window.location.href);
+	var DEMOid = Number(url.searchParams.get("id"));
+	var pLOCAL = JSONit.entry.georss$featurename.$t;
+	var JSONvar = JSONit.entry.content.$t.replace(/<[^>]*>?/gm, '');
+	var p = pLOCAL.replace(/[^0-9\.]+/g, '');
 
-if(JSONit.substring(0, JSONit.length-JSONit.length+1) == ' '){
-	var JSONit = JSONit.substring(1, JSONit.length);}
+document.title = 'Bracael - '+JSONit.entry.title.$t;
 
-	var POSTcode = JSONit.replace(/] \[/gm, ']\n[').replace(/]  \[/gm, ']\n[').replace(/]   \[/gm, ']\n[');
+const ARRAYdate = new Intl.DateTimeFormat('pt-BR', { weekday: 'long', day: 'numeric', month: 'numeric', year: 'numeric', hour: '2-digit', minute: 'numeric', hour12: true });
+const [{ value: weekday },,{ value: day },,{ value: month },,{ value: year },,{ value: hour },,{ value: minute },,{ value: hour12 }] = ARRAYdate.formatToParts(new Date(JSONit.entry.published.$t));
+var pDATE = `${day}/${month}/${year} ÀS ${hour}:${minute} ${hour12}`;
+
+for(var i = 0; i < JSONit.entry.link.length; i++){
+	var INDEXit = JSONit.entry.link[i].href;}
+
+if(JSONvar.substring(0, JSONvar.length-JSONvar.length+1) == ' '){
+	var JSONvar = JSONvar.substring(1, JSONvar.length);}
+
+	var POSTcode = JSONvar.replace(/] \[/gm, ']\n[').replace(/]  \[/gm, ']\n[').replace(/]   \[/gm, ']\n[');
 	var CODEdemo = POSTcode.replace('[demo', '[class="demo"');
 	var CODEdemo = CODEdemo.replace('[pre]', '<pre>');
 	var CODEdemo = CODEdemo.replace('[/pre]', '</pre>');
@@ -23,13 +36,139 @@ if(JSONit.substring(0, JSONit.length-JSONit.length+1) == ' '){
 	var CODEdemo = CODEdemo.replace(/(?:\[seo])/g, '<seo></seo>');
 	var CODEdemo = CODEdemo.replace(/(?:\[post])/g, '<post></post>');
 	var CODEdemo = CODEdemo.replace(/(?:\[class=")/g, '<CAEL class="');
-
 	var DOCit = new DOMParser().parseFromString(CODEdemo, 'text/html');
+	var IMGit = new DOMParser().parseFromString(JSONit.entry.content.$t, 'text/html');
+	var GETimg = IMGit.getElementsByTagName("img");
 
-	console.log(DOCit.body.querySelector('.demo').getAttribute('url'))
-	console.log(document.querySelector('.CHECKout'))
-	
-	document.querySelector('.FRAMEdrct').setAttribute('src', DOCit.body.querySelector('.demo').getAttribute('url'))
+	// MOEDA
+	var BR = "R$ ";
+
+	//3 DIGITOS NA MOEDA
+	var aa = p.substring(0, 1);
+	var ab = p.substring(1);
+
+	//4 DIGITOS NA MOEDA
+	var ba = p.substring(0, 2);
+	var bb = p.substring(2);
+
+	//5 DIGITOS NA MOEDA
+	var ca = p.substring(0, 3);
+	var cb = p.substring(3);
+
+	//6 DIGITOS NA MOEDA
+	var da = p.substring(0, 1);
+	var db = p.substring(1, 4);
+	var dc = p.substring(4);
+
+	//7 DIGITOS NA MOEDA
+	var ea = p.substring(0, 2);
+	var eb = p.substring(2, 5);
+	var ec = p.substring(5);
+
+	//8 DIGITOS NA MOEDA
+	var fa = p.substring(0, 3);
+	var fb = p.substring(3, 6);
+	var fc = p.substring(6);
+
+	if((p.length == 1) || (p.length == 2) || (p.length > 8)){ var PRICEpost = 'ERRO 400, OPS!'; }
+	if(p.length == 3){ var PRICEpost = BR + aa + "," + ab; }
+	if(p.length == 4){ var PRICEpost = BR + ba + "," + bb; }
+	if(p.length == 5){ var PRICEpost = BR + ca + "," + cb; }
+	if(p.length == 6){ var PRICEpost = BR + da + "." + db + "," + dc; }
+	if(p.length == 7){ var PRICEpost = BR + ea + "." + eb + "," + ec; }
+	if(p.length == 8){ var PRICEpost = BR + fa + "." + fb + "," + fc; }
+	if(p.length == 0){ var PRICEpost = 'EMPTY!'; }
+
+if(DOCit.body.contains(DOCit.body.querySelector('.baixar'))){
+	var BOLLbxa = DOCit.body.querySelector('.baixar').hasAttribute('url');}
+	else{ var BOLLbxa = false; }
+
+if(DOCit.body.contains(DOCit.body.querySelector('.buy'))){
+	var BOLLbuy = DOCit.body.querySelector('.buy').hasAttribute('url');}
+	else{ var BOLLbuy = false; }
+
+if(DOCit.body.contains(DOCit.body.querySelector('.demo'))){
+	var BOLLdmo = DOCit.body.querySelector('.demo').hasAttribute('url');}
+	else{ var BOLLdmo = false; }
+
+if(DOCit.body.contains(DOCit.body.querySelector('pre'))){
+	var BOLLpre = true;}
+	else{ var BOLLpre = false; }
+
+if(DOCit.body.contains(DOCit.body.querySelector('.zip'))){
+	var BOLLupt = DOCit.body.querySelector('.zip').hasAttribute('update');
+	var BOLLlyt = DOCit.body.querySelector('.zip').hasAttribute('layout');}
+	else{
+	var BOLLupt = false;
+	var BOLLlyt = false;}
+
+if(pLOCAL.split(' ').includes('free') && GETimg.length>=1 && BOLLdmo && BOLLpre && BOLLbxa && BOLLupt && BOLLlyt && pLOCAL.split(' ').length === 1){
+	var POSTtrue = true;
+	var PREMIUMspot = '<div class="INFOthis"><li><a href="' +INDEXit+ '"><i class="CROSSicon INFOicon"></i></a></li><li><a href="javascript:void(0);" class="CARTit"><i class="CROSSicon ADDTOfav"></i></a></li></div>';}
+	else if(pLOCAL.split(' ').includes('excl') && GETimg.length>=1 && BOLLdmo && BOLLpre && pLOCAL.split(' ').length === 1){
+	var POSTtrue = true;
+	var PREMIUMspot = '<div class="INFOthis"><li><a href="' +INDEXit+ '"><i class="CROSSicon INFOicon"></i></a></li><li><a href="javascript:void(0);" class="CARTit"><i class="CROSSicon ADDTOfav"></i></a></li></div>';}
+else{
+if(GETimg.length>=1 && BOLLdmo && BOLLpre && BOLLbxa && BOLLbuy && BOLLupt && BOLLlyt && Number(pLOCAL.replace(/[^0-9]/g,'')) !== 0 && pLOCAL.split(' ').length === 1){
+	var POSTtrue = true;
+	var GETbuy = DOCit.body.querySelector('.buy').getAttribute('url');
+	var PREMIUMspot = '<div class="INFOthis"><li><a href="' +GETbuy+ '" target="_blank"><i class="CROSSicon CARTicon"></i><span>' +PRICEpost+ '</span></a></li><li><a href="' +INDEXit+ '"><i class="CROSSicon INFOicon"></i></a></li><li><a href="javascript:void(0);" class="CARTit"><i class="CROSSicon ADDTOfav"></i></a></li></div>';}
+	else{
+	var POSTtrue = false;}}
+
+if(POSTtrue){
+	var GETdmo = DOCit.body.querySelector('.demo').getAttribute('url');
+	document.querySelector('.REMOVEframe').innerHTML = '<a href="' +GETdmo+ '"><i class="CROSSicon CLOSEframe"></i></a>';
+	document.querySelector('.FRAMEdrct').setAttribute('src', DOCit.body.querySelector('.demo').getAttribute('url'));
+	document.querySelector('.PREMIUMspot').innerHTML = PREMIUMspot;
+
+for(var i = 0; i < document.querySelectorAll('[data-size]').length; i++){
+	document.querySelectorAll('[data-size]')[i].addEventListener('click', function(){
+	document.querySelector('I.CROSSicon.ACTIVEit').classList.remove('ACTIVEit');
+	this.children[0].classList.add('ACTIVEit');
+	document.querySelector('IFRAME.FRAMEdrct').setAttribute('width', this.getAttribute('data-size'));});}
+
+var HTMLwid = document.querySelector('HTML').offsetWidth;
+if(!document.body.classList.contains('mobile')){
+if(HTMLwid => 1024){
+	document.querySelector('I.CROSSicon.DESKTOPit').classList.add('ACTIVEit');}
+	else if(HTMLwid => 480){
+	document.querySelector('I.CROSSicon.TABLETpn').classList.add('ACTIVEit');}
+	else{
+	document.querySelector('I.CROSSicon.TABLETrt').classList.add('ACTIVEit');}}
+else{
+if(HTMLwid <= 480){
+	document.querySelector('I.CROSSicon.MOBILErt').classList.add('ACTIVEit');}
+	else{
+	document.querySelector('I.CROSSicon.MOBILEpn').classList.add('ACTIVEit');}}}
+
+//BOOOKMARK EXISTENTE ------ DEMO
+if(document.body.contains(document.querySelector('A.CARTit'))){
+function ADDTOcart(){
+	document.querySelector('.CARTit').classList.add('ACTIVElist');
+if(localStorage.BOOKmark != undefined){
+if(pLOCAL.split(' ').includes('free') || pLOCAL.split(' ').includes('excl')){
+	var OBJstr = '{"' +new URL(window.location.href).searchParams.get('id')+ '":{"POSTtitle":"' +JSONit.entry.title.$t+ '","POSTurl":"' +INDEXit+ '","POSTdate":"' +pDATE+ '","RELimage":"' +GETimg[0].src+ '","POSTup":"' +pLOCAL+ '"},' +localStorage.BOOKmark.substring(1, localStorage.BOOKmark.length-1)+ '}';
+	localStorage.setItem('BOOKmark', OBJstr);}
+	else{
+	var OBJstr = '{"' +new URL(window.location.href).searchParams.get('id')+ '":{"POSTtitle":"' +JSONit.entry.title.$t+ '","POSTurl":"' +INDEXit+ '","POSTdate":"' +pDATE+ '","RELimage":"' +GETimg[0].src+ '","RELprice":"' +PRICEpost+ '"},' +localStorage.BOOKmark.substring(1, localStorage.BOOKmark.length-1)+ '}';
+	localStorage.setItem('BOOKmark', OBJstr);}}
+else{
+if(pLOCAL.split(' ').includes('free') || pLOCAL.split(' ').includes('excl')){
+	var OBJstr = '{"' +new URL(window.location.href).searchParams.get('id')+ '":{"POSTtitle":"' +JSONit.entry.title.$t+ '","POSTurl":"' +INDEXit+ '","POSTdate":"' +pDATE+ '","RELimage":"' +GETimg[0].src+ '","POSTup":"' +pLOCAL+ '"}}';
+	localStorage.setItem('BOOKmark', OBJstr);}
+	else{
+	var OBJstr = '{"' +new URL(window.location.href).searchParams.get('id')+ '":{"POSTtitle":"' +JSONit.entry.title.$t+ '","POSTurl":"' +INDEXit+ '","POSTdate":"' +pDATE+ '","RELimage":"' +GETimg[0].src+ '","RELprice":"' +PRICEpost+ '"}}';
+	localStorage.setItem('BOOKmark', OBJstr);}}}
+
+if(localStorage.BOOKmark != undefined){
+if(Object.getOwnPropertyNames(JSON.parse(localStorage.BOOKmark)).includes(new URL(window.location.href).searchParams.get('id'))){
+	document.querySelector('.CARTit').classList.add('ACTIVElist');}
+	else{
+	document.querySelector('A.CARTit').addEventListener('click', ADDTOcart);}}
+	else{
+	document.querySelector('A.CARTit').addEventListener('click', ADDTOcart);}}
+
 }
 
 window.onload = function(){
@@ -60,7 +199,7 @@ if(url.searchParams.get("id") != ''){
 	var DEMOurl = url.searchParams.get("id");}
 	else{
 	window.location.assign(window.location.protocol +'//'+ window.location.hostname);}
-	document.getElementById('HTTPXMLresquest').setAttribute('src', '/feeds/posts/default/' +url.searchParams.get("id")+ '?alt=json-in-script&callback=HTTPXMLresquest');}
+	document.getElementById('HTTPXMLresquest').setAttribute('src', 'https://tema404.blogspot.com/feeds/posts/default/' +url.searchParams.get("id")+ '?alt=json-in-script&callback=HTTPXMLresquest');}
 
 //EFFECT MODAL
 if(document.body.contains(document.querySelector('[feedback]')) && document.body.contains(document.querySelector('.MODALfeedback'))){
@@ -108,7 +247,7 @@ window.addEventListener('scroll', function(){
 animeScroll();});}
 
 //BOOOKMARK EXISTENTE
-if(document.body.contains(document.querySelector('.POSTinst')) === true){
+if(document.body.contains(document.querySelector('.POSTinst'))){
 if(localStorage.BOOKmark != undefined){
 	var GETitem = localStorage.BOOKmark;
 	var JSONparse = JSON.parse(GETitem);
@@ -123,7 +262,7 @@ setInterval(function(){
 var HTMLoffset = document.querySelector('HTML');
 document.querySelector('HEADER.HEADmenu').style.width = HTMLoffset.offsetWidth + 'px'; }, 0);}
 
-if(document.body.contains(document.querySelector('.NOTIFYit')) === true && document.body.contains(document.querySelector('.SIDEnav')) === true){
+if(document.body.contains(document.querySelector('.NOTIFYit')) && document.body.contains(document.querySelector('.SIDEnav'))){
 document.querySelector('.SELECTitem').addEventListener('click', function(){
 	this.parentNode.classList.add('ACTIVEit');
 	this.insertAdjacentHTML('afterend', '<div class="FRONTend"></div>');
@@ -160,7 +299,7 @@ if(document.body.hasAttribute('style')) {
 	document.body.removeAttribute('style');}
 	else{
 	document.body.style.cssText = "overflow:hidden";}
-if(document.body.contains(document.querySelector('.SWIPEopen')) === true){
+if(document.body.contains(document.querySelector('.SWIPEopen'))){
 document.querySelector('.SWIPEopen').addEventListener('click', function(){
 	document.querySelector('.BTNhref').classList.remove('HREFactive');
 	PUSHmenu.classList.remove('MENUactive');
@@ -168,7 +307,7 @@ document.querySelector('.SWIPEopen').addEventListener('click', function(){
 document.body.removeAttribute('style');});}});}
 
 //TOGLE FOOTER
-if(document.body.contains(document.querySelector('.CROSSdown')) === true){
+if(document.body.contains(document.querySelector('.CROSSdown'))){
 for(var i = 0; i < document.querySelectorAll('.CROSSdown').length; i++){
 var CROSSdown = document.querySelectorAll('.CROSSdown');
 CROSSdown[i].addEventListener('click', function(){
@@ -176,7 +315,7 @@ var COLUMNspot = this.parentNode.parentNode.querySelector('.COLUMNspot');
 $(COLUMNspot).animate({ height: "toggle", },{duration: 300});});}}
 
 //SEARCH --- BAR
-if(document.body.contains(document.querySelector('.SEARCHbar')) === true){
+if(document.body.contains(document.querySelector('.SEARCHbar'))){
 var SEARCHbar = document.querySelector('.SEARCHbar');
 var CONTENTframe = document.getElementById('CONTENTframe');
 document.querySelector('.SEARCHit').addEventListener('click', function(){
@@ -196,7 +335,7 @@ COMMENTSwid[i].addEventListener('click', function(){
 	var CURRENTurl = document.querySelector('.' +SELECTtab);
 	var FIRSTelement = document.querySelector('.ITEMpost').firstElementChild;
 
-if((!FIRSTelement.isEqualNode(CURRENTurl)) && (this.hasAttribute("disable") == false)){
+if((!FIRSTelement.isEqualNode(CURRENTurl)) && (this.hasAttribute("disable"))){
 if(document.querySelector('.POSTbody') === CURRENTurl){
 setTimeout(function(){
 document.querySelector('.POSTright').removeAttribute("style"); }, 1240); }
@@ -224,7 +363,7 @@ if(window.location.href.indexOf('/p/login.html') > -1){
 document.body.setAttribute('login', '');}
 
 //ENVIA O VALOR DO CAMPO DE BUSCA
-if(document.body.contains(document.querySelector('.SEARCHform')) === true){
+if(document.body.contains(document.querySelector('.SEARCHform'))){
 document.querySelector('.SEARCHform').addEventListener('submit', function(){
 	var SEARCHinput = document.querySelector('.SEARCHinput').value;
 
@@ -245,7 +384,7 @@ if(LASTes.length <= 3){
 localStorage.setItem('LASTsearch', SEARCtag);}}});}
 
 //REGASTA E EXIBE O VALOR DA BUSCA [OK]
-if(document.body.contains(document.querySelector('.POPULARinst')) === true){
+if(document.body.contains(document.querySelector('.POPULARinst'))){
 if(localStorage.LASTsearch != undefined){
 var SPLITsearch = localStorage.LASTsearch.substring(2, localStorage.LASTsearch.length-2).split('","');
 var ITEMsearch = new Array();
@@ -253,33 +392,41 @@ for(var i = 0; i < SPLITsearch.length; i++){
 ITEMsearch += '<a class="SEARCHtag" href="/search?q=' +SPLITsearch[i]+'&amp;max-results=9">' +SPLITsearch[i]+ '</a>';}
 document.querySelector('.POPULARinst').innerHTML = '<i class="LASTsearch"></i>' +ITEMsearch;}}
 
-//ENVIAR BOOKMARK [OK]
-var BTNcount = document.querySelectorAll('.BTNfav').length;
-for(var i = 0; i < BTNcount; i++){
-var BTNclick = document.querySelectorAll('.BTNfav');
 
-BTNclick[i].addEventListener('click', function(){
+
+//ENVIAR BOOKMARK [OK]
+if(document.body.contains(document.querySelector('.BTNfav'))){
+for(var i = 0; i < document.querySelectorAll('.BTNfav').length; i++){
+document.querySelectorAll('.BTNfav')[i].addEventListener('click', function(){
 var BTNrel = this.getAttribute('rel');
 var POSTinst = document.getElementById(BTNrel);
 var RELtitle = POSTinst.querySelector('.POSTurl').innerText;
 var RELhref = POSTinst.querySelector('.POSTurl').href;
 var RELdate = POSTinst.querySelector('.POSTdate').innerText;
 var RELimage = POSTinst.querySelector('.THUMBnail').src;
-var RELprice = POSTinst.querySelector('.POSTprice').innerText;
+var GETaes = POSTinst.querySelector('.POSTup').getAttribute('class').split(' ');
+var GETtyp = GETaes.splice(GETaes.shift())[0];
 
 	var ACTIVEpost = document.getElementById(BTNrel);
 	ACTIVEpost.classList.add('ACTIVElist');
 
 if(localStorage.BOOKmark != undefined){
-var GETitem = localStorage.BOOKmark;
-if(!~GETitem.indexOf(BTNrel)){
-var MARKexist = GETitem.substring(1, GETitem.length-1);
-var BOOKmark = '{"' +BTNrel+ '":{"POSTtitle":"' +RELtitle+ '","POSTurl":"' +RELhref+ '","POSTdate":"' +RELdate+ '","RELimage":"' +RELimage+ '","RELprice":"' +RELprice+ '"},' +MARKexist+ '}';
-localStorage.setItem('BOOKmark', BOOKmark);
-}}else{
-var BOOKmark = '{"' +BTNrel+ '":{"POSTtitle":"' +RELtitle+ '","POSTurl":"' +RELhref+ '","POSTdate":"' +RELdate+ '","RELimage":"' +RELimage+ '","RELprice":"' +RELprice+ '"}}';
-localStorage.setItem('BOOKmark', BOOKmark);}
-});}
+if(!Object.getOwnPropertyNames(JSON.parse(localStorage.BOOKmark)).includes(BTNrel)){
+if(GETtyp.split(' ').includes('free') || GETtyp.split(' ').includes('excl')){
+	var BOOKmark = '{"' +BTNrel+ '":{"POSTtitle":"' +RELtitle+ '","POSTurl":"' +RELhref+ '","POSTdate":"' +RELdate+ '","RELimage":"' +RELimage+ '","POSTup":"' +GETtyp+ '"},' +localStorage.BOOKmark.substring(1, localStorage.BOOKmark.length-1)+ '}';
+	localStorage.setItem('BOOKmark', BOOKmark);}
+	else{
+	var RELprice = POSTinst.querySelector('.POSTprice').innerText;
+	var BOOKmark = '{"' +BTNrel+ '":{"POSTtitle":"' +RELtitle+ '","POSTurl":"' +RELhref+ '","POSTdate":"' +RELdate+ '","RELimage":"' +RELimage+ '","RELprice":"' +RELprice+ '"},' +localStorage.BOOKmark.substring(1, localStorage.BOOKmark.length-1)+ '}';
+	localStorage.setItem('BOOKmark', BOOKmark);}}}
+else{
+if(GETtyp.split(' ').includes('free') || GETtyp.split(' ').includes('excl')){
+	var BOOKmark = '{"' +BTNrel+ '":{"POSTtitle":"' +RELtitle+ '","POSTurl":"' +RELhref+ '","POSTdate":"' +RELdate+ '","RELimage":"' +RELimage+ '","POSTup":"' +GETtyp+ '"}}';
+	localStorage.setItem('BOOKmark', BOOKmark);}
+	else{
+	var RELprice = POSTinst.querySelector('.POSTprice').innerText;
+	var BOOKmark = '{"' +BTNrel+ '":{"POSTtitle":"' +RELtitle+ '","POSTurl":"' +RELhref+ '","POSTdate":"' +RELdate+ '","RELimage":"' +RELimage+ '","RELprice":"' +RELprice+ '"}}';
+	localStorage.setItem('BOOKmark', BOOKmark);}}});}}
 
 //RESGATA BOOKMARKS [OK]
 if(window.location.href.indexOf('/p/favoritos.html') > -1){
@@ -298,7 +445,20 @@ var pPRICE = JSONparse[OBJname[i]].RELprice;
 var pIMG = JSONparse[OBJname[i]].RELimage;
 var pDATE = JSONparse[OBJname[i]].POSTdate;
 
-var CONTENTpage = '<div class="POSTbox BOOKmark" id="'+OBJname[i]+'"><div class="POSTinst"><section class="POSTup"><div class="POSTimg"><img class="THUMBnail" src="' +pIMG+ '"></img></div><div class="POSTspot"><i class="BTNdel" rel="'+OBJname[i]+'"></i></div></section><section class="POSTbt"><div class="POSTbt_inner"><h3 class="POSTtitle"><a class="POSTurl" href="'+pURL+'">'+pTITLE+'</a></h3><div class="POSTdate CALENDar">'+pDATE+'</div><div class="POSTBOXbt"><div class="POSTprice">'+pPRICE+'</div><div class="POSTbtn"><li><a class="BTNlive" href="#" target="_blank">Demo</a></li><li><a class="BTNinfo" href="#">Info</a></li></div></div></div></section></div></div>';
+console.log(JSONparse[OBJname[i]])
+
+if(JSONparse[OBJname[i]].hasOwnProperty('POSTup')){
+	var POSTup = JSONparse[OBJname[i]].POSTup;}
+	else{var POSTup = '';}
+
+if(POSTup.includes('free')){
+	var CONTENTpage = '<div class="POSTbox BOOKmark" id="'+OBJname[i]+'"><div class="POSTinst"><section class="POSTup ' +POSTup+ '"><div class="POSTimg"><img class="THUMBnail" src="' +pIMG+ '"></img></div><div class="POSTspot"><i class="BTNdel" rel="'+OBJname[i]+'"></i></div></section><section class="POSTbt"><div class="POSTbt_inner"><h3 class="POSTtitle"><a class="POSTurl" href="'+pURL+'">'+pTITLE+'</a></h3><div class="POSTdate CALENDar">'+pDATE+'</div><div class="POSTBOXbt"><div class="POSTprice">GRÁTIS!</div><div class="POSTbtn"><li><a class="BTNlive" href="/p/demo.html?id=' +OBJname[i]+ '" target="_blank">Demo</a></li><li><a class="BTNinfo" href="' +pURL+ '">Info</a></li></div></div></div></section></div></div>';}
+	else if(POSTup.includes('excl')){
+	var CONTENTpage = '<div class="POSTbox BOOKmark" id="'+OBJname[i]+'"><div class="POSTinst"><section class="POSTup ' +POSTup+ '"><div class="POSTimg"><img class="THUMBnail" src="' +pIMG+ '"></img></div><div class="POSTspot"><i class="BTNdel" rel="'+OBJname[i]+'"></i></div></section><section class="POSTbt"><div class="POSTbt_inner"><h3 class="POSTtitle"><a class="POSTurl" href="'+pURL+'">'+pTITLE+'</a></h3><div class="POSTdate CALENDar">'+pDATE+'</div><div class="POSTBOXbt"><div class="POSTbtn MAXwidth"><li><a class="BTNlive" href="/p/demo.html?id=' +OBJname[i]+ '" target="_blank">DEMO</a></li><li><a class="BTNinfo" href="' +pURL+ '">Info</a></li></div></div></div></section></div></div>';}
+else{
+	var CONTENTpage = '<div class="POSTbox BOOKmark" id="'+OBJname[i]+'"><div class="POSTinst"><section class="POSTup"><div class="POSTimg"><img class="THUMBnail" src="' +pIMG+ '"></img></div><div class="POSTspot"><i class="BTNdel" rel="'+OBJname[i]+'"></i></div></section><section class="POSTbt"><div class="POSTbt_inner"><h3 class="POSTtitle"><a class="POSTurl" href="'+pURL+'">'+pTITLE+'</a></h3><div class="POSTdate CALENDar">'+pDATE+'</div><div class="POSTBOXbt"><div class="POSTprice">'+pPRICE+'</div><div class="POSTbtn"><li><a class="BTNlive" href="/p/demo.html?id=' +OBJname[i]+ '" target="_blank">Demo</a></li><li><a class="BTNinfo" href="' +pURL+ '">Info</a></li></div></div></div></section></div></div>';}
+
+
 BLOGinst.insertAdjacentHTML('beforeend', CONTENTpage)}
 if(OBJname.length > 1){
 var BOOKtitle = '<h3 class="BOOKtitle">Há ' +OBJname.length+ ' temas na sua lista!</h3>';}
