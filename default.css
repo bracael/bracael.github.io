@@ -2438,6 +2438,7 @@ SECTION.STATICexcl .POSTstatic {
 }
 .POSTright {
     width: 30%;
+    transition: top 0.1s linear;
     position: -webkit-sticky;
     position: sticky;
     top: 78px;
@@ -3222,6 +3223,10 @@ span.btn-download-right-secondary {
 .ITEMpost .comments, .ITEMpost .DOCUMENTtab {
 	display: none;
 }
+.POSTbody {
+    overflow: visible !IMPORTANT;
+}
+
 
 
 .MSGfailure, .SUPPORTinst {
