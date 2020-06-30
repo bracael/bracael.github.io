@@ -335,7 +335,7 @@ COMMENTSwid[i].addEventListener('click', function(){
 	var CURRENTurl = document.querySelector('.' +SELECTtab);
 	var FIRSTelement = document.querySelector('.ITEMpost').firstElementChild;
 
-if((!FIRSTelement.isEqualNode(CURRENTurl)) && (this.hasAttribute("disable"))){
+if(!FIRSTelement.isEqualNode(CURRENTurl) && !this.hasAttribute("disable")){
 if(document.querySelector('.POSTbody') === CURRENTurl){
 setTimeout(function(){
 document.querySelector('.POSTright').removeAttribute("style"); }, 1240); }
@@ -444,8 +444,6 @@ var pURL = JSONparse[OBJname[i]].POSTurl;
 var pPRICE = JSONparse[OBJname[i]].RELprice;
 var pIMG = JSONparse[OBJname[i]].RELimage;
 var pDATE = JSONparse[OBJname[i]].POSTdate;
-
-console.log(JSONparse[OBJname[i]])
 
 if(JSONparse[OBJname[i]].hasOwnProperty('POSTup')){
 	var POSTup = JSONparse[OBJname[i]].POSTup;}
