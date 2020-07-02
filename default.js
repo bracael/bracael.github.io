@@ -781,7 +781,7 @@ FORMlogin.addEventListener('submit', (e) => {
 	e.preventDefault();});
 
 document.querySelector('BUTTON.FORGOTpass').addEventListener('click', function(){
-	var FORGOTpass = '<div class="LOGINspot"><div class="LOGINSPOTinst"><div class="COMPANYlogin"><section class="COMPANYit"><!-- Bracael --></section><span>Esqueceu a senha?</span></div><p>Digite seu endereço de e-mail para redefinir a senha. Talvez você precise verificar sua pasta de spams ou desbloquear o e-mail no-reply@bracael.com.</p><div class="GROUPinput"><input type="email" id="INPTRESETpass" tabindex="1" autocomplete="off" autofocus="" autocapitalize="off" autocorrect="off"></input><label>E-mail</label></div><div class="FOOTERlogin PAGEreset"><a class="IDONTacess" href="javascript:void(0);" onclick="alert(`Bracael.COM\nVersão Beta, 12.05.2020\nO Conteúdo para está página estará disponivel em breve.`)"><span>Não tem mais acesso?</span></a><button class="BTNRESETpass" tabindex="3">Enviar</button></div></div></div>';
+	var FORGOTpass = '<div class="LOGINspot"><div class="LOGINSPOTinst"><div class="COMPANYlogin"><section class="COMPANYit"><!-- Bracael --></section><span>Esqueceu a senha?</span></div><p>Digite seu endereço de e-mail para redefinir a senha. Talvez você precise verificar sua pasta de spams ou desbloquear o e-mail no-reply@bracael.com.</p><div class="GROUPinput"><input type="email" id="INPTRESETpass" tabindex="1" autocomplete="off" autofocus="" autocapitalize="off" autocorrect="off"></input><label>E-mail</label></div><div class="FOOTERlogin PAGEreset"><a class="IDONTacess" href="javascript:void(0);" onclick="alert(`Bracael.COM\nVersão Beta, 12.05.2020\nO Conteúdo para está página estará disponivel em breve.`)"><span>Não tem mais acesso?</span></a><button class="BTNRESETpass" tabindex="2">Enviar</button></div></div></div>';
 	contentHTML.innerHTML = FORGOTpass;
 	var INPTRESETpass = document.getElementById('INPTRESETpass');
 	INPTRESETpass.addEventListener('focusout', function(){
@@ -795,8 +795,11 @@ document.querySelector('.BTNRESETpass').addEventListener('click', function(){
 	var auth = firebase.auth();
 	var INPTRESETpass = document.getElementById('INPTRESETpass');
 	auth.sendPasswordResetEmail(INPTRESETpass.value).then(function(){
-	var FORGOTpass = '<div class="LOGINspot"><div class="LOGINSPOTinst SUCESSemail"><div class="COMPANYlogin TITLEsucess"><section class="COMPANYit"><!-- Bracael --></section><span>Solicitação com sucesso!</span></div><div class="SUCESSemail"><i class="CROSSicon CHECKicon"></i><div class="YOURmail"><span>holasoycael@gmail.com</span></div>Um e-mail foi enviado para seu e-mail de recuperaçao. Verifique a caixa de entrada do e-mail solicitado e siga as instruções para redefinir sua senha.</div><div class="COMPLETreset"><a href="#" class="LOGINgo">Fazer login</a><strong><span>ou</span></strong><a href="#" class="HOMEpage">Pagina inicial</a></div></div></div>';
+	var FORGOTpass = '<div class="LOGINspot"><div class="LOGINSPOTinst SUCESSemail"><div class="COMPANYlogin TITLEsucess"><section class="COMPANYit"><!-- Bracael --></section><span>Solicitação com sucesso!</span></div><div class="SUCESSemail"><i class="CROSSicon CHECKicon"></i><div class="YOURmail"><span>' +INPTRESETpass.value+ '</span></div>Um e-mail foi enviado para seu e-mail de recuperaçao. Verifique a caixa de entrada do e-mail solicitado e siga as instruções para redefinir sua senha.</div><div class="COMPLETreset"><a href="javascript:void(0);" class="LOGINgo">Fazer login</a><strong><span>ou</span></strong><a href="https://www.bracael.com/" class="HOMEpage">Pagina inicial</a></div></div></div>';
 	contentHTML.innerHTML = FORGOTpass;
+		document.querySelector('.LOGINgo').addEventListener('click', function(){
+		contentHTML.innerHTML = loginUser;
+		});
 	console.log('enviado')
 	})
     .catch(function(error) {
