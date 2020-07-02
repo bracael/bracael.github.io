@@ -3490,7 +3490,7 @@ BUTTON.FORGOTpass, .FOOTERlogin.PAGEreset A {
 .LOGINSPOTinst {
     padding: 46px 46px 32px;
     max-width: 632px;
-    margin: 32px 16px;
+    margin: 0 16px;
     background: #fff;
     border-radius: 6px;
 }
@@ -3630,7 +3630,7 @@ BODY[login] {
     background-attachment: fixed;
     width: 100%;
 }
-BODY[login], .BODYinst, MAIN.BODYmain, MAIN#CONTENTframe {
+BODY[login], BODY[login] .BODYinst, BODY[login] MAIN.BODYmain, BODY[login] MAIN#CONTENTframe {
     height: 100vh;
 }
 BODY[login] DIV.CONTENTblogger {
