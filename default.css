@@ -3407,14 +3407,14 @@ span.btn-download-right-secondary {
     float: right;
     margin-left: auto;
 }
-.LOGINspot button.LOGin:focus {
+.LOGINspot button.LOGin:focus, .LOGINspot button.BTNRESETpass:focus {
     -webkit-box-shadow: rgb(151, 200, 255) 0px 0px 4px 2px;
     box-shadow: rgb(151, 200, 255) 0px 0px 4px 2px;
 }
-.LOGINspot button.LOGin:hover {
+.LOGINspot button.LOGin:hover, .LOGINspot button.BTNRESETpass:hover {
     background: #0e75e8;
 }
-.LOGINspot button.LOGin:active {
+.LOGINspot button.LOGin:active, .LOGINspot button.BTNRESETpass:active {
     background: #00f;
 }
 .LOGINspot input#showPassword { color: #fff; position: absolute; top: 0; width: 136px; background: #c1c1c1; border-color: #3c3c3c; margin: 0; right: 0; cursor: pointer; }
@@ -3618,7 +3618,9 @@ DIV.SUCESSemail .YOURmail SPAN {
 }
 
 
-
+.LOGINspot DIV.SUCESSemail {
+    margin: 0 !IMPORTANT;
+}
 
 BODY[login] {
     background: rgba(232, 62, 227, 0.92);
@@ -3628,7 +3630,19 @@ BODY[login] {
     background-attachment: fixed;
     width: 100%;
 }
-
+BODY[login], .BODYinst, MAIN.BODYmain, MAIN#CONTENTframe {
+    height: 100vh;
+}
+BODY[login] DIV.CONTENTblogger {
+    height: calc(100% - 56px);
+    display: flex;
+}
+BODY[login] SECTION.STATICpage {
+    max-width: 632px !IMPORTANT;
+    position: relative;
+    margin: auto;
+    width: 100%;
+}
 
 
 SECTION.SIDEnav {
