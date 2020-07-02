@@ -680,15 +680,16 @@ var loginUser = '<div class="LOGINspot"><div class="LOGINSPOTinst"><div class="C
 fireBase.onAuthStateChanged(function(user){
 if(user){
 
-
+console.log(user)
 if(window.location.href.indexOf('/p/login.html') > -1){
 var CACHEurl = JSON.parse(sessionStorage.CACHEurl);
 if(CACHEurl[CACHEurl.length-2] !== undefined){
 	window.location.replace(CACHEurl[CACHEurl.length-2]);}
 	else{
-	window.location.replace("http://localhost/bracael.com/");}}
+	window.location.replace("http://www.bracael.com/");}}
 
 	user = fireBase.currentUser;
+console.log(user.uid)
 
 document.querySelector('.cPANEL').parentNode.innerHTML = '<a href="javascript:void(0);" class="LOGout cPANEL">Sair</a>';
 
@@ -795,7 +796,11 @@ document.querySelector('.BTNRESETpass').addEventListener('click', function(){
 	var auth = firebase.auth();
 	var INPTRESETpass = document.getElementById('INPTRESETpass');
 	auth.sendPasswordResetEmail(INPTRESETpass.value).then(function(){
-	var FORGOTpass = '<div class="LOGINspot"><div class="LOGINSPOTinst SUCESSemail"><div class="COMPANYlogin TITLEsucess"><section class="COMPANYit"><!-- Bracael --></section><span>Solicitação com sucesso!</span></div><div class="SUCESSemail"><i class="CROSSicon CHECKicon"></i><div class="YOURmail"><span>' +INPTRESETpass.value+ '</span></div>Um e-mail foi enviado para seu e-mail de recuperaçao. Verifique a caixa de entrada do e-mail solicitado e siga as instruções para redefinir sua senha.</div><div class="COMPLETreset"><a href="javascript:void(0);" class="LOGINgo">Fazer login</a><strong><span>ou</span></strong><a href="https://www.bracael.com/" class="HOMEpage">Pagina inicial</a></div></div></div>';
+
+var MAILit = INPTRESETpass.value.split('@')[0];
+var MAILit =MAILit.substring(0, 1) + MAILit.substring(1, MAILit.length-1).replace(/[a-z^0-9]/gim, '•') + MAILit.substring(MAILit.length-1) +'@'+ ('holasoycael@gmail.com').split('@')[1];
+
+	var FORGOTpass = '<div class="LOGINspot"><div class="LOGINSPOTinst SUCESSemail"><div class="COMPANYlogin TITLEsucess"><section class="COMPANYit"><!-- Bracael --></section><span>Solicitação com sucesso!</span></div><div class="SUCESSemail"><i class="CROSSicon CHECKicon"></i><div class="YOURmail"><span>' +MAILit+ '</span></div>Um e-mail foi enviado para seu e-mail de recuperaçao. Verifique a caixa de entrada do e-mail solicitado e siga as instruções para redefinir sua senha.</div><div class="COMPLETreset"><a href="javascript:void(0);" class="LOGINgo">Fazer login</a><strong><span>ou</span></strong><a href="https://www.bracael.com/" class="HOMEpage">Pagina inicial</a></div></div></div>';
 	contentHTML.innerHTML = FORGOTpass;
 		document.querySelector('.LOGINgo').addEventListener('click', function(){
 		contentHTML.innerHTML = loginUser;
