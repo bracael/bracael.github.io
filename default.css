@@ -930,24 +930,34 @@ HEADER.HEADmenu .BTNhref::focus::hover { background-color: rgba(60,64,67,0.1); }
 .MENUpost LI {
     font-size: 12px !IMPORTANT;
 }
+BODY SECTION.COOKIESbar P {
+    margin-right: 26px;
+}
 }
 
 DIV.HEADERnav {
     max-width: 1056px;
     font-family: var(--font-poppins);
     margin: 0 auto;
-    display: block;
     overflow: hidden;
     width: 100%;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
 }
 DIV.HEADERnav UL.HEADERleft {
     padding: 9px 0;
     float: left;
 }
 DIV.HEADERnav UL.HEADERright {
-    float: right;
     padding: 9px 0;
+    display: -ms-flexbox;
     display: flex;
+    margin-left: auto;
+    -ms-flex-align: center;
+    align-items: center;
+    float: left;
 }
 DIV.HEADERnav UL.HEADERright LI:not(:last-child) {
     margin-left: 7px;
@@ -1524,6 +1534,16 @@ display:none;
 }}
 
 @media screen and (max-width: 539px) {
+HTML BODY[login] {
+    background: #fff;
+}
+.LOGINspot .LOGINSPOTinst {
+    padding: 32px 20px 20px;
+    margin: 32px 0;
+    background: transparent;
+    border-radius: 0;
+}
+
 .DESCpost .FREEdownload {
     display: flex;
     flex-direction: column;
@@ -3332,18 +3352,21 @@ span.btn-download-right-secondary {
 }
 
 
-.LOGINspot H3 {
-    margin: 0 0 36px;
-    font-size: 32px;
-    text-align: center;
-    color: #1d262d;
+.LOGINspot .COMPANYlogin.SUCESSemail {
+    margin: 0 0 16px !IMPORTANT;
 }
-.LOGINspot h3 SPAN {
+.LOGINspot .COMPANYlogin {
+    margin: 0 0 32px;
+    color: #3c3c3c;
     font-size: 18px;
-    font-weight: 100;
+    font-weight: 500;
     display: block;
     text-align: center;
-    margin-top: 6px;
+}
+.LOGINspot .COMPANYlogin .COMPANYit {
+    width: 164px;
+    height: 41px;
+    margin: 0 auto 16px;
 }
 .LOGINspot label {
     font-weight: 100;
@@ -3370,26 +3393,28 @@ span.btn-download-right-secondary {
 .LOGINspot input:focus {
     box-shadow: inset 0 0 0 1px #1273EB;
 }
-.LOGINspot button {
+.LOGINspot button.LOGin, .LOGINspot button.BTNRESETpass {
     color: #fff;
     display: block;
-    min-height: 46px;
+    min-height: 40x;
     background-color: #0161cd;
     font-family: var(--font-poppins);
     font-weight: 500;
     text-align: center;
     border-radius: 3px;
     cursor: pointer;
-    width: 35%;
+    width: 132px;
+    float: right;
+    margin-left: auto;
 }
-.LOGINspot button:focus {
+.LOGINspot button.LOGin:focus {
     -webkit-box-shadow: rgb(151, 200, 255) 0px 0px 4px 2px;
     box-shadow: rgb(151, 200, 255) 0px 0px 4px 2px;
 }
-.LOGINspot button:hover {
+.LOGINspot button.LOGin:hover {
     background: #0e75e8;
 }
-.LOGINspot button:active {
+.LOGINspot button.LOGin:active {
     background: #00f;
 }
 .LOGINspot input#showPassword { color: #fff; position: absolute; top: 0; width: 136px; background: #c1c1c1; border-color: #3c3c3c; margin: 0; right: 0; cursor: pointer; }
@@ -3409,14 +3434,23 @@ span.btn-download-right-secondary {
     display: flex;
     margin: 26px 0 0;
 }
-.FOOTERlogin P {
-    padding: 12px 0;
+BUTTON.FORGOTpass, .FOOTERlogin.PAGEreset A {
+    min-height: 40px;
     font-size: 14px;
     color: #1a73e8;
     font-weight: 700;
+    background: transparent;
+    font-family: var(--font-lato);
+    cursor: pointer;
 }
-.FOOTERlogin * {
-    width: 100%;
+.FOOTERlogin.PAGEreset A {
+    min-height: 40px;
+    display: -ms-flexbox;
+    display: flex;
+}
+.FOOTERlogin.PAGEreset A SPAN {
+    display: flex;
+    margin: auto;
 }
 .LOGINspot .GROUPinput input:focus ~ label {
     color: #1273EB;
@@ -3454,11 +3488,19 @@ span.btn-download-right-secondary {
     margin: 0 auto;
 }
 .LOGINSPOTinst {
-    padding: 32px 46px 46px;
+    padding: 46px 46px 32px;
     max-width: 632px;
     margin: 32px 16px;
     background: #fff;
     border-radius: 6px;
+}
+.LOGINspot P, .LOGINspot DIV.SUCESSemail {
+    color: #5f6368;
+    font-size: 13px;
+    line-height: 1.4286;
+    font-family: var(--font-open);
+    margin: 0 0 8px;
+    display: inline-block;
 }
 
 .LOGINspot .GROUPinput[fail] input {
@@ -3468,6 +3510,9 @@ span.btn-download-right-secondary {
     color: #d50000;
 }
 
+.MSGerror.PAGEreset .CROSSicon, .MSGerror.PAGEreset SPAN {
+    padding: 13px 0 0;
+}
 .MSGerror {
     display: block;
     float: left;
@@ -3483,6 +3528,97 @@ span.btn-download-right-secondary {
 .MSGerror SPAN {
     line-height: 16px;
 }
+.FOOTERlogin.PAGEreset {
+    width: 100%;
+    padding: 16px 0 0;
+}
+
+.LOGINspot DIV.TITLEsucess {
+    font-size: 15px;
+    margin: 0 0 8px;
+}
+.LOGINspot DIV.SUCESSemail I.CROSSicon.CHECKicon {
+    margin: 0 auto 10px;
+}
+.LOGINspot DIV.SUCESSemail I.CROSSicon.CHECKicon, .LOGINspot DIV.SUCESSemail I.CROSSicon.CHECKicon::after {
+    width: 60px;
+    height: 60px;
+    display: block;
+}
+.LOGINspot DIV.SUCESSemail I.CROSSicon.CHECKicon::after {
+    content: '';
+}
+
+.COMPLETreset {
+    margin: 16px 0 0;
+    font-family: var(--font-poppins);
+    font-weight: 600;
+}
+DIV.SUCESSemail .YOURmail {
+    display: flex;
+    margin: 0 0 12px;
+}
+DIV.SUCESSemail .YOURmail SPAN {
+    display: inline-flex;
+    align-items: center;
+    background: #fff;
+    border: 1px solid #dadce0;
+    color: #3c4043;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: .25px;
+    max-width: 100%;
+    border-radius: 16px;
+    padding: 4px 14px;
+    margin: 0 auto;
+}
+.COMPLETreset A {
+    display: block;
+    max-width: 120px;
+    margin: 0 auto;
+    text-align: center;
+    background: transparent;
+    border-radius: 3px;
+    padding: 10px 16px;
+}
+.COMPLETreset A.LOGINgo {
+    box-shadow: inset 0 0 0 2px #02bfa6;
+    color: #02bfa6;
+}
+.COMPLETreset A.HOMEpage {
+    box-shadow: inset 0 0 0 2px #c00;
+    color: #c00;
+}
+.COMPLETreset STRONG {
+    position: relative;
+    margin: 0.9em auto;
+    text-align: center;
+    display: block;
+    max-width: 260px;
+}
+.COMPLETreset STRONG SPAN {
+    color: #737373;
+    background-color: #fff;
+    padding: 0 1em;
+    position: relative;
+    font-family: var(--font-open);
+    z-index: 1;
+    font-weight: 100;
+    font-size: 16px;
+}
+.COMPLETreset STRONG::after {
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: #e6e6e6;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    box-sizing: inherit;
+}
+
+
+
 
 BODY[login] {
     background: rgba(232, 62, 227, 0.92);
@@ -3923,4 +4059,13 @@ div#FEEDback {
 .MSGform P.contact-form-error-message-with-border IMG {
     top: 2px;
     margin-left: 8px;
+}
+
+
+.DOCUMENTinst pre {
+    color: #61b74e;
+    padding: 20px !important;
+    background: #f7f7f7;
+    line-height: 16px;
+    white-space: pre-wrap;
 }
