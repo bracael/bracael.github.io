@@ -664,30 +664,33 @@ var BLOGinst = document.querySelector('.Blog');
 var CONTENTpage = '<div class="EMPTYfav"><p>Você ainda não adicionou nenhum tema ao seus favoritos 🙄</p><div class="SPOTfav"><div class="BOTfav"><div class="POSTbox EXEfav"><div class="POSTinst"><section class="POSTup excl"><div class="POSTimg"><img class="THUMBnail" src="https://2.bp.blogspot.com/-U1PEPnMPk2Q/Xr_BCoq7EAI/AAAAAAAAG5I/_LP4GUXyKTAH5WUi7H7zH2yfFFaBjTnYQCLcBGAsYHQ/s1600/village-de-traque.png"></div><div class="POSTspot EXEfav"><i class="BTNfav EXEfav"></i></div></section><section class="POSTbt"><div class="POSTbt_inner"><h3 class="POSTtitle"><span class="POSTurl EXEfav TITLEex"></span></h3><div class="POSTdate EXEfav DATEex"></div><div class="POSTBOXbt"><div class="POSTprice EXEfav PRICEex"></div><div class="POSTbtn EXEfav BUTTONSex"><li><span class="BTNlive EXEfav"></span></li><li><span class="BTNinfo EXEfav"></span></li></div></div></div></section></div></div></div><div class="BOTFAVright"><span class="MSGfav">Clique no icone de “adicionar aos favoritos” e crie sua lista personalizada com todos os temas que tu mais gosta. Estamos felizes por ter você em nosso site.</span><a href="#" class="BACKhome">Mostrar todos os temas</a></div></div></div>';
 BLOGinst.insertAdjacentHTML('beforeend', CONTENTpage)}}
 
-if(window.location.href.indexOf('/p/login.html') > -1){
-document.body.setAttribute('login', '');
+
+
 var fireBase = firebase.auth();
 // var usersList = document.getElementById('usersList');
 var contentHTML = document.querySelector('.Blog');
 
-var signedUser = '<div id="user_div" class="loggedin-div"><h3>Seja bem vindo(a)</h3><div id="usersList"><p id="user_para">Você está conectado no momento.</p></div></div>';
 
 var ACTIVEpass = '<svg class="CROSSicon PASSit" fill="currentColor" focusable="false" width="24px" height="24px" viewBox="0 0 24 24" xmlns="https://www.w3.org/2000/svg"><path d="M12,7c-2.48,0-4.5,2.02-4.5,4.5S9.52,16,12,16s4.5-2.02,4.5-4.5S14.48,7,12,7z M12,14.2c-1.49,0-2.7-1.21-2.7-2.7 c0-1.49,1.21-2.7,2.7-2.7s2.7,1.21,2.7,2.7C14.7,12.99,13.49,14.2,12,14.2z"></path><path d="M12,4C7,4,2.73,7.11,1,11.5C2.73,15.89,7,19,12,19s9.27-3.11,11-7.5C21.27,7.11,17,4,12,4z M12,17 c-3.79,0-7.17-2.13-8.82-5.5C4.83,8.13,8.21,6,12,6s7.17,2.13,8.82,5.5C19.17,14.87,15.79,17,12,17z"></path></svg>';
 
 var OCULTApass = '<svg class="CROSSicon PASSit" fill="currentColor" focusable="false" width="24px" height="24px" viewBox="0 0 24 24" xmlns="https://www.w3.org/2000/svg"><path d="M10.58,7.25l1.56,1.56c1.38,0.07,2.47,1.17,2.54,2.54l1.56,1.56C16.4,12.47,16.5,12,16.5,11.5C16.5,9.02,14.48,7,12,7 C11.5,7,11.03,7.1,10.58,7.25z"></path><path d="M12,6c3.79,0,7.17,2.13,8.82,5.5c-0.64,1.32-1.56,2.44-2.66,3.33l1.42,1.42c1.51-1.26,2.7-2.89,3.43-4.74 C21.27,7.11,17,4,12,4c-1.4,0-2.73,0.25-3.98,0.7L9.63,6.3C10.4,6.12,11.19,6,12,6z"></path><path d="M16.43,15.93l-1.25-1.25l-1.27-1.27l-3.82-3.82L8.82,8.32L7.57,7.07L6.09,5.59L3.31,2.81L1.89,4.22l2.53,2.53 C2.92,8.02,1.73,9.64,1,11.5C2.73,15.89,7,19,12,19c1.4,0,2.73-0.25,3.98-0.7l4.3,4.3l1.41-1.41l-3.78-3.78L16.43,15.93z M11.86,14.19c-1.38-0.07-2.47-1.17-2.54-2.54L11.86,14.19z M12,17c-3.79,0-7.17-2.13-8.82-5.5c0.64-1.32,1.56-2.44,2.66-3.33 l1.91,1.91C7.6,10.53,7.5,11,7.5,11.5c0,2.48,2.02,4.5,4.5,4.5c0.5,0,0.97-0.1,1.42-0.25l0.95,0.95C13.6,16.88,12.81,17,12,17z"></path></svg>';
 
-var loginUser = '<div class="LOGINspot"><div class="LOGINSPOTinst"><h3>Bem vindo(a)<span>Esta é uma area privada.</span></h3><form class="FORMlogin"><div class="GROUPinput"><input type="email" id="emailInput" tabindex="1" autocomplete="off" autofocus="" autocapitalize="off" autocorrect="off"></input><label>Username or email</label></div><div class="GROUPinput"><input type="password" id="passwordInput" tabindex="2" autocomplete="off"></input><div class="SHOWpass">' +ACTIVEpass+ '</div><label>Password</label></div><div class="FOOTERlogin"><p>Esqueceu a sua senha?</p><button class="LOGin" tabindex="3">Fazer login</button></div></form></div></div>';
-
-
-var cPANEL = document.querySelector('.cPANEL');
+var loginUser = '<div class="LOGINspot"><div class="LOGINSPOTinst"><div class="COMPANYlogin"><section class="COMPANYit"><!-- Bracael --></section><span>Use uma conta Bracael.</span></div><form class="FORMlogin"><div class="GROUPinput"><input type="email" id="emailInput" tabindex="1" autocomplete="off" autofocus="" autocapitalize="off" autocorrect="off"></input><label>E-mail</label></div><div class="GROUPinput"><input type="password" id="passwordInput" tabindex="2" autocomplete="off"></input><div class="SHOWpass">' +ACTIVEpass+ '</div><label>Senha</label></div><div class="FOOTERlogin"><button class="BTN FORGOTpass" type="button">Esqueceu a sua senha?</button><button class="LOGin" tabindex="3">Fazer login</button></div></form></div></div>';
 
 fireBase.onAuthStateChanged(function(user){
 if(user){
-	contentHTML.innerHTML = signedUser;
+
+
+if(window.location.href.indexOf('/p/login.html') > -1){
+var CACHEurl = JSON.parse(sessionStorage.CACHEurl);
+if(CACHEurl[CACHEurl.length-2] !== undefined){
+	window.location.replace(CACHEurl[CACHEurl.length-2]);}
+	else{
+	window.location.replace("http://localhost/bracael.com/");}}
+
 	user = fireBase.currentUser;
 
-const LOGOUTbtn = '<a href="javascript:void(0);" class="LOGout cPANEL">Sair</a>';
-cPANEL.parentNode.innerHTML = LOGOUTbtn;
+document.querySelector('.cPANEL').parentNode.innerHTML = '<a href="javascript:void(0);" class="LOGout cPANEL">Sair</a>';
 
 
 
@@ -695,9 +698,13 @@ cPANEL.parentNode.innerHTML = LOGOUTbtn;
 //SAIR DA CONTA ------ FIM DO IF
 document.querySelector('.LOGout').addEventListener('click', function(){
 	fireBase.signOut();
-	var LOGINbtn = '<a href="javascript:void(0);" class="cPANEL">Entrar</a>'
+	var LOGINbtn = '<a href="/p/login.html" class="cPANEL">Entrar</a>'
 	this.parentNode.innerHTML = LOGINbtn; });}
-else { contentHTML.innerHTML = loginUser;
+else{
+if(window.location.href.indexOf('/p/login.html') > -1){
+	document.body.setAttribute('login', '');
+	contentHTML.innerHTML = loginUser;
+
 var LOGin = document.querySelector('.LOGin');
 LOGin.addEventListener('click', function(){
 var userEmail = document.getElementById("emailInput").value;
@@ -707,14 +714,13 @@ fireBase.signInWithEmailAndPassword(userEmail, userPass).catch(function(error) {
 var MAILelement = document.getElementById("emailInput");
 var PASSelement = document.getElementById("passwordInput");
 
-if(MAILelement.length == 0){
-var MSGfail = 'Por favor, digite um email.';
-}else{
-var MSGfail = 'E-mail ou senha inválidos.';	
-}
+if(MAILelement.value.length == 0){
+	var MSGfail = 'Por favor, digite um email.';}
+	else{
+	var MSGfail = 'E-mail ou senha inválidos.';}
 
 
-var MSGerror = '<div class="MSGerror"><div class="CROSSicon"><svg aria-hidden="true" class="stUf5b qpSchb" fill="currentColor" focusable="false" width="16px" height="16px" viewBox="0 0 24 24" xmlns="https://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"></path></svg></div><span>' +MSGfail+ '</span></div>';
+var MSGerror = '<div class="MSGerror"><div class="CROSSicon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="#d50000" fill-rule="evenodd"><path id="Retângulo_2" data-name="Retângulo 2" class="cls-1" d="M8,0A8,8,0,1,1,0,8,8,8,0,0,1,8,0ZM7,3H9v7H7V3Zm0,8H9v2H7V11Z"></path></svg></div><span>' +MSGfail+ '</span></div>';
 
 var parser = new DOMParser();
 var MSGerror = parser.parseFromString(MSGerror, 'text/html');
@@ -722,7 +728,8 @@ var GROUPinput = document.querySelector('.GROUPinput');
 
 //MSG FAILURE ------ [RESOLVIDO]
 var GROUPall = document.querySelector('.GROUPinput');
-if((!GROUPall.hasAttribute("fail") == true) && (document.querySelector('.MSGerror') > -1 ? true : false === true)){
+
+if(!GROUPall.hasAttribute("fail") && !document.body.contains(document.querySelector('.MSGerror'))){
 GROUPinput.insertAdjacentElement("afterend", MSGerror.querySelector('.MSGerror'));}
 
 MAILelement.addEventListener('input', function(){
@@ -773,5 +780,68 @@ var FORMlogin = document.querySelector('.FORMlogin')
 FORMlogin.addEventListener('submit', (e) => {
 	e.preventDefault();});
 
-}});
+document.querySelector('BUTTON.FORGOTpass').addEventListener('click', function(){
+	var FORGOTpass = '<div class="LOGINspot"><div class="LOGINSPOTinst"><div class="COMPANYlogin"><section class="COMPANYit"><!-- Bracael --></section><span>Esqueceu a senha?</span></div><p>Digite seu endereço de e-mail para redefinir a senha. Talvez você precise verificar sua pasta de spams ou desbloquear o e-mail no-reply@bracael.com.</p><div class="GROUPinput"><input type="email" id="INPTRESETpass" tabindex="1" autocomplete="off" autofocus="" autocapitalize="off" autocorrect="off"></input><label>E-mail</label></div><div class="FOOTERlogin PAGEreset"><a class="IDONTacess" href="javascript:void(0);" onclick="alert(`Bracael.COM\nVersão Beta, 12.05.2020\nO Conteúdo para está página estará disponivel em breve.`)"><span>Não tem mais acesso?</span></a><button class="BTNRESETpass" tabindex="3">Enviar</button></div></div></div>';
+	contentHTML.innerHTML = FORGOTpass;
+	var INPTRESETpass = document.getElementById('INPTRESETpass');
+	INPTRESETpass.addEventListener('focusout', function(){
+	if(INPTRESETpass.value.length >= 1){
+	INPTRESETpass.setAttribute('class', 'HAScontent');}
+	else {
+	INPTRESETpass.removeAttribute('class');}});
+
+
+document.querySelector('.BTNRESETpass').addEventListener('click', function(){
+	var auth = firebase.auth();
+	var INPTRESETpass = document.getElementById('INPTRESETpass');
+	auth.sendPasswordResetEmail(INPTRESETpass.value).then(function(){
+	var FORGOTpass = '<div class="LOGINspot"><div class="LOGINSPOTinst SUCESSemail"><div class="COMPANYlogin TITLEsucess"><section class="COMPANYit"><!-- Bracael --></section><span>Solicitação com sucesso!</span></div><div class="SUCESSemail"><i class="CROSSicon CHECKicon"></i><div class="YOURmail"><span>holasoycael@gmail.com</span></div>Um e-mail foi enviado para seu e-mail de recuperaçao. Verifique a caixa de entrada do e-mail solicitado e siga as instruções para redefinir sua senha.</div><div class="COMPLETreset"><a href="#" class="LOGINgo">Fazer login</a><strong><span>ou</span></strong><a href="#" class="HOMEpage">Pagina inicial</a></div></div></div>';
+	contentHTML.innerHTML = FORGOTpass;
+	console.log('enviado')
+	})
+    .catch(function(error) {
+if(INPTRESETpass.value.length == 0){
+	var MSGfailure = 'Digite seu endereço de e-mail.';}
+	else{
+	var MSGfailure = 'Digite um e-mail válido.';}
+
+
+var RESETerror = '<div class="MSGerror PAGEreset"><div class="CROSSicon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="#d50000" fill-rule="evenodd"><path id="Retângulo_2" data-name="Retângulo 2" class="cls-1" d="M8,0A8,8,0,1,1,0,8,8,8,0,0,1,8,0ZM7,3H9v7H7V3Zm0,8H9v2H7V11Z"></path></svg></div><span>' +MSGfailure+ '</span></div>';
+
+
+var DOMparse = new DOMParser();
+var DOMparse = DOMparse.parseFromString(RESETerror, 'text/html');
+
+
+if(document.body.contains(document.querySelector('.MSGerror'))){
+if(document.querySelector('.MSGerror').innerText != DOMparse.querySelector('.MSGerror').children[1].innerText){
+	document.querySelector('.MSGerror').children[1].innerText = DOMparse.querySelector('.MSGerror').children[1].innerText;
 }}
+
+var GROUPall = document.querySelector('.GROUPinput');
+INPTRESETpass.value = null;;
+if(!GROUPall.hasAttribute("fail") && !document.body.contains(document.querySelector('.MSGerror'))){
+document.querySelector('.GROUPinput').insertAdjacentElement("afterend", DOMparse.querySelector('.MSGerror'));}
+GROUPall.setAttribute('fail', '');
+
+INPTRESETpass.addEventListener('input', function(){
+$('.MSGerror').animate({ height: 0, opacity: 0 },{duration: 300, complete: function(){ $('.MSGerror').remove() }});
+GROUPall.removeAttribute('fail');});
+
+	error.message = 'Digite um e-mail válido.'
+	console.log("Error: " + error.message)
+	// Error occurred. Inspect error.code.
+    });
+
+}); //document.querySelector('.BTNRESETpass')
+
+});
+
+
+}
+
+}
+});
+
+
+}
