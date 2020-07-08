@@ -125,7 +125,7 @@ if(GETimg.length>=1 && BOLLdmo && BOLLpre && BOLLbxa && BOLLupt && BOLLlyt && Nu
 	var CHECKout = true;
 	var VALUEpay = PRICEpost.split(' ')[1].replace(/(?:,)/g, '.');
 	var POSTtrue = true;
-	var PREMIUMspot = '<div class="INFOthis"><li><a href="../p/checkout.html?id=' +DEMOid+ '" target="_blank"><i class="CROSSicon CARTicon"></i><span>' +PRICEpost+ '</span></a></li><li><a href="' +INDEXit+ '"><i class="CROSSicon INFOicon"></i></a></li><li><a href="javascript:void(0);" class="CARTit"><i class="CROSSicon ADDTOfav"></i></a></li></div>';}
+	var PREMIUMspot = '<div class="INFOthis"><li><a href="/p/checkout.html?id=' +DEMOid+ '" target="_blank"><i class="CROSSicon CARTicon"></i><span>' +PRICEpost+ '</span></a></li><li><a href="' +INDEXit+ '"><i class="CROSSicon INFOicon"></i></a></li><li><a href="javascript:void(0);" class="CARTit"><i class="CROSSicon ADDTOfav"></i></a></li></div>';}
 	else{
 	var CHECKout = false;
 	var POSTtrue = false;}}
