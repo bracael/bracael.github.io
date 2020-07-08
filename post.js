@@ -13,7 +13,6 @@ var pDATE = `${day}/${month}/${year} ÀS ${hour}:${minute} ${hour12}`;
 	var CODEdemo = POSTcode.replace('[demo', '[class="demo"');
 	var CODEdemo = CODEdemo.replace('[pre]', '<pre>');
 	var CODEdemo = CODEdemo.replace('[/pre]', '</pre>');
-	var CODEdemo = CODEdemo.replace('[buy', '[class="buy"');
 	var CODEdemo = CODEdemo.replace('[zip', '[class="zip"');
 	var CODEdemo = CODEdemo.replace('[baixar', '[class="baixar"');
 	var CODEdemo = CODEdemo.replace(/(?:\[changelog)/g, '[class="changelog"');
@@ -73,10 +72,6 @@ if(DOCit.body.contains(DOCit.body.querySelector('.baixar'))){
 	var BOLLbxa = DOCit.body.querySelector('.baixar').hasAttribute('url');}
 	else{ var BOLLbxa = false; }
 
-if(DOCit.body.contains(DOCit.body.querySelector('.buy'))){
-	var BOLLbuy = DOCit.body.querySelector('.buy').hasAttribute('url');}
-	else{ var BOLLbuy = false; }
-
 if(DOCit.body.contains(DOCit.body.querySelector('.demo'))){
 	var BOLLdmo = DOCit.body.querySelector('.demo').hasAttribute('url');}
 	else{ var BOLLdmo = false; }
@@ -97,7 +92,7 @@ if(pLOCAL.split(' ').includes('free') && img.length>=1 && BOLLdmo && BOLLpre && 
 	else if(pLOCAL.split(' ').includes('excl') && img.length>=1 && BOLLdmo && BOLLpre && pLOCAL.split(' ').length === 1){
 	summary = '<section class="POSTup ' +pLOCAL+ '"><div class="POSTimg"><img class="THUMBnail" src="'+img[0].src+'"></img></div><div class="POSTspot"><i class="BTNfav" rel="' +pID+ '"></i></div></section><section class="POSTbt"><div class="POSTbt_inner"><h3 class="POSTtitle"><a class="POSTurl" href="' +pURL+ '">' +pTITLE+ '</a></h3><div class="POSTdate CALENDar">' +pDATE+ '</div><div class="POSTBOXbt"><div class="POSTbtn MAXwidth"><li><a class="BTNlive" href="/p/demo.html?id=' +pID+ '" target="_blank">DEMO</a></li><li><a class="BTNinfo" href="' +pURL+ '">Info</a></li></div></div></div></section>';}
 else{
-if(img.length>=1 && BOLLdmo && BOLLpre && BOLLbxa && BOLLbuy && BOLLupt && BOLLlyt && Number(pLOCAL.replace(/[^0-9]/g,'')) !== 0 && pLOCAL.split(' ').length === 1){
+if(img.length>=1 && BOLLdmo && BOLLpre && BOLLbxa && BOLLupt && BOLLlyt && Number(pLOCAL.replace(/[^0-9]/g,'')) !== 0 && pLOCAL.split(' ').length === 1){
 	summary = '<section class="POSTup '+pLOCAL+'"><div class="POSTimg"><img class="THUMBnail" src="'+img[0].src+'"></img></div><div class="POSTspot"><i class="BTNfav" rel="'+pID+'"></i></div></section><section class="POSTbt"><div class="POSTbt_inner"><h3 class="POSTtitle"><a class="POSTurl" href="'+pURL+'">'+pTITLE+'</a></h3><div class="POSTdate CALENDar">'+pDATE+'</div><div class="POSTBOXbt"><div class="POSTprice">'+PRICEpost+'</div><div class="POSTbtn"><li><a class="BTNlive" href="/p/demo.html?id=' +pID+ '" target="_blank">Demo</a></li><li><a class="BTNinfo" href="' +pURL+ '">Info</a></li></div></div></div></section>';}
 	else{
 	var ARRAYimg = new Array(3)
@@ -125,7 +120,6 @@ function POSTbody(pID, pTITLE, pURL, pDATE, pLOCAL){
 	var CODEdemo = POSTcode.replace('[demo', '[class="demo"');
 	var CODEdemo = CODEdemo.replace('[pre]', '<pre>');
 	var CODEdemo = CODEdemo.replace('[/pre]', '</pre>');
-	var CODEdemo = CODEdemo.replace('[buy', '[class="buy"');
 	var CODEdemo = CODEdemo.replace('[zip', '[class="zip"');
 	var CODEdemo = CODEdemo.replace('[baixar', '[class="baixar"');
 	var CODEdemo = CODEdemo.replace(/(?:\[changelog)/g, '[class="changelog"');
@@ -217,10 +211,6 @@ if(DOCit.body.contains(DOCit.body.querySelector('.baixar'))){
 	var BOLLbxa = DOCit.body.querySelector('.baixar').hasAttribute('url');}
 	else{ var BOLLbxa = false;}
 
-if(DOCit.body.contains(DOCit.body.querySelector('.buy'))){
-	var BOLLbuy = DOCit.body.querySelector('.buy').hasAttribute('url');}
-	else{ var BOLLbuy = false;}
-
 if(DOCit.body.contains(DOCit.body.querySelector('.demo'))){
 	var BOLLdmo = DOCit.body.querySelector('.demo').hasAttribute('url');}
 	else{ var BOLLdmo = false;}
@@ -246,13 +236,12 @@ if(pLOCAL.split(' ').includes('free') && img.length>=1 && BOLLdmo && BOLLpre && 
 	var GETpre = DOCit.body.querySelector('pre').innerText;
 	summary = '<div class="POSTcontent"><div class="POSTleft"><div class="LEFTinst"><div class="POSTdoor"><img src="'+img[0].src+'"></div><div class="TOOLSpost"><div class="ACTIONpost">' +SHAREpage+ '<div class="LIVEspot"><a class="btn LIVEtemplate" href="/p/demo.html?id=' +pID+ '" target="_blank"><div><i class="SEEit"></i><span>Visualizar tema</span></div></a></div></div></div><div class="DESCpost"><h3>' +pTITLE+ '</h3><p>' +GETpre+ '</p></div><div class="INFORMATIONpage">' +FEATURESthis+CHANGElog+ '</div></div></div><div class="POSTright"><div class="STATICbox"><div class="fb-page" data-href="https://www.facebook.com/bracaelcom" data-tabs="timeline" data-width="" data-height="" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/bracaelcom" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/bracaelcom">Bracael</a></blockquote></div></div></div></div>'; }
 	else{
-	if(img.length>=1 && BOLLdmo && BOLLpre && BOLLbxa && BOLLbuy && BOLLupt && BOLLlyt && Number(pLOCAL.replace(/[^0-9]/g,'')) !== 0 && pLOCAL.split(' ').length === 1){
+	if(img.length>=1 && BOLLdmo && BOLLpre && BOLLbxa && BOLLupt && BOLLlyt && Number(pLOCAL.replace(/[^0-9]/g,'')) !== 0 && pLOCAL.split(' ').length === 1){
 	var GETpre = DOCit.body.querySelector('pre').innerText;
 	var GETbxa = DOCit.body.querySelector('.baixar').getAttribute('url');
-	var GETbuy = DOCit.body.querySelector('.buy').getAttribute('url');
 	var GETupt = DOCit.body.querySelector('.zip').getAttribute('update').replace(/(-)/gi,'/');
 	var GETlyt = DOCit.body.querySelector('.zip').getAttribute('layout')[0].toUpperCase() +	DOCit.body.querySelector('.zip').getAttribute('layout').slice(1);
-	summary = '<div class="POSTcontent"><div class="POSTleft"><div class="LEFTinst"><div class="POSTdoor"><img src="'+img[0].src+'"></div><div class="TOOLSpost"><div class="ACTIONpost">' +SHAREpage+ '<div class="LIVEspot"><a class="btn LIVEtemplate" href="/p/demo.html?id=' +pID+ '" target="_blank"><div><i class="SEEit"></i><span>Visualizar tema</span></div></a></div></div></div><div class="DESCpost"><h3>' +pTITLE+ '<i class="CROSSicon" feedback=""></i></h3><div class="TYPEfile"><li>Tipo de arquivo<span>ZIP</span></li><li>Layout<span>' +GETlyt+ '</span></li><li>Última atualização<span>' +GETupt+ '</span></li></div><p>' +GETpre+ '</p><div class="FREEdownload"><li><a class="URLfree" href="' +GETbxa+ '"><div class="btn-download-left"></div><div class="btn-download-right"><span class="btn-download-right-main">Baixar Grátis</span><span class="btn-download-right-secondary">versão de avaliação</span></div></a></li><li class="SECURITYitem">Verificado com <b>Antivírus</b></li></div></div><div class="INFORMATIONpage">' +FEATURESthis+CHANGElog+ '</div></div></div><div class="POSTright"><div class="PURCHASEbox"><div class="PURCHASEinst"><h4><span class="LICENSEtxt">Premium</span><a target="_blank" href="#"><i class="CIRCLEhelp"></i></a></h4><div class="PRICEbar"><span class="PREMIUMval">' +PRICEpost+ '</span><span class="COINhere">BRL</span></div><div class="CHECKOUTwrap"><li>Atualização do template</li><li>Nenhum script criptografado</li><li>3 Meses de suporte</li><li>Para domínios ilimitados</li><li>Remover créditos</li><span class="BUTTONpost"><a href="' +GETbuy+ '" rel="nofollow" target="_blank" class="BTNit CHECKout"><i class="CARTit"></i><span>Comprar</span></a></span></div></div></div><div class="STATICbox FACEsec"><div class="fb-page" data-href="https://www.facebook.com/bracaelcom" data-tabs="" data-width="" data-height="" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false"><blockquote cite="https://www.facebook.com/bracaelcom" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/bracaelcom">Bracael</a></blockquote></div></div></div></div>'; }
+	summary = '<div class="POSTcontent"><div class="POSTleft"><div class="LEFTinst"><div class="POSTdoor"><img src="'+img[0].src+'"></div><div class="TOOLSpost"><div class="ACTIONpost">' +SHAREpage+ '<div class="LIVEspot"><a class="btn LIVEtemplate" href="/p/demo.html?id=' +pID+ '" target="_blank"><div><i class="SEEit"></i><span>Visualizar tema</span></div></a></div></div></div><div class="DESCpost"><h3>' +pTITLE+ '<i class="CROSSicon" feedback=""></i></h3><div class="TYPEfile"><li>Tipo de arquivo<span>ZIP</span></li><li>Layout<span>' +GETlyt+ '</span></li><li>Última atualização<span>' +GETupt+ '</span></li></div><p>' +GETpre+ '</p><div class="FREEdownload"><li><a class="URLfree" href="' +GETbxa+ '"><div class="btn-download-left"></div><div class="btn-download-right"><span class="btn-download-right-main">Baixar Grátis</span><span class="btn-download-right-secondary">versão de avaliação</span></div></a></li><li class="SECURITYitem">Verificado com <b>Antivírus</b></li></div></div><div class="INFORMATIONpage">' +FEATURESthis+CHANGElog+ '</div></div></div><div class="POSTright"><div class="PURCHASEbox"><div class="PURCHASEinst"><h4><span class="LICENSEtxt">Premium</span><a target="_blank" href="#"><i class="CIRCLEhelp"></i></a></h4><div class="PRICEbar"><span class="PREMIUMval">' +PRICEpost+ '</span><span class="COINhere">BRL</span></div><div class="CHECKOUTwrap"><li>Atualização do template</li><li>Nenhum script criptografado</li><li>3 Meses de suporte</li><li>Para domínios ilimitados</li><li>Remover créditos</li><span class="BUTTONpost"><a href="../p/checkout.html?id=' +pID+ '" rel="nofollow" target="_blank" class="BTNit CHECKout"><i class="CARTit"></i><span>Comprar</span></a></span></div></div></div><div class="STATICbox FACEsec"><div class="fb-page" data-href="https://www.facebook.com/bracaelcom" data-tabs="" data-width="" data-height="" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false"><blockquote cite="https://www.facebook.com/bracaelcom" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/bracaelcom">Bracael</a></blockquote></div></div></div></div>'; }
 else{
 if(pLOCAL.split(' ').length !== 1 || pLOCAL == ''){
 	var ERROnum = '<li><p class="SLCTit">Desvio de sintaxe</p><p>-</p><p class="UNICitem">-</p><p>input</p></li>';}
@@ -278,14 +267,6 @@ if(!pLOCAL.split(' ').includes('excl')){
 	
 	else{
 	var ERRObxa = '';}
-if(!DOCit.body.contains(DOCit.body.querySelector('.buy'))){
-if(!pLOCAL.split(' ').includes('excl') && !pLOCAL.split(' ').includes('free') && pLOCAL.split(' ').length !== 1){
-	var ERRObuy = '<li><p class="SLCTit">Encerramento inesperado</p><p class="SLCTit">buy</p><p class="UNICitem">url</p><p>valor</p></li>';}
-	else{
-	var ERRObuy = '';}}
-
-	else{
-	var ERRObuy = '';}
 
 if(!pLOCAL.split(' ').includes('excl')){
 if(!DOCit.body.contains(DOCit.body.querySelector('.zip'))){
@@ -308,7 +289,7 @@ if(!DOCit.body.querySelector('.zip').hasAttribute('layout')){
 	var ERROupt = '';
 	var ERROlyt = '';}
 
-	var summary = '<div class="MSGfailure"><h4>ERRO 500, OPS!<span>Erro Interno do Servidor</span></h4><ul><div class="FAILUREspot"><h5>Descrição</h5><li><p class="report">Os comandos estão digitados de maneira incorreta, por favor, verifique as palavras no texto da postagem.</p></li></div><div class="FAILUREspot"><h5>Relatorio de erros</h5><div class="FAILUREtype"><li>Resumo</li><li>Elemento</li><li>Propriedade</li><li>Tipo</li></div><div class="TYPEinfo">' +ERROimg+ERROdmo+ERROpre+ERRObxa+ERRObuy+ERROzip+ERROupt+ERROlyt+ERROnum+ '</div></div><div class="FAILUREspot LASTfail"><h5>Informações adicionais</h5><li><p class="item"><b>Caminho URL</b><span>' + pURL + '</span></p></li><li><p class="item"><b>ID do Post</b><span>' + pID + '</span></p></li><li><p class="item"><b>Título</b><span>' + pTITLE + '</span></p></li><li><p class="item"><b>Data</b><span>' +`${day} de ${month} de ${year}`+ '</span></p></li></div></ul><a class="HOMEurl" href="#">Página inicial</a></div>';}}
+	var summary = '<div class="MSGfailure"><h4>ERRO 500, OPS!<span>Erro Interno do Servidor</span></h4><ul><div class="FAILUREspot"><h5>Descrição</h5><li><p class="report">Os comandos estão digitados de maneira incorreta, por favor, verifique as palavras no texto da postagem.</p></li></div><div class="FAILUREspot"><h5>Relatorio de erros</h5><div class="FAILUREtype"><li>Resumo</li><li>Elemento</li><li>Propriedade</li><li>Tipo</li></div><div class="TYPEinfo">' +ERROimg+ERROdmo+ERROpre+ERRObxa+ERROzip+ERROupt+ERROlyt+ERROnum+ '</div></div><div class="FAILUREspot LASTfail"><h5>Informações adicionais</h5><li><p class="item"><b>Caminho URL</b><span>' + pURL + '</span></p></li><li><p class="item"><b>ID do Post</b><span>' + pID + '</span></p></li><li><p class="item"><b>Título</b><span>' + pTITLE + '</span></p></li><li><p class="item"><b>Data</b><span>' +`${day} de ${month} de ${year}`+ '</span></p></li></div></ul><a class="HOMEurl" href="#">Página inicial</a></div>';}}
 
 	div.innerHTML = summary;
 
