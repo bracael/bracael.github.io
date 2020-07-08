@@ -110,7 +110,7 @@ SPAN.BUTTONpost A,
 }
 
 
-.BODYinst, MAIN.BODYmain { float: left; width: 100%; position: relative; }
+.BODYinst, MAIN.BODYmain { float: left; width: 100vw; position: relative; }
 MAIN.BODYmain { display: block; }
 
 
@@ -201,7 +201,6 @@ SECTION.STATICpage {
 .HEADERright .SEARCHbar.ACTIVEit FORM.SEARCHform INPUT.SEARCHinput {
     width: 144px;
 }}
-
 @media screen and (max-width: 400px) {
 .TOOLSpost .ACTIONpost .btn.LIVEtemplate {
     display: flex;
@@ -759,7 +758,7 @@ NAV.PUSHmenu FOOTER SPAN.LASTupdate {
 HEADER.HEADmenu {
     background: var(--navbar-bg);
     position: fixed;
-    width: calc(100% + 6px);
+    width: 100vw;
     top: 0;
     left: 0;
     height: 56px;
@@ -1538,9 +1537,9 @@ HTML BODY[login] {
     background: #fff;
 }
 .LOGINspot .LOGINSPOTinst {
-    padding: 32px 20px 20px;
-    margin: 32px 0;
+    margin: 0;
     background: transparent;
+    padding: 0 20px;
     border-radius: 0;
 }
 
@@ -2086,7 +2085,7 @@ BODY SECTION.SIDEnav {
 .owl-carousel,.owl-carousel .owl-item { -webkit-tap-highlight-color: transparent; position: relative; }
 .owl-carousel { display: none; width: 100%; z-index: 1; }
 .owl-carousel .owl-stage { position: relative; -ms-touch-action: pan-Y; touch-action: manipulation; -moz-backface-visibility: hidden; }
-.owl-carousel .owl-stage:after { content:&quot;.&quot;; display: block; clear: both; visibility: hidden; line-height: 0; height: 0; }
+.owl-carousel .owl-stage:after { content:"."; display: block; clear: both; visibility: hidden; line-height: 0; height: 0; }
 .owl-carousel .owl-stage-outer { position: relative; margin: 0 auto; -webkit-transform: translate3d(0,0,0); }
 .owl-carousel .owl-item,.owl-carousel .owl-wrapper { -webkit-backface-visibility: hidden; -moz-backface-visibility: hidden; -ms-backface-visibility: hidden; -webkit-transform: translate3d(0,0,0); -moz-transform: translate3d(0,0,0); -ms-transform: translate3d(0,0,0); }
 .owl-carousel .owl-item { min-height: 1px; float: left; -webkit-backface-visibility: hidden; -webkit-touch-callout: none; }
@@ -2109,7 +2108,7 @@ BODY SECTION.SIDEnav {
 @keyframes fadeOut { 0% { opacity: 1; } 100% { opacity: 0; } }
 .owl-height { transition: height .5s ease-in-out; }
 .owl-carousel .owl-item .owl-lazy { opacity: 0; transition: opacity .4s ease; }
-.owl-carousel .owl-item .owl-lazy:not([src]), .owl-carousel .owl-item .owl-lazy[src^=&quot;&quot;]{ max-height: 0; }
+.owl-carousel .owl-item .owl-lazy:not([src]), .owl-carousel .owl-item .owl-lazy[src^=""]{ max-height: 0; }
 .owl-carousel .owl-item img.owl-lazy { transform-style: preserve-3d; }
 .owl-carousel .owl-video-wrapper { position: relative; height: 100%; background: #000; }
 .owl-carousel .owl-video-play-icon { position: absolute; height: 80px; width: 80px; left: 50%; top: 50%; margin-left: -40px; margin-top: -40px; background: url(owl.video.play.png) no-repeat; cursor: pointer; z-index: 1; -webkit-backface-visibility: hidden; transition: transform .1s ease; }
@@ -3343,13 +3342,81 @@ span.btn-download-right-secondary {
 .DOCUMENTtab A {
     color: var(--black-transparent-bg);
 }
-.DOCUMENTtab P:not(:last-child) {
-    margin: 0 0 12px;
+.DOCUMENTtab P {
+    font-size: 13px;
+    font-family: var(--font-open);
+    color: rgba(41, 41, 41, 1);
+    letter-spacing: -0.003em;
+    font-weight: 400;
+    word-break: break-word;
+    line-height: 22px;
+}
+
+
+.DOCUMENTtab h1 {
+    font-family: var(--font-open);
+    color: #333;
+    padding: 0 0 10px;
+    font-size: 18px;
+    font-weight: 400;
+}
+.DOCUMENTtab .bttm18 {
+    margin-bottom: 18px;
+}
+.DOCUMENTtab DIV.flex {
+    max-width: 522px;
+    font-family: var(--font-lato);
+}
+.DOCUMENTtab DIV.flex li {
+    width: 100%;
+    display: flex;
+}
+.DOCUMENTtab DIV.flex li:not(:last-child) {
+    padding: 8px 0;
+}
+.DOCUMENTtab DIV.flex li:last-child {
+    margin-top: 8px;
+}
+.DOCUMENTtab DIV.flex li * {
+    float: left;
+}
+.DOCUMENTtab DIV.flex li p {
+    width: 50%;
+    line-height: 32px !IMPORTANT;
 }
 .DOCUMENTtab P {
-    font-size: 14px;
-    color: var(--color-dark-gray);
+    font-size: 13px;
+    font-family: var(--font-open);
+    color: rgba(41, 41, 41, 1);
+    letter-spacing: -0.003em;
+    font-weight: 400;
+    word-break: break-word;
 }
+.DOCUMENTtab DIV.flex li span {
+    background: -webkit-gradient(linear,left top,left bottom,from(#f5f5f5),to(#f1f1f1));
+    -webkit-border-radius: 2px;
+    -webkit-transition: all .2s;
+    -webkit-box-sizing: content-box;
+    -webkit-box-align: stretch;
+    -webkit-user-select: none;
+    border-radius: 2px;
+    border: 1px solid rgba(0,0,0,0.08);
+    color: #6f6f6f;
+    cursor: pointer;
+    padding: 2px 10px;
+    line-height: 26px;
+    text-align: center;
+    box-sizing: content-box;
+    vertical-align: middle;
+    font-size: 11px;
+    position: relative;
+    display: inline-block;
+    font-weight: 500;
+}
+
+
+
+
 
 
 .LOGINspot .COMPANYlogin.SUCESSemail {
@@ -3393,10 +3460,10 @@ span.btn-download-right-secondary {
 .LOGINspot input:focus {
     box-shadow: inset 0 0 0 1px #1273EB;
 }
-.LOGINspot button.LOGin, .LOGINspot button.BTNRESETpass {
+.LOGINspot button.LOGin, .LOGINspot button.CREATEacount, .LOGINspot button.BTNRESETpass {
     color: #fff;
     display: block;
-    min-height: 40x;
+    min-height: 40px;
     background-color: #0161cd;
     font-family: var(--font-poppins);
     font-weight: 500;
@@ -3512,6 +3579,9 @@ BUTTON.FORGOTpass, .FOOTERlogin.PAGEreset A {
 
 .MSGerror.PAGEreset .CROSSicon, .MSGerror.PAGEreset SPAN {
     padding: 13px 0 0;
+}
+.FORMsignup .MSGerror .CROSSicon, .FORMsignup .MSGerror SPAN {
+    padding: 12px 0;
 }
 .MSGerror {
     display: block;
