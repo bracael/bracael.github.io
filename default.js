@@ -1,6 +1,6 @@
 function HTTPXMLresquest(JSONit){
 	var url = new URL(window.location.href);
-	var DEMOid = Number(url.searchParams.get("id"));
+	var DEMOid = url.searchParams.get("id");
 	var pLOCAL = JSONit.entry.georss$featurename.$t;
 	var JSONvar = JSONit.entry.content.$t.replace(/<[^>]*>?/gm, '');
 	var p = pLOCAL.replace(/[^0-9\.]+/g, '');
@@ -21,7 +21,6 @@ if(JSONvar.substring(0, JSONvar.length-JSONvar.length+1) == ' '){
 	var CODEdemo = POSTcode.replace('[demo', '[class="demo"');
 	var CODEdemo = CODEdemo.replace('[pre]', '<pre>');
 	var CODEdemo = CODEdemo.replace('[/pre]', '</pre>');
-	var CODEdemo = CODEdemo.replace('[buy', '[class="buy"');
 	var CODEdemo = CODEdemo.replace('[zip', '[class="zip"');
 	var CODEdemo = CODEdemo.replace('[baixar', '[class="baixar"');
 	var CODEdemo = CODEdemo.replace(/(?:\[changelog)/g, '[class="changelog"');
@@ -83,10 +82,6 @@ if(DOCit.body.contains(DOCit.body.querySelector('.baixar'))){
 	var BOLLbxa = DOCit.body.querySelector('.baixar').hasAttribute('url');}
 	else{ var BOLLbxa = false; }
 
-if(DOCit.body.contains(DOCit.body.querySelector('.buy'))){
-	var BOLLbuy = DOCit.body.querySelector('.buy').hasAttribute('url');}
-	else{ var BOLLbuy = false; }
-
 if(DOCit.body.contains(DOCit.body.querySelector('.demo'))){
 	var BOLLdmo = DOCit.body.querySelector('.demo').hasAttribute('url');}
 	else{ var BOLLdmo = false; }
@@ -102,20 +97,27 @@ if(DOCit.body.contains(DOCit.body.querySelector('.zip'))){
 	var BOLLupt = false;
 	var BOLLlyt = false;}
 
+
+
 if(pLOCAL.split(' ').includes('free') && GETimg.length>=1 && BOLLdmo && BOLLpre && BOLLbxa && BOLLupt && BOLLlyt && pLOCAL.split(' ').length === 1){
+	var CHECKout = false;
 	var POSTtrue = true;
 	var PREMIUMspot = '<div class="INFOthis"><li><a href="' +INDEXit+ '"><i class="CROSSicon INFOicon"></i></a></li><li><a href="javascript:void(0);" class="CARTit"><i class="CROSSicon ADDTOfav"></i></a></li></div>';}
 	else if(pLOCAL.split(' ').includes('excl') && GETimg.length>=1 && BOLLdmo && BOLLpre && pLOCAL.split(' ').length === 1){
+	var CHECKout = false;
 	var POSTtrue = true;
 	var PREMIUMspot = '<div class="INFOthis"><li><a href="' +INDEXit+ '"><i class="CROSSicon INFOicon"></i></a></li><li><a href="javascript:void(0);" class="CARTit"><i class="CROSSicon ADDTOfav"></i></a></li></div>';}
 else{
-if(GETimg.length>=1 && BOLLdmo && BOLLpre && BOLLbxa && BOLLbuy && BOLLupt && BOLLlyt && Number(pLOCAL.replace(/[^0-9]/g,'')) !== 0 && pLOCAL.split(' ').length === 1){
+if(GETimg.length>=1 && BOLLdmo && BOLLpre && BOLLbxa && BOLLupt && BOLLlyt && Number(pLOCAL.replace(/[^0-9]/g,'')) !== 0 && pLOCAL.split(' ').length === 1){
+	var CHECKout = true;
+	var VALUEpay = PRICEpost.split(' ')[1].replace(/(?:,)/g, '.');
 	var POSTtrue = true;
-	var GETbuy = DOCit.body.querySelector('.buy').getAttribute('url');
-	var PREMIUMspot = '<div class="INFOthis"><li><a href="' +GETbuy+ '" target="_blank"><i class="CROSSicon CARTicon"></i><span>' +PRICEpost+ '</span></a></li><li><a href="' +INDEXit+ '"><i class="CROSSicon INFOicon"></i></a></li><li><a href="javascript:void(0);" class="CARTit"><i class="CROSSicon ADDTOfav"></i></a></li></div>';}
+	var PREMIUMspot = '<div class="INFOthis"><li><a href="../p/checkout.html?id=' +DEMOid+ '" target="_blank"><i class="CROSSicon CARTicon"></i><span>' +PRICEpost+ '</span></a></li><li><a href="' +INDEXit+ '"><i class="CROSSicon INFOicon"></i></a></li><li><a href="javascript:void(0);" class="CARTit"><i class="CROSSicon ADDTOfav"></i></a></li></div>';}
 	else{
+	var CHECKout = false;
 	var POSTtrue = false;}}
 
+	if(window.location.href.indexOf('/p/demo.html') != -1){
 if(POSTtrue){
 	var GETdmo = DOCit.body.querySelector('.demo').getAttribute('url');
 	document.querySelector('.REMOVEframe').innerHTML = '<a href="' +GETdmo+ '"><i class="CROSSicon CLOSEframe"></i></a>';
@@ -168,6 +170,127 @@ if(Object.getOwnPropertyNames(JSON.parse(localStorage.BOOKmark)).includes(new UR
 	document.querySelector('A.CARTit').addEventListener('click', ADDTOcart);}}
 	else{
 	document.querySelector('A.CARTit').addEventListener('click', ADDTOcart);}}
+	} // SE MINHA PÁGINA É DEMO
+
+
+
+	if(window.location.href.indexOf('/p/checkout.html') != -1){
+
+		console.log(CHECKout);
+		if(CHECKout){
+		var CONTROLLpay = '<form action="/processar_pagamento" method="post" id="pay" name="pay"><fieldset><p><label for="description">Descrição</label><input type="text" name="description" id="description" value="Ítem selecionado"></input></p><p><label for="transaction_amount">Valor a pagar</label><input name="transaction_amount" id="transaction_amount" value="' +VALUEpay+ '"></input></p><p><label for="cardNumber">Número do cartão</label><input type="text" id="cardNumber" data-checkout="cardNumber" onselectstart="return false" onpaste="return false" onCopy="return false" onCut="return false" onDrag="return false" onDrop="return false" autocomplete="off"></input><div class="brand"></div></p><p><label for="cardholderName">Nome e sobrenome</label><input type="text" id="cardholderName" data-checkout="cardholderName"></input></p><p><label for="cardExpirationMonth">Mês de vencimento</label><input type="text" id="cardExpirationMonth" data-checkout="cardExpirationMonth" onselectstart="return false" onpaste="return false" onCopy="return false" onCut="return false" onDrag="return false" onDrop="return false" autocomplete="off"></input></p><p><label for="cardExpirationYear">Ano de vencimento</label><input type="text" id="cardExpirationYear" data-checkout="cardExpirationYear" onselectstart="return false" onpaste="return false" onCopy="return false" onCut="return false" onDrag="return false" onDrop="return false" autocomplete="off"></input></p><p><label for="securityCode">Código de segurança</label><input type="text" id="securityCode" data-checkout="securityCode" onselectstart="return false" onpaste="return false" onCopy="return false" onCut="return false" onDrag="return false" onDrop="return false" autocomplete="off"></input></p><p><label for="installments">Parcelas</label><select id="installments" class="form-control" name="installments"></select></p><p><label for="docType">Tipo de documento</label><select id="docType" data-checkout="docType"></select></p><p><label for="docNumber">Número do documento</label><input type="text" id="docNumber" data-checkout="docNumber"></input></p><p><label for="email">E-mail</label><input type="email" id="email" name="email" value="test@test.com"></input></p><input type="text" name="payment_method_id" id="payment_method_id"></input><input type="submit" id="payment" value="Pagar"></input></fieldset></form>';
+		// document.querySelector('.Blog').innerHTML = CONTROLLpay;
+		var DOCUMENTit = new DOMParser().parseFromString(CONTROLLpay, 'text/html');
+		console.log(DOCit.body);
+		console.log(DOCUMENTit.body);
+		}
+
+		const db = firebase.firestore();
+		var docRef = db.collection("methodPayments").doc("mercadopago");
+		
+		docRef.get().then(function(data) {
+		
+			(function(win, doc){
+				if (data.exists) {
+		
+					window.Mercadopago.setPublishableKey(`${data.data().SAND_KEY}`);
+					window.Mercadopago.getIdentificationTypes();
+		
+			function cardBin(event){
+				let textLength = event.target.value.length;
+				if(textLength >= 6){
+					let bin = event.target.value.substring(0,6);
+					window.Mercadopago.getPaymentMethod({
+						bin,
+					}, setPaymentMethod);
+					window.Mercadopago.getInstallments({
+						bin,
+						"amount": parseFloat(document.getElementById('transaction_amount').value)
+					},getInstallments);
+				}
+			}
+			if(doc.querySelector('#cardNumber')){
+				let cardNumber = doc.querySelector('#cardNumber');
+				cardNumber.addEventListener('keyup', cardBin, false)
+			}
+		
+			//Set Payment
+			function setPaymentMethod(status, response) {
+				if (status == 200) {
+					let paymentMethodId = doc.querySelector('#payment_method_id');
+		
+					paymentMethodId.value = response[0].id;
+					doc.querySelector('.brand').innerHTML = '<img src="' +response[0].thumbnail+ '" alt=""></img>';
+				} else {
+					alert(`payment method info error: ${response}`);
+				}
+			}
+		
+			//Set Instaments
+			function getInstallments(status, response) {
+				if (status == 200) {
+				let label = response[0].payer_costs;
+				let installmentsSel = doc.querySelector('#installments');
+				installmentsSel.options.length = 0;
+		
+				label.map(function(elem,ind,obj){
+					let txtOpt = elem.recommended_message;
+					let valOpt = elem.installments;
+					installmentsSel.options[installmentsSel.options.length] = new Option(txtOpt, valOpt);
+				});
+				} else {
+					alert(`installments method info error: ${response}`);
+				}
+					console.log(response)
+			}
+		
+			//Create Token
+			function sendPayment(event){
+				event.preventDefault();
+				window.Mercadopago.createToken(event.target, sdkResponseHandler);
+		
+			}
+			function sdkResponseHandler(status, response) {
+				if (status == 200 || status == 201) {
+					alert("verify filled data");
+					let form = doc.querySelector('#payment');
+					let card = doc.createElement('input');
+					card.setAttribute('name', 'token');
+					card.setAttribute('type', 'hidden');
+					card.setAttribute('value', response.id);
+					form.appendChild(card);
+					// form.submit();
+				}
+		
+				console.log(status);
+				console.log(response);
+			};
+		
+			if(doc.querySelector('#payment')){
+				doc.querySelector('#pay').addEventListener('submit', sendPayment, false);
+			}
+		
+		
+					console.log(data.data().SAND_KEY);
+					console.log(win);
+					console.log(doc);
+				} else {
+					// doc.data() will be undefined in this case
+					console.log("No such document!");
+				}
+
+
+
+
+				// document.querySelector('.Blog').innerHTML = CONTROLLERpayment;
+				console.log(DOCit.querySelector('pre').innerText);
+
+			})(window, document);
+		}).catch(function(error) {
+			console.log("Error getting document:", error);
+		});
+
+	}
 
 }
 
@@ -330,6 +453,28 @@ SWIPEnav.addEventListener('click', function(){
 
 
 window.onload = function(){
+
+	//PAGINA DE LOGIN
+	if(window.location.href.indexOf('/p/login.html') > -1 || window.location.href.indexOf('/p/signup.html') > -1){
+	document.body.setAttribute('login', '');}
+
+	//PAGINA DE CHECKOUT
+	if(window.location.href.indexOf('/p/checkout.html') > -1){
+	document.body.setAttribute('checkout', '');}
+
+	//FOCUSOUT INPUT
+	function focusOutInput(){
+		if(document.body.contains(document.querySelector('.INPUTclass'))){
+			const INPUTclass = document.querySelectorAll('.INPUTclass');
+			console.log(INPUTclass)
+			for(var i = 0; i < INPUTclass.length; i++){
+				INPUTclass[i].addEventListener('focusout', function(){
+				if(this.value.length >= 1){
+				this.setAttribute('class', 'HAScontent');}
+				else {
+				this.removeAttribute('class');}});}}}
+
+
 //CACHE URL SESSION STORAGE
 if(sessionStorage.CACHEurl === undefined){
 	sessionStorage.setItem('CACHEurl', JSON.stringify([window.location.href]));}
@@ -349,7 +494,7 @@ console.log(JSON.parse(sessionStorage.CACHEurl).length)
 *********************************************/
 
 //DIRECT PAGE
-if(document.body.contains(document.querySelector('.DIRECTmenu'))){
+if(document.head.contains(document.querySelector('#HTTPXMLresquest'))){
 var WINDOWhref = window.location.href; //window.location.href
 var url = new URL(WINDOWhref);
 
@@ -414,12 +559,7 @@ for(var i = 0; i < OBJname.length; i++){
 	var ACTIVEpost = document.getElementById(OBJname[i]);
 ACTIVEpost.classList.add('ACTIVElist');}}}
 
-//RESIZE WIDTH RESPONSIVE
-if(document.body.contains(document.querySelector('HEADER.HEADmenu'))){
-setInterval(function(){
-var HTMLoffset = document.querySelector('HTML');
-document.querySelector('HEADER.HEADmenu').style.width = HTMLoffset.offsetWidth + 'px'; }, 0);}
-
+//NOTIFICAÃO MENU
 if(document.body.contains(document.querySelector('.NOTIFYit')) && document.body.contains(document.querySelector('.SIDEnav'))){
 document.querySelector('.SELECTitem').addEventListener('click', function(){
 	this.parentNode.classList.add('ACTIVEit');
@@ -509,10 +649,6 @@ for(var i = 0; i < COMMENTSwid.length; i++){
 	this.setAttribute('class', 'SELECTtab CURRENTspot');
 	CURRENTspot.setAttribute('class', 'SELECTtab');
 }});}}
-
-//PAGINA DE LOGIN
-if(window.location.href.indexOf('/p/login.html') > -1){
-document.body.setAttribute('login', '');}
 
 //ENVIA O VALOR DO CAMPO DE BUSCA
 if(document.body.contains(document.querySelector('.SEARCHform'))){
@@ -632,14 +768,12 @@ var JSONstr = JSON.stringify(JSONparse); //converte em texto
 localStorage.setItem('BOOKmark', JSONstr)
 
 function DELTEpost(){
-if(OBJname.length > 2){
-var BOOKtitle = document.querySelector('.BOOKtitle');
-var BOOKtxt = `Há ${OBJname.length-1} temas na sua lista!`;
-	BOOKtitle.innerHTML = BOOKtxt;}
-else{
-var BOOKtitle = document.querySelector('.BOOKtitle');
-var BOOKtxt = `Só há ${OBJname.length-1} tema na sua lista!`;
-	BOOKtitle.innerHTML = BOOKtxt;}
+if(OBJname.length > 1){
+	if(OBJname.length > 2){
+	var BOOKtxt = `Há ${OBJname.length-1} temas na sua lista!`;}
+	else{
+	var BOOKtxt = `Só há ${OBJname.length-1} tema na sua lista!`;}
+	document.querySelector('.BOOKtitle').innerHTML = BOOKtxt;}
 
 var THISpost = document.getElementById(BTNrel)
 THISpost.parentNode.removeChild(THISpost);}
@@ -652,49 +786,33 @@ var BOOKtitle = document.querySelector('.BOOKtitle');
 BOOKtitle.parentNode.removeChild(BOOKtitle);
 document.querySelector('.EMPTYfav').style.cssText = "max-height:900px;opacity:1";}
 
+var BLOGinst = document.querySelector('.Blog');
 if(OBJname.length -1 == 0){
 	document.querySelector('.BOOKtitle').style.cssText = "opacity:0;max-height:0";
-	localStorage.removeItem('BOOKmark')
-var BLOGinst = document.querySelector('.Blog');
+	localStorage.removeItem('BOOKmark');
 var CONTENTpage = '<div class="EMPTYfav BOOKmark"><p>Nao há nenhum tema em seus favoritos... Não deixe-a solitaria. 😥</p><div class="SPOTfav"><div class="BOTfav"><div class="POSTbox EXEfav"><div class="POSTinst"><section class="POSTup excl"><div class="POSTimg"><img class="THUMBnail" src="https://2.bp.blogspot.com/-U1PEPnMPk2Q/Xr_BCoq7EAI/AAAAAAAAG5I/_LP4GUXyKTAH5WUi7H7zH2yfFFaBjTnYQCLcBGAsYHQ/s1600/village-de-traque.png"></div><div class="POSTspot EXEfav"><i class="BTNfav EXEfav"></i></div></section><section class="POSTbt"><div class="POSTbt_inner"><h3 class="POSTtitle"><span class="POSTurl EXEfav TITLEex"></span></h3><div class="POSTdate EXEfav DATEex"></div><div class="POSTBOXbt"><div class="POSTprice EXEfav PRICEex"></div><div class="POSTbtn EXEfav BUTTONSex"><li><span class="BTNlive EXEfav"></span></li><li><span class="BTNinfo EXEfav"></span></li></div></div></div></section></div></div></div><div class="BOTFAVright"><span class="MSGfav">Os temas adicionados a sua lista de favoritos duram até a limpeza dos dados do seu navegador ou excluí-los manualmente. Coloque novo temas a sua lista!</span><a href="#" class="BACKhome">Mostrar mais temas</a></div></div></div>';
 BLOGinst.insertAdjacentHTML('beforeend', CONTENTpage);
 setTimeout(ZEROmark, 700)}});}}
 else{
-var BLOGinst = document.querySelector('.Blog');
 var CONTENTpage = '<div class="EMPTYfav"><p>Você ainda não adicionou nenhum tema ao seus favoritos 🙄</p><div class="SPOTfav"><div class="BOTfav"><div class="POSTbox EXEfav"><div class="POSTinst"><section class="POSTup excl"><div class="POSTimg"><img class="THUMBnail" src="https://2.bp.blogspot.com/-U1PEPnMPk2Q/Xr_BCoq7EAI/AAAAAAAAG5I/_LP4GUXyKTAH5WUi7H7zH2yfFFaBjTnYQCLcBGAsYHQ/s1600/village-de-traque.png"></div><div class="POSTspot EXEfav"><i class="BTNfav EXEfav"></i></div></section><section class="POSTbt"><div class="POSTbt_inner"><h3 class="POSTtitle"><span class="POSTurl EXEfav TITLEex"></span></h3><div class="POSTdate EXEfav DATEex"></div><div class="POSTBOXbt"><div class="POSTprice EXEfav PRICEex"></div><div class="POSTbtn EXEfav BUTTONSex"><li><span class="BTNlive EXEfav"></span></li><li><span class="BTNinfo EXEfav"></span></li></div></div></div></section></div></div></div><div class="BOTFAVright"><span class="MSGfav">Clique no icone de “adicionar aos favoritos” e crie sua lista personalizada com todos os temas que tu mais gosta. Estamos felizes por ter você em nosso site.</span><a href="#" class="BACKhome">Mostrar todos os temas</a></div></div></div>';
-BLOGinst.insertAdjacentHTML('beforeend', CONTENTpage)}}
-
-
-
-var fireBase = firebase.auth();
-// var usersList = document.getElementById('usersList');
-var contentHTML = document.querySelector('.Blog');
-
+BLOGinst.insertAdjacentHTML('beforeend', CONTENTpage);}}
 
 var ACTIVEpass = '<svg class="CROSSicon PASSit" fill="currentColor" focusable="false" width="24px" height="24px" viewBox="0 0 24 24" xmlns="https://www.w3.org/2000/svg"><path d="M12,7c-2.48,0-4.5,2.02-4.5,4.5S9.52,16,12,16s4.5-2.02,4.5-4.5S14.48,7,12,7z M12,14.2c-1.49,0-2.7-1.21-2.7-2.7 c0-1.49,1.21-2.7,2.7-2.7s2.7,1.21,2.7,2.7C14.7,12.99,13.49,14.2,12,14.2z"></path><path d="M12,4C7,4,2.73,7.11,1,11.5C2.73,15.89,7,19,12,19s9.27-3.11,11-7.5C21.27,7.11,17,4,12,4z M12,17 c-3.79,0-7.17-2.13-8.82-5.5C4.83,8.13,8.21,6,12,6s7.17,2.13,8.82,5.5C19.17,14.87,15.79,17,12,17z"></path></svg>';
-
 var OCULTApass = '<svg class="CROSSicon PASSit" fill="currentColor" focusable="false" width="24px" height="24px" viewBox="0 0 24 24" xmlns="https://www.w3.org/2000/svg"><path d="M10.58,7.25l1.56,1.56c1.38,0.07,2.47,1.17,2.54,2.54l1.56,1.56C16.4,12.47,16.5,12,16.5,11.5C16.5,9.02,14.48,7,12,7 C11.5,7,11.03,7.1,10.58,7.25z"></path><path d="M12,6c3.79,0,7.17,2.13,8.82,5.5c-0.64,1.32-1.56,2.44-2.66,3.33l1.42,1.42c1.51-1.26,2.7-2.89,3.43-4.74 C21.27,7.11,17,4,12,4c-1.4,0-2.73,0.25-3.98,0.7L9.63,6.3C10.4,6.12,11.19,6,12,6z"></path><path d="M16.43,15.93l-1.25-1.25l-1.27-1.27l-3.82-3.82L8.82,8.32L7.57,7.07L6.09,5.59L3.31,2.81L1.89,4.22l2.53,2.53 C2.92,8.02,1.73,9.64,1,11.5C2.73,15.89,7,19,12,19c1.4,0,2.73-0.25,3.98-0.7l4.3,4.3l1.41-1.41l-3.78-3.78L16.43,15.93z M11.86,14.19c-1.38-0.07-2.47-1.17-2.54-2.54L11.86,14.19z M12,17c-3.79,0-7.17-2.13-8.82-5.5c0.64-1.32,1.56-2.44,2.66-3.33 l1.91,1.91C7.6,10.53,7.5,11,7.5,11.5c0,2.48,2.02,4.5,4.5,4.5c0.5,0,0.97-0.1,1.42-0.25l0.95,0.95C13.6,16.88,12.81,17,12,17z"></path></svg>';
+var loginUser = '<div class="LOGINspot"><div class="LOGINSPOTinst"><div class="COMPANYlogin"><section class="COMPANYit"><!-- Bracael --></section><span>Use uma conta Bracael.</span></div><form class="FORMlogin"><div class="GROUPinput"><input type="email" id="emailInput" class="INPUTclass" tabindex="1" autocomplete="off" autofocus="" autocapitalize="off" autocorrect="off"></input><label>E-mail</label></div><div class="GROUPinput"><input type="password" id="passwordInput" class="INPUTclass" tabindex="2" autocomplete="off"></input><div class="SHOWpass">' +ACTIVEpass+ '</div><label>Senha</label></div><div class="FOOTERlogin"><button class="BTN FORGOTpass" type="button">Esqueceu a sua senha?</button><button class="LOGin" tabindex="3">Fazer login</button></div></form></div></div>';
+var contentHTML = document.querySelector('.Blog');
 
-var loginUser = '<div class="LOGINspot"><div class="LOGINSPOTinst"><div class="COMPANYlogin"><section class="COMPANYit"><!-- Bracael --></section><span>Use uma conta Bracael.</span></div><form class="FORMlogin"><div class="GROUPinput"><input type="email" id="emailInput" tabindex="1" autocomplete="off" autofocus="" autocapitalize="off" autocorrect="off"></input><label>E-mail</label></div><div class="GROUPinput"><input type="password" id="passwordInput" tabindex="2" autocomplete="off"></input><div class="SHOWpass">' +ACTIVEpass+ '</div><label>Senha</label></div><div class="FOOTERlogin"><button class="BTN FORGOTpass" type="button">Esqueceu a sua senha?</button><button class="LOGin" tabindex="3">Fazer login</button></div></form></div></div>';
-
+var fireBase = firebase.auth();
 fireBase.onAuthStateChanged(function(user){
 if(user){
 
-console.log(user)
 if(window.location.href.indexOf('/p/login.html') > -1){
 var CACHEurl = JSON.parse(sessionStorage.CACHEurl);
 if(CACHEurl[CACHEurl.length-2] !== undefined){
 	window.location.replace(CACHEurl[CACHEurl.length-2]);}
 	else{
 	window.location.replace("http://www.bracael.com/");}}
-
-	user = fireBase.currentUser;
-console.log(user.uid)
-
-document.querySelector('.cPANEL').parentNode.innerHTML = '<a href="javascript:void(0);" class="LOGout cPANEL">Sair</a>';
-
-
-
+	document.querySelector('.cPANEL').parentNode.innerHTML = '<a href="javascript:void(0);" class="LOGout cPANEL">Sair</a>';
 
 //SAIR DA CONTA ------ FIM DO IF
 document.querySelector('.LOGout').addEventListener('click', function(){
@@ -720,6 +838,8 @@ if(MAILelement.value.length == 0){
 	else{
 	var MSGfail = 'E-mail ou senha inválidos.';}
 
+	this.onclick = MAILelement.select();
+	PASSelement.value = null;
 
 var MSGerror = '<div class="MSGerror"><div class="CROSSicon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="#d50000" fill-rule="evenodd"><path id="Retângulo_2" data-name="Retângulo 2" class="cls-1" d="M8,0A8,8,0,1,1,0,8,8,8,0,0,1,8,0ZM7,3H9v7H7V3Zm0,8H9v2H7V11Z"></path></svg></div><span>' +MSGfail+ '</span></div>';
 
@@ -758,47 +878,26 @@ if(TYPEbtn == "text"){
 	INPUTpass.setAttribute("type", "password");}
 });
 
-//FOCUS TEXT
-var INPUTmail = document.getElementById("emailInput");
-var INPUTpass = document.getElementById("passwordInput");
-INPUTmail.addEventListener('focusout', function(){
-	if(INPUTmail.value.length >= 1){
-	INPUTmail.setAttribute('class', 'HAScontent');}
-else {
-	INPUTmail.removeAttribute('class');}});
-
-INPUTpass.addEventListener('focusout', function(){
-	if(INPUTpass.value.length >= 1){
-	INPUTpass.setAttribute('class', 'HAScontent');}
-else {
-	INPUTpass.removeAttribute('class');}});
-
 var LOGINbtn = '<a href="javascript:void(0);" class="LOGout cPANEL">Sair</a>';
 var parser = new DOMParser();
 var HTMLpanel = parser.parseFromString(LOGINbtn, 'text/html');
 
-var FORMlogin = document.querySelector('.FORMlogin')
+var FORMlogin = document.querySelector('.FORMlogin');
 FORMlogin.addEventListener('submit', (e) => {
 	e.preventDefault();});
 
 document.querySelector('BUTTON.FORGOTpass').addEventListener('click', function(){
-	var FORGOTpass = '<div class="LOGINspot"><div class="LOGINSPOTinst"><div class="COMPANYlogin"><section class="COMPANYit"><!-- Bracael --></section><span>Esqueceu a senha?</span></div><p>Digite seu endereço de e-mail para redefinir a senha. Talvez você precise verificar sua pasta de spams ou desbloquear o e-mail no-reply@bracael.com.</p><div class="GROUPinput"><input type="email" id="INPTRESETpass" tabindex="1" autocomplete="off" autofocus="" autocapitalize="off" autocorrect="off"></input><label>E-mail</label></div><div class="FOOTERlogin PAGEreset"><a class="IDONTacess" href="javascript:void(0);" onclick="alert(`Bracael.COM\nVersão Beta, 12.05.2020\nO Conteúdo para está página estará disponivel em breve.`)"><span>Não tem mais acesso?</span></a><button class="BTNRESETpass" tabindex="2">Enviar</button></div></div></div>';
+	var FORGOTpass = '<div class="LOGINspot"><div class="LOGINSPOTinst"><div class="COMPANYlogin"><section class="COMPANYit"><!-- Bracael --></section><span>Esqueceu a senha?</span></div><p>Digite seu endereço de e-mail para redefinir a senha. Talvez você precise verificar sua pasta de spams ou desbloquear o e-mail no-reply@bracael.com.</p><div class="GROUPinput"><input type="email" id="INPTRESETpass" class="INPUTclass" tabindex="1" autocomplete="off" autofocus="" autocapitalize="off" autocorrect="off"></input><label>E-mail</label></div><div class="FOOTERlogin PAGEreset"><a class="IDONTacess" href="javascript:void(0);" onclick="alert(`Bracael.COM\nVersão Beta, 12.05.2020\nO Conteúdo para está página estará disponivel em breve.`)"><span>Não tem mais acesso?</span></a><button class="BTNRESETpass" tabindex="2">Enviar</button></div></div></div>';
 	contentHTML.innerHTML = FORGOTpass;
-	var INPTRESETpass = document.getElementById('INPTRESETpass');
-	INPTRESETpass.addEventListener('focusout', function(){
-	if(INPTRESETpass.value.length >= 1){
-	INPTRESETpass.setAttribute('class', 'HAScontent');}
-	else {
-	INPTRESETpass.removeAttribute('class');}});
-
+	focusOutInput();
 
 document.querySelector('.BTNRESETpass').addEventListener('click', function(){
 	var auth = firebase.auth();
 	var INPTRESETpass = document.getElementById('INPTRESETpass');
-	auth.sendPasswordResetEmail(INPTRESETpass.value).then(function(){
+	fireBase.sendPasswordResetEmail(INPTRESETpass.value).then(function(){
 
 var MAILit = INPTRESETpass.value.split('@')[0];
-var MAILit =MAILit.substring(0, 1) + MAILit.substring(1, MAILit.length-1).replace(/[a-z^0-9]/gim, '•') + MAILit.substring(MAILit.length-1) +'@'+ ('holasoycael@gmail.com').split('@')[1];
+var MAILit = MAILit.substring(0, 3) + MAILit.substring(3, MAILit.length-0).replace(/[a-z^0-9]/gim, '•') +'@'+ ('holasoycael@gmail.com').split('@')[1];
 
 	var FORGOTpass = '<div class="LOGINspot"><div class="LOGINSPOTinst SUCESSemail"><div class="COMPANYlogin TITLEsucess"><section class="COMPANYit"><!-- Bracael --></section><span>Solicitação com sucesso!</span></div><div class="SUCESSemail"><i class="CROSSicon CHECKicon"></i><div class="YOURmail"><span>' +MAILit+ '</span></div>Um e-mail foi enviado para seu e-mail de recuperaçao. Verifique a caixa de entrada do e-mail solicitado e siga as instruções para redefinir sua senha.</div><div class="COMPLETreset"><a href="javascript:void(0);" class="LOGINgo">Fazer login</a><strong><span>ou</span></strong><a href="https://www.bracael.com/" class="HOMEpage">Pagina inicial</a></div></div></div>';
 	contentHTML.innerHTML = FORGOTpass;
@@ -827,7 +926,7 @@ if(document.querySelector('.MSGerror').innerText != DOMparse.querySelector('.MSG
 }}
 
 var GROUPall = document.querySelector('.GROUPinput');
-INPTRESETpass.value = null;;
+INPTRESETpass.value = null;
 if(!GROUPall.hasAttribute("fail") && !document.body.contains(document.querySelector('.MSGerror'))){
 document.querySelector('.GROUPinput').insertAdjacentElement("afterend", DOMparse.querySelector('.MSGerror'));}
 GROUPall.setAttribute('fail', '');
@@ -836,8 +935,13 @@ INPTRESETpass.addEventListener('input', function(){
 $('.MSGerror').animate({ height: 0, opacity: 0 },{duration: 300, complete: function(){ $('.MSGerror').remove() }});
 GROUPall.removeAttribute('fail');});
 
+
+INPTRESETpass.select();
+INPTRESETpass.value = null;
+
 	error.message = 'Digite um e-mail válido.'
-	console.log("Error: " + error.message)
+	console.log("Error: " + error.message);
+	// console.clear(); // para limpar a mensagem de erro do firebase
 	// Error occurred. Inspect error.code.
     });
 
@@ -846,9 +950,76 @@ GROUPall.removeAttribute('fail');});
 });
 
 
+focusOutInput();
+
 }
 
 }
+
+
+if(window.location.href.indexOf('/p/signup.html') > -1){
+
+	document.querySelector('.FORMsignup').addEventListener('submit', (event) => {
+		event.preventDefault(); });
+
+document.querySelector('.CREATEacount').addEventListener('click', function(){
+
+	var GETname = document.getElementById('NAMEinput');
+	var GETsame = document.getElementById('SNAMEinput');
+	var GETmail = document.getElementById('EMAILinput');
+	var GETpass = document.getElementById('PASSWORDinput');
+
+	if(GETname.value.length != '' && GETsame.value != '' && GETmail.value != '' && GETpass.value != ''){
+	firebase.auth().createUserWithEmailAndPassword(GETmail.value, GETpass.value).then(function(result){
+		var user = fireBase.currentUser;
+		var userId = user.uid;
+		var COMPLETname = GETname.value.trim()+' '+GETsame.value.trim();
+
+	const db = firebase.firestore();
+	db.collection("todos").doc(userId).set({
+		name: GETname.value,
+		sobrenome: GETsame.value,
+		email: GETmail.value
+	})
+	.then(function() {
+		console.log("Document successfully written!");
+		window.location.replace("/bracael.com/");
+	})
+	.catch(function(error) {
+		console.error("Error writing document: ", error);
+	});
+
+		return result.user.updateProfile({
+			displayName: COMPLETname
+		  });
+	},function (error){
+		// Handle Errors here.
+		var errorCode = error.code;
+		var errorMessage = error.message;
+		alert(`Erro: ${errorMessage}`)
+		console.log('Erro:', errorMessage);
+		return Result = "false";
+		// ...
+	});}
+	else{
+		console.log('Erro: erroCreateUser');}
+});
+
+
+
+const user = firebase.auth();
+console.log(user.currentUser.displayName);
+// var loginUser = '<div class="LOGINspot"><div class="LOGINSPOTinst"><div class="COMPANYlogin"><section class="COMPANYit"><!-- Bracael --></section><span>Crie sua conta Bracael</span></div><form class="FORMlogin"><div class="GROUPinput"><input type="email" id="emailInput" tabindex="1" autocomplete="off" autofocus="" autocapitalize="off" autocorrect="off"></input><label>E-mail</label></div><div class="GROUPinput"><input type="password" id="passwordInput" tabindex="2" autocomplete="off"></input><div class="SHOWpass">' +ACTIVEpass+ '</div><label>Senha</label></div><div class="FOOTERlogin"><button class="BTN FORGOTpass" type="button">Esqueceu a sua senha?</button><button class="LOGin" tabindex="3">Fazer login</button></div></form></div></div>';
+// var contentHTML = document.querySelector('.Blog');
+// 	contentHTML.innerHTML = loginUser;
+
+
+
+focusOutInput();
+
+}
+
+
 });
 
 
