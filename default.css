@@ -1,6 +1,6 @@
 /*---------- SETTINGS -----------*/
 *{margin:0;outline:0;padding:0;text-align:left;list-style:none;border:none;text-decoration:none;position: relative;vertical-align:baseline;outline:none;}
-body { color: var(--body-color); background:var(--body-bg); overflow-y: overlay; overflow-x: hidden; height: var(--max-content); font-family:var(--body-font); font-size:var(--body-font-size); }
+body { color: var(--body-color); background:var(--body-bg); overflow-y: overlay; overflow-x: hidden; height: var(--max-content); font-family:var(--body-font); font-size:var(--body-font-size); transition: background 0.5s linear; }
 ::-moz-selection{ color:#fff; background:#1ebea5; }
 ::selection{ color:#fff; background:#C00; }
 ::-webkit-scrollbar{width:6px!important;height:6px!important;}
