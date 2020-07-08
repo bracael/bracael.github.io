@@ -1,3 +1,16 @@
+(function(){
+	var firebaseConfig = {
+	  apiKey: "AIzaSyArC-r4iZw1CHUuQMbVCm7bu48HFaYbwwU",
+	  authDomain: "aplicativo-c89e5.firebaseapp.com",
+	  databaseURL: "https://aplicativo-c89e5.firebaseio.com",
+	  projectId: "aplicativo-c89e5",
+	  storageBucket: "aplicativo-c89e5.appspot.com",
+	  messagingSenderId: "808184315576",
+	  appId: "1:808184315576:web:59efe84c2e0bf7d1fb3e4d"
+	};
+	firebase.initializeApp(firebaseConfig);
+})();
+
 function HTTPXMLresquest(JSONit){
 	var url = new URL(window.location.href);
 	var DEMOid = url.searchParams.get("id");
