@@ -320,7 +320,7 @@ if(Object.getOwnPropertyNames(JSON.parse(localStorage.BOOKmark)).includes(new UR
 
 			//EFEITOS NUMERO DO CARTÃO
 	document.getElementById('cardNumber').addEventListener('input', function(){
-		this.value = this.value.replace(/[^0-9.]/g, '');
+		// this.value = this.value.replace(/[^0-9.]/g, '');
 
 		var CARDnumberIt = String(document.getElementById('cardNumber').value);
 		if(CARDnumberIt.length <= 4){
@@ -374,7 +374,7 @@ if(Object.getOwnPropertyNames(JSON.parse(localStorage.BOOKmark)).includes(new UR
 
 			//EFEITOS EXPIRATION MONTH
 	document.getElementById('cardExpirationMonth').addEventListener('input', function(){
-		this.value = this.value.replace(/[^0-9.]/g, '');
+		// this.value = this.value.replace(/[^0-9.]/g, '');
 		
 	if(document.getElementById('cardExpirationMonth').value != ''){
 	document.querySelector('.MMcard').classList.add('TEXTon');}
@@ -389,7 +389,7 @@ if(Object.getOwnPropertyNames(JSON.parse(localStorage.BOOKmark)).includes(new UR
 
 			//EFEITOS EXPIRATION YEAR
 	document.getElementById('cardExpirationYear').addEventListener('input', function(){
-		this.value = this.value.replace(/[^0-9.]/g, '');
+		// this.value = this.value.replace(/[^0-9.]/g, '');
 		
 	if(document.getElementById('cardExpirationYear').value != ''){
 	document.querySelector('.AAcard').classList.add('TEXTon');}
@@ -404,7 +404,7 @@ if(Object.getOwnPropertyNames(JSON.parse(localStorage.BOOKmark)).includes(new UR
 
 			//EFEITOS CHAVE
 	document.getElementById('securityCode').addEventListener('input', function(){
-		this.value = this.value.replace(/[^0-9.]/g, '');
+		// this.value = this.value.replace(/[^0-9.]/g, '');
 		
 	if(document.getElementById('securityCode').value != ''){
 	document.querySelector('.CARDcodeNumber').classList.add('TEXTon');}
@@ -420,8 +420,8 @@ if(Object.getOwnPropertyNames(JSON.parse(localStorage.BOOKmark)).includes(new UR
 
 
 			//EFEITOS CHAVE
-	document.getElementById('docNumber').addEventListener('input', function(){
-		this.value = this.value.replace(/[^0-9.]/g, '');});
+	// document.getElementById('docNumber').addEventListener('input', function(){
+	// 	this.value = this.value.replace(/[^0-9.]/g, '');});
 		
 
 		}
