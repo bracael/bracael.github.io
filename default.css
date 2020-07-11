@@ -1217,6 +1217,21 @@ FORM.SEARCHform .SEARCHit {
 
 
 
+.FOOTERcross .FOOTERdiv {
+    max-width: 1056px;
+    margin: 0 auto;
+    padding: 0 0 16px;
+    font-family: var(--font-lato);
+    font-size: 11px;
+    color: #a9a9a9;
+}
+.FOOTERcross .FOOTERdiv LI {
+    padding: 0 0 6px;
+}
+.FOOTERcross .FOOTERdiv LI A {
+    color: #639bd0;
+}
+
 FOOTER.FOOTERit {
     width: 100%;
     font-family: var(--font-open);
@@ -3719,12 +3734,16 @@ body[checkout] .Blog .FORMdiv {
     width: 100%;
     max-width: 1056px;
     margin: 32px auto;
-    display: grid;
-    grid-gap: 22px;
-    -ms-grid-columns: minmax(220px,1fr) minmax(0, calc(100% - 440px)) 1fr;
-    grid-template-columns: minmax(calc(100% - 300px),1fr) minmax(0, 300px);
-    grid-template-rows: 1fr;
-    color: #000;
+    color: #5d5c5c;
+    display: flex;
+}
+body[checkout] .Blog .CONTROLLpayment {
+    width: 100%;
+    margin-right: 22px;
+}
+body[checkout] .Blog .PAYMENTbox {
+    max-width: 278px;
+    width: 100%;
 }
 body[checkout] .STEPbox {
     background: #ededed;
@@ -3862,6 +3881,10 @@ body[checkout] .Blog P .MSGerror {
 body[checkout] .PAYMENTbox .PAYMENTTinfo {
     padding: 16px;
 }
+body[checkout] .PAYMENTbox .PAYMENTTinfo H4 {
+    font-size: 16px;
+    padding: 0 0 8px;
+}
 body[checkout] .PAYMENTbox .PAYMENTTinfo A {
     color: #0161cd;
 }
@@ -3870,6 +3893,29 @@ body[checkout] .Blog input:not(#payment_method_id) {
 }
 body[checkout] .Blog label {
     top: 14px;
+}
+
+body[checkout] .PAYMENTbox .PAYMENTTinfo .SAFEpost {
+    margin: 0 0 12px;
+    height: 26px;
+    line-height: 26px;
+    text-transform: uppercase;
+    clear: both;
+    font-weight: 100;
+    font-size: 14px;
+    font-family: var(--font-oswald);
+}
+body[checkout] .PAYMENTbox .PAYMENTTinfo I.CROSSicon.DEFENSEit, body[checkout] .PAYMENTbox .PAYMENTTinfo I.CROSSicon.DEFENSEit::after {
+    display: block;
+    width: 22px;
+    height: 26px;
+    float: left;
+}
+body[checkout] .PAYMENTbox .PAYMENTTinfo I.CROSSicon.DEFENSEit {
+    margin-right: 8px;
+}
+body[checkout] .PAYMENTbox .PAYMENTTinfo I.CROSSicon.DEFENSEit::after {
+    content: '';
 }
 
 body[checkout] .CONTROLLpayment .SPOTinst .DISPLAYflex.CARDcol1 P:not(:last-child) {
@@ -4011,7 +4057,8 @@ SPAN.MMcard::after {
     right: 8%;
     top: 32%;
     position: absolute;
-    width: 84px;
+    background-size: cover;
+    width: 70px;
     height: 54px;
     display: flex;
 }
@@ -4070,7 +4117,7 @@ SPAN.MMcard::after {
     margin: auto;
 }
 .CARDwrapper .PAYMENDcard {
-    background-color: #0061a8;
+    background-color: #000000;
     background-image: repeating-linear-gradient(45deg,hsla(0,0%,100%,0) 1px,hsla(0,0%,100%,.03) 2px,hsla(0,0%,100%,.04) 3px,hsla(0,0%,100%,.05) 4px),repeating-linear-gradient(135deg,hsla(0,0%,100%,.05) 1px,hsla(0,0%,100%,0) 2px,hsla(0,0%,100%,.04) 3px,hsla(0,0%,100%,.03) 4px),repeating-linear-gradient(90deg,hsla(0,0%,100%,0) 1px,hsla(0,0%,100%,.03) 2px,hsla(0,0%,100%,.04) 3px,hsla(0,0%,100%,.05) 4px),repeating-linear-gradient(210deg,hsla(0,0%,100%,0) 1px,hsla(0,0%,100%,.03) 2px,hsla(0,0%,100%,.04) 3px,hsla(0,0%,100%,.05) 4px),repeating-radial-gradient(circle at 30% 30%,hsla(0,0%,100%,0) 1px,hsla(0,0%,100%,.03) 2px,hsla(0,0%,100%,.04) 3px,hsla(0,0%,100%,.05) 4px),repeating-radial-gradient(circle at 70% 70%,hsla(0,0%,100%,0) 1px,hsla(0,0%,100%,.03) 2px,hsla(0,0%,100%,.04) 3px,hsla(0,0%,100%,.05) 4px),repeating-radial-gradient(circle at 90% 20%,hsla(0,0%,100%,0) 1px,hsla(0,0%,100%,.03) 2px,hsla(0,0%,100%,.04) 3px,hsla(0,0%,100%,.05) 4px),repeating-radial-gradient(circle at 15% 80%,hsla(0,0%,100%,0) 1px,hsla(0,0%,100%,.03) 2px,hsla(0,0%,100%,.04) 3px,hsla(0,0%,100%,.05) 4px),linear-gradient(-25deg,hsla(0,0%,100%,0) 50%,hsla(0,0%,100%,.2) 70%,hsla(0,0%,100%,0) 90%);
     border-radius: 12px;
     margin: 0 auto;
@@ -4078,6 +4125,22 @@ SPAN.MMcard::after {
     display: flex;
     flex-direction: column;
 }
+.CARDwrapper .PAYMENDcard.Mastercard {
+    background-color: #031b11;
+}
+.CARDwrapper .PAYMENDcard.Hipercard {
+    background-color: #ad2323;
+}
+.CARDwrapper .PAYMENDcard.AmericanExpress {
+    background-color: #8e8215;
+}
+.CARDwrapper .PAYMENDcard.DinersClub {
+    background-color: #6e8f92;
+}
+.CARDwrapper .PAYMENDcard.Visa {
+    background-color: #062194;
+}
+
 .CARDwrapper .PAYMENDcard::after {
     right: -11.188em;
     top: -19.875em;
@@ -4109,7 +4172,7 @@ SPAN.MMcard::after {
 
 .CARDwrapper .PAYMENDcard {
     position: absolute;
-    transition: transform 0.5s ease;
+    transition: transform 0.5s ease, background-color 0.5s linear;
     box-shadow: inset 0px -2px 1px 1px rgba(0, 0, 0, 0.15);
     top: 0;
 }
@@ -4169,6 +4232,74 @@ body[checkout] .Blog P[fail] input:focus ~ label, body[checkout] .Blog .DISPLAYf
 }
 
 
+body[checkout] .STEPbox.FULLstep .CROSSstep {
+    width: 100% !IMPORTANT;
+}
+body[checkout] .STEPbox.FULLstep .CROSSstep::before {
+    width: 100% !IMPORTANT;
+    border-radius: 3px !IMPORTANT;
+}
+body[checkout] .PAYMENTmethod .SUCESSinst {
+    color: #5d5c5c;
+    background: #ffffff;
+    width: 100%;
+    padding: 22px;
+    border-radius: 3px;
+    margin: 62px 0 0;
+    clear: both;
+}
+.PAYMENTmethod .SUCESSinst .SUCESShead {
+    margin-top: -70px;
+    margin-bottom: 22px;
+}
+.PAYMENTmethod .SUCESSinst P.SUCESSh1 {
+    font-size: 32px;
+    text-align: center;
+    margin: 0 0 10px;
+}
+.PAYMENTmethod .SUCESSinst P.SUCESStext {
+    text-align: center;
+    font-size: 13px;
+    max-width: 80%;
+    margin: 0 auto 22px;
+    float: none;
+}
+.PAYMENTmethod .SUCESSinst span {
+    background: #dcdcdc;
+    padding: 12px 18px;
+    border-radius: 3px;
+    font-weight: 400;
+    font-size: 18px;
+    font-family: var(--font-lato);
+    display: table;
+    margin: 0 auto;
+}
+.PAYMENTmethod .SUCESSinst P.SUCESSbttm {
+    text-align: center;
+    font-size: 13px;
+    max-width: 80%;
+    margin: 22px auto 0;
+    float: none;
+}
+
+
+
+.PAYMENTmethod I.CROSSicon.SUCCESicon {
+    color: #fff;
+    margin: 0 auto;
+    border-radius: 50%;
+    z-index: 9;
+    background: #5ac857;
+    padding: 32px;
+    text-align: center;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+}
+.PAYMENTmethod I.CROSSicon.SUCCESicon, .PAYMENTmethod I.CROSSicon.SUCCESicon::after {
+    content: '';
+    width: 58px;
+    height: 58px;
+    display: block;
+}
 
 
 BODY[login] {
