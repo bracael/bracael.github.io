@@ -4766,3 +4766,76 @@ div#FEEDback {
     line-height: 16px;
     white-space: pre-wrap;
 }
+
+
+
+
+
+DIV.BULBmsg {
+    font-family: var(--font-poppins);
+    position: fixed;
+    bottom: 32px;
+    z-index: 99;
+    left: 42px;
+    opacity: 0.7;
+}
+DIV.BULBmsg .INSTconex {
+	
+}
+
+DIV.BULBmsg .INSTconex .BULBLEit .CONEXinst, DIV.BULBmsg .INSTconex .BULBLEit .CONEXinst::after {
+    width: 30px;
+    height: 30px;
+    display: block;
+    float: left;
+    z-index: 10;
+}
+DIV.BULBmsg .INSTconex .BULBLEit .CONEXinst {
+    background: #c50000;
+    border-radius: 50%;
+    padding: 16px;
+}
+DIV.BULBmsg .INSTconex .BULBLEit .CONEXinst::after {
+    content: '';
+}
+.BULBLEit {
+    position: absolute;
+}
+
+.ANIMEfirst {
+    -webkit-animation: ANIMEfirst 10s cubic-bezier(.43,.01,.48,.88) infinite;
+    animation: ANIMEfirst 10s cubic-bezier(.43,.01,.48,.88) infinite;
+}
+.ANIMEsecond {
+    -webkit-animation: ANIMEsecond 10s cubic-bezier(.43,.01,.48,.88) infinite;
+    animation: ANIMEsecond 10s cubic-bezier(.43,.01,.48,.88) infinite;
+}
+.ANIMEthird {
+    -webkit-animation: ANIMEthird 10s cubic-bezier(.43,.01,.48,.88) infinite;
+    animation: ANIMEthird 10s cubic-bezier(.43,.01,.48,.88) infinite;
+}
+.ANIMEcircle {
+    background: rgba(197, 0, 0, 0.25);
+    width: 62px;
+    height: 62px;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 8;
+    opacity: 1;
+}
+
+.ANIMEthird{-webkit-animation:ANIMEthird 10s cubic-bezier(.43,.01,.48,.88) infinite;animation:ANIMEthird 10s cubic-bezier(.43,.01,.48,.88) infinite}@keyframes ANIMEfirst{0%{transform:scale(0)}20%{transform:scale(1)}33%{transform:scale(2)}50%{transform:scale(1)}51%{transform:scale(0)}100%{transform:scale(0)}}@keyframes ANIMEsecond{0%{transform:scale(0)}25%{transform:scale(1)}40%{transform:scale(2)}50%{transform:scale(1)}81%{transform:scale(0)}100%{transform:scale(0)}}@keyframes ANIMEthird{0%{transform:scale(1)}30%{transform:scale(1)}45%{transform:scale(2)}50%{transform:scale(1)}51%{transform:scale(0)}100%{transform:scale(0)}}
+
+
+.BULBLEtxt {
+    background: #c50000;
+    z-index: 10;
+    margin: 14.5px auto;
+    margin-left: 54px;
+    border-radius: 0px 3px 3px 0;
+    padding: 6px 10px;
+    font-size: 14px;
+    color: #fff;
+    display: inline-block;
+    font-weight: 100;
+}
