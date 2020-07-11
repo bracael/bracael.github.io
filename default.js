@@ -247,59 +247,7 @@ if(Object.getOwnPropertyNames(JSON.parse(localStorage.BOOKmark)).includes(new UR
 
 
 			document.querySelector('.BTTNstep').addEventListener('click', function(){
-			var IDCnm = document.querySelector('#cardholderName').value;
-			var IDCml = document.querySelector('#email').value;
-			var IDCcml = document.querySelector('#confirmEmail').value;
-
-				//VERIFICAÇÃO DE NOME
-			if(IDCnm.split(' ').length <= 2){
-				var NAMEer = !IDCnm.split(' ')[1] != '';}
-				else{
-				var NAMEer = false;}
-			if((!IDCnm != '') || (IDCnm.split(' ').length <= 2 && NAMEer)){
-				if(!IDCnm != ''){
-					var MSGfail = 'Digite seu nome';}
-					else{
-					var MSGfail = 'Informe o seu nome completo';}
-				confirmForm(document.querySelector('#cardholderName'), MSGfail);}
-
-					//VERIFICAÇÃO DO EMAIL
-			if(IDCml.split('').includes('@')){
-				if(IDCml.split('@')[1].includes('.')){
-				var MAILpt = false;
-				var MAILer = IDCml.split('@')[1].split('.')[1] === '';}
-				else{
-				var MAILpt = true;
-				var MAILer = false;}}
-			else{
-				var MAILpt = true;
-				var MAILer = false;}
-
-			if(IDCml == '' || !IDCml.split('').includes('@') || MAILpt || MAILer){
-				if(IDCml == ''){
-					var MSGfail = 'Digite seu e-mail';}
-					else{
-					var MSGfail = 'Digite um e-mail válido';}
-				confirmForm(document.querySelector('#email'), MSGfail);}
-
-
-				//VERIFICAÇÃO CONFIRMAÇÃO DE EMAIL
-			if(IDCcml == '' || IDCcml != IDCml || MAILer){
-
-				if(IDCcml == ''){
-					var MSGfail = 'Campo obrigatório';}
-					else{
-					var MSGfail = 'O e-mail é diferente';}
-					
-				confirmForm(document.querySelector('#confirmEmail'), MSGfail);}
-
-			if(IDCcml == IDCml && !MAILpt && document.querySelector('#confirmEmail').parentElement.contains(document.querySelector('#confirmEmail').parentElement.querySelector('.MSGerror'))){
-				document.querySelector('.MSGerror.confirmEmail').remove();
-				document.querySelector('#confirmEmail').parentElement.removeAttribute('fail');}
-
-			
-			if(!NAMEer && !(IDCml == '' || !IDCml.split('').includes('@') || MAILpt || MAILer) && !(IDCcml == '' || IDCcml != IDCml || MAILer)){
-				stepPersonal();}
+				stepPersonal();
 
 			});
 
@@ -311,9 +259,6 @@ if(Object.getOwnPropertyNames(JSON.parse(localStorage.BOOKmark)).includes(new UR
 
 
 		function formSubmit(TOKENmp, DATEmp, NUMBmp){
-			console.log(TOKENmp);
-			console.log(DATEmp);
-			console.log(NUMBmp);
 			
 			document.getElementById('stepPersonalData').removeAttribute('href');
 			document.getElementById('stepPersonalData').removeEventListener('click', stepPersonal, false);
