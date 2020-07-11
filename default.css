@@ -3455,7 +3455,7 @@ span.btn-download-right-secondary {
 .LOGINspot label {
     top: 16px;
 }
-.LOGINspot label, body[checkout] .Blog P SPAN {
+.LOGINspot label, body[checkout] .Blog label {
     font-weight: 100;
     position: absolute;
     font-size: 16px;
@@ -3554,13 +3554,13 @@ BUTTON.FORGOTpass, .FOOTERlogin.PAGEreset A, body[checkout] .Blog .SUBMITpayment
     display: flex;
     margin: auto;
 }
-.LOGINspot .GROUPinput input:focus ~ span, body[checkout] .Blog P input:focus ~ span {
+.LOGINspot .GROUPinput input:focus ~ label, body[checkout] .Blog P input:focus ~ label {
     color: #1273EB;
 }
 .LOGINspot input:focus, body[checkout] .Blog P input:focus {
     color: #202124;
 }
-.LOGINspot .GROUPinput input:focus ~ label, .LOGINspot .GROUPinput input.HAScontent ~ label, body[checkout] .Blog P input:focus ~ span, body[checkout] .Blog P input.HAScontent ~ span, body[checkout] .CREDITcardPayment .DISPLAYflex.CARDcol1 input ~ span {
+.LOGINspot .GROUPinput input:focus ~ label, .LOGINspot .GROUPinput input.HAScontent ~ label, body[checkout] .Blog P input:focus ~ label, body[checkout] .Blog P input.HAScontent ~ label, body[checkout] .CREDITcardPayment .DISPLAYflex.CARDcol1 input ~ label {
     top: -8px;
     padding: 0 10px;
     font-size: 1em;
@@ -3835,9 +3835,6 @@ body[checkout] .CONTROLLpayment .PAYMENTmethod, body[checkout] .PAYMENTbox .PAYM
     font-family: var(--font-lato);
     position: relative;
 }
-body[checkout] .CONTROLLpayment .SPOTinst.DISPLAYnone {
-    display: none;
-}
 
 
 body[checkout] .CONTROLLpayment .SPOTinst, body[checkout] .PAYMENTbox .PAYMENTTinst {
@@ -3847,7 +3844,7 @@ body[checkout] .CONTROLLpayment .SPOTinst, body[checkout] .PAYMENTbox .PAYMENTTi
 body[checkout] .CONTROLLpayment .SPOTinst {
     padding: 16px;
 }
-body[checkout] .Blog P SPAN {
+body[checkout] .Blog label {
     color: #ccc;
 }
 body[checkout] .Blog .SPOTinst .NEXTstep, body[checkout] .Blog .SPOTinst .SUBMITpayment {
@@ -3894,7 +3891,7 @@ body[checkout] .PAYMENTbox .PAYMENTTinfo A {
 body[checkout] .Blog input:not(#payment_method_id) {
     height: 16px;
 }
-body[checkout] .Blog P SPAN {
+body[checkout] .Blog label {
     top: 14px;
 }
 
