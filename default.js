@@ -214,7 +214,7 @@ if(Object.getOwnPropertyNames(JSON.parse(localStorage.BOOKmark)).includes(new UR
 
 		console.log(VALUEpay);
 		if(CHECKout){
-		var CONTROLLpay = '<form id="pay" name="pay"><fieldset><div class="FORMdiv"><div class="CONTROLLpayment"><div class="STEPbox"><ul class="steps"><i class="CROSSstep"></i><li class="step-item"><a id="stepPersonalData" title="Dados pessoais" class="step-item-link tab-personal-data active"><span class="rounded step-number">1</span><span class="step-text">Dados pessoais</span></a></li><li class="step-item"><a id="stepPayment" title="Pagamento" class="step-item-link tab-payment"><span class="rounded step-number">2</span><span class="step-text">Pagamento</span></a></li><li class="step-item"><a id="stepThanks" title="Obrigado!" class="step-item-link"><span class="rounded step-number">3</span><span class="step-text">Obrigado!</span></a></li></ul></div><div class="PAYMENTmethod"><div class="CREDITcardPayment"><div class="SPOTinst"><p><input type="text" id="cardholderName" class="INPUTclass" data-checkout="cardholderName"></input><label for="cardholderName">Nome e sobrenome</label></p><p><input type="email" id="email" class="INPUTclass" name="email"></input><label for="email">Digite seu E-mail</label></p><p><input type="email" class="INPUTclass" id="confirmEmail"></input><label>Confirmação de E-mail</label></p><div class="NEXTstep"><button class="BTTNstep BTNtype" type="button">Próximo passo</button></div></div><div class="SPOTinst DISPLAYnone"><p hidden=""><input type="hidden" name="description" id="description" value="Ítem selecionado" disabled="disabled"></input><label for="description" hidden="">Descrição</label></p><p hidden=""><input name="transaction_amount" id="transaction_amount" value="' +VALUEpay+ '" disabled="disabled" type="hidden"></input><label for="transaction_amount" hidden="">Valor a pagar</label></p><p><input type="tel" id="cardNumber" class="INPUTclass" data-checkout="cardNumber" onselectstart="return false" onpaste="return false" onCopy="return false" onCut="return false" onDrag="return false" onDrop="return false" maxlength="19" autocomplete="off"></input><label for="cardNumber">Número do cartão</label></p><div class="DISPLAYflex CARDcol1"><p><input type="tel" id="cardExpirationMonth" class="INPUTclass" data-checkout="cardExpirationMonth" onselectstart="return false" onpaste="return false" onCopy="return false" onCut="return false" onDrag="return false" onDrop="return false" maxlength="2" autocomplete="off"></input><label for="cardExpirationMonth">MM</label></p><p><input type="tel" id="cardExpirationYear" class="INPUTclass" data-checkout="cardExpirationYear" onselectstart="return false" onpaste="return false" onCopy="return false" onCut="return false" onDrag="return false" onDrop="return false" maxlength="2" autocomplete="off"></input><label for="cardExpirationYear">AA</label></p><p><input type="tel" id="securityCode" class="INPUTclass" data-checkout="securityCode" onselectstart="return false" onpaste="return false" onCopy="return false" onCut="return false" onDrag="return false" onDrop="return false" maxlength="4" autocomplete="off"></input><label for="securityCode">CVC/CVV</label></p></div><div class="DISPLAYflex CARDcol2"><p><select id="installments" class="form-control" name="installments"><option value="Parcelas">Parcelas</option></select><label for="installments" hidden>Parcelas</label></p><p hidden=""><input type="text" disabled="disabled" name="payment_method_id" id="payment_method_id" hidden=""></input></p></div><div class="DISPLAYflex CARDcol3"><p><select id="docType" data-checkout="docType"></select><label for="docType" hidden>Tipo de documento</label></p><p><input type="tel" id="docNumber" class="INPUTclass" data-checkout="docNumber"></input><label for="docNumber">Número do documento</label></p></div><div class="SUBMITpayment"><button type="submit" id="payment">Finalizar o pagamento</button></div></div></div><div class="CARDwrapper"><div class="CARDwrapperInset"><div class="PAYMENDcard"><div class="CARDcol1"><div class="CARDchip"><div class="CARDshiny"></div><div class="CARDbrand"></div></div></div><div class="CARDcol2"><div class="CARDNumber"></div></div><div class="CARDcol3"><div class="CARDname"></div><div class="CARDexpiration"><span class="MMcard"></span><span class="BARtag"></span><span class="AAcard"></span></div></div></div><div class="PAYMENDcard"><div class="CARDcol4"><div class="BLACKtarget"></div></div><div class="CARDcol5"><div class="CARDlines"></div><div class="CARDcode"><span class="CARDcodeNumber"></span></div></div></div></div></div></div></div><div class="PAYMENTbox"><div class="PAYMENTTinst"><div class="PAYMENTtitle"><span class="LICENSEtxt">Premium</span><a target="_blank" href="#"><i class="CIRCLEhelp"></i></a></div><div class="PAYMENTval"><span class="PREMIUMval">' +PRICEpost+ '</span><span class="COINhere">BRL</span></div><div class="PAYMENTTinfo"><h4>' +JSONit.entry.title.$t+ '</h4><p>' +DOCit.body.querySelector('pre').innerText+ '</p><div class="SAFEpost"><i class="CROSSicon DEFENSEit"></i>Compra 100% Segura</div></div></div></div></div></fieldset></form>';
+		var CONTROLLpay = '<div class="FORMdiv"><div class="CONTROLLpayment"><div class="STEPbox"><ul class="steps"> <i class="CROSSstep"></i><li class="step-item"><a id="stepPersonalData" title="Dados pessoais" class="step-item-link tab-personal-data active"><span class="rounded step-number">1</span><span class="step-text">Dados pessoais</span></a></li><li class="step-item"><a id="stepPayment" title="Pagamento" class="step-item-link tab-payment"><span class="rounded step-number">2</span><span class="step-text">Pagamento</span></a></li><li class="step-item"><a id="stepThanks" title="Obrigado!" class="step-item-link"><span class="rounded step-number">3</span><span class="step-text">Obrigado!</span></a></li></ul></div><div class="PAYMENTmethod"><div class="CREDITcardPayment"><div class="SPOTinst"><p><input type="text" id="inputCardName" class="INPUTclass"></input><label for="inputCardName">Nome e sobrenome</label></p><p><input type="email" id="email" class="INPUTclass" name="email"></input><label for="email">Digite seu E-mail</label></p><p><input type="email" class="INPUTclass" id="confirmEmail"></input><label>Confirmação de E-mail</label></p><div class="NEXTstep"><button class="BTTNstep BTNtype" type="button">Próximo passo</button></div></div><div class="SPOTinst DISPLAYnone"><form id="pay" name="pay"><fieldset><p hidden=""><input type="hidden" id="cardholderName" class="INPUTclass" data-checkout="cardholderName"></input><label for="cardholderName">Nome e sobrenome</label></p><p hidden=""><input type="hidden" name="description" id="description" value="Ítem selecionado" disabled="disabled"></input><label for="description" hidden="">Descrição</label></p><p hidden=""><input name="transaction_amount" id="transaction_amount" value="' +VALUEpay+ '" disabled="disabled" type="hidden"></input><label for="transaction_amount" hidden="">Valor a pagar</label></p><p><input type="tel" id="cardNumber" class="INPUTclass" data-checkout="cardNumber" onselectstart="return false" onpaste="return false" onCopy="return false" onCut="return false" onDrag="return false" onDrop="return false" maxlength="19" autocomplete="off"></input><label for="cardNumber">Número do cartão</label></p><div class="DISPLAYflex CARDcol1"><p><input type="tel" id="cardExpirationMonth" class="INPUTclass" data-checkout="cardExpirationMonth" onselectstart="return false" onpaste="return false" onCopy="return false" onCut="return false" onDrag="return false" onDrop="return false" maxlength="2" autocomplete="off"></input><label for="cardExpirationMonth">MM</label></p><p><input type="tel" id="cardExpirationYear" class="INPUTclass" data-checkout="cardExpirationYear" onselectstart="return false" onpaste="return false" onCopy="return false" onCut="return false" onDrag="return false" onDrop="return false" maxlength="2" autocomplete="off"></input><label for="cardExpirationYear">AA</label></p><p><input type="tel" id="securityCode" class="INPUTclass" data-checkout="securityCode" onselectstart="return false" onpaste="return false" onCopy="return false" onCut="return false" onDrag="return false" onDrop="return false" maxlength="4" autocomplete="off"></input><label for="securityCode">CVC/CVV</label></p></div><div class="DISPLAYflex CARDcol2"><p> <select id="installments" class="form-control" name="installments"><option value="Parcelas">Parcelas</option> </select> <label for="installments" hidden>Parcelas</label></p><p hidden=""><input type="text" disabled="disabled" name="payment_method_id" id="payment_method_id" hidden=""></input></p></div><div class="DISPLAYflex CARDcol3"><p><select id="docType" data-checkout="docType"></select><label for="docType" hidden>Tipo de documento</label></p><p><input type="tel" id="docNumber" class="INPUTclass" data-checkout="docNumber"></input><label for="docNumber">Número do documento</label></p></div><div class="SUBMITpayment"><button type="submit" id="payment">Finalizar o pagamento</button></div></fieldset></form></div></div><div class="CARDwrapper"><div class="CARDwrapperInset"><div class="PAYMENDcard"><div class="CARDcol1"><div class="CARDchip"><div class="CARDshiny"></div><div class="CARDbrand"></div></div></div><div class="CARDcol2"><div class="CARDNumber"></div></div><div class="CARDcol3"><div class="CARDname"></div><div class="CARDexpiration"><span class="MMcard"></span><span class="BARtag"></span><span class="AAcard"></span></div></div></div><div class="PAYMENDcard"><div class="CARDcol4"><div class="BLACKtarget"></div></div><div class="CARDcol5"><div class="CARDlines"></div><div class="CARDcode"><span class="CARDcodeNumber"></span></div></div></div></div></div></div></div><div class="PAYMENTbox"><div class="PAYMENTTinst"><div class="PAYMENTtitle"><span class="LICENSEtxt">Premium</span><a target="_blank" href="#"><i class="CIRCLEhelp"></i></a></div><div class="PAYMENTval"><span class="PREMIUMval">' +PRICEpost+ '</span><span class="COINhere">BRL</span></div><div class="PAYMENTTinfo"><h4>' +JSONit.entry.title.$t+ '</h4><p>' +DOCit.body.querySelector('pre').innerText+ '</p><div class="SAFEpost"><i class="CROSSicon DEFENSEit"></i>Compra 100% Segura</div></div></div></div></div>';
 		document.querySelector('.Blog').innerHTML = CONTROLLpay;
 		var DOCUMENTit = new DOMParser().parseFromString(CONTROLLpay, 'text/html');
 		console.log(DOCit.body);
@@ -247,7 +247,7 @@ if(Object.getOwnPropertyNames(JSON.parse(localStorage.BOOKmark)).includes(new UR
 
 
 			document.querySelector('.BTTNstep').addEventListener('click', function(){
-			var IDCnm = document.querySelector('#cardholderName').value;
+			var IDCnm = document.querySelector('#inputCardName').value;
 			var IDCml = document.querySelector('#email').value;
 			var IDCcml = document.querySelector('#confirmEmail').value;
 
@@ -261,7 +261,7 @@ if(Object.getOwnPropertyNames(JSON.parse(localStorage.BOOKmark)).includes(new UR
 					var MSGfail = 'Digite seu nome';}
 					else{
 					var MSGfail = 'Informe o seu nome completo';}
-				confirmForm(document.querySelector('#cardholderName'), MSGfail);}
+				confirmForm(document.querySelector('#inputCardName'), MSGfail);}
 
 					//VERIFICAÇÃO DO EMAIL
 			if(IDCml.split('').includes('@')){
@@ -304,19 +304,6 @@ if(Object.getOwnPropertyNames(JSON.parse(localStorage.BOOKmark)).includes(new UR
 			});
 
 
-	document.getElementById('payment').addEventListener('click', function(){
-		const INPTit = document.querySelector('.SPOTinst.DISPLAYnone').querySelectorAll('.INPUTclass');
-
-		for(var i = 0; i < INPTit.length; i++){
-		if(!INPTit[i].value != ''){
-			var MSGfail = 'Campo obrigatório';
-		confirmForm(INPTit[i], MSGfail);
-
-		}
-
-
-		}
-	});
 
 
 			//EFEITOS NUMERO DO CARTÃO
@@ -360,16 +347,18 @@ if(Object.getOwnPropertyNames(JSON.parse(localStorage.BOOKmark)).includes(new UR
 
 
 			//EFEITOS NOME
-	document.getElementById('cardholderName').addEventListener('input', function(){
-	if(document.getElementById('cardholderName').value != ''){
+	document.getElementById('inputCardName').addEventListener('input', function(){
+	document.getElementById('cardholderName').setAttribute('value', this.value);
+
+	if(document.getElementById('inputCardName').value != ''){
 	document.querySelector('.CARDname').classList.add('TEXTon');}
 	else{
 	document.querySelector('.CARDname').classList.remove('TEXTon');}
-		const CARDnumberIt = document.getElementById('cardholderName').value;
+		const CARDnumberIt = document.getElementById('inputCardName').value;
 		document.querySelector('.CARDname').innerText = CARDnumberIt});
-	document.getElementById('cardholderName').addEventListener('focusin', function(){
+	document.getElementById('inputCardName').addEventListener('focusin', function(){
 		document.querySelector('.CARDname').classList.add('SELECit');});
-	document.getElementById('cardholderName').addEventListener('focusout', function(){
+	document.getElementById('inputCardName').addEventListener('focusout', function(){
 			document.querySelector('.CARDname').classList.remove('SELECit');});
 
 
@@ -493,6 +482,21 @@ if(Object.getOwnPropertyNames(JSON.parse(localStorage.BOOKmark)).includes(new UR
 						doc.querySelectorAll('.PAYMENDcard')[i].classList.add(response[0].name.replace(/\s/g, ''));
 					}
 				} else {
+
+
+					const INPTit = document.querySelector('.SPOTinst.DISPLAYnone').querySelectorAll('.INPUTclass');
+
+					for(var i = 0; i < INPTit.length; i++){
+					if(!INPTit[i].value != ''){
+						var MSGfail = 'Campo obrigatório';
+					confirmForm(INPTit[i], MSGfail);
+			
+					}
+			
+			
+					}
+
+
 					alert(`payment method info error: ${response}`);
 				}
 			}
