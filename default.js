@@ -232,7 +232,8 @@ if(Object.getOwnPropertyNames(JSON.parse(localStorage.BOOKmark)).includes(new UR
 		if(document.body.contains(document.querySelector('.BTTNstep'))){
 
 			function stepPersonal(){
-				$('.SPOTinst').animate({ height: "toggle" },{duration: 300});
+				document.querySelectorAll('.SPOTinst')[1].classList.toggle('DISPLAYnone');
+				document.querySelectorAll('.SPOTinst')[0].classList.toggle('DISPLAYnone');
 				
 				document.querySelector('DIV.STEPbox').classList.toggle('CROSSstep');
 
@@ -537,14 +538,14 @@ if(Object.getOwnPropertyNames(JSON.parse(localStorage.BOOKmark)).includes(new UR
 				console.log(response);
 			};
 		
-			// if(doc.querySelector('#payment')){
-			// 	doc.querySelector('#pay').addEventListener('submit', sendPayment, false);
-			// }
+			if(doc.querySelector('#payment')){
+				doc.querySelector('#pay').addEventListener('submit', sendPayment, false);
+			}
 		
 		
-					// console.log(data.data().SAND_KEY);
-					// console.log(win);
-					// console.log(doc);
+					console.log(data.data().SAND_KEY);
+					console.log(win);
+					console.log(doc);
 				} else {
 					// doc.data() will be undefined in this case
 					console.log("No such document!");
@@ -558,10 +559,7 @@ if(Object.getOwnPropertyNames(JSON.parse(localStorage.BOOKmark)).includes(new UR
 
 			})(window, document);
 		}).catch(function(error) {
-			const BULBmsg = '<div class="BULBmsg"><div class="INSTconex"><div class="BULBLEit"><i class="CROSSicon CONEXinst"></i><div class="ANIMEcircle ANIMEfirst"></div><div class="ANIMEcircle ANIMEsecond"></div><div class="ANIMEcircle ANIMEthird"></div></div><div class="BULBLEtxt"><p>Perdemos a conexão com o servidor.</p></div></div></div>';
-			var BULBbody = new DOMParser().parseFromString(CODEdemo, 'text/html');
-			document.body.insertAdjacentElement("beforeend", BULBbody.querySelector('.BULBmsg'));
-
+			console.log("Error getting document:", error);
 		});
 
 	}
