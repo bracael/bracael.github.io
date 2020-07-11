@@ -1217,6 +1217,9 @@ FORM.SEARCHform .SEARCHit {
 
 
 
+body[checkout] FOOTER.FOOTERcross {
+    padding: 22px 0 0;
+}
 .FOOTERcross .FOOTERdiv {
     max-width: 1056px;
     margin: 0 auto;
@@ -3733,7 +3736,7 @@ DIV.SUCESSemail .YOURmail SPAN {
 body[checkout] .Blog .FORMdiv {
     width: 100%;
     max-width: 1056px;
-    margin: 32px auto;
+    margin: 32px auto 0;
     color: #5d5c5c;
     display: flex;
 }
@@ -3901,7 +3904,7 @@ body[checkout] .PAYMENTbox .PAYMENTTinfo .SAFEpost {
     line-height: 26px;
     text-transform: uppercase;
     clear: both;
-    font-weight: 100;
+    font-weight: 500;
     font-size: 14px;
     font-family: var(--font-oswald);
 }
