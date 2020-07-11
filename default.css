@@ -3835,7 +3835,9 @@ body[checkout] .CONTROLLpayment .PAYMENTmethod, body[checkout] .PAYMENTbox .PAYM
     font-family: var(--font-lato);
     position: relative;
 }
-
+body[checkout] .CONTROLLpayment .SPOTinst.DISPLAYnone {
+    display: none;
+}
 
 body[checkout] .CONTROLLpayment .SPOTinst, body[checkout] .PAYMENTbox .PAYMENTTinst {
     background: #ffffff;
