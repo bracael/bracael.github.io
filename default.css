@@ -3455,7 +3455,7 @@ span.btn-download-right-secondary {
 .LOGINspot label {
     top: 16px;
 }
-.LOGINspot label, body[checkout] .Blog label {
+.LOGINspot label, body[checkout] .Blog P SPAN {
     font-weight: 100;
     position: absolute;
     font-size: 16px;
@@ -3554,13 +3554,13 @@ BUTTON.FORGOTpass, .FOOTERlogin.PAGEreset A, body[checkout] .Blog .SUBMITpayment
     display: flex;
     margin: auto;
 }
-.LOGINspot .GROUPinput input:focus ~ label, body[checkout] .Blog P input:focus ~ label {
+.LOGINspot .GROUPinput input:focus ~ span, body[checkout] .Blog P input:focus ~ span {
     color: #1273EB;
 }
 .LOGINspot input:focus, body[checkout] .Blog P input:focus {
     color: #202124;
 }
-.LOGINspot .GROUPinput input:focus ~ label, .LOGINspot .GROUPinput input.HAScontent ~ label, body[checkout] .Blog P input:focus ~ label, body[checkout] .Blog P input.HAScontent ~ label, body[checkout] .CREDITcardPayment .DISPLAYflex.CARDcol1 input ~ label {
+.LOGINspot .GROUPinput input:focus ~ label, .LOGINspot .GROUPinput input.HAScontent ~ label, body[checkout] .Blog P input:focus ~ span, body[checkout] .Blog P input.HAScontent ~ span, body[checkout] .CREDITcardPayment .DISPLAYflex.CARDcol1 input ~ span {
     top: -8px;
     padding: 0 10px;
     font-size: 1em;
@@ -3847,7 +3847,7 @@ body[checkout] .CONTROLLpayment .SPOTinst, body[checkout] .PAYMENTbox .PAYMENTTi
 body[checkout] .CONTROLLpayment .SPOTinst {
     padding: 16px;
 }
-body[checkout] .Blog label {
+body[checkout] .Blog P SPAN {
     color: #ccc;
 }
 body[checkout] .Blog .SPOTinst .NEXTstep, body[checkout] .Blog .SPOTinst .SUBMITpayment {
@@ -3894,7 +3894,7 @@ body[checkout] .PAYMENTbox .PAYMENTTinfo A {
 body[checkout] .Blog input:not(#payment_method_id) {
     height: 16px;
 }
-body[checkout] .Blog label {
+body[checkout] .Blog P SPAN {
     top: 14px;
 }
 
