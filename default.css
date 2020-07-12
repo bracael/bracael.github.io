@@ -40,6 +40,22 @@ body { color: var(--body-color); background:var(--body-bg); overflow-y: overlay;
 
 
 
+body[checkout] .PAYMENTbox .PAYMENTTinfo H4:empty, body[checkout] .PAYMENTbox .PAYMENTTinfo P:empty {
+    background: #f5f5f5;
+    border-radius: 3px;
+}
+body[checkout] .PAYMENTbox .PAYMENTTinfo H4:empty {
+    min-height: 140px;
+    margin-bottom: 8px;
+}
+body[checkout] .PAYMENTbox .PAYMENTTinfo P:empty {
+    min-height: 140px;
+    margin-bottom: 14px;
+}
+
+
+
+
 A {
     color: var(--color-prata);
 }
