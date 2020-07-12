@@ -213,9 +213,10 @@ if(Object.getOwnPropertyNames(JSON.parse(localStorage.BOOKmark)).includes(new UR
 
 
 		if(CHECKout){
-		var CONTROLLpay = '<form id="pay" name="pay"><fieldset><div class="FORMdiv"><div class="CONTROLLpayment"><div class="STEPbox"><ul class="steps"> <i class="CROSSstep"></i><li class="step-item"><a id="stepPersonalData" title="Dados pessoais" class="step-item-link tab-personal-data active"><span class="rounded step-number">1</span><span class="step-text">Dados pessoais</span></a></li><li class="step-item"><a id="stepPayment" title="Pagamento" class="step-item-link tab-payment"><span class="rounded step-number">2</span><span class="step-text">Pagamento</span></a></li><li class="step-item"><a id="stepThanks" title="Obrigado!" class="step-item-link"><span class="rounded step-number">3</span><span class="step-text">Obrigado!</span></a></li></ul></div><div class="PAYMENTmethod"><div class="CREDITcardPayment"><div class="SPOTinst"><p><input type="text" id="cardholderName" class="INPUTclass" data-checkout="cardholderName" onselectstart="return false" onpaste="return false" onCopy="return false" onCut="return false" onDrag="return false" onDrop="return false" autocomplete="off"></input><label for="cardholderName">Nome e sobrenome</label></p><p><input type="email" id="email" class="INPUTclass" name="email" onselectstart="return false" onpaste="return false" onCopy="return false" onCut="return false" onDrag="return false" onDrop="return false" autocomplete="off"></input><label for="email">Digite seu E-mail</label></p><p><input type="email" class="INPUTclass" id="confirmEmail" onselectstart="return false" onpaste="return false" onCopy="return false" onCut="return false" onDrag="return false" onDrop="return false" autocomplete="off"></input><label>Confirmação de E-mail</label></p><div class="NEXTstep"><button class="BTTNstep BTNtype" type="button">Próximo passo</button></div></div><div class="SPOTinst DISPLAYnone"><p><input type="tel" id="cardNumber" class="INPUTclass" data-checkout="cardNumber" onselectstart="return false" onpaste="return false" onCopy="return false" onCut="return false" onDrag="return false" onDrop="return false" maxlength="19" autocomplete="off"></input><label for="cardNumber">Número do cartão</label></p><div class="DISPLAYflex CARDcol1"><p><input type="tel" id="cardExpirationMonth" class="INPUTclass" data-checkout="cardExpirationMonth" onselectstart="return false" onpaste="return false" onCopy="return false" onCut="return false" onDrag="return false" onDrop="return false" maxlength="2" autocomplete="off"></input><label for="cardExpirationMonth">MM</label></p><p><input type="tel" id="cardExpirationYear" class="INPUTclass" data-checkout="cardExpirationYear" onselectstart="return false" onpaste="return false" onCopy="return false" onCut="return false" onDrag="return false" onDrop="return false" maxlength="2" autocomplete="off"></input><label for="cardExpirationYear">AA</label></p><p><input type="tel" id="securityCode" class="INPUTclass" data-checkout="securityCode" onselectstart="return false" onpaste="return false" onCopy="return false" onCut="return false" onDrag="return false" onDrop="return false" maxlength="4" autocomplete="off"></input><label for="securityCode">CVC/CVV</label></p></div><div class="DISPLAYflex CARDcol2"><p> <select id="installments" class="form-control" name="installments"><option value="" disabled="disabled" selected="selected">Parcelas</option> </select></p><p hidden=""><input type="text" disabled="disabled" name="payment_method_id" id="payment_method_id" onselectstart="return false" onpaste="return false" onCopy="return false" onCut="return false" onDrag="return false" onDrop="return false" autocomplete="off"></input></p></div><div class="DISPLAYflex CARDcol3"><p><select id="docType" data-checkout="docType" name="doctype"></select></p><p><input type="tel" id="docNumber" class="INPUTclass" data-checkout="docNumber" onselectstart="return false" onpaste="return false" onCopy="return false" onCut="return false" onDrag="return false" onDrop="return false" autocomplete="off"></input><label for="docNumber">Número do documento</label></p></div><div class="SUBMITpayment"><button type="submit" id="payment">Finalizar o pagamento</button></div></div></div><div class="CARDwrapper"><div class="CARDwrapperInset"><div class="PAYMENDcard"><div class="CARDcol1"><div class="CARDchip"><div class="CARDshiny"></div><div class="CARDbrand"></div></div></div><div class="CARDcol2"><div class="CARDNumber"></div></div><div class="CARDcol3"><div class="CARDname"></div><div class="CARDexpiration"><span class="MMcard"></span><span class="BARtag"></span><span class="AAcard"></span></div></div></div><div class="PAYMENDcard"><div class="CARDcol4"><div class="BLACKtarget"></div></div><div class="CARDcol5"><div class="CARDlines"></div><div class="CARDcode"><span class="CARDcodeNumber"></span></div></div></div></div></div></div></div><div class="PAYMENTbox"><div class="PAYMENTTinst"><div class="PAYMENTtitle"><span class="LICENSEtxt">Premium</span><a target="_blank" href="#"><i class="CIRCLEhelp"></i></a></div><div class="PAYMENTval"><span class="PREMIUMval">' +PRICEpost+ '</span><span class="COINhere">BRL</span></div><div class="PAYMENTTinfo"><h4>' +JSONit.entry.title.$t+ '</h4><p>' +DOCit.body.querySelector('pre').innerText+ '</p><div class="SAFEpost"><i class="CROSSicon DEFENSEit"></i>Compra 100% Segura</div></div></div></div></div></fieldset></form>';
+		var CONTROLLpay = '<div class="FORMdiv"><div class="CONTROLLpayment"><div class="STEPbox"><ul class="steps"> <i class="CROSSstep"></i><li class="step-item"><a id="stepPersonalData" title="Dados pessoais" class="step-item-link tab-personal-data active"><span class="rounded step-number">1</span><span class="step-text">Dados pessoais</span></a></li><li class="step-item"><a id="stepPayment" title="Pagamento" class="step-item-link tab-payment"><span class="rounded step-number">2</span><span class="step-text">Pagamento</span></a></li><li class="step-item"><a id="stepThanks" title="Obrigado!" class="step-item-link"><span class="rounded step-number">3</span><span class="step-text">Obrigado!</span></a></li></ul></div><div class="PAYMENTmethod"><div class="CREDITcardPayment"><div class="SPOTinst"><div class="DISPLAYdados"><p><input type="text" id="INPUTcardName" class="INPUTclass"></input><label for="INPUTcardName">Nome e sobrenome</label></p><p><input type="email" id="INPUTdateEmail" class="INPUTclass"></input><label for="INPUTdateEmail">Digite seu E-mail</label></p><p><input type="email" class="INPUTclass" id="confirmEmail"></input><label>Confirmação de E-mail</label></p><div class="NEXTstep"><button class="BTTNstep BTNtype" type="button">Próximo passo</button></div></div></div><div class="SPOTinst DISPLAYnone"><div class="SLCTpayTab"><li><a href="javascript:void(0);" class="SLCTtoPay ACTIVEit" for="PAYMENTcrd"><i class="CROSSicon CARDicon"></i>Cartão de credito</a></li><li><a href="javascript:void(0);" class="SLCTtoPay" for="PAYMENTblt"><i class="CROSSicon CAIXAlot"></i>Pagamento em lotérica</a></li><li><a href="javascript:void(0);" class="SLCTtoPay" for="PAYMENTpnl"><i class="CROSSicon BOLETOicon"></i>Boleto</a></li></div><div class="METHODtoPay"><div class="PAYMENTcrd" id="METHODitem"><form id="pay" name="pay"><fieldset><div class="CREDITcardNode"><div class="CREDITcardDate"><p hidden=""><input type="text" id="cardholderName" class="INPUTclass" data-checkout="cardholderName"></input><label for="cardholderName">Nome e sobrenome</label></p><p hidden=""><input type="email" id="email" class="INPUTclass" name="email"></input><label for="email">Digite seu E-mail</label></p><p hidden=""><input type="hidden" name="description" id="description" value="Ítem selecionado" disabled="disabled"></input><label for="description" hidden="">Descrição</label></p><p hidden=""><input name="transaction_amount" id="transaction_amount" disabled="disabled" type="hidden"></input><label for="transaction_amount" hidden="">Valor a pagar</label></p><p><input type="tel" id="cardNumber" class="INPUTclass" data-checkout="cardNumber" onselectstart="return false" onpaste="return false" onCopy="return false" onCut="return false" onDrag="return false" onDrop="return false" maxlength="19" autocomplete="off"></input><label for="cardNumber">Número do cartão</label></p><div class="DISPLAYflex CARDcol1"><p><input type="tel" id="cardExpirationMonth" class="INPUTclass" data-checkout="cardExpirationMonth" onselectstart="return false" onpaste="return false" onCopy="return false" onCut="return false" onDrag="return false" onDrop="return false" maxlength="2" autocomplete="off"></input><label for="cardExpirationMonth">MM</label></p><p><input type="tel" id="cardExpirationYear" class="INPUTclass" data-checkout="cardExpirationYear" onselectstart="return false" onpaste="return false" onCopy="return false" onCut="return false" onDrag="return false" onDrop="return false" maxlength="2" autocomplete="off"></input><label for="cardExpirationYear">AA</label></p><p><input type="tel" id="securityCode" class="INPUTclass" data-checkout="securityCode" onselectstart="return false" onpaste="return false" onCopy="return false" onCut="return false" onDrag="return false" onDrop="return false" maxlength="4" autocomplete="off"></input><label for="securityCode">CVC/CVV</label></p></div><div class="DISPLAYflex CARDcol2"><p> <select id="installments" class="form-control" name="installments"><option value="Parcelas">Parcelas</option> </select> <label for="installments" hidden>Parcelas</label></p><p hidden=""><input type="text" disabled="disabled" name="payment_method_id" id="payment_method_id" hidden=""></input></p></div><div class="DISPLAYflex CARDcol3"><p><select id="docType" data-checkout="docType"></select><label for="docType" hidden>Tipo de documento</label></p><p><input type="tel" id="docNumber" class="INPUTclass" data-checkout="docNumber"></input><label for="docNumber">Número do documento</label></p></div><div class="SUBMITpayment"><button type="submit" id="payment">Finalizar o pagamento</button></div></div><div class="CARDwrapper"><div class="CARDwrapperInset"><div class="PAYMENDcard"><div class="CARDcol1"><div class="CARDchip"><div class="CARDshiny"></div><div class="CARDbrand"></div></div></div><div class="CARDcol2"><div class="CARDNumber"></div></div><div class="CARDcol3"><div class="CARDname"></div><div class="CARDexpiration"><span class="MMcard"></span><span class="BARtag"></span><span class="AAcard"></span></div></div></div><div class="PAYMENDcard"><div class="CARDcol4"><div class="BLACKtarget"></div></div><div class="CARDcol5"><div class="CARDlines"></div><div class="CARDcode"><span class="CARDcodeNumber"></span></div></div></div></div></div></div></fieldset></form></div><div class="PAYMENTblt DISPLAYnone" id="METHODitem"><p>Um boleto bancário é um documento largamente utilizado no Brasil como instrumento de pagamento de um produto ou serviço prestado. Através do boleto, seu emissor pode receber do pagador o valor referente àquele pagamento</p></div><div class="PAYMENTpnl DISPLAYnone" id="METHODitem"><p>Caixa Econômica Federal (CEF), também conhecida como Caixa, é uma instituição financeira, sob a forma de empresa pública[4], com patrimônio próprio e autonomia administrativa com sede em Brasília, no Distrito Federal, e com filiais em todo o território nacional. É vinculada ao Ministério da Economia.</p></div></div></div></div></div></div><div class="PAYMENTbox"><div class="PAYMENTTinst"><div class="PAYMENTtitle"><span class="LICENSEtxt">Premium</span><a target="_blank" href="#"><i class="CIRCLEhelp"></i></a></div><div class="PAYMENTval"><span class="PREMIUMval">' +PRICEpost+ '</span><span class="COINhere">BRL</span></div><div class="PAYMENTTinfo"><h4>' +JSONit.entry.title.$t+ '</h4><p>' +DOCit.body.querySelector('pre').innerText+ '</p><div class="SAFEpost"><i class="CROSSicon DEFENSEit"></i>Compra 100% Segura</div></div></div></div></div>';
 		document.querySelector('.Blog').innerHTML = CONTROLLpay;
-		
+
+
 		if(document.body.contains(document.querySelector('.INPUTclass'))){
 			const INPUTclass = document.querySelectorAll('.INPUTclass');
 			console.log(INPUTclass);
@@ -244,8 +245,8 @@ if(Object.getOwnPropertyNames(JSON.parse(localStorage.BOOKmark)).includes(new UR
 
 
 			document.querySelector('.BTTNstep').addEventListener('click', function(){
-			var IDCnm = document.querySelector('#cardholderName').value;
-			var IDCml = document.querySelector('#email').value;
+			var IDCnm = document.querySelector('#INPUTcardName').value;
+			var IDCml = document.querySelector('#INPUTdateEmail').value;
 			var IDCcml = document.querySelector('#confirmEmail').value;
 
 				//VERIFICAÇÃO DE NOME
@@ -258,7 +259,7 @@ if(Object.getOwnPropertyNames(JSON.parse(localStorage.BOOKmark)).includes(new UR
 					var MSGfail = 'Digite seu nome';}
 					else{
 					var MSGfail = 'Informe o seu nome completo';}
-				confirmForm(document.querySelector('#cardholderName'), MSGfail);}
+				confirmForm(document.querySelector('#INPUTcardName'), MSGfail);}
 
 					//VERIFICAÇÃO DO EMAIL
 			if(IDCml.split('').includes('@')){
@@ -277,7 +278,7 @@ if(Object.getOwnPropertyNames(JSON.parse(localStorage.BOOKmark)).includes(new UR
 					var MSGfail = 'Digite seu e-mail';}
 					else{
 					var MSGfail = 'Digite um e-mail válido';}
-				confirmForm(document.querySelector('#email'), MSGfail);}
+				confirmForm(document.querySelector('#INPUTdateEmail'), MSGfail);}
 
 
 				//VERIFICAÇÃO CONFIRMAÇÃO DE EMAIL
@@ -296,7 +297,8 @@ if(Object.getOwnPropertyNames(JSON.parse(localStorage.BOOKmark)).includes(new UR
 
 			
 			if(!NAMEer && !(IDCml == '' || !IDCml.split('').includes('@') || MAILpt || MAILer) && !(IDCcml == '' || IDCcml != IDCml || MAILer)){
-				stepPersonal();}
+				stepPersonal();
+			}
 
 			});
 
@@ -343,17 +345,24 @@ if(Object.getOwnPropertyNames(JSON.parse(localStorage.BOOKmark)).includes(new UR
 			document.querySelector('.CARDNumber').classList.remove('SELECit');});
 
 
+			//EFEITOS EMAIL
+	document.getElementById('INPUTdateEmail').addEventListener('input', function(){
+	document.querySelector('#email').setAttribute('value', this.value);});
+
+
 			//EFEITOS NOME
-	document.getElementById('cardholderName').addEventListener('input', function(){
-	if(document.getElementById('cardholderName').value != ''){
+	document.getElementById('INPUTcardName').addEventListener('input', function(){
+	document.querySelector('#cardholderName').setAttribute('value', this.value);
+
+	if(document.getElementById('INPUTcardName').value != ''){
 	document.querySelector('.CARDname').classList.add('TEXTon');}
 	else{
 	document.querySelector('.CARDname').classList.remove('TEXTon');}
-		const CARDnumberIt = document.getElementById('cardholderName').value;
+		const CARDnumberIt = document.getElementById('INPUTcardName').value;
 		document.querySelector('.CARDname').innerText = CARDnumberIt});
-	document.getElementById('cardholderName').addEventListener('focusin', function(){
+	document.getElementById('INPUTcardName').addEventListener('focusin', function(){
 		document.querySelector('.CARDname').classList.add('SELECit');});
-	document.getElementById('cardholderName').addEventListener('focusout', function(){
+	document.getElementById('INPUTcardName').addEventListener('focusout', function(){
 			document.querySelector('.CARDname').classList.remove('SELECit');});
 
 
@@ -465,8 +474,6 @@ if(Object.getOwnPropertyNames(JSON.parse(localStorage.BOOKmark)).includes(new UR
 		
 			//Set Payment
 			function setPaymentMethod(status, response) {
-			// if(response[0].name == 'Mastercard'){
-			// response[0].thumbnail = 'https://logospng.org/download/mastercard/logo-mastercard-256.png';}
 
 				if (status == 200) {
 					let paymentMethodId = doc.querySelector('#payment_method_id');
@@ -474,8 +481,8 @@ if(Object.getOwnPropertyNames(JSON.parse(localStorage.BOOKmark)).includes(new UR
 					paymentMethodId.value = response[0].id;
 					doc.querySelector('.CARDbrand').classList.add(response[0].name.replace(/\s/g, ''));
 					for(var i = 0; i < doc.querySelectorAll('.PAYMENDcard').length; i++){
-						doc.querySelectorAll('.PAYMENDcard')[i].classList.add(response[0].name.replace(/\s/g, ''));
-					}
+						doc.querySelectorAll('.PAYMENDcard')[i].classList.add(response[0].name.replace(/\s/g, ''));}
+					
 				} else {
 
 
@@ -492,7 +499,7 @@ if(Object.getOwnPropertyNames(JSON.parse(localStorage.BOOKmark)).includes(new UR
 					}
 
 
-					alert(`payment method info error: ${response}`);
+					console.log(`payment method info error: ${response}`);
 				}
 			}
 		
@@ -509,9 +516,8 @@ if(Object.getOwnPropertyNames(JSON.parse(localStorage.BOOKmark)).includes(new UR
 					installmentsSel.options[installmentsSel.options.length] = new Option(txtOpt, valOpt);
 				});
 				} else {
-					alert(`installments method info error: ${response}`);
+					console.log(response);
 				}
-					console.log(response)
 			}
 		
 			//Create Token
@@ -532,9 +538,14 @@ if(Object.getOwnPropertyNames(JSON.parse(localStorage.BOOKmark)).includes(new UR
 					// form.submit();
 					formSubmit(response.id, response['date_created'], response['last_four_digits'])
 				}
-		
+				else{
+					
+					var MSGfail = 'Número de cartão inválido';
+					confirmForm(document.getElementById('cardNumber'), MSGfail);
+
 				console.log(status);
 				console.log(response);
+				}
 			};
 		
 			if(doc.querySelector('#payment')){
@@ -560,6 +571,25 @@ if(Object.getOwnPropertyNames(JSON.parse(localStorage.BOOKmark)).includes(new UR
 		}).catch(function(error) {
 			console.log("Error getting document:", error);
 		});
+
+
+		
+		var SLCTtoPay = document.querySelectorAll('.SLCTtoPay');
+		var METHODitem = document.querySelectorAll('#METHODitem');
+		for(var i = 0; i < SLCTtoPay.length; i++){
+		SLCTtoPay[i].addEventListener('click', function(){
+			document.querySelector('.SLCTtoPay.ACTIVEit').classList.toggle('ACTIVEit');
+			this.classList.toggle('ACTIVEit');
+
+	for(var i = 0; i < SLCTtoPay.length; i++){
+		if(METHODitem[i].classList.contains(`${this.getAttribute('for')}`)){
+			METHODitem[i].classList.remove('DISPLAYnone');}
+			else{
+			METHODitem[i].classList.add('DISPLAYnone');}
+
+	}});
+	
+	}
 
 	}
 
