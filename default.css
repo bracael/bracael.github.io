@@ -3836,9 +3836,6 @@ body[checkout] .CONTROLLpayment .PAYMENTmethod, body[checkout] .PAYMENTbox .PAYM
 body[checkout] .CONTROLLpayment .SPOTinst.DISPLAYnone {
     display: none;
 }
-body[checkout] .CONTROLLpayment .SPOTinst.DISPLAYnone SELECT, body[checkout] .CONTROLLpayment .SPOTinst.DISPLAYnone SELECT * {
-    display: block;
-}
 body[checkout] .CONTROLLpayment .SPOTinst, body[checkout] .PAYMENTbox .PAYMENTTinst {
     background: #ffffff;
     border-radius: 3px;
