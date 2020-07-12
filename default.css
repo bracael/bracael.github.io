@@ -3484,7 +3484,7 @@ body[checkout] .Blog P .MSGerror .CROSSicon, body[checkout] .Blog P .MSGerror SP
     padding: 16px 0;
     display: block;
     font-weight: 400;
-    color: #ccc;
+    color: #797979;
     font-size: 14px;
     box-shadow: inset 0 0 0 1px #dadce0;
     font-family: var(--font-poppins);
@@ -3570,7 +3570,12 @@ BUTTON.FORGOTpass, .FOOTERlogin.PAGEreset A, body[checkout] .Blog .SUBMITpayment
     background: #fff;
     z-index: 20;
 }
-
+body[checkout] .Blog P input.HAScontent {
+    box-shadow: inset 0 0 0 1px #9999 !important;
+}
+body[checkout] .Blog input.HAScontent, body[checkout] .Blog P input.HAScontent ~ label {
+    color: #797979 !IMPORTANT;
+}
 .GROUPinput .SHOWpass {
     position: absolute;
     top: 15px;
@@ -3838,14 +3843,14 @@ body[checkout] .CONTROLLpayment .PAYMENTmethod, body[checkout] .PAYMENTbox .PAYM
     font-family: var(--font-lato);
     position: relative;
 }
-body[checkout] .CONTROLLpayment .SPOTinst, body[checkout] .PAYMENTbox .PAYMENTTinst {
+body[checkout] .CONTROLLpayment .SPOTinst .CREDITcardNode .CREDITcardDate, body[checkout] .PAYMENTbox .PAYMENTTinst, body[checkout] .CONTROLLpayment .SPOTinst .DISPLAYdados {
     background: #ffffff;
     border-radius: 3px;
 }
 body[checkout] .CONTROLLpayment .SPOTinst.DISPLAYnone {
     display: none;
 }
-body[checkout] .CONTROLLpayment .SPOTinst {
+body[checkout] .CONTROLLpayment .SPOTinst .CREDITcardNode .CREDITcardDate, body[checkout] .CONTROLLpayment .SPOTinst .DISPLAYdados {
     padding: 16px;
 }
 body[checkout] .Blog label {
@@ -3931,7 +3936,7 @@ body[checkout] .CONTROLLpayment .SPOTinst .DISPLAYflex {
 }
 
 
-body[checkout] .PAYMENTmethod {
+body[checkout] .PAYMENTmethod .SPOTinst .METHODtoPay .CREDITcardNode {
     display: flex;
 }
 body[checkout] .PAYMENTmethod .CARDwrapper {
@@ -4285,6 +4290,52 @@ body[checkout] .PAYMENTmethod .SUCESSinst {
     height: 58px;
     display: block;
 }
+
+
+.SLCTpayTab {
+    margin-bottom: 22px;
+    display: flex;
+}
+.SLCTpayTab LI {
+    width: 100%;
+}
+.SLCTpayTab LI A {
+    font-family: var(--font-open);
+    padding: 8px 16px;
+    display: block;
+    background: #fff;
+    border-radius: 3px;
+    transition: color 0.08s linear, box-shadow 0.08s linear;
+    color: #929292;
+    line-height: 32px;
+    font-weight: 400;
+    font-size: 13px;
+}
+.SLCTpayTab LI A.SLCTtoPay.ACTIVEit {
+    box-shadow: inset 0 0 0 2px #639bd0;
+    color: #639bd0;
+}
+.SLCTpayTab LI:not(:last-child) {
+    margin-right: 22px;
+}
+.SLCTpayTab LI A I.CROSSicon {
+    margin-right: 12px;
+}
+.SLCTpayTab LI A I.CROSSicon, .SLCTpayTab LI A I.CROSSicon::after {
+    width: 32px;
+    height: 32px;
+    display: block;
+    float: left;
+}
+.SLCTpayTab LI A I.CROSSicon::after {
+    content: '';
+}
+
+
+body[checkout] .SPOTinst .METHODtoPay .DISPLAYnone {
+    display: none;
+}
+
 
 
 BODY[login] {
