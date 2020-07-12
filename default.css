@@ -1217,13 +1217,11 @@ FORM.SEARCHform .SEARCHit {
 
 
 
-body[checkout] FOOTER.FOOTERcross {
-    padding: 22px 0 0;
-}
+
 .FOOTERcross .FOOTERdiv {
     max-width: 1056px;
     margin: 0 auto;
-    padding: 0 0 16px;
+    padding: 16px 0;
     font-family: var(--font-lato);
     font-size: 11px;
     color: #a9a9a9;
