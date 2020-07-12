@@ -3842,6 +3842,9 @@ body[checkout] .CONTROLLpayment .SPOTinst, body[checkout] .PAYMENTbox .PAYMENTTi
     background: #ffffff;
     border-radius: 3px;
 }
+body[checkout] .CONTROLLpayment .SPOTinst.DISPLAYnone {
+    display: none;
+}
 body[checkout] .CONTROLLpayment .SPOTinst {
     padding: 16px;
 }
@@ -3855,25 +3858,6 @@ body[checkout] .Blog .SPOTinst .NEXTstep, body[checkout] .Blog .SPOTinst .SUBMIT
 body[checkout] .Blog .SUBMITpayment #payment {
     width: 100%;
     max-width: 220px;
-}
-body[checkout] .Blog P select {
-    width: 100%;
-    position: relative;
-    color: #777;
-    font-weight: 300;
-    background-color: #ececec;
-    padding: 16px 24px;
-    border-radius: 3px;
-    transition: all 375ms ease-in-out;
-    font-family: var(--font-lato);
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    text-align-last: center;
-    direction: ltr;
-    background-image: url(http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png);
-    background-repeat: no-repeat;
-    background-position: calc(100% - 18px);
 }
 body[checkout] .Blog P .MSGerror {
     white-space: nowrap;
