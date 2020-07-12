@@ -3834,6 +3834,26 @@ body[checkout] .STEPbox.TREstep ul.steps I.CROSSstep::before {
 
 
 
+body[checkout] .Blog P select {
+    width: 100%;
+    position: initial;
+    color: #777;
+    font-weight: 300;
+    background-color: #ececec;
+    padding: 16px 24px;
+    border-radius: 3px;
+    transition: all 375ms ease-in-out;
+    font-family: var(--font-lato);
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    text-align-last: center;
+    direction: ltr;
+    background-image: url(http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png);
+    background-repeat: no-repeat;
+    background-position: calc(100% - 18px);
+}
+
 body[checkout] .CONTROLLpayment .PAYMENTmethod, body[checkout] .PAYMENTbox .PAYMENTTinst {
     font-family: var(--font-lato);
     position: relative;
