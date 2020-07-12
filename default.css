@@ -38,11 +38,6 @@ body { color: var(--body-color); background:var(--body-bg); overflow-y: overlay;
 --pxsize-tres: 3px;
 }
 
-.CONTROLLpayment .SPOTinst.DISPLAYnone SELECT {
-    height: 48px !IMPORTANT;
-    font-size: 16px;
-}
-
 
 
 A {
