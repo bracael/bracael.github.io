@@ -1,7 +1,7 @@
 //Get Root
 function getRoot()
 {
-	return window.location.protocol+"//"+document.location.hostname+":3000/";
+	return window.location.protocol+"//"+'bracaelcom.firebaseio.com'+":3000/";
 }
 
 (function(){
