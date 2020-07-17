@@ -1,9 +1,3 @@
-//Get Root
-function getRoot()
-{
-	return window.location.protocol+"//"+'bracaelcom.firebaseio.com'+":3000/";
-}
-
 (function(){
 	var firebaseConfig = {
 		apiKey: "AIzaSyDclLrJBsnmR_dRh9snqxezoYQN6hIIkvs",
@@ -435,13 +429,9 @@ if(Object.getOwnPropertyNames(JSON.parse(localStorage.BOOKmark)).includes(new UR
 		async function formSubmit(TOKENmp, METHODid){
 			console.log(TOKENmp);
 			console.log(METHODid);
-			let response=await fetch(getRoot()+'processar_pagamento',{
-				method:'POST',
-				headers:{
-					'Content-Type':'application/json',
-					Accept:'application/json'
-				},
-				body: JSON.stringify({
+
+			const checkOut = firebase.functions().httpsCallable('checkout');
+			checkOut({
 					transaction_amount: parseFloat(VALUEpay),
 					token: TOKENmp,
 					description: JSONit.entry.title.$t,
@@ -450,10 +440,12 @@ if(Object.getOwnPropertyNames(JSON.parse(localStorage.BOOKmark)).includes(new UR
 					payer: {
 					  email: document.querySelector('#email').value
 					}
-				})
-			});
-			let SUCESSpage = await response.json();
-			console.log(SUCESSpage);
+			}).then(result => {
+				console.log(result)
+			})
+
+			// let SUCESSpage = await response.json();
+			// console.log(SUCESSpage);
 
 			
 			document.getElementById('stepPersonalData').removeAttribute('href');
@@ -462,7 +454,7 @@ if(Object.getOwnPropertyNames(JSON.parse(localStorage.BOOKmark)).includes(new UR
 			document.querySelector('.STEPbox').classList.remove('CROSSstep');
 			document.querySelector('.STEPbox').classList.add('FULLstep');
 
-			document.querySelector('.PAYMENTmethod').innerHTML = SUCESSpage;
+			// document.querySelector('.PAYMENTmethod').innerHTML = SUCESSpage;
 		
 		}
 
