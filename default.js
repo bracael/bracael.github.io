@@ -432,19 +432,20 @@ if(Object.getOwnPropertyNames(JSON.parse(localStorage.BOOKmark)).includes(new UR
 
 			let processPayment = await firebase.functions().httpsCallable('checkout');
 
-
 			processPayment({
-					transaction_amount: parseFloat(VALUEpay),
-					token: TOKENmp,
-					description: JSONit.entry.title.$t,
-					installments: 1,
-					payment_method_id: METHODid,
-					payer: {
-					  email: document.querySelector('#email').value
-					}
+				transaction_amount: parseFloat(VALUEpay),
+				token: TOKENmp,
+				description: JSONit.entry.title.$t,
+				installments: 1,
+				payment_method_id: METHODid,
+				payer: {
+					email: document.querySelector('#email').value
+				}
+			}).then(result=>{
+				console.log(result.data)
+			}).catch(err=>{
+				console.log(err)
 			});
-			let SUCESSpage = response;
-			console.log(SUCESSpage);
 
 
 
@@ -461,7 +462,7 @@ if(Object.getOwnPropertyNames(JSON.parse(localStorage.BOOKmark)).includes(new UR
 
 			(function(win, doc){
 
-					window.Mercadopago.setPublishableKey("TEST-5946973a-eb86-4cac-97f5-84ef934ed996");
+					window.Mercadopago.setPublishableKey("APP_USR-b202ae7d-c352-4526-ab29-5ca6bc441ead");
 					window.Mercadopago.getIdentificationTypes();
 		
 			function cardBin(event){
