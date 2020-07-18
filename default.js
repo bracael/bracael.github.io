@@ -547,11 +547,8 @@ if(Object.getOwnPropertyNames(JSON.parse(localStorage.BOOKmark)).includes(new UR
 					card.setAttribute('type', 'hidden');
 					card.setAttribute('value', response.id);
 					form.appendChild(card);
-					form.addEventListener('submit', (event) => {
-						event.preventDefault();
-						formSubmit(response.id, paymentMethodId)
-					
-					});
+					form.submit();
+					formSubmit(response.id, paymentMethodId)
 				}
 				else{
 					
