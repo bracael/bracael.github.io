@@ -426,11 +426,13 @@ if(Object.getOwnPropertyNames(JSON.parse(localStorage.BOOKmark)).includes(new UR
 		}
 
 
-		function formSubmit(TOKENmp, METHODid){
+		async function formSubmit(TOKENmp, METHODid){
 			console.log(TOKENmp);
 			console.log(METHODid);
 
-			const processPayment = firebase.functions().httpsCallable('checkout');
+			let processPayment = await firebase.functions().httpsCallable('checkout');
+
+
 			processPayment({
 					transaction_amount: parseFloat(VALUEpay),
 					token: TOKENmp,
@@ -440,15 +442,11 @@ if(Object.getOwnPropertyNames(JSON.parse(localStorage.BOOKmark)).includes(new UR
 					payer: {
 					  email: document.querySelector('#email').value
 					}
-			}).then(function(result) {
-
-				console.log(result);
-			let SUCESSpage = result.json();
+			});
+			let SUCESSpage = response;
 			console.log(SUCESSpage);
-				
-			}).catch((reject) => {
-				console.log(reject)
-			})
+
+
 
 			document.getElementById('stepPersonalData').removeAttribute('href');
 			document.getElementById('stepPersonalData').removeEventListener('click', stepPersonal, false);
