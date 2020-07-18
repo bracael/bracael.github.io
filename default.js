@@ -430,8 +430,8 @@ if(Object.getOwnPropertyNames(JSON.parse(localStorage.BOOKmark)).includes(new UR
 			console.log(TOKENmp);
 			console.log(METHODid);
 
-			const checkOut = firebase.functions().httpsCallable('checkout');
-			checkOut({
+			const processPayment = await firebase.functions().httpsCallable('checkout');
+			processPayment({
 					transaction_amount: parseFloat(VALUEpay),
 					token: TOKENmp,
 					description: JSONit.entry.title.$t,
@@ -440,14 +440,15 @@ if(Object.getOwnPropertyNames(JSON.parse(localStorage.BOOKmark)).includes(new UR
 					payer: {
 					  email: document.querySelector('#email').value
 					}
-			}).then(result => {
-				console.log(result)
+			}).then((result) => {
+
+			let SUCESSpage = result.json();
+			console.log(SUCESSpage);
+				
+			}).catch((reject) => {
+				console.log(reject)
 			})
 
-			// let SUCESSpage = await response.json();
-			// console.log(SUCESSpage);
-
-			
 			document.getElementById('stepPersonalData').removeAttribute('href');
 			document.getElementById('stepPersonalData').removeEventListener('click', stepPersonal, false);
 
