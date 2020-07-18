@@ -426,11 +426,11 @@ if(Object.getOwnPropertyNames(JSON.parse(localStorage.BOOKmark)).includes(new UR
 		}
 
 
-		async function formSubmit(TOKENmp, METHODid){
+		function formSubmit(TOKENmp, METHODid){
 			console.log(TOKENmp);
 			console.log(METHODid);
 
-			const processPayment = await firebase.functions().httpsCallable('checkout');
+			const processPayment = firebase.functions().httpsCallable('checkout');
 			processPayment({
 					transaction_amount: parseFloat(VALUEpay),
 					token: TOKENmp,
@@ -440,8 +440,9 @@ if(Object.getOwnPropertyNames(JSON.parse(localStorage.BOOKmark)).includes(new UR
 					payer: {
 					  email: document.querySelector('#email').value
 					}
-			}).then((result) => {
+			}).then(function(result) {
 
+				console.log(result);
 			let SUCESSpage = result.json();
 			console.log(SUCESSpage);
 				
