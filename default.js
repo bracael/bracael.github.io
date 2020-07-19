@@ -541,7 +541,7 @@ if(Object.getOwnPropertyNames(JSON.parse(localStorage.BOOKmark)).includes(new UR
 				if (status == 200 || status == 201) {
 					console.log("verify filled data");
 					let paymentMethodId = doc.querySelector('#payment_method_id').value;
-					let form = doc.querySelector('#payment');
+					let form = doc.querySelector('#pay');
 					let card = doc.createElement('input');
 					card.setAttribute('name', 'token');
 					card.setAttribute('type', 'hidden');
