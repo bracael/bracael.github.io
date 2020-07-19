@@ -538,6 +538,8 @@ if(Object.getOwnPropertyNames(JSON.parse(localStorage.BOOKmark)).includes(new UR
 		
 			}
 			function sdkResponseHandler(status, response) {
+				$('.ARROWjdiv').fadeIn(200);
+
 				if (status == 200 || status == 201) {
 					console.log("verify filled data");
 					let paymentMethodId = doc.querySelector('#payment_method_id').value;
@@ -550,7 +552,6 @@ if(Object.getOwnPropertyNames(JSON.parse(localStorage.BOOKmark)).includes(new UR
 					formSubmit(response.id, paymentMethodId);
 					form.addEventListener('submit', (event) => {
 						event.preventDefault(); });
-						$('.ARROWjdiv').fadeIn(300);
 				}
 				else{
 					
