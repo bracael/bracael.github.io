@@ -4813,7 +4813,7 @@ div#FEEDback {
 
 
 
-
+/* //MENSAGEM DE ERRO DO SERVIDOR ---- NO CONEXION */
 DIV.BULBmsg {
     font-family: var(--font-poppins);
     position: fixed;
@@ -4881,4 +4881,52 @@ DIV.BULBmsg .INSTconex .BULBLEit .CONEXinst::after {
     color: #fff;
     display: inline-block;
     font-weight: 100;
+}
+
+/* //LOAD PAGE */
+.ARROWjdiv {
+    z-index: 99999;
+    position: fixed;
+    top: 0;
+    right: -6px;
+    bottom: 0;
+    left: 0;
+    display: none;
+    overflow: hidden;
+    outline: 0;
+}
+.JDIVinst, .JDIVinst::after {
+    width: 60px;
+    height: 60px;
+    display: block;
+}
+.JDIVinst {
+    z-index: 1;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: arrow 2s linear infinite;
+}
+.ARROWjdiv::after {
+    content: '';
+    background: #ffffff;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.JDIVinst::after {
+    content: '';
+}
+@keyframes arrow{
+0%, 100% {
+    transform: rotate(0deg);
+}
+50% {
+    transform: rotate(360deg);
+}
 }
