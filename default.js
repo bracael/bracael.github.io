@@ -443,8 +443,10 @@ if(Object.getOwnPropertyNames(JSON.parse(localStorage.BOOKmark)).includes(new UR
 				}
 			}).then(result=>{
 				console.log(result.data)
+				$('.ARROWjdiv').fadeOut(200);
 			}).catch(err=>{
 				console.log(err)
+				$('.ARROWjdiv').fadeOut(200);
 			});
 
 
