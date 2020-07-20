@@ -442,29 +442,27 @@ if(Object.getOwnPropertyNames(JSON.parse(localStorage.BOOKmark)).includes(new UR
 					email: document.querySelector('#email').value
 				}
 			}).then(result=>{
-				console.log(result.data)
+				console.log(result)
 				$('.ARROWjdiv').fadeOut(200);
+
+				document.querySelector('.PAYMENTmethod').innerHTML = result.data.message;
+
+				document.getElementById('stepPersonalData').removeAttribute('href');
+				document.getElementById('stepPersonalData').removeEventListener('click', stepPersonal, false);
+	
+				document.querySelector('.STEPbox').classList.remove('CROSSstep');
+				document.querySelector('.STEPbox').classList.add('FULLstep');
 			}).catch(err=>{
 				console.log(err)
 				$('.ARROWjdiv').fadeOut(200);
 			});
-
-
-
-			document.getElementById('stepPersonalData').removeAttribute('href');
-			document.getElementById('stepPersonalData').removeEventListener('click', stepPersonal, false);
-
-			document.querySelector('.STEPbox').classList.remove('CROSSstep');
-			document.querySelector('.STEPbox').classList.add('FULLstep');
-
-			// document.querySelector('.PAYMENTmethod').innerHTML = SUCESSpage;
 		
 		}
 
 
 			(function(win, doc){
 
-					window.Mercadopago.setPublishableKey("APP_USR-b202ae7d-c352-4526-ab29-5ca6bc441ead");
+					window.Mercadopago.setPublishableKey("TEST-5946973a-eb86-4cac-97f5-84ef934ed996");
 					window.Mercadopago.getIdentificationTypes();
 		
 			function cardBin(event){
