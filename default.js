@@ -538,9 +538,9 @@ if(Object.getOwnPropertyNames(JSON.parse(localStorage.BOOKmark)).includes(new UR
 		
 			}
 			function sdkResponseHandler(status, response) {
-				$('.ARROWjdiv').fadeIn(200);
-
 				if (status == 200 || status == 201) {
+					$('.ARROWjdiv').fadeIn(200);
+
 					console.log("verify filled data");
 					let paymentMethodId = doc.querySelector('#payment_method_id').value;
 					let form = doc.querySelector('#pay');
