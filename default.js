@@ -430,33 +430,40 @@ if(Object.getOwnPropertyNames(JSON.parse(localStorage.BOOKmark)).includes(new UR
 			console.log(TOKENmp);
 			console.log(METHODid);
 
-			let processPayment = await firebase.functions().httpsCallable('checkout');
-
-			processPayment({
-				transaction_amount: parseFloat(VALUEpay),
-				token: TOKENmp,
-				description: JSONit.entry.title.$t,
-				installments: 1,
-				payment_method_id: METHODid,
-				payer: {
-					email: document.querySelector('#email').value
-				}
-			}).then(result=>{
-				console.log(result)
+			await fetch('https://us-central1-bracaelcom.cloudfunctions.net/checkout', {
+				method:'POST',
+				headers:{
+					'Content-Type':'application/json',
+					Accept:'application/json'
+				},
+				body: JSON.stringify({
+					transaction_amount: parseFloat(VALUEpay),
+					token: TOKENmp,
+					description: JSONit.entry.title.$t,
+					installments: 1,
+					payment_method_id: METHODid,
+					payer: {
+					  email: document.querySelector('#email').value
+					}
+				})
+			}).then((response) => response.json())
+			.then((responseData) => {
 				$('.ARROWjdiv').fadeOut(200);
 
-				document.querySelector('.PAYMENTmethod').innerHTML = result.data.message;
+				console.log(responseData)
+				document.querySelector('.PAYMENTmethod').innerHTML = responseData;
 
 				document.getElementById('stepPersonalData').removeAttribute('href');
 				document.getElementById('stepPersonalData').removeEventListener('click', stepPersonal, false);
 	
 				document.querySelector('.STEPbox').classList.remove('CROSSstep');
 				document.querySelector('.STEPbox').classList.add('FULLstep');
-			}).catch(err=>{
-				console.log(err)
-				$('.ARROWjdiv').fadeOut(200);
-			});
-		
+
+			  }).catch((error) => {
+				console.log(error);
+				//res.send(error);
+			  });
+
 		}
 
 
