@@ -234,9 +234,8 @@ if(Object.getOwnPropertyNames(JSON.parse(localStorage.BOOKmark)).includes(new UR
 					</div>
 				 </div>
 				 <div class="SPOTinst DISPLAYnone">
-					<div class="SLCTpayTab">
+					<div class="SLCTpayTab DISPLAYnone">
 					   <li><a href="javascript:void(0);" class="SLCTtoPay ACTIVEit" for="PAYMENTcrd"><i class="CROSSicon CARDicon"></i>Cartão de crédito</a></li>
-					   <li><a href="javascript:void(0);" class="SLCTtoPay" for="PAYMENTblt"><i class="CROSSicon CAIXAlot"></i>Paypal</a></li>
 					</div>
 					<div class="METHODtoPay">
 					   <div class="PAYMENTcrd" id="METHODitem">
@@ -302,8 +301,7 @@ if(Object.getOwnPropertyNames(JSON.parse(localStorage.BOOKmark)).includes(new UR
 						  </form>
 					   </div>
 					   <div class="PAYMENTblt DISPLAYnone" id="METHODitem">
-						  <p>Um boleto bancário é um documento largamente utilizado no Brasil como instrumento de pagamento de um produto ou serviço prestado. Através do boleto, seu emissor pode receber do pagador o valor referente àquele pagamento</p>
-						  <div id="paypal-button-container"></div>
+						  <p>novo methodo de pagamento</p>
 					   </div>
 					</div>
 				 </div>
@@ -324,43 +322,6 @@ if(Object.getOwnPropertyNames(JSON.parse(localStorage.BOOKmark)).includes(new UR
 	 </div>`;
 		document.querySelector('.Blog').innerHTML = CONTROLLpay;
 
-		  paypal.Buttons({
-		
-            style: {
-				layout: 'horizontal',
-				fundingicons: 'true'
-            },
-
-            // Set up the transaction
-            createOrder: function(data, actions) {
-                return actions.order.create({
-                    purchase_units: [{
-                        amount: {
-                            value: 0.1
-                        }
-                    }]
-                });
-            },
-
-            // Finalize the transaction
-            onApprove: function(data, actions) {
-
-                return actions.order.capture().then(function(details) {
-					$('.ARROWjdiv').fadeIn(200);
-
-					formSubmit({
-						method: 'paypal',
-						email: details.payer.email_address,
-						name: `${details.payer.name.given_name} ${details.payer.name.surname}`,
-						temp: details.update_time,
-						id: details.id
-					})
-					
-                });
-            }
-
-
-        }).render('#paypal-button-container');
 
 		if(document.body.contains(document.querySelector('.INPUTclass'))){
 			const INPUTclass = document.querySelectorAll('.INPUTclass');
@@ -617,6 +578,13 @@ if(Object.getOwnPropertyNames(JSON.parse(localStorage.BOOKmark)).includes(new UR
 						"amount": parseFloat(VALUEpay)
 					},getInstallments);
 				}
+				else {
+					if(document.querySelector('.PAYMENDcard').classList.length >= 2){
+						document.querySelector('.PAYMENDcard').setAttribute('class', 'PAYMENDcard');
+						document.querySelector('.CARDbrand').setAttribute('class', 'CARDbrand');
+						doc.querySelector('#payment_method_id').value = null;
+						document.getElementById('installments').innerHTML = '<option value="Parcelas">Parcelas</option>'
+					}}
 			}
 			if(doc.querySelector('#cardNumber')){
 				let cardNumber = doc.querySelector('#cardNumber');
@@ -690,12 +658,15 @@ if(Object.getOwnPropertyNames(JSON.parse(localStorage.BOOKmark)).includes(new UR
 					card.setAttribute('value', response.id);
 					form.appendChild(card);
 
+					let SLCTInstallments = document.querySelector('#installments');
+					const VALUEinstallments = SLCTInstallments.options[SLCTInstallments.options.selectedIndex].innerText;
+
 					formSubmit({
-						method: 'credit_card',
+						postid: DEMOid,
 						transaction_amount: parseFloat(VALUEpay),
 						token: response.id,
 						description: JSONit.entry.title.$t,
-						installments: 1,
+						installments: Number(SLCTInstallments.options[SLCTInstallments.options.selectedIndex].value),
 						payment_method_id: paymentMethodId,
 						payer: {
 						  email: document.querySelector('#email').value
@@ -1322,10 +1293,10 @@ var TYPEbtn = document.getElementById("passwordInput").getAttribute("type");
 
 if(TYPEbtn == "password"){
 	PASSit.parentNode.innerHTML = OCULTApass;
-	INPUTpass.setAttribute("type", "text");}
+	document.getElementById("passwordInput").setAttribute("type", "text");}
 if(TYPEbtn == "text"){
 	PASSit.parentNode.innerHTML = ACTIVEpass;
-	INPUTpass.setAttribute("type", "password");}
+	document.getElementById("passwordInput").setAttribute("type", "password");}
 });
 
 var LOGINbtn = '<a href="javascript:void(0);" class="LOGout cPANEL">Sair</a>';
@@ -1412,7 +1383,6 @@ if(window.location.href.indexOf('/p/session.html') > -1){
 	var url = new URL(window.location.href);
 	var DEMOid = url.searchParams.get("id");
 
-
 	if (DEMOid != null) {
 
 const db = firebase.firestore();
@@ -1424,9 +1394,6 @@ db.collection("todos").doc(DEMOid).get().then(function(doc) {
 
 	document.querySelector('.Blog').innerHTML = content;
 	focusOutInput();
-
-
-console.log(doc.data().email)
 
 		document.querySelector('.FORMsignup').addEventListener('submit', (event) => {
 			event.preventDefault(); });
@@ -1462,8 +1429,6 @@ console.log(doc.data().email)
 					console.log('Erro: erroCreateUser');}
 			});
 
-
-		console.log("Document data:", doc.data());
 	} else {
 		// doc.data() will be undefined in this case
 		window.location.replace("/bracael.com/");
