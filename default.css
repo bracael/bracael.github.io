@@ -767,7 +767,7 @@ HEADER.HEADmenu {
     top: 0;
     left: 0;
     height: 56px;
-    z-index: 99;
+    z-index: 106;
 }
 
 
@@ -1724,15 +1724,26 @@ DIV.POSTbox SECTION .POSTimg::before {
     z-index: 9;
 }
 DIV.POSTbox .POSTup:hover .POSTimg::before { opacity: 1; }
+DIV.POSTbox SECTION .POSTbttm {
+    width: calc(100% - 32px);
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    padding: 0 16px 12px;
+}
+DIV.POSTbox SECTION SPAN.TEXTsale {
+    font-family: var(--font-poppins);
+    font-size: 14px;
+    color: #fff;
+    line-height: 26px;
+    opacity: 0.7;
+}
 DIV.POSTbox SECTION .POSTspot {
     cursor: pointer;
     width: 26px;
     height: 26px;
-    display: block;
-    position: absolute;
     z-index: 11;
-    bottom: 16px;
-    right: 16px;
+    margin-left: auto;
 }
 DIV.POSTbox SECTION .POSTspot:hover I.BTNfav::before, DIV.POSTbox SECTION .POSTspot:hover I.BTNdel::before {
     opacity: 0.5;
@@ -4053,6 +4064,11 @@ SPAN.MMcard::after {
     height: 54px;
     display: flex;
 }
+.CARDbrand.Elo {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+}
 .CARDwrapper .PAYMENDcard .CARDcol4 .BLACKtarget {
     height: 42px;
     background: rgba(0,0,0,.85);
@@ -4130,6 +4146,9 @@ SPAN.MMcard::after {
 }
 .CARDwrapper .PAYMENDcard.Visa {
     background-color: #062194;
+}
+.CARDwrapper .PAYMENDcard.Elo {
+    background-color: #1a3b73;
 }
 
 .CARDwrapper .PAYMENDcard::after {
@@ -4243,7 +4262,7 @@ body[checkout] .PAYMENTmethod .SUCESSinst {
     background: #ffffff;
     padding: 22px;
     border-radius: 3px;
-    margin: 62px 0 0;
+    margin: 62px 0 16px;
     clear: both;
 }
 .PAYMENTmethod .SUCESSinst .SUCESShead {
@@ -4903,10 +4922,10 @@ DIV.BULBmsg .INSTconex .BULBLEit .CONEXinst::after {
 .JDIVinst {
     z-index: 1;
     position: absolute;
-    top: 30%;
-    left: 50%;
+    top: calc(50% - 30px);
+    left: calc(50% - 30px);
     transform: translate(-50%, -50%);
-    animation: arrow 2s linear infinite;
+    animation: arrow 1.2s steps(12) infinite;
 }
 .ARROWjdiv::after {
     content: '';
@@ -4923,10 +4942,18 @@ DIV.BULBmsg .INSTconex .BULBLEit .CONEXinst::after {
     content: '';
 }
 @keyframes arrow{
-0%, 100% {
+0% {
+	-webkit-transform: rotate(0deg);
     transform: rotate(0deg);
 }
-50% {
+100% {
+	-webkit-transform: rotate(360deg);
     transform: rotate(360deg);
 }
+}
+
+
+
+.SLCTpayTab.DISPLAYnone {
+    display: none;
 }
