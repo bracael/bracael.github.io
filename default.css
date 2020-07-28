@@ -943,7 +943,6 @@ DIV.HEADERnav {
     max-width: 1056px;
     font-family: var(--font-poppins);
     margin: 0 auto;
-    overflow: hidden;
     width: 100%;
     display: -ms-flexbox;
     display: flex;
@@ -1021,19 +1020,31 @@ DIV.HEADERnav LI A.NOTIFYit I.ALERTon {
     opacity: 0;
 }}
 DIV.HEADERnav LI A.cPANEL {
+    height: 24px;
     background: transparent;
     box-shadow: inset 0 0 0 2px #ffffff;
     color: #ffffff !important;
     font-weight: 100;
-    padding: 8px 16px !important;
     letter-spacing: 1px;
     font-family: var(--font-lato);
-    line-height: 14px;
+    line-height: 24px;
     margin: 4px 10px;
+    transition: all 0.5s;
+    padding: 3px;
 }
-DIV.HEADERnav LI A.cPANEL:hover {
-    color: #000000 !important;
-    background: #ffffff !important;
+DIV.HEADERnav LI A.cPANEL.USERon, DIV.HEADERnav LI A.cPANEL.DISPLAYload {
+    width: 24px;
+    border-radius: 50%;
+}
+DIV.HEADERnav LI A.cPANEL.USERoff {
+padding: 3px 16px;
+}
+
+DIV.HEADERnav LI A.cPANEL IMG, DIV.HEADERnav LI A.cPANEL.DISPLAYload IMG {
+    border-radius: 50%;
+}
+DIV.HEADERnav LI A.cPANEL.DISPLAYload IMG {
+    animation: arrow 1.2s steps(90) infinite;
 }
 @media screen and (max-width: 848px) {
 UL.HEADERleft, .ITEMdel { display: none; }}
@@ -1771,6 +1782,7 @@ DIV.POSTinst.ACTIVElist .POSTup:hover I.BTNfav::before {
 DIV.POSTbox SECTION IMG {
     width: 100%;
     display: block;
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
 }
 DIV.POSTbox SECTION.POSTup:before {
     content: "";
@@ -4591,17 +4603,21 @@ SECTION.SIDEnav H3.ACTIVEit .OPTIONelmnt {
     color: #aaa;
 }
 
-
-.FRONTend {
+.FRONTend, .FRONTpanel {
     bottom: 0;
     position: fixed;
-    left: calc(-100vw + 406px);
     right: 0;
     top: 0;
     z-index: 2;
     background: transparent;
     width: 100vw;
     height: 100vh;
+}
+.FRONTend {
+    left: calc(-100vw + 406px);
+}
+.FRONTpanel {
+    left: 0;
 }
 
 .EMPTYmsg {
@@ -4953,7 +4969,220 @@ DIV.BULBmsg .INSTconex .BULBLEit .CONEXinst::after {
 }
 
 
-
 .SLCTpayTab.DISPLAYnone {
     display: none;
+}
+
+.ACCOUNTmain {
+    padding: 0 16px;
+}
+.ACCOUNTmain .ACCOUNTinst {
+    display: flex;
+    box-shadow: 0 0 0 1px #ececec;
+    background: #fff;
+    overflow: hidden;
+    border-radius: 3px;
+}
+#ITEMflex.MENUset {
+    max-width: 270px;
+    border-right: 1px solid #ececec;
+    font-family: var(--font-lato);
+    font-weight: 100;
+}
+#ITEMflex {
+    width: 100%;
+}
+#ITEMflex.OPTIONSset {
+    font-family: var(--font-open);
+    font-size: 14px;
+    font-weight: 100;
+    color: #808080;
+}
+#ITEMflex.MENUset UL {
+    padding: 10px 0;
+}
+#ITEMflex.MENUset UL LI A {
+    color: #4a4949;
+    border-left: 3px solid transparent;
+    display: block;
+    font-size: 14px;
+    height: 100%;
+    line-height: 24px;
+    padding: 8px 16px 8px 30px;
+    width: calc(100% - 49px);
+}
+#ITEMflex.MENUset UL LI A.SETitem.ACTIVEit {
+    border-color: #a5a5a5;
+    background: #fdfdfd;
+}
+#ITEMflex.MENUset UL LI A:hover {
+    background: #f5f5f5;
+    border-left: 3px solid #d6d5d5;
+}
+
+#ITEMflex.OPTIONSset .OPTINSinst #item {
+    padding: 32px 16px;
+    display: table;
+}
+/* 
+#ITEMflex.OPTIONSset .OPTINSinst .item[id] {
+    display: none;
+}
+#ITEMflex.OPTIONSset .OPTINSinst .item[id]:target {
+    display: block;
+} */
+
+#ITEMflex.OPTIONSset .OPTINSinst #item.DISPLAYnone {
+    display: none !IMPORTANT;
+}
+
+.ACCOUNTspot {
+    display: flex;
+}
+.ACCOUNTspot:not(:last-child) {
+    margin-bottom: 18px;
+}
+ASIDE.ACCBOXinst {
+    flex: 0 0 130px;
+    margin-top: 10px;
+    padding-left: 32px;
+    padding-right: 32px;
+    text-align: right;
+}
+ASIDE.ACCBOXinst label {
+    color: #262626;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 18px;
+    font-family: var(--font-poppins);
+}
+.INPUTbox INPUT {
+    border: 1px solid #dedede;
+    font-size: 16px;
+    height: 32px;
+    padding: 0 10px;
+    border-radius: 3px;
+    font-family: var(--font-poppins);
+}
+.ADDtext P {
+    margin-top: 12px;
+    font-size: 12px;
+}
+.INPUTbox BUTTON {
+    color: #fff;
+    background-color: #0095f6;
+    border-radius: 4px;
+    display: block;
+    font-weight: 100;
+    padding: 6px 12px;
+    text-align: center;
+    font-family: var(--font-open);
+    letter-spacing: 0.6px;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+
+#ITEMflex.OPTIONSset .OPTINSinst #item.r3, #ITEMflex.OPTIONSset .OPTINSinst #item.r4 {
+    display: block;
+    padding: 32px;
+}
+DIV.PRODUCThere {
+    width: 100%;
+    max-width: 753px;
+    display: flex;
+}
+DIV.PRODUCThere:not(:last-child) {
+    margin-bottom: 24px;
+}
+DIV.PRODUCThere SECTION.POSTup {
+}
+DIV.PRODUCThere SECTION.POSTup .POSTimg {
+    height: 160px;
+}
+DIV.PRODUCThere SECTION.POSTup .POSTimg IMG.THUMBnail {
+    height: 100%;
+    max-width: 301.531px;
+    border-radius: 3px;
+}
+DIV.PRODUCThere SECTION.POSTbt {
+    margin-left: 18px;
+    width: 100%;
+}
+DIV.PRODUCThere SECTION.POSTbt .POSTBOXbt {
+    margin: 24px 0 0;
+    text-align: right;
+}
+DIV.PRODUCThere SECTION.POSTbt H3.POSTtitle {
+    padding: 0 0 8px;
+}
+DIV.PRODUCThere SECTION.POSTbt .POSTBOXbt .GOTOdownload {
+    -webkit-box-pack: center;
+    justify-content: center;
+    text-align: center;
+    white-space: nowrap;
+    width: 100%;
+    max-width: 180px;
+    padding: 13px 0;
+    display: inline-flex;
+    line-height: 1.5;
+    vertical-align: top;
+    color: rgb(255, 255, 255);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    cursor: pointer;
+    border-radius: 3px;
+    background: linear-gradient(117deg, rgb(254 80 80), rgb(152 12 12));
+}
+
+.STARTsess {
+    position: absolute;
+    z-index: 99;
+    background: #fff;
+    border-radius: 6px;
+    width: 150px;
+    display: none;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-box-shadow: 0 2px 7px rgba(0, 0, 0, 0.52);
+    -moz-box-shadow: 0 2px 7px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 7px rgba(0, 0, 0, 0.2);
+    right: 0;
+    top: 44px;
+}
+DIV.HEADERnav LI .STARTsess.ACTIVEit {
+    display: inline-table;
+}
+.STARTsess .MENUuser A:not(:last-child) {
+    border-bottom: 1px solid #eaeaea;
+}
+.STARTsess .MENUuser A {
+    color: #262626;
+    font-weight: 500;
+    font-family: var(--font-open);
+    border-radius: 0;
+}
+.STARTsess::after {
+    content: "";
+    float: left;
+    position: absolute;
+    top: -7px;
+    right: 18px;
+    width: 0;
+    height: 0;
+    border-color: #fff transparent;
+    border-style: solid;
+    border-width: 0 7px 7px 7px;
+}
+.STARTsess .MENUuser A:hover {
+    color: #262626;
+    background: #fbfbfb;
+}
+.STARTsess .MENUuser A:first-child {
+    border-radius: 6px 6px 0 0;
+}
+.STARTsess .MENUuser A:last-child {
+    border-radius: 0 0 6px 6px;
 }
