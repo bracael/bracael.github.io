@@ -1220,7 +1220,7 @@ BLOGinst.insertAdjacentHTML('beforeend', CONTENTpage);}}
 
 var ACTIVEpass = '<svg class="CROSSicon PASSit" fill="currentColor" focusable="false" width="24px" height="24px" viewBox="0 0 24 24" xmlns="https://www.w3.org/2000/svg"><path d="M12,7c-2.48,0-4.5,2.02-4.5,4.5S9.52,16,12,16s4.5-2.02,4.5-4.5S14.48,7,12,7z M12,14.2c-1.49,0-2.7-1.21-2.7-2.7 c0-1.49,1.21-2.7,2.7-2.7s2.7,1.21,2.7,2.7C14.7,12.99,13.49,14.2,12,14.2z"></path><path d="M12,4C7,4,2.73,7.11,1,11.5C2.73,15.89,7,19,12,19s9.27-3.11,11-7.5C21.27,7.11,17,4,12,4z M12,17 c-3.79,0-7.17-2.13-8.82-5.5C4.83,8.13,8.21,6,12,6s7.17,2.13,8.82,5.5C19.17,14.87,15.79,17,12,17z"></path></svg>';
 var OCULTApass = '<svg class="CROSSicon PASSit" fill="currentColor" focusable="false" width="24px" height="24px" viewBox="0 0 24 24" xmlns="https://www.w3.org/2000/svg"><path d="M10.58,7.25l1.56,1.56c1.38,0.07,2.47,1.17,2.54,2.54l1.56,1.56C16.4,12.47,16.5,12,16.5,11.5C16.5,9.02,14.48,7,12,7 C11.5,7,11.03,7.1,10.58,7.25z"></path><path d="M12,6c3.79,0,7.17,2.13,8.82,5.5c-0.64,1.32-1.56,2.44-2.66,3.33l1.42,1.42c1.51-1.26,2.7-2.89,3.43-4.74 C21.27,7.11,17,4,12,4c-1.4,0-2.73,0.25-3.98,0.7L9.63,6.3C10.4,6.12,11.19,6,12,6z"></path><path d="M16.43,15.93l-1.25-1.25l-1.27-1.27l-3.82-3.82L8.82,8.32L7.57,7.07L6.09,5.59L3.31,2.81L1.89,4.22l2.53,2.53 C2.92,8.02,1.73,9.64,1,11.5C2.73,15.89,7,19,12,19c1.4,0,2.73-0.25,3.98-0.7l4.3,4.3l1.41-1.41l-3.78-3.78L16.43,15.93z M11.86,14.19c-1.38-0.07-2.47-1.17-2.54-2.54L11.86,14.19z M12,17c-3.79,0-7.17-2.13-8.82-5.5c0.64-1.32,1.56-2.44,2.66-3.33 l1.91,1.91C7.6,10.53,7.5,11,7.5,11.5c0,2.48,2.02,4.5,4.5,4.5c0.5,0,0.97-0.1,1.42-0.25l0.95,0.95C13.6,16.88,12.81,17,12,17z"></path></svg>';
-var loginUser = '<div class="LOGINspot"><div class="LOGINSPOTinst"><div class="COMPANYlogin"><section class="COMPANYit"><!-- Bracael --></section><span>Use uma conta Bracael.</span></div><form class="FORMlogin"><div class="GROUPinput"><input type="email" id="emailInput" class="INPUTclass" tabindex="1" autocomplete="off" autofocus="" autocapitalize="off" autocorrect="off"></input><label>E-mail</label></div><div class="GROUPinput"><input type="password" id="passwordInput" class="INPUTclass" tabindex="2" autocomplete="off"></input><div class="SHOWpass">' +ACTIVEpass+ '</div><label>Senha</label></div><div class="FOOTERlogin"><button class="BTN FORGOTpass" type="button">Esqueceu a sua senha?</button><button class="LOGin" tabindex="3">Fazer login</button></div></form></div></div>';
+var loginUser = '<div class="LOGINspot"><div class="LOGINSPOTinst"><div class="COMPANYlogin"><section class="COMPANYit"><!-- Bracael --></section><span>Use uma conta Bracael.</span></div><form class="FORMlogin"  autocomplete="off"><div class="GROUPinput"><input type="email" id="emailInput" class="INPUTclass" tabindex="1" autocomplete="off" autofocus="" autocapitalize="off" autocorrect="off"></input><label>E-mail</label></div><div class="GROUPinput"><input type="password" id="passwordInput" class="INPUTclass" tabindex="2" autocomplete="off"></input><div class="SHOWpass">' +ACTIVEpass+ '</div><label>Senha</label></div><div class="FOOTERlogin"><button class="BTN FORGOTpass" type="button">Esqueceu a sua senha?</button><button class="LOGin" tabindex="3">Fazer login</button></div></form></div></div>';
 var contentHTML = document.querySelector('.Blog');
 
 var fireBase = firebase.auth();
@@ -1233,14 +1233,44 @@ if(CACHEurl[CACHEurl.length-2] !== undefined){
 	window.location.replace(CACHEurl[CACHEurl.length-2]);}
 	else{
 	window.location.replace("http://www.bracael.com/");}}
-	document.querySelector('.cPANEL').parentNode.innerHTML = '<a href="javascript:void(0);" class="LOGout cPANEL">Sair</a>';
+
+	document.querySelector('.cPANEL').parentNode.innerHTML = `<a href="javascript:void(0)" class="cPANEL USERon"><img src="data:image/svg+xml;base64,PHN2ZyBpZD0iQWdydXBhcl8xIiBkYXRhLW5hbWU9IkFncnVwYXIgMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMjUwIiBoZWlnaHQ9IjI1MCIgdmlld0JveD0iMCAwIDI1MCAyNTAiPgogIDxkZWZzPgogICAgPHN0eWxlPgogICAgICAuY2xzLTEgewogICAgICAgIGZpbGw6ICNjNWM1YzU7CiAgICAgIH0KCiAgICAgIC5jbHMtMiwgLmNscy0zIHsKICAgICAgICBmaWxsOiAjZmZmOwogICAgICB9CgogICAgICAuY2xzLTMgewogICAgICAgIGZpbGwtcnVsZTogZXZlbm9kZDsKICAgICAgfQogICAgPC9zdHlsZT4KICA8L2RlZnM+CiAgPHJlY3QgaWQ9IlJldMOibmd1bG9fMSIgZGF0YS1uYW1lPSJSZXTDom5ndWxvIDEiIGNsYXNzPSJjbHMtMSIgd2lkdGg9IjI1MCIgaGVpZ2h0PSIyNTAiLz4KICA8Y2lyY2xlIGlkPSJFbGlwc2VfMSIgZGF0YS1uYW1lPSJFbGlwc2UgMSIgY2xhc3M9ImNscy0yIiBjeD0iMTI1IiBjeT0iMTAzIiByPSI1NyIvPgogIDxwYXRoIGlkPSJGb3JtYV8xIiBkYXRhLW5hbWU9IkZvcm1hIDEiIGNsYXNzPSJjbHMtMyIgZD0iTTMxLDI1MHM0LjE1Mi03Ny4yMzIsNjktOTljMS42NjQtLjA0NCw0Ny40MDYtMC4wMDcsNTAsMCwzNy41MTEsOC4yODUsNzAuMTUxLDYxLjM3NSw2OSw5OUMyMTUuNzY5LDI0OS45MDUsMzEsMjUwLDMxLDI1MFoiLz4KPC9zdmc+Cg==" width="24" height="24"></a>
+	<div class="STARTsess">
+	<div class="MENUuser">
+	  <a href="/bracael.com/p/account.html">Painel</a>
+	  <a href="javascript:void(0)" class="LOGout">Sair</a>
+	</div>
+	</div>`;
+
+
+//OPEN MENU ACCOUNT
+document.querySelector('.cPANEL.USERon').addEventListener('click', function(){
+	this.parentNode.querySelector('.STARTsess').classList.add('ACTIVEit');
+
+	var FRONTpanel = '<div class="FRONTpanel"></div>';
+
+	var parser = new DOMParser();
+	var FRONTpanel = parser.parseFromString(FRONTpanel, 'text/html');
+
+	this.insertAdjacentElement("beforebegin", FRONTpanel.querySelector('.FRONTpanel'));
+
+	document.querySelector('.FRONTpanel').addEventListener('click', function(){
+		document.querySelector('.STARTsess').classList.remove('ACTIVEit');
+		this.remove();
+	});
+
+});
 
 //SAIR DA CONTA ------ FIM DO IF
 document.querySelector('.LOGout').addEventListener('click', function(){
 	fireBase.signOut();
-	var LOGINbtn = '<a href="/p/login.html" class="cPANEL">Entrar</a>'
+	var LOGINbtn = '<a href="/p/login.html" class="cPANEL USERoff">Entrar</a>'
 	this.parentNode.innerHTML = LOGINbtn; });}
 else{
+
+		//quando não estiver logado
+	document.querySelector('.cPANEL').parentNode.innerHTML = '<a href="/bracael.com/p/login.html" class="cPANEL USERoff">Entrar</a>';
+
 if(window.location.href.indexOf('/p/login.html') > -1){
 	document.body.setAttribute('login', '');
 	contentHTML.innerHTML = loginUser;
@@ -1299,7 +1329,7 @@ if(TYPEbtn == "text"){
 	document.getElementById("passwordInput").setAttribute("type", "password");}
 });
 
-var LOGINbtn = '<a href="javascript:void(0);" class="LOGout cPANEL">Sair</a>';
+var LOGINbtn = '<a href="/bracael.com/p/account.html" class="LOGout cPANEL">Sair</a>';
 var parser = new DOMParser();
 var HTMLpanel = parser.parseFromString(LOGINbtn, 'text/html');
 
@@ -1379,7 +1409,7 @@ focusOutInput();
 
 
 if(window.location.href.indexOf('/p/session.html') > -1){
-
+	
 	var url = new URL(window.location.href);
 	var DEMOid = url.searchParams.get("id");
 
@@ -1390,7 +1420,7 @@ db.collection("todos").doc(DEMOid).get().then(function(doc) {
 
 	if (doc.exists) {
 
-	const content = '<div class="LOGINspot"><div class="LOGINSPOTinst"><div class="COMPANYlogin"><section class="COMPANYit"></section><span>Crie sua conta Bracael</span></div><form class="FORMsignup"><div class="GROUPinput"><input type="password" id="PASSWORDinput" class="INPUTclass" tabindex="1" autocomplete="off" autofocus="" autocapitalize="off" autocorrect="off"></input><label>Senha</label></div><div class="GROUPinput"><input type="password" id="CONFIRMpassInput" class="INPUTclass" tabindex="2" autocomplete="off"></input><div class="SHOWpass"></div><label>Confirmar senha</label></div><div class="FOOTERlogin"><button class="CREATEacount" tabindex="3">Criar conta</button></div></form></div></div>';
+	const content = '<div class="LOGINspot"><div class="LOGINSPOTinst"><div class="COMPANYlogin"><section class="COMPANYit"></section><span>Crie sua conta Bracael</span></div><form class="FORMsignup"  autocomplete="off"><div class="GROUPinput"><input type="password" id="PASSWORDinput" class="INPUTclass" tabindex="1" autocomplete="off" autofocus="" autocapitalize="off" autocorrect="off"></input><label>Senha</label></div><div class="GROUPinput"><input type="password" id="CONFIRMpassInput" class="INPUTclass" tabindex="2" autocomplete="off"></input><div class="SHOWpass"></div><label>Confirmar senha</label></div><div class="FOOTERlogin"><button class="CREATEacount" tabindex="3">Criar conta</button></div></form></div></div>';
 
 	document.querySelector('.Blog').innerHTML = content;
 	focusOutInput();
@@ -1431,7 +1461,7 @@ db.collection("todos").doc(DEMOid).get().then(function(doc) {
 
 	} else {
 		// doc.data() will be undefined in this case
-		window.location.replace("/bracael.com/");
+		window.location.replace("/bracael.com/p/account.html");
 	}
 
 
@@ -1453,6 +1483,158 @@ focusOutInput();
 
 }
 
+
+if(window.location.href.indexOf('/p/account.html') > -1){
+	if(user){
+const ACCOUNTmain = `<div class="ACCOUNTmain">
+<div class="ACCOUNTinst">
+	<div class="MENUset" id="ITEMflex">
+		<ul>
+			<li><a class="SETitem ACTIVEit" for="r1" href="javascript:void(0);">Editar perfil</a></li>
+			<li><a class="SETitem" for="r2" href="javascript:void(0);">Alterar senha</a></li>
+			<li><a class="SETitem" for="r3" href="javascript:void(0);">Meus produtos</a></li>
+			<li><a class="SETitem" for="r4" href="javascript:void(0);">Ticket</a></li>
+		</ul>
+	</div>
+	<div class="OPTIONSset" id="ITEMflex">
+		<div class="OPTINSinst">
+			<div class="r1" id="item">
+				<div class="ACCOUNTspot">
+				<aside class="ACCBOXinst">
+				<label for="setName">Nome</label>
+				</aside>
+				<div class="INPUTbox">
+					<input id="setName" placeholder="Nome" type="text" value="ɴᴀᴛᴀɴᴀᴇʟ ʟᴏᴜʀᴇɴço">
+					<div class="ADDtext">
+						<p>Ajude as pessoas a descobrir sua conta usando o nome pelo qual você é conhecido: seu nome completo, apelido ou nome comercial.</p>
+					</div>
+				</div>
+				</div>
+				<div class="ACCOUNTspot">
+				<aside class="ACCBOXinst">
+				<label for="pepEmail">E-mail</label>
+				</aside>
+				<div class="INPUTbox">
+					<input id="pepEmail" type="text" value="holasoycael@gmail.com" disabled="disabled">
+				</div>
+				</div>
+				<div class="ACCOUNTspot">
+				<aside class="ACCBOXinst">
+				<label for="setPhone">Telefone</label>
+				</aside>
+				<div class="INPUTbox">
+					<input id="setPhone" placeholder="Telefone" type="text" value="">
+				</div>
+				</div>
+				<div class="ACCOUNTspot">
+				<aside class="ACCBOXinst">
+				</aside>
+				<div class="INPUTbox">
+					<button type="button" id="savePerfil">Salvar</button>
+				</div>
+				</div>
+			</div>
+			<div class="r2 DISPLAYnone" id="item">
+				<div class="ACCOUNTspot">
+				<aside class="ACCBOXinst">
+				<label for="oldPass">Senha antiga</label>
+				</aside>
+				<div class="INPUTbox">
+					<input id="oldPass" type="text">
+				</div>
+				</div>
+				<div class="ACCOUNTspot">
+				<aside class="ACCBOXinst">
+				<label for="newPass">Nova senha</label>
+				</aside>
+				<div class="INPUTbox">
+					<input id="newPass" type="text">
+				</div>
+				</div>
+				<div class="ACCOUNTspot">
+				<aside class="ACCBOXinst">
+				<label for="setPass">Confirmar nova senha</label>
+				</aside>
+				<div class="INPUTbox">
+					<input id="setPass" type="text">
+				</div>
+				</div>
+				<div class="ACCOUNTspot">
+				<aside class="ACCBOXinst">
+				</aside>
+				<div class="INPUTbox">
+					<button type="button" id="confirmPass">Alterar senha</button>
+				</div>
+				</div>
+			</div>
+			<div class="r3 DISPLAYnone" id="item">
+				
+				<div class="PRODUCThere" id="2294964255121055455">
+					<section class="POSTup"><div class="POSTimg"><img class="THUMBnail" src="https://1.bp.blogspot.com/-x3h6CXbDV-4/XpRF1_83vcI/AAAAAAAAG08/aJId33jgHW4KisanT3iwdAgVYIPiyG7awCLcBGAsYHQ/s1600/slideshow_04.jpg"></div></section>
+					<section class="POSTbt">
+						<div class="POSTbt_inner">
+						<h3 class="POSTtitle">Cat Ba Island Resort</h3>
+						<div class="POSTdate CALENDar">27/06/2020 ÀS 01:00 AM</div>
+						<div class="POSTBOXbt">
+							<a class="GOTOdownload" href="javascript:void(0);">Baixar</a>
+						</div>
+						</div>
+					</section>
+				</div>
+				
+				<div class="PRODUCThere" id="2294964255121055455">
+					<section class="POSTup"><div class="POSTimg"><img class="THUMBnail" src="https://1.bp.blogspot.com/-x3h6CXbDV-4/XpRF1_83vcI/AAAAAAAAG08/aJId33jgHW4KisanT3iwdAgVYIPiyG7awCLcBGAsYHQ/s1600/slideshow_04.jpg"></div></section>
+					<section class="POSTbt">
+						<div class="POSTbt_inner">
+						<h3 class="POSTtitle">Cat Ba Island Resort</h3>
+						<div class="POSTdate CALENDar">27/06/2020 ÀS 01:00 AM</div>
+						<div class="POSTBOXbt">
+							<a class="GOTOdownload" href="javascript:void(0);">Baixar</a>
+						</div>
+						</div>
+					</section>
+				</div>
+
+			</div>
+			<div class="r4 DISPLAYnone" id="item">Por enquanto, não há nada por aqui.</div>
+		</div>
+	</div>
+</div>
+</div>`
+
+	document.querySelector('.Blog').innerHTML = ACCOUNTmain;
+
+
+	var SLCTtoPay = document.querySelectorAll('.SETitem');
+	var METHODitem = document.querySelectorAll('#item');
+
+for(var i = 0; i < SLCTtoPay.length; i++){
+SLCTtoPay[i].addEventListener('click', function(){
+
+	document.querySelector('.SETitem.ACTIVEit').classList.toggle('ACTIVEit');
+	this.classList.toggle('ACTIVEit');
+
+	for(var i = 0; i < SLCTtoPay.length; i++){
+		if(METHODitem[i].classList.contains(`${this.getAttribute('for')}`)){
+			METHODitem[i].classList.remove('DISPLAYnone');}
+			else{
+			METHODitem[i].classList.add('DISPLAYnone');}
+
+	}
+
+});
+}
+
+
+
+} //IF USER  --  '/P/ACCOUNT.HTML'
+else {
+	//SE NA TIVER LOGADO NA AREA DE LOGIN = RETURN
+	window.location.replace("/bracael.com/");
+}
+
+
+}
 
 });
 
