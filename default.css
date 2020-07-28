@@ -5068,7 +5068,7 @@ ASIDE.ACCBOXinst label {
     margin-top: 12px;
     font-size: 12px;
 }
-.INPUTbox BUTTON {
+.INPUTbox BUTTON:not(.CHAGEprfl) {
     color: #fff;
     background-color: #0095f6;
     border-radius: 4px;
@@ -5080,6 +5080,7 @@ ASIDE.ACCBOXinst label {
     letter-spacing: 0.6px;
     font-size: 14px;
     line-height: 18px;
+    cursor: pointer;
 }
 
 
@@ -5185,4 +5186,34 @@ DIV.HEADERnav LI .STARTsess.ACTIVEit {
 }
 .STARTsess .MENUuser A:last-child {
     border-radius: 0 0 6px 6px;
+}
+
+.DISPLAYuser BUTTON.CHANGEprfl {
+    background: transparent;
+    cursor: pointer;
+}
+.DISPLAYuser IMG {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    float: left;
+}
+.DISPLAYuser .INPUTbox {
+    margin: 14px 0 0;
+}
+.DISPLAYuser .INPUTbox H1.DISPLAYname {
+    font-size: 20px;
+    line-height: 22px;
+    margin-bottom: 2px;
+    overflow: hidden;
+    font-weight: 400;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.DISPLAYuser .INPUTbox BUTTON.CHAGEprfl {
+    color: #0095f6;
+    background: transparent;
+    font-family: var(--font-poppins);
+    font-weight: 500;
+    cursor: pointer;
 }
