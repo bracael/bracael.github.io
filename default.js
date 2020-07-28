@@ -1234,7 +1234,15 @@ if(CACHEurl[CACHEurl.length-2] !== undefined){
 	else{
 	window.location.replace("http://www.bracael.com/");}}
 
-	document.querySelector('.cPANEL').parentNode.innerHTML = `<a href="javascript:void(0)" class="cPANEL USERon"><img src="data:image/svg+xml;base64,PHN2ZyBpZD0iQWdydXBhcl8xIiBkYXRhLW5hbWU9IkFncnVwYXIgMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMjUwIiBoZWlnaHQ9IjI1MCIgdmlld0JveD0iMCAwIDI1MCAyNTAiPgogIDxkZWZzPgogICAgPHN0eWxlPgogICAgICAuY2xzLTEgewogICAgICAgIGZpbGw6ICNjNWM1YzU7CiAgICAgIH0KCiAgICAgIC5jbHMtMiwgLmNscy0zIHsKICAgICAgICBmaWxsOiAjZmZmOwogICAgICB9CgogICAgICAuY2xzLTMgewogICAgICAgIGZpbGwtcnVsZTogZXZlbm9kZDsKICAgICAgfQogICAgPC9zdHlsZT4KICA8L2RlZnM+CiAgPHJlY3QgaWQ9IlJldMOibmd1bG9fMSIgZGF0YS1uYW1lPSJSZXTDom5ndWxvIDEiIGNsYXNzPSJjbHMtMSIgd2lkdGg9IjI1MCIgaGVpZ2h0PSIyNTAiLz4KICA8Y2lyY2xlIGlkPSJFbGlwc2VfMSIgZGF0YS1uYW1lPSJFbGlwc2UgMSIgY2xhc3M9ImNscy0yIiBjeD0iMTI1IiBjeT0iMTAzIiByPSI1NyIvPgogIDxwYXRoIGlkPSJGb3JtYV8xIiBkYXRhLW5hbWU9IkZvcm1hIDEiIGNsYXNzPSJjbHMtMyIgZD0iTTMxLDI1MHM0LjE1Mi03Ny4yMzIsNjktOTljMS42NjQtLjA0NCw0Ny40MDYtMC4wMDcsNTAsMCwzNy41MTEsOC4yODUsNzAuMTUxLDYxLjM3NSw2OSw5OUMyMTUuNzY5LDI0OS45MDUsMzEsMjUwLDMxLDI1MFoiLz4KPC9zdmc+Cg==" width="24" height="24"></a>
+
+if(user.photoURL != null){
+	var USERphoto = user.photoURL;
+}
+else{
+	var USERphoto = 'data:image/svg+xml;base64,PHN2ZyBpZD0iQWdydXBhcl8xIiBkYXRhLW5hbWU9IkFncnVwYXIgMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMjUwIiBoZWlnaHQ9IjI1MCIgdmlld0JveD0iMCAwIDI1MCAyNTAiPgogIDxkZWZzPgogICAgPHN0eWxlPgogICAgICAuY2xzLTEgewogICAgICAgIGZpbGw6ICNjNWM1YzU7CiAgICAgIH0KCiAgICAgIC5jbHMtMiwgLmNscy0zIHsKICAgICAgICBmaWxsOiAjZmZmOwogICAgICB9CgogICAgICAuY2xzLTMgewogICAgICAgIGZpbGwtcnVsZTogZXZlbm9kZDsKICAgICAgfQogICAgPC9zdHlsZT4KICA8L2RlZnM+CiAgPHJlY3QgaWQ9IlJldMOibmd1bG9fMSIgZGF0YS1uYW1lPSJSZXTDom5ndWxvIDEiIGNsYXNzPSJjbHMtMSIgd2lkdGg9IjI1MCIgaGVpZ2h0PSIyNTAiLz4KICA8Y2lyY2xlIGlkPSJFbGlwc2VfMSIgZGF0YS1uYW1lPSJFbGlwc2UgMSIgY2xhc3M9ImNscy0yIiBjeD0iMTI1IiBjeT0iMTAzIiByPSI1NyIvPgogIDxwYXRoIGlkPSJGb3JtYV8xIiBkYXRhLW5hbWU9IkZvcm1hIDEiIGNsYXNzPSJjbHMtMyIgZD0iTTMxLDI1MHM0LjE1Mi03Ny4yMzIsNjktOTljMS42NjQtLjA0NCw0Ny40MDYtMC4wMDcsNTAsMCwzNy41MTEsOC4yODUsNzAuMTUxLDYxLjM3NSw2OSw5OUMyMTUuNzY5LDI0OS45MDUsMzEsMjUwLDMxLDI1MFoiLz4KPC9zdmc+Cg==';
+}
+
+	document.querySelector('.cPANEL').parentNode.innerHTML = `<a href="javascript:void(0)" class="cPANEL USERon"><img src="${USERphoto}" width="24" height="24"></a>
 	<div class="STARTsess">
 	<div class="MENUuser">
 	  <a href="/p/account.html">Painel</a>
@@ -1486,6 +1494,13 @@ focusOutInput();
 
 if(window.location.href.indexOf('/p/account.html') > -1){
 	if(user){
+
+if(user.photoURL != null){
+	var USERphoto = user.photoURL;}
+else{
+	var USERphoto = 'data:image/svg+xml;base64,PHN2ZyBpZD0iQWdydXBhcl8xIiBkYXRhLW5hbWU9IkFncnVwYXIgMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMjUwIiBoZWlnaHQ9IjI1MCIgdmlld0JveD0iMCAwIDI1MCAyNTAiPgogIDxkZWZzPgogICAgPHN0eWxlPgogICAgICAuY2xzLTEgewogICAgICAgIGZpbGw6ICNjNWM1YzU7CiAgICAgIH0KCiAgICAgIC5jbHMtMiwgLmNscy0zIHsKICAgICAgICBmaWxsOiAjZmZmOwogICAgICB9CgogICAgICAuY2xzLTMgewogICAgICAgIGZpbGwtcnVsZTogZXZlbm9kZDsKICAgICAgfQogICAgPC9zdHlsZT4KICA8L2RlZnM+CiAgPHJlY3QgaWQ9IlJldMOibmd1bG9fMSIgZGF0YS1uYW1lPSJSZXTDom5ndWxvIDEiIGNsYXNzPSJjbHMtMSIgd2lkdGg9IjI1MCIgaGVpZ2h0PSIyNTAiLz4KICA8Y2lyY2xlIGlkPSJFbGlwc2VfMSIgZGF0YS1uYW1lPSJFbGlwc2UgMSIgY2xhc3M9ImNscy0yIiBjeD0iMTI1IiBjeT0iMTAzIiByPSI1NyIvPgogIDxwYXRoIGlkPSJGb3JtYV8xIiBkYXRhLW5hbWU9IkZvcm1hIDEiIGNsYXNzPSJjbHMtMyIgZD0iTTMxLDI1MHM0LjE1Mi03Ny4yMzIsNjktOTljMS42NjQtLjA0NCw0Ny40MDYtMC4wMDcsNTAsMCwzNy41MTEsOC4yODUsNzAuMTUxLDYxLjM3NSw2OSw5OUMyMTUuNzY5LDI0OS45MDUsMzEsMjUwLDMxLDI1MFoiLz4KPC9zdmc+Cg==';
+}
+
 const ACCOUNTmain = `<div class="ACCOUNTmain">
 <div class="ACCOUNTinst">
 	<div class="MENUset" id="ITEMflex">
@@ -1498,13 +1513,23 @@ const ACCOUNTmain = `<div class="ACCOUNTmain">
 	</div>
 	<div class="OPTIONSset" id="ITEMflex">
 		<div class="OPTINSinst">
-			<div class="r1" id="item">
+				<div class="r1" id="item">
+				<div class="ACCOUNTspot DISPLAYuser">
+				<aside class="ACCBOXinst">
+					<button class="CHANGEprfl " title="Alterar foto do perfil">
+					<img alt="Alterar foto do perfil" class="BTNit" src="${USERphoto}"></button>
+				</aside>
+				<div class="INPUTbox">
+					<h1 class="DISPLAYname" title="${user.email.split('@')[0]}">${user.email.split('@')[0]}</h1>
+					<button class="CHAGEprfl" type="button">Alterar foto do perfil</button>
+				</div>
+				</div>
 				<div class="ACCOUNTspot">
 				<aside class="ACCBOXinst">
 				<label for="setName">Nome</label>
 				</aside>
 				<div class="INPUTbox">
-					<input id="setName" placeholder="Nome" type="text" value="ɴᴀᴛᴀɴᴀᴇʟ ʟᴏᴜʀᴇɴço">
+					<input id="setName" placeholder="Nome" type="text" value="${user.displayName}">
 					<div class="ADDtext">
 						<p>Ajude as pessoas a descobrir sua conta usando o nome pelo qual você é conhecido: seu nome completo, apelido ou nome comercial.</p>
 					</div>
@@ -1515,7 +1540,7 @@ const ACCOUNTmain = `<div class="ACCOUNTmain">
 				<label for="pepEmail">E-mail</label>
 				</aside>
 				<div class="INPUTbox">
-					<input id="pepEmail" type="text" value="holasoycael@gmail.com" disabled="disabled">
+					<input id="pepEmail" type="text" value="${user.email}" disabled="disabled">
 				</div>
 				</div>
 				<div class="ACCOUNTspot">
@@ -1604,6 +1629,19 @@ const ACCOUNTmain = `<div class="ACCOUNTmain">
 
 	document.querySelector('.Blog').innerHTML = ACCOUNTmain;
 
+console.log(user);
+
+
+document.getElementById('savePerfil').addEventListener('click', function(){
+	user.updateProfile({
+		displayName: "Cael Oliveira",
+		photoURL: "https://lh3.googleusercontent.com/ogw/ADGmqu-A--JfDzvYtyWxBW-hgEvDMLfs1fLrU_WkmrB8=s150-c-mo"
+	  }).then(function() {
+		// Update successful.
+	  }).catch(function(error) {
+		// An error happened.
+	  });
+});
 
 	var SLCTtoPay = document.querySelectorAll('.SETitem');
 	var METHODitem = document.querySelectorAll('#item');
