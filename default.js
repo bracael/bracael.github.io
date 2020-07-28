@@ -1237,7 +1237,7 @@ if(CACHEurl[CACHEurl.length-2] !== undefined){
 	document.querySelector('.cPANEL').parentNode.innerHTML = `<a href="javascript:void(0)" class="cPANEL USERon"><img src="data:image/svg+xml;base64,PHN2ZyBpZD0iQWdydXBhcl8xIiBkYXRhLW5hbWU9IkFncnVwYXIgMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMjUwIiBoZWlnaHQ9IjI1MCIgdmlld0JveD0iMCAwIDI1MCAyNTAiPgogIDxkZWZzPgogICAgPHN0eWxlPgogICAgICAuY2xzLTEgewogICAgICAgIGZpbGw6ICNjNWM1YzU7CiAgICAgIH0KCiAgICAgIC5jbHMtMiwgLmNscy0zIHsKICAgICAgICBmaWxsOiAjZmZmOwogICAgICB9CgogICAgICAuY2xzLTMgewogICAgICAgIGZpbGwtcnVsZTogZXZlbm9kZDsKICAgICAgfQogICAgPC9zdHlsZT4KICA8L2RlZnM+CiAgPHJlY3QgaWQ9IlJldMOibmd1bG9fMSIgZGF0YS1uYW1lPSJSZXTDom5ndWxvIDEiIGNsYXNzPSJjbHMtMSIgd2lkdGg9IjI1MCIgaGVpZ2h0PSIyNTAiLz4KICA8Y2lyY2xlIGlkPSJFbGlwc2VfMSIgZGF0YS1uYW1lPSJFbGlwc2UgMSIgY2xhc3M9ImNscy0yIiBjeD0iMTI1IiBjeT0iMTAzIiByPSI1NyIvPgogIDxwYXRoIGlkPSJGb3JtYV8xIiBkYXRhLW5hbWU9IkZvcm1hIDEiIGNsYXNzPSJjbHMtMyIgZD0iTTMxLDI1MHM0LjE1Mi03Ny4yMzIsNjktOTljMS42NjQtLjA0NCw0Ny40MDYtMC4wMDcsNTAsMCwzNy41MTEsOC4yODUsNzAuMTUxLDYxLjM3NSw2OSw5OUMyMTUuNzY5LDI0OS45MDUsMzEsMjUwLDMxLDI1MFoiLz4KPC9zdmc+Cg==" width="24" height="24"></a>
 	<div class="STARTsess">
 	<div class="MENUuser">
-	  <a href="/bracael.com/p/account.html">Painel</a>
+	  <a href="/p/account.html">Painel</a>
 	  <a href="javascript:void(0)" class="LOGout">Sair</a>
 	</div>
 	</div>`;
@@ -1269,7 +1269,7 @@ document.querySelector('.LOGout').addEventListener('click', function(){
 else{
 
 		//quando não estiver logado
-	document.querySelector('.cPANEL').parentNode.innerHTML = '<a href="/bracael.com/p/login.html" class="cPANEL USERoff">Entrar</a>';
+	document.querySelector('.cPANEL').parentNode.innerHTML = '<a href="/p/login.html" class="cPANEL USERoff">Entrar</a>';
 
 if(window.location.href.indexOf('/p/login.html') > -1){
 	document.body.setAttribute('login', '');
@@ -1329,7 +1329,7 @@ if(TYPEbtn == "text"){
 	document.getElementById("passwordInput").setAttribute("type", "password");}
 });
 
-var LOGINbtn = '<a href="/bracael.com/p/account.html" class="LOGout cPANEL">Sair</a>';
+var LOGINbtn = '<a href="/p/account.html" class="LOGout cPANEL">Sair</a>';
 var parser = new DOMParser();
 var HTMLpanel = parser.parseFromString(LOGINbtn, 'text/html');
 
@@ -1461,7 +1461,7 @@ db.collection("todos").doc(DEMOid).get().then(function(doc) {
 
 	} else {
 		// doc.data() will be undefined in this case
-		window.location.replace("/bracael.com/p/account.html");
+		window.location.replace("/p/account.html");
 	}
 
 
@@ -1630,7 +1630,7 @@ SLCTtoPay[i].addEventListener('click', function(){
 } //IF USER  --  '/P/ACCOUNT.HTML'
 else {
 	//SE NA TIVER LOGADO NA AREA DE LOGIN = RETURN
-	window.location.replace("/bracael.com/");
+	window.location.replace("https://www.bracael.com/");
 }
 
 
