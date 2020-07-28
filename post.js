@@ -87,13 +87,35 @@ if(DOCit.body.contains(DOCit.body.querySelector('.zip'))){
 	var BOLLupt = false;
 	var BOLLlyt = false;}
 
+
+
 if(pLOCAL.split(' ').includes('free') && img.length>=1 && BOLLdmo && BOLLpre && BOLLbxa && BOLLupt && BOLLlyt && pLOCAL.split(' ').length === 1){
-	summary = '<section class="POSTup ' +pLOCAL+ '"><div class="POSTimg"><img class="THUMBnail" src="' +img[0].src+ '"></img></div><div class="POSTbttm"><span class="TEXTsale">197 downloads</span><div class="POSTspot"><i class="BTNfav" rel="' +pID+ '"></i></div></div></section><section class="POSTbt"><div class="POSTbt_inner"><h3 class="POSTtitle"><a class="POSTurl" href="' +pURL+ '">' +pTITLE+ '</a></h3><div class="POSTdate CALENDar">' +pDATE+ '</div><div class="POSTBOXbt"><div class="POSTprice">GRÁTIS!</div><div class="POSTbtn"><li><a class="BTNlive" href="/p/demo.html?id=' +pID+ '" target="_blank">Demo</a></li><li><a class="BTNinfo" href="' +pURL+ '">Info</a></li></div></div></div></section>';}
+
+	firebase.database().ref('post/' + pID).once('value').then(function(snapshot) {
+		if(snapshot.exists()){
+			div.querySelector('.FREEdown').innerText = `${snapshot.val().download} downloads`;
+		}
+		else {
+			div.querySelector('.FREEdown').innerText = `Ainda nenhum download`;
+		}
+	});
+
+	summary = '<section class="POSTup ' +pLOCAL+ '"><div class="POSTimg"><img class="THUMBnail" src="' +img[0].src+ '"></img></div><div class="POSTbttm"><span class="FREEdown TEXTsale">Carregando...</span><div class="POSTspot"><i class="BTNfav" rel="' +pID+ '"></i></div></div></section><section class="POSTbt"><div class="POSTbt_inner"><h3 class="POSTtitle"><a class="POSTurl" href="' +pURL+ '">' +pTITLE+ '</a></h3><div class="POSTdate CALENDar">' +pDATE+ '</div><div class="POSTBOXbt"><div class="POSTprice">GRÁTIS!</div><div class="POSTbtn"><li><a class="BTNlive" href="/p/demo.html?id=' +pID+ '" target="_blank">Demo</a></li><li><a class="BTNinfo" href="' +pURL+ '">Info</a></li></div></div></div></section>';}
 	else if(pLOCAL.split(' ').includes('excl') && img.length>=1 && BOLLdmo && BOLLpre && pLOCAL.split(' ').length === 1){
 	summary = '<section class="POSTup ' +pLOCAL+ '"><div class="POSTimg"><img class="THUMBnail" src="'+img[0].src+'"></img></div><div class="POSTbttm"><div class="POSTspot"><i class="BTNfav" rel="' +pID+ '"></i></div></div></section><section class="POSTbt"><div class="POSTbt_inner"><h3 class="POSTtitle"><a class="POSTurl" href="' +pURL+ '">' +pTITLE+ '</a></h3><div class="POSTdate CALENDar">' +pDATE+ '</div><div class="POSTBOXbt"><div class="POSTbtn MAXwidth"><li><a class="BTNlive" href="/p/demo.html?id=' +pID+ '" target="_blank">DEMO</a></li><li><a class="BTNinfo" href="' +pURL+ '">Info</a></li></div></div></div></section>';}
 else{
 if(img.length>=1 && BOLLdmo && BOLLpre && BOLLbxa && BOLLupt && BOLLlyt && Number(pLOCAL.replace(/[^0-9]/g,'')) !== 0 && pLOCAL.split(' ').length === 1){
-	summary = '<section class="POSTup '+pLOCAL+'"><div class="POSTimg"><img class="THUMBnail" src="'+img[0].src+'"></img></div><div class="POSTbttm"><span class="TEXTsale">1 venda</span><div class="POSTspot"><i class="BTNfav" rel="' +pID+ '"></i></div></div></section><section class="POSTbt"><div class="POSTbt_inner"><h3 class="POSTtitle"><a class="POSTurl" href="'+pURL+'">'+pTITLE+'</a></h3><div class="POSTdate CALENDar">'+pDATE+'</div><div class="POSTBOXbt"><div class="POSTprice">'+PRICEpost+'</div><div class="POSTbtn"><li><a class="BTNlive" href="/p/demo.html?id=' +pID+ '" target="_blank">Demo</a></li><li><a class="BTNinfo" href="' +pURL+ '">Info</a></li></div></div></div></section>';}
+
+	firebase.database().ref('post/' + pID).once('value').then(function(snapshot) {
+		if(snapshot.exists()){
+			div.querySelector('.SELLtext').innerText = `${snapshot.val().sales} vendas`;
+		}
+		else {
+			div.querySelector('.SELLtext').innerText = `Compre agora!`;
+		}
+	});
+
+	summary = '<section class="POSTup '+pLOCAL+'"><div class="POSTimg"><img class="THUMBnail" src="'+img[0].src+'"></img></div><div class="POSTbttm"><span class="SELLtext TEXTsale">Carregando...</span><div class="POSTspot"><i class="BTNfav" rel="' +pID+ '"></i></div></div></section><section class="POSTbt"><div class="POSTbt_inner"><h3 class="POSTtitle"><a class="POSTurl" href="'+pURL+'">'+pTITLE+'</a></h3><div class="POSTdate CALENDar">'+pDATE+'</div><div class="POSTBOXbt"><div class="POSTprice">'+PRICEpost+'</div><div class="POSTbtn"><li><a class="BTNlive" href="/p/demo.html?id=' +pID+ '" target="_blank">Demo</a></li><li><a class="BTNinfo" href="' +pURL+ '">Info</a></li></div></div></div></section>';}
 	else{
 	var ARRAYimg = new Array(3)
 	ARRAYimg[0] = 'https://4.bp.blogspot.com/-sFt6m4qFkA0/Xr_Gi8W4JHI/AAAAAAAAG50/8iQa42-JL3cSGPWPsApS2H8vtMm4wJflgCLcBGAsYHQ/s1600/cat-ba.png';
