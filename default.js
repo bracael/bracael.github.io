@@ -11,6 +11,7 @@
 	firebase.initializeApp(firebaseConfig);
 })();
 
+
 function HTTPXMLresquest(JSONit){
 	var url = new URL(window.location.href);
 	var DEMOid = url.searchParams.get("id");
@@ -713,6 +714,52 @@ if(Object.getOwnPropertyNames(JSON.parse(localStorage.BOOKmark)).includes(new UR
 
 	}
 
+
+
+	if(window.location.href.indexOf('/p/account.html') > -1){
+
+		var MODALscreen = `<div class="ACESSinst">
+		<h3>${JSONit.entry.title.$t}<i class="CROSSicon" feedback=""></i></h3>
+		<p>${DOCit.body.querySelector('pre').innerText}</p>
+		<div class="FREEdownload">
+		<li><a class="BTNdownload" href="javascript:void(0)">
+		<div class="BTNdownloadLeft"></div>
+		<div class="BTNdownloadRight"><span class="MAINtxt">Baixar</span><span class="SECONtxt">Template Premium</span></div>
+		</a></li>
+		<li class="SECURITYitem">Verificado com <b>Antivírus</b></li></div>	
+	
+	</div>`;
+
+	document.querySelector('.ModalAcess').innerHTML = MODALscreen;
+
+	document.querySelector('.BTNdownload').addEventListener('click', function(){
+		firebase.storage().ref(`images/Poppins.zip`).getDownloadURL().then(function(url) {
+		  // `url` is the download URL for 'images/stars.jpg'
+			document.querySelector('.IFRAMEdownload').src = url
+			console.log(url)
+		}).catch(function(error) {
+			console.log('Erro: arquivo não encontrado.')
+		  // Handle any errors
+		});
+	  
+	});
+
+	for(var a = 0; a < document.querySelectorAll('.CLOSEmodal').length; a++){
+	document.querySelectorAll('.CLOSEmodal')[a].addEventListener('click', function(){
+		setTimeout(function(){
+			window.location.replace(window.location.href);
+			}, 3000);
+
+		$('.CLOSEsess').fadeIn(500);
+
+	});}
+
+	}
+
+
+
+
+
 }
 
 
@@ -915,7 +962,7 @@ console.log(JSON.parse(sessionStorage.CACHEurl).length)
 *********************************************/
 
 //DIRECT PAGE
-if(document.head.contains(document.querySelector('#HTTPXMLresquest'))){
+if(document.head.contains(document.querySelector('#HTTPXMLresquest')) && window.location.href.indexOf('/p/account.html') == -1){
 var WINDOWhref = window.location.href; //window.location.href
 var url = new URL(WINDOWhref);
 
@@ -924,6 +971,7 @@ if(url.searchParams.get("id") != ''){
 	else{
 	window.location.assign(window.location.protocol +'//'+ window.location.hostname);}
 	document.getElementById('HTTPXMLresquest').setAttribute('src', 'https://tema404.blogspot.com/feeds/posts/default/' +url.searchParams.get("id")+ '?alt=json-in-script&callback=HTTPXMLresquest');}
+
 
 //EFFECT MODAL
 if(document.body.contains(document.querySelector('[feedback]')) && document.body.contains(document.querySelector('.MODALfeedback'))){
@@ -1477,16 +1525,6 @@ db.collection("todos").doc(DEMOid).get().then(function(doc) {
 		console.log("Error getting document:", error);
 	})
 }
-
-
-// const user = firebase.auth();
-// console.log(user.currentUser.displayName);
-// var loginUser = '<div class="LOGINspot"><div class="LOGINSPOTinst"><div class="COMPANYlogin"><section class="COMPANYit"><!-- Bracael --></section><span>Crie sua conta Bracael</span></div><form class="FORMlogin"><div class="GROUPinput"><input type="email" id="emailInput" tabindex="1" autocomplete="off" autofocus="" autocapitalize="off" autocorrect="off"></input><label>E-mail</label></div><div class="GROUPinput"><input type="password" id="passwordInput" tabindex="2" autocomplete="off"></input><div class="SHOWpass">' +ACTIVEpass+ '</div><label>Senha</label></div><div class="FOOTERlogin"><button class="BTN FORGOTpass" type="button">Esqueceu a sua senha?</button><button class="LOGin" tabindex="3">Fazer login</button></div></form></div></div>';
-// var contentHTML = document.querySelector('.Blog');
-// 	contentHTML.innerHTML = loginUser;
-
-
-
 focusOutInput();
 
 }
@@ -1521,7 +1559,8 @@ const ACCOUNTmain = `<div class="ACCOUNTmain">
 				</aside>
 				<div class="INPUTbox">
 					<h1 class="DISPLAYname" title="${user.email.split('@')[0]}">${user.email.split('@')[0]}</h1>
-					<button class="CHAGEprfl" type="button">Alterar foto do perfil</button>
+					<input class="INPUTfile" type="file" hidden="hidden"></input>
+					<button class="CHANGEprfl" type="button">Alterar foto do perfil</button>
 				</div>
 				</div>
 				<div class="ACCOUNTspot">
@@ -1531,7 +1570,7 @@ const ACCOUNTmain = `<div class="ACCOUNTmain">
 				<div class="INPUTbox">
 					<input id="setName" placeholder="Nome" type="text" value="${user.displayName}">
 					<div class="ADDtext">
-						<p>Ajude as pessoas a descobrir sua conta usando o nome pelo qual você é conhecido: seu nome completo, apelido ou nome comercial.</p>
+						<p>Os demais campos dos usuario serão disponilibizados em tempo que adicionarmos funcionalidades social e valida para as informações. No momento para performance de nossos serviços não é necessario o uso de informações além de nome e e-mail.</p>
 					</div>
 				</div>
 				</div>
@@ -1548,14 +1587,14 @@ const ACCOUNTmain = `<div class="ACCOUNTmain">
 				<label for="setPhone">Telefone</label>
 				</aside>
 				<div class="INPUTbox">
-					<input id="setPhone" placeholder="Telefone" type="text" value="">
+					<input id="setPhone" placeholder="Telefone" type="text" value="" disabled="disabled">
 				</div>
 				</div>
 				<div class="ACCOUNTspot">
 				<aside class="ACCBOXinst">
 				</aside>
 				<div class="INPUTbox">
-					<button type="button" id="savePerfil">Salvar</button>
+					<button type="button" id="savePerfil" disabled="disabled">Salvar alterações</button>
 				</div>
 				</div>
 			</div>
@@ -1593,54 +1632,78 @@ const ACCOUNTmain = `<div class="ACCOUNTmain">
 				</div>
 			</div>
 			<div class="r3 DISPLAYnone" id="item">
-				
-				<div class="PRODUCThere" id="2294964255121055455">
-					<section class="POSTup"><div class="POSTimg"><img class="THUMBnail" src="https://1.bp.blogspot.com/-x3h6CXbDV-4/XpRF1_83vcI/AAAAAAAAG08/aJId33jgHW4KisanT3iwdAgVYIPiyG7awCLcBGAsYHQ/s1600/slideshow_04.jpg"></div></section>
-					<section class="POSTbt">
-						<div class="POSTbt_inner">
-						<h3 class="POSTtitle">Cat Ba Island Resort</h3>
-						<div class="POSTdate CALENDar">27/06/2020 ÀS 01:00 AM</div>
-						<div class="POSTBOXbt">
-							<a class="GOTOdownload" href="javascript:void(0);">Baixar</a>
-						</div>
-						</div>
-					</section>
+				<div class="HEADERlist">
+				<span>ID do template</span>
+				<span>ID de compra</span>
+				<span>Data de compra</span>
+				<span>Meu template</span>
 				</div>
-				
-				<div class="PRODUCThere" id="2294964255121055455">
-					<section class="POSTup"><div class="POSTimg"><img class="THUMBnail" src="https://1.bp.blogspot.com/-x3h6CXbDV-4/XpRF1_83vcI/AAAAAAAAG08/aJId33jgHW4KisanT3iwdAgVYIPiyG7awCLcBGAsYHQ/s1600/slideshow_04.jpg"></div></section>
-					<section class="POSTbt">
-						<div class="POSTbt_inner">
-						<h3 class="POSTtitle">Cat Ba Island Resort</h3>
-						<div class="POSTdate CALENDar">27/06/2020 ÀS 01:00 AM</div>
-						<div class="POSTBOXbt">
-							<a class="GOTOdownload" href="javascript:void(0);">Baixar</a>
-						</div>
-						</div>
-					</section>
-				</div>
-
+				<div class="ITENSlist"></div>
 			</div>
 			<div class="r4 DISPLAYnone" id="item">Por enquanto, não há nada por aqui.</div>
 		</div>
 	</div>
 </div>
-</div>`
+</div>`;
 
 	document.querySelector('.Blog').innerHTML = ACCOUNTmain;
 
-console.log(user);
+var setName = document.querySelector('#setName');
+var oldPass = document.querySelector('#oldPass');
+var newPass = document.querySelector('#newPass');
+var setPass = document.querySelector('#setPass');
+// var INPUTfile = document.querySelector('.INPUTfile');
 
+
+for(var i = 0; i < document.querySelectorAll('.CHANGEprfl').length; i++){
+document.querySelectorAll('.CHANGEprfl')[i].addEventListener('click', function(){
+	// SETAR FOTO DO PERFIL -- DISPONIVEL EM BREVE
+	// INPUTfile.click();
+});}
+
+
+setName.addEventListener('input', function(){
+	console.log(user.displayName)
+	console.log(setName.value)
+	console.log(setName.value != user.displayName)
+	if(setName.value != user.displayName){
+		document.querySelector('#savePerfil').removeAttribute('disabled');
+	}
+	else{
+		document.querySelector('#savePerfil').setAttribute('disabled', 'disabled');
+	}
+});	
 
 document.getElementById('savePerfil').addEventListener('click', function(){
-	user.updateProfile({
-		displayName: "Cael Oliveira",
-		photoURL: "https://lh3.googleusercontent.com/ogw/ADGmqu-A--JfDzvYtyWxBW-hgEvDMLfs1fLrU_WkmrB8=s150-c-mo"
-	  }).then(function() {
+
+	var upProfile = {}
+
+if(setName.value != user.displayName){
+	upProfile.displayName = setName.value.trim(); }
+if(user.photoURL != null){
+	upProfile.photoURL = null; }
+
+	if(setName.value.split(' ').length <= 2){
+		var NAMEer = !setName.value.split(' ')[1] != '';}
+		else{
+		var NAMEer = false;}
+	if((!setName.value != '') || (setName.value.split(' ').length <= 2 && NAMEer)){
+		setName.classList.add('ERROinfo');
+		setTimeout(function(){
+			setName.classList.remove('ERROinfo'); }, 1500);
+	}
+	else{
+	user.updateProfile(upProfile).then(function() {
+		if('displayName' in upProfile){
+			setName.classList.add('SAVEinfo');
+			setTimeout(function(){
+				setName.classList.remove('SAVEinfo'); }, 1500); }
 		// Update successful.
-	  }).catch(function(error) {
+	}).catch(function(error) {
 		// An error happened.
-	  });
+	});
+	}
+
 });
 
 	var SLCTtoPay = document.querySelectorAll('.SETitem');
@@ -1662,6 +1725,52 @@ SLCTtoPay[i].addEventListener('click', function(){
 
 });
 }
+
+function startItem(){
+
+};
+
+
+var starCountRef = firebase.database().ref(`users/${user.email.split('@')[0]}`);
+starCountRef.on('value', function(snapshot) {
+
+	for(var i = 0; i < Object.getOwnPropertyNames(snapshot.val().item).length; i++){
+	
+		const ARRAYdate = new Intl.DateTimeFormat('pt-BR', { weekday: 'long', day: 'numeric', month: 'numeric', year: 'numeric', hour: '2-digit', minute: 'numeric', hour12: true });
+		const [{ value: weekday },,{ value: day },,{ value: month },,{ value: year },,{ value: hour },,{ value: minute },,{ value: hour12 }] = ARRAYdate.formatToParts(new Date(snapshot.val().item[`${Object.getOwnPropertyNames(snapshot.val().item)[i]}`].data));
+	
+		document.querySelector('.ITENSlist').insertAdjacentHTML('beforeend', `
+		<div class="PRODUCThere" id="${Object.getOwnPropertyNames(snapshot.val().item)[i]}">
+		<p>${Object.getOwnPropertyNames(snapshot.val().item)[i]}</p>
+		<p>${snapshot.val().item[`${Object.getOwnPropertyNames(snapshot.val().item)[i]}`].id}</p>
+		<p>${day}/${month}/${year} às ${hour}:${minute} ${hour12}</p>
+		<p><a href="javascript:void(0)" data-product="${Object.getOwnPropertyNames(snapshot.val().item)[i]}">Baixar</a></p>
+		</div>`);
+
+	const dataProduct = document.querySelectorAll('[data-product]')[i].getAttribute('data-product');
+	document.head.insertAdjacentHTML('beforeend', `<script src="https://tema404.blogspot.com/feeds/posts/default/${dataProduct}?alt=json-in-script&callback=HTTPXMLresquest" type="text/javascript"></script>`);
+
+document.querySelectorAll('[data-product]')[i].addEventListener('click', function(event){
+
+	document.getElementById('HTTPXMLresquest').src = `https://tema404.blogspot.com/feeds/posts/default/${this.getAttribute('data-product')}?alt=json-in-script&callback=HTTPXMLresquest`;
+
+	$('.MODALproduct').fadeIn(500);
+	document.querySelector('.MODALproduct').classList.add('ACTIVEit');
+	document.getElementById('PRODUCTscreen').insertAdjacentHTML('beforebegin', '<div class="CLOSEfeed CLOSEmodal" ></div>');
+
+	document.body.insertAdjacentHTML('beforeend', `<div class="CLOSEsess"><p>Sessão atualizará em 3 segundos.</p></div>`);
+
+});
+
+
+
+
+
+}
+
+
+
+});
 
 
 
