@@ -1472,7 +1472,7 @@ if(window.location.href.indexOf('/p/session.html') > -1){
 	if (DEMOid != null) {
 
 const db = firebase.firestore();
-db.collection("todos").doc(DEMOid).get().then(function(doc) {
+db.collection("auth").doc(DEMOid).get().then(function(doc) {
 
 	if (doc.exists) {
 
@@ -1493,7 +1493,7 @@ db.collection("todos").doc(DEMOid).get().then(function(doc) {
 		firebase.auth().createUserWithEmailAndPassword(doc.data().email, PASSWORDinput.value).then(function(result){
 			
 					
-			db.collection("todos").doc(doc.id).delete().then(function() {
+			db.collection("auth").doc(doc.id).delete().then(function() {
 				console.log("Document successfully deleted!");
 			}).catch(function(error) {
 				console.error("Error removing document: ", error);
@@ -1726,9 +1726,25 @@ SLCTtoPay[i].addEventListener('click', function(){
 });
 }
 
-function startItem(){
 
-};
+var db = firebase.database();
+var ref = db.ref('post/752219519979715334');
+
+// Attach an asynchronous callback to read the data at our posts reference
+ref.once("value", function(snapshot) {
+
+	ref.update({ "sales": Number(snapshot.val().sales)+1 });
+
+  }, function (errorObject) {
+	console.log("The read failed: " + errorObject.code);
+  });
+
+// firebase.database().ref('users/dgop2p/item').set({
+// 	"4629514224124259684":{
+// 		id: "28311683",
+// 		data: "2020-07-26T16:16:01.000-04:00"
+// 	}
+// });
 
 
 var starCountRef = firebase.database().ref(`users/${user.email.split('@')[0]}`);
