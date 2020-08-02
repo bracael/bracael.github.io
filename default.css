@@ -3310,6 +3310,9 @@ A.BTNdownload .BTNdownloadLeft::before {
 }
 
 
+.DOCUMENTinst {
+    min-height: 60px;
+}
 .COMMENTSinst, .DOCUMENTinst, .SUPPORTinst, .MSGfailure {
     margin: 32px auto;
 }
