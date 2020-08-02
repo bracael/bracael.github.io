@@ -327,13 +327,12 @@ if(Object.getOwnPropertyNames(JSON.parse(localStorage.BOOKmark)).includes(new UR
 		firebase.auth().onAuthStateChanged(function(user) {
 		if(user){
 
-			document.getElementById('INPUTcardName').value = user.displayName;
+			document.getElementById('INPUTcardName').setAttribute('disabled', 'disabled');
 			document.getElementById('cardholderName').value = user.displayName;
 			document.querySelector('.CARDname').innerText = user.displayName;
 			document.querySelector('.CARDname').classList.add('TEXTon');
-			document.getElementById('INPUTdateEmail').value = user.email;
-			document.getElementById('email').value = user.email;
-			document.getElementById('confirmEmail').value = user.email;
+			document.getElementById('INPUTdateEmail').setAttribute('disabled', 'disabled');
+			document.getElementById('confirmEmail').setAttribute('disabled', 'disabled');
 			document.querySelector('DIV.STEPbox').classList.add('CROSSstep');
 
 		for(var i = 0; i < document.querySelectorAll('DIV.SPOTinst').length; i++){
@@ -682,9 +681,11 @@ if(Object.getOwnPropertyNames(JSON.parse(localStorage.BOOKmark)).includes(new UR
 					firebase.auth().onAuthStateChanged(function(user) {
 						if (user) {
 							userId = user.uid;
+							email = user.email;
 						  // User is signed in.
 						} else {
 							userId = null;
+							email = document.querySelector('#email').value
 						  // No user is signed in.
 						}
 
@@ -697,7 +698,7 @@ if(Object.getOwnPropertyNames(JSON.parse(localStorage.BOOKmark)).includes(new UR
 							installments: Number(SLCTInstallments.options[SLCTInstallments.options.selectedIndex].value),
 							payment_method_id: paymentMethodId,
 							payer: {
-							  email: document.querySelector('#email').value
+							  email,
 							}
 						});
 
@@ -1319,6 +1320,7 @@ else{
 	var USERphoto = 'data:image/svg+xml;base64,PHN2ZyBpZD0iQWdydXBhcl8xIiBkYXRhLW5hbWU9IkFncnVwYXIgMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMjUwIiBoZWlnaHQ9IjI1MCIgdmlld0JveD0iMCAwIDI1MCAyNTAiPgogIDxkZWZzPgogICAgPHN0eWxlPgogICAgICAuY2xzLTEgewogICAgICAgIGZpbGw6ICNjNWM1YzU7CiAgICAgIH0KCiAgICAgIC5jbHMtMiwgLmNscy0zIHsKICAgICAgICBmaWxsOiAjZmZmOwogICAgICB9CgogICAgICAuY2xzLTMgewogICAgICAgIGZpbGwtcnVsZTogZXZlbm9kZDsKICAgICAgfQogICAgPC9zdHlsZT4KICA8L2RlZnM+CiAgPHJlY3QgaWQ9IlJldMOibmd1bG9fMSIgZGF0YS1uYW1lPSJSZXTDom5ndWxvIDEiIGNsYXNzPSJjbHMtMSIgd2lkdGg9IjI1MCIgaGVpZ2h0PSIyNTAiLz4KICA8Y2lyY2xlIGlkPSJFbGlwc2VfMSIgZGF0YS1uYW1lPSJFbGlwc2UgMSIgY2xhc3M9ImNscy0yIiBjeD0iMTI1IiBjeT0iMTAzIiByPSI1NyIvPgogIDxwYXRoIGlkPSJGb3JtYV8xIiBkYXRhLW5hbWU9IkZvcm1hIDEiIGNsYXNzPSJjbHMtMyIgZD0iTTMxLDI1MHM0LjE1Mi03Ny4yMzIsNjktOTljMS42NjQtLjA0NCw0Ny40MDYtMC4wMDcsNTAsMCwzNy41MTEsOC4yODUsNzAuMTUxLDYxLjM3NSw2OSw5OUMyMTUuNzY5LDI0OS45MDUsMzEsMjUwLDMxLDI1MFoiLz4KPC9zdmc+Cg==';
 }
 
+if(document.body.contains(document.querySelector('.cPANEL'))){
 	document.querySelector('.cPANEL').parentNode.innerHTML = `<a href="javascript:void(0)" class="cPANEL USERon"><img src="${USERphoto}" width="24" height="24"></a>
 	<div class="STARTsess">
 	<div class="MENUuser">
@@ -1326,7 +1328,6 @@ else{
 	  <a href="javascript:void(0)" class="LOGout">Sair</a>
 	</div>
 	</div>`;
-
 
 //OPEN MENU ACCOUNT
 document.querySelector('.cPANEL.USERon').addEventListener('click', function(){
@@ -1350,7 +1351,7 @@ document.querySelector('.cPANEL.USERon').addEventListener('click', function(){
 document.querySelector('.LOGout').addEventListener('click', function(){
 	fireBase.signOut();
 	var LOGINbtn = '<a href="/p/login.html" class="cPANEL USERoff">Entrar</a>'
-	this.parentNode.innerHTML = LOGINbtn; });}
+	this.parentNode.innerHTML = LOGINbtn; });}}
 else{
 
 		//quando não estiver logado
@@ -1511,32 +1512,25 @@ if (DEMOid != null) {
 	<p class="SUCESStext">Template adicionado com sucesso.</p>
 	</div></div>`;
 
-	// document.querySelector('.Blog').innerHTML = content;
-
-	const base = firebase.database().ref("users/" +user.uid);
-
-      base.once("value", function(snapshot) {
-        console.log(snapshot.val());
-
-      });
-
-		// firebase.database().ref(`users/nfAIW4fCrPft6S6TStcf4lRGkHY2/item`).once("value", (snapshot) =>{
-        // console.log(snapshot.val());
-    	// });
-
-		console.log(user.uid)
 
 		firebase.functions().httpsCallable('usercreate')({ cloud: DEMOid, user: user.uid })
 		.then((data) =>{
-			console.log('Sucesso!', data)
+
+			document.querySelector('.Blog').innerHTML = content;
 		}).catch((erro)=>{
 			console.log('Erro!', erro)
 		});
 
+
 	}
 	else {
 			// SE O OS USUARIO FOR DIFERENTE
-			console.log('Mensagem: O email é diferente\nPor favor faça Log Out');
+			const content = `<div class="SESSbox" style="margin-top: 18px;"><div class="SESSinst">
+			<div class="SUCESShead"><i class="CROSSicon FAILicon"></i></div>
+			<p class="SUCESSh1">Bloqueado!</p>
+			<p class="SUCESStext">Esse template não pertence a você.</p>
+			</div></div>`;
+			document.querySelector('.Blog').innerHTML = content;
 	}}
 	else {
 			// SE O OS USUARIO FOR DIFERENTE
@@ -1559,18 +1553,25 @@ if (DEMOid != null) {
 		var auth = firebase.auth();
 		auth.createUserWithEmailAndPassword(doc.data().email, PASSWORDinput.value).then(function(result){
 
-			var user = auth.currentUser;
+			console.log(result);
 
-			const createUser = firebase.functions().httpsCallable('createUser');
-			createUser({ cloud: DEMOid, user: user.uid }).then(function(){
-				console.log('Enviado!')
-			}).catch(function(){
-				console.log('Erro!')
+			firebase.functions().httpsCallable('usercreate')({ cloud: DEMOid, user: result.user.uid })
+			.then((data) =>{
+
+				const sessbox = `<div class="SESSbox" style="margin-top: 18px;"><div class="SESSinst">
+				<div class="SUCESShead"><i class="CROSSicon SUCCESicon"></i></div>
+				<p class="SUCESSh1">Pronto!</p>
+				<p class="SUCESStext">Template adicionado com sucesso.</p>
+				</div></div>`;
+	
+				document.querySelector('.Blog').innerHTML = sessbox;
+			}).catch((erro)=>{
+				console.log('Erro!', erro)
 			});
 
-			// result.user.sendEmailVerification().then(function(){
-			// console.log("email verification sent to user");
-			// });
+			result.user.sendEmailVerification().then(function(){
+			console.log("email verification sent to user");
+			});
 
 			// db.collection("auth").doc(doc.id).delete().then(function() {
 			// 	console.log("Document successfully deleted!");
