@@ -118,6 +118,16 @@ div#LOADINGcircle {
     width: 100%;
     height: calc(100vh - 120px);
 }
+div#LOADINGcircle.CHECKOUTit {
+    height: calc(100vh - 126px) !IMPORTANT;
+}
+.NONEfloat {
+    float: none !IMPORTANT;
+}
+
+.BLOCKitem {
+    margin: 56px 0 18px;
+}
 
 .BODYinst, MAIN.BODYmain { float: left; width: 100vw; position: relative; }
 MAIN.BODYmain { display: block; }
@@ -2540,7 +2550,7 @@ I.CIRCLEhelp {
     border-bottom: 1px solid #f3f3f3;
     padding: 16px 0;
 }
-.PURCHASEbox SPAN.PREMIUMval, body[checkout] .PAYMENTbox .PAYMENTval SPAN.PREMIUMval {
+.PURCHASEbox SPAN.PREMIUMval, body[checkout] .PAYMENTbox .PAYMENTval SPAN.PREMIUMval, .COMPREboxVal SPAN.DATAval {
     line-height: 38px;
     font-size: 38px;
 }
@@ -2551,7 +2561,7 @@ SPAN.PREMIUMval {
     color: #333;
     display: block;
 }
-SPAN.PRICEitem, SPAN.COINhere {
+SPAN.PRICEitem, SPAN.COINhere, .COMPREboxVal SPAN.DATAval {
     font-weight: 100;
     width: 100%;
     text-align: center;
@@ -2561,6 +2571,17 @@ SPAN.PRICEitem, SPAN.COINhere {
 SPAN.COINhere {
     margin: 6px 0 0;
     font-size: 16px;
+}
+.SORRYuser .COMPREboxVal {
+    margin-bottom: 33px;
+}
+.RESULTerr {
+    width: 100%;
+    max-width: 620px;
+    margin-top: 28px;
+    font-size: 16px;
+    font-weight: 100;
+    color: #606060;
 }
 
 
@@ -2574,7 +2595,7 @@ SPAN.BUTTONpost I.CARTit {
     top: 2px;
     margin-right: 8px;
 }
-.PURCHASEbox SPAN.BUTTONpost I.CARTit, .PURCHASEbox SPAN.BUTTONpost I.CARTit::before {
+.PURCHASEbox SPAN.BUTTONpost I.CARTit, .PURCHASEbox SPAN.BUTTONpost I.CARTit::before, .SORRYuser SPAN.BUTTONpost I.CARTit, .SORRYuser SPAN.BUTTONpost I.CARTit::before {
     height: 20px;
     width: 20px;
 }
@@ -3329,14 +3350,14 @@ A.BTNdownload .BTNdownloadLeft::before {
 
 
 
-.MSGfailure, .SUPPORTinst {
+.MSGfailure, .SUPPORTinst, H4.BLOCKh4 SPAN {
     font-family: var(--font-open);
 }
-.MSGfailure H4 {
+.MSGfailure H4, H4.BLOCKh4 {
     color: #606060;
     font-size: 32px;
 }
-.MSGfailure H4 SPAN {
+.MSGfailure H4 SPAN, H4.BLOCKh4 SPAN {
     display: block;
     font-size: 14px;
     font-family: var(--font-open);
@@ -3434,12 +3455,12 @@ A.BTNdownload .BTNdownloadLeft::before {
 }
 
 
-.DOCUMENTtab h1 {
-    font-family: var(--font-open);
+.DOCUMENTtab H1 {
+    font-family: var(--font-poppins);
     color: #333;
     padding: 0 0 10px;
     font-size: 18px;
-    font-weight: 400;
+    font-weight: 500;
 }
 .DOCUMENTtab .bttm18 {
     margin-bottom: 18px;
@@ -3448,20 +3469,20 @@ A.BTNdownload .BTNdownloadLeft::before {
     max-width: 522px;
     font-family: var(--font-lato);
 }
-.DOCUMENTtab DIV.flex li {
+.DOCUMENTtab DIV.flex LI {
     width: 100%;
     display: flex;
 }
-.DOCUMENTtab DIV.flex li:not(:last-child) {
+.DOCUMENTtab DIV.flex LI:not(:last-child) {
     padding: 8px 0;
 }
-.DOCUMENTtab DIV.flex li:last-child {
+.DOCUMENTtab DIV.flex LI:last-child {
     margin-top: 8px;
 }
-.DOCUMENTtab DIV.flex li * {
+.DOCUMENTtab DIV.flex LI * {
     float: left;
 }
-.DOCUMENTtab DIV.flex li p {
+.DOCUMENTtab DIV.flex LI P {
     width: 50%;
     line-height: 32px !IMPORTANT;
 }
@@ -3473,8 +3494,8 @@ A.BTNdownload .BTNdownloadLeft::before {
     font-weight: 400;
     word-break: break-word;
 }
-.DOCUMENTtab DIV.flex li span {
-    background: -webkit-gradient(linear,left top,left bottom,from(#f5f5f5),to(#f1f1f1));
+.DOCUMENTtab DIV.flex LI SPAN {
+    background: -webkit-gradient(linear,left top,left bottom,from(#fdfdfd),to(#f5f5f5));
     -webkit-border-radius: 2px;
     -webkit-transition: all .2s;
     -webkit-box-sizing: content-box;
@@ -3483,7 +3504,6 @@ A.BTNdownload .BTNdownloadLeft::before {
     border-radius: 2px;
     border: 1px solid rgba(0,0,0,0.08);
     color: #6f6f6f;
-    cursor: pointer;
     padding: 2px 10px;
     line-height: 26px;
     text-align: center;
@@ -3491,8 +3511,10 @@ A.BTNdownload .BTNdownloadLeft::before {
     vertical-align: middle;
     font-size: 11px;
     position: relative;
+    word-spacing: 2px;
+    letter-spacing: 0.7px;
     display: inline-block;
-    font-weight: 500;
+    font-weight: 700;
 }
 
 
@@ -3774,14 +3796,14 @@ DIV.SUCESSemail .YOURmail SPAN {
     box-shadow: inset 0 0 0 2px #c00;
     color: #c00;
 }
-.COMPLETreset STRONG {
+.COMPLETreset STRONG, .SORRYuser .OPTIONSinst STRONG {
     position: relative;
     margin: 0.9em auto;
     text-align: center;
     display: block;
     max-width: 260px;
 }
-.COMPLETreset STRONG SPAN {
+.COMPLETreset STRONG SPAN, .SORRYuser .OPTIONSinst STRONG SPAN {
     color: #737373;
     background-color: #fff;
     padding: 0 1em;
@@ -3791,7 +3813,7 @@ DIV.SUCESSemail .YOURmail SPAN {
     font-weight: 100;
     font-size: 16px;
 }
-.COMPLETreset STRONG::after {
+.COMPLETreset STRONG::after, .SORRYuser .OPTIONSinst STRONG::after {
     content: "";
     width: 100%;
     height: 1px;
@@ -3802,6 +3824,21 @@ DIV.SUCESSemail .YOURmail SPAN {
     box-sizing: inherit;
 }
 
+.SORRYuser {
+    padding: 46px 46px 32px;
+    max-width: 632px;
+    margin: 40px auto;
+    background: #fff;
+    border-radius: 6px;
+}
+.SORRYuser .OPTIONSinst A {
+    margin: 0 auto;
+    display: table;
+}
+.SORRYuser .OPTIONSinst A.BTNit.CHECKout {
+    width: 100%;
+    max-width: 200px;
+}
 
 .LOGINspot DIV.SUCESSemail {
     margin: 0 !IMPORTANT;
