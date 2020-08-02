@@ -4355,18 +4355,23 @@ body[checkout] .PAYMENTmethod .SUCESSinst {
 }
 
 
-
 .PAYMENTmethod I.CROSSicon.SUCCESicon, .SESSbox I.CROSSicon.SUCCESicon {
+    background: #5ac857;	
+}
+.SESSbox I.CROSSicon.FAILicon {
+    background: #dc0000;	
+}
+
+.PAYMENTmethod I.CROSSicon.SUCCESicon, .SESSbox I.CROSSicon.SUCCESicon, .SESSbox I.CROSSicon.FAILicon {
     color: #fff;
     margin: 0 auto;
     border-radius: 50%;
     z-index: 9;
-    background: #5ac857;
     padding: 32px;
     text-align: center;
     box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
 }
-.PAYMENTmethod I.CROSSicon.SUCCESicon, .PAYMENTmethod I.CROSSicon.SUCCESicon::after, .SESSbox I.CROSSicon.SUCCESicon, .SESSbox I.CROSSicon.SUCCESicon::after {
+.PAYMENTmethod I.CROSSicon.SUCCESicon, .PAYMENTmethod I.CROSSicon.SUCCESicon::after, .SESSbox I.CROSSicon.SUCCESicon, .SESSbox I.CROSSicon.SUCCESicon::after, .SESSbox I.CROSSicon.FAILicon, .SESSbox I.CROSSicon.FAILicon::after {
     content: '';
     width: 58px;
     height: 58px;
@@ -5014,18 +5019,15 @@ DIV.BULBmsg .INSTconex .BULBLEit .CONEXinst::after {
     overflow: hidden;
     outline: 0;
 }
-.JDIVinst, .JDIVinst::after, .CIRCLEon, .CIRCLEon::after {
+.CIRCLEon, .CIRCLEon::after {
     width: 60px;
     height: 60px;
     display: block;
 }
-.JDIVinst {
-    animation: arrow 1.2s steps(12) infinite;
-}
 .CIRCLEon {
     animation: arrow 0.7s steps(360) infinite;
 }
-.JDIVinst, .CIRCLEon {
+.CIRCLEon {
     z-index: 1;
     position: absolute;
     top: calc(50% - 30px);
@@ -5043,7 +5045,7 @@ DIV.BULBmsg .INSTconex .BULBLEit .CONEXinst::after {
     right: 0;
     bottom: 0;
 }
-.JDIVinst::after, .CIRCLEon::after {
+.CIRCLEon::after {
     content: '';
 }
 @keyframes arrow{
