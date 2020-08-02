@@ -324,6 +324,23 @@ if(Object.getOwnPropertyNames(JSON.parse(localStorage.BOOKmark)).includes(new UR
 		document.querySelector('.Blog').innerHTML = CONTROLLpay;
 
 
+		firebase.auth().onAuthStateChanged(function(user) {
+		if(user){
+
+			document.getElementById('INPUTcardName').value = user.displayName;
+			document.getElementById('cardholderName').value = user.displayName;
+			document.querySelector('.CARDname').innerText = user.displayName;
+			document.querySelector('.CARDname').classList.add('TEXTon');
+			document.getElementById('INPUTdateEmail').value = user.email;
+			document.getElementById('email').value = user.email;
+			document.getElementById('confirmEmail').value = user.email;
+			document.querySelector('DIV.STEPbox').classList.add('CROSSstep');
+
+		for(var i = 0; i < document.querySelectorAll('DIV.SPOTinst').length; i++){
+			document.querySelectorAll('DIV.SPOTinst')[i].classList.toggle('DISPLAYnone');	}
+		}});
+
+
 		if(document.body.contains(document.querySelector('.INPUTclass'))){
 			const INPUTclass = document.querySelectorAll('.INPUTclass');
 			
@@ -661,18 +678,31 @@ if(Object.getOwnPropertyNames(JSON.parse(localStorage.BOOKmark)).includes(new UR
 
 					let SLCTInstallments = document.querySelector('#installments');
 					const VALUEinstallments = SLCTInstallments.options[SLCTInstallments.options.selectedIndex].innerText;
-
-					formSubmit({
-						postid: DEMOid,
-						transaction_amount: parseFloat(VALUEpay),
-						token: response.id,
-						description: JSONit.entry.title.$t,
-						installments: Number(SLCTInstallments.options[SLCTInstallments.options.selectedIndex].value),
-						payment_method_id: paymentMethodId,
-						payer: {
-						  email: document.querySelector('#email').value
+					
+					firebase.auth().onAuthStateChanged(function(user) {
+						if (user) {
+							userId = user.uid;
+						  // User is signed in.
+						} else {
+							userId = null;
+						  // No user is signed in.
 						}
-					});
+
+						formSubmit({
+							userId,
+							postid: DEMOid,
+							transaction_amount: parseFloat(VALUEpay),
+							token: response.id,
+							description: JSONit.entry.title.$t,
+							installments: Number(SLCTInstallments.options[SLCTInstallments.options.selectedIndex].value),
+							payment_method_id: paymentMethodId,
+							payer: {
+							  email: document.querySelector('#email').value
+							}
+						});
+
+					  });
+
 					form.addEventListener('submit', (event) => {
 						event.preventDefault(); });
 				}
@@ -926,7 +956,6 @@ window.onload = function(){
 	function focusOutInput(){
 		if(document.body.contains(document.querySelector('.INPUTclass'))){
 			const INPUTclass = document.querySelectorAll('.INPUTclass');
-			console.log(INPUTclass)
 			for(var i = 0; i < INPUTclass.length; i++){
 				INPUTclass[i].addEventListener('focusout', function(){
 				if(this.value.length >= 1){
@@ -935,7 +964,7 @@ window.onload = function(){
 				this.removeAttribute('class');}});}}}
 
 	//PAGINA DE LOGIN
-	if(window.location.href.indexOf('/p/login.html') > -1 || window.location.href.indexOf('/p/session.html') > -1){
+	if(window.location.href.indexOf('/p/login.html') > -1){
 	document.body.setAttribute('login', '');}
 
 	//PAGINA DE CHECKOUT
@@ -1465,44 +1494,88 @@ focusOutInput();
 
 
 if(window.location.href.indexOf('/p/session.html') > -1){
-	
+
 	var url = new URL(window.location.href);
 	var DEMOid = url.searchParams.get("id");
 
-	if (DEMOid != null) {
-
-const db = firebase.firestore();
-db.collection("auth").doc(DEMOid).get().then(function(doc) {
-
+if (DEMOid != null) {
+	firebase.firestore().collection("auth").doc(DEMOid).get().then(function(doc) {
 	if (doc.exists) {
+	if (user) {
+	if(user.email === doc.data().email){
+		// SE O OS USUARIO FOR VERDADEIRO
+
+	const content = `<div class="SESSbox" style="margin-top: 18px;"><div class="SESSinst">
+	<div class="SUCESShead"><i class="CROSSicon SUCCESicon"></i></div>
+	<p class="SUCESSh1">Pronto!</p>
+	<p class="SUCESStext">Template adicionado com sucesso.</p>
+	</div></div>`;
+
+	// document.querySelector('.Blog').innerHTML = content;
+
+		firebase.database().ref(`users/nfAIW4fCrPft6S6TStcf4lRGkHY2/item`).once("value", (snapshot) =>{
+        console.log(snapshot.val());
+    	});
+
+		console.log(user.uid)
+
+		firebase.functions().httpsCallable('usercreate')({ cloud: DEMOid, user: user.uid })
+		.then((data) =>{
+			console.log('Sucesso!', data)
+		}).catch((erro)=>{
+			console.log('Erro!', erro)
+		});
+
+	}
+	else {
+			// SE O OS USUARIO FOR DIFERENTE
+			console.log('Mensagem: O email é diferente\nPor favor faça Log Out');
+	}}
+	else {
+			// SE O OS USUARIO FOR DIFERENTE
 
 	const content = '<div class="LOGINspot"><div class="LOGINSPOTinst"><div class="COMPANYlogin"><section class="COMPANYit"></section><span>Crie sua conta Bracael</span></div><form class="FORMsignup"  autocomplete="off"><div class="GROUPinput"><input type="password" id="PASSWORDinput" class="INPUTclass" tabindex="1" autocomplete="off" autofocus="" autocapitalize="off" autocorrect="off"></input><label>Senha</label></div><div class="GROUPinput"><input type="password" id="CONFIRMpassInput" class="INPUTclass" tabindex="2" autocomplete="off"></input><div class="SHOWpass"></div><label>Confirmar senha</label></div><div class="FOOTERlogin"><button class="CREATEacount" tabindex="3">Criar conta</button></div></form></div></div>';
 
 	document.querySelector('.Blog').innerHTML = content;
 	focusOutInput();
 
+
 		document.querySelector('.FORMsignup').addEventListener('submit', (event) => {
 			event.preventDefault(); });
 
-	document.querySelector('.CREATEacount').addEventListener('click', function(){
+		document.querySelector('.CREATEacount').addEventListener('click', function(){
 
 		var PASSWORDinput = document.getElementById('PASSWORDinput');
 		var CONFIRMpassInput = document.getElementById('CONFIRMpassInput');
-			
+
 		if(PASSWORDinput.value == CONFIRMpassInput.value){
-		firebase.auth().createUserWithEmailAndPassword(doc.data().email, PASSWORDinput.value).then(function(result){
-			
-					
-			db.collection("auth").doc(doc.id).delete().then(function() {
-				console.log("Document successfully deleted!");
-			}).catch(function(error) {
-				console.error("Error removing document: ", error);
+		var auth = firebase.auth();
+		auth.createUserWithEmailAndPassword(doc.data().email, PASSWORDinput.value).then(function(result){
+
+			var user = auth.currentUser;
+
+			const createUser = firebase.functions().httpsCallable('createUser');
+			createUser({ cloud: DEMOid, user: user.uid }).then(function(){
+				console.log('Enviado!')
+			}).catch(function(){
+				console.log('Erro!')
 			});
+
+			// result.user.sendEmailVerification().then(function(){
+			// console.log("email verification sent to user");
+			// });
+
+			// db.collection("auth").doc(doc.id).delete().then(function() {
+			// 	console.log("Document successfully deleted!");
+			// }).catch(function(error) {
+			// 	console.error("Error removing document: ", error);
+			// });
 			
 			return result.user.updateProfile({
 					displayName: doc.data().name.trim()
 				});
-				},function (error){
+		},function (error){
+
 					// Handle Errors here.
 					var errorCode = error.code;
 					var errorMessage = error.message;
@@ -1510,24 +1583,26 @@ db.collection("auth").doc(DEMOid).get().then(function(doc) {
 					console.log('Erro:', errorMessage);
 					return Result = "false";
 					// ...
-				});}
+		});}
+
 				else{
 					console.log('Erro: erroCreateUser');}
 			});
+	}
+
+
 
 	} else {
 		// doc.data() will be undefined in this case
-		window.location.replace("/p/account.html");
+		window.location.replace("/bracael.com/");
 	}
 
 
 	}).catch(function(error) {
 		console.log("Error getting document:", error);
-	})
-}
-focusOutInput();
+	});
 
-}
+}}
 
 
 if(window.location.href.indexOf('/p/account.html') > -1){
@@ -1727,17 +1802,27 @@ SLCTtoPay[i].addEventListener('click', function(){
 }
 
 
-var db = firebase.database();
-var ref = db.ref('post/752219519979715334');
+// console.log(String(user.uid))
 
-// Attach an asynchronous callback to read the data at our posts reference
-ref.once("value", function(snapshot) {
+// var db = firebase.database();
+// var ref = db.ref('post/6277659924819246326');
+// // Attach an asynchronous callback to read the data at our posts reference
+// ref.once("value", function(snapshot) {
+// //   if(snapshot.val().sales != null){
+// // 	ref.update({ "sales": Number()+1 });  }
+// // 	else{
+// // 	ref.update({ "sales": 1 }); }
 
-	ref.update({ "sales": Number(snapshot.val().sales)+1 });
+// 	// console.log('snapshot.val() != null', snapshot.val() != null)
 
-  }, function (errorObject) {
-	console.log("The read failed: " + errorObject.code);
-  });
+// 	console.log(snapshot.val().sales)
+// 	console.log(++snapshot.val().sales)
+
+// }, function (errorObject) {
+//   console.log("The read failed: " + errorObject.code);
+// });
+
+
 
 // firebase.database().ref('users/dgop2p/item').set({
 // 	"4629514224124259684":{
@@ -1746,12 +1831,16 @@ ref.once("value", function(snapshot) {
 // 	}
 // });
 
+console.log(user.uid)
 
-var starCountRef = firebase.database().ref(`users/${user.email.split('@')[0]}`);
-starCountRef.on('value', function(snapshot) {
+var starCountRef = firebase.database().ref(`users/${user.uid}`);
+starCountRef.once('value', function(snapshot) {
 
 	for(var i = 0; i < Object.getOwnPropertyNames(snapshot.val().item).length; i++){
-	
+
+	console.log(snapshot.val().item[`${Object.getOwnPropertyNames(snapshot.val().item)[i]}`]);
+	console.log(Object.getOwnPropertyNames(snapshot.val().item)[i]);
+
 		const ARRAYdate = new Intl.DateTimeFormat('pt-BR', { weekday: 'long', day: 'numeric', month: 'numeric', year: 'numeric', hour: '2-digit', minute: 'numeric', hour12: true });
 		const [{ value: weekday },,{ value: day },,{ value: month },,{ value: year },,{ value: hour },,{ value: minute },,{ value: hour12 }] = ARRAYdate.formatToParts(new Date(snapshot.val().item[`${Object.getOwnPropertyNames(snapshot.val().item)[i]}`].data));
 	
@@ -1778,10 +1867,6 @@ document.querySelectorAll('[data-product]')[i].addEventListener('click', functio
 
 });
 
-
-
-
-
 }
 
 
@@ -1800,6 +1885,10 @@ else {
 }
 
 });
+
+
+
+
 
 
 }
