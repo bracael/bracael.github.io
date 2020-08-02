@@ -1513,9 +1513,16 @@ if (DEMOid != null) {
 
 	// document.querySelector('.Blog').innerHTML = content;
 
-		firebase.database().ref(`users/nfAIW4fCrPft6S6TStcf4lRGkHY2/item`).once("value", (snapshot) =>{
+	const base = firebase.database().ref("users/" +user.uid);
+
+      base.once("value", function(snapshot) {
         console.log(snapshot.val());
-    	});
+
+      });
+
+		// firebase.database().ref(`users/nfAIW4fCrPft6S6TStcf4lRGkHY2/item`).once("value", (snapshot) =>{
+        // console.log(snapshot.val());
+    	// });
 
 		console.log(user.uid)
 
