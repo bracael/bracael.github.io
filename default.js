@@ -1284,12 +1284,12 @@ if(JSONparse[OBJname[i]].hasOwnProperty('POSTup')){
 
 if(POSTup.includes('free')){
 	var CONTENTpage = '<div class="POSTbox BOOKmark" id="'+OBJname[i]+'"><div class="POSTinst"><section class="POSTup ' +POSTup+ '"><div class="POSTimg"><img class="THUMBnail" src="' +pIMG+ '"></img></div><div class="POSTbttm"><div class="POSTspot"><i class="BTNdel" rel="'+OBJname[i]+'"></i></div></div></section><section class="POSTbt"><div class="POSTbt_inner"><h3 class="POSTtitle"><a class="POSTurl" href="'+pURL+'">'+pTITLE+'</a></h3><div class="POSTdate CALENDar">'+pDATE+'</div><div class="POSTBOXbt"><div class="POSTprice">GRÁTIS!</div><div class="POSTbtn"><li><a class="BTNlive" href="/p/demo.html?id=' +OBJname[i]+ '" target="_blank">Demo</a></li><li><a class="BTNinfo" href="' +pURL+ '">Info</a></li></div></div></div></section></div></div>';}
-	else if(POSTup.includes('excl')){
+else if(POSTup.includes('excl')){
 	var CONTENTpage = '<div class="POSTbox BOOKmark" id="'+OBJname[i]+'"><div class="POSTinst"><section class="POSTup ' +POSTup+ '"><div class="POSTimg"><img class="THUMBnail" src="' +pIMG+ '"></img></div><div class="POSTbttm"><div class="POSTspot"><i class="BTNdel" rel="'+OBJname[i]+'"></i></div></div></section><section class="POSTbt"><div class="POSTbt_inner"><h3 class="POSTtitle"><a class="POSTurl" href="'+pURL+'">'+pTITLE+'</a></h3><div class="POSTdate CALENDar">'+pDATE+'</div><div class="POSTBOXbt"><div class="POSTbtn MAXwidth"><li><a class="BTNlive" href="/p/demo.html?id=' +OBJname[i]+ '" target="_blank">DEMO</a></li><li><a class="BTNinfo" href="' +pURL+ '">Info</a></li></div></div></div></section></div></div>';}
 else{
 	var CONTENTpage = '<div class="POSTbox BOOKmark" id="'+OBJname[i]+'"><div class="POSTinst"><section class="POSTup"><div class="POSTimg"><img class="THUMBnail" src="' +pIMG+ '"></img></div><div class="POSTbttm"><div class="POSTspot"><i class="BTNdel" rel="'+OBJname[i]+'"></i></div></div></section><section class="POSTbt"><div class="POSTbt_inner"><h3 class="POSTtitle"><a class="POSTurl" href="'+pURL+'">'+pTITLE+'</a></h3><div class="POSTdate CALENDar">'+pDATE+'</div><div class="POSTBOXbt"><div class="POSTprice">'+pPRICE+'</div><div class="POSTbtn"><li><a class="BTNlive" href="/p/demo.html?id=' +OBJname[i]+ '" target="_blank">Demo</a></li><li><a class="BTNinfo" href="' +pURL+ '">Info</a></li></div></div></div></section></div></div>';}
 
-
+	document.getElementById('LOADINGcircle').remove();
 BLOGinst.insertAdjacentHTML('beforeend', CONTENTpage)}
 if(OBJname.length > 1){
 var BOOKtitle = '<h3 class="BOOKtitle">Há ' +OBJname.length+ ' temas na sua lista!</h3>';}
