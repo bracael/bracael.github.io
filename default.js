@@ -1046,7 +1046,7 @@ if(url.searchParams.get("id") != ''){
 	var DEMOurl = url.searchParams.get("id");}
 	else{
 	window.location.assign(window.location.protocol +'//'+ window.location.hostname);}
-	document.getElementById('HTTPXMLresquest').setAttribute('src', 'https://tema404.blogspot.com/feeds/posts/default/' +url.searchParams.get("id")+ '?alt=json-in-script&callback=HTTPXMLresquest');}
+	document.getElementById('HTTPXMLresquest').setAttribute('src', 'https://www.bracael.com/feeds/posts/default/' +url.searchParams.get("id")+ '?alt=json-in-script&callback=HTTPXMLresquest');}
 
 
 //EFFECT MODAL
@@ -1856,11 +1856,11 @@ starCountRef.once('value', function(snapshot) {
 		</div>`);
 
 	const dataProduct = document.querySelectorAll('[data-product]')[i].getAttribute('data-product');
-	document.head.insertAdjacentHTML('beforeend', `<script src="https://tema404.blogspot.com/feeds/posts/default/${dataProduct}?alt=json-in-script&callback=HTTPXMLresquest" type="text/javascript"></script>`);
+	document.head.insertAdjacentHTML('beforeend', `<script src="https://www.bracael.com/feeds/posts/default/${dataProduct}?alt=json-in-script&callback=HTTPXMLresquest" type="text/javascript"></script>`);
 
 document.querySelectorAll('[data-product]')[i].addEventListener('click', function(event){
 
-	document.getElementById('HTTPXMLresquest').src = `https://tema404.blogspot.com/feeds/posts/default/${this.getAttribute('data-product')}?alt=json-in-script&callback=HTTPXMLresquest`;
+	document.getElementById('HTTPXMLresquest').src = `https://www.bracael.com/feeds/posts/default/${this.getAttribute('data-product')}?alt=json-in-script&callback=HTTPXMLresquest`;
 
 	$('.MODALproduct').fadeIn(500);
 	document.querySelector('.MODALproduct').classList.add('ACTIVEit');
