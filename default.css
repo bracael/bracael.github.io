@@ -3521,6 +3521,10 @@ A.BTNdownload .BTNdownloadLeft::before {
 
 
 
+#SCREENin.DISPLAYnone {
+    display: none;
+}
+
 
 .LOGINspot .COMPANYlogin.SUCESSemail {
     margin: 0 0 16px !IMPORTANT;
@@ -3822,6 +3826,9 @@ DIV.SUCESSemail .YOURmail SPAN {
     top: 50%;
     left: 0;
     box-sizing: inherit;
+}
+A.TABLEdiv {
+    color: #1a73e8;
 }
 
 .SORRYuser {
