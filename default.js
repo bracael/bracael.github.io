@@ -1046,7 +1046,7 @@ if(url.searchParams.get("id") != ''){
 	var DEMOurl = url.searchParams.get("id");}
 	else{
 	window.location.assign(window.location.protocol +'//'+ window.location.hostname);}
-	document.getElementById('HTTPXMLresquest').setAttribute('src', 'https://www.bracael.com/feeds/posts/default/' +url.searchParams.get("id")+ '?alt=json-in-script&callback=HTTPXMLresquest');}
+	document.getElementById('HTTPXMLresquest').setAttribute('src', 'https://tema404.blogspot.com/feeds/posts/default/' +url.searchParams.get("id")+ '?alt=json-in-script&callback=HTTPXMLresquest');}
 
 
 //EFFECT MODAL
