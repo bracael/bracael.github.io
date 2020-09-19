@@ -9,17 +9,17 @@ document.body.innerHTML = `
     <section class="LOGOmarc"></section>
     <ul>
         <ol>
-            <li><a class="HREFhome" href="?main=index">Área de serviço</a></li>
+            <li><a class="HREFhomeItem" href="?main=index">Área de serviço</a></li>
         </ol>
         <ol>
-            <li><a class="HREFdoc" href="?main=products">Meus produtos</a></li>
-            <li><a class="HREFbout" href="javascript:void(0)" onclick="alert('Bracael.COM\nVersão Alpha, 16.09.2020\nO Conteúdo para está página estará disponivel em breve.')">Estatísticas</a></li>
-            <li><a class="HREFdoc" href="javascript:void(0)" onclick="alert('Bracael.COM\nVersão Alpha, 16.09.2020\nO Conteúdo para está página estará disponivel em breve.')">Avaliações</a></li>
-            <li><a class="HREFdoc" href="?main=settings">Configurações</a></li>
+            <li><a class="HREFfoodItem" href="?main=products">Meus produtos</a></li>
+            <li><a class="HREFsttcItem" href="javascript:void(0)" onclick="alert('Bracael.COM\\n'+'Versão Alpha, 16.09.2020\\n'+'O Conteúdo para está página estará disponivel em breve.')">Estatísticas</a></li>
+            <li><a class="HREFratgItem" href="javascript:void(0)" onclick="alert('Bracael.COM\\nVersão Alpha, 16.09.2020\\nO Conteúdo para está página estará disponivel em breve.')">Avaliações</a></li>
+            <li><a class="HREFcnfgItem" href="?main=settings">Configurações</a></li>
         </ol>
         <ol>
-            <li><a class="HREFfeed" href="javascript:void(0)" onclick="alert('Bracael.COM\nVersão Alpha, 16.09.2020\nO Conteúdo para está página estará disponivel em breve.')">Suporte</a></li>
-            <li><a class="HREFfeed" href="javascript:void(0)" feedback="" onclick="alert('Bracael.COM\nVersão Alpha, 16.09.2020\nO Conteúdo para está página estará disponivel em breve.')">Enviar feedback</a></li>
+            <li><a class="HREFhelpItem" href="javascript:void(0)" onclick="alert('Bracael.COM\\nVersão Alpha, 16.09.2020\\nO Conteúdo para está página estará disponivel em breve.')">Suporte</a></li>
+            <li><a class="HREFfeedItem" href="javascript:void(0)" feedback="" onclick="alert('Bracael.COM\\nVersão Alpha, 16.09.2020\\nO Conteúdo para está página estará disponivel em breve.')">Enviar feedback</a></li>
         </ol>
         <footer>
             <span>© COPYRIGTH 2020<br/>Bracael – Todos os direitos reservados.</span>
@@ -44,6 +44,10 @@ document.body.innerHTML = `
     </article>
 </main>
 </div>`;
+
+document.querySelector('[name="userEnd"]').addEventListener('click', function(){
+    firebase.auth().signOut()
+});
 
 const database = firebase.database();
 const ARRAYweek = ["Domingo", "Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado"]
@@ -173,8 +177,8 @@ if(main === 'index'){
                         <p>${data[1].street}, ${data[1].number}<br/>${data[1].district}</p>
                     </div>
                     <div class="CLASSbttnModal">
-                        <button type="button" name="WINDOWmodalInfo">Info</button>
-                        <button type="button" name="WINDOWmodalComanda">Comanda</button>
+                        <button type="button" name="WINDOWmodalCliente" js-win="${i}"><i class="CROSSicon"></i>Cliente</button>
+                        <button type="button" name="WINDOWmodalComanda" js-win="${i}"><i class="CROSSicon"></i>Comanda</button>
                     </div>
                 </div>
                 <div class="CARDrightIitem">
@@ -189,16 +193,16 @@ if(main === 'index'){
                     </div>
                     <div class="RIGHTitemMaster">
                         <span>TOTAL: ${Number(data[1].tovalue).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</span>
-                        <button type="button" name="BTTNitemRemove">Remover pedido</button>
+                        <button type="button" name="BTTNitemRemove" js-win="${i}"><svg class="SVGitemRemove" enable-background="new 0 0 515.556 515.556" height="12" viewBox="0 0 515.556 515.556" width="12" xmlns="http://www.w3.org/2000/svg"><path d="m64.444 451.111c0 35.526 28.902 64.444 64.444 64.444h257.778c35.542 0 64.444-28.918 64.444-64.444v-322.222h-386.666z"/><path d="m322.222 32.222v-32.222h-128.889v32.222h-161.111v64.444h451.111v-64.444z"/></svg>Remover pedido</button>
                     </div>
                 </div>
             </div>
             <div>
                 <div class="CLASSitemBttns">
                     <button type="button" name="WHATSsendContact" js-win="${i}"><i class="CROSSicon"></i>Enviar</button>
-                    <button onclick="javascript:window.open('https://www.google.com/maps/dir/${info.address.replace(/ /gi,'+')},+${info.number}+-+${info.district.replace(/ /gi,'+')},+${info.region.replace(/ /gi,'+')}+-+${info.unity},+${info.zipcode}/${data[1].street.replace(/ /gi,'+')},+${data[1].number}+-+${data[1].district.replace(/ /gi,'+')},+${info.region.replace(/ /gi,'+')}+-+${info.unity}')"><i class="CROSSicon"></i>Rota</button>
-                    <button onclick="javascript:window.open('https://www.google.com/maps/place/${data[1].street.replace(/ /gi,'+')},+${data[1].number}+-+${data[1].district.replace(/ /gi,'+')},+${info.region.replace(/ /gi,'+')}+-+${info.unity}')"><i class="CROSSicon"></i>Local</button>
-                    <button type="button" onClick="alert('Estamos trabando, este recurso estará disponivel em breve.')"><i class="CROSSicon"></i>Imprimir</button>
+                    <button type="button" name="BTTNcssRota" onclick="javascript:window.open('https://www.google.com/maps/dir/${info.address.replace(/ /gi,'+')},+${info.number}+-+${info.district.replace(/ /gi,'+')},+${info.region.replace(/ /gi,'+')}+-+${info.unity},+${info.zipcode}/${data[1].street.replace(/ /gi,'+')},+${data[1].number}+-+${data[1].district.replace(/ /gi,'+')},+${info.region.replace(/ /gi,'+')}+-+${info.unity}')"><i class="CROSSicon"></i>Rota</button>
+                    <button type="button" name="BTTNcssLocal" onclick="javascript:window.open('https://www.google.com/maps/place/${data[1].street.replace(/ /gi,'+')},+${data[1].number}+-+${data[1].district.replace(/ /gi,'+')},+${info.region.replace(/ /gi,'+')}+-+${info.unity}')"><i class="CROSSicon"></i>Local</button>
+                    <button type="button" name="BTTNcssPrint" onClick="alert('Estamos trabando, este recurso estará disponivel em breve.')"><i class="CROSSicon"></i>Imprimir</button>
                 </div>
                 <div class="CLASSitemTimestamp">
                     ${day} ${month} ${year} ás ${hour}:${minute} ${hour12}
@@ -236,27 +240,207 @@ if(main === 'index'){
 
 
 
-    document.querySelectorAll('[name="WINDOWmodalInfo"]').forEach(function(data){
+    document.querySelectorAll('[name="WINDOWmodalCliente"]').forEach(function(data){
         data.addEventListener('click', function(){
+            const JSwinAtt = this.getAttribute('js-win');
+            const JSwinStatus = document.querySelectorAll('.CARDitemWait')[JSwinAtt].getAttribute('data-id');
 
-            console.log('WINDOWmodalInfo')
+            const ARRAYdate = new Intl.DateTimeFormat('pt-BR', { weekday: 'long', day: 'numeric', month: 'short', year: 'numeric', hour: '2-digit', minute: 'numeric', hour12: true });
+            const [{ value: weekday },,{ value: day },,{ value: month },,{ value: year },,{ value: hour },,{ value: minute },,{ value: hour12 }] = ARRAYdate.formatToParts(new Date(result.order[JSwinStatus].time));
+
+            document.body.insertAdjacentHTML('beforeend', `
+            <div class="MODALdefault WINDOWmodalCliente">
+                <div class="MODALinst">
+                    <div class="CONTENTmodal">
+                        <div class="MODALelemTitle">
+                            <span>${result.order[JSwinStatus].client}</span>
+                        </div>
+                        <div class="MODALelemMsg">
+                            <div class="DIVISORitemP">
+                                <p>Endereço</p>
+                                <p>${result.order[JSwinStatus].street}, ${result.order[JSwinStatus].number}<br/>${result.order[JSwinStatus].district}</p>
+                            </div>
+                            <div class="DIVISORitemP">
+                                <p>Telefone</p>
+                                <p>${result.order[JSwinStatus].tel}</p>
+                            </div>
+                            <div class="DIVISORitemP">
+                                <p>Pagamento</p>
+                                <p>${result.order[JSwinStatus].payment}</p>
+                            </div>
+                            ${result.order[JSwinStatus].comment != '' ? `
+                            <div class="DIVISORitemP">
+                                <p>Observação</p>
+                                <p>${result.order[JSwinStatus].comment}</p>
+                            </div>` : ''}
+                            ${result.order[JSwinStatus].trade != undefined ? `
+                            <div class="DIVISORitemP">
+                                <p>Troco para</p>
+                                <p>${Number(result.order[JSwinStatus].trade).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</p>
+                            </div>` : ''}
+                            <div class="DIVISORitemP">
+                                <p>TOTAL</p>
+                                <p>${Number(result.order[JSwinStatus].tovalue).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</p>
+                            </div>
+                        </div>
+                        <div class="MODALelemFooter">
+                            <p>${day} ${month} ${year} ás ${hour}:${minute} ${hour12}</p>
+                            <button type="button" name="ACTIONitemCancel">Fechar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>`);
+    
+            $('.MODALdefault').fadeIn(200, function(){
+                this.querySelector('[name="ACTIONitemCancel"]').addEventListener('click', function(){
+                    $('.MODALdefault').fadeOut(200, function(){
+                        this.remove();
+                    });
+                });
+            });
+            document.querySelector('.MODALdefault').querySelector('.CONTENTmodal').insertAdjacentHTML('beforebegin', '<div class="SCREENmodal CLOSEmodal"></div>');
+    
+            if(document.body.contains(document.querySelector('.CLOSEmodal'))){
+                document.querySelector('.CLOSEmodal').addEventListener('click', function click(e){
+                    $('.MODALdefault').fadeOut(200, function(){
+                        this.remove();
+                    });
+                });}
 
         })
     })
 
     document.querySelectorAll('[name="WINDOWmodalComanda"]').forEach(function(data){
         data.addEventListener('click', function(){
+            const JSwinAtt = this.getAttribute('js-win');
+            const CARDitemWait = document.querySelectorAll('.CARDitemWait')[JSwinAtt];
+            const JSwinStatus = document.querySelectorAll('.CARDitemWait')[JSwinAtt].getAttribute('data-id');
 
-            console.log('WINDOWmodalComanda')
+
+            const orderCart = new Array();
+            result.order[JSwinStatus].detail.map(function(item, i){
+
+                const extraItem = new Array();
+                item.extra != undefined ?
+                item.extra.map(function(extra, i){
+
+                    console.log(extra)
+                    extraItem.push(
+                    `<li>
+                        <span>--</span>
+                        <span>--</span>
+                        <span>Extra de ${extra.item}</span>
+                        <span>${extra.amount}un</span>
+                        <span>${Number(extra.price * extra.amount).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</span>
+                    </li>`)
+                }) : null;
+
+                orderCart.push(`
+                    <li>
+                        <span>${new Array(3 + 1 - (i + '').length).join('0') + ++i}</span>
+                        <span>${item.id}</span>
+                        <span>${item.title}</span>
+                        <span>${item.amount}un</span>
+                        <span>${Number(item.price * item.amount).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</span>
+                    </li>
+                    ${extraItem.length != 0 ? extraItem.join('\n') : ''}
+                `);
+            });
+                
+            // console.log(orderCart)
+
+            document.body.insertAdjacentHTML('beforeend', `
+            <div class="MODALdefault WINDOWmodalComanda">
+                <div class="MODALinst">
+                        <div class="CONTENTmodal">
+                        <p class="IMPORTANTline"><b>${result.business.info.brand} Hamburgueria</b></p>
+                        <p class="IMPORTANTline">CNPJ ${result.business.info.cnpj}</p>
+                        <p class="IMPORTANTline">${result.business.info.address}, ${result.business.info.number} ${result.business.info.optional != '' ? `- ${result.business.info.optional} -` : '-'} ${result.business.info.region} - ${result.business.info.unity}</p>
+                        <p>Esta nota não substitui o cupom fiscal, portanto, é uma forma fácil de que o cliente está acostumado a visualizar os detalhes no pedido.</p>
+                        <strong>
+                            <span>#</span>
+                            <span>CÓDIGO</span>
+                            <span>DESCRIÇÃO</span>
+                            <span>QTD.</span>
+                            <span>TOTAL</span>
+                        </strong>
+                        <div class="COMMANDlist">
+                            ${orderCart.join('\n')}
+                            <div class="COMMANDsubtotal">
+                                <span>SUBTOTAL</span>
+                                <span>${Number(result.order[JSwinStatus].subvalue).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</span>
+                            </div>
+                        </div>
+                        <div class="COMMANDfrete">
+                            <span><small>ACRESCIMO</small>VALOR DA ENTREGA</span>
+                            <span>${Number(result.order[JSwinStatus].delivery).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</}</span>
+                        </div>
+                        <div class="COMMANDfooter">
+                                <b>TOTAL A PAGAR</b>
+                                <span>${Number(result.order[JSwinStatus].tovalue).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>`);
+    
+            $('.MODALdefault').fadeIn(200);
+            document.querySelector('.MODALdefault').querySelector('.CONTENTmodal').insertAdjacentHTML('beforebegin', '<div class="SCREENmodal CLOSEmodal"></div>');
+    
+            if(document.body.contains(document.querySelector('.CLOSEmodal'))){
+                document.querySelector('.CLOSEmodal').addEventListener('click', function click(e){
+                    $('.MODALdefault').fadeOut(200, function(){
+                        this.remove();
+                    });
+                });}
 
         })
     })
 
     document.querySelectorAll('[name="BTTNitemRemove"]').forEach(function(data){
         data.addEventListener('click', function(){
+            const JSwinAtt = this.getAttribute('js-win');
+            const CARDitemWait = document.querySelectorAll('.CARDitemWait')[JSwinAtt];
+            const JSwinStatus = document.querySelectorAll('.CARDitemWait')[JSwinAtt].getAttribute('data-id');
 
-            console.log('BTTNitemRemove')
+            document.body.insertAdjacentHTML('beforeend', `
+            <div class="MODALdefault" id="REMOVEitem">
+                <div class="MODALinst">
+                    <div class="CONTENTmodal">
+                        <div class="MODALelemTitle">
+                            <span>Remover pedido?</span>
+                        </div>
+                        <div class="MODALelemMsg">Isso removerá este pedido da categoria "Em atendimento" e não será possivél devolver para cá. Deseja removê-lo?</div>
+                        <div class="MODALelemFooter">
+                            <button type="button" name="ACTIONitemCancel">Cancelar</button>
+                            <button type="button" name="ACTIONitemRemove">Remover pedido</button>
+                        </div>
+                    </div>
+                </div>
+            </div>`);
 
+            $(REMOVEitem).fadeIn(200, function(){
+                this.querySelector('[name="ACTIONitemCancel"]').addEventListener('click', function(){
+                    $(REMOVEitem).fadeOut(200, function(){
+                        this.remove();
+                    });
+                });
+
+                this.querySelector('[name="ACTIONitemRemove"]').addEventListener('click', function(){
+                    database.ref(`order/${JSwinStatus}`).remove().then(()=>{
+                        database.ref(`dump/${JSwinStatus}`).set(result.order[JSwinStatus]).then(()=>{
+                            window.location.href = '?main=index';
+                        })
+                    })
+                });
+            });
+            REMOVEitem.querySelector('.CONTENTmodal').insertAdjacentHTML('beforebegin', '<div class="SCREENmodal CLOSEmodal"></div>');
+
+            if(document.body.contains(document.querySelector('.CLOSEmodal'))){
+                document.querySelector('.CLOSEmodal').addEventListener('click', function click(e){
+                    $(REMOVEitem).fadeOut(200, function(){
+                        this.remove();
+                    });
+                });}
         })
     })
 
@@ -290,8 +474,6 @@ if(main === 'index'){
         const JSwinAtt = this.getAttribute('js-win');
         const CARDitemWait = document.querySelectorAll('.CARDitemWait')[JSwinAtt];
         const JSwinStatus = document.querySelectorAll('.CARDitemWait')[JSwinAtt].getAttribute('data-id');
-
-        // console.log()
 
         document.body.insertAdjacentHTML('beforeend', `
         <div class="MODALdefault CHANGEradioStatus">
@@ -842,11 +1024,11 @@ else if(main === 'item'){
                 </div>` : ''}
                 <div class="ELEMsessPrice">
                     <label>R$</label>
-                    <input type="text" name="FORMtargetPrice" size="3" value="${data[3].toFixed(2)}" js-price="true">
+                    <input type="text" name="FORMtargetPrice" size="3" value="${Number(data[3]).toFixed(2)}" js-price="true">
                 </div>
             </div>
         </div>`)
-        console.log(i, data)
+        console.log(data[3])
     }) : null;
 
     const postCategory = feed[edit].category;
@@ -875,7 +1057,7 @@ else if(main === 'item'){
     document.getElementsByTagName('ARTICLE')[0].innerHTML = `
     <div class="EDITheadMain">
         <div>
-            <span>Você está publicando para Burger</span>
+            <span>Você está publicando para ${typePost === 'Dessert' ? 'Bomboniere' : typePost === 'Drinks' ? 'Bebidas' : typePost === 'Servings' ? 'Porções' : typePost}</span>
         </div>
         <div>
             <button type="button" name="BTTNupdateItem">Atualizar</button>
@@ -955,10 +1137,15 @@ else if(main === 'item'){
         const ARRAYexistItem = new Array();
         document.querySelectorAll('.GROUPexistItem').forEach((data)=>{
 
-            ARRAYexistItem.push([data.querySelector('[name="FORMtargetItem"]').value.trim(),
-            Number(data.querySelector('[name="FORMtargetLimit"]').value.trim()),
-            data.querySelector('[name="FORMtargetDesc"]').value.trim(),
-            Number(data.querySelector('[name="FORMtargetPrice"]').value.trim())])
+            if(data.querySelector('[name="FORMtargetItem"]').value != '' &&
+            Number(data.querySelector('[name="FORMtargetLimit"]').value.replace(/\./g,'').replace(/\,/g,'.')) != 0 &&
+            data.querySelector('[name="FORMtargetDesc"]').value != '' &&
+            Number(data.querySelector('[name="FORMtargetPrice"]').value.replace(/\./g,'').replace(/\,/g,'.'))){
+                ARRAYexistItem.push([data.querySelector('[name="FORMtargetItem"]').value,
+                Number(data.querySelector('[name="FORMtargetLimit"]').value.replace(/\./g,'').replace(/\,/g,'.')),
+                data.querySelector('[name="FORMtargetDesc"]').value,
+                Number(data.querySelector('[name="FORMtargetPrice"]').value.replace(/\./g,'').replace(/\,/g,'.'))])
+            }
         })
 
         database.ref(`feed/${edit}`).update(JSON.parse(`{
@@ -1888,11 +2075,6 @@ else {
     window.location.replace('?main=index');
 }
 });
-
-document.querySelector('[name="userEnd"]').addEventListener('click', function(){
-    firebase.auth().signOut()
-});
-
 }
 else {
 const url = new URL(window.location.href);
