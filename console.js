@@ -1880,12 +1880,12 @@ else if(main === 'settings'){
 }
 else {
     // redirecionar pagina para inicio;
-    window.location.replace('./tools.html?main=index');
+    window.location.replace('?main=index');
 }
 }
 else {
     // redirecionar pagina para inicio;
-    window.location.replace('./tools.html?main=index');
+    window.location.replace('?main=index');
 }
 });
 
