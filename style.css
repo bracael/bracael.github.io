@@ -1,0 +1,1414 @@
+/*----------- SETTINGS ----------*/
+:root {
+    font-size: 50%;
+    --font-open: 'Open Sans', Helvetica, sans-serif;
+    --font-poppins: 'Poppins', sans-serif;
+    --font-oswald: 'Oswald',arial,helvetica,sans-serif;
+    --font-lato: 'Lato', Calibri, Arial, sans-serif;
+    --color-clean: #fff;
+    --color-silver: #e4e4e4;
+    --color-clean-solid: #efefef;
+    --color-clean-gray: #f6f7f9;
+    --color-white-op07: rgba(255, 255, 255, 0.7);
+    --color-white-op008: rgba(255, 255, 255, 0.08);
+    --color-single-text: #37474f;
+    --color-white-header: #f6f7f9;
+    --color-aside-bg: #051e34;
+    --color-aside-border: #2a4865;
+    --color-master-border: #009412;
+    --color-black: #000;
+}
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    list-style: none;
+    border: none;
+    text-decoration: none;
+}
+*, ::after, ::before {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+::after, ::before {
+    white-space: pre-wrap;
+}
+
+::-webkit-scrollbar {
+    width: 6px!important;
+    height: 6px!important;
+}
+::-webkit-scrollbar-thumb {
+    background: rgba(0,0,0,0.15);
+    border-radius: 6px;
+}
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+html, body {
+    height: 100vh;
+}
+body,
+input,
+button,
+textarea {
+    font: 300 1.6rem var(--font-poppins);
+}
+input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+}
+input[type="radio"] {
+    display: none;
+}
+
+button {
+    cursor: pointer;
+    background: transparent;
+}
+
+
+button[name="userEnd"], button[name="creatProduct"], input[name="inputSearch"], ARTICLE .ITEMinCommerce, ARTICLE .ITEMinCommerce .ITEMelemImg, .CHOOSEbttn button[type="button"], .EDITindexMain, .EDITindexMain .EDITmainText input, .EDITindexMain .EDITmainText .GROUPinputClass textarea, .EDITindexMain .GROUPimageClass, .MODALdefault .MODALinst .CONTENTmodal, .PUSHnotifyBttm, .SETTINGelemColumn .CLASSinputString input[type="text"], .SETTINGelemColumn .CLASSitemJSKEY  input[type="text"], .CARDitemWait .CARDrightIitem .RIGHTitemBttm .CLASSitemSecond button[name="WINDOWmodalStatus"], .LOGINuserSpot .FOOTERlogin BUTTON[name="USERlogIn"] {
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    border-radius: 3px;
+}
+.EDITheadMain button[type="button"], .CARDitemWait .CARDrightIitem .RIGHTitemBttm {
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+    border-radius: 2px;
+}
+
+body {
+    background: var(--color-clean-gray);
+    overflow: hidden;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+body #root {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 0fr 1fr;
+    grid-template-columns: 0fr 1fr;
+    -ms-grid-template-rows: 1fr;
+    grid-template-rows: 1fr;
+}
+
+/*---------- PUSH MENU ----------*/
+ASIDE#PUSHmenu {
+    width: 100vw;
+    max-width: 256px;
+    color: var(--color-clean-solid);
+    background: var(--color-aside-bg);
+    -webkit-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+    height: 100vh;
+}
+ASIDE#PUSHmenu SECTION.LOGOmarc {
+    align-items: center;
+    display: flex;
+    height: 48px;
+}
+ASIDE#PUSHmenu UL, ARTICLE {
+    overflow-x: hidden;
+    overflow-y: overlay;
+    height: calc(100vh - 48px);
+}
+ASIDE#PUSHmenu SECTION.LOGOmarc, ASIDE#PUSHmenu OL {
+    box-shadow: 0 -1px 0 var(--color-aside-border) inset;
+}
+ASIDE#PUSHmenu OL {
+    font-weight: 500;
+    padding: 12px 0;
+}
+ASIDE#PUSHmenu OL A {
+    color: var(--color-clean);
+    text-decoration: none;
+    display: flex;
+    padding: 7px 10px 7px 62px;
+    line-height: 26px;
+    font-size: 1.5rem;
+    align-items: center;
+}
+ASIDE#PUSHmenu OL A:hover {
+    background: var(--color-white-op008);
+}
+ASIDE#PUSHmenu OL A::before {
+    width: 18px;
+    height: 18px;
+    display: block;
+}
+ASIDE#PUSHmenu OL A::before {
+    content: "";
+}
+ASIDE#PUSHmenu FOOTER {
+    font-family: var(--font-open);
+    padding: 2.2rem 1.6rem;
+    font-size: 1.4rem;
+}
+ASIDE#PUSHmenu FOOTER SPAN {
+    color: var(--color-white-op07);
+    letter-spacing: 0.5px;
+}
+ASIDE#PUSHmenu FOOTER > * {
+    display: block;
+}
+ASIDE#PUSHmenu FOOTER > *:not(:last-child) {
+    padding-bottom: 0.7rem;
+}
+
+/*------------ HEADER -----------*/
+HEADER {
+    width: 100%;
+    background: var(--color-white-header);
+    position: relative;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: max-content max-content;
+    grid-template-columns: max-content max-content;
+    -ms-grid-template-rows: 1fr;
+    grid-template-rows: 1fr;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 1px 2px 0px rgba(60, 64, 67, 0.3),
+    0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+    padding: 0 24px;
+    height: 48px;
+    z-index: 1;
+}
+HEADER > DIV {
+    display: flex;
+}
+HEADER > SPAN {
+    font-size: 2rem;
+    font-weight: 900;
+}
+HEADER BUTTON[name="userEnd"] {
+    color: var(--color-aside-border);
+    box-shadow: inset 0 0 0 2px var(--color-aside-border);
+}
+HEADER BUTTON[name="userEnd"] {
+    font-family: var(--font-lato);
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 6px 1.6rem;
+}
+HEADER BUTTON[name="pushNotify"] {
+    margin-right: 1.6rem;
+}
+HEADER BUTTON[name="pushNotify"], HEADER BUTTON[name="pushNotify"]::after {
+    width: 28px;
+    height: 28px;
+    display: block;
+}
+HEADER BUTTON[name="pushNotify"]::after {
+    content: "";
+}
+HEADER BUTTON[name="pushNotify"]::after {
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0iI2QzZDNkNCIgZD0iTTEyIDNDMTAuODk1NCAzIDEwIDMuODk1NDMgMTAgNVY1LjM0MTQxQzcuNjY5NjIgNi4xNjUwOCA2IDguMzg3NTYgNiAxMVYxNkg1QzQuNDQ3NzIgMTYgNCAxNi40NDc3IDQgMTcgNCAxNy41NTIzIDQuNDQ3NzIgMTggNSAxOEgxOUMxOS41NTIzIDE4IDIwIDE3LjU1MjMgMjAgMTcgMjAgMTYuNDQ3NyAxOS41NTIzIDE2IDE5IDE2SDE4VjExQzE4IDguMzg3NTYgMTYuMzMwNCA2LjE2NTA4IDE0IDUuMzQxNDFWNUMxNCAzLjg5NTQzIDEzLjEwNDYgMyAxMiAzek0xMiAyMUMxMC44OTU0IDIxIDEwIDIwLjEwNDYgMTAgMTlIMTRDMTQgMjAuMTA0NiAxMy4xMDQ2IDIxIDEyIDIxeiIvPjwvc3ZnPg==");
+}
+
+/*-------- MEUS PRODUTOS --------*/
+ARTICLE {
+    font-weight: 500;
+}
+ARTICLE .MASTERmain {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: max-content max-content;
+    grid-template-columns: max-content max-content;
+    -ms-grid-template-rows: 1fr;
+    grid-template-rows: 1fr;
+    justify-content: space-between;
+    padding: 3rem 3rem 0;
+}
+ARTICLE .MASTERmain button[name="creatProduct"] {
+    color: #fff;
+    background: -webkit-gradient(linear,left top,left bottom,from(#0db722),to(#0e9c20));
+    border: 1px solid var(--color-master-border);
+    font-size: 1.4rem;
+    font-weight: 500;
+    padding: 4.5px 1.6rem;
+    text-align: center;
+}
+ARTICLE .MASTERmain input[name="inputSearch"] {
+    color: #5c5c5c;
+    border: 1px solid #e5e5e5;
+    padding: 0 0.8rem;
+    height: 28px;
+}
+ARTICLE .MASTERmain input[name="inputSearch"]::placeholder {
+    color: #999;
+}
+ARTICLE .ITEMinCommerce {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: min-content 1fr max-content;
+    grid-template-columns: min-content 1fr max-content;
+    -ms-grid-template-rows: 1fr;
+    grid-template-rows: 1fr;
+    font-family: var(--font-lato);
+    background: var(--color-clean);
+    border-bottom: 1px solid var(--color-silver);
+    transition: border-bottom 0.3s, box-shadow 0.3s;
+}
+ARTICLE .ITEMinCommerce:hover {
+    border-bottom: 1px solid transparent;
+    box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.30), 0 2px 6px 2px rgba(60, 64, 67, 0.15);
+}
+ARTICLE .ITEMinCommerce:not(:last-child) {
+    margin-bottom: 1.6rem;
+}
+ARTICLE .ITEMinCommerce .ITEMelemImg {
+    max-width: 96px;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+ARTICLE .ITEMinCommerce > DIV IMG {
+    float: left;
+}
+ARTICLE .ITEMinCommerce A {
+    color: var(--color-aside-border);
+}
+ARTICLE .ITEMinCommerce A:hover {
+    text-decoration: underline;
+}
+ARTICLE .ITEMinCommerce .SECTIONtext SPAN {
+    color: var(--color-single-text);
+    font-size: 1.6rem;
+    font-weight: 400;
+    letter-spacing: .4px;
+}
+ARTICLE .ITEMinCommerce > DIV.SECTIONtext {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+ARTICLE .ITEMinCommerce > DIV {
+    padding: 10px;
+}
+ARTICLE .ITEMinCommerce > DIV:not(:nth-child(2)) {
+    display: flex;
+}
+ARTICLE .ITEMinCommerce > DIV.EDITandDeleteOptions {
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: right;
+}
+ARTICLE .ITEMinCommerce .SECTIONtext .TITLEspan SPAN {
+    font-size: 2rem;
+    font-weight: 700;
+}
+ARTICLE .ITEMinCommerce .OPTIONSbtn {
+    display: grid;
+    grid-template-columns: repeat(3, 0fr);
+    grid-gap: 1.6rem;
+}
+ARTICLE .ITEMinCommerce .OPTIONSbtn button, ARTICLE .ITEMinCommerce .OPTIONSbtn button::after {
+    width: 24px;
+    height: 24px;
+    display: block;
+}
+ARTICLE .ITEMinCommerce .OPTIONSbtn button::after {
+    content: "";
+}
+ARTICLE .ITEMinCommerce .OPTIONSbtn button[name="editItem"]::after {
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzODMuOTQ3IDM4My45NDciIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDM4My45NDcgMzgzLjk0NzsiIGZpbGw9IiMzNzQ3NGYiPg0KPGc+DQoJPGc+DQoJCTxnPg0KCQkJPHBvbHlnb24gcG9pbnRzPSIwLDMwMy45NDcgMCwzODMuOTQ3IDgwLDM4My45NDcgMzE2LjA1MywxNDcuODkzIDIzNi4wNTMsNjcuODkzIAkJCSIvPg0KCQkJPHBhdGggZD0iTTM3Ny43MDcsNTYuMDUzTDMyNy44OTMsNi4yNGMtOC4zMi04LjMyLTIxLjg2Ny04LjMyLTMwLjE4NywwbC0zOS4wNCwzOS4wNGw4MCw4MGwzOS4wNC0zOS4wNA0KCQkJCUMzODYuMDI3LDc3LjkyLDM4Ni4wMjcsNjQuMzczLDM3Ny43MDcsNTYuMDUzeiIvPg0KCQk8L2c+DQoJPC9nPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPC9zdmc+DQo=")
+}
+ARTICLE .ITEMinCommerce .OPTIONSbtn button[name="deletItem"]::after, .EDITindexMain .EDITmainAdd .GROUPexistItem button[name="removeIcmntItem"]::after {
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzODQgMzg0IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAzODQgMzg0OyIgZmlsbD0iIzM3NDc0ZiI+DQo8Zz4NCgk8Zz4NCgkJPGc+DQoJCQk8cGF0aCBkPSJNNjQsMzQxLjMzM0M2NCwzNjQuOTA3LDgzLjA5MywzODQsMTA2LjY2NywzODRoMTcwLjY2N0MzMDAuOTA3LDM4NCwzMjAsMzY0LjkwNywzMjAsMzQxLjMzM3YtMjU2SDY0VjM0MS4zMzN6Ii8+DQoJCQk8cG9seWdvbiBwb2ludHM9IjI2Ni42NjcsMjEuMzMzIDI0NS4zMzMsMCAxMzguNjY3LDAgMTE3LjMzMywyMS4zMzMgNDIuNjY3LDIxLjMzMyA0Mi42NjcsNjQgMzQxLjMzMyw2NCAzNDEuMzMzLDIxLjMzMyAJCQkiLz4NCgkJPC9nPg0KCTwvZz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjwvc3ZnPg0K")
+}
+ARTICLE .ITEMinCommerce .OPTIONSbtn button[name="draftItem"]::after {
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0MTAuNDIgNDEwLjQyIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA0MTAuNDIgNDEwLjQyOyIgZmlsbD0iIzM3NDc0ZiI+DQo8cGF0aCBkPSJNMjA1LjIxLDBDOTIuMDU3LDAsMCw5Mi4wNTcsMCwyMDUuMjFzOTIuMDU3LDIwNS4yMSwyMDUuMjEsMjA1LjIxczIwNS4yMS05Mi4wNTcsMjA1LjIxLTIwNS4yMVMzMTguMzY0LDAsMjA1LjIxLDB6DQoJIE0zMzEuMjEsMjI5LjYzMWMwLDUuNS00LjUsMTAtMTAsMTBoLTIzMmMtNS41LDAtMTAtNC41LTEwLTEwVjE4MC43OWMwLTUuNSw0LjUtMTAsMTAtMTBoMjMyYzUuNSwwLDEwLDQuNSwxMCwxMFYyMjkuNjMxeiIvPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPC9zdmc+DQo=")
+}
+ARTICLE .ITEMinCommerce .OPTIONSbtn button[name="removeUnavailable"]::after {
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0MTAuNDIgNDEwLjQyIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA0MTAuNDIgNDEwLjQyOyIgZmlsbD0iI2FhMDAwMCI+DQo8cGF0aCBkPSJNMjA1LjIxLDBDOTIuMDU3LDAsMCw5Mi4wNTcsMCwyMDUuMjFzOTIuMDU3LDIwNS4yMSwyMDUuMjEsMjA1LjIxczIwNS4yMS05Mi4wNTcsMjA1LjIxLTIwNS4yMVMzMTguMzY0LDAsMjA1LjIxLDB6DQoJIE0zMzEuMjEsMjI5LjYzMWMwLDUuNS00LjUsMTAtMTAsMTBoLTIzMmMtNS41LDAtMTAtNC41LTEwLTEwVjE4MC43OWMwLTUuNSw0LjUtMTAsMTAtMTBoMjMyYzUuNSwwLDEwLDQuNSwxMCwxMFYyMjkuNjMxeiIvPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPC9zdmc+DQo=")
+}
+
+
+.MAINbox {
+    padding: 3rem;
+}
+
+/*-------------------------------*/
+/*-------- MEUS PRODUTOS --------*/
+/*-------------------------------*/
+.CHOOSEbttn {
+    display: grid;
+    grid-template-columns: repeat(3, 0fr);
+    grid-gap: 1.6rem;
+    justify-content: center;
+}
+.CHOOSEbttn button[type="button"] {
+    width: 190px;
+    height: 190px;
+}
+.CHOOSEbttn button[type="button"] {
+    background: -moz-linear-gradient(45deg, rgba(0, 0, 0, 0.3) 0%, transparent 90%);
+    background: -webkit-linear-gradient(45deg, rgba(0, 0, 0, 0.3) 0%, transparent 90%);
+    background: linear-gradient(45deg, rgba(0, 0, 0, 0.3) 0%, transparent 90%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0000004d', endColorstr='#00000000',GradientType=1 );
+}
+
+
+.EDITheadMain {
+    display: grid;
+    grid-template-columns: max-content max-content;
+    justify-content: space-between;
+    padding: 3rem;
+}
+.EDITheadMain button[type="button"] {
+    padding: 0.6rem 1.6rem;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+.EDITheadMain button[type="button"]:not(:last-child) {
+    margin-right: 1rem;
+}
+.EDITheadMain button[name="fecharItem"] {
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+    color: #222;
+}
+.EDITheadMain button[name="BTTNpublicItem"], .EDITheadMain button[name="BTTNupdateItem"] {
+    color: #fff;
+    background: -webkit-gradient(linear,left top,left bottom,from(#0db722),to(#0e9c20));
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+}
+
+.EDITindexMain {
+    background: #fff;
+    display: flex;
+    margin-top: 1.6rem;
+    padding: 1.6rem;
+    margin: auto 3rem;
+}
+.EDITindexMain > DIV {
+    width: 100%;
+}
+.EDITindexMain > DIV:not(:last-child) {
+    margin-right: 1.6rem;
+}
+.EDITindexMain .GROUPinputClass, .EDITindexMain .GROUPimageClass, .EDITindexMain .GROUPaddItem > DIV {
+    position: relative;
+}
+.EDITindexMain .GROUPinputClass:not(:last-child) {
+    margin-bottom: 1.6rem;
+}
+.EDITindexMain .EDITmainText input:focus ~ label, .EDITindexMain .EDITmainText input.INPUThasText ~ label {
+    color: #b7b7b7;
+    background: #fff;
+    padding: 0 0.8rem;
+    z-index: 1;
+    top: -1rem;
+}
+.EDITindexMain .EDITmainText input:focus ~ label {
+    color: #1273EB;
+}
+.EDITindexMain .EDITmainText label {
+    font-weight: 100;
+    position: absolute;
+    font-size: 1.4rem;
+    left: 1.3rem;
+    top: 1.1rem;
+}
+.EDITindexMain .EDITmainText input {
+    padding: 8px 0;
+    text-indent: 1.2rem;
+}
+.EDITindexMain .EDITmainText input, .EDITindexMain .EDITmainText .GROUPinputClass textarea {
+    color: #797979;
+    background: transparent;
+    width: 100%;
+    font-size: 1.6rem;
+    box-shadow: inset 0 0 0 1px #dadce0;
+    position: relative;
+    z-index: 1;
+}
+.EDITindexMain .EDITmainText input:focus {
+    box-shadow: inset 0 0 0 1px #1273EB;
+}
+.EDITindexMain .EDITmainText .GROUPinputClass textarea {
+    padding: 1rem;
+    min-height: 100px;
+    resize: none;
+}
+.EDITindexMain .EDITmainText .GROUPinputClass textarea:focus {
+    box-shadow: inset 0 0 0 1px #1273EB, 0 0 0 4px rgba(18, 115, 235, 0.15);
+}
+.EDITindexMain .EDITmainText .GROUPinputClass > *, .EDITindexMain .GROUPaddItem > DIV > * {
+    transition: all 0.15s ease-in-out;
+}
+.EDITindexMain .GROUPimageClass {
+    height: calc(100% - 34px - 1.6rem);
+    min-height: 260px;
+    display: flex;
+    align-items: center;
+    background: #e0e0e0;
+    overflow: hidden;
+}
+.EDITindexMain .GROUPimageClass > IMG {
+    width: 100%;
+    float: left;
+    position: relative;
+    z-index: 1;
+}
+.EDITindexMain .GROUPimageClass > SPAN.SPANelemFailure {
+    color: var(--color-clean);
+    background: rgba(255, 0, 0, 0.6);
+}
+.EDITindexMain .GROUPimageClass > SPAN.SPANelemSucess {
+    color: var(--color-black);
+    background: rgba(255, 255, 255, 0.3);
+    flex-direction: column;
+    z-index: 2;
+    font-weight: bold;
+    font-size: 2rem;
+}
+.EDITindexMain .GROUPimageClass > SPAN.SPANelemAwait {
+    color: #fff;
+    background: rgba(0, 0, 0, 0.3);
+}
+.EDITindexMain .GROUPimageClass > SPAN, .EDITindexMain .GROUPimageClass > SPAN.SPANelemAwait {
+    width: 100%;
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+    left: 0;
+    top: 0;
+}
+.EDITindexMain .GROUPimageClass .ELEMimageShadow {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: block;
+    filter: blur(4px);
+    backdrop-filter: blur(10px);
+    z-index: 1;
+    background-size: cover;
+    background-position: center;
+    transform: scale(1.1);
+}
+
+
+.EDITindexMain .EDITmainAdd .GROUPexistItem {
+    background: #efefef;
+    border-radius: 3px;
+    padding: 1rem 1.4rem 1.6rem;
+    display: flex;
+    grid-gap: 1.6rem;
+    align-items: center;
+}
+.EDITindexMain .EDITmainAdd .GROUPexistItem > DIV > DIV {
+    display: flex;
+}
+.EDITindexMain .EDITmainAdd .GROUPexistItem > DIV > DIV:not(:last-child):not(.ELEMbtnRemove) {
+    margin-bottom: 1.4rem;
+}
+
+
+.EDITindexMain .EDITmainAdd input {
+    background: transparent;
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+    border-bottom-color: rgb(0 0 0 / 0.15);
+    padding: 0.4rem;
+}
+.EDITindexMain .EDITmainAdd .GROUPicrmntItem {
+    display: flex;
+    justify-content: center;
+    margin-top: 1.6rem;
+}
+.EDITindexMain .EDITmainAdd .GROUPicrmntItem button {
+    background: #0db221;
+    padding: 1rem 1.6rem;
+    letter-spacing: 0.4px;
+    color: #fff;
+    font-weight: 500;
+    border-radius: 3px;
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+}
+.EDITindexMain .EDITmainAdd .GROUPexistItem > DIV > DIV input:not(:last-child) {
+    margin-right: 0.4rem;
+}
+.EDITindexMain .EDITmainAdd input[name="FORMtargetDesc"] {
+    width: 100%;
+}
+.EDITindexMain .EDITmainAdd .GROUPexistItem:not(:last-child) {
+    margin-bottom: 1.6rem;
+}
+
+
+.EDITindexMain .EDITmainAdd .GROUPexistItem .ELEMbtnRemove {
+    justify-content: flex-end;
+    margin-bottom: 1.2rem;
+}
+.EDITindexMain .EDITmainAdd .GROUPexistItem button[name="removeIcmntItem"], .EDITindexMain .EDITmainAdd .GROUPexistItem button[name="removeIcmntItem"]::after {
+    width: 18px;
+    height: 18px;
+    display: block;
+}
+.EDITindexMain .EDITmainAdd .GROUPexistItem button[name="removeIcmntItem"]::after {
+    content: "";
+}
+.EDITindexMain .EDITmainAdd .GROUPexistItem .ELEMsessPrice label {
+    font-weight: 300;
+    margin-right: 0.7rem;
+}
+.EDITindexMain .EDITmainAdd .GROUPexistItem .ELEMsessPrice input[type="number"] {
+    width: 100%;
+}
+
+.EDITindexMain[js-item="Drinks"], .EDITindexMain[js-item="Combo"], .EDITindexMain[js-item="Promo"], .EDITindexMain[js-item="Dessert"] {
+    max-width: 680px;
+    margin: auto;
+}
+
+
+.MODALdefault {
+    z-index: 99;
+    position: fixed;
+    top: 0;
+    right: -6px;
+    bottom: 0;
+    left: 0;
+    display: none;
+    overflow: hidden;
+    outline: 0;
+}
+.MODALdefault::after {
+    content: '';
+    background: rgba(0, 0, 0, 0.5);
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.MODALdefault .MODALinst {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    z-index: 1;
+    justify-content: center;
+    align-items: center;
+}
+.MODALdefault .MODALinst .CONTENTmodal {
+    background: #fff;
+    /* font-weight: 100; */
+    z-index: 99;
+    width: calc(100vw - 3.6rem);
+    max-width: 500px;
+    overflow: hidden;
+    font-size: 1.43rem;
+    box-shadow: inset 0 0 15px 0 rgba(0,0,0,0.24), 0 12px 15px 0 rgba(0,0,0,0.24);
+}
+.MODALdefault .SCREENmodal {
+    bottom: 0;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 2;
+    background: transparent;
+    width: 100vw;
+    height: 100vh;
+}
+.MODALdefault .CONTENTmodal {
+    max-width: 384px !IMPORTANT;
+}
+.MODALdefault .CONTENTmodal > * {
+    width: 100%;
+}
+.MODALdefault .CONTENTmodal .MODALelemTitle {
+    font-size: 2.2rem;
+    font-weight: 500;
+    padding: 2.4rem;
+}
+.MODALdefault .CONTENTmodal .MODALelemMsg {
+    padding: 0 2.4rem;
+}
+.MODALdefault .CONTENTmodal .MODALelemFooter {
+    display: flex;
+    justify-content: flex-end;
+    padding: 2.4rem;
+}
+.MODALdefault .CONTENTmodal .MODALelemFooter button:not(:last-child) {
+    margin-right: 1.6rem;
+}
+.MODALdefault .CONTENTmodal .MODALelemFooter button {
+    text-transform: uppercase;
+    font-weight: 900;
+    padding: 8px;
+}
+.MODALdefault .CONTENTmodal .MODALelemFooter button[name="ACTIONitemRemove"] {
+    color: #ff2222;
+}
+
+
+.SETTINGelemColumn:not(:last-child) {
+    margin-bottom: 1.6rem;
+    border-bottom: 1px solid #e6e6e6;
+    padding-bottom: 1.6rem;
+}
+.SETTINGelemColumn .MASTERtitle {
+    padding: 0 10px 10px;
+}
+.SETTINGelemColumn .MASTERtitle SPAN {
+    color: #333;
+    font-size: 18px;
+    font-weight: 400;
+    font-family: var(--font-open);
+}
+.SETTINGelemColumn .CLASSitemMedia > DIV {
+    display: flex;
+}
+.SETTINGelemColumn .CLASSitemMedia > DIV:not(.CLASSitemMessage):hover, .SETTINGelemColumn .CLASSitemMedia .CLASSitemDistrict.FIXEDitem {
+    background-color: #e4e4e4;
+}
+.SETTINGelemColumn .CLASSitemMedia .CLASSitemDistrict.FIXEDitem {
+    flex-direction: column;
+    align-items: center;
+}
+.SETTINGelemColumn .CLASSitemMedia .CLASSitemDistrict.FIXEDitem > DIV:first-child {
+    text-align: center;
+    padding-top: 3rem;
+    font-weight: bold;
+}
+.SETTINGelemColumn .CLASSitemMedia > DIV > DIV {
+    width: 100%;
+    padding: 10px;
+}
+.SETTINGelemColumn .CLASSitemMedia > DIV > DIV:first-child {
+    max-width: 250px;
+}
+.SETTINGelemColumn .CLASSitemMedia > DIV > DIV:last-child {
+    max-width: 440px;
+}
+.SETTINGelemColumn .CLASSitemMedia > DIV > DIV:last-child > *:not(:last-child):not(.CLASSitemFirst), .SETTINGelemColumn .CLASSitemMedia .CLASSitemFirst > DIV > *:not(:last-child), .SETTINGelemColumn .CLASSitemFirst > *:not(:last-child) {
+    margin-right: 10px;
+}
+.SETTINGelemColumn .CLASSitemMedia A {
+    color: #00838f;
+}
+.SETTINGelemColumn .CLASSitemMedia A:hover {
+    text-decoration: underline;
+}
+
+
+.SETTINGelemColumn .CLASSitemMedia .CLASSitemStatus {
+    position: relative;
+    display: flex;
+}
+.SETTINGelemColumn .CLASSitemMedia .CLASSitemStatus > INPUT {
+    display: none;
+}
+.SETTINGelemColumn .CLASSitemMedia .CLASSitemStatus > INPUT:checked ~ .CUSTOMlabel::before {
+    color: #fff;
+    border-color: rgba(25, 145, 107, 0.3);
+    background-color: rgba(25, 145, 107, 0.6);
+}
+.SETTINGelemColumn .CLASSitemMedia .CLASSitemStatus > INPUT:checked ~ .CUSTOMlabel::after {
+    background-color: #fff;
+    -webkit-transform: translateX(2.2rem);
+    transform: translateX(2.2rem);
+}
+.SETTINGelemColumn .CLASSitemMedia .CLASSitemStatus > INPUT:not(:disabled):active ~ .CUSTOMlabel::before {
+    color: #fff;
+    background-color: #75e7c3;
+    border-color: #75e7c3;
+}
+.SETTINGelemColumn .CLASSitemMedia .CLASSitemStatus > INPUT:focus:not(:checked) ~ .CUSTOMlabel::before {
+    border-color: #4ae0b0;
+}
+.SETTINGelemColumn .CLASSitemMedia .CLASSitemStatus > INPUT:focus ~ .CUSTOMlabel::before {
+    -webkit-box-shadow: 0 0 0 0.2rem rgba(25,145,107,0.25);
+    box-shadow: 0 0 0 0.2rem rgba(25,145,107,0.25);
+}
+.SETTINGelemColumn .CLASSitemMedia .CLASSitemStatus .CUSTOMlabel {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+}
+.SETTINGelemColumn .CLASSitemMedia .CLASSitemStatus .CUSTOMlabel::before {
+    pointer-events: all;
+    border-radius: 1.8rem;
+    margin-right: 1.2rem;
+    float: left;
+}
+.SETTINGelemColumn .CLASSitemMedia .CLASSitemStatus .CUSTOMlabel::before {
+    -webkit-transition: background-color 0.15s ease-in-out,border-color 0.15s ease-in-out,-webkit-box-shadow 0.15s ease-in-out;
+    transition: background-color 0.15s ease-in-out,border-color 0.15s ease-in-out,-webkit-box-shadow 0.15s ease-in-out;
+    transition: background-color 0.15s ease-in-out,border-color 0.15s ease-in-out,box-shadow 0.15s ease-in-out;
+    transition: background-color 0.15s ease-in-out,border-color 0.15s ease-in-out,box-shadow 0.15s ease-in-out,-webkit-box-shadow 0.15s ease-in-out;
+}
+.CUSTOMlabel::before {
+    display: block;
+    width: 5rem;
+    height: 2.4rem;
+    pointer-events: none;
+    content: "";
+    background-color: #fff;
+    border: #aebcca solid 1px;
+}
+.SETTINGelemColumn .CLASSitemMedia .CLASSitemStatus .CUSTOMlabel::after {
+    background-color: #aebcca;
+    border-radius: 1.5rem;
+    -webkit-transition: background-color 0.15s ease-in-out,border-color 0.15s ease-in-out,-webkit-transform 0.15s ease-in-out,-webkit-box-shadow 0.15s ease-in-out;
+    transition: background-color 0.15s ease-in-out,border-color 0.15s ease-in-out,-webkit-transform 0.15s ease-in-out,-webkit-box-shadow 0.15s ease-in-out;
+    transition: transform 0.15s ease-in-out,background-color 0.15s ease-in-out,border-color 0.15s ease-in-out,box-shadow 0.15s ease-in-out;
+    transition: transform 0.15s ease-in-out,background-color 0.15s ease-in-out,border-color 0.15s ease-in-out,box-shadow 0.15s ease-in-out,-webkit-transform 0.15s ease-in-out,-webkit-box-shadow 0.15s ease-in-out;
+}
+.CUSTOMlabel::after {
+    position: absolute;
+    top: 0.4rem;
+    left: .4rem;
+    display: block;
+    width: 2rem;
+    height: 1.6rem;
+    content: "";
+    background: no-repeat 50% / 50% 50%;
+}
+
+.SETTINGelemColumn .CLASSitemMedia .CLASSitemStatus:not(:last-child) {
+    margin-bottom: 1rem;
+}
+
+.SETTINGelemColumn .CLASSitemJSKEY {
+    grid-template-columns: 1fr minmax(26%, 0fr);
+}
+.SETTINGelemColumn .CLASSinputString .CLASSitemSecond > DIV:not(.CLASSitemBttm), .SETTINGelemColumn .CLASSitemJSKEY {
+    display: grid;
+    grid-gap: 1rem;
+}
+.SETTINGelemColumn .CLASSinputString .CLASSitemAddress {
+    grid-template-columns: 1fr minmax(26%, 0fr);
+}
+
+.SETTINGelemColumn .CLASSitemMedia .CLASSitemSecond .CLASSitemCEP {
+    margin-bottom: 1rem;
+}
+.SETTINGelemColumn .CLASSitemMedia .CLASSitemSecond .CLASSitemCEP input[type="text"] {
+    max-width: 90px;
+}
+.SETTINGelemColumn .CLASSinputString input[type="text"], .SETTINGelemColumn .CLASSitemJSKEY  input[type="text"] {
+    height: 30px;
+    text-indent: 1rem;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    width: 100%;
+}
+.SETTINGelemColumn .CLASSinputString .ITEMnone, .SETTINGelemColumn .CLASSitemDistrict .ITEMnone {
+    display: none;
+}
+.SETTINGelemColumn .CLASSsemanaItem .CLASSitemFirst > DIV:not(:last-child) {
+    margin-bottom: 4px;
+}
+.SETTINGelemColumn .CLASSsemanaItem .ITEMnone {
+    display: none;
+}
+.SETTINGelemColumn .CLASSitemMedia .CLASSitemSecond > DIV > DIV {
+    display: flex;
+    grid-gap: 1.3rem;
+    align-items: center;
+}
+.SETTINGelemColumn .CLASSitemMedia .CLASSitemSecond > DIV > DIV:not(:last-child) {
+    margin-bottom: 1rem;
+}
+.SETTINGelemColumn .CLASSitemMedia .CLASSitemSecond .CREATEnewTime {
+    margin: 1rem 0;
+    display: inline-block;
+}
+.SETTINGelemColumn .CLASSitemMedia .CLASSitemSecond > P {
+    font-size: 1.4rem;
+    font-style: italic;
+    line-height: 1.3;
+}
+.SETTINGelemColumn .CLASSitemMedia .CLASSitemSecond .CLASSitemBttm {
+    margin-top: 1rem;
+    display: flex;
+    grid-gap: 1rem;
+}
+.SETTINGelemColumn .CLASSitemMedia .CLASSitemSecond input[type="time"] {
+    background: rgb(0 0 0 / 0.1);
+    padding-left: 3px;
+    border-radius: 3px;
+    width: 70px;
+}
+
+.SETTINGelemColumn .CLASSitemMedia .CLASSitemSecond .CLASSitemBttm button[type="button"] {
+    border-radius: 2px;
+    border: 1px solid rgba(0,0,0,0.1);
+    color: #222;
+    cursor: pointer;
+    height: 26px;
+    padding: 0 1.6rem;
+    line-height: 26px;
+    box-sizing: content-box;
+    vertical-align: middle;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+.SETTINGelemColumn .CLASSitemMedia .CLASSitemSecond .CLASSitemBttm button[type="button"][name="SALVAthisTime"], .SETTINGelemColumn .CLASSitemMedia .CLASSitemSecond .CLASSitemBttm button[type="button"][name="SAVEinfoString"], .SETTINGelemColumn .CLASSitemMedia .CLASSitemSecond .CLASSitemBttm button[type="button"][name="SAVEitemDistrict"] {
+    color: #fff;
+    background: -webkit-gradient(linear,left top,left bottom,from(#0db722),to(#0e9c20));
+}
+.SETTINGelemColumn .CLASSitemMedia .CLASSitemSecond .CLASSitemBttm button[type="button"][name="CLOSEthisTime"], .SETTINGelemColumn .CLASSitemMedia .CLASSitemSecond .CLASSitemBttm button[type="button"][name="TOGGLEitemDisplay"], .SETTINGelemColumn .CLASSitemMedia .CLASSitemSecond .CLASSitemBttm .CLASSeditDisplay {
+    background: -webkit-gradient(linear,left top,left bottom,from(#ffffff),to(#ececec));
+    border: 1px solid rgba(0,0,0,0.2) !IMPORTANT;
+}
+.SETTINGelemColumn .CLASSinputString .CLASSitemMinmax {
+    margin-bottom: 1rem;
+}
+
+.PUSHnotifyBttm {
+    position: absolute;
+    padding: 1.6rem 2rem;
+    left: 0;
+    bottom: -70px;
+    background: #fff;
+    margin: 1.6rem;
+    font-weight: bold;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+    transform: translate3d(0px, 70px, 0px);
+    z-index: 101;
+}
+
+.SETTINGelemColumn .CLASSitemMedia .CLASSitemMessage > SPAN {
+    font-weight: bold;
+    font-size: 2rem;
+}
+.SETTINGelemColumn .CLASSitemMedia .CLASSitemMessage {
+    flex-direction: column;
+    align-items: center;
+    grid-gap: 1rem;
+    padding: 3rem;
+}
+
+
+
+
+
+.HEADERnavScreen {
+    display: flex;
+    background: var(--color-clean);
+    box-shadow: hsl(0, 0%, 80%) 0 0 16px;
+    margin-bottom: 1rem;
+    position: -webkit-sticky;
+    position: -moz-sticky;
+    position: -ms-sticky;
+    position: -o-sticky;
+    position: sticky;
+    z-index: 1;
+    top: 0;
+}
+.HEADERnavScreen UL {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    margin: 0 auto;
+}
+.HEADERnavScreen UL LI {
+    position: relative;
+}
+.HEADERnavScreen UL LI LABEL {
+    color: hsl(0, 0%, 60%);
+    max-width: 150px;
+    padding: 1.6rem;
+    float: left;
+    width: 100%;
+    cursor: pointer;
+    text-align: center;
+    transition: color .3s;
+}
+.HEADERnavScreen UL LI LABEL:hover {
+    color: #404040;
+}
+.HEADERnavScreen UL LI LABEL::after {
+    content: "";
+    display: block;
+    width: 20%;
+    height: 3px;
+    left: 40%;
+    right: 40%;
+    transition: 0.3s;
+    background-color: transparent;
+    position: absolute;
+    bottom: 0;
+}
+.HEADERnavScreen UL LI LABEL[disabled]::after {
+    background-color: #cc0000;
+    width: 100%;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    left: 0;
+    right: 0;
+}
+.HEADERnavScreen UL LI LABEL:not([disabled]):hover::after {
+    background-color: rgba(170, 170, 170, 0.45);
+    width: 60%;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    left: 20%;
+    right: 20%;
+}
+
+.AREAofService {
+    display: flex;
+    padding: 1.6rem;
+    margin: auto 3rem;
+}
+.AREAofService > DIV {
+    width: 100%;
+}
+
+
+#DASHBOARDit input[type="radio"] {
+    display: none;
+}
+#ATENDIMENTOfor:checked ~ .DASHBOARDinst {
+    left: -100%;
+}
+#RECEBIDOSfor:checked ~ .DASHBOARDinst {
+    left: 0;
+}
+
+.DASHBOARDinst {
+    width: 200%;
+    position: relative;
+    transition: .3s;
+    overflow: hidden;
+}
+
+.DASHBOARDinst > DIV {
+    width: 50%;
+    float: left;
+    transition: opacity 1.5s;
+}
+.DASHBOARDinst > DIV:not([checked]) {
+    opacity: 0;
+}
+.DASHBOARDinst > DIV[checked] {
+    opacity: 1;
+}
+
+div#DASHBOARDit {
+    display: flow-root;
+}
+div#DASHBOARDit > DIV > DIV {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-gap: 2.2rem;
+    padding: 2.6rem 2rem;
+    position: relative;
+}
+div#DASHBOARDit > DIV > DIV > P {
+    justify-content: center;
+    display: flex;
+    color: #aaa;
+}
+
+.CARDitemWait {
+    font-size: 12px;
+    color: hsl(0, 0%, 60%);
+    box-shadow: hsl(0, 0%, 80%) 0 0 16px;
+    overflow: hidden;
+    background-color: hsl(0, 0%, 100%);
+    display: -ms-flexbox;
+    border-radius: 4px;
+}
+.CARDitemWait > DIV {
+    padding: 1.2rem 1.6rem;
+    display: grid;
+    grid-template-columns: 1fr 40%;
+    grid-template-rows: 1fr;
+    grid-gap: 1.6rem;
+}
+.CARDitemWait > DIV:not(:first-child) {
+    background: #FAFAFC;
+    border-top: 1px solid #EFEEF9;
+}
+.CARDitemWait .CLASSitemTimestamp {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.CARDitemWait .CLASSbttnModal button {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: .4rem 1rem;
+    max-width: 120px;
+    border-radius: 3px;
+    transition: .1s;
+    box-shadow: inset 0px 0 0px 1px #1a73e8;
+    color: #1a73e8;
+    font-weight: 500;
+}
+
+.CARDitemWait .CLASSitemBttns, .CARDitemWait .CLASSbttnModal {
+    display: flex;
+    grid-gap: 1rem;
+}
+.CARDitemWait .CLASSitemBttns button {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: .4rem 1rem;
+    border-radius: 3px;
+    transition: .1s;
+    box-shadow: inset 0px 0 0px 1px rgb(0 0 0 / 0.25);
+    color: rgb(0 0 0 / 50%);
+    font-weight: 500;
+}
+.CARDitemWait .CLASSitemBttns button:hover {
+    color: #fff;
+    background: var(--color-aside-bg);
+}
+
+
+.CARDitemWait .CLASSitemHead SPAN {
+    font-size: 2.2rem;
+    color: #323232;
+}
+.CARDitemWait .RIGHTitemMaster {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.CARDitemWait .RIGHTitemMaster BUTTON {
+    color: #fff;
+    background: -webkit-gradient(linear,left top,left bottom,from(#b70d0d),to(#9c0e0e));
+}
+.CARDitemWait .RIGHTitemMaster BUTTON {
+    border-radius: 2px;
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    height: 26px;
+    padding: 0 1.6rem;
+    line-height: 26px;
+    box-sizing: content-box;
+    vertical-align: middle;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.CARDitemWait .CARDrightIitem {
+    display: grid;
+    grid-template-columns: none;
+    grid-template-rows: 1fr max-content;
+}
+.CARDitemWait .CARDrightIitem .RIGHTitemBttm {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: none;
+    grid-gap: 1.6rem;
+    background: antiquewhite;
+    padding: 1rem;
+}
+.CARDitemWait .CARDrightIitem .RIGHTitemBttm .CLASSitemSecond {
+    display: flex;
+    align-items: center;
+}
+.CARDitemWait .CARDrightIitem .RIGHTitemBttm .CLASSitemSecond button[name="WINDOWmodalStatus"] {
+    width: 100%;
+    color: #fff;
+    background-color: #279acc;
+    border-bottom: 2px solid #1682b5;
+    height: 30px;
+    padding-top: 4px;
+    margin: 0 1rem;
+    font-weight: 500;
+}
+
+.CARDitemWait .CARDrightIitem .RIGHTitemBttm .CLASSitemSecond button[name="WINDOWmodalStatus"]:hover {
+    background-color: #2da5da;
+}
+.CARDitemWait .CARDrightIitem > DIV:not(:last-child) {
+    margin-bottom: 1.6rem;
+}
+.CARDitemWait .RIGHTitemBttm .CLASSitemFirst SPAN {
+    color: #000;
+    font-weight: bold;
+}
+
+
+
+
+
+
+.CARDitemData {
+    font-size: 12px;
+    color: hsl(0, 0%, 60%);
+    box-shadow: hsl(0, 0%, 80%) 0 0 16px;
+    overflow: hidden;
+    background-color: hsl(0, 0%, 100%);
+    display: -ms-flexbox;
+    border-radius: 4px;
+    display: flex;
+}
+.CARDitemData > DIV {
+    width: 100%;
+    padding: 1.6rem;
+}
+.CARDitemData .BASEinfoClient, .CARDitemWait .CARDleftIitem {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 1.6rem;
+}
+.CARDitemData  .INFOcliente > *:not(:first-child) {
+    margin-top: 0.6rem;
+}
+.CARDitemData .INFOcliente SPAN {
+    font-size: 2.2rem;
+    color: #323232;
+}
+.CARDitemData .BASEinfoRequest {
+    color: #444;
+    display: grid;
+    grid-template-columns: none;
+    grid-template-rows: 0fr 1fr 0fr;
+    grid-gap: 1.4rem;
+}
+.CARDitemData .BASEinfoRequest .COMANDAitemData > DIV, .CARDitemData .BASEinfoRequest .COMANDAitemData > P {
+    padding: 8px 12px;
+    line-height: 20px;
+}
+.CARDitemData .BASEinfoRequest .COMANDAitemData > DIV:nth-child(even) {
+    background-color: #e6e6e6;
+}
+.CARDitemData .BASEinfoRequest .COMANDAitemData > DIV:nth-child(odd) {
+    background-color: #f5f5f5;
+}
+.CARDitemData .BASEinfoRequest .COMANDAitemData > DIV > DIV, .CARDitemData .BASEinfoRequest .COMANDAitemData > P {
+    display: grid;
+    grid-template-columns: minmax(36px, 0fr) 1fr 0fr;
+    grid-template-rows: max-content;
+}
+.CARDitemData .BASEinfoRequest .COMANDAitemData > P {
+    background: darkgrey;
+    color: #fff;
+}
+.CARDitemData .BASEinfoRequest .BTTMitemButton {
+    display: flex;
+    justify-content: flex-end;
+    grid-gap: 1rem;
+}
+.CARDitemData .BASEinfoRequest .BTTMitemButton BUTTON {
+    border-radius: 2px;
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    height: 26px;
+    padding: 0 1.6rem;
+    line-height: 26px;
+    box-sizing: content-box;
+    vertical-align: middle;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+.CARDitemData .BASEinfoRequest .BTTMitemButton BUTTON[name="BTTNcomandConfirm"] {
+    color: #fff;
+    background: -webkit-gradient(linear,left top,left bottom,from(#0db722),to(#0e9c20));
+}
+.CARDitemData .BASEinfoRequest .BTTMitemButton BUTTON[name="BTTNcomandCancel"] {
+    color: #222;
+    background: -webkit-gradient(linear,left top,left bottom,from(#ffffff),to(#ececec));
+}
+
+
+
+.CHANGEradioStatus input[type="radio"] {
+    display: initial;
+}
+.CHANGEradioStatus .MODALelemMsg > DIV {
+    display: flex;
+    padding: 0.4rem;
+    align-items: center;
+    grid-gap: 0.6rem;
+}
+.CHANGEradioStatus .MODALelemMsg DIV LABEL {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+.CHANGEradioStatus button[name="ACTIONitemRemove"] {
+    color: #19c556 !IMPORTANT;
+}
+
+
+
+
+.LOGINuserSpot {
+    font-family: var(--font-lato);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-y: overlay;
+    overflow-x: hidden;
+    height: 100vh;
+}
+.LOGINuserSpot > DIV {
+    width: 100%;
+    padding: 46px 46px 32px;
+    max-width: 632px;
+    background: #fff;
+    border-radius: 6px;
+}
+.LOGINuserSpot .DISPLAYnone[name="SCREENin"] {
+    display: none;
+}
+.LOGINuserSpot .COMPANYlogin {
+    margin: 0 0 32px;
+    color: #3c3c3c;
+    font-size: 18px;
+    font-weight: 500;
+    display: block;
+    text-align: center;
+}
+.LOGINuserSpot .COMPANYlogin .COMPANYit {
+    width: 164px;
+    height: 41px;
+    margin: 0 auto 16px;
+}
+.LOGINuserSpot .GROUPinput:not(:first-child) {
+    margin-top: 2.2rem;
+}
+.LOGINuserSpot .GROUPinput {
+    position: relative;
+}
+.LOGINuserSpot input {
+    width: 100%;
+    background: transparent;
+    padding: 16px 0;
+    display: block;
+    font-weight: 400;
+    color: #797979;
+    font-size: 1.75rem;
+    box-shadow: inset 0 0 0 1px #dadce0;
+    font-family: var(--font-poppins);
+    text-indent: 16px;
+    border-radius: 3px;
+    position: relative;
+    z-index: 10;
+}
+.LOGINuserSpot input:focus {
+    box-shadow: inset 0 0 0 1px #1273EB;
+}
+.LOGINuserSpot input:focus ~ label {
+    color: #1273EB;
+}
+.LOGINuserSpot input:focus ~ label, .LOGINuserSpot input.HAScontent ~ label {
+    padding: 0 10px;
+    font-size: 1em;
+    background: #fff;
+    z-index: 20;
+    top: -8px;
+}
+.LOGINuserSpot .GROUPinput.ELEMinptFail input {
+    box-shadow: inset 0 0 0 1px #d50000;
+}
+.LOGINuserSpot .GROUPinput.ELEMinptFail input:focus ~ label, .LOGINuserSpot .GROUPinput.ELEMinptFail input.HAScontent ~ label {
+    color: #d50000;
+}
+.LOGINuserSpot .MSGerror {
+    color: #d50000;
+    display: flex;
+    padding-top: 1rem;
+    grid-gap: 1rem;
+}
+.LOGINuserSpot .GROUPinput * {
+    transition: all 0.2s ease-in-out;
+}
+.LOGINuserSpot label {
+    color: #676767;
+    font-weight: 100;
+    position: absolute;
+    font-size: 2rem;
+    top: 16px;
+    left: 1em;
+}
+
+.GROUPinput .SHOWpass {
+    color: #aaa;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    height: 24px;
+    width: 24px;
+    z-index: 10;
+}
+.GROUPinput .SHOWpass:hover {
+    color: rgb(121, 121, 121);
+}
+.SHOWpass, .SHOWpass * {
+    cursor: pointer;
+    transition: all 0.08s ease-in-out !IMPORTANT;
+}
+.FOOTERlogin {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2.6rem 0 0;
+}
+.LOGINuserSpot .FOOTERlogin BUTTON[name="SCREENitemNext"] {
+    font-size: 1.75rem;
+    color: #1a73e8;
+    font-weight: 700;
+    font-family: var(--font-lato);
+}
+.LOGINuserSpot .FOOTERlogin BUTTON[name="USERlogIn"] {
+    color: #fff;
+    min-height: 40px;
+    background-color: #0161cd;
+    font-weight: 500;
+    text-align: center;
+    max-width: 132px;
+    width: 100%;
+}
+.LOGINuserSpot .FOOTERlogin BUTTON[name="USERlogIn"]:hover {
+    background: #0e75e8;
+}
+.LOGINuserSpot .FOOTERlogin BUTTON[name="USERlogIn"]:focus {
+    -webkit-box-shadow: rgb(151, 200, 255) 0px 0px 4px 2px;
+    box-shadow: rgb(151, 200, 255) 0px 0px 4px 2px;
+}
+.LOGINuserSpot .FOOTERlogin BUTTON[name="USERlogIn"]:active {
+    background: #00f;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.LOGINuserSpot .COMPANYlogin .COMPANYit {
+    background-image: url("data:image/svg+xml;base64,PHN2ZyBpZD0ibWFyY2EiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjE2NC4xODgiIGhlaWdodD0iNDAuODc1IiB2aWV3Qm94PSIwIDAgMTY0LjE4OCA0MC44NzUiPgogIDxkZWZzPgogICAgPHN0eWxlPgogICAgICAuY2xzLTEgewogICAgICAgIGZpbGw6ICNjMDA7CiAgICAgIH0KCiAgICAgIC5jbHMtMSwgLmNscy0yIHsKICAgICAgICBmaWxsLXJ1bGU6IGV2ZW5vZGQ7CiAgICAgIH0KCiAgICAgIC5jbHMtMiB7CiAgICAgICAgZmlsbDogIzIwMjAyMDsKICAgICAgfQogICAgPC9zdHlsZT4KICA8L2RlZnM+CiAgPHBhdGggaWQ9IkZvcm1hXzFfY29waWFyIiBkYXRhLW5hbWU9IkZvcm1hIDEgY29waWFyIiBjbGFzcz0iY2xzLTEiIGQ9Ik00Ny43MTYsMjYuNTIyYTUuOTc4LDUuOTc4LDAsMCwwLC41MjctMi45YzAtLjA5NCwwLTAuNDM3LDAtMC41MjcsMC0yLjYzOS0yLjYzMy00Ljc0LTQuMjItNC43NDctMC41MzIsMC02LjMyOSwwLTYuMzI5LDBMMjcuNDA5LDguMDYxSDQxLjM4NmMzLjEsMCw4LjEuNTYzLDEwLjI4NSw0Ljc0NywwLjkxMiwxLjQ4MiwxLjIwNyw1Ljc2MSwxLjIxMiw3Ljk4NywwLjAyMSwwLjcyNiwwLDUuMzY3LDAsNS43NDdDNTIuMzQsMjYuNTQxLDQ4LjEsMjYuNTIsNDcuNzE2LDI2LjUyMloiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0yNi40MDYgLTguMDYzKSIvPgogIDxwYXRoIGlkPSJGb3JtYV8xIiBkYXRhLW5hbWU9IkZvcm1hIDEiIGNsYXNzPSJjbHMtMSIgZD0iTTM2LjY5NCw0OC45MzlMMjYuNjczLDM4LjY1M3MxNi4wNjgsMCwxNi4zNTEsMGMxLjU4MiwwLDQuMjI1LTIuNjM5LDQuMjItNS4yNzQsMC0uMDk0LDAtMC40MzcsMC0wLjUyNywwLTIuNjM5LTIuNjMzLTQuNzQtNC4yMi00Ljc0Ny0wLjUzMiwwLTYuMzI5LDAtNi4zMjksMEwyNi40MDksMTcuODE5SDQzLjAyM2ExMy43NzEsMTMuNzcxLDAsMCwxLDEwLjAyMiw0Ljc0N2M0LjI4NSw0LjU0Nyw0LjQ4Myw4Ljk2Nyw0LjQ4Myw4Ljk2NywwLjAwNSwwLjc2MSwwLDMuNDI4LDAsMy40MjhhMTMuNDUsMTMuNDUsMCwwLDEtMy45NTYsOC45NjdjLTQuNjQ3LDQuNzUzLTguOTcxLDUuMDEtMTAuNTQ5LDUuMDExQzQyLjc1Niw0OC45NCwzNi42OTQsNDguOTM5LDM2LjY5NCw0OC45MzlaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMjYuNDA2IC04LjA2MykiLz4KICA8cGF0aCBpZD0iQnJhY2FlbCIgY2xhc3M9ImNscy0yIiBkPSJNOTEuMzMsMzIuNzExYzAsMi4wMS0xLjQxLDMuMTgtMy43MiwzLjE4SDgyLjk5di02LjUxaDQuNUM4OS43NywyOS4zODEsOTEuMzMsMzAuNjQxLDkxLjMzLDMyLjcxMVptLTAuNTQtOS4wOWMwLDEuOTItMS4zNSwyLjk3LTMuNTcsMi45N0g4Mi45OXYtNS45N2g0LjIzQzg5LjQ0LDIwLjYyMiw5MC43OSwyMS43MzIsOTAuNzksMjMuNjIyWm0zLjk2LDkuNDVhNS4xODUsNS4xODUsMCwwLDAtNC4wMi01LjEsNC44NzgsNC44NzgsMCwwLDAsMy41NC00Ljc3YzAtMi45NC0yLjM0LTUuMzctNi43NS01LjM3SDc5LjU3VjM4LjY4MWg4LjM0QzkyLjE2OSwzOC42ODEsOTQuNzQ5LDM2LjI1MSw5NC43NDksMzMuMDcxWm03LjE0LTMuMDljMC0zLjUxLDEuNTYtNC41Niw0LjA4LTQuNTZoMC44N3YtMy41NGE1LjM4NCw1LjM4NCwwLDAsMC00Ljk1LDIuNjd2LTIuNEg5OC40N1YzOC42ODFoMy40MTl2LTguN1ptNi45NiwwLjM2YzAsNS4xLDMuNDUsOC42MSw3Ljc0LDguNjFhNy4xMTUsNy4xMTUsMCwwLDAsNS43OS0yLjczdjIuNDZoMy40NVYyMi4xNTJoLTMuNDV2Mi40YTcuMDM2LDcuMDM2LDAsMCwwLTUuNzMtMi42N0MxMTIuMywyMS44ODIsMTA4Ljg0OSwyNS4yNDEsMTA4Ljg0OSwzMC4zNDFabTEzLjUzLDAuMDZjMCwzLjU3LTIuNDMsNS41OC01LjAxLDUuNTgtMi41NSwwLTUuMDEtMi4wNy01LjAxLTUuNjRzMi40Ni01LjQ5LDUuMDEtNS40OUMxMTkuOTQ5LDI0Ljg1MSwxMjIuMzc5LDI2Ljg2MSwxMjIuMzc5LDMwLjRabTYuODEsMGMwLDUuMTksMy4zNiw4LjU1LDguMSw4LjU1YTcuNDIzLDcuNDIzLDAsMCwwLDcuNjE5LTUuNDloLTMuNjg5YTMuNzc1LDMuNzc1LDAsMCwxLTMuOTMsMi42MWMtMi43NiwwLTQuNTktMi4wNC00LjU5LTUuNjcsMC0zLjYsMS44My01LjY0LDQuNTktNS42NGEzLjg2MywzLjg2MywwLDAsMSwzLjkzLDIuNjFoMy42ODljLTAuOTI5LTMuNDgtMy41NjktNS40OS03LjYxOS01LjQ5QzEzMi41NDksMjEuODgyLDEyOS4xODksMjUuMjQxLDEyOS4xODksMzAuNFptMTgtLjA2YzAsNS4xLDMuNDUsOC42MSw3Ljc0LDguNjFhNy4xMTQsNy4xMTQsMCwwLDAsNS43ODktMi43M3YyLjQ2aDMuNDVWMjIuMTUyaC0zLjQ1djIuNGE3LjAzNiw3LjAzNiwwLDAsMC01LjcyOS0yLjY3QzE1MC42MzksMjEuODgyLDE0Ny4xODksMjUuMjQxLDE0Ny4xODksMzAuMzQxWm0xMy41MjksMC4wNmMwLDMuNTctMi40Myw1LjU4LTUuMDEsNS41OC0yLjU0OSwwLTUuMDA5LTIuMDctNS4wMDktNS42NHMyLjQ2LTUuNDksNS4wMDktNS40OUMxNTguMjg4LDI0Ljg1MSwxNjAuNzE4LDI2Ljg2MSwxNjAuNzE4LDMwLjRabTE0LjkxLTUuNjRhNC4yOTIsNC4yOTIsMCwwLDEsNC42Miw0LjE3SDE3MS4xQTQuNSw0LjUsMCwwLDEsMTc1LjYyOCwyNC43NjFabTcuNzQsOWgtMy42OWE0LDQsMCwwLDEtMy45LDIuMzEsNC41NDYsNC41NDYsMCwwLDEtNC43MDktNC4zOEgxODMuN2ExMC41NDgsMTAuNTQ4LDAsMCwwLC4xMi0xLjY4LDcuNzA5LDcuNzA5LDAsMCwwLTguMDQtOC4xM2MtNC44ODksMC04LjI0OSwzLjMzLTguMjQ5LDguNTJzMy41MSw4LjU1LDguMjQ5LDguNTVBNy41NTMsNy41NTMsMCwwLDAsMTgzLjM2OCwzMy43NjFabTMuODEsNC45MmgzLjQydi0yMi4yaC0zLjQydjIyLjJaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMjYuNDA2IC04LjA2MykiLz4KPC9zdmc+Cg==");
+}
