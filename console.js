@@ -1190,7 +1190,7 @@ else if(main === 'item'){
         }) : null;
 
         const itemObject = JSON.parse(`{
-            ${feed[edit].category.includes('Promo') ? `"category": ["Promo"${CATEGORYarrItem.length != 0 ? `,${JSON.stringify(CATEGORYarrItem).substring(1, JSON.stringify(CATEGORYarrItem).length-1)}` : ''}],` : ''}
+            ${feed[edit].category.includes('Promo') ? `"category": ["Promo"${CATEGORYarrItem.length != 0 ? `,${JSON.stringify(CATEGORYarrItem).substring(1, JSON.stringify(CATEGORYarrItem).length-1)}` : ''}],` : `"category": ${JSON.stringify(feed[edit].category)},`}
             ${document.body.contains(document.querySelector('[name="FORMinputDesc"]')) ? `"description": "${document.querySelector('[name="FORMinputDesc"]').value.trim()}",` : ''}
             ${ARRAYexistItem.length != 0 ? `"extra": ${JSON.stringify(ARRAYexistItem)},` : ''}
             ${document.body.contains(document.querySelector('[name="FORMinputGrams"]')) ? `"grams": ${Number(document.querySelector('[name="FORMinputGrams"]').value)},` : ''}
@@ -1200,16 +1200,23 @@ else if(main === 'item'){
             "title": "${document.querySelector('[name="FORMinputTitle"]').value.trim()}"
         }`);
 
+        const ifValidate = new Array();
+        function ifValidateFunction(data){
+            ifValidate.push(data)   }
 
-        if(itemObject.category.length != 0 &&
-        itemObject.price != 0 &&
-        itemObject.title != '' &&
-        (itemObject.thumb != '' &&
-        document.body.contains(document.querySelector('.SPANelemSucess'))) &&
-        feed[edit].category.includes('Promo') ? CATEGORYarrItem.filter(item => item !== 'Promo').length != 0 : true){
+        ifValidateFunction(itemObject.category.length != 0)
+        ifValidateFunction(itemObject.price != 0)
+        ifValidateFunction(itemObject.title != '')
+        ifValidateFunction(itemObject.thumb != '')
+        ifValidateFunction(document.body.contains(document.querySelector('.SPANelemSucess')))
+        ifValidateFunction(feed[edit].category.includes('Promo') ? CATEGORYarrItem.filter(item => item !== 'Promo').length != 0 : true)
+        ifValidateFunction(feed[edit].category.includes('Drinks') ? itemObject.weight != 0 : itemObject.grams != 0)
+
+        if(ifValidate.every(elem => elem === true)){
             database.ref(`feed/${edit}`).update(itemObject).then(()=>{
                 window.location.href = '?main=products'
             });
+            console.log('Sucesso!')
         }
         else {
             bracael.pushNotify('Há algo de errado!');
