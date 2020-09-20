@@ -1171,7 +1171,6 @@ else if(main === 'item'){
         document.querySelectorAll('.GROUPexistItem').forEach((data)=>{
             if(data.querySelector('[name="FORMtargetItem"]').value != '' &&
             Number(data.querySelector('[name="FORMtargetLimit"]').value) != 0 &&
-            data.querySelector('[name="FORMtargetDesc"]').value != '' &&
             Number(data.querySelector('[name="FORMtargetPrice"]').value.replace(/\./g,'').replace(/\,/g,'.'))){
                 ARRAYexistItem.push([data.querySelector('[name="FORMtargetItem"]').value,
                 Number(data.querySelector('[name="FORMtargetLimit"]').value),
