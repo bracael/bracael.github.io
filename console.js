@@ -1189,8 +1189,8 @@ else if(main === 'item'){
             CLASSitemSemana[i] ? CATEGORYarrItem.push(item) : null
         }) : null;
 
-        database.ref(`feed/${edit}`).update(JSON.parse(`{
-            ${feed[edit].category.includes('Promo') ? `"category": ["Promo",${JSON.stringify(CATEGORYarrItem).substring(1, JSON.stringify(CATEGORYarrItem).length-1)}],` : ''}            
+        const itemObject = JSON.parse(`{
+            ${feed[edit].category.includes('Promo') ? `"category": ["Promo"${CATEGORYarrItem.length != 0 ? `,${JSON.stringify(CATEGORYarrItem).substring(1, JSON.stringify(CATEGORYarrItem).length-1)}` : ''}],` : ''}
             ${document.body.contains(document.querySelector('[name="FORMinputDesc"]')) ? `"description": "${document.querySelector('[name="FORMinputDesc"]').value.trim()}",` : ''}
             ${ARRAYexistItem.length != 0 ? `"extra": ${JSON.stringify(ARRAYexistItem)},` : ''}
             ${document.body.contains(document.querySelector('[name="FORMinputGrams"]')) ? `"grams": ${Number(document.querySelector('[name="FORMinputGrams"]').value)},` : ''}
@@ -1198,9 +1198,22 @@ else if(main === 'item'){
             "price": ${Number(document.querySelector('[name="FORMinputPrice"]').value.replace(/\./g,'').replace(/\,/g,'.'))},
             "thumb": "${document.querySelector('[name="FORMinputImage"]').value.trim()}",
             "title": "${document.querySelector('[name="FORMinputTitle"]').value.trim()}"
-        }`)).then(()=>{
+        }`);
+
+
+        if(itemObject.category.length != 0 &&
+        itemObject.price != 0 &&
+        itemObject.title != '' &&
+        (itemObject.thumb != '' &&
+        document.body.contains(document.querySelector('.SPANelemSucess'))) &&
+        feed[edit].category.includes('Promo') ? CATEGORYarrItem.filter(item => item !== 'Promo').length != 0 : true){
+            database.ref(`feed/${edit}`).update(itemObject).then(()=>{
                 window.location.href = '?main=products'
-        })
+            });
+        }
+        else {
+            bracael.pushNotify('Há algo de errado!');
+        }
 
     });
 
