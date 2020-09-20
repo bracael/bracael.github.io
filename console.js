@@ -1160,11 +1160,12 @@ else if(main === 'item'){
     bracael.startItem();
 
     document.querySelector('[name="BTTNupdateItem"]').addEventListener('click', function(){
-	
+
         const CLASSitemSemana = new Array();
+        feed[edit].category.includes('Promo') ?
         document.querySelector('.EDITmainSemana').querySelectorAll('[type="checkbox"]').forEach((item)=>{
             item.checked ? CLASSitemSemana.push(true) : CLASSitemSemana.push(false)
-        });
+        }) : null;
 
         const ARRAYexistItem = new Array();
         document.querySelectorAll('.GROUPexistItem').forEach((data)=>{
@@ -1179,12 +1180,11 @@ else if(main === 'item'){
             }
         })
 
-
         const CATEGORYarrItem = new Array();
+        feed[edit].category.includes('Promo') ?
         ARRAYenglish.map(function(item, i){
             CLASSitemSemana[i] ? CATEGORYarrItem.push(item) : null
-        })
-
+        }) : null;
 
         database.ref(`feed/${edit}`).update(JSON.parse(`{
             ${feed[edit].category.includes('Promo') ? `"category": ["Promo",${JSON.stringify(CATEGORYarrItem).substring(1, JSON.stringify(CATEGORYarrItem).length-1)}],` : ''}            
@@ -1314,9 +1314,10 @@ else if(main === 'creatPost'){
         document.querySelector('[name="BTTNpublicItem"]').addEventListener('click', function(){
 
             const CLASSitemSemana = new Array();
+            postCategory === 'Promo' ?
             document.querySelector('.EDITmainSemana').querySelectorAll('[type="checkbox"]').forEach((item)=>{
                 item.checked ? CLASSitemSemana.push(true) : CLASSitemSemana.push(false)
-            });
+            }): null;
 
             const ARRAYexistItem = new Array();
             document.querySelectorAll('.GROUPexistItem').forEach((data)=>{
@@ -1331,9 +1332,10 @@ else if(main === 'creatPost'){
             });
 
             const CATEGORYarrItem = new Array();
+            postCategory === 'Promo' ?
             ARRAYenglish.map(function(item, i){
                 CLASSitemSemana[i] ? CATEGORYarrItem.push(item) : null
-            })
+            }) : null;
 
             const itemObject = JSON.parse(`{
                 "category": [${postCategory != null ? `"${postCategory}"` : ''}${CATEGORYarrItem.length != 0 ? `,${JSON.stringify(CATEGORYarrItem).substring(1, JSON.stringify(CATEGORYarrItem).length-1)}` : ''}],
