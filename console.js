@@ -1288,7 +1288,7 @@ else if(main === 'creatPost'){
             });
             }
             else {
-                console.log('ERRO!')
+                bracael.pushNotify('Há algo de errado!');
             }
 
         });
