@@ -1259,7 +1259,7 @@ else if(main === 'creatPost'){
                 const FORMtargetItem = data.querySelector('[name="FORMtargetItem"]').value.trim();
                 const FORMtargetLimit = data.querySelector('[name="FORMtargetLimit"]').value.trim();
                 const FORMtargetDesc = data.querySelector('[name="FORMtargetDesc"]').value.trim();
-                const FORMtargetPrice = data.querySelector('[name="FORMtargetPrice"]').value.trim();
+                const FORMtargetPrice = data.querySelector('[name="FORMtargetPrice"]').value.replace(/\./g,'').replace(/\,/g,'.');
 
                 if(FORMtargetItem != '' && FORMtargetLimit != '' && FORMtargetPrice != ''){
                     ARRAYexistItem.push([FORMtargetItem, Number(FORMtargetLimit), FORMtargetDesc, Number(FORMtargetPrice)])
@@ -1278,7 +1278,7 @@ else if(main === 'creatPost'){
                 "title": "${document.querySelector('[name="FORMinputTitle"]').value.trim()}"
             }`);
 
-            if(itemObject.category != 0 &&
+            if(itemObject.category.length != 0 &&
             itemObject.price != 0 &&
             itemObject.title != '' &&
             (itemObject.thumb != '' &&
