@@ -52,6 +52,7 @@ document.querySelector('[name="userEnd"]').addEventListener('click', function(){
 const database = firebase.database();
 const ARRAYweek = ["Domingo", "Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado"]
 const ARRAYen = ["sun", "mon", "tue", "wed", "thu", "fri", "sat"]
+const ARRAYenglish = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
 const SEMANArst = [{
     "sun": [["",""]]
 },{
@@ -1058,6 +1059,19 @@ else if(main === 'item'){
         typePost = 'Dessert';
     }
 
+    const CLASSitemSemana = new Array();
+    ARRAYen.map(function(data, i){
+        const BUSINESSaction = new Array();
+        result.business.action[i][data].map(function(item){
+            item[0] != '' && item[1] != '' ? BUSINESSaction.push(true) : BUSINESSaction.push(false)
+        });
+
+        CLASSitemSemana.push(`
+        <div>
+            <input type="checkbox" id="${data}" name="${data}" value="${ARRAYenglish[i]}"${BUSINESSaction.every(elem => elem === true) ? '' : ' disabled'}${feed[edit].category.includes(ARRAYenglish[i]) ? ' checked' : ''}>
+            <label for="${data}">${ARRAYweek[i]}</label>
+        </div>`);
+    })
 
     document.querySelector('HEADER').getElementsByTagName('SPAN')[0].innerHTML = 'Editar produto';
     document.getElementsByTagName('ARTICLE')[0].innerHTML = `
@@ -1135,14 +1149,25 @@ else if(main === 'item'){
                 <button type="button" name="addIcrmntItem">Novo item adicional</button>
             </div>
         </div>` : ''}
+        ${feed[edit].category.includes('Promo') ? `
+        <div class="EDITmainSemana">
+            <p>Selecione os dias da semana ao qual sua promoção estará visível aos seus clientes.</p>
+            ${CLASSitemSemana.join('\n')}
+        </div>`
+        : ''}
     </div>`;
 
     bracael.startItem();
 
     document.querySelector('[name="BTTNupdateItem"]').addEventListener('click', function(){
+	
+        const CLASSitemSemana = new Array();
+        document.querySelector('.EDITmainSemana').querySelectorAll('[type="checkbox"]').forEach((item)=>{
+            item.checked ? CLASSitemSemana.push(true) : CLASSitemSemana.push(false)
+        });
+
         const ARRAYexistItem = new Array();
         document.querySelectorAll('.GROUPexistItem').forEach((data)=>{
-
             if(data.querySelector('[name="FORMtargetItem"]').value != '' &&
             Number(data.querySelector('[name="FORMtargetLimit"]').value.replace(/\./g,'').replace(/\,/g,'.')) != 0 &&
             data.querySelector('[name="FORMtargetDesc"]').value != '' &&
@@ -1154,7 +1179,15 @@ else if(main === 'item'){
             }
         })
 
+
+        const CATEGORYarrItem = new Array();
+        ARRAYenglish.map(function(item, i){
+            CLASSitemSemana[i] ? CATEGORYarrItem.push(item) : null
+        })
+
+
         database.ref(`feed/${edit}`).update(JSON.parse(`{
+            ${feed[edit].category.includes('Promo') ? `"category": ["Promo",${JSON.stringify(CATEGORYarrItem).substring(1, JSON.stringify(CATEGORYarrItem).length-1)}],` : ''}            
             ${document.body.contains(document.querySelector('[name="FORMinputDesc"]')) ? `"description": "${document.querySelector('[name="FORMinputDesc"]').value.trim()}",` : ''}
             ${ARRAYexistItem.length != 0 ? `"extra": ${JSON.stringify(ARRAYexistItem)},` : ''}
             ${document.body.contains(document.querySelector('[name="FORMinputGrams"]')) ? `"grams": ${Number(document.querySelector('[name="FORMinputGrams"]').value)},` : ''}
@@ -1170,7 +1203,6 @@ else if(main === 'item'){
 
 }
 else if(main === 'creatPost'){
-    // console.log('main=editor')
 
     var postCategory = null;
     document.querySelector('HEADER').getElementsByTagName('SPAN')[0].innerHTML = 'Publicar produto';
@@ -1185,6 +1217,20 @@ else if(main === 'creatPost'){
             <button type="button" name="editDessert" data-class="Dessert">Bomboniere</button>
         </div>
     </div>`;
+
+    const CLASSitemSemana = new Array();
+    ARRAYen.map(function(data, i){
+        const BUSINESSaction = new Array();
+        result.business.action[i][data].map(function(item){
+            item[0] != '' && item[1] != '' ? BUSINESSaction.push(true) : BUSINESSaction.push(false)
+        });
+
+        CLASSitemSemana.push(`
+        <div>
+            <input type="checkbox" id="${data}" name="${data}" value="${ARRAYenglish[i]}"${BUSINESSaction.every(elem => elem === true) ? '' : ' disabled'}>
+            <label for="${data}">${ARRAYweek[i]}</label>
+        </div>`);
+    })
 
     document.querySelectorAll('[data-class]').forEach(function(data){
         data.addEventListener('click', function(){
@@ -1255,11 +1301,23 @@ else if(main === 'creatPost'){
                     <button type="button" name="addIcrmntItem">Novo item adicional</button>
                 </div>
             </div>` : ''}
+            ${postCategory === 'Promo' ? `
+            <div class="EDITmainSemana">
+                <p>Selecione os dias da semana ao qual sua promoção estará visível aos seus clientes.</p>
+                ${CLASSitemSemana.join('\n')}
+            </div>`
+            : ''}
         </div>`;
 
         bracael.startItem();
 
         document.querySelector('[name="BTTNpublicItem"]').addEventListener('click', function(){
+
+            const CLASSitemSemana = new Array();
+            document.querySelector('.EDITmainSemana').querySelectorAll('[type="checkbox"]').forEach((item)=>{
+                item.checked ? CLASSitemSemana.push(true) : CLASSitemSemana.push(false)
+            });
+
             const ARRAYexistItem = new Array();
             document.querySelectorAll('.GROUPexistItem').forEach((data)=>{
                 const FORMtargetItem = data.querySelector('[name="FORMtargetItem"]').value.trim();
@@ -1272,8 +1330,13 @@ else if(main === 'creatPost'){
                 }
             });
 
+            const CATEGORYarrItem = new Array();
+            ARRAYenglish.map(function(item, i){
+                CLASSitemSemana[i] ? CATEGORYarrItem.push(item) : null
+            })
+
             const itemObject = JSON.parse(`{
-                "category": [${postCategory != null ? `"${postCategory}"` : ''}],
+                "category": [${postCategory != null ? `"${postCategory}"` : ''}${CATEGORYarrItem.length != 0 ? `,${JSON.stringify(CATEGORYarrItem).substring(1, JSON.stringify(CATEGORYarrItem).length-1)}` : ''}],
                 "class": "Publicado",
                 ${postCategory != 'Drinks' && postCategory != 'Dessert' ? `"description": "${document.querySelector('[name="FORMinputDesc"]').value.trim()}",` : ''}
                 ${ARRAYexistItem.length != 0 ? `"extra": ${JSON.stringify(ARRAYexistItem)},` : ''}
@@ -1288,7 +1351,8 @@ else if(main === 'creatPost'){
             itemObject.price != 0 &&
             itemObject.title != '' &&
             (itemObject.thumb != '' &&
-            document.body.contains(document.querySelector('.SPANelemSucess')))){
+            document.body.contains(document.querySelector('.SPANelemSucess'))) &&
+            postCategory != 'Promo' ? true : CATEGORYarrItem.length != 0){
                 database.ref(`feed/${parseInt(Math.random()*1000000000, 10)}`).set(itemObject).then(()=>{
                     window.location.href = '?main=products'
                 });
@@ -1310,12 +1374,12 @@ else if(main === 'settings'){
 
     const DISTRICTitem = new Array();
     result.business.district != undefined ?
-    Object.entries(result.business.district).map(function(item, i){
+    Object.entries(result.business.delivery).map(function(item, i){
 
         DISTRICTitem.push(`
         <div class="CLASSitemDistrict" js-numb="${item[0]}">
             <div>
-                <span>${item[1].zone}</span>
+                <span>${item[1].zone}${item[1].district != '' ? ` (${item[1].district})` : ''}</span>
             </div>
             <div>
                 <div class="CLASSitemFirst" name="itemDisplay">
@@ -1524,7 +1588,7 @@ else if(main === 'settings'){
                             <div class="CLASSitemAddress">
                                 <input type="text" js-key="address" dir="ltr" placeholder="Rua" disabled="disabled"${result.business.info.address != '' ? ` value="${result.business.info.address}"` : ''}>
                                 <input type="text" js-key="number" dir="ltr" placeholder="Número"${result.business.info.number != '' ? ` value="${result.business.info.number}"` : ''}>
-                                <input type="text" js-key="district" dir="ltr" placeholder="Bairro" disabled="disabled"${result.business.info.region != '' ? ` value="${result.business.info.region}"` : ''}>
+                                <input type="text" js-key="district" dir="ltr" placeholder="Bairro" disabled="disabled"${result.business.info.district != '' ? ` value="${result.business.info.district}"` : ''}>
                                 <input type="text" js-key="optional" dir="ltr" placeholder="Opcional"${result.business.info.optional != '' ? ` value="${result.business.info.optional}"` : ''}>
                                 <input type="text" js-key="region" dir="ltr" placeholder="Cidade" disabled="disabled"${result.business.info.region != '' ? ` value="${result.business.info.region}"` : ''}>
                                 <input type="text" js-key="unity" dir="ltr" placeholder="UF" disabled="disabled"${result.business.info.unity != '' ? ` value="${result.business.info.unity}"` : ''}>
@@ -1610,16 +1674,20 @@ else if(main === 'settings'){
                     </div>
                     <div>
                         <div class="CLASSitemFirst ITEMnone" name="itemDisplay">
-                            <span>R$&nbsp;3,00</span>
-                            <a href="javascript:void(0)"class="EDITzoneDelivery">Editar</a>
+                            <!-- // NOSE -->
                         </div>
                         <div class="CLASSitemSecond" name="itemDisplay">
                             <div class="CLASSitemJSKEY">
                                 <input type="text" js-key="zone" dir="ltr" placeholder="Bairro">
                                 <input type="text" js-key="rate" dir="ltr" placeholder="Preço">
                             </div>
+                            ${result.business.info.region != undefined ? `
+                            <div class="CLASSitemJSKEY DISTRICTelemInput ITEMnone">
+                                <input type="text" js-key="district" dir="ltr" placeholder="Cidade">
+                            </div>` : ''}
                             <div class="CLASSitemBttm">
                                 <button type="button" name="SAVEitemDistrict">Salvar configurações</button>
+                                ${result.business.info.region != undefined ? `<a href="javascript:void(0)" class="CLASShrefJSKEY">Fora de ${result.business.info.region}?</a>` : ''}
                             </div>
                         </div>
                     </div>
@@ -1848,7 +1916,7 @@ else if(main === 'settings'){
                     });
 
                     this.querySelector('[name="ACTIONitemRemove"]').addEventListener('click', function(){
-                        database.ref(`business/district/${NUMBitemJS}`).remove().then(()=>{
+                        database.ref(`business/delivery/${NUMBitemJS}`).remove().then(()=>{
                             window.location.href = '?main=settings';
                         })
                     });
@@ -1857,17 +1925,33 @@ else if(main === 'settings'){
             })
         })
 
+        document.querySelector('.CLASShrefJSKEY').addEventListener('click', function(){
+            document.querySelector('.CLASSitemJSKEY.DISTRICTelemInput').classList.toggle('ITEMnone')
+            if(document.querySelector('.CLASSitemJSKEY.DISTRICTelemInput').classList.contains('ITEMnone')){
+                this.innerText =  `Fora de ${result.business.info.region}`;
+            }
+            else {
+                this.innerText =  `Para ${result.business.info.region}`;
+                document.querySelector('.CLASSitemJSKEY.DISTRICTelemInput').querySelector('[js-key="district"]').value = null;
+            }
+        })
+
         document.querySelectorAll('[name="SAVEitemDistrict"]').forEach(function(data){
             data.addEventListener('click', function(){
                 const FIXEDitemObj = {};
                 const FIXEDitemArray = new Array();
                 document.querySelector('.CLASSitemDistrict.FIXEDitem').querySelectorAll('input').forEach(function(item){
+
+                    console.log(item)
+
                     item.value != '' ? FIXEDitemArray.push(true) : FIXEDitemArray.push(false);
                     item.getAttribute('js-key') === 'rate' ? FIXEDitemObj[item.getAttribute('js-key')] = Number(item.value.replace(/\./g,'').replace(/\,/g,'.')) : FIXEDitemObj[item.getAttribute('js-key')] = item.value;
                 })
 
+                console.log(FIXEDitemObj)
+
                 if(FIXEDitemArray.every(elem => elem === true)){
-                    database.ref('business/district').push(FIXEDitemObj).then(()=>{
+                    database.ref('business/delivery').push(FIXEDitemObj).then(()=>{
                         window.location.href = '?main=settings';
                     })
                 }
