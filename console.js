@@ -125,7 +125,7 @@ if(main === 'index'){
                 <div class="BASEinfoClient">
                     <div class="INFOcliente">
                         <span>${data[1].client}</span>
-                        <p>${data[1].street}, ${data[1].number} ${data[1].adjunct != undefined ? ` - ${data[1].adjunct}` : '' }<br>${data[1].district}</p>
+                        <p>${data[1].street}, ${data[1].number} ${data[1].adjunct != undefined ? ` - ${data[1].adjunct}` : '' }<br>${data[1].region}${data[1].district != '' ? ` - ${data[1].district}` : ''}</p>
                     </div>
                     <div>
                         Pagamento: ${data[1].payment}
@@ -163,18 +163,13 @@ if(main === 'index'){
         const [{ value: weekday },,{ value: day },,{ value: month },,{ value: year },,{ value: hour },,{ value: minute },,{ value: hour12 }] = ARRAYdate.formatToParts(new Date(data[1].time));
 
         const info = result.business.info;
-
-        // console.log(`https://www.google.com/maps/dir/${info.address.replace(/ /gi,'+')},+${info.number}+-+${info.district.replace(/ /gi,'+')},+${info.region.replace(/ /gi,'+')}+-+${info.unity},+${info.zipcode}/${data[1].street.replace(/ /gi,'+')},+${data[1].number}+-+${data[1].district.replace(/ /gi,'+')},+${info.region.replace(/ /gi,'+')}+-+${info.unity}`)
-        // console.log('https://www.google.com/maps/dir/Rua+Ilha+Mexicana+-+Conjunto+Habitacional+Sitio+Conceicao,+S%C3%A3o+Paulo+-+SP/Estr.+Manuel+de+Oliveira+Ramos,+74+-+Vila+Iolanda+II,+S%C3%A3o+Paulo+-+SP,+08473-050')
-
-
         WAITINGinst.push(`
         <div class="CARDitemWait" data-id="${data[0]}">
             <div>
                 <div class="CARDleftIitem">
                     <div class="CLASSitemHead">
                         <span>${data[1].client}</span>
-                        <p>${data[1].street}, ${data[1].number}<br/>${data[1].district}</p>
+                        <p>${data[1].street}, ${data[1].number}${data[1].complement != '' ? ` - ${data[1].complement}` : ''}<br/>${data[1].region}${data[1].district != '' ? ` - ${data[1].district}` : ''}</p>
                     </div>
                     <div class="CLASSbttnModal">
                         <button type="button" name="WINDOWmodalCliente" js-win="${i}"><i class="CROSSicon"></i>Cliente</button>
@@ -200,8 +195,8 @@ if(main === 'index'){
             <div>
                 <div class="CLASSitemBttns">
                     <button type="button" name="WHATSsendContact" js-win="${i}"><i class="CROSSicon"></i>Enviar</button>
-                    <button type="button" name="BTTNcssRota" onclick="javascript:window.open('https://www.google.com/maps/dir/${info.address.replace(/ /gi,'+')},+${info.number}+-+${info.district.replace(/ /gi,'+')},+${info.region.replace(/ /gi,'+')}+-+${info.unity},+${info.zipcode}/${data[1].street.replace(/ /gi,'+')},+${data[1].number}+-+${data[1].district.replace(/ /gi,'+')},+${info.region.replace(/ /gi,'+')}+-+${info.unity}')"><i class="CROSSicon"></i>Rota</button>
-                    <button type="button" name="BTTNcssLocal" onclick="javascript:window.open('https://www.google.com/maps/place/${data[1].street.replace(/ /gi,'+')},+${data[1].number}+-+${data[1].district.replace(/ /gi,'+')},+${info.region.replace(/ /gi,'+')}+-+${info.unity}')"><i class="CROSSicon"></i>Local</button>
+                    <button type="button" name="BTTNcssRota" onclick="javascript:window.open('https://www.google.com/maps/dir/${info.address.replace(/ /gi,'+')},+${info.number}+-+${info.region.replace(/ /gi,'+')},+${info.region.replace(/ /gi,'+')}+-+${info.unity},+${info.zipcode}/${data[1].street.replace(/ /gi,'+')},+${data[1].number}+-+${data[1].region.replace(/ /gi,'+')},+${info.region.replace(/ /gi,'+')}+-+${info.unity}')"><i class="CROSSicon"></i>Rota</button>
+                    <button type="button" name="BTTNcssLocal" onclick="javascript:window.open('https://www.google.com/maps/place/${data[1].street.replace(/ /gi,'+')},+${data[1].number}+-+${data[1].region.replace(/ /gi,'+')},+${info.region.replace(/ /gi,'+')}+-+${info.unity}')"><i class="CROSSicon"></i>Local</button>
                     <button type="button" name="BTTNcssPrint" onClick="alert('Estamos trabando, este recurso estará disponivel em breve.')"><i class="CROSSicon"></i>Imprimir</button>
                 </div>
                 <div class="CLASSitemTimestamp">
@@ -242,11 +237,14 @@ if(main === 'index'){
 
     document.querySelectorAll('[name="WINDOWmodalCliente"]').forEach(function(data){
         data.addEventListener('click', function(){
+        if(!document.body.contains(document.querySelector('.MODALdefault'))){
             const JSwinAtt = this.getAttribute('js-win');
             const JSwinStatus = document.querySelectorAll('.CARDitemWait')[JSwinAtt].getAttribute('data-id');
 
             const ARRAYdate = new Intl.DateTimeFormat('pt-BR', { weekday: 'long', day: 'numeric', month: 'short', year: 'numeric', hour: '2-digit', minute: 'numeric', hour12: true });
             const [{ value: weekday },,{ value: day },,{ value: month },,{ value: year },,{ value: hour },,{ value: minute },,{ value: hour12 }] = ARRAYdate.formatToParts(new Date(result.order[JSwinStatus].time));
+
+            console.log(result.order[JSwinStatus])
 
             document.body.insertAdjacentHTML('beforeend', `
             <div class="MODALdefault WINDOWmodalCliente">
@@ -258,7 +256,7 @@ if(main === 'index'){
                         <div class="MODALelemMsg">
                             <div class="DIVISORitemP">
                                 <p>Endereço</p>
-                                <p>${result.order[JSwinStatus].street}, ${result.order[JSwinStatus].number}<br/>${result.order[JSwinStatus].district}</p>
+                                <p>${result.order[JSwinStatus].street}, ${result.order[JSwinStatus].number}${result.order[JSwinStatus].complement != '' ? ` - ${result.order[JSwinStatus].complement}` : ''}<br/>${result.order[JSwinStatus].region}${result.order[JSwinStatus].district != '' ? ` - ${result.order[JSwinStatus].district}` : ''}</p>
                             </div>
                             <div class="DIVISORitemP">
                                 <p>Telefone</p>
@@ -307,11 +305,13 @@ if(main === 'index'){
                     });
                 });}
 
+        }
         })
     })
 
     document.querySelectorAll('[name="WINDOWmodalComanda"]').forEach(function(data){
         data.addEventListener('click', function(){
+        if(!document.body.contains(document.querySelector('.MODALdefault'))){
             const JSwinAtt = this.getAttribute('js-win');
             const CARDitemWait = document.querySelectorAll('.CARDitemWait')[JSwinAtt];
             const JSwinStatus = document.querySelectorAll('.CARDitemWait')[JSwinAtt].getAttribute('data-id');
@@ -379,6 +379,9 @@ if(main === 'index'){
                                 <b>TOTAL A PAGAR</b>
                                 <span>${Number(result.order[JSwinStatus].tovalue).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</span>
                         </div>
+                        <div class="COMMANDsend">
+                            <em>Agradecemos aos nossos clientes pela preferência.</em>
+                        </div>
                     </div>
                 </div>
             </div>`);
@@ -392,12 +395,13 @@ if(main === 'index'){
                         this.remove();
                     });
                 });}
-
+        }
         })
     })
 
     document.querySelectorAll('[name="BTTNitemRemove"]').forEach(function(data){
         data.addEventListener('click', function(){
+        if(!document.body.contains(document.querySelector('.MODALdefault'))){
             const JSwinAtt = this.getAttribute('js-win');
             const CARDitemWait = document.querySelectorAll('.CARDitemWait')[JSwinAtt];
             const JSwinStatus = document.querySelectorAll('.CARDitemWait')[JSwinAtt].getAttribute('data-id');
@@ -441,6 +445,7 @@ if(main === 'index'){
                         this.remove();
                     });
                 });}
+        }
         })
     })
 
@@ -464,13 +469,14 @@ if(main === 'index'){
             var commentRequest = RESinClient.comment != '' ? `\n💬 _Comentário:_ ${RESinClient.comment}` : '';
             var TRADEfor = RESinClient.trade != undefined ? '\n💰 _Troco para:_ ```'+RESinClient.trade : '';
 
-            window.open('https://api.whatsapp.com/send?text='+window.encodeURIComponent('*# DADOS PESSOAIS*\n👤 _Cliente:_ ```' +RESinClient.client+ '```\n📞 _Telefone:_ ```' +RESinClient.tel+ '```\n🌎 _Endereço:_ ```' +RESinClient.street+', '+RESinClient.number+ ' - ' +RESinClient.district+ '```\n🌐 _Google Maps:_ ' +`https://www.google.com/maps/dir/${result.business.info.address.replace(/ /gi,'+')},+${result.business.info.number}+-+${result.business.info.district.replace(/ /gi,'+')},+${result.business.info.region.replace(/ /gi,'+')}+-+${result.business.info.unity},+${result.business.info.zipcode}/${RESinClient.street.replace(/ /gi,'+')},+${RESinClient.number}+-+${RESinClient.district.replace(/ /gi,'+')},+${result.business.info.region.replace(/ /gi,'+')}+-+${result.business.info.unity}`+ '\n\n*# SOBRE O PEDIDO*\n' +comandCart.join('\n')+ '\n\n*# PAGAMENTO*' +commentRequest+ '\n💰 _Forma de pagamento:_ ```' +RESinClient.payment+ '```' +TRADEfor+ '\n💰 *_Valor a receber:_* ```' +RESinClient.tovalue.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })+ '```'));
+            window.open('https://api.whatsapp.com/send?text='+window.encodeURIComponent('*# DADOS PESSOAIS*\n👤 _Cliente:_ ```' +RESinClient.client+ '```\n📞 _Telefone:_ ```' +RESinClient.tel+ '```\n🌎 _Endereço:_ ```' +RESinClient.street+', '+RESinClient.number+ ' - ' +RESinClient.region+ '```\n🌐 _Google Maps:_ ' +`https://www.google.com/maps/dir/${result.business.info.address.replace(/ /gi,'+')},+${result.business.info.number}+-+${result.business.info.region.replace(/ /gi,'+')},+${result.business.info.region.replace(/ /gi,'+')}+-+${result.business.info.unity},+${result.business.info.zipcode}/${RESinClient.street.replace(/ /gi,'+')},+${RESinClient.number}+-+${RESinClient.region.replace(/ /gi,'+')},+${result.business.info.region.replace(/ /gi,'+')}+-+${result.business.info.unity}`+ '\n\n*# SOBRE O PEDIDO*\n' +comandCart.join('\n')+ '\n\n*# PAGAMENTO*' +commentRequest+ '\n💰 _Forma de pagamento:_ ```' +RESinClient.payment+ '```' +TRADEfor+ '\n💰 *_Valor a receber:_* ```' +RESinClient.tovalue.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })+ '```'));
         })
     })
 
 
     document.querySelectorAll('[name="WINDOWmodalStatus"]').forEach(function(data){
         data.addEventListener('click', function(){
+        if(!document.body.contains(document.querySelector('.MODALdefault'))){
         const JSwinAtt = this.getAttribute('js-win');
         const CARDitemWait = document.querySelectorAll('.CARDitemWait')[JSwinAtt];
         const JSwinStatus = document.querySelectorAll('.CARDitemWait')[JSwinAtt].getAttribute('data-id');
@@ -539,7 +545,7 @@ if(main === 'index'){
                     restItem = null;
                 });
             });}
-
+        }
         })
     })
 
@@ -666,7 +672,7 @@ if(main === 'index'){
                         <div class="BASEinfoClient">
                             <div class="INFOcliente">
                                 <span>${data[1].client}</span>
-                                <p>${data[1].street}, ${data[1].number} ${data[1].adjunct != undefined ? ` - ${data[1].adjunct}` : '' }<br>${data[1].district}</p>
+                                <p>${data[1].street}, ${data[1].number} ${data[1].adjunct != undefined ? ` - ${data[1].adjunct}` : '' }<br>${data[1].region}${data[1].district != '' ? ` - ${data[1].district}` : ''}</p>
                             </div>
                             <div>
                                 Pagamento: ${data[1].payment}
@@ -1283,9 +1289,9 @@ else if(main === 'creatPost'){
             itemObject.title != '' &&
             (itemObject.thumb != '' &&
             document.body.contains(document.querySelector('.SPANelemSucess')))){
-            database.ref(`feed/${parseInt(Math.random()*1000000000, 10)}`).set(itemObject).then(()=>{
-                window.location.href = '?main=products'
-            });
+                database.ref(`feed/${parseInt(Math.random()*1000000000, 10)}`).set(itemObject).then(()=>{
+                    window.location.href = '?main=products'
+                });
             }
             else {
                 bracael.pushNotify('Há algo de errado!');
@@ -1518,7 +1524,7 @@ else if(main === 'settings'){
                             <div class="CLASSitemAddress">
                                 <input type="text" js-key="address" dir="ltr" placeholder="Rua" disabled="disabled"${result.business.info.address != '' ? ` value="${result.business.info.address}"` : ''}>
                                 <input type="text" js-key="number" dir="ltr" placeholder="Número"${result.business.info.number != '' ? ` value="${result.business.info.number}"` : ''}>
-                                <input type="text" js-key="district" dir="ltr" placeholder="Bairro" disabled="disabled"${result.business.info.district != '' ? ` value="${result.business.info.district}"` : ''}>
+                                <input type="text" js-key="district" dir="ltr" placeholder="Bairro" disabled="disabled"${result.business.info.region != '' ? ` value="${result.business.info.region}"` : ''}>
                                 <input type="text" js-key="optional" dir="ltr" placeholder="Opcional"${result.business.info.optional != '' ? ` value="${result.business.info.optional}"` : ''}>
                                 <input type="text" js-key="region" dir="ltr" placeholder="Cidade" disabled="disabled"${result.business.info.region != '' ? ` value="${result.business.info.region}"` : ''}>
                                 <input type="text" js-key="unity" dir="ltr" placeholder="UF" disabled="disabled"${result.business.info.unity != '' ? ` value="${result.business.info.unity}"` : ''}>
