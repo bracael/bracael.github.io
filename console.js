@@ -1928,10 +1928,10 @@ else if(main === 'settings'){
         document.querySelector('.CLASShrefJSKEY').addEventListener('click', function(){
             document.querySelector('.CLASSitemJSKEY.DISTRICTelemInput').classList.toggle('ITEMnone')
             if(document.querySelector('.CLASSitemJSKEY.DISTRICTelemInput').classList.contains('ITEMnone')){
-                this.innerText =  `Fora de ${result.business.info.region}`;
+                this.innerText =  `Fora de ${result.business.info.region}?`;
             }
             else {
-                this.innerText =  `Para ${result.business.info.region}`;
+                this.innerText =  `Para ${result.business.info.region}?`;
                 document.querySelector('.CLASSitemJSKEY.DISTRICTelemInput').querySelector('[js-key="district"]').value = null;
             }
         })
