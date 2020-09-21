@@ -24,7 +24,7 @@ document.body.innerHTML = `
         <footer>
             <span>© COPYRIGTH 2020<br/>Bracael – Todos os direitos reservados.</span>
             <span>Painel administrativo para parceiros.</span>
-            <span>Last time updated May 9, 2020</span>
+            <span>Last time updated September 21, 2020</span>
         </footer>
     </ul>
 </aside>
