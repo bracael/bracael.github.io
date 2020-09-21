@@ -39,6 +39,7 @@ document.body.innerHTML = `
     </header>
     <article>
 
+    <span>Carregando...</span>
     <!--  // Carrendo...  -->
 
     </article>
@@ -74,7 +75,7 @@ var edit = url.searchParams.get('edit');
 
 console.log(parseInt(Math.random()*1000000000, 10))
 
-fetch('https://commerce-a2f96.firebaseio.com/.json')
+fetch(firebaseConfig.databaseURL+'/.json')
 .then((response) => response.json())
 .then((result) => {
     const feed = result.feed;
@@ -158,7 +159,9 @@ if(main === 'index'){
 
     const WAITINGinst = new Array();
     result.order != undefined ?
-    Object.entries(result.order).map(function(data, i){
+    Object.entries(result.order).sort(function (a, b) {
+        return (a[1].time < b[1].time) ? 1 : ((b[1].time < a[1].time) ? -1 : 0);
+    }).map(function(data, i){
 
         const ARRAYdate = new Intl.DateTimeFormat('pt-BR', { weekday: 'long', day: 'numeric', month: 'short', year: 'numeric', hour: '2-digit', minute: 'numeric', hour12: true });
         const [{ value: weekday },,{ value: day },,{ value: month },,{ value: year },,{ value: hour },,{ value: minute },,{ value: hour12 }] = ARRAYdate.formatToParts(new Date(data[1].time));
@@ -1418,7 +1421,6 @@ else if(main === 'settings'){
         <span>Nenhum bairro encontrado!</span>
         <p>Nos parece que você ainda não adicionou bairros para entrega!</p>
     </div>`)
-
 
 /*  :------------------------------------:
     |  FINAL DO AREAS DE ENTREGA
