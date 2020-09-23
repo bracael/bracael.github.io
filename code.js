@@ -1,1 +1,1319 @@
-const _0x50f7=['linear','</span></div>','[name=\x22inputHandle\x22]','contains','&text=','<span>','ticket','js-key','.COMANDAscreen',',\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x22comment\x22:\x20null,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x22amount\x22:\x201\x0a\x20\x20\x20\x20\x20\x20\x20\x20}}','clientApp','extra','ACTIVEit','</strong></span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','replace','.COMMENTline','.ITEMttl','location','translate3d(0px,\x20','</p>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<p>Esta\x20nota\x20não\x20substitui\x20o\x20cupom\x20fiscal,\x20portanto,\x20é\x20uma\x20forma\x20fácil\x20de\x20que\x20o\x20cliente\x20está\x20acostumado\x20a\x20visualizar\x20os\x20detalhes\x20no\x20pedido.</p>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<strong>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span>#</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span>CÓDIGO</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span>DESCRIÇÃO</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span>QTD.</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span>TOTAL</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</strong>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22COMMANDlist\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','\x20às\x20','\x20LITRO','querySelectorAll','</p>','children','region','action','js-limited','innerText','BRL','.CHANGEstep','\x0a\x20\x20\x20\x20</div>\x0a</div>','debit','\x0a\x20\x20\x20\x20</div>\x0a</div>\x0a<div\x20class=\x22BEBIDADApost\x20DISPLAYnone\x22\x20id=\x22SCREENit\x22>\x0a\x20\x20\x20\x20<div>\x0a\x20\x20\x20\x20','business','\x0a💰\x20_Forma\x20de\x20pagamento:_\x20```','stringify','maestro','data-comment','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<li>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div><p><span>','length','<small>Não\x20trabalhamos\x20com\x20crédito</small>','toggle','\x22><i\x20class=\x22CROSSicon\x20PLUSicon\x22></i></button>\x0a\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22SPINNERmax\x22\x20id=\x22GETTINGdiv\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<button\x20type=\x22button\x22\x20class=\x22GETTINGit\x22\x20for=\x22','</h3>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span>','[name=\x22INPUTradio\x22]','parse','change','\x0a\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22WAITINGcard\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span>','PAYCREDITmethod','json','about','animate','<i\x20class=\x22CROSSicon\x20VRREFicon\x22><img\x20height=\x2220\x22\x20src=\x22https://1.bp.blogspot.com/-UpUHmGhhdL8/XzKKMZk6rDI/AAAAAAAAHGY/Nxt-U6lXPHY_eROYrvRynCJoMnvLeke1gCLcBGAsYHQ/s320/vr-ref.png\x22></i>','client','SWIPEopen','un</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span>','Promo','querySelector','/p/request.html','css','\x20Hamburgueria</b></p>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<p\x20class=\x22IMPORTANTline\x22>CNPJ\x20','.INFObtn','getElementsByTagName','<div\x20class=\x22OPTIONScart\x22>','\x0a\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22CONFIRMcart\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<button\x20onclick=\x22window.location.href=\x27/p/request.html\x27\x22\x20class=\x22PREMIUMbtn\x22><i\x20class=\x22CROSSicon\x20SAVEicon\x22></i>Confirmar</button>\x0a\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20</div>','[name=\x22inputRoad\x22]','.CARTbox','\x0a\x20\x20\x20\x20<div\x20class=\x22COMMENTcart\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22COMMENTinst\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22COMMENTmodal\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22COMMANDsubtotal\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span>SUBTOTAL</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span>','EXISTitem','\x0a<div\x20class=\x22BURGERpost\x22\x20id=\x22SCREENit\x22>\x0a\x20\x20\x20\x20<div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20','brl','elo','hipercard','.CLASSrequestSucess','ELSE','vrref','```\x0a🌎\x20_Endereço:_\x20```','$1-$2','\x0a‼️\x20*','Drinks','trim','\x22\x20min=\x221\x22\x20max=\x225\x22\x20disabled=\x22disabled\x22\x20onselectstart=\x22return\x20false\x22\x20onpaste=\x22return\x20false\x22\x20oncopy=\x22return\x20false\x22\x20oncut=\x22return\x20false\x22\x20ondrag=\x22return\x20false\x22\x20ondrop=\x22return\x20false\x22\x20autocomplete=\x22off\x22\x20class=\x22INPUTnumb\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22PREPENDinput\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<button\x20class=\x22btn\x20btn-increment\x22\x20type=\x22button\x22\x20for=\x22','\x20-\x20loja\x202\x20-\x20','<i\x20class=\x22CROSSicon\x20ICONcomment16\x22></i>','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22CARDinc\x22\x20js-somar=\x22','[[],[]]','</span><span>','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20</section>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<section\x20class=\x22POSTbt\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span>','\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<button\x20type=\x22button\x22\x20js-limited=\x22','<p\x20style=\x22color:\x20#eff94f;\x22>','ASIDE#ITEMcart','\x22\x20name=\x22buttonIncrement\x22>+</button>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>','<small>Não\x20trabalhamos\x20com\x20débito</small>','value','toFixed','INPUT','height','[name=\x22COMMANDradio\x22]','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<h4>Algum\x20comentário?</h4>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22COMMENTdata\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<textarea\x20name=\x22commentText\x22\x20maxlength=\x22140\x22\x20placeholder=\x22Ex:\x20tirar\x20a\x20cebola,\x20carne\x20mal\x20passada\x20etc.\x22>','Tuesday','GRÁTIS','\x0a\x20\x20\x20\x20<div\x20class=\x22MASTERmenu\x22>Lista\x20de\x20atendimento</div>\x0a\x20\x20\x20\x20','options','dotw','.NEXTscrn','\x0a💬\x20_Comentário:_\x20','split','SPAN','\x0a💰\x20_Troco\x20para:_\x20```','dataShow','<i\x20class=\x22CROSSicon\x20MAESTROcon\x22><img\x20height=\x2220\x22\x20src=\x22https://4.bp.blogspot.com/-cP673wyKTYY/XzKNpfTn-5I/AAAAAAAAHG4/TYatZb6b4u8kqSQd56uk-2hP25N_-UeQgCLcBGAsYHQ/s320/maestro.png\x22></i>','FECHADOit','\x0a💰\x20*_Valor\x20a\x20receber:_*\x20```','\x0a\x20\x20\x20\x20','block','[name=\x22commentText\x22]','\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','\x0a\x20\x20\x20\x20</div>','\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</section>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<section\x20class=\x22POSTrt\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span>','\x20EXISTitem','beforeend','\x20extra\x20de\x20','<div\x20class=\x22MSGelemFailure\x22><small>Nenhuma\x20porção\x20publicada!</small></div>','inputEmpty','<i\x20class=\x22CROSSicon\x20AMEXicon\x22><img\x20height=\x2220\x22\x20src=\x22https://3.bp.blogspot.com/-sf2IZ3tnMjM/XzKNe8H_PmI/AAAAAAAAHG0/zyjZveMaCbUJUDlVGI0x-dsIFK73Ys2EACLcBGAsYHQ/s320/amex.png\x22></i>','SPAN.STATUScode','*#\x20DADOS\x20PESSOAIS*\x0a👤\x20_Nome:_\x20```','for','.CONTENTblogger','Servings','beforebegin','entries','Wednesday','Thursday','getElementById','databaseURL','insertAdjacentHTML','disabled','INSERTrate','minvalue','<i\x20class=\x22CROSSicon\x20DINERSicon\x22><img\x20height=\x2220\x22\x20src=\x22https://3.bp.blogspot.com/-7W74XVvvqks/XzKPbSRz5jI/AAAAAAAAHHg/o4mhb7P8sR01FJkEhyWUUnsbS6Oy3Dd6QCLcBGAsYHQ/s320/diners.png\x22></i>','select','FAILact','hasAttribute','<div\x20class=\x22SPINNERmax\x22\x20id=\x22INCREMENTdiv\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22SPINNERinput\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22PREPENDinput\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<button\x20class=\x22btn\x20btn-decrement\x22\x20type=\x22button\x22\x20for=\x22','price','[data-id=\x22','.COMMENTcart','\x20-\x20','resumeCart','\x22><i\x20class=\x22CROSSicon\x20CARTicon\x22></i>Adicionar</button>\x0a\x20\x20\x20\x20\x20\x20\x20\x20</div>','\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20class=\x22NAMEANDval\x22>','\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20</section>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<section\x20class=\x22POSTrt\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span>','\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<section\x20class=\x22CARTlf\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<img\x20src=\x22','once','fadeIn','substring','.INPUTnumb','feed/','mastercard','innerHTML','[name=\x22inputNumber\x22]','unity','\x22,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x22extra\x22:\x20','.CONTENTmodal','pt-BR','Total:\x20','</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</li>','DISPLAYnone','Cartão','itemCart','Saturday','\x22><i\x20class=\x22CROSSicon\x20INFOicon\x22></i></button>\x0a\x20\x20\x20\x20\x20\x20\x20\x20</section>\x0a\x20\x20\x20\x20\x20\x20\x20\x20</div>','\x0a\x20\x20\x20\x20<p>Dinheiro</p>\x0a\x20\x20\x20\x20<div\x20class=\x22PAGAMENTOform\x22>\x0a\x20\x20\x20\x20','fadeOut','<p\x20style=\x22color:\x20#4ff94f;\x22>','https://api.whatsapp.com/send?phone=55','[name=\x22AMOUNTcash\x22]','\x22\x20name=\x22buttonDecrement\x22>-</button>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22text\x22\x20disabled=\x22disabled\x22\x20name=\x22inputHandle\x22\x20value=\x22','.CONTENTadd[style]','order','log','ITEMcart','\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<section\x20class=\x22POSTup\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22POSTimg\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<img\x20src=\x22','\x0a\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20<p>Cartão\x20de\x20Crédito</p>\x0a\x20\x20\x20\x20<div\x20class=\x22PAGAMENTOform\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20','</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span>','<small>Hoje\x20não\x20é\x20dia\x20de\x20promoção.</small>','>\x0a\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20<div\x20class=\x22GROUPinput\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22text\x22\x20class=\x22inputType\x22\x20name=\x22inputDdd\x22\x20placeholder=\x22DDD\x20*\x22\x20tabindex=\x222\x22\x20autocapitalize=\x22on\x22\x20autocorrect=\x22off\x22\x20maxlength=\x222\x22\x20','style','<div\x20class=\x22POSTbox','\x0a\x20\x20\x20\x20\x20\x20\x20\x20<small>Estamos\x20fechado\x20no\x20momento,\x20volte\x20quando\x20o\x20delivery\x20estiver\x20em\x20aberto.</small>','px,\x200px)','street','SELECTopt','Friday','thumb','offsetHeight','PAYCAHSHmethod','credit','CONTENTframe','alelo','</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<button\x20type=\x22button\x22\x20class=\x22INFObtn\x22\x20for=\x22','ABERTOit','```','[data-aside]','.POSTbox[data-id=\x22','description','input','cnpj','removeItem','CONFIRMform','Dinheiro\x20e\x20Cartão','postImg','\x22>Salvar\x20comentário</button>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</li>','cash','\x0a\x20\x20\x20\x20<div\x20class=\x22MASTERmenu\x22>Área\x20de\x20entrega</div>\x0a\x20\x20\x20\x20<div\x20class=\x22MASTERsub\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20Resultados\x20para\x20<b>','removeAttribute','includes','Dinheiro','</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span>','totalCart','addEventListener','methods','.SWIPEopen','LIMITEDinst','then','SUCESSbtn','[name=\x22inputExtra\x22]','```\x0a📞\x20_Telefone:_\x20```(','\x20pedidos\x20no\x20momento\x0a\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20<div\x20class=\x22WAITINGinst\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20','<span>R$</span>','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<li>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span>','.ASIDEbtn[disabled]',')</option>','<i\x20class=\x22CROSSicon\x20ALELOicon\x22><img\x20height=\x2220\x22\x20src=\x22https://4.bp.blogspot.com/-oT3WobHsu4c/XzKUljudVSI/AAAAAAAAHII/FGkJNrJ6tbgDFwvH8EmxmrD20RNWjCiNwCLcBGAsYHQ/s320/alelo.png\x22></i>','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22CASHinpt\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22CASHinst\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span>R$</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22tel\x22\x20value=\x220\x22\x20name=\x22AMOUNTcash\x22\x20maxlength=\x223\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<em>Troco?</em>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>','.COMMENTact','Em\x20preparo','rate','\x0a\x20\x20\x20\x20\x20\x20\x20\x20</select>\x0a\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20<div\x20class=\x22MESSAGEandes\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<p>Será\x20cobrada\x20a\x20taxa\x20de\x20entrega\x20no\x20valor\x20subtotal\x20do\x20pedido.</p>\x0a\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20<div\x20class=\x22GROUPinput\x22\x20id=\x22CONFIRMitem\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<button\x20class=\x22CHANGEstep\x20TEXThref\x22\x20data-for=\x22FIRSTstep\x22\x20tabindex=\x22-1\x22\x20type=\x22button\x22>Voltar\x20atrás</button>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<button\x20class=\x22BUTTONif\x22\x20id=\x22DEMANDit\x22\x20tabindex=\x22-1\x22\x20type=\x22button\x22>Finalizar\x20pedido</button>\x0a\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20</section>','click','SECTION.COMMERCEstatus','removeEventListener','<div\x20class=\x22SECTORhr\x22><span>','setAttribute','.COMANDAmodal','number','weight','</div>','parentNode','.CONTENTadd','<small>Carrinho\x20vazio!</small>','reduce','.CASHinpt','<div\x20class=\x22SCREENmodal\x20CLOSEmodal\x22\x20></div>','<div\x20class=\x22ACESSinfo\x22><p>','banrisul','.GETTINGit','<li><span>','\x0a\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20<div\x20class=\x22MESSAGEandes\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<p>Promoção\x20disponível\x20aos\x20','<li><span>--</span><span>','getOwnPropertyNames','</p></div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22ITENScart\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22ITENSinst\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22CARTbox\x22\x20data-id=\x22','case','Combo','<small>Não\x20trabalhamos\x20com\x20voucher</small>','<p\x20style=\x22color:\x20#4fa3f9;\x22>','join','\x0a♨️\x20_','toLocaleString','asideCartBox','diners','val','\x22><i\x20class=\x22CROSSicon\x20MINUSicon\x22></i></button>\x0a\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22number\x22\x20value=\x22','delivery','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20</div>','encodeURIComponent','</p></div>','<li>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span>--</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span>--</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span>Extra\x20de\x20','[name=\x22commentRequest\x22]','zone','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22HANDLEitem\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<button\x20type=\x22button\x22\x20js-limited=\x22','overflow','</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</li>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','<small>','sodexo','address','js-somar','\x22:{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x22title\x22:\x22','\x0a\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20<p>Voucher</p>\x0a\x20\x20\x20\x20<div\x20class=\x22PAGAMENTOform\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20','\x22\x20alt=\x22','</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20</section>\x0a\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20','<i\x20class=\x22CROSSicon\x20VISAicon\x22><img\x20height=\x2220\x22\x20src=\x22https://1.bp.blogspot.com/-P6ong_vSPo4/X2hJ-EcfzbI/AAAAAAAAHPA/uMHLrlxGR7IlXURS3yBhpva8gOYlIhlHwCLcBGAsYHQ/s320/banrisul.png\x22></i>','<i\x20class=\x22CROSSicon\x20TICKETicon\x22><img\x20height=\x2220\x22\x20src=\x22https://1.bp.blogspot.com/-N3flCB8it7Q/XzKWCU4HUyI/AAAAAAAAHIU/hwICpw0fQMk_RHUAoXW45it0ZSxsya40wCLcBGAsYHQ/s320/ticket.png\x22></i>','refreshCommentAside','[name=\x22inputClient\x22]','getAttribute','amount','<div\x20class=\x22SPINNERmax\x22><span\x20class=\x22OFSTOCKitem\x22>Indisponível</span></div>','</span></p><button\x20type=\x22button\x22\x20class=\x22COMMENTact\x22></button></div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22CONTENTadd\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','button.btn.btn-decrement','button.btn.btn-increment','Peso\x20não\x20informado','.COMMENTdata','>\x0a\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20<div\x20class=\x22GROUPinput\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<div\x20id=\x22SELECTopt\x22\x20>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<select\x20name=\x22INSERTrate\x22\x20tabindex=\x22-1\x22\x20id=\x22INSERTrate\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<option\x20disabled\x20selected\x20value>Selecione\x20seu\x20bairro\x20*</option>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','ref','grams','voucher','<div\x20class=\x22MASTERmenu\x22>\x0a<button\x20type=\x22button\x22\x20class=\x22ASIDEbtn\x22\x20name=\x22destaque\x22\x20disabled=\x22disabled\x22>Combos</button>\x0a<button\x20type=\x22button\x22\x20class=\x22ASIDEbtn\x22\x20name=\x22promo\x22>Promoção</button>\x0a<span></span>\x0a</div>\x0a<div\x20class=\x22SCREENmenu\x22>\x0a<div\x20class=\x22DESTAQbar\x22>\x0a','comment','data-for','obterStorage','amex','district','add','\x20por\x20<strong>','.WHATSAPPbtn','.MENUslct','value=\x22','\x22,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x22price\x22:\x20','[js-target=\x22','title','<div\x20class=\x22PROMOinst\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20','visa','classList','x*\x20```','MENUactive','selectedIndex','<span\x20class=\x22ITEMDESval\x22>','toISOString','parentElement','.ASIDEbtn','\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<section\x20class=\x22CARTlf\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<img\x20src=\x22','>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22text\x22\x20class=\x22inputType\x22\x20name=\x22inputPhone\x22\x20placeholder=\x22Telefone\x20*\x22\x20tabindex=\x223\x22\x20autocapitalize=\x22on\x22\x20autocorrect=\x22off\x22\x20maxlength=\x2210\x22\x20','>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22text\x22\x20class=\x22inputType\x22\x20name=\x22inputNumber\x22\x20placeholder=\x22Número\x20*\x22\x20tabindex=\x22-1\x22\x20autocapitalize=\x22on\x22\x20autocorrect=\x22off\x22\x20','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22POSTbttm\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','lastPurchase','</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20','.MENUslct.ACTIVEit','remove','sort','request','.CLOSEmodal','body','phone','[name=\x22inputPhone\x22]','Delivery\x20aberto!','\x20QUILO','</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22COMMANDsend\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<em>Tenha\x20o\x20WhatsApp\x20instalado\x20em\x20seu\x20Smarthphone\x20para\x20prosseguir\x20com\x20o\x20envio\x20do\x20pedido</em>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<button\x20type=\x22button\x22\x20class=\x22NEXTscrn\x20STRAPboot\x22\x20data-for=\x22SECONDstep\x22>Próximo!</button>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22SECTIONinpt\x22\x20js-target=\x22SECONDstep\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22PAYMENTmethod\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<h3>Forma\x20de\x20pagamento</h3>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<p>Informe\x20o\x20método\x20de\x20pagamento\x20para\x20que\x20tenhamos\x20uma\x20entrega\x20rápida\x20e\x20nosso\x20atendimento\x20seja\x20eficaz.\x20A\x20entrega\x20melhora\x20muito\x20com\x20alguns\x20detalhes\x20importante.</p>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22METHODloop\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22CHECKBOXgr\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22checkbox\x22\x20class=\x22INPUTctrl\x22\x20name=\x22SWITCHit\x22\x20id=\x22PAYCAHSHmethod\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<label\x20class=\x22STATUSlabel\x22\x20for=\x22PAYCAHSHmethod\x22>Pagar\x20com\x20dinheiro?</label>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22METHODloop\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22CHECKBOXgr\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22checkbox\x22\x20class=\x22INPUTctrl\x22\x20name=\x22SWITCHit\x22\x20id=\x22PAYCREDITmethod\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<label\x20class=\x22STATUSlabel\x22\x20for=\x22PAYCREDITmethod\x22>Pagar\x20no\x20cartão?</label>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20name=\x22commentRquestTitle\x22>Mais\x20alguma\x20coisa?</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<textarea\x20name=\x22commentRequest\x22\x20placeholder=\x22Ex.\x20interphone\x20está\x20com\x20defeito\x22></textarea>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22COMMANDsend\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<em>Tenha\x20o\x20WhatsApp\x20instalado\x20em\x20seu\x20Smarthphone\x20para\x20prosseguir\x20com\x20o\x20envio\x20do\x20pedido</em>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<button\x20type=\x22button\x22\x20class=\x22WHATSAPPbtn\x20STRAPboot\x22>Enviar\x20pedido!</button>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<strong><span>ou</span></strong>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<button\x20type=\x22button\x22\x20class=\x22NEXTscrn\x22\x20data-for=\x22FIRSTstep\x22>Voltar</button>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>','/.json','info','<i\x20class=\x22CROSSicon\x20ICONinc\x22></i>','display','refreshItemAside','POSTmap','Em\x20espera','forEach','\x0a\x20\x20\x20\x20<div\x20class=\x22MASTERsub\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20Total\x20de\x20','[name=\x22inputDdd\x22]','.SECTIONinpt[checked]','</span></li>','.inputType','name','\x22,\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x22about\x22:\x22','onload','</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span>','data-aside','\x20\x20\x20\x20<div\x20class=\x22ORDERitem\x20CARTopen\x22>\x0a\x20\x20\x20\x20<div\x20class=\x22OPENCARTinst\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<h3>Todos\x20os\x20seus\x20pedidos</h3>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22TOTALcart\x22><strong>subtotal\x20á\x20pagar</strong><p>','100','push','afterend','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<h4>Adicional\x20de\x20ingrediente?</h4>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22EXTRAinc\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','\x22\x20data-id=\x22','ddd','\x0a</div>\x0a</div>','map','vh,\x200px)','Delivery\x20fechado!','status','href','currency','.REQUESTit','checked','category',',\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x22thumb\x22:\x22','</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22COMMANDfrete\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span><small>ACRESCIMO</small>VALOR\x20DA\x20ENTREGA</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span>'];(function(_0xb5d232,_0x50f76f){const _0x3c3e76=function(_0x21f339){while(--_0x21f339){_0xb5d232['push'](_0xb5d232['shift']());}};_0x3c3e76(++_0x50f76f);}(_0x50f7,0x84));const _0x3c3e=function(_0xb5d232,_0x50f76f){_0xb5d232=_0xb5d232-0x0;let _0x3c3e76=_0x50f7[_0xb5d232];return _0x3c3e76;};const _0x1071d9=_0x3c3e,database=firebase['database'](),numberday=new Date()['getDay'](),weekday=['Sunday','Monday',_0x1071d9('0x165'),_0x1071d9('0x2'),_0x1071d9('0x3'),_0x1071d9('0x40'),_0x1071d9('0x29')][numberday];localStorage[_0x1071d9('0x16f')]===undefined?localStorage[_0x1071d9('0x16f')]=new Date():null,window[_0x1071d9('0xea')]=async function(){const _0x5f214b=_0x1071d9;await fetch(firebaseConfig[_0x5f214b('0x5')]+_0x5f214b('0xdb'))[_0x5f214b('0x5f')](_0x23cfa1=>_0x23cfa1[_0x5f214b('0x132')]())[_0x5f214b('0x5f')](function(_0x567ec0){const _0x3962e4=_0x5f214b,_0x835996=sessionStorage[_0x3962e4('0x28')]!=undefined?JSON[_0x3962e4('0x12e')](sessionStorage[_0x3962e4('0x28')]):undefined,_0x200cd4=new Array(),_0x4f548b=new Array(),_0x231b05=new Array(),_0x4136a1=new Array(),_0x52def0=new Array();Object[_0x3962e4('0x1')](_0x567ec0['feed'])[_0x3962e4('0xf5')](function(_0x5906b2,_0x406320,_0x116733){const _0x18803b=_0x3962e4,_0x498f15=_0x5906b2[0x1]['category'][_0x18803b('0x57')]('Unavailable')?_0x18803b('0xa8'):_0x18803b('0xe')+_0x5906b2[0x0]+_0x18803b('0x8f')+(_0x835996!=undefined?_0x835996[_0x5906b2[0x0]]!=undefined?_0x835996[_0x5906b2[0x0]][_0x18803b('0xa7')]:0x0:0x0)+_0x18803b('0x153')+_0x5906b2[0x0]+_0x18803b('0x12b')+_0x5906b2[0x0]+_0x18803b('0x14');var _0x33b4a3='';!_0x5906b2[0x1][_0x18803b('0xfd')]['includes'](_0x18803b('0x151'))?_0x33b4a3=_0x18803b('0x7d')+_0x5906b2[0x1][_0x18803b('0x4c')]+_0x18803b('0x93'):'';const _0x2be228=_0x18803b('0x3b')+(_0x835996!=undefined?Object[_0x18803b('0x83')](_0x835996)['includes'](_0x5906b2[0x0])?_0x18803b('0x179'):'':'')+_0x18803b('0xf2')+_0x5906b2[0x0]+_0x18803b('0x35')+_0x5906b2[0x1][_0x18803b('0x41')]+'\x22\x20alt=\x22'+_0x5906b2[0x1][_0x18803b('0xbf')]+_0x18803b('0x176')+_0x33b4a3+_0x18803b('0xcd')+_0x498f15+_0x18803b('0x159')+Number(_0x5906b2[0x1][_0x18803b('0xf')])[_0x18803b('0x8b')](_0x18803b('0x23'),{'style':'currency','currency':_0x18803b('0x11d')})+'</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<h3>'+_0x5906b2[0x1][_0x18803b('0xbf')]+_0x18803b('0x12c')+(!_0x5906b2[0x1]['category'][_0x18803b('0x57')](_0x18803b('0x151'))?_0x5906b2[0x1]['grams']>=0x3e8?function(){const _0x343059=_0x18803b;var _0x4730cc=0x0,_0xdc2190=_0x5906b2[0x1][_0x343059('0xb0')];function _0x1e88f8(){_0x4730cc=++_0x4730cc,_0xdc2190=_0xdc2190-0x3e8,_0xdc2190>=0x3e8?_0x1e88f8():null;}return _0xdc2190>=0x3e8?_0x1e88f8():null,_0xdc2190!=0x0?Number(_0x4730cc+'.'+_0xdc2190)['toFixed'](0x1)[_0x343059('0x10e')]('.',',')+'kg':_0x4730cc+_0x343059('0xd9');}():_0x5906b2[0x1]['grams']!=0x0?_0x5906b2[0x1][_0x18803b('0xb0')]+'g':_0x18803b('0xac'):_0x5906b2[0x1][_0x18803b('0x75')]>=0x3e8?function(){const _0x2861f0=_0x18803b;var _0xacb71f=0x0,_0x25ef67=_0x5906b2[0x1][_0x2861f0('0x75')];function _0x1cfcdb(){_0xacb71f=++_0xacb71f,_0x25ef67=_0x25ef67-0x3e8,_0x25ef67>=0x3e8?_0x1cfcdb():null;}return _0x25ef67>=0x3e8?_0x1cfcdb():null,_0x25ef67!=0x0?Number(_0xacb71f+'.'+_0x25ef67)[_0x2861f0('0x160')](0x1)[_0x2861f0('0x10e')]('.',',')+'L':_0xacb71f+_0x2861f0('0x115');}():_0x5906b2[0x1][_0x18803b('0x75')]+'ml')+_0x18803b('0x47')+_0x5906b2[0x0]+_0x18803b('0x2a');_0x5906b2[0x1][_0x18803b('0xfd')][_0x18803b('0x57')](_0x18803b('0x86'))&&!_0x5906b2[0x1][_0x18803b('0xfd')]['includes'](_0x18803b('0x151'))?_0x52def0[_0x18803b('0xef')](_0x2be228):![],_0x5906b2[0x1][_0x18803b('0xfd')]['includes']('Burger')?_0x200cd4[_0x18803b('0xef')](_0x2be228):![],_0x5906b2[0x1][_0x18803b('0xfd')][_0x18803b('0x57')](_0x18803b('0x183'))?_0x231b05[_0x18803b('0xef')](_0x2be228):![],_0x5906b2[0x1][_0x18803b('0xfd')][_0x18803b('0x57')](_0x18803b('0x151'))?_0x4f548b[_0x18803b('0xef')](_0x2be228):![],_0x5906b2[0x1][_0x18803b('0xfd')][_0x18803b('0x57')](_0x18803b('0x139'))&&!_0x5906b2[0x1]['category'][_0x18803b('0x57')](_0x18803b('0x151'))&&_0x5906b2[0x1]['category'][_0x18803b('0x57')](weekday)?_0x4136a1[_0x18803b('0xef')](_0x2be228):![];});const _0x574d69=_0x4136a1[_0x3962e4('0x128')]!=0x0?_0x3962e4('0xc0')+_0x4136a1[_0x3962e4('0x89')]('\x0a')+_0x3962e4('0x81')+bracael[_0x3962e4('0x85')][_0x3962e4('0x169')][numberday]+'\x20por\x20tempo\x20indeterminado.</p>\x0a\x20\x20\x20\x20</div>':_0x3962e4('0x38');document['body'][_0x3962e4('0x103')](document[_0x3962e4('0x4')](_0x3962e4('0xe0')))&&(POSTmap['innerHTML']=_0x3962e4('0x147')+(_0x200cd4[_0x3962e4('0x128')]!=0x0?_0x200cd4[_0x3962e4('0x89')]('\x0a'):'<div\x20class=\x22MSGelemFailure\x22><small>Nenhum\x20hamburguer\x20publicado!</small></div>')+'\x0a\x20\x20\x20\x20</div>\x0a</div>\x0a<div\x20class=\x22PORCIONpost\x20DISPLAYnone\x22\x20id=\x22SCREENit\x22>\x0a\x20\x20\x20\x20<div>\x0a\x20\x20\x20\x20'+(_0x231b05[_0x3962e4('0x128')]!=0x0?_0x231b05['join']('\x0a'):_0x3962e4('0x17c'))+_0x3962e4('0x121')+(_0x4f548b[_0x3962e4('0x128')]!=0x0?_0x4f548b[_0x3962e4('0x89')]('\x0a'):'<div\x20class=\x22MSGelemFailure\x22><small>Nenhuma\x20bebida\x20publicada!</small></div>')+_0x3962e4('0x11f')),CONTENTmodal[_0x3962e4('0x1e')]=_0x3962e4('0xb2')+_0x52def0[_0x3962e4('0x89')]('\x0a')+'\x0a</div>\x0a<div\x20class=\x22PROMObar\x22>\x0a'+_0x574d69+_0x3962e4('0xf4');});const _0x21f339=new Array();database[_0x5f214b('0xaf')](_0x5f214b('0x122'))[_0x5f214b('0x18')](_0x5f214b('0x15f'))[_0x5f214b('0x5f')](_0x5a6d37=>{const _0x38df0d=_0x5f214b;for(var _0x5629de=0x0;_0x5629de<0x7;_0x5629de++){_0x5a6d37[_0x38df0d('0x8e')]()[_0x38df0d('0x11a')][_0x5629de][Object['getOwnPropertyNames'](_0x5a6d37[_0x38df0d('0x8e')]()[_0x38df0d('0x11a')][_0x5629de])][_0x38df0d('0xf5')](function(_0x412032,_0x12d22f,_0x4d671c){const _0x3d0929=_0x38df0d;_0x4d671c[_0x12d22f][0x0]==''||_0x4d671c[_0x12d22f][0x1]==''?_0x21f339['push'](_0x3d0929('0x80')+bracael['case'][_0x3d0929('0x169')][_0x5629de]+'</span><span\x20style=\x22color:\x20#ff847c;\x22>Fechado</span></li>'):_0x12d22f!=0x0?_0x21f339[_0x3d0929('0xef')](_0x3d0929('0x82')+_0x4d671c[_0x12d22f][0x0]+_0x3d0929('0x114')+_0x4d671c[_0x12d22f][0x1]+_0x3d0929('0xe6')):_0x21f339['push']('<li><span>'+bracael['case'][_0x3d0929('0x169')][_0x5629de]+_0x3d0929('0x158')+_0x4d671c[_0x12d22f][0x0]+_0x3d0929('0x114')+_0x4d671c[_0x12d22f][0x1]+_0x3d0929('0xe6'));});}document['getElementById']('SEMANAit')['innerHTML']=_0x21f339[_0x38df0d('0x89')]('\x0a');const _0x101a1c=new Array();Object['entries'](_0x5a6d37[_0x38df0d('0x8e')]()[_0x38df0d('0xb7')])[_0x38df0d('0xd2')](function(_0x51e506,_0x2f6d64){const _0x11a28d=_0x38df0d;return _0x51e506[0x1][_0x11a28d('0x96')]>_0x2f6d64[0x1]['zone']?0x1:_0x2f6d64[0x1][_0x11a28d('0x96')]>_0x51e506[0x1][_0x11a28d('0x96')]?-0x1:0x0;})[_0x38df0d('0xf5')](function(_0x5b1693,_0x3e3d1b,_0x26c69e){const _0x29aa5a=_0x38df0d;if(_0x26c69e[_0x3e3d1b-0x1]!=undefined)var _0x1162c6=_0x5b1693[0x1]['zone'][_0x29aa5a('0x1a')](0x0,0x1)!=_0x26c69e[_0x3e3d1b-0x1][0x1][_0x29aa5a('0x96')][_0x29aa5a('0x1a')](0x0,0x1)?_0x26c69e[_0x3e3d1b][0x1][_0x29aa5a('0x96')]['substring'](0x0,0x1):'';else var _0x1162c6=_0x26c69e[_0x3e3d1b][0x1][_0x29aa5a('0x96')]['substring'](0x0,0x1);_0x101a1c[_0x29aa5a('0xef')](_0x29aa5a('0x71')+_0x1162c6+_0x29aa5a('0x158')+_0x5b1693[0x1][_0x29aa5a('0x96')]+_0x29aa5a('0x158')+(_0x5b1693[0x1][_0x29aa5a('0x6c')]!=0x0?Number(_0x5b1693[0x1]['rate'])[_0x29aa5a('0x8b')](_0x29aa5a('0x23'),{'style':_0x29aa5a('0xfa'),'currency':_0x29aa5a('0x11d')}):_0x29aa5a('0x166'))+_0x29aa5a('0x101'));}),DISTRICTon[_0x38df0d('0x1e')]=_0x38df0d('0x55')+_0x5a6d37['val']()[_0x38df0d('0xdc')]['region']+'/'+_0x5a6d37[_0x38df0d('0x8e')]()[_0x38df0d('0xdc')][_0x38df0d('0x20')]+'</b>\x0a\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20<div\x20class=\x22DISTRICTinst\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20'+_0x101a1c['join']('\x0a')+_0x38df0d('0x177');const _0x32014e=_0x38df0d('0xa2'),_0x11c7fe='<i\x20class=\x22CROSSicon\x20VISAicon\x22><img\x20height=\x2220\x22\x20src=\x22https://4.bp.blogspot.com/-yjRJamc055o/XzKLkgO8A1I/AAAAAAAAHGo/EKk1YWu8uTwFHZmqtsKa7Q5XI_eXsMo3gCLcBGAsYHQ/s320/visa.png\x22></i>',_0x339b1b=_0x38df0d('0x170'),_0x2f909c='<i\x20class=\x22CROSSicon\x20ELOicon\x22><img\x20height=\x2220\x22\x20src=\x22https://2.bp.blogspot.com/-_cwtVG4dR1g/XzKRdsHr1BI/AAAAAAAAHHs/sz5v6dB6bYcjFd9aZFoEMF-RQQN59ATkQCLcBGAsYHQ/s320/elo.png\x22></i>',_0x5ab508='<i\x20class=\x22CROSSicon\x20MASTERcon\x22><img\x20height=\x2220\x22\x20src=\x22https://4.bp.blogspot.com/-c2qRtCccgFk/XzKOp6dtO3I/AAAAAAAAHHQ/bksycs51u6EbTaF8_FMm31fN6iV6Hul-gCLcBGAsYHQ/s320/mastercard.png\x22></i>',_0x158c27='<i\x20class=\x22CROSSicon\x20AMEXicon\x22><img\x20height=\x2220\x22\x20src=\x22https://1.bp.blogspot.com/-Pxg-BfPny3o/X2hJ-NGAdpI/AAAAAAAAHO8/EepI7iQqVwEEi6Cf5RcDK2M2gzagl3HfwCLcBGAsYHQ/s320/hipercard.png\x22></i>',_0x33405c=_0x38df0d('0x17e'),_0x177a0e=_0x38df0d('0xa'),_0x30664b=_0x38df0d('0x68'),_0x1ee051='<i\x20class=\x22CROSSicon\x20SODEXOcon\x22><img\x20height=\x2220\x22\x20src=\x22https://2.bp.blogspot.com/-romfsWuFvDc/XzKTG2L-nvI/AAAAAAAAHH8/bzPh5XSrwwk3ArbFXPr05fyGHGVseoHqgCLcBGAsYHQ/s1600/sodexo.png\x22></i>',_0x59ab04=_0x38df0d('0xa3'),_0x338b59=_0x38df0d('0x135'),_0x554674=_0x5a6d37[_0x38df0d('0x8e')]()[_0x38df0d('0x5c')],_0x3584bd=_0x554674[_0x38df0d('0x54')][_0x38df0d('0x148')]?'\x0a\x20\x20\x20\x20'+(_0x554674[_0x38df0d('0x54')][_0x38df0d('0x148')]?'<small>BRL\x20(moeda\x20do\x20Brasil)</small>':''):'<small>Não\x20trabalhamos\x20com\x20dinheiro\x20em\x20espécie</small>',_0x3c55ff=_0x554674['debit'][_0x38df0d('0xc1')]||_0x554674['debit'][_0x38df0d('0x125')]||_0x554674['debit'][_0x38df0d('0x149')]||_0x554674['debit']['banrisul']?_0x38df0d('0x173')+(_0x554674[_0x38df0d('0x120')][_0x38df0d('0xc1')]?_0x11c7fe:'')+_0x38df0d('0x173')+(_0x554674['debit']['maestro']?_0x339b1b:'')+_0x38df0d('0x173')+(_0x554674[_0x38df0d('0x120')][_0x38df0d('0x149')]?_0x2f909c:'')+_0x38df0d('0x173')+(_0x554674[_0x38df0d('0x120')][_0x38df0d('0x7e')]?_0x32014e:''):_0x38df0d('0x15e'),_0x205758=_0x554674['credit'][_0x38df0d('0xc1')]||_0x554674[_0x38df0d('0x44')][_0x38df0d('0x1d')]||_0x554674[_0x38df0d('0x44')][_0x38df0d('0x149')]||_0x554674[_0x38df0d('0x44')][_0x38df0d('0x14a')]||_0x554674['credit']['amex']||_0x554674['credit'][_0x38df0d('0x8d')]?_0x38df0d('0x173')+(_0x554674[_0x38df0d('0x44')][_0x38df0d('0xc1')]?_0x11c7fe:'')+_0x38df0d('0x173')+(_0x554674[_0x38df0d('0x44')][_0x38df0d('0x1d')]?_0x5ab508:'')+_0x38df0d('0x173')+(_0x554674['credit'][_0x38df0d('0x149')]?_0x2f909c:'')+'\x0a\x20\x20\x20\x20'+(_0x554674[_0x38df0d('0x44')][_0x38df0d('0x14a')]?_0x158c27:'')+'\x0a\x20\x20\x20\x20'+(_0x554674[_0x38df0d('0x44')][_0x38df0d('0xb6')]?_0x33405c:'')+_0x38df0d('0x173')+(_0x554674[_0x38df0d('0x44')]['diners']?_0x177a0e:''):_0x38df0d('0x129'),_0x1baacb=_0x554674[_0x38df0d('0xb1')][_0x38df0d('0x46')]||_0x554674[_0x38df0d('0xb1')][_0x38df0d('0x9b')]||_0x554674[_0x38df0d('0xb1')][_0x38df0d('0x106')]||_0x554674[_0x38df0d('0xb1')][_0x38df0d('0x14d')]?'\x0a\x20\x20\x20\x20'+(_0x554674['voucher'][_0x38df0d('0x46')]?_0x30664b:'')+'\x0a\x20\x20\x20\x20'+(_0x554674[_0x38df0d('0xb1')][_0x38df0d('0x9b')]?_0x1ee051:'')+_0x38df0d('0x173')+(_0x554674['voucher'][_0x38df0d('0x106')]?_0x59ab04:'')+'\x0a\x20\x20\x20\x20'+(_0x554674['voucher'][_0x38df0d('0x14d')]?_0x338b59:''):_0x38df0d('0x87');PAGAMENTOit[_0x38df0d('0x1e')]=_0x38df0d('0x2b')+_0x3584bd+'\x0a\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20<p>Cartão\x20de\x20Débito</p>\x0a\x20\x20\x20\x20<div\x20class=\x22PAGAMENTOform\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20'+_0x3c55ff+_0x38df0d('0x36')+_0x205758+_0x38df0d('0x9f')+_0x1baacb+'\x0a\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20';});const _0x2f7a33=document['querySelectorAll'](_0x5f214b('0xbb'));for(var _0x4a36f0=0x0;_0x4a36f0<_0x2f7a33[_0x5f214b('0x128')];_0x4a36f0++){_0x2f7a33[_0x4a36f0][_0x5f214b('0x5b')]('click',function(){const _0xe4071c=_0x5f214b;if(!this[_0xe4071c('0xc2')][_0xe4071c('0x103')](_0xe4071c('0x10c'))&&!this['hasAttribute'](_0xe4071c('0x7'))){bracael[_0xe4071c('0x52')]();const _0x14d23a=document[_0xe4071c('0x13a')]('.'+document[_0xe4071c('0x13a')](_0xe4071c('0xd0'))['getAttribute'](_0xe4071c('0x181')));document['querySelector'](_0xe4071c('0xd0'))['classList'][_0xe4071c('0x12a')]('ACTIVEit'),this[_0xe4071c('0xc2')]['toggle'](_0xe4071c('0x10c'));for(var _0x1dad6=0x0;_0x1dad6<_0x2f7a33[_0xe4071c('0x128')];_0x1dad6++){_0x2f7a33[_0x1dad6]['setAttribute'](_0xe4071c('0x7'),'disabled');}$(_0x14d23a)['animate']({'opacity':0x0},{'duration':0x96,'easing':'linear','queue':![]}),$(_0x14d23a)['animate']({'transform':_0xe4071c('0xee')},{'step':function(_0x2ffc3d,_0x123155){const _0x5e04d3=_0xe4071c;$(this)[_0x5e04d3('0x13c')]({'transform':'translate3d(0px,\x20'+_0x2ffc3d+_0x5e04d3('0xf6')});},'duration':0x12c,'easing':_0xe4071c('0x100'),'queue':![],'complete':function(){const _0x1e4a9d=_0xe4071c;this['classList']['add'](_0x1e4a9d('0x26')),this[_0x1e4a9d('0x56')](_0x1e4a9d('0x3a'));}},_0xe4071c('0x100')),setTimeout(()=>{const _0x47caae=_0xe4071c,_0x24232b=document[_0x47caae('0x13a')]('.'+this['getAttribute'](_0x47caae('0x181')));$(_0x24232b)['fadeIn'](0x1f4,function(){const _0x378e4d=_0x47caae;_0x24232b[_0x378e4d('0xc2')][_0x378e4d('0xd1')](_0x378e4d('0x26')),_0x24232b[_0x378e4d('0x56')](_0x378e4d('0x3a'));});},0x64),setTimeout(()=>{const _0x462ae5=_0xe4071c;for(var _0x229a04=0x0;_0x229a04<_0x2f7a33[_0x462ae5('0x128')];_0x229a04++){_0x2f7a33[_0x229a04][_0x462ae5('0x56')]('disabled');}},0x258);}});}if(document[_0x5f214b('0xd5')][_0x5f214b('0x103')](document[_0x5f214b('0x13a')](_0x5f214b('0x182')))){if(sessionStorage['itemCart']!=undefined){const _0x310473=new Array(),_0x36d56a=new Array(),_0x506e75=new Array();Object[_0x5f214b('0x1')](JSON[_0x5f214b('0x12e')](sessionStorage[_0x5f214b('0x28')]))[_0x5f214b('0xf5')](function(_0x5ac520,_0x4dc029,_0xd0502d){const _0x59b71c=_0x5f214b,_0x3b24fc=new Array();_0x5ac520[0x1]['extra'][0x1]['map'](function(_0x26c415){const _0xcdf59b=_0x3c3e;_0x3b24fc[_0xcdf59b('0xef')](_0x26c415[0x0]*_0x26c415[0x1]);});var _0x431f63=_0x3b24fc[_0x59b71c('0x7a')](function(_0x4e367f,_0xfd932c){return _0x4e367f+_0xfd932c;},0x0);_0x506e75[_0x59b71c('0xef')](Number(_0x5ac520[0x1][_0x59b71c('0xf')]*_0x5ac520[0x1]['amount']+_0x431f63));if(_0x5ac520[0x1][_0x59b71c('0xa7')]!=0x1)var _0x5190fb=_0x59b71c('0x9a')+_0x5ac520[0x1]['amount']+'</small>';else var _0x5190fb='';var _0x31c9c9=_0x59b71c('0x140')+(_0x431f63!=0x0?_0x59b71c('0xdd'):'')+(_0x5ac520[0x1][_0x59b71c('0xb3')]!=null?_0x59b71c('0x155'):'')+_0x59b71c('0x76');_0x36d56a['push']('\x0a\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22CARTbox\x22\x20data-id=\x22'+_0x5ac520[0x0]+_0x59b71c('0xca')+_0x5ac520[0x1]['thumb']+_0x59b71c('0xa0')+_0x5ac520[0x1][_0x59b71c('0xbf')]+_0x59b71c('0x16')+(Number(_0x5ac520[0x1][_0x59b71c('0xf')]*_0x5ac520[0x1][_0x59b71c('0xa7')]+_0x431f63)['toLocaleString']('pt-BR',{'style':'currency','currency':_0x59b71c('0x11d')})+_0x5190fb+_0x31c9c9)+'</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span>'+_0x5ac520[0x1][_0x59b71c('0xbf')]+_0x59b71c('0x37')+_0x5ac520[0x1][_0x59b71c('0x133')]+_0x59b71c('0xa1')),_0x310473[_0x59b71c('0xef')](_0x5ac520[0x1]['amount']);}),_0x310473['reduce']((_0xee85b8,_0x10c093)=>_0xee85b8+_0x10c093)!=0x0&&(document['querySelector']('#SETVALUEit.CROSSicon.CARTicon')[_0x5f214b('0x1e')]=_0x5f214b('0x105')+_0x310473[_0x5f214b('0x7a')]((_0xb1c11d,_0x8e1039)=>_0xb1c11d+_0x8e1039)+'</span>'),window[_0x5f214b('0x111')][_0x5f214b('0xf9')]['indexOf'](_0x5f214b('0x13b'))!=-0x1&&console['log']('request.html'),ITEMcart[_0x5f214b('0x1e')]='<div\x20class=\x22ORDERitem\x20CARTopen\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22OPENCARTinst\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<h3>Todos\x20os\x20seus\x20pedidos</h3>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22TOTALcart\x22><strong>subtotal\x20á\x20pagar</strong><p>'+Number(_0x506e75[_0x5f214b('0x7a')]((_0x1a1287,_0x4e7904)=>_0x1a1287+_0x4e7904))[_0x5f214b('0x8b')](_0x5f214b('0x23'),{'style':_0x5f214b('0xfa'),'currency':_0x5f214b('0x11d')})[_0x5f214b('0x10e')]('R$',_0x5f214b('0x64'))+'</p></div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22ITENScart\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22ITENSinst\x22\x20id=\x22CARTmap\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20'+_0x36d56a[_0x5f214b('0x89')]('')+_0x5f214b('0x141');}database['ref']()['on'](_0x5f214b('0x15f'),function(_0x32e86d){const _0x35e892=_0x5f214b,_0x2f54b1=document[_0x35e892('0x13a')](_0x35e892('0x17f'));_0x32e86d[_0x35e892('0x8e')]()[_0x35e892('0x122')][_0x35e892('0xf8')]?(document[_0x35e892('0x13a')](_0x35e892('0x6f'))['id']=_0x35e892('0x48'),_0x2f54b1[_0x35e892('0x11c')]=_0x35e892('0xd8')):(document['querySelector'](_0x35e892('0x6f'))['id']=_0x35e892('0x171'),_0x2f54b1[_0x35e892('0x11c')]=_0x35e892('0xf7'));const _0x19cebc=new Array();_0x32e86d[_0x35e892('0x8e')]()['order']!=undefined?Object[_0x35e892('0x1')](_0x32e86d[_0x35e892('0x8e')]()[_0x35e892('0x32')])[_0x35e892('0xf5')](function(_0x4cc65f,_0x4f4721,_0x33b9e6){const _0x10f330=_0x35e892;_0x19cebc['push'](_0x10f330('0x130')+_0x4cc65f[0x1][_0x10f330('0x136')]+'</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div><p>Status</p>'+(_0x4cc65f[0x1][_0x10f330('0xf8')]==_0x10f330('0xe1')?'<p>'+_0x4cc65f[0x1][_0x10f330('0xf8')]+'</p>':_0x4cc65f[0x1]['status']==_0x10f330('0x6b')?_0x10f330('0x15b')+_0x4cc65f[0x1][_0x10f330('0xf8')]+'</p>':_0x4cc65f[0x1]['status']=='Em\x20retirada'?_0x10f330('0x88')+_0x4cc65f[0x1][_0x10f330('0xf8')]+_0x10f330('0x117'):_0x10f330('0x2d')+_0x4cc65f[0x1]['status']+_0x10f330('0x117'))+_0x10f330('0xcf'));}):null,WAITINGlist[_0x35e892('0x1e')]=_0x35e892('0x167')+(_0x32e86d[_0x35e892('0x8e')]()[_0x35e892('0x32')]!=undefined?_0x35e892('0xe3')+Object[_0x35e892('0x83')](_0x32e86d['val']()['order'])[_0x35e892('0x128')]+_0x35e892('0x63')+_0x19cebc[_0x35e892('0x89')]('')+'\x0a\x20\x20\x20\x20</div>':'<small>Por\x20enquanto,\x20não\x20há\x20nada\x20por\x20aqui.<small>');}),document['querySelectorAll'](_0x5f214b('0x13e'))['forEach'](_0x3f5fc0=>{const _0xfad5ac=_0x5f214b;_0x3f5fc0['addEventListener'](_0xfad5ac('0x6e'),function(){const _0x15afa7=_0xfad5ac;document[_0x15afa7('0x13a')](_0x15afa7('0x4b')+this[_0x15afa7('0xa6')](_0x15afa7('0x181'))+'\x22]')[_0x15afa7('0x13a')]('.POSTimg')['classList'][_0x15afa7('0x12a')]('ACTIVEit');});}),document[_0x5f214b('0x116')](_0x5f214b('0x7f'))[_0x5f214b('0xe2')](_0x3f70ec=>{const _0x15bc14=_0x5f214b;_0x3f70ec[_0x15bc14('0x5b')](_0x15bc14('0x6e'),function(){const _0x39ff7f=_0x15bc14;database['ref'](_0x39ff7f('0x1c')+this[_0x39ff7f('0xa6')](_0x39ff7f('0x181')))[_0x39ff7f('0x18')](_0x39ff7f('0x15f'))['then'](_0x39ded4=>{const _0x2ff37c=_0x39ff7f;if(!this[_0x2ff37c('0xd')](_0x2ff37c('0x7'))&&_0x39ded4[_0x2ff37c('0x8e')]()!=null&&_0x39ded4[_0x2ff37c('0x8e')]()!=undefined){const _0x16beca=document['querySelector'](_0x2ff37c('0x4b')+this[_0x2ff37c('0xa6')](_0x2ff37c('0x181'))+'\x22]'),_0x3da876=new Array();_0x39ded4[_0x2ff37c('0x8e')]()['extra']!=undefined?_0x39ded4[_0x2ff37c('0x8e')]()[_0x2ff37c('0x10b')][_0x2ff37c('0xf5')](function(_0x351f02){const _0x17f450=_0x2ff37c;_0x3da876[_0x17f450('0xef')]([0x0,Number(_0x351f02[0x3])]);}):null;const _0x219923=JSON['parse']('{\x22'+this[_0x2ff37c('0xa6')](_0x2ff37c('0x181'))+_0x2ff37c('0x9e')+_0x39ded4[_0x2ff37c('0x8e')]()['title']+_0x2ff37c('0xbd')+_0x39ded4['val']()[_0x2ff37c('0xf')]+_0x2ff37c('0xfe')+_0x39ded4['val']()[_0x2ff37c('0x41')]+_0x2ff37c('0xe9')+(!_0x39ded4[_0x2ff37c('0x8e')]()[_0x2ff37c('0xfd')][_0x2ff37c('0x57')](_0x2ff37c('0x151'))?_0x39ded4['val']()[_0x2ff37c('0xb0')]>=0x3e8?function(){const _0x597ed0=_0x2ff37c;var _0x2a43e4=0x0,_0x504658=_0x39ded4['val']()[_0x597ed0('0xb0')];function _0x2a7fc3(){_0x2a43e4=++_0x2a43e4,_0x504658=_0x504658-0x3e8,_0x504658>=0x3e8?_0x2a7fc3():null;}return _0x504658>=0x3e8?_0x2a7fc3():null,_0x504658!=0x0?Number(_0x2a43e4+'.'+_0x504658)[_0x597ed0('0x160')](0x1)[_0x597ed0('0x10e')]('.',',')+'kg':_0x2a43e4+_0x597ed0('0xd9');}():_0x39ded4[_0x2ff37c('0x8e')]()[_0x2ff37c('0xb0')]!=0x0?_0x39ded4[_0x2ff37c('0x8e')]()[_0x2ff37c('0xb0')]+'g':_0x2ff37c('0xac'):_0x39ded4[_0x2ff37c('0x8e')]()['weight']>=0x3e8?function(){const _0x39b5f2=_0x2ff37c;var _0x58c594=0x0,_0x464344=_0x39ded4[_0x39b5f2('0x8e')]()[_0x39b5f2('0x75')];function _0x3bc660(){_0x58c594=++_0x58c594,_0x464344=_0x464344-0x3e8,_0x464344>=0x3e8?_0x3bc660():null;}return _0x464344>=0x3e8?_0x3bc660():null,_0x464344!=0x0?Number(_0x58c594+'.'+_0x464344)[_0x39b5f2('0x160')](0x1)[_0x39b5f2('0x10e')]('.',',')+'L':_0x58c594+_0x39b5f2('0x115');}():_0x39ded4[_0x2ff37c('0x8e')]()[_0x2ff37c('0x75')]+'ml')+_0x2ff37c('0x21')+(_0x39ded4[_0x2ff37c('0x8e')]()['extra']!=undefined?'['+JSON[_0x2ff37c('0x124')](_0x39ded4['val']()[_0x2ff37c('0x10b')])+','+JSON[_0x2ff37c('0x124')](_0x3da876)+']':_0x2ff37c('0x157'))+_0x2ff37c('0x109'));sessionStorage[_0x2ff37c('0x28')]!=undefined?(!Object[_0x2ff37c('0x83')](JSON[_0x2ff37c('0x12e')](sessionStorage['itemCart']))[_0x2ff37c('0x57')](this[_0x2ff37c('0xa6')]('for'))&&(sessionStorage[_0x2ff37c('0x28')]=JSON['stringify'](Object['assign'](JSON[_0x2ff37c('0x12e')](sessionStorage[_0x2ff37c('0x28')]),_0x219923))),bracael['incrementCart'](this[_0x2ff37c('0xa6')](_0x2ff37c('0x181')))):(sessionStorage[_0x2ff37c('0x28')]=JSON[_0x2ff37c('0x124')](_0x219923),document['querySelector'](_0x2ff37c('0x15c'))[_0x2ff37c('0x1e')]=_0x2ff37c('0xed')+Number(_0x39ded4['val']()[_0x2ff37c('0xf')])[_0x2ff37c('0x8b')](_0x2ff37c('0x23'),{'style':_0x2ff37c('0xfa'),'currency':_0x2ff37c('0x11d')})[_0x2ff37c('0x10e')]('R$',_0x2ff37c('0x64'))+_0x2ff37c('0x84')+this['getAttribute'](_0x2ff37c('0x181'))+_0x2ff37c('0x17')+_0x39ded4[_0x2ff37c('0x8e')]()['thumb']+_0x2ff37c('0xa0')+_0x39ded4['val']()['title']+_0x2ff37c('0x178')+Number(_0x39ded4[_0x2ff37c('0x8e')]()[_0x2ff37c('0xf')])[_0x2ff37c('0x8b')]('pt-BR',{'style':_0x2ff37c('0xfa'),'currency':_0x2ff37c('0x11d')})+_0x2ff37c('0x59')+_0x39ded4['val']()[_0x2ff37c('0xbf')]+_0x2ff37c('0x59')+(!_0x39ded4[_0x2ff37c('0x8e')]()[_0x2ff37c('0xfd')][_0x2ff37c('0x57')](_0x2ff37c('0x151'))?_0x39ded4['val']()['grams']>=0x3e8?function(){const _0x698c5c=_0x2ff37c;var _0x4025e6=0x0,_0x321392=_0x39ded4['val']()[_0x698c5c('0xb0')];function _0x5b86d7(){_0x4025e6=++_0x4025e6,_0x321392=_0x321392-0x3e8,_0x321392>=0x3e8?_0x5b86d7():null;}return _0x321392>=0x3e8?_0x5b86d7():null,_0x321392!=0x0?Number(_0x4025e6+'.'+_0x321392)[_0x698c5c('0x160')](0x1)[_0x698c5c('0x10e')]('.',',')+'kg':_0x4025e6+_0x698c5c('0xd9');}():_0x39ded4[_0x2ff37c('0x8e')]()[_0x2ff37c('0xb0')]!=0x0?_0x39ded4[_0x2ff37c('0x8e')]()[_0x2ff37c('0xb0')]+'g':_0x2ff37c('0xac'):_0x39ded4[_0x2ff37c('0x8e')]()['weight']>=0x3e8?function(){const _0xeade89=_0x2ff37c;var _0x3ace9e=0x0,_0x5be4ea=_0x39ded4[_0xeade89('0x8e')]()['weight'];function _0x578972(){_0x3ace9e=++_0x3ace9e,_0x5be4ea=_0x5be4ea-0x3e8,_0x5be4ea>=0x3e8?_0x578972():null;}return _0x5be4ea>=0x3e8?_0x578972():null,_0x5be4ea!=0x0?Number(_0x3ace9e+'.'+_0x5be4ea)['toFixed'](0x1)[_0xeade89('0x10e')]('.',',')+'L':_0x3ace9e+_0xeade89('0x115');}():_0x39ded4[_0x2ff37c('0x8e')]()[_0x2ff37c('0x75')]+'ml')+'</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</section>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22CONFIRMcart\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<button\x20onclick=\x22window.location.href=\x27/p/request.html\x27\x22\x20class=\x22PREMIUMbtn\x22><i\x20class=\x22CROSSicon\x20SAVEicon\x22></i>Confirmar</button>\x0a\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20</div>');document[_0x2ff37c('0x4')](_0x2ff37c('0x34'))[_0x2ff37c('0x13a')](_0x2ff37c('0x10')+this['getAttribute']('for')+'\x22]')['addEventListener']('dblclick',function(){const _0x3a97e0=_0x2ff37c;this[_0x3a97e0('0x118')]['length']<0x3&&bracael[_0x3a97e0('0x8c')](this);}),_0x16beca[_0x2ff37c('0x13a')](_0x2ff37c('0x1b'))[_0x2ff37c('0x15f')]=0x1,this[_0x2ff37c('0x72')](_0x2ff37c('0x7'),'disabled');const _0x56d636=_0x16beca[_0x2ff37c('0x13a')]('#INCREMENTdiv.SPINNERmax');$(this['parentNode'])['animate']({'opacity':0x0},{'duration':0x190,'easing':_0x2ff37c('0x100'),'queue':![]}),$(this['parentNode'])[_0x2ff37c('0x134')]({'transform':'26'},{'step':function(_0x587037,_0x6fab26){const _0xcbcab6=_0x2ff37c;$(this)[_0xcbcab6('0x13c')]({'transform':_0xcbcab6('0x112')+_0x587037+_0xcbcab6('0x3d')});},'duration':0x190,'easing':'linear','queue':![],'complete':function(){const _0x39afc9=_0x2ff37c;_0x16beca[_0x39afc9('0xc2')][_0x39afc9('0xb8')](_0x39afc9('0x146')),this[_0x39afc9('0x56')](_0x39afc9('0x3a')),this[_0x39afc9('0x13a')](_0x39afc9('0x7f'))['removeAttribute'](_0x39afc9('0x7'));}},'linear'),setTimeout(function(){const _0x1a37ec=_0x2ff37c;$(_0x56d636)[_0x1a37ec('0x19')](0x190);},0xc8),bracael['refreshItemCart']();}});});});for(let _0x346758=0x0;_0x346758<document[_0x5f214b('0x116')](_0x5f214b('0x143'))[_0x5f214b('0x128')];_0x346758++){document[_0x5f214b('0x116')](_0x5f214b('0x143'))[_0x346758][_0x5f214b('0x5b')]('dblclick',function _0x5031d4(_0x94515c){const _0x3d7de8=_0x5f214b;this[_0x3d7de8('0x118')][_0x3d7de8('0x128')]<0x3&&bracael['asideCartBox'](this);});}for(var _0x4a36f0=0x0;_0x4a36f0<document[_0x5f214b('0x116')](_0x5f214b('0xaa'))[_0x5f214b('0x128')];_0x4a36f0++){document['querySelectorAll'](_0x5f214b('0xaa'))[_0x4a36f0][_0x5f214b('0x5b')](_0x5f214b('0x6e'),function(){const _0x2dced7=_0x5f214b,_0x2ce063=this[_0x2dced7('0xa6')](_0x2dced7('0x181'));sessionStorage[_0x2dced7('0x28')]!=undefined&&(JSON[_0x2dced7('0x12e')](sessionStorage[_0x2dced7('0x28')])[_0x2ce063]!=undefined&&(bracael[_0x2dced7('0xb5')](_0x2ce063,--JSON[_0x2dced7('0x12e')](sessionStorage[_0x2dced7('0x28')])[_0x2ce063]['amount']),bracael['decrementCart'](_0x2ce063)));});}for(var _0x4a36f0=0x0;_0x4a36f0<document[_0x5f214b('0x116')](_0x5f214b('0xab'))[_0x5f214b('0x128')];_0x4a36f0++){document[_0x5f214b('0x116')](_0x5f214b('0xab'))[_0x4a36f0][_0x5f214b('0x5b')](_0x5f214b('0x6e'),function(){const _0x1a1bf8=_0x5f214b,_0x573f85=this[_0x1a1bf8('0xa6')](_0x1a1bf8('0x181'));sessionStorage[_0x1a1bf8('0x28')]!=undefined&&(JSON[_0x1a1bf8('0x12e')](sessionStorage[_0x1a1bf8('0x28')])[_0x573f85]!=undefined&&(bracael[_0x1a1bf8('0xb5')](_0x573f85,++JSON['parse'](sessionStorage[_0x1a1bf8('0x28')])[_0x573f85][_0x1a1bf8('0xa7')]),bracael['incrementCart'](_0x573f85)));});}document[_0x5f214b('0x116')](_0x5f214b('0x4a'))[_0x5f214b('0xe2')](function(_0x254232){const _0x29034b=_0x5f214b;_0x254232[_0x29034b('0x5b')]('click',function(){const _0x26ca67=_0x29034b;bracael['postImg'](),document[_0x26ca67('0x4')](_0x254232['getAttribute'](_0x26ca67('0xec')))[_0x26ca67('0xc2')][_0x26ca67('0x12a')](_0x26ca67('0xc4')),document[_0x26ca67('0x4')](_0x26ca67('0x45'))[_0x26ca67('0xc2')][_0x26ca67('0x12a')]('SWIPEopen'),document['body'][_0x26ca67('0x3a')][_0x26ca67('0x98')]='hidden',document[_0x26ca67('0xd5')][_0x26ca67('0x103')](document['querySelector'](_0x26ca67('0x5d')))&&document[_0x26ca67('0x13a')](_0x26ca67('0x5d'))['addEventListener']('click',function _0xe9f05a(_0x2f34e9){const _0x174ad9=_0x26ca67;bracael[_0x174ad9('0x52')](),document['getElementById'](_0x254232['getAttribute'](_0x174ad9('0xec')))[_0x174ad9('0xc2')][_0x174ad9('0x12a')]('MENUactive'),document[_0x174ad9('0x4')]('CONTENTframe')['classList'][_0x174ad9('0x12a')](_0x174ad9('0x137')),document['body'][_0x174ad9('0x56')](_0x174ad9('0x3a')),this[_0x174ad9('0x70')](_0x174ad9('0x6e'),_0xe9f05a);});});}),document[_0x5f214b('0x116')](_0x5f214b('0xc9'))[_0x5f214b('0xe2')](function(_0x4dc729){const _0x56a68c=_0x5f214b;_0x4dc729[_0x56a68c('0x5b')](_0x56a68c('0x6e'),function(){const _0x14531c=_0x56a68c;bracael[_0x14531c('0x52')](),document[_0x14531c('0x13a')](_0x14531c('0x66'))[_0x14531c('0x56')]('disabled'),this['setAttribute'](_0x14531c('0x7'),''),document[_0x14531c('0x13a')]('.SCREENmenu')['classList']['toggle'](_0x14531c('0x10c'));});});}document[_0x5f214b('0xd5')][_0x5f214b('0x103')](document[_0x5f214b('0x4')](_0x5f214b('0x50')))&&sessionStorage[_0x5f214b('0x28')]!=undefined?database['ref'](_0x5f214b('0x122'))[_0x5f214b('0x18')](_0x5f214b('0x15f'))['then'](function(_0x4bf5c0){const _0x39c239=_0x5f214b;if(bracael[_0x39c239('0x13')]()>=_0x4bf5c0[_0x39c239('0x8e')]()[_0x39c239('0xdc')]['minvalue']&&_0x4bf5c0['val']()[_0x39c239('0xf8')]){const _0x9a59bc=localStorage[_0x39c239('0x10a')]!=undefined?JSON[_0x39c239('0x12e')](localStorage[_0x39c239('0x10a')]):null,_0x4b8cd6=new Array();Object['entries'](_0x4bf5c0['val']()['delivery'])[_0x39c239('0xf5')](function(_0x5e1ebf){const _0x4b05c8=_0x39c239;_0x4b8cd6[_0x4b05c8('0xef')]('<option\x20js-key=\x22'+_0x5e1ebf[0x0]+'\x22>'+_0x5e1ebf[0x1][_0x4b05c8('0x96')]+(_0x5e1ebf[0x1][_0x4b05c8('0xb7')]!=''?_0x4b05c8('0x12')+_0x5e1ebf[0x1][_0x4b05c8('0xb7')]:'')+'\x20('+Number(_0x5e1ebf[0x1][_0x4b05c8('0x6c')])['toLocaleString'](_0x4b05c8('0x23'),{'style':_0x4b05c8('0xfa'),'currency':'BRL'})+_0x4b05c8('0x67'));}),document['getElementById']('CONFIRMform')[_0x39c239('0x1e')]='\x0a\x20\x20\x20\x20<div>\x0a\x20\x20\x20\x20<em>MANIPULE\x20SEU\x20PEDIDO!</em>\x0a\x20\x20\x20\x20<p>Incremente\x20ingredientes\x20nos\x20itens\x20do\x20seu\x20carrinho\x20ou\x20também\x20nos\x20informe\x20quando\x20remover\x20um\x20ingrediente\x20que\x20tu\x20não\x20gosta.</p>\x0a\x20\x20\x20\x20<button\x20class=\x22COMMENTline\x22\x20type=\x22button\x22>Manipular\x20pedido</button>\x0a\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x0a\x20\x20\x20\x20<section\x20class=\x22REQUESTit\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<input\x20id=\x22FIRSTstep\x22\x20name=\x22INPUTradio\x22\x20type=\x22radio\x22\x20checked=\x22\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<input\x20id=\x22SECONDstep\x22\x20name=\x22INPUTradio\x22\x20type=\x22radio\x22>\x0a\x20\x20\x20\x20<div\x20class=\x22REQUESTinst\x22>\x0a\x20\x20\x20\x20<div\x20class=\x22SECTIONinpt\x22\x20js-target=\x22FIRSTstep\x22\x20checked=\x22\x22>\x0a\x20\x20\x20\x20<div\x20class=\x22GROUPinput\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22text\x22\x20class=\x22inputType\x22\x20name=\x22inputClient\x22\x20placeholder=\x22Nome\x20e\x20sobrenome\x20*\x22\x20tabindex=\x221\x22\x20autocapitalize=\x22on\x22\x20autocorrect=\x22off\x22\x20'+(_0x9a59bc!=null?'value=\x22'+_0x9a59bc[_0x39c239('0xe8')]+'\x22':'')+_0x39c239('0x39')+(_0x9a59bc!=null?_0x39c239('0xbc')+_0x9a59bc[_0x39c239('0xf3')]+'\x22':'')+_0x39c239('0xcb')+(_0x9a59bc!=null?'value=\x22'+_0x9a59bc[_0x39c239('0xd6')]+'\x22':'')+'>\x0a\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20<div\x20class=\x22MESSAGEandes\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<p>O\x20telefone\x20é\x20importante\x20para\x20casos\x20de\x20dificuldade\x20de\x20encontrar\x20o\x20endereço.</p>\x0a\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20<div\x20class=\x22GROUPinput\x22\x20id=\x22CONFIRMitem\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<button\x20class=\x22TEXThref\x22\x20type=\x22button\x22>Termos\x20&\x20privacidade</button>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<button\x20class=\x22CHANGEstep\x20BUTTONif\x22\x20data-for=\x22SECONDstep\x22\x20tabindex=\x224\x22\x20type=\x22button\x22>Proximo\x20passo</button>\x0a\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20<div\x20class=\x22SECTIONinpt\x22\x20js-target=\x22SECONDstep\x22>\x0a\x20\x20\x20\x20<div\x20class=\x22GROUPinput\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22text\x22\x20class=\x22inputType\x22\x20name=\x22inputRoad\x22\x20placeholder=\x22Rua\x20*\x22\x20tabindex=\x22-1\x22\x20autocapitalize=\x22on\x22\x20autocorrect=\x22off\x22\x20'+(_0x9a59bc!=null?_0x39c239('0xbc')+_0x9a59bc[_0x39c239('0x3e')]+'\x22':'')+_0x39c239('0xcc')+(_0x9a59bc!=null?_0x39c239('0xbc')+_0x9a59bc[_0x39c239('0x74')]+'\x22':'')+'>\x0a\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20<div\x20class=\x22GROUPinput\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22text\x22\x20name=\x22inputExtra\x22\x20placeholder=\x22Complemento\x22\x20tabindex=\x22-1\x22\x20autocapitalize=\x22on\x22\x20autocorrect=\x22off\x22\x20'+(_0x9a59bc!=null?_0x39c239('0xbc')+_0x9a59bc['extra']+'\x22':'')+_0x39c239('0xae')+_0x4b8cd6[_0x39c239('0x89')]('\x0a')+_0x39c239('0x6d'),document[_0x39c239('0x13a')](_0x39c239('0xfb'))['style'][_0x39c239('0x162')]=document[_0x39c239('0x13a')](_0x39c239('0xe5'))['offsetHeight']+'px',document[_0x39c239('0x13a')](_0x39c239('0xd7'))[_0x39c239('0x5b')](_0x39c239('0x4d'),function(){const _0x21b18d=_0x39c239;if(this[_0x21b18d('0x15f')][_0x21b18d('0x10e')](/[^\d]+/g,'')[_0x21b18d('0x128')]===0x8)this[_0x21b18d('0x15f')]=this[_0x21b18d('0x15f')][_0x21b18d('0x10e')](/[^\d]+/g,'')[_0x21b18d('0x10e')](/(\d{4})(\d{4})/,_0x21b18d('0x14f'));else this[_0x21b18d('0x15f')]['replace'](/[^\d]+/g,'')[_0x21b18d('0x128')]===0x9&&(this['value']=this[_0x21b18d('0x15f')][_0x21b18d('0x10e')](/[^\d]+/g,'')[_0x21b18d('0x10e')](/(\d{5})(\d{4})/,_0x21b18d('0x14f')));});for(let _0x14d3ca=0x0;_0x14d3ca<document[_0x39c239('0x116')](_0x39c239('0x11e'))[_0x39c239('0x128')];_0x14d3ca++){document[_0x39c239('0x116')]('.CHANGEstep')[_0x14d3ca][_0x39c239('0x5b')](_0x39c239('0x6e'),function(){const _0x44dfc3=_0x39c239,_0x3a56d6=document[_0x44dfc3('0x13a')]('.REQUESTit');var _0x5a73f9=document[_0x44dfc3('0x13a')](_0x44dfc3('0xa5'))['value']!=''?document['querySelector'](_0x44dfc3('0xa5'))[_0x44dfc3('0x15f')]['split']('\x20')['length']>=0x2?document[_0x44dfc3('0x13a')](_0x44dfc3('0xa5'))[_0x44dfc3('0x15f')][_0x44dfc3('0x16c')]('\x20')[0x1]!=''?!![]:![]:![]:![];const _0x36133d=document[_0x44dfc3('0x13a')](_0x44dfc3('0xd7'))['value'],_0x44dbd9=document[_0x44dfc3('0x13a')]('[name=\x22inputDdd\x22]')[_0x44dfc3('0x15f')];_0x5a73f9&&_0x36133d[_0x44dfc3('0x10e')](/[^\d]+/g,'')[_0x44dfc3('0x128')]>=0x8&&_0x44dbd9[_0x44dfc3('0x128')]===0x2?(_0x3a56d6['querySelector']('.SECTIONinpt[checked]')[_0x44dfc3('0x56')](_0x44dfc3('0xfc')),_0x3a56d6[_0x44dfc3('0x13a')](_0x44dfc3('0xbe')+this[_0x44dfc3('0xa6')](_0x44dfc3('0xb4'))+'\x22]')[_0x44dfc3('0x72')]('checked',''),_0x3a56d6[_0x44dfc3('0x3a')][_0x44dfc3('0x162')]=_0x3a56d6[_0x44dfc3('0x13a')](_0x44dfc3('0xe5'))['offsetHeight']+'px',_0x3a56d6[_0x44dfc3('0x13a')]('[name=\x22INPUTradio\x22][checked]')[_0x44dfc3('0x56')](_0x44dfc3('0xfc')),_0x3a56d6[_0x44dfc3('0x13a')]('#'+this[_0x44dfc3('0xa6')](_0x44dfc3('0xb4'))+_0x44dfc3('0x12d'))['setAttribute']('checked',''),_0x3a56d6[_0x44dfc3('0x13a')](_0x44dfc3('0xe5'))[_0x44dfc3('0x13f')](_0x44dfc3('0x161'))[0x0][_0x44dfc3('0x15f')]==''?_0x3a56d6[_0x44dfc3('0x13a')](_0x44dfc3('0xe5'))[_0x44dfc3('0x13f')]('INPUT')[0x0]['select']():null):(!_0x5a73f9&&(document[_0x44dfc3('0x13a')](_0x44dfc3('0xa5'))[_0x44dfc3('0xc2')][_0x44dfc3('0xb8')]('inputEmpty'),setTimeout(function(){const _0x4f477d=_0x44dfc3;document[_0x4f477d('0x13a')](_0x4f477d('0xa5'))[_0x4f477d('0xc2')]['remove'](_0x4f477d('0x17d'));},0x258)),document[_0x44dfc3('0x13a')]('[name=\x22inputDdd\x22]')['value'][_0x44dfc3('0x128')]!==0x2&&(document[_0x44dfc3('0x13a')](_0x44dfc3('0xe4'))[_0x44dfc3('0xc2')]['add'](_0x44dfc3('0x17d')),setTimeout(function(){const _0x35b68f=_0x44dfc3;document[_0x35b68f('0x13a')](_0x35b68f('0xe4'))[_0x35b68f('0xc2')][_0x35b68f('0xd1')](_0x35b68f('0x17d'));},0x258)),document[_0x44dfc3('0x13a')](_0x44dfc3('0xd7'))['value'][_0x44dfc3('0x128')]<=0x8&&(document[_0x44dfc3('0x13a')](_0x44dfc3('0xd7'))[_0x44dfc3('0xc2')][_0x44dfc3('0xb8')](_0x44dfc3('0x17d')),setTimeout(function(){const _0x169a78=_0x44dfc3;document[_0x169a78('0x13a')](_0x169a78('0xd7'))[_0x169a78('0xc2')]['remove']('inputEmpty');},0x258)));});}document[_0x39c239('0x13a')](_0x39c239('0x10f'))[_0x39c239('0x5b')](_0x39c239('0x6e'),function(){const _0x2b11c4=_0x39c239,_0x32fdfc=new Array();Object[_0x2b11c4('0x1')](JSON[_0x2b11c4('0x12e')](sessionStorage['itemCart']))[_0x2b11c4('0xf5')](function(_0x323178,_0x5de315){const _0x1bbea1=_0x2b11c4,_0x43cb78=new Array();_0x323178[0x1][_0x1bbea1('0x10b')][0x0][_0x1bbea1('0xf5')](function(_0x5c9125,_0x58b210){const _0x497dcd=_0x1bbea1;_0x43cb78[_0x497dcd('0xef')](_0x497dcd('0x156')+_0x323178[0x0]+_0x497dcd('0x15')+_0x5c9125[0x0]+_0x497dcd('0xb9')+Number(_0x5c9125[0x3])[_0x497dcd('0x8b')]('pt-BR',{'style':_0x497dcd('0xfa'),'currency':_0x497dcd('0x11d')})+_0x497dcd('0x10d')+(_0x5c9125[0x2]!=''?_0x497dcd('0xc6')+_0x5c9125[0x2]+'</span>':'')+_0x497dcd('0x97')+_0x5c9125[0x1]+','+_0x58b210+_0x497dcd('0x30')+_0x323178[0x1][_0x497dcd('0x10b')][0x1][_0x58b210][0x0]+_0x497dcd('0x15a')+_0x5c9125[0x1]+','+_0x58b210+_0x497dcd('0x15d'));});const _0x45c8a4=new Array();_0x323178[0x1][_0x1bbea1('0x10b')][0x1][_0x1bbea1('0xf5')](function(_0x5e61f){_0x45c8a4['push'](_0x5e61f[0x0]*_0x5e61f[0x1]);});var _0x554d8b=_0x45c8a4[_0x1bbea1('0x7a')](function(_0x1b251c,_0x48d855){return _0x1b251c+_0x48d855;},0x0);_0x32fdfc[_0x1bbea1('0xef')](_0x1bbea1('0x127')+_0x323178[0x1][_0x1bbea1('0xa7')]+'un</span><span>'+_0x323178[0x1][_0x1bbea1('0xbf')]+_0x1bbea1('0xa9')+(_0x43cb78[_0x1bbea1('0x128')]!=0x0?_0x1bbea1('0xf1')+_0x43cb78['join']('\x0a')+'\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22ITEMttl\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span>Total:\x20'+Number(_0x323178[0x1][_0x1bbea1('0xf')]*_0x323178[0x1][_0x1bbea1('0xa7')]+_0x554d8b)['toLocaleString']('pt-BR',{'style':'currency','currency':'BRL'})+'</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>':'')+_0x1bbea1('0x164')+(_0x323178[0x1][_0x1bbea1('0xb3')]!=null?_0x323178[0x1]['comment']:'')+'</textarea>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22SUBMITtxt\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span>0\x20/\x20140</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<button\x20type=\x22button\x22\x20data-comment=\x22'+_0x323178[0x0]+_0x1bbea1('0x53'));}),document['body']['insertAdjacentHTML'](_0x2b11c4('0x17a'),_0x2b11c4('0x144')+_0x32fdfc['join']('\x0a')+_0x2b11c4('0x91')),document['querySelectorAll']('[name=\x22buttonDecrement\x22]')[_0x2b11c4('0xe2')](function(_0x5e7b6e){const _0x269dff=_0x2b11c4;_0x5e7b6e[_0x269dff('0x5b')](_0x269dff('0x6e'),function(){const _0x3e3385=_0x269dff,_0x3427f8=this[_0x3e3385('0x77')][_0x3e3385('0x13a')](_0x3e3385('0x102')),_0x36398e=JSON[_0x3e3385('0x12e')](sessionStorage[_0x3e3385('0x28')]),_0x35c9f3=JSON['parse'](sessionStorage[_0x3e3385('0x28')])[this[_0x3e3385('0x77')][_0x3e3385('0x77')][_0x3e3385('0xa6')]('js-somar')];if(Number(_0x3427f8[_0x3e3385('0x15f')])-0x1>=0x0){_0x3427f8['value']=--_0x3427f8[_0x3e3385('0x15f')],_0x36398e[this['parentNode'][_0x3e3385('0x77')][_0x3e3385('0xa6')]('js-somar')]['extra'][0x1][this['getAttribute'](_0x3e3385('0x11b'))[_0x3e3385('0x16c')](',')[0x1]][0x0]=_0x35c9f3[_0x3e3385('0x10b')][0x1][this[_0x3e3385('0xa6')](_0x3e3385('0x11b'))[_0x3e3385('0x16c')](',')[0x1]][0x0]-0x1,sessionStorage[_0x3e3385('0x28')]=JSON['stringify'](_0x36398e);const _0x466111=new Array();JSON[_0x3e3385('0x12e')](sessionStorage[_0x3e3385('0x28')])[this[_0x3e3385('0x77')]['parentNode'][_0x3e3385('0xa6')]('js-somar')][_0x3e3385('0x10b')][0x1][_0x3e3385('0xf5')](function(_0x598c31){const _0xf8e51d=_0x3e3385;_0x466111[_0xf8e51d('0xef')](_0x598c31[0x0]*_0x598c31[0x1]);});var _0x156041=_0x466111[_0x3e3385('0x7a')](function(_0x2cabc8,_0x180790){return _0x2cabc8+_0x180790;},0x0);this[_0x3e3385('0x77')][_0x3e3385('0x77')][_0x3e3385('0x77')][_0x3e3385('0x13a')](_0x3e3385('0x110'))[_0x3e3385('0x13f')](_0x3e3385('0x16d'))[0x0]['innerHTML']=_0x3e3385('0x24')+Number(_0x35c9f3[_0x3e3385('0xf')]*_0x35c9f3[_0x3e3385('0xa7')]+_0x156041)['toLocaleString'](_0x3e3385('0x23'),{'style':_0x3e3385('0xfa'),'currency':_0x3e3385('0x11d')}),bracael['refreshItemAside'](this['parentNode']['parentNode'][_0x3e3385('0xa6')](_0x3e3385('0x9d')),Number(_0x35c9f3[_0x3e3385('0xf')]*_0x35c9f3[_0x3e3385('0xa7')]+_0x156041));}else this['parentNode'][_0x3e3385('0xc2')][_0x3e3385('0xb8')](_0x3e3385('0x5e')),setTimeout(()=>{const _0x132cbb=_0x3e3385;this['parentNode'][_0x132cbb('0xc2')][_0x132cbb('0xd1')]('LIMITEDinst');},0x12c);});}),document['querySelectorAll']('[name=\x22buttonIncrement\x22]')[_0x2b11c4('0xe2')](function(_0x575c71){const _0x670e9=_0x2b11c4;_0x575c71[_0x670e9('0x5b')](_0x670e9('0x6e'),function(){const _0x1c52b9=_0x670e9,_0x5cd380=this[_0x1c52b9('0x77')][_0x1c52b9('0x13a')](_0x1c52b9('0x102')),_0x13ef3d=JSON['parse'](sessionStorage[_0x1c52b9('0x28')]),_0x1822a4=JSON[_0x1c52b9('0x12e')](sessionStorage[_0x1c52b9('0x28')])[this['parentNode']['parentNode'][_0x1c52b9('0xa6')](_0x1c52b9('0x9d'))];if(Number(_0x5cd380[_0x1c52b9('0x15f')])<=Number(this[_0x1c52b9('0xa6')]('js-limited')[_0x1c52b9('0x16c')](',')[0x0])-0x1){_0x5cd380[_0x1c52b9('0x15f')]=++_0x5cd380[_0x1c52b9('0x15f')],_0x13ef3d[this[_0x1c52b9('0x77')]['parentNode'][_0x1c52b9('0xa6')]('js-somar')][_0x1c52b9('0x10b')][0x1][this[_0x1c52b9('0xa6')](_0x1c52b9('0x11b'))['split'](',')[0x1]][0x0]=_0x1822a4[_0x1c52b9('0x10b')][0x1][this[_0x1c52b9('0xa6')](_0x1c52b9('0x11b'))[_0x1c52b9('0x16c')](',')[0x1]][0x0]+0x1,sessionStorage[_0x1c52b9('0x28')]=JSON['stringify'](_0x13ef3d);const _0x47e7d3=new Array();JSON[_0x1c52b9('0x12e')](sessionStorage[_0x1c52b9('0x28')])[this['parentNode'][_0x1c52b9('0x77')][_0x1c52b9('0xa6')]('js-somar')][_0x1c52b9('0x10b')][0x1][_0x1c52b9('0xf5')](function(_0x2c73d5){const _0x14523b=_0x1c52b9;_0x47e7d3[_0x14523b('0xef')](_0x2c73d5[0x0]*_0x2c73d5[0x1]);});var _0x268c7e=_0x47e7d3['reduce'](function(_0x3e7409,_0x18ad09){return _0x3e7409+_0x18ad09;},0x0);this[_0x1c52b9('0x77')]['parentNode']['parentNode'][_0x1c52b9('0x13a')](_0x1c52b9('0x110'))['getElementsByTagName']('SPAN')[0x0][_0x1c52b9('0x1e')]=_0x1c52b9('0x24')+Number(_0x1822a4[_0x1c52b9('0xf')]*_0x1822a4[_0x1c52b9('0xa7')]+_0x268c7e)[_0x1c52b9('0x8b')]('pt-BR',{'style':_0x1c52b9('0xfa'),'currency':_0x1c52b9('0x11d')}),bracael[_0x1c52b9('0xdf')](this['parentNode'][_0x1c52b9('0x77')][_0x1c52b9('0xa6')](_0x1c52b9('0x9d')),Number(_0x1822a4[_0x1c52b9('0xf')]*_0x1822a4[_0x1c52b9('0xa7')]+_0x268c7e));}else this[_0x1c52b9('0x77')]['classList']['add'](_0x1c52b9('0x5e')),setTimeout(()=>{const _0x5bdd5f=_0x1c52b9;this[_0x5bdd5f('0x77')]['classList']['remove']('LIMITEDinst');},0x12c);});});for(let _0x3b69e7=0x0;_0x3b69e7<document[_0x2b11c4('0x116')]('.COMMENTact')[_0x2b11c4('0x128')];_0x3b69e7++){document[_0x2b11c4('0x116')](_0x2b11c4('0x6a'))[_0x3b69e7][_0x2b11c4('0x5b')](_0x2b11c4('0x6e'),function(){const _0x10d4c2=_0x2b11c4,_0x3f1fb1=this[_0x10d4c2('0x77')][_0x10d4c2('0x77')][_0x10d4c2('0x13a')](_0x10d4c2('0x78')),_0xe8b8b2=document[_0x10d4c2('0x13a')](_0x10d4c2('0x31'));_0x3f1fb1!=_0xe8b8b2?$(_0xe8b8b2)[_0x10d4c2('0x134')]({'height':_0x10d4c2('0x12a')},0x12c,function(){const _0x26c95c=_0x10d4c2;this['removeAttribute'](_0x26c95c('0x3a'));}):null,$(_0x3f1fb1)['animate']({'height':_0x10d4c2('0x12a')},0xc8,function(){const _0x1adfe2=_0x10d4c2;this[_0x1adfe2('0x13a')](_0x1adfe2('0x175'))[_0x1adfe2('0x15f')]!=''?null:this['querySelector'](_0x1adfe2('0x175'))[_0x1adfe2('0xb')](),_0x3f1fb1[_0x1adfe2('0x3a')][_0x1adfe2('0xde')]!=_0x1adfe2('0x174')?this[_0x1adfe2('0x56')](_0x1adfe2('0x3a')):null;});});}document['querySelectorAll'](_0x2b11c4('0xad'))[_0x2b11c4('0xe2')](function(_0x1eaa8a){const _0x36e07b=_0x2b11c4,_0x37e693=_0x1eaa8a['querySelector']('[name=\x22commentText\x22]'),_0x440596=_0x1eaa8a[_0x36e07b('0x13a')]('[data-comment]');_0x37e693[_0x36e07b('0x5b')](_0x36e07b('0x4d'),function(){const _0x47f4f8=_0x36e07b;_0x1eaa8a[_0x47f4f8('0x13f')](_0x47f4f8('0x16d'))[0x0][_0x47f4f8('0x1e')]=_0x37e693['value']['length']+'\x20/\x20140';}),_0x440596['addEventListener'](_0x36e07b('0x6e'),function(){const _0x3513d6=_0x36e07b,_0x4bf51f=JSON[_0x3513d6('0x12e')](sessionStorage[_0x3513d6('0x28')]),_0x28446c=_0x37e693[_0x3513d6('0x15f')][_0x3513d6('0x152')]()!=''?_0x37e693['value']:null;_0x4bf51f[this[_0x3513d6('0xa6')]('data-comment')][_0x3513d6('0xb3')]!=_0x28446c?(_0x37e693['value']!=''?_0x4bf51f[this[_0x3513d6('0xa6')](_0x3513d6('0x126'))][_0x3513d6('0xb3')]=_0x37e693[_0x3513d6('0x15f')][_0x3513d6('0x152')]():_0x4bf51f[this['getAttribute'](_0x3513d6('0x126'))]['comment']=null,sessionStorage[_0x3513d6('0x28')]=JSON[_0x3513d6('0x124')](_0x4bf51f),bracael[_0x3513d6('0xa4')](this[_0x3513d6('0xa6')](_0x3513d6('0x126'))),this[_0x3513d6('0xc2')]['add'](_0x3513d6('0x60')),setTimeout(()=>{const _0x33a2f1=_0x3513d6;this['classList'][_0x33a2f1('0xd1')](_0x33a2f1('0x60'));},0x1f4)):(_0x1eaa8a[_0x3513d6('0xc2')][_0x3513d6('0xb8')](_0x3513d6('0xc')),setTimeout(()=>{const _0x563260=_0x3513d6;_0x1eaa8a[_0x563260('0xc2')][_0x563260('0xd1')](_0x563260('0xc'));},0x190));});});const _0x1f89eb=document[_0x2b11c4('0x13a')](_0x2b11c4('0x11'));$(_0x1f89eb)['fadeIn'](0xc8),_0x1f89eb['querySelector']('.COMMENTmodal')[_0x2b11c4('0x6')](_0x2b11c4('0x0'),_0x2b11c4('0x7c')),document[_0x2b11c4('0xd5')][_0x2b11c4('0x103')](document[_0x2b11c4('0x13a')](_0x2b11c4('0xd4')))&&document['querySelector'](_0x2b11c4('0xd4'))[_0x2b11c4('0x5b')](_0x2b11c4('0x6e'),function _0x2c6bc5(_0x1c4c8b){const _0x55e98c=_0x2b11c4;$(_0x1f89eb)[_0x55e98c('0x2c')](0xc8,function(){const _0x3f4349=_0x55e98c;this[_0x3f4349('0xd1')]();}),this[_0x55e98c('0x70')](_0x55e98c('0x6e'),_0x2c6bc5);});}),localStorage[_0x39c239('0xce')]=new Date(),document[_0x39c239('0x4')]('DEMANDit')[_0x39c239('0x5b')](_0x39c239('0x6e'),function(){const _0x363ce8=_0x39c239;if(bracael[_0x363ce8('0x13')]()>=_0x4bf5c0[_0x363ce8('0x8e')]()[_0x363ce8('0xdc')][_0x363ce8('0x9')]){const _0xd4b702=document[_0x363ce8('0x4')](_0x363ce8('0x8')),_0x5c5bd3=document[_0x363ce8('0x13a')](_0x363ce8('0xa5'))[_0x363ce8('0x15f')]['trim'](),_0x57f4ef=document[_0x363ce8('0x13a')](_0x363ce8('0xe4'))[_0x363ce8('0x15f')]['trim'](),_0x55ff84=document[_0x363ce8('0x13a')](_0x363ce8('0xd7'))[_0x363ce8('0x15f')][_0x363ce8('0x152')](),_0x5df19c=document[_0x363ce8('0x13a')](_0x363ce8('0x142'))['value'][_0x363ce8('0x152')](),_0xd5d66f=document[_0x363ce8('0x13a')](_0x363ce8('0x1f'))['value'][_0x363ce8('0x152')](),_0x7a3853=document[_0x363ce8('0x13a')](_0x363ce8('0x61'))[_0x363ce8('0x15f')][_0x363ce8('0x152')]();if(_0xd4b702[_0x363ce8('0x168')][_0xd4b702[_0x363ce8('0x168')][_0x363ce8('0xc5')]][_0x363ce8('0x15f')]!=''&&_0x5c5bd3[_0x363ce8('0x15f')]!=''&&_0x5df19c['value']!=''&&_0xd5d66f[_0x363ce8('0x15f')]!=''){const _0x47dbb2=new Array(),_0x38c58b=new Array(),_0x6d77f1=new Array();Object[_0x363ce8('0x1')](JSON[_0x363ce8('0x12e')](sessionStorage[_0x363ce8('0x28')]))[_0x363ce8('0xf5')](function(_0x342ae2,_0x1593b4,_0x2baeef){const _0x1cf9c9=_0x363ce8,_0x2d68e6='*'+_0x342ae2[0x1]['amount']+_0x1cf9c9('0xc3')+_0x342ae2[0x1][_0x1cf9c9('0xbf')]+_0x1cf9c9('0x49'),_0x4c002a=new Array(),_0x995fc0=new Array(),_0x58c0b9=new Array();_0x342ae2[0x1]['extra'][0x1][_0x1cf9c9('0xf5')](function(_0x34046f,_0x13fe1e){const _0x2c3d70=_0x1cf9c9;_0x34046f[0x0]!=0x0&&(_0x4c002a['push'](_0x2c3d70('0x8a')+_0x34046f[0x0]+_0x2c3d70('0x17b')+_0x342ae2[0x1]['extra'][0x0][_0x13fe1e][0x0]+'_'),console[_0x2c3d70('0x33')](_0x342ae2[0x1]['title'],_0x34046f),_0x58c0b9[_0x2c3d70('0xef')]({'item':_0x342ae2[0x1][_0x2c3d70('0x10b')][0x0][_0x13fe1e][0x0],'amount':_0x34046f[0x0],'price':_0x34046f[0x1]}),_0x995fc0[_0x2c3d70('0xef')](_0x2c3d70('0x94')+_0x342ae2[0x1][_0x2c3d70('0x10b')][0x0][_0x13fe1e][0x0]+_0x2c3d70('0xeb')+_0x34046f[0x0]+_0x2c3d70('0x138')+Number(_0x34046f[0x0]*_0x34046f[0x1])[_0x2c3d70('0x8b')](_0x2c3d70('0x23'),{'style':'currency','currency':_0x2c3d70('0x11d')})+_0x2c3d70('0x25')));}),_0x6d77f1['push']({'amount':_0x342ae2[0x1][_0x1cf9c9('0xa7')],'price':_0x342ae2[0x1][_0x1cf9c9('0xf')],'title':_0x342ae2[0x1][_0x1cf9c9('0xbf')],'extra':_0x58c0b9,'comment':_0x342ae2[0x1][_0x1cf9c9('0xb3')],'id':_0x342ae2[0x0]}),_0x38c58b[_0x1cf9c9('0xef')](''+_0x2d68e6+(_0x342ae2[0x1][_0x1cf9c9('0xb3')]!=null?_0x1cf9c9('0x150')+_0x342ae2[0x1]['comment']+'*':'')+_0x4c002a[_0x1cf9c9('0x89')]('')),_0x47dbb2[_0x1cf9c9('0xef')](_0x1cf9c9('0x65')+(new Array(0x3+0x1-(_0x1593b4+'')[_0x1cf9c9('0x128')])[_0x1cf9c9('0x89')]('0')+ ++_0x1593b4)+'</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span>'+_0x342ae2[0x0][_0x1cf9c9('0x1a')](_0x342ae2[0x0]['length']-0xb,_0x342ae2[0x0][_0x1cf9c9('0x128')]-0x1)+'</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span>'+_0x342ae2[0x1][_0x1cf9c9('0xbf')]+'</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span>'+_0x342ae2[0x1][_0x1cf9c9('0xa7')]+'un</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span>'+Number(_0x342ae2[0x1][_0x1cf9c9('0xf')]*_0x342ae2[0x1][_0x1cf9c9('0xa7')])[_0x1cf9c9('0x8b')]('pt-BR',{'style':'currency','currency':'BRL'})+_0x1cf9c9('0x99')+_0x995fc0[_0x1cf9c9('0x89')]('\x0a')+'\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20');}),document[_0x363ce8('0xd5')][_0x363ce8('0x6')]('beforeend','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22COMANDAmodal\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22COMANDinst\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22CONTENTmodal\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20id=\x22FIRSTstep\x22\x20name=\x22COMMANDradio\x22\x20type=\x22radio\x22\x20checked=\x22\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20id=\x22SECONDstep\x22\x20name=\x22COMMANDradio\x22\x20type=\x22radio\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22COMANDAscreen\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22SECTIONinpt\x22\x20js-target=\x22FIRSTstep\x22\x20checked=\x22\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<p\x20class=\x22IMPORTANTline\x22><b>'+_0x4bf5c0[_0x363ce8('0x8e')]()[_0x363ce8('0xdc')]['brand']+_0x363ce8('0x13d')+_0x4bf5c0['val']()[_0x363ce8('0xdc')][_0x363ce8('0x4e')]+'</p>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<p\x20class=\x22IMPORTANTline\x22>'+_0x4bf5c0[_0x363ce8('0x8e')]()[_0x363ce8('0xdc')][_0x363ce8('0x9c')]+',\x20'+_0x4bf5c0['val']()[_0x363ce8('0xdc')]['number']+_0x363ce8('0x154')+_0x4bf5c0['val']()['info'][_0x363ce8('0x119')]+'\x20-\x20'+_0x4bf5c0[_0x363ce8('0x8e')]()['info'][_0x363ce8('0x20')]+_0x363ce8('0x113')+_0x47dbb2['join']('\x0a')+_0x363ce8('0x145')+Number(bracael[_0x363ce8('0x13')]())['toLocaleString'](_0x363ce8('0x23'),{'style':_0x363ce8('0xfa'),'currency':_0x363ce8('0x11d')})+_0x363ce8('0xff')+Number(_0x4bf5c0['val']()[_0x363ce8('0x90')][_0xd4b702['options'][_0xd4b702[_0x363ce8('0x168')][_0x363ce8('0xc5')]][_0x363ce8('0xa6')](_0x363ce8('0x107'))]['rate'])[_0x363ce8('0x8b')](_0x363ce8('0x23'),{'style':_0x363ce8('0xfa'),'currency':_0x363ce8('0x11d')})+'</}</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22COMMANDfooter\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<b>TOTAL\x20A\x20PAGAR</b>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span>'+Number(bracael[_0x363ce8('0x5a')](_0x4bf5c0[_0x363ce8('0x8e')]()['delivery'][_0xd4b702['options'][_0xd4b702[_0x363ce8('0x168')][_0x363ce8('0xc5')]][_0x363ce8('0xa6')](_0x363ce8('0x107'))]['rate']))[_0x363ce8('0x8b')](_0x363ce8('0x23'),{'style':_0x363ce8('0xfa'),'currency':_0x363ce8('0x11d')})+_0x363ce8('0xda')),document['getElementById'](_0x363ce8('0x43'))[_0x363ce8('0x5b')](_0x363ce8('0x12f'),function(){const _0x348d97=_0x363ce8;this[_0x348d97('0xfc')]?(this[_0x348d97('0xc8')]['insertAdjacentHTML'](_0x348d97('0xf0'),_0x348d97('0x69')),$(_0x348d97('0x7b'))[_0x348d97('0x134')]({'height':_0x348d97('0x12a')},0x12c,function(){const _0x8fc09=_0x348d97;document[_0x8fc09('0x13a')](_0x8fc09('0x108'))['style'][_0x8fc09('0x162')]=document['querySelector'](_0x8fc09('0x108'))[_0x8fc09('0x13a')](_0x8fc09('0xe5'))[_0x8fc09('0x42')]+'px';})):$(_0x348d97('0x7b'))[_0x348d97('0x134')]({'height':_0x348d97('0x12a')},0x12c,function(){const _0x586ce5=_0x348d97;this[_0x586ce5('0xd1')](),document[_0x586ce5('0x13a')](_0x586ce5('0x108'))[_0x586ce5('0x3a')][_0x586ce5('0x162')]=document[_0x586ce5('0x13a')](_0x586ce5('0x108'))['querySelector'](_0x586ce5('0xe5'))[_0x586ce5('0x42')]+'px';});});const _0x10bdef=document[_0x363ce8('0x13a')](_0x363ce8('0x73'));$(_0x10bdef)[_0x363ce8('0x19')](0xc8,function(){const _0x1f239f=_0x363ce8;document[_0x1f239f('0x13a')]('.COMANDAscreen')[_0x1f239f('0x3a')]['height']=document[_0x1f239f('0x13a')](_0x1f239f('0x22'))['querySelector'](_0x1f239f('0xe5'))[_0x1f239f('0x42')]+'px';}),_0x10bdef['querySelector'](_0x363ce8('0x22'))[_0x363ce8('0x6')](_0x363ce8('0x0'),'<div\x20class=\x22SCREENmodal\x20CLOSEmodal\x22\x20></div>');document[_0x363ce8('0xd5')][_0x363ce8('0x103')](document['querySelector'](_0x363ce8('0xd4')))&&document['querySelector'](_0x363ce8('0xd4'))[_0x363ce8('0x5b')](_0x363ce8('0x6e'),function _0x22b44c(_0x28a4f3){const _0x137299=_0x363ce8;$(_0x10bdef)[_0x137299('0x2c')](0xc8,function(){this['remove']();}),this['removeEventListener'](_0x137299('0x6e'),_0x22b44c);});document['querySelectorAll'](_0x363ce8('0x16a'))[_0x363ce8('0xe2')](function(_0x2fe7df){const _0x43158d=_0x363ce8;_0x2fe7df['addEventListener'](_0x43158d('0x6e'),function(){const _0x4366e9=_0x43158d,_0x2c9896=document[_0x4366e9('0x13a')](_0x4366e9('0x22')),_0x2db108=document[_0x4366e9('0x13a')](_0x4366e9('0x108'));_0x2db108[_0x4366e9('0x13a')]('.SECTIONinpt[checked]')[_0x4366e9('0x56')](_0x4366e9('0xfc')),_0x2db108[_0x4366e9('0x13a')](_0x4366e9('0xbe')+_0x2fe7df[_0x4366e9('0xa6')](_0x4366e9('0xb4'))+'\x22]')['setAttribute'](_0x4366e9('0xfc'),''),_0x2db108['style'][_0x4366e9('0x162')]=_0x2db108[_0x4366e9('0x13a')](_0x4366e9('0xe5'))['offsetHeight']+'px',_0x2c9896[_0x4366e9('0x13a')]('[name=\x22COMMANDradio\x22][checked]')[_0x4366e9('0x56')](_0x4366e9('0xfc')),_0x2c9896[_0x4366e9('0x13a')]('#'+_0x2fe7df[_0x4366e9('0xa6')]('data-for')+_0x4366e9('0x163'))[_0x4366e9('0x72')](_0x4366e9('0xfc'),'');});});var _0x1722f8=null;document[_0x363ce8('0x13a')](_0x363ce8('0xba'))[_0x363ce8('0x5b')](_0x363ce8('0x6e'),function(){const _0x40edb0=_0x363ce8;if(document['getElementById'](_0x40edb0('0x43'))[_0x40edb0('0xfc')]||document[_0x40edb0('0x4')]('PAYCREDITmethod')[_0x40edb0('0xfc')]){var _0x5e5ba7=document[_0x40edb0('0x13a')](_0x40edb0('0x95')),_0x5e5ba7=_0x5e5ba7[_0x40edb0('0x15f')]!=''?_0x40edb0('0x16b')+_0x5e5ba7[_0x40edb0('0x15f')]['trim']():'';if(document[_0x40edb0('0x4')](_0x40edb0('0x43'))[_0x40edb0('0xfc')]&&document[_0x40edb0('0x4')]('PAYCREDITmethod')[_0x40edb0('0xfc')]){const _0xfd164c=document[_0x40edb0('0x13a')]('[name=\x22AMOUNTcash\x22]')['value'];var _0x4317d2=_0x40edb0('0x51'),_0x3c0d86='';_0x1722f8=_0xfd164c!=0x0?Number(_0xfd164c):null,_0xfd164c!=0x0?_0x3c0d86=_0x40edb0('0x16e')+Number(_0xfd164c)[_0x40edb0('0x8b')](_0x40edb0('0x23'),{'style':_0x40edb0('0xfa'),'currency':_0x40edb0('0x11d')})+_0x40edb0('0x49'):null;}else{if(document[_0x40edb0('0x4')](_0x40edb0('0x43'))['checked']){const _0x3dd94d=document['querySelector'](_0x40edb0('0x2f'))['value'];var _0x4317d2=_0x40edb0('0x58'),_0x3c0d86='';_0x1722f8=_0x3dd94d!=0x0?Number(_0x3dd94d):null,_0x3dd94d!=0x0?_0x3c0d86='\x0a💰\x20_Troco\x20para:_\x20```'+Number(_0x3dd94d)['toLocaleString'](_0x40edb0('0x23'),{'style':'currency','currency':_0x40edb0('0x11d')})+'```':null;}else{if(document['getElementById'](_0x40edb0('0x131'))[_0x40edb0('0xfc')])var _0x4317d2=_0x40edb0('0x27'),_0x3c0d86='';}}localStorage[_0x40edb0('0x10a')]=JSON['stringify']({'name':_0x5c5bd3,'street':_0x5df19c,'number':_0xd5d66f,'extra':_0x7a3853,'ddd':_0x57f4ef,'phone':_0x55ff84}),database[_0x40edb0('0xaf')](_0x40edb0('0xd3'))[_0x40edb0('0xef')]({'client':_0x5c5bd3,'comment':document[_0x40edb0('0x13a')](_0x40edb0('0x95'))[_0x40edb0('0x15f')],'detail':_0x6d77f1,'region':_0x4bf5c0[_0x40edb0('0x8e')]()[_0x40edb0('0x90')][_0xd4b702['options'][_0xd4b702[_0x40edb0('0x168')][_0x40edb0('0xc5')]]['getAttribute'](_0x40edb0('0x107'))]['zone'],'district':''+(_0x4bf5c0[_0x40edb0('0x8e')]()[_0x40edb0('0x90')][_0xd4b702[_0x40edb0('0x168')][_0xd4b702[_0x40edb0('0x168')][_0x40edb0('0xc5')]]['getAttribute'](_0x40edb0('0x107'))][_0x40edb0('0xb7')]!=''?_0x4bf5c0[_0x40edb0('0x8e')]()['delivery'][_0xd4b702[_0x40edb0('0x168')][_0xd4b702[_0x40edb0('0x168')][_0x40edb0('0xc5')]][_0x40edb0('0xa6')](_0x40edb0('0x107'))][_0x40edb0('0xb7')]:''),'number':_0xd5d66f,'payment':_0x4317d2,'status':'Em\x20espera','street':_0x5df19c,'complement':document[_0x40edb0('0x13a')](_0x40edb0('0x61'))[_0x40edb0('0x15f')],'tel':'('+_0x57f4ef+')\x20'+_0x55ff84,'time':new Date()[_0x40edb0('0xc7')](),'subvalue':bracael[_0x40edb0('0x13')](),'tovalue':bracael[_0x40edb0('0x5a')](_0x4bf5c0[_0x40edb0('0x8e')]()[_0x40edb0('0x90')][_0xd4b702[_0x40edb0('0x168')][_0xd4b702[_0x40edb0('0x168')][_0x40edb0('0xc5')]][_0x40edb0('0xa6')](_0x40edb0('0x107'))][_0x40edb0('0x6c')]),'delivery':Number(_0x4bf5c0[_0x40edb0('0x8e')]()['delivery'][_0xd4b702[_0x40edb0('0x168')][_0xd4b702[_0x40edb0('0x168')][_0x40edb0('0xc5')]]['getAttribute']('js-key')][_0x40edb0('0x6c')]),'trade':_0x1722f8}),window['open'](_0x40edb0('0x2e')+_0x4bf5c0[_0x40edb0('0x8e')]()[_0x40edb0('0xdc')]['whatsapp'][_0x40edb0('0x10e')](/[^0-9]+/g,'')+_0x40edb0('0x104')+window[_0x40edb0('0x92')](_0x40edb0('0x180')+_0x5c5bd3+_0x40edb0('0x62')+_0x57f4ef+')\x20'+_0x55ff84+_0x40edb0('0x14e')+_0x5df19c+',\x20'+_0xd5d66f+(''+(_0x7a3853!=''?_0x40edb0('0x12')+_0x7a3853:''))+_0x40edb0('0x12')+_0x4bf5c0[_0x40edb0('0x8e')]()[_0x40edb0('0x90')][_0xd4b702[_0x40edb0('0x168')][_0xd4b702[_0x40edb0('0x168')][_0x40edb0('0xc5')]][_0x40edb0('0xa6')](_0x40edb0('0x107'))][_0x40edb0('0x96')]+(''+(_0x4bf5c0[_0x40edb0('0x8e')]()[_0x40edb0('0x90')][_0xd4b702[_0x40edb0('0x168')][_0xd4b702[_0x40edb0('0x168')][_0x40edb0('0xc5')]][_0x40edb0('0xa6')](_0x40edb0('0x107'))][_0x40edb0('0xb7')]!=''?_0x40edb0('0x12')+_0x4bf5c0[_0x40edb0('0x8e')]()[_0x40edb0('0x90')][_0xd4b702[_0x40edb0('0x168')][_0xd4b702[_0x40edb0('0x168')][_0x40edb0('0xc5')]][_0x40edb0('0xa6')](_0x40edb0('0x107'))][_0x40edb0('0xb7')]:''))+'```\x0a\x0a*#\x20SOBRE\x20O\x20PEDIDO*\x0a'+_0x38c58b[_0x40edb0('0x89')]('\x0a')+'\x0a\x0a*#\x20PAGAMENTO*'+_0x5e5ba7+_0x40edb0('0x123')+_0x4317d2+_0x40edb0('0x49')+_0x3c0d86+_0x40edb0('0x172')+Number(bracael['totalCart'](_0x4bf5c0['val']()[_0x40edb0('0x90')][_0xd4b702[_0x40edb0('0x168')][_0xd4b702[_0x40edb0('0x168')][_0x40edb0('0xc5')]][_0x40edb0('0xa6')](_0x40edb0('0x107'))][_0x40edb0('0x6c')]))[_0x40edb0('0x8b')](_0x40edb0('0x23'),{'style':_0x40edb0('0xfa'),'currency':_0x40edb0('0x11d')})+_0x40edb0('0x49'))),document[_0x40edb0('0x13a')](_0x40edb0('0x22'))['innerHTML']='\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22CLASSrequestSucess\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22HEADitemSucess\x22></div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22TEXTitemSucess\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span>Pedido\x20registrado!</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<p>Você\x20está\x20sendo\x20redicionado\x20para\x20o\x20WhatsApp,\x20confirme\x20a\x20mensagem\x20pronta\x20para\x20nosso\x20contato.\x20Desde\x20já\x20muito\x20obrigado.</p>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>',$('.CONTENTmodal')['animate']({'height':$(_0x40edb0('0x14b'))['outerHeight'](!![])},0xc8),document[_0x40edb0('0x13a')]('.CLOSEmodal')['remove'](),sessionStorage[_0x40edb0('0x4f')](_0x40edb0('0x28')),setTimeout(()=>{const _0xee2794=_0x40edb0;window[_0xee2794('0x111')][_0xee2794('0xf9')]='/';},0x1388);}else{const _0x46405d=document[_0x40edb0('0x13a')]('.CONTENTmodal');_0x46405d[_0x40edb0('0xc2')]['add'](_0x40edb0('0xc')),setTimeout(()=>{const _0x3c81c6=_0x40edb0;_0x46405d[_0x3c81c6('0xc2')]['remove'](_0x3c81c6('0xc'));},0x190);}});}else{console[_0x363ce8('0x33')]('ELSE');for(let _0xde4be1=0x0;_0xde4be1<document[_0x363ce8('0x116')]('.inputType')[_0x363ce8('0x128')];_0xde4be1++){document['querySelectorAll']('.inputType')[_0xde4be1][_0x363ce8('0x15f')]==''&&(document[_0x363ce8('0x116')](_0x363ce8('0xe7'))[_0xde4be1][_0x363ce8('0xc2')]['add'](_0x363ce8('0x17d')),setTimeout(function(){const _0x2cc42a=_0x363ce8;document[_0x2cc42a('0x116')](_0x2cc42a('0xe7'))[_0xde4be1]['classList'][_0x2cc42a('0xd1')]('inputEmpty');},0x258));}_0xd4b702[_0x363ce8('0x168')][_0xd4b702[_0x363ce8('0x168')][_0x363ce8('0xc5')]][_0x363ce8('0x15f')]==''&&(document['getElementById'](_0x363ce8('0x3f'))[_0x363ce8('0xc2')]['add'](_0x363ce8('0x17d')),setTimeout(function(){const _0x399a87=_0x363ce8;document[_0x399a87('0x4')](_0x399a87('0x3f'))[_0x399a87('0xc2')][_0x399a87('0xd1')]('inputEmpty');},0x258));}}else alert('O\x20valor\x20mínimo\x20de\x20entregas\x20é\x20de\x20'+Number(_0x4bf5c0[_0x363ce8('0x8e')]()[_0x363ce8('0xdc')][_0x363ce8('0x9')])[_0x363ce8('0x8b')](_0x363ce8('0x23'),{'style':_0x363ce8('0xfa'),'currency':_0x363ce8('0x11d')}));});}else console[_0x39c239('0x33')](_0x39c239('0x14c')),_0x4bf5c0['val']()[_0x39c239('0xf8')]?document[_0x39c239('0x4')](_0x39c239('0x50'))[_0x39c239('0x1e')]='\x0a\x20\x20\x20\x20\x20\x20\x20\x20<small>O\x20valor\x20mínimo\x20de\x20entregas\x20é\x20de\x20'+Number(_0x4bf5c0[_0x39c239('0x8e')]()[_0x39c239('0xdc')][_0x39c239('0x9')])[_0x39c239('0x8b')](_0x39c239('0x23'),{'style':_0x39c239('0xfa'),'currency':_0x39c239('0x11d')})+'</small>':document[_0x39c239('0x4')](_0x39c239('0x50'))[_0x39c239('0x1e')]=_0x39c239('0x3c');}):document[_0x5f214b('0xd5')][_0x5f214b('0x103')](document[_0x5f214b('0x4')](_0x5f214b('0x50')))&&(document[_0x5f214b('0x4')]('CONFIRMform')[_0x5f214b('0x1e')]=_0x5f214b('0x79'));};
+const database = firebase.database();
+const numberday = new Date().getDay()
+const weekday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"][numberday];
+
+localStorage.dataShow === undefined ? localStorage.dataShow = new Date() : null;
+
+window.onload = async function(){
+await fetch(firebaseConfig.databaseURL+'/.json')
+.then((response) => response.json())
+.then(function(result) {
+    const itemCart = sessionStorage.itemCart != undefined ? JSON.parse(sessionStorage.itemCart) : undefined;
+
+    const burger = new Array();
+    const drinks = new Array();
+    const servings = new Array();
+    const promo = new Array();
+    const combo = new Array();
+    Object.entries(result.feed).map(function(elem,ind,obj){
+
+        const buttonsCart = elem[1].category.includes('Unavailable') ? '<div class="SPINNERmax"><span class="OFSTOCKitem">Indisponível</span></div>' :
+        `<div class="SPINNERmax" id="INCREMENTdiv">
+        <div class="SPINNERinput">
+        <div class="PREPENDinput">
+            <button class="btn btn-decrement" type="button" for="${elem[0]}"><i class="CROSSicon MINUSicon"></i></button>
+        </div>
+        <input type="number" value="${itemCart != undefined ? itemCart[elem[0]] != undefined ? itemCart[elem[0]].amount : 0 : 0}" min="1" max="5" disabled="disabled" onselectstart="return false" onpaste="return false" oncopy="return false" oncut="return false" ondrag="return false" ondrop="return false" autocomplete="off" class="INPUTnumb">
+        <div class="PREPENDinput">
+            <button class="btn btn-increment" type="button" for="${elem[0]}"><i class="CROSSicon PLUSicon"></i></button>
+        </div>
+        </div>
+        </div>
+        <div class="SPINNERmax" id="GETTINGdiv">
+        <button type="button" class="GETTINGit" for="${elem[0]}"><i class="CROSSicon CARTicon"></i>Adicionar</button>
+        </div>`;
+
+        var info = '';
+        !elem[1].category.includes('Drinks') ? info = `<div class="ACESSinfo"><p>${elem[1].description}</p></div>` : ''
+
+
+        const item = `<div class="POSTbox${itemCart != undefined ? Object.getOwnPropertyNames(itemCart).includes(elem[0]) ? ' EXISTitem' : '' : ''}" data-id="${elem[0]}">
+        <section class="POSTup">
+            <div class="POSTimg">
+                <img src="${elem[1].thumb}" alt="${elem[1].title}">
+                ${info}
+            </div>
+            <div class="POSTbttm">
+            ${buttonsCart}
+            </div>
+        </section>
+        <section class="POSTbt">
+            <span>${Number(elem[1].price).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</span>
+            <div>
+                <h3>${elem[1].title}</h3>
+                <span>${!elem[1].category.includes('Drinks') ? elem[1].grams >= 1000 ? (function(){
+
+                    var countGrams = 0;
+                    var atual = elem[1].grams
+                    function decrementAgain(){
+                        countGrams = ++countGrams;
+                        atual = atual - 1000
+                        atual >= 1000 ? decrementAgain() : null;
+                    }
+
+                    atual >= 1000 ? decrementAgain() : null
+
+                    if(atual != 0){
+                        return `${Number(countGrams+'.'+atual).toFixed(1).replace('.',',')}kg`;
+                    }
+                    else {
+                        return countGrams != 1 ? `${countGrams} QUILOS` : `${countGrams} QUILO`;
+                    }
+                })() : elem[1].grams != 0 ? `${elem[1].grams}g` : 'Peso não informado' : elem[1].weight >= 1000 ? (function(){
+
+                    var countGrams = 0;
+                    var atual = elem[1].weight
+
+                    function decrementAgain(){
+                        countGrams = ++countGrams;
+                        atual = atual - 1000
+                        atual >= 1000 ? decrementAgain() : null;
+                    }
+
+                    atual >= 1000 ? decrementAgain() : null
+
+                    if(atual != 0){
+                        return `${Number(countGrams+'.'+atual).toFixed(1).replace('.',',')}L`;
+                    }
+                    else {
+                        return countGrams != 1 ? `${countGrams} LITROS` : `${countGrams} LITRO`;
+                    }
+                })() : `${elem[1].weight}ml`}</span>
+            </div>
+            <button type="button" class="INFObtn" for="${elem[0]}"><i class="CROSSicon INFOicon"></i></button>
+        </section>
+        </div>`;
+
+        elem[1].category.includes('Combo') && !elem[1].category.includes('Drinks') ? combo.push(item) : false;
+        elem[1].category.includes('Burger') ? burger.push(item) : false;
+        elem[1].category.includes('Servings') ? servings.push(item) : false;
+        elem[1].category.includes('Drinks') ? drinks.push(item) : false;
+        elem[1].category.includes('Promo') && !elem[1].category.includes('Drinks') && elem[1].category.includes(weekday) ? promo.push(item) : false;
+
+    });
+
+    const promoinst = promo.length != 0 ?
+    `<div class="PROMOinst">
+        ${promo.join('\n')}
+    </div>
+    <div class="MESSAGEandes">
+        <p>Promoção disponível aos ${bracael.case.dotw[numberday]} por tempo indeterminado.</p>
+    </div>` :
+    `<small>Hoje não é dia de promoção.</small>`;
+
+
+if(document.body.contains(document.getElementById('POSTmap'))){
+    POSTmap.innerHTML = `
+<div class="BURGERpost" id="SCREENit">
+    <div>
+        ${burger.length != 0 ? burger.join('\n') : '<div class="MSGelemFailure"><small>Nenhum hamburguer publicado!</small></div>'}
+    </div>
+</div>
+<div class="PORCIONpost DISPLAYnone" id="SCREENit">
+    <div>
+    ${servings.length != 0 ? servings.join('\n') : '<div class="MSGelemFailure"><small>Nenhuma porção publicada!</small></div>'}
+    </div>
+</div>
+<div class="BEBIDADApost DISPLAYnone" id="SCREENit">
+    <div>
+    ${drinks.length != 0 ? drinks.join('\n') : '<div class="MSGelemFailure"><small>Nenhuma bebida publicada!</small></div>'}
+    </div>
+</div>`;
+}
+
+CONTENTmodal.innerHTML = `<div class="MASTERmenu">
+<button type="button" class="ASIDEbtn" name="destaque" disabled="disabled">Combos</button>
+<button type="button" class="ASIDEbtn" name="promo">Promoção</button>
+<span></span>
+</div>
+<div class="SCREENmenu">
+<div class="DESTAQbar">
+${combo.join('\n')}
+</div>
+<div class="PROMObar">
+${promoinst}
+</div>
+</div>`;
+
+});
+
+
+const SEMANAit = new Array();
+database.ref('business').once('value').then(snapshot=>{
+    // DIAS DA SEMANA NO MENU-PUSH
+    for(var a = 0; a < 7; a++){
+        snapshot.val().action[a][Object.getOwnPropertyNames(snapshot.val().action[a])].map(function(e, i, o){
+        if(o[i][0] == '' || o[i][1] == ''){
+            SEMANAit.push(`<li><span>${bracael.case.dotw[a]}</span><span style="color: #ff847c;">Fechado</span></li>`);
+        }
+        else {
+            if(i != 0){
+                SEMANAit.push(`<li><span>--</span><span>${o[i][0]} às ${o[i][1]}</span></li>`); }
+                else {
+                SEMANAit.push(`<li><span>${bracael.case.dotw[a]}</span><span>${o[i][0]} às ${o[i][1]}</span></li>`);    }
+        }
+    });}
+    document.getElementById('SEMANAit').innerHTML = SEMANAit.join('\n');
+
+    // bairros para atendimentos
+    const district = new Array();
+
+    Object.entries(snapshot.val().district).sort(function (a, b) {
+        return (a[1].zone > b[1].zone) ? 1 : ((b[1].zone > a[1].zone) ? -1 : 0);
+    }).map(function(data, index, stuff){
+        if(stuff[index-1] != undefined){
+            var letter = data[1].zone.substring(0, 1) != stuff[index-1][1].zone.substring(0, 1) ? stuff[index][1].zone.substring(0, 1) : '';    }
+            else {
+            var letter = stuff[index][1].zone.substring(0, 1);  }
+
+        district.push(`<div class="SECTORhr"><span>${letter}</span><span>${data[1].zone}</span><span>${data[1].rate != 0 ? Number(data[1].rate).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }) : 'GRÁTIS'}</span></div>`);
+    });
+
+    DISTRICTon.innerHTML = `
+    <div class="MASTERmenu">Área de entrega</div>
+    <div class="MASTERsub">
+        Resultados para <b>${snapshot.val().info.region}/${snapshot.val().info.unity}</b>
+    </div>
+    <div class="DISTRICTinst">
+        ${district.join('\n')}
+    </div>`;
+
+    const banrisul = '<i class="CROSSicon VISAicon"><img height="20" src="https://1.bp.blogspot.com/-P6ong_vSPo4/X2hJ-EcfzbI/AAAAAAAAHPA/uMHLrlxGR7IlXURS3yBhpva8gOYlIhlHwCLcBGAsYHQ/s320/banrisul.png"></i>';
+    const visa = '<i class="CROSSicon VISAicon"><img height="20" src="https://4.bp.blogspot.com/-yjRJamc055o/XzKLkgO8A1I/AAAAAAAAHGo/EKk1YWu8uTwFHZmqtsKa7Q5XI_eXsMo3gCLcBGAsYHQ/s320/visa.png"></i>';
+    const maestro = '<i class="CROSSicon MAESTROcon"><img height="20" src="https://4.bp.blogspot.com/-cP673wyKTYY/XzKNpfTn-5I/AAAAAAAAHG4/TYatZb6b4u8kqSQd56uk-2hP25N_-UeQgCLcBGAsYHQ/s320/maestro.png"></i>';
+    const elo = '<i class="CROSSicon ELOicon"><img height="20" src="https://2.bp.blogspot.com/-_cwtVG4dR1g/XzKRdsHr1BI/AAAAAAAAHHs/sz5v6dB6bYcjFd9aZFoEMF-RQQN59ATkQCLcBGAsYHQ/s320/elo.png"></i>';
+    const mastercard = '<i class="CROSSicon MASTERcon"><img height="20" src="https://4.bp.blogspot.com/-c2qRtCccgFk/XzKOp6dtO3I/AAAAAAAAHHQ/bksycs51u6EbTaF8_FMm31fN6iV6Hul-gCLcBGAsYHQ/s320/mastercard.png"></i>';
+    const hipercard = '<i class="CROSSicon AMEXicon"><img height="20" src="https://1.bp.blogspot.com/-Pxg-BfPny3o/X2hJ-NGAdpI/AAAAAAAAHO8/EepI7iQqVwEEi6Cf5RcDK2M2gzagl3HfwCLcBGAsYHQ/s320/hipercard.png"></i>';
+    const amex = '<i class="CROSSicon AMEXicon"><img height="20" src="https://3.bp.blogspot.com/-sf2IZ3tnMjM/XzKNe8H_PmI/AAAAAAAAHG0/zyjZveMaCbUJUDlVGI0x-dsIFK73Ys2EACLcBGAsYHQ/s320/amex.png"></i>';
+    const diners = '<i class="CROSSicon DINERSicon"><img height="20" src="https://3.bp.blogspot.com/-7W74XVvvqks/XzKPbSRz5jI/AAAAAAAAHHg/o4mhb7P8sR01FJkEhyWUUnsbS6Oy3Dd6QCLcBGAsYHQ/s320/diners.png"></i>';
+    const alelo = '<i class="CROSSicon ALELOicon"><img height="20" src="https://4.bp.blogspot.com/-oT3WobHsu4c/XzKUljudVSI/AAAAAAAAHII/FGkJNrJ6tbgDFwvH8EmxmrD20RNWjCiNwCLcBGAsYHQ/s320/alelo.png"></i>';
+    const sodexo = '<i class="CROSSicon SODEXOcon"><img height="20" src="https://2.bp.blogspot.com/-romfsWuFvDc/XzKTG2L-nvI/AAAAAAAAHH8/bzPh5XSrwwk3ArbFXPr05fyGHGVseoHqgCLcBGAsYHQ/s1600/sodexo.png"></i>';
+    const ticket = '<i class="CROSSicon TICKETicon"><img height="20" src="https://1.bp.blogspot.com/-N3flCB8it7Q/XzKWCU4HUyI/AAAAAAAAHIU/hwICpw0fQMk_RHUAoXW45it0ZSxsya40wCLcBGAsYHQ/s320/ticket.png"></i>';
+    const vrref = '<i class="CROSSicon VRREFicon"><img height="20" src="https://1.bp.blogspot.com/-UpUHmGhhdL8/XzKKMZk6rDI/AAAAAAAAHGY/Nxt-U6lXPHY_eROYrvRynCJoMnvLeke1gCLcBGAsYHQ/s320/vr-ref.png"></i>';
+
+    const methods = snapshot.val().methods;
+    const cash = methods.cash.brl ? `
+    ${methods.cash.brl ? '<small>BRL (moeda do Brasil)</small>' : ''}` : '<small>Não trabalhamos com dinheiro em espécie</small>';
+    const debit = methods.debit.visa || methods.debit.maestro || methods.debit.elo || methods.debit.banrisul ? `
+    ${methods.debit.visa ? visa : ''}
+    ${methods.debit.maestro ? maestro : ''}
+    ${methods.debit.elo ? elo : ''}
+    ${methods.debit.banrisul ? banrisul : ''}` : '<small>Não trabalhamos com débito</small>';
+    const credit = methods.credit.visa || methods.credit.mastercard || methods.credit.elo || methods.credit.hipercard || methods.credit.amex || methods.credit.diners ? `
+    ${methods.credit.visa ? visa : ''}
+    ${methods.credit.mastercard ? mastercard : ''}
+    ${methods.credit.elo ? elo : ''}
+    ${methods.credit.hipercard ? hipercard : ''}
+    ${methods.credit.amex ? amex : ''}
+    ${methods.credit.diners ? diners : ''}` : '<small>Não trabalhamos com crédito</small>';
+    const voucher = methods.voucher.alelo || methods.voucher.sodexo || methods.voucher.ticket || methods.voucher.vrref ? `
+    ${methods.voucher.alelo ? alelo : ''}
+    ${methods.voucher.sodexo ? sodexo : ''}
+    ${methods.voucher.ticket ? ticket : ''}
+    ${methods.voucher.vrref ? vrref : ''}` : '<small>Não trabalhamos com voucher</small>';
+
+    PAGAMENTOit.innerHTML = `
+    <p>Dinheiro</p>
+    <div class="PAGAMENTOform">
+    ${cash}
+    </div>
+    <p>Cartão de Débito</p>
+    <div class="PAGAMENTOform">
+        ${debit}
+    </div>
+    <p>Cartão de Crédito</p>
+    <div class="PAGAMENTOform">
+        ${credit}
+    </div>
+    <p>Voucher</p>
+    <div class="PAGAMENTOform">
+        ${voucher}
+    </div>
+    `;
+
+});
+
+const MENUslct = document.querySelectorAll('.MENUslct');
+for(var i = 0; i < MENUslct.length; i++){
+    MENUslct[i].addEventListener('click', function(){
+
+if(!this.classList.contains('ACTIVEit') && !this.hasAttribute("disabled")){
+        bracael.postImg()
+        const SLCTscreen = document.querySelector(`.${document.querySelector('.MENUslct.ACTIVEit').getAttribute('for')}`);
+        document.querySelector('.MENUslct.ACTIVEit').classList.toggle('ACTIVEit');
+        this.classList.toggle('ACTIVEit');
+
+        for(var i = 0; i < MENUslct.length; i++){
+            MENUslct[i].setAttribute('disabled', 'disabled');}
+
+    $(SLCTscreen).animate({ opacity: 0 }, {
+        duration : 150,
+        easing: 'linear',
+        queue: false
+    });
+  
+    $(SLCTscreen).animate({
+        'transform': '100'
+    }, {
+        step: function (now, fx) {
+        $(this).css({"transform": "translate3d(0px, " + now + "vh, 0px)"});
+            },
+        duration: 300,
+        easing: 'linear',
+        queue: false,
+        complete: function () {
+            this.classList.add('DISPLAYnone');
+            this.removeAttribute('style');
+    }
+    }, 'linear');
+
+    setTimeout(()=>{
+        const ELEMENTset = document.querySelector(`.${this.getAttribute('for')}`);
+        $(ELEMENTset).fadeIn(500, function() {
+            ELEMENTset.classList.remove('DISPLAYnone');
+            ELEMENTset.removeAttribute('style')
+        })  }, 100)
+
+        setTimeout(()=>{
+        for(var i = 0; i < MENUslct.length; i++){
+            MENUslct[i].removeAttribute('disabled')
+        }}, 600)
+
+}
+});
+}
+
+
+if(document.body.contains(document.querySelector('.CONTENTblogger'))){
+// CART AND ITENS STORAGE
+if(sessionStorage.itemCart != undefined){
+    const startCart = new Array();
+    const boxCart = new Array();
+    const totalCart = new Array();
+
+    Object.entries(JSON.parse(sessionStorage.itemCart)).map(function(elem,ind,obj){
+
+        const reduceInc = new Array();
+        elem[1].extra[1].map(function(data){
+            reduceInc.push(data[0] * data[1])
+        });
+
+        var total = reduceInc.reduce(function(total, numero){
+            return total + numero;
+        }, 0);
+
+        totalCart.push(Number((elem[1].price * elem[1].amount) + total));
+        if(elem[1].amount != 1){
+            var amountCart = `<small>${elem[1].amount}</small>`;    }
+            else {
+            var amountCart = '';    }
+
+        var optionCart = `<div class="OPTIONScart">${total != 0 ? '<i class="CROSSicon ICONinc"></i>' : ''}${elem[1].comment != null ? '<i class="CROSSicon ICONcomment16"></i>' : ''}</div>`;
+
+        boxCart.push(`
+        <div class="CARTbox" data-id="${elem[0]}">
+        <section class="CARTlf">
+            <img src="${elem[1].thumb}" alt="${elem[1].title}">
+        </section>
+        <section class="POSTrt">
+            <span>${Number((elem[1].price * elem[1].amount) + total).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }) + amountCart + optionCart}</span>
+            <span>${elem[1].title}</span>
+            <span>${elem[1].about}</span>
+        </section>
+        </div>
+        `);
+
+        // CRIA UMA ARRAY COM TODOS OS AMOUNT
+        startCart.push(elem[1].amount); });
+
+    if(startCart.reduce((acumulador, valorAtual) => acumulador + valorAtual) != 0){
+        document.querySelector('#SETVALUEit.CROSSicon.CARTicon').innerHTML = `<span>${startCart.reduce((acumulador, valorAtual) => acumulador + valorAtual)}</span>`;   }
+
+        // ITENS EXISTE ASIDE__ITEM_CART
+        if(window.location.href.indexOf('/p/request.html') != -1){
+            console.log('request.html')
+        }
+        ITEMcart.innerHTML = `<div class="ORDERitem CARTopen">
+        <div class="OPENCARTinst">
+        <h3>Todos os seus pedidos</h3>
+        <div class="TOTALcart"><strong>subtotal á pagar</strong><p>${Number(totalCart.reduce((acumulador, valorAtual) => acumulador + valorAtual)).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }).replace('R$', '<span>R$</span>')}</p></div>
+        <div class="ITENScart">
+        <div class="ITENSinst" id="CARTmap">
+            ${boxCart.join('')}
+        </div>
+        </div>
+        <div class="CONFIRMcart">
+            <button onclick="window.location.href='./p/request.html'" class="PREMIUMbtn"><i class="CROSSicon SAVEicon"></i>Confirmar</button>
+        </div>
+        </div>
+        </div>`;
+}
+
+database.ref().on('value', function (snapshot) {
+    const COMMERCEstatus = document.querySelector('SPAN.STATUScode');
+
+    if(snapshot.val()['business'].status){
+        document.querySelector('SECTION.COMMERCEstatus').id = 'ABERTOit';
+        COMMERCEstatus.innerText = 'Delivery aberto!';
+    }
+    else {
+        document.querySelector('SECTION.COMMERCEstatus').id = 'FECHADOit';
+        COMMERCEstatus.innerText = 'Delivery fechado!';
+    }
+
+    const WAITINGinst = new Array();
+
+    // console.log(snapshot.val().order)
+
+    snapshot.val().order != undefined ?
+    Object.entries(snapshot.val().order).map(function(e, i, o){
+        WAITINGinst.push(`
+        <div class="WAITINGcard">
+            <span>${e[1].client}</span>
+            <div><p>Status</p>${e[1].status == 'Em espera' ? `<p>${e[1].status}</p>` : e[1].status == 'Em preparo' ? `<p style="color: #eff94f;">${e[1].status}</p>` : e[1].status == 'Em retirada' ? `<p style="color: #4fa3f9;">${e[1].status}</p>` : `<p style="color: #4ff94f;">${e[1].status}</p>`}</div>
+        </div>
+        `);
+    }) : null;
+
+    WAITINGlist.innerHTML = `
+    <div class="MASTERmenu">Lista de atendimento</div>
+    ${snapshot.val().order != undefined ? `
+    <div class="MASTERsub">
+        Total de ${Object.getOwnPropertyNames(snapshot.val().order).length} pedidos no momento
+    </div>
+    <div class="WAITINGinst">
+        ${WAITINGinst.join('')}
+    </div>` : '<small>Por enquanto, não há nada por aqui.<small>'}`;
+});
+
+document.querySelectorAll('.INFObtn').forEach(info=>{
+    info.addEventListener('click', function(){
+        document.querySelector(`.POSTbox[data-id="${this.getAttribute('for')}"]`).querySelector('.POSTimg').classList.toggle('ACTIVEit')
+    });
+});
+
+//GET JSON POST
+document.querySelectorAll('.GETTINGit').forEach(card=>{
+    card.addEventListener("click", function(){
+
+        database.ref(`feed/${this.getAttribute('for')}`).once('value').then((result)=>{
+
+        if(!this.hasAttribute('disabled') && result.val() != null && result.val() != undefined){
+        const POSTbox = document.querySelector(`.POSTbox[data-id="${this.getAttribute('for')}"]`);
+
+        const dataNumber = new Array();
+        result.val().extra != undefined ? result.val().extra.map(function(data){
+            dataNumber.push([0,Number(data[3])])
+        }) : null
+
+        const SETitem = JSON.parse(`{"${this.getAttribute('for')}":{
+            "title":"${result.val().title}",
+            "price": ${result.val().price},
+            "thumb":"${result.val().thumb}",
+            "about":"${!result.val().category.includes('Drinks') ? result.val().grams >= 1000 ? (function(){
+
+                var countGrams = 0;
+                var atual = result.val().grams
+                function decrementAgain(){
+                    countGrams = ++countGrams;
+                    atual = atual - 1000
+                    atual >= 1000 ? decrementAgain() : null;
+                }
+
+                atual >= 1000 ? decrementAgain() : null
+
+                if(atual != 0){
+                    return `${Number(countGrams+'.'+atual).toFixed(1).replace('.',',')}kg`;
+                }
+                else {
+                    return countGrams != 1 ? `${countGrams} QUILOS` : `${countGrams} QUILO`;
+                }
+            })() : result.val().grams != 0 ? `${result.val().grams}g` : 'Peso não informado' : result.val().weight >= 1000 ? (function(){
+
+                var countGrams = 0;
+                var atual = result.val().weight
+
+                function decrementAgain(){
+                    countGrams = ++countGrams;
+                    atual = atual - 1000
+                    atual >= 1000 ? decrementAgain() : null;
+                }
+
+                atual >= 1000 ? decrementAgain() : null
+
+                if(atual != 0){
+                    return `${Number(countGrams+'.'+atual).toFixed(1).replace('.',',')}L`;
+                }
+                else {
+
+                    return countGrams != 1 ? `${countGrams} LITROS` : `${countGrams} LITRO`;
+
+                }
+            })() : `${result.val().weight}ml`}",
+            "extra": ${result.val().extra != undefined ? `[${JSON.stringify(result.val().extra)},${JSON.stringify(dataNumber)}]` : '[[],[]]'},
+            "comment": null,
+            "amount": 1
+        }}`);
+
+        if(sessionStorage.itemCart != undefined){
+            // PRIMERA AÇÃO NO PRODUTO --- COM STORAGE EXISTENTE
+            if(!Object.getOwnPropertyNames(JSON.parse(sessionStorage.itemCart)).includes(this.getAttribute('for'))){
+                sessionStorage.itemCart = JSON.stringify(Object.assign(JSON.parse(sessionStorage.itemCart), SETitem));  }
+                bracael.incrementCart(this.getAttribute('for'));
+        }
+        else {
+            // PRIMEIRA AÇÃO NO PRODUTO --- REAL
+            sessionStorage.itemCart = JSON.stringify(SETitem);
+
+            // ITENS EXISTE ASIDE__ITEM_CART
+            document.querySelector('ASIDE#ITEMcart').innerHTML = `    <div class="ORDERitem CARTopen">
+    <div class="OPENCARTinst">
+        <h3>Todos os seus pedidos</h3>
+        <div class="TOTALcart"><strong>subtotal á pagar</strong><p>${Number(result.val().price).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }).replace('R$', '<span>R$</span>')}</p></div>
+        <div class="ITENScart">
+        <div class="ITENSinst">
+            <div class="CARTbox" data-id="${this.getAttribute('for')}">
+            <section class="CARTlf">
+                <img src="${result.val().thumb}" alt="${result.val().title}">
+            </section>
+            <section class="POSTrt">
+                <span>${Number(result.val().price).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</span>
+                <span>${result.val().title}</span>
+                <span>${!result.val().category.includes('Drinks') ? result.val().grams >= 1000 ? (function(){
+
+                    var countGrams = 0;
+                    var atual = result.val().grams
+                    function decrementAgain(){
+                        countGrams = ++countGrams;
+                        atual = atual - 1000
+                        atual >= 1000 ? decrementAgain() : null;
+                    }
+    
+                    atual >= 1000 ? decrementAgain() : null
+    
+                    if(atual != 0){
+                        return `${Number(countGrams+'.'+atual).toFixed(1).replace('.',',')}kg`;
+                    }
+                    else {
+                        return countGrams != 1 ? `${countGrams} QUILOS` : `${countGrams} QUILO`;
+                    }
+                })() : result.val().grams != 0 ? `${result.val().grams}g` : 'Peso não informado' : result.val().weight >= 1000 ? (function(){
+    
+                    var countGrams = 0;
+                    var atual = result.val().weight
+    
+                    function decrementAgain(){
+                        countGrams = ++countGrams;
+                        atual = atual - 1000
+                        atual >= 1000 ? decrementAgain() : null;
+                    }
+    
+                    atual >= 1000 ? decrementAgain() : null
+    
+                    if(atual != 0){
+                        return `${Number(countGrams+'.'+atual).toFixed(1).replace('.',',')}L`;
+                    }
+                    else {
+                        return countGrams != 1 ? `${countGrams} LITROS` : `${countGrams} LITRO`;
+                    }
+                })() : `${result.val().weight}ml`}</span>
+            </section>
+            </div>
+        </div>
+        </div>
+        <div class="CONFIRMcart">
+            <button onclick="window.location.href='./p/request.html'" class="PREMIUMbtn"><i class="CROSSicon SAVEicon"></i>Confirmar</button>
+        </div>
+    </div>
+    </div>`;
+        }
+
+    document.getElementById('ITEMcart').querySelector(`[data-id="${this.getAttribute('for')}"]`).addEventListener('dblclick', function(){
+        if(this.children.length < 3){
+            bracael.asideCartBox(this)
+        }
+    });
+
+        // SEMPRE ACRESCENTA O PRIMEIRO VALOR NO INPUT
+        POSTbox.querySelector('.INPUTnumb').value = 1;
+        this.setAttribute('disabled', 'disabled');
+
+        const INCREMENTdiv = POSTbox.querySelector('#INCREMENTdiv.SPINNERmax');
+
+        // EFEITO DA PRIMEIRA AÇÃO
+        $(this.parentNode).animate({ opacity: 0 }, {
+            duration : 400,
+            easing: 'linear',
+            queue: false
+        });
+        
+        $(this.parentNode).animate({
+            'transform': '26'
+        }, {
+            step: function (now, fx) {
+                $(this).css({"transform": "translate3d(0px, " + now + "px, 0px)"});
+            },
+            duration: 400,
+            easing: 'linear',
+            queue: false,
+            complete: function () {
+                POSTbox.classList.add('EXISTitem');
+                this.removeAttribute('style');
+                this.querySelector('.GETTINGit').removeAttribute('disabled');
+            }
+        }, 'linear');
+
+        setTimeout(function(){
+            $(INCREMENTdiv).fadeIn(400);    },200);
+
+            bracael.refreshItemCart()
+        }
+    });
+
+    });
+});
+
+
+for(let i = 0; i < document.querySelectorAll('.CARTbox').length; i++){
+document.querySelectorAll('.CARTbox')[i].addEventListener('dblclick', function dbclick(event){
+    if(this.children.length < 3){
+    bracael.asideCartBox(this)
+    }
+});}
+
+
+for(var i = 0; i < document.querySelectorAll('button.btn.btn-decrement').length; i++){
+document.querySelectorAll('button.btn.btn-decrement')[i].addEventListener('click', function(){
+    const dataItem = this.getAttribute('for');
+    if(sessionStorage.itemCart != undefined){
+    if(JSON.parse(sessionStorage.itemCart)[dataItem] != undefined){
+    bracael.obterStorage(dataItem, --JSON.parse(sessionStorage.itemCart)[dataItem].amount);
+    bracael.decrementCart(dataItem);
+    }}
+});}
+
+for(var i = 0; i < document.querySelectorAll('button.btn.btn-increment').length; i++){
+document.querySelectorAll('button.btn.btn-increment')[i].addEventListener('click', function(){
+    const dataItem = this.getAttribute('for');
+    if(sessionStorage.itemCart != undefined){
+    if(JSON.parse(sessionStorage.itemCart)[dataItem] != undefined){
+  
+    bracael.obterStorage(dataItem, ++JSON.parse(sessionStorage.itemCart)[dataItem].amount);
+    bracael.incrementCart(dataItem);
+    }}
+});}
+
+document.querySelectorAll('[data-aside]').forEach(function(data){
+    data.addEventListener('click', function(){
+    bracael.postImg();
+    document.getElementById(data.getAttribute('data-aside')).classList.toggle('MENUactive');
+    document.getElementById('CONTENTframe').classList.toggle('SWIPEopen');
+    document.body.style.overflow = "hidden";
+
+    if(document.body.contains(document.querySelector('.SWIPEopen'))){
+    document.querySelector('.SWIPEopen').addEventListener('click', function click(e){
+        bracael.postImg();
+        document.getElementById(data.getAttribute('data-aside')).classList.toggle('MENUactive');
+        document.getElementById('CONTENTframe').classList.toggle('SWIPEopen');
+        document.body.removeAttribute('style');
+        this.removeEventListener('click', click);
+    });}
+    });
+});
+
+document.querySelectorAll('.ASIDEbtn').forEach(function(data){
+    data.addEventListener('click', function(){
+        bracael.postImg();
+        document.querySelector('.ASIDEbtn[disabled]').removeAttribute('disabled')
+        this.setAttribute('disabled', '')
+        document.querySelector('.SCREENmenu').classList.toggle('ACTIVEit')
+    });
+});
+
+}
+
+
+
+//  PAGINA DE ENVIAR PEDIDO
+if(document.body.contains(document.getElementById('CONFIRMform')) && sessionStorage.itemCart != undefined){
+database.ref('business').once('value').then(function(snapshot){
+
+if(bracael.resumeCart() >= snapshot.val().info.minvalue && snapshot.val().status){
+    const user = localStorage.clientApp != undefined ? JSON.parse(localStorage.clientApp) : null;
+
+    const DISTRICTit = new Array();
+    Object.entries(snapshot.val().delivery).map(function(data){
+        DISTRICTit.push(`<option js-key="${data[0]}">${data[1].zone}${data[1].district != '' ? ` - ${data[1].district}` : ''} (${Number(data[1].rate).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })})</option>`);
+    });
+
+    document.getElementById('CONFIRMform').innerHTML = `
+    <div>
+    <em>MANIPULE SEU PEDIDO!</em>
+    <p>Incremente ingredientes nos itens do seu carrinho ou também nos informe quando remover um ingrediente que tu não gosta.</p>
+    <button class="COMMENTline" type="button">Manipular pedido</button>
+    </div>
+    
+    <section class="REQUESTit">
+        <input id="FIRSTstep" name="INPUTradio" type="radio" checked="">
+        <input id="SECONDstep" name="INPUTradio" type="radio">
+    <div class="REQUESTinst">
+    <div class="SECTIONinpt" js-target="FIRSTstep" checked="">
+    <div class="GROUPinput">
+        <input type="text" class="inputType" name="inputClient" placeholder="Nome e sobrenome *" tabindex="1" autocapitalize="on" autocorrect="off" ${user != null ? `value="${user.name}"` : ''}>
+    </div>
+    <div class="GROUPinput">
+        <input type="text" class="inputType" name="inputDdd" placeholder="DDD *" tabindex="2" autocapitalize="on" autocorrect="off" maxlength="2" ${user != null ? `value="${user.ddd}"` : ''}>
+        <input type="text" class="inputType" name="inputPhone" placeholder="Telefone *" tabindex="3" autocapitalize="on" autocorrect="off" maxlength="10" ${user != null ? `value="${user.phone}"` : ''}>
+    </div>
+    <div class="MESSAGEandes">
+        <p>O telefone é importante para casos de dificuldade de encontrar o endereço.</p>
+    </div>
+    <div class="GROUPinput" id="CONFIRMitem">
+        <button class="TEXThref" type="button">Termos & privacidade</button>
+        <button class="CHANGEstep BUTTONif" data-for="SECONDstep" tabindex="4" type="button">Proximo passo</button>
+    </div>
+    </div>
+    <div class="SECTIONinpt" js-target="SECONDstep">
+    <div class="GROUPinput">
+        <input type="text" class="inputType" name="inputRoad" placeholder="Rua *" tabindex="-1" autocapitalize="on" autocorrect="off" ${user != null ? `value="${user.street}"` : ''}>
+        <input type="text" class="inputType" name="inputNumber" placeholder="Número *" tabindex="-1" autocapitalize="on" autocorrect="off" ${user != null ? `value="${user.number}"` : ''}>
+    </div>
+    <div class="GROUPinput">
+        <input type="text" name="inputExtra" placeholder="Complemento" tabindex="-1" autocapitalize="on" autocorrect="off" ${user != null ? `value="${user.extra}"` : ''}>
+    </div>
+    <div class="GROUPinput">
+        <div id="SELECTopt" >
+        <select name="INSERTrate" tabindex="-1" id="INSERTrate">
+            <option disabled selected value>Selecione seu bairro *</option>
+            ${DISTRICTit.join('\n')}
+        </select>
+        </div>
+    </div>
+    <div class="MESSAGEandes">
+        <p>Será cobrada a taxa de entrega no valor subtotal do pedido.</p>
+    </div>
+    <div class="GROUPinput" id="CONFIRMitem">
+        <button class="CHANGEstep TEXThref" data-for="FIRSTstep" tabindex="-1" type="button">Voltar atrás</button>
+        <button class="BUTTONif" id="DEMANDit" tabindex="-1" type="button">Finalizar pedido</button>
+    </div>
+    </div>
+    </div>
+    </section>`;
+
+    document.querySelector('.REQUESTit').style.height = `${document.querySelector('.SECTIONinpt[checked]').offsetHeight}px`;
+
+    document.querySelector('[name="inputPhone"]').addEventListener('input', function(){
+        if(this.value.replace(/[^\d]+/g,'').length === 8){
+            this.value = this.value.replace(/[^\d]+/g,'').replace(/(\d{4})(\d{4})/, "$1-$2")
+        }
+        else if(this.value.replace(/[^\d]+/g,'').length === 9){
+            this.value = this.value.replace(/[^\d]+/g,'').replace(/(\d{5})(\d{4})/, "$1-$2")
+        }
+    });
+
+    for(let i = 0; i < document.querySelectorAll('.CHANGEstep').length; i++){
+        document.querySelectorAll('.CHANGEstep')[i].addEventListener('click', function(){
+
+            const REQUESTit = document.querySelector('.REQUESTit');
+            var inputClient = document.querySelector('[name="inputClient"]').value != '' ? document.querySelector('[name="inputClient"]').value.split(' ').length >= 2 ? document.querySelector('[name="inputClient"]').value.split(' ')[1] != '' ? true : false : false : false;
+            const inputPhone = document.querySelector('[name="inputPhone"]').value;
+            const inputDdd = document.querySelector('[name="inputDdd"]').value;
+
+            if(inputClient && inputPhone.replace(/[^\d]+/g,'').length >= 8 && inputDdd.length === 2){
+                
+                REQUESTit.querySelector('.SECTIONinpt[checked]').removeAttribute('checked');
+                REQUESTit.querySelector(`[js-target="${this.getAttribute('data-for')}"]`).setAttribute('checked', '');
+
+                REQUESTit.style.height = `${REQUESTit.querySelector('.SECTIONinpt[checked]').offsetHeight}px`;
+                
+                REQUESTit.querySelector('[name="INPUTradio"][checked]').removeAttribute('checked');
+                REQUESTit.querySelector(`#${this.getAttribute('data-for')}[name="INPUTradio"]`).setAttribute('checked', '');
+                
+                REQUESTit.querySelector('.SECTIONinpt[checked]').getElementsByTagName('INPUT')[0].value == '' ?
+                REQUESTit.querySelector('.SECTIONinpt[checked]').getElementsByTagName('INPUT')[0].select()
+                : null;
+            }
+            else {
+                if(!inputClient){
+                    document.querySelector('[name="inputClient"]').classList.add('inputEmpty');
+                    setTimeout(function(){
+                        document.querySelector('[name="inputClient"]').classList.remove('inputEmpty')
+                    }, 600);
+                }
+
+                if(document.querySelector('[name="inputDdd"]').value.length !== 2){
+                    document.querySelector('[name="inputDdd"]').classList.add('inputEmpty');
+                    setTimeout(function(){
+                        document.querySelector('[name="inputDdd"]').classList.remove('inputEmpty')
+                    }, 600);
+                }
+
+                if(document.querySelector('[name="inputPhone"]').value.length <= 8){
+                    document.querySelector('[name="inputPhone"]').classList.add('inputEmpty');
+                    setTimeout(function(){
+                        document.querySelector('[name="inputPhone"]').classList.remove('inputEmpty')
+                    }, 600);
+                }
+            }
+        });
+    }
+    // document.querySelectorAll('.CHANGEstep').forEach(function(data){
+    // });
+
+    document.querySelector('.COMMENTline').addEventListener('click', function(){
+        const COMMENTline = new Array();
+        Object.entries(JSON.parse(sessionStorage.itemCart)).map(function(elem, ind){
+
+            const EXTRAstr = new Array();
+            elem[1].extra[0].map(function(data, ind){
+
+                EXTRAstr.push(`
+                <div class="CARDinc" js-somar="${elem[0]}">
+                    <div>
+                        <span class="NAMEANDval">${data[0]} por <strong>${Number(data[3]).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</strong></span>
+                        ${data[2] != '' ? `<span class="ITEMDESval">${data[2]}</span>` : ''}
+                    </div>
+                    <div class="HANDLEitem">
+                        <button type="button" js-limited="${data[1]},${ind}" name="buttonDecrement">-</button>
+                        <input type="text" disabled="disabled" name="inputHandle" value="${elem[1].extra[1][ind][0]}">
+                        <button type="button" js-limited="${data[1]},${ind}" name="buttonIncrement">+</button>
+                    </div>
+                </div>`);
+            });
+            
+            const reduceInc = new Array();
+            elem[1].extra[1].map(function(data){
+                reduceInc.push(data[0] * data[1])
+            });
+
+            var total = reduceInc.reduce(function(total, numero){
+                return total + numero;
+            }, 0);
+
+            COMMENTline.push(`
+            <li>
+                <div><p><span>${elem[1].amount}un</span><span>${elem[1].title}</span></p><button type="button" class="COMMENTact"></button></div>
+                <div class="CONTENTadd">
+                    ${EXTRAstr.length != 0 ? `
+                    <h4>Adicional de ingrediente?</h4>
+                    <div class="EXTRAinc">
+                        ${EXTRAstr.join('\n')}
+                        <div class="ITEMttl">
+                            <span>Total: ${Number((elem[1].price * elem[1].amount) + total).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</span>
+                        </div>
+                    </div>` : ''}
+                    <h4>Algum comentário?</h4>
+                    <div class="COMMENTdata">
+                        <textarea name="commentText" maxlength="140" placeholder="Ex: tirar a cebola, carne mal passada etc.">${elem[1].comment != null ? elem[1].comment : ''}</textarea>
+                        <div class="SUBMITtxt">
+                            <span>0 / 140</span>
+                            <button type="button" data-comment="${elem[0]}">Salvar comentário</button>
+                        </div>
+                    </div>
+                </div>
+            </li>`);
+        });
+    
+        document.body.insertAdjacentHTML('beforeend', `
+    <div class="COMMENTcart">
+        <div class="COMMENTinst">
+            <div class="COMMENTmodal">
+                ${COMMENTline.join('\n')}
+            </div>
+        </div>
+    </div>`);
+
+
+    document.querySelectorAll('[name="buttonDecrement"]').forEach(function(data){
+        data.addEventListener('click', function(){
+            const inputHandle = this.parentNode.querySelector('[name="inputHandle"]');
+            const sessionStr = JSON.parse(sessionStorage.itemCart);
+            const itemCart = JSON.parse(sessionStorage.itemCart)[this.parentNode.parentNode.getAttribute('js-somar')]
+
+            if(Number(inputHandle.value)-1 >= 0){
+                inputHandle.value = --inputHandle.value;
+
+                sessionStr[this.parentNode.parentNode.getAttribute('js-somar')].extra[1][this.getAttribute('js-limited').split(',')[1]][0] = itemCart.extra[1][this.getAttribute('js-limited').split(',')[1]][0]-1;
+
+                sessionStorage.itemCart = JSON.stringify(sessionStr)
+
+                const reduceInc = new Array();
+                JSON.parse(sessionStorage.itemCart)[this.parentNode.parentNode.getAttribute('js-somar')].extra[1].map(function(data){
+                    reduceInc.push(data[0] * data[1])
+                });
+
+                var total = reduceInc.reduce(function(total, numero){
+                    return total + numero;
+                }, 0);
+
+                this.parentNode.parentNode.parentNode.querySelector('.ITEMttl').getElementsByTagName('SPAN')[0].innerHTML = `Total: ${Number((itemCart.price * itemCart.amount) + total).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}`;
+
+                bracael.refreshItemAside(this.parentNode.parentNode.getAttribute('js-somar'), Number((itemCart.price * itemCart.amount) + total))
+            }
+            else {
+                this.parentNode.classList.add('LIMITEDinst')
+                setTimeout(()=>{
+                    this.parentNode.classList.remove('LIMITEDinst')
+                }, 300)
+            }
+        });
+    });
+
+    document.querySelectorAll('[name="buttonIncrement"]').forEach(function(data){
+        data.addEventListener('click', function(){
+            const inputHandle = this.parentNode.querySelector('[name="inputHandle"]');
+            const sessionStr = JSON.parse(sessionStorage.itemCart);
+            const itemCart = JSON.parse(sessionStorage.itemCart)[this.parentNode.parentNode.getAttribute('js-somar')];
+
+            if(Number(inputHandle.value) <= Number(this.getAttribute('js-limited').split(',')[0])-1){
+                inputHandle.value = ++inputHandle.value;
+
+                sessionStr[this.parentNode.parentNode.getAttribute('js-somar')].extra[1][this.getAttribute('js-limited').split(',')[1]][0] = itemCart.extra[1][this.getAttribute('js-limited').split(',')[1]][0]+1;
+
+                sessionStorage.itemCart = JSON.stringify(sessionStr)
+
+                const reduceInc = new Array();
+                JSON.parse(sessionStorage.itemCart)[this.parentNode.parentNode.getAttribute('js-somar')].extra[1].map(function(data){
+                    reduceInc.push(data[0] * data[1])
+                });
+
+                var total = reduceInc.reduce(function(total, numero){
+                    return total + numero;
+                }, 0);
+
+                this.parentNode.parentNode.parentNode.querySelector('.ITEMttl').getElementsByTagName('SPAN')[0].innerHTML = `Total: ${Number((itemCart.price * itemCart.amount) + total).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}`;
+
+                bracael.refreshItemAside(this.parentNode.parentNode.getAttribute('js-somar'), Number((itemCart.price * itemCart.amount) + total))
+            }
+            else {
+                this.parentNode.classList.add('LIMITEDinst')
+                setTimeout(()=>{
+                    this.parentNode.classList.remove('LIMITEDinst')
+                }, 300)
+            }
+        });
+    });
+
+        for(let i = 0; i < document.querySelectorAll('.COMMENTact').length; i++){
+            document.querySelectorAll('.COMMENTact')[i].addEventListener('click', function(){
+
+                const dataComment = this.parentNode.parentNode.querySelector('.CONTENTadd');
+                const dataCommentStyle = document.querySelector('.CONTENTadd[style]');
+    
+                dataComment != dataCommentStyle ?
+                $(dataCommentStyle).animate({ height: 'toggle' }, 300, function(){
+                    this.removeAttribute('style');
+                })
+                : null;
+    
+                $(dataComment).animate({ height: 'toggle' }, 200, function(){
+                    this.querySelector('[name="commentText"]').value != '' ?
+                    null
+                    : this.querySelector('[name="commentText"]').select();
+
+                    dataComment.style.display != 'block' ?
+                        this.removeAttribute('style')
+                    : null;
+                });
+            });
+        }
+
+        document.querySelectorAll('.COMMENTdata').forEach(function(data){
+            const commentText = data.querySelector('[name="commentText"]');
+            const dataComment = data.querySelector('[data-comment]')
+            commentText.addEventListener('input', function(){
+                data.getElementsByTagName('SPAN')[0].innerHTML = `${commentText.value.length} / 140`;
+            });
+
+            dataComment.addEventListener('click', function(){
+                const itemCart = JSON.parse(sessionStorage.itemCart);
+                const commentStr = commentText.value.trim() != '' ? commentText.value : null;
+
+                if(itemCart[this.getAttribute('data-comment')].comment != commentStr){
+                    commentText.value != '' ?
+                        itemCart[this.getAttribute('data-comment')].comment = commentText.value.trim()
+                        : itemCart[this.getAttribute('data-comment')].comment = null;
+                    sessionStorage.itemCart = JSON.stringify(itemCart);
+
+                    bracael.refreshCommentAside(this.getAttribute('data-comment'))
+
+                    this.classList.add('SUCESSbtn');
+                    setTimeout(()=>{
+                        this.classList.remove('SUCESSbtn');
+                    }, 500);
+                }
+                else {
+                    data.classList.add('FAILact');
+                    setTimeout(()=>{
+                        data.classList.remove('FAILact');
+                    }, 400)
+                }
+            });
+        });
+        
+        const COMMENTcart = document.querySelector('.COMMENTcart');
+        $(COMMENTcart).fadeIn(200);
+        COMMENTcart.querySelector('.COMMENTmodal').insertAdjacentHTML('beforebegin', '<div class="SCREENmodal CLOSEmodal" ></div>');
+        // console.log(Number(INSERTrate.options[INSERTrate.options.selectedIndex].value))
+
+        if(document.body.contains(document.querySelector('.CLOSEmodal'))){
+            document.querySelector('.CLOSEmodal').addEventListener('click', function click(e){
+                $(COMMENTcart).fadeOut(200, function() {
+                    this.remove();
+                    // Animation complete
+                  });
+                this.removeEventListener('click', click);
+            });}
+
+    });
+
+
+    localStorage.lastPurchase = new Date()
+
+
+    document.getElementById('DEMANDit').addEventListener('click', function(){
+    if(bracael.resumeCart() >= snapshot.val().info.minvalue){
+        const INSERTrate = document.getElementById('INSERTrate');
+        const inputClient = document.querySelector('[name="inputClient"]').value.trim();
+        const inputDdd = document.querySelector('[name="inputDdd"]').value.trim();
+        const inputPhone = document.querySelector('[name="inputPhone"]').value.trim();
+        const inputRoad = document.querySelector('[name="inputRoad"]').value.trim();
+        const inputNumber = document.querySelector('[name="inputNumber"]').value.trim()
+        const inputExtra = document.querySelector('[name="inputExtra"]').value.trim();
+
+        if(INSERTrate.options[INSERTrate.options.selectedIndex].value != '' && inputClient.value != '' && inputRoad.value != '' && inputNumber.value != ''){
+
+            const orderCart = new Array();
+            const comandCart = new Array();
+            const detailCart = new Array();
+            Object.entries(JSON.parse(sessionStorage.itemCart)).map(function(data,ind,obj){
+                const lineComment = '*' +data[1].amount+ 'x* ```' +data[1].title+ '```';
+
+                const lineExtra = new Array();
+                const extraItem = new Array();
+                const SYSTEMitemExtra = new Array();
+                data[1].extra[1].map(function(item, i){
+
+                    if(item[0] != 0){
+                        lineExtra.push(`\n♨️ _${item[0]} extra de ${data[1].extra[0][i][0]}_`)
+                        console.log(data[1].title, item)
+                    
+                        SYSTEMitemExtra.push({
+                            item: data[1].extra[0][i][0],
+                            amount: item[0],
+                            price: item[1]
+                        })
+                        // console.log(item)
+
+                        extraItem.push(
+                    `<li>
+                        <span>--</span>
+                        <span>--</span>
+                        <span>Extra de ${data[1].extra[0][i][0]}</span>
+                        <span>${item[0]}un</span>
+                        <span>${Number(item[0] * item[1]).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</span>
+                    </li>`)
+                    }
+                });
+
+                detailCart.push({
+                    amount: data[1].amount,
+                    price: data[1].price,
+                    title: data[1].title,
+                    extra: SYSTEMitemExtra,
+                    comment: data[1].comment,
+                    about: data[1].about,
+                    id: data[0]
+                })
+                comandCart.push(`${lineComment}${data[1].comment != null ? `\n‼️ *${data[1].comment}*` : ''}${lineExtra.join('')}`);
+                orderCart.push(`
+                    <li>
+                        <span>${new Array(3 + 1 - (ind + '').length).join('0') + ++ind}</span>
+                        <span>${data[0].substring(data[0].length-11, data[0].length-1)}</span>
+                        <span>${data[1].title}</span>
+                        <span>${data[1].amount}un</span>
+                        <span>${Number(data[1].price * data[1].amount).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</span>
+                    </li>
+                    ${extraItem.join('\n')}
+                `);
+            });
+
+
+            document.body.insertAdjacentHTML('beforeend', `
+            <div class="COMANDAmodal">
+            <div class="COMANDinst">
+                <div class="CONTENTmodal">
+                    <input id="FIRSTstep" name="COMMANDradio" type="radio" checked="">
+                    <input id="SECONDstep" name="COMMANDradio" type="radio">
+                <div class="COMANDAscreen">
+                <div class="SECTIONinpt" js-target="FIRSTstep" checked="">
+                    <p class="IMPORTANTline"><b>${snapshot.val().info.brand} Hamburgueria</b></p>
+                    <p class="IMPORTANTline">CNPJ ${snapshot.val().info.cnpj}</p>
+                    <p class="IMPORTANTline">${snapshot.val().info.address}, ${snapshot.val().info.number} - loja 2 - ${snapshot.val().info.region} - ${snapshot.val().info.unity}</p>
+                    <p>Esta nota não substitui o cupom fiscal, portanto, é uma forma fácil de que o cliente está acostumado a visualizar os detalhes no pedido.</p>
+                    <strong>
+                        <span>#</span>
+                        <span>CÓDIGO</span>
+                        <span>DESCRIÇÃO</span>
+                        <span>QTD.</span>
+                        <span>TOTAL</span>
+                    </strong>
+                    <div class="COMMANDlist">
+                        ${orderCart.join('\n')}
+                        <div class="COMMANDsubtotal">
+                            <span>SUBTOTAL</span>
+                            <span>${Number(bracael.resumeCart()).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</span>
+                        </div>
+                        </div>
+                        <div class="COMMANDfrete">
+                            <span><small>ACRESCIMO</small>VALOR DA ENTREGA</span>
+                            <span>${Number(snapshot.val().delivery[INSERTrate.options[INSERTrate.options.selectedIndex].getAttribute('js-key')].rate).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</}</span>
+                        </div>
+                        <div class="COMMANDfooter">
+                            <b>TOTAL A PAGAR</b>
+                            <span>${Number(bracael.totalCart(snapshot.val().delivery[INSERTrate.options[INSERTrate.options.selectedIndex].getAttribute('js-key')].rate)).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</span>
+                        </div>
+                        <div class="COMMANDsend">
+                            <em>Tenha o WhatsApp instalado em seu Smarthphone para prosseguir com o envio do pedido</em>
+                            <button type="button" class="NEXTscrn STRAPboot" data-for="SECONDstep">Próximo!</button>
+                        </div>
+                </div>
+                <div class="SECTIONinpt" js-target="SECONDstep">
+                    <div class="PAYMENTmethod">
+                        <h3>Forma de pagamento</h3>
+                        <p>Informe o método de pagamento para que tenhamos uma entrega rápida e nosso atendimento seja eficaz. A entrega melhora muito com alguns detalhes importante.</p>
+                        <div class="METHODloop">
+                            <div class="CHECKBOXgr">
+                                <input type="checkbox" class="INPUTctrl" name="SWITCHit" id="PAYCAHSHmethod">
+                                <label class="STATUSlabel" for="PAYCAHSHmethod">Pagar com dinheiro?</label>
+                            </div>
+                        </div>
+                        <div class="METHODloop">
+                            <div class="CHECKBOXgr">
+                                <input type="checkbox" class="INPUTctrl" name="SWITCHit" id="PAYCREDITmethod">
+                                <label class="STATUSlabel" for="PAYCREDITmethod">Pagar no cartão?</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <span name="commentRquestTitle">Mais alguma coisa?</span>
+                    <textarea name="commentRequest" placeholder="Ex. interphone está com defeito"></textarea>
+                    <div class="COMMANDsend">
+                        <em>Tenha o WhatsApp instalado em seu Smarthphone para prosseguir com o envio do pedido</em>
+                        <button type="button" class="WHATSAPPbtn STRAPboot">Enviar pedido!</button>
+                        <strong><span>ou</span></strong>
+                        <button type="button" class="NEXTscrn" data-for="FIRSTstep">Voltar</button>
+                    </div>
+                </div>
+                </div>
+                </div>
+            </div>
+            </div>`);
+
+
+
+            document.getElementById('PAYCAHSHmethod').addEventListener('change', function() {
+                
+                if(this.checked) {
+                    this.parentElement.insertAdjacentHTML('afterend', `
+                    <div class="CASHinpt">
+                        <div class="CASHinst">
+                            <span>R$</span>
+                            <input type="tel" value="0" name="AMOUNTcash" maxlength="3">
+                            <em>Troco?</em>
+                        </div>
+                    </div>`);
+
+                    $('.CASHinpt').animate({ height: 'toggle' }, 300, function(){
+                        document.querySelector('.COMANDAscreen').style.height = `${document.querySelector('.COMANDAscreen').querySelector('.SECTIONinpt[checked]').offsetHeight}px`;
+                    });
+
+                } else {
+                    $('.CASHinpt').animate({ height: 'toggle' }, 300, function(){
+                        this.remove();
+                        document.querySelector('.COMANDAscreen').style.height = `${document.querySelector('.COMANDAscreen').querySelector('.SECTIONinpt[checked]').offsetHeight}px`;
+                    });
+                }
+            });
+
+            const COMANDAmodal = document.querySelector('.COMANDAmodal');
+            $(COMANDAmodal).fadeIn(200, function(){
+                document.querySelector('.COMANDAscreen').style.height = `${document.querySelector('.CONTENTmodal').querySelector('.SECTIONinpt[checked]').offsetHeight}px`;
+            });
+            COMANDAmodal.querySelector('.CONTENTmodal').insertAdjacentHTML('beforebegin', '<div class="SCREENmodal CLOSEmodal" ></div>');
+
+            if(document.body.contains(document.querySelector('.CLOSEmodal'))){
+                document.querySelector('.CLOSEmodal').addEventListener('click', function click(e){
+                    $(COMANDAmodal).fadeOut(200, function() {
+                        this.remove();
+                        // Animation complete
+                      });
+                    this.removeEventListener('click', click);
+                });}
+                
+
+            document.querySelectorAll('.NEXTscrn').forEach(function(data){
+                data.addEventListener('click', function(){
+                    const CONTENTmodal = document.querySelector('.CONTENTmodal');
+                    const COMANDAscreen = document.querySelector('.COMANDAscreen');
+
+                    COMANDAscreen.querySelector('.SECTIONinpt[checked]').removeAttribute('checked');
+                    COMANDAscreen.querySelector(`[js-target="${data.getAttribute('data-for')}"]`).setAttribute('checked', '');
+
+                    COMANDAscreen.style.height = `${COMANDAscreen.querySelector('.SECTIONinpt[checked]').offsetHeight}px`;
+
+                    CONTENTmodal.querySelector('[name="COMMANDradio"][checked]').removeAttribute('checked');
+                    CONTENTmodal.querySelector(`#${data.getAttribute('data-for')}[name="COMMANDradio"]`).setAttribute('checked', '');
+                });
+            });
+
+
+            var TRADEforCash = null;
+            document.querySelector('.WHATSAPPbtn').addEventListener('click', function(){
+                if(document.getElementById('PAYCAHSHmethod').checked || document.getElementById('PAYCREDITmethod').checked){
+                    var commentRequest = document.querySelector('[name="commentRequest"]');
+                    var commentRequest = commentRequest.value != '' ? `\n💬 _Comentário:_ ${commentRequest.value.trim()}` : '';
+
+                    if(document.getElementById('PAYCAHSHmethod').checked && document.getElementById('PAYCREDITmethod').checked){
+                        const AMOUNTcash = document.querySelector('[name="AMOUNTcash"]').value;
+                        var TRADEcash = 'Dinheiro e Cartão';
+                        var TRADEfor = '';
+                        TRADEforCash = AMOUNTcash != 0 ? Number(AMOUNTcash) : null
+                        AMOUNTcash != 0 ? TRADEfor = '\n💰 _Troco para:_ ```' +Number(AMOUNTcash).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })+ '```' : null;
+                    
+                    }
+                    else if(document.getElementById('PAYCAHSHmethod').checked){
+                        const AMOUNTcash = document.querySelector('[name="AMOUNTcash"]').value;
+                        var TRADEcash = 'Dinheiro';
+                        var TRADEfor = '';
+                        TRADEforCash = AMOUNTcash != 0 ? Number(AMOUNTcash) : null
+                        AMOUNTcash != 0 ? TRADEfor = '\n💰 _Troco para:_ ```' +Number(AMOUNTcash).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })+ '```' : null;
+                    }
+                    else if(document.getElementById('PAYCREDITmethod').checked){
+                        var TRADEcash = 'Cartão';
+                        var TRADEfor = '';
+                    }
+
+                    localStorage.clientApp = JSON.stringify({
+                        name: inputClient,
+                        street: inputRoad,
+                        number: inputNumber,
+                        extra: inputExtra,
+                        ddd: inputDdd,
+                        phone: inputPhone
+                    });
+
+                    database.ref('request').push({
+                        client: inputClient,
+                        comment: document.querySelector('[name="commentRequest"]').value,
+                        detail: detailCart,
+                        region: snapshot.val().delivery[INSERTrate.options[INSERTrate.options.selectedIndex].getAttribute('js-key')].zone,
+                        district: `${snapshot.val().delivery[INSERTrate.options[INSERTrate.options.selectedIndex].getAttribute('js-key')].district != '' ? snapshot.val().delivery[INSERTrate.options[INSERTrate.options.selectedIndex].getAttribute('js-key')].district : ''}`,
+                        number: inputNumber,
+                        payment: TRADEcash,
+                        status: "Em espera",
+                        street: inputRoad,
+                        complement: document.querySelector('[name="inputExtra"]').value,
+                        tel: `(${inputDdd}) ${inputPhone}`,
+                        time: new Date().toISOString(),
+                        subvalue: bracael.resumeCart(),
+                        tovalue: bracael.totalCart(snapshot.val().delivery[INSERTrate.options[INSERTrate.options.selectedIndex].getAttribute('js-key')].rate),
+                        delivery: Number(snapshot.val().delivery[INSERTrate.options[INSERTrate.options.selectedIndex].getAttribute('js-key')].rate),
+                        trade: TRADEforCash
+                    })
+
+                    window.open('https://api.whatsapp.com/send?phone=55'+snapshot.val().info.whatsapp.replace(/[^0-9]+/g, '')+'&text='+window.encodeURIComponent('*# DADOS PESSOAIS*\n👤 _Nome:_ ```' +inputClient+ '```\n📞 _Telefone:_ ```(' +inputDdd+ ') ' +inputPhone+ '```\n🌎 _Endereço:_ ```' +inputRoad+ ', ' +inputNumber+`${inputExtra != '' ? ` - ${inputExtra}` : ''}`+ ' - ' +snapshot.val().delivery[INSERTrate.options[INSERTrate.options.selectedIndex].getAttribute('js-key')].zone+`${snapshot.val().delivery[INSERTrate.options[INSERTrate.options.selectedIndex].getAttribute('js-key')].district != '' ? ` - ${snapshot.val().delivery[INSERTrate.options[INSERTrate.options.selectedIndex].getAttribute('js-key')].district}` : ''}`+'```\n\n*# SOBRE O PEDIDO*\n' +comandCart.join('\n')+ '\n\n*# PAGAMENTO*' +commentRequest+ '\n💰 _Forma de pagamento:_ ```' +TRADEcash+ '```' +TRADEfor+ '\n💰 *_Valor a receber:_* ```' +Number(bracael.totalCart(snapshot.val().delivery[INSERTrate.options[INSERTrate.options.selectedIndex].getAttribute('js-key')].rate)).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })+ '```'));
+
+
+                    document.querySelector('.CONTENTmodal').innerHTML = `
+                    <div class="CLASSrequestSucess">
+                        <div class="HEADitemSucess"></div>
+                    <div class="TEXTitemSucess">
+                        <span>Pedido registrado!</span>
+                        <p>Você está sendo redicionado para o WhatsApp, confirme a mensagem pronta para nosso contato. Desde já muito obrigado.</p>
+                    </div>
+                    </div>`;
+
+                    $('.CONTENTmodal').animate({ height: $('.CLASSrequestSucess').outerHeight(true) }, 200);
+                    document.querySelector('.CLOSEmodal').remove();
+                    sessionStorage.removeItem('itemCart');
+
+                    setTimeout(()=>{
+                        window.location.href = '/';
+                    }, 5000)
+
+                }
+                else {
+                    const CONTENTmodal = document.querySelector('.CONTENTmodal');
+                    CONTENTmodal.classList.add('FAILact');
+                    setTimeout(()=>{
+                        CONTENTmodal.classList.remove('FAILact');
+                    }, 400)
+                }
+            });
+
+        }
+        else {
+
+            console.log('ELSE');
+            for(let i = 0; i < document.querySelectorAll('.inputType').length; i++){
+                if(document.querySelectorAll('.inputType')[i].value == ''){
+                    document.querySelectorAll('.inputType')[i].classList.add('inputEmpty')
+                    setTimeout(function(){
+                        document.querySelectorAll('.inputType')[i].classList.remove('inputEmpty')
+                    }, 600)
+                }
+            }
+            
+            if(INSERTrate.options[INSERTrate.options.selectedIndex].value == ''){
+                document.getElementById('SELECTopt').classList.add('inputEmpty')
+                setTimeout(function(){
+                    document.getElementById('SELECTopt').classList.remove('inputEmpty')
+                }, 600)
+            }
+        }
+    }
+    else {
+        alert(`O valor mínimo de entregas é de ${Number(snapshot.val().info.minvalue).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}`)
+    }
+    });
+
+}
+else {
+
+    console.log('ELSE')
+
+    if(snapshot.val().status){
+        document.getElementById('CONFIRMform').innerHTML = `
+        <small>O valor mínimo de entregas é de ${Number(snapshot.val().info.minvalue).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</small>`;
+    }
+    else {
+        document.getElementById('CONFIRMform').innerHTML = `
+        <small>Estamos fechado no momento, volte quando o delivery estiver em aberto.</small>`;
+    }
+
+}
+});}
+else {
+    if(document.body.contains(document.getElementById('CONFIRMform')) ){
+        document.getElementById('CONFIRMform').innerHTML = '<small>Carrinho vazio!</small>'
+    }
+}
+
+
+}
+
+
+
+
+
