@@ -168,7 +168,7 @@ database.ref('business').once('value').then(snapshot=>{
     // bairros para atendimentos
     const district = new Array();
 
-    Object.entries(snapshot.val().district).sort(function (a, b) {
+    Object.entries(snapshot.val().delivery).sort(function (a, b) {
         return (a[1].zone > b[1].zone) ? 1 : ((b[1].zone > a[1].zone) ? -1 : 0);
     }).map(function(data, index, stuff){
         if(stuff[index-1] != undefined){
