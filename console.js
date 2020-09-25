@@ -24,7 +24,7 @@ document.body.innerHTML = `
         <footer>
             <span>© COPYRIGTH 2020<br/>Bracael – Todos os direitos reservados.</span>
             <span>Painel administrativo para parceiros.</span>
-            <span>Last time updated September 21, 2020</span>
+            <span>Last time updated May 9, 2020</span>
         </footer>
     </ul>
 </aside>
@@ -506,8 +506,8 @@ if(main === 'index'){
                             <label for="FORitemRetirada">Em retirada</label>
                         </div>
                         <div>
-                            <input type="radio" id="FORitemComplet" name="radioStatus" value="Completo"${result.order[JSwinStatus].status != 'Completo' ? '' : ' checked'}>
-                            <label for="FORitemComplet">Completo</label>
+                            <input type="radio" id="FORitemComplet" name="radioStatus" value="Entregue"${result.order[JSwinStatus].status != 'Entregue' ? '' : ' checked'}>
+                            <label for="FORitemComplet">Entregue</label>
                         </div>
                     </div>
                     <div class="MODALelemFooter">
@@ -1965,22 +1965,15 @@ else if(main === 'settings'){
 
         document.querySelectorAll('[name="SAVEitemDistrict"]').forEach(function(data){
             data.addEventListener('click', function(){
-                const FIXEDitemObj = {};
-                const FIXEDitemArray = new Array();
+                const FIXEDitemObj = new Object();
                 document.querySelector('.CLASSitemDistrict.FIXEDitem').querySelectorAll('input').forEach(function(item){
-
-                    console.log(item)
-
-                    item.value != '' ? FIXEDitemArray.push(true) : FIXEDitemArray.push(false);
                     item.getAttribute('js-key') === 'rate' ? FIXEDitemObj[item.getAttribute('js-key')] = Number(item.value.replace(/\./g,'').replace(/\,/g,'.')) : FIXEDitemObj[item.getAttribute('js-key')] = item.value;
                 })
 
-                console.log(FIXEDitemObj)
-
-                if(FIXEDitemArray.every(elem => elem === true)){
+                if(FIXEDitemObj.rate != 0 && FIXEDitemObj.zone != ''){
                     database.ref('business/delivery').push(FIXEDitemObj).then(()=>{
                         window.location.href = '?main=settings';
-                    })
+                    });
                 }
                 else {
                     bracael.pushNotify('Há algo de errado!');
