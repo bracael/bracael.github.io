@@ -270,6 +270,22 @@ window.onload = function(){
     bracael.focusOutInput()
     }
 
+    $('a[data-scroll="about"]').click(function() {
+        $("html, body").animate({ scrollTop: $(".SECTIONWhatsIs").offset().top-120 }, "slow");
+        return false;
+     });
+
+    $('a[data-scroll="ask"]').click(function() {
+        $("html, body").animate({ scrollTop: $(".SECTIONQuestions").offset().top-70 }, "slow");
+        return false;
+     });
+
+     $('a[data-scroll="buy"]').click(function() {
+        $("html, body").animate({ scrollTop: $(".SECTIONCompraOnline").offset().top+20 }, "slow");
+        return false;
+     });
+
+
     if(document.querySelector('.CLASSitemAsk')){
         document.querySelectorAll('.CLASSitemAsk').forEach(function(data){
         data.querySelector('BUTTON').addEventListener('click', function(){
