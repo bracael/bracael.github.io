@@ -843,8 +843,9 @@ FOOTER .METHODicons I.CROSSicon IMG, .PAYMENTform .METHODicons I.CROSSicon IMG {
     z-index: 1;
 }
 .STEPbox ul.steps li A {
-    display: block;
+    display: flex;
     padding-left: 18px;
+    align-items: center;
 }
 .STEPbox ul.steps li A span.rounded {
     color: #fff;
@@ -1025,6 +1026,7 @@ FOOTER .METHODicons I.CROSSicon IMG, .PAYMENTform .METHODicons I.CROSSicon IMG {
     width: 100%;
     max-width: 130px;
     margin-right: 18px;
+    display: flex;
 }
 .CREDITcardPayment P select {
     width: 100%;
@@ -1638,7 +1640,81 @@ SECTION.SECTIONQuestions .CLASSitemAsk BUTTON I.CROSSicon::after {
 
 
 @media screen and (max-width: 920px) {
-    HEADER .CLASSelemHeader {
+
+    .STEPbox.FULLstep li.step-item:last-child {
+        display: flex;
+        justify-content: center;
+    }
+    .STEPbox:not(.CROSSstep) li.step-item:nth-child(2) span.rounded, .STEPbox.CROSSstep li.step-item:nth-child(3) span.rounded {
+        box-shadow: 0 0 0 2px rgba(99, 155, 208, 0.3), 0 0 0 4px rgba(99, 155, 208, 0.15);
+    }
+    .STEPbox.FULLstep li.step-item:not(:last-child) {
+        display: none;
+    }
+    .STEPbox.FULLstep li.step-item A {
+        display: inline-flex;
+        padding: initial;
+    }
+
+    .Blog .PAYMENTbox {
+        max-width: initial;
+    }
+    .PAYMENTbox .PAYMENTTinst {
+        display: flex;
+    }
+    .PAYMENTbox .PAYMENTtitle {
+        display: none;
+    }
+    .PAYMENTbox .PAYMENTTinst .PAYMENTval {
+        max-width: 33%;
+    }
+    .PAYMENTbox .PAYMENTTinst > DIV {
+        width: 100%;
+    }
+    .PAYMENTbox .PAYMENTTinst .PAYMENTval {
+        max-width: 33%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .STEPbox {
+        background: initial;
+        border-radius: initial;
+        box-shadow: initial;
+        margin: initial;
+    }
+    .STEPbox ul.steps I.CROSSstep {
+        display: none;
+    }
+    .STEPbox ul.steps li:nth-child(4) {
+        display: none;
+    }
+    .STEPbox ul.steps li A span.step-text {
+        font-size: 1.4rem;
+    }
+    .STEPbox ul.steps li A span.rounded {
+        width: 32px;
+        height: 32px;
+        line-height: 32px;
+        font-size: 1.6rem;
+    }
+
+
+    .PAYMENTmethod .CARDwrapper {
+        display: none;
+    }
+    .Blog .CREDITcardPayment .METHODpay {
+        min-width: initial;
+    }
+    .CREDITcardPayment {
+        max-width: initial;
+        min-width: initial;
+    }
+    .CHECKOUTitemContent {
+        flex-direction: column-reverse;
+    }
+    HEADER .CLASSelemHeader, .HEADERbody {
         display: flex;
         padding: 0 1.6rem;
         justify-content: space-between;
