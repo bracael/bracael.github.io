@@ -1637,7 +1637,7 @@ SECTION.SECTIONQuestions .CLASSitemAsk BUTTON I.CROSSicon::after {
 
 
 
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 920px) {
     HEADER .CLASSelemHeader {
         display: flex;
         padding: 0 1.6rem;
