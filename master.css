@@ -354,7 +354,7 @@ SECTION .CLASScontentTitle {
     background: linear-gradient(45deg, rgba(5, 30, 52, 0.8) 0%, transparent 94%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#051e34cc', endColorstr='#00000000',GradientType=1 );
 }
-.CLASSitemArticle .ITEMaboutBox H4, .CLASSitemArticle .ITEMaboutBox P {
+.CLASSitemArticle .ITEMaboutBox H4, .CLASSitemArticle .ITEMaboutBox H5 {
     width: 90%;
     text-align: center;
 }
@@ -364,8 +364,9 @@ SECTION .CLASScontentTitle {
     margin-bottom: 1rem;
     font-weight: 500;
 }
-.CLASSitemArticle .ITEMaboutBox P {
+.CLASSitemArticle .ITEMaboutBox H5 {
     font-weight: 300;
+    font-size: 1.6rem;
 }
 .CLASSitemArticle .ITEMaboutBox .CLASSitemLine {
     display: block;
