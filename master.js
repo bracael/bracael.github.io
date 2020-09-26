@@ -52,7 +52,7 @@ window.onload = function(){
 
 
     (function(win, doc){
-        win.Mercadopago.setPublishableKey("TEST-5946973a-eb86-4cac-97f5-84ef934ed996");
+        win.Mercadopago.setPublishableKey("APP_USR-b202ae7d-c352-4526-ab29-5ca6bc441ead");
         win.Mercadopago.getIdentificationTypes();
 
         doc.querySelector('#cardNumber') ?
