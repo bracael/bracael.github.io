@@ -315,7 +315,7 @@ SECTION .CLASScontentTitle SVG {
 .CONTENTframe .ITEMaboutBox SVG {
     width: 72px;
 }
-.CONTENTframe H3, SECTION.SECTIONQuestions H4.CLASSh4Question {
+.CONTENTframe SPAN, SECTION.SECTIONQuestions SPAN {
     text-align: center;
     font-size: 2.7rem;
     line-height: 1em;
@@ -563,7 +563,7 @@ SECTION.SECTIONQuestions .CLASSitemAsk P {
     font-weight: 100;
     line-height: 1.8;
 }
-SECTION.SECTIONQuestions H4.CLASSh4Question {
+SECTION.SECTIONQuestions SPAN {
     font-size: 2.3rem;
 }
 
