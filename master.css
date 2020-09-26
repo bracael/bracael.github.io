@@ -23,6 +23,21 @@
 
 
 
+body {
+    overflow: overlay;
+}
+::-webkit-scrollbar {
+    width: 6px!important;
+    height: 6px!important;
+}
+::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
+}
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
 body,
 input,
 button,
@@ -1616,4 +1631,91 @@ SECTION.SECTIONQuestions .CLASSitemAsk BUTTON I.CROSSicon::after {
 }
 .PAYMENTmethod I.CROSSicon.SUCCESicon::after {
     background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA3OC4zNjkgNzguMzY5IiBmaWxsPSIjZmZmIj48cGF0aCBkPSJNNzguMDQ5LDE5LjAxNUwyOS40NTgsNjcuNjA2Yy0wLjQyOCwwLjQyOC0xLjEyMSwwLjQyOC0xLjU0OCwwTDAuMzIsNDAuMDE1Yy0wLjQyNy0wLjQyNi0wLjQyNy0xLjExOSwwLTEuNTQ3bDYuNzA0LTYuNzA0IGMwLjQyOC0wLjQyNywxLjEyMS0wLjQyNywxLjU0OCwwbDIwLjExMywyMC4xMTJsNDEuMTEzLTQxLjExM2MwLjQyOS0wLjQyNywxLjEyLTAuNDI3LDEuNTQ4LDBsNi43MDMsNi43MDQgQzc4LjQ3NywxNy44OTQsNzguNDc3LDE4LjU4Niw3OC4wNDksMTkuMDE1eiIvPjwvc3ZnPg==")
+}
+
+
+
+
+
+@media screen and (max-width: 420px) {
+    HEADER .CLASSelemHeader {
+        display: flex;
+        padding: 0 1.6rem;
+        justify-content: space-between;
+    }
+    HEADER .CLASSelemHeader NAV {
+        display: none;
+    }
+
+    .MAINwrapMaster .CLASSitemLeft {
+        margin-bottom: 7.6rem;
+    }
+    .MAINwrapMaster .SLIDEitemAds {
+        max-width: 366px;
+    }
+    .MAINwrapMaster .SLIDEitemAds::before, .MAINwrapMaster .SLIDEitemAds::after {
+        content: none;
+    }
+    .SLIDEitemAds li.item {
+        margin: 0;
+    }
+    .owl-carousel .owl-item img {
+        border-radius: initial;
+    }
+
+    .MAINwrapMaster > DIV {
+        flex-direction: column;
+    }
+
+    SECTION.SECTIONWhatsIs > DIV > DIV {
+        flex-direction: column;
+        border-radius: initial;
+    }
+    SECTION.SECTIONCompraOnline .CLASSWarranty {
+        border-radius: initial;
+    }
+
+    SECTION.SECTIONCompraOnline > DIV {
+        flex-direction: column;
+        grid-gap: 0;
+    }
+
+    .CLASSitemArticle {
+        flex-direction: column;
+    }
+    .CLASSitemArticle .ITEMaboutBox, SECTION .CLASScontentTitle {
+        max-width: 300px;
+    }
+
+    FOOTER > DIV {
+        grid-template-columns: 1fr;
+    }
+    FOOTER > DIV > DIV {
+        display: block;
+    }
+
+    FOOTER .CLASSfooterLeft {
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+    FOOTER .FOOTERitemRight {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    FOOTER .METHODicons {
+        text-align: center;
+        display: block;
+    }
+    FOOTER .FOOTERitemRight > DIV {
+        text-align: center;
+    }
+
+    FOOTER .METHODicons I.CROSSicon:not(:last-child) {
+        margin-right: 1rem;
+    }
+    FOOTER .METHODicons I.CROSSicon {
+        display: inline-block;
+        float: left;
+    }
 }
