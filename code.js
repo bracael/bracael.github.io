@@ -15,7 +15,7 @@ await fetch(firebaseConfig.databaseURL+'/.json')
     const servings = new Array();
     const promo = new Array();
     const combo = new Array();
-    Object.entries(result.feed).map(function(elem,ind,obj){
+    Object.entries(result.feed).map(function(elem){
 
         const buttonsCart = elem[1].category.includes('Unavailable') ? '<div class="SPINNERmax"><span class="OFSTOCKitem">Indisponível</span></div>' :
         `<div class="SPINNERmax" id="INCREMENTdiv">
@@ -1352,8 +1352,3 @@ else {
 
 
 }
-
-
-
-
-
