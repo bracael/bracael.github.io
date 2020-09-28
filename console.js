@@ -94,6 +94,7 @@ if(main === 'index'){
         const DETAILres = new Array();
         data[1].detail.map(function(item){
 
+            console.log(item)
             const extraItem = new Array();
 
             item.extra != undefined ?
@@ -107,7 +108,44 @@ if(main === 'index'){
             DETAILres.push(`
             <div>
                 <div>
-                    <span>${item.amount}un</span><span>${item.title}</span><span>${Number(item.price).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</span>
+                    <span>${item.amount}un</span><span><p>${item.title}</p><p>${item.weight === undefined ? item.grams >= 1000 ? (function(){
+
+                        var countGrams = 0;
+                        var atual = item.grams
+                        function decrementAgain(){
+                            countGrams = ++countGrams;
+                            atual = atual - 1000
+                            atual >= 1000 ? decrementAgain() : null;
+                        }
+    
+                        atual >= 1000 ? decrementAgain() : null
+    
+                        if(atual != 0){
+                            return `${Number(countGrams+'.'+atual).toFixed(1).replace('.',',')}kg`;
+                        }
+                        else {
+                            return `${countGrams}kg`;
+                        }
+                    })() : item.grams != 0 ? `${item.grams}g` : '' : item.weight >= 1000 ? (function(){
+    
+                        var countGrams = 0;
+                        var atual = item.weight
+    
+                        function decrementAgain(){
+                            countGrams = ++countGrams;
+                            atual = atual - 1000
+                            atual >= 1000 ? decrementAgain() : null;
+                        }
+    
+                        atual >= 1000 ? decrementAgain() : null
+    
+                        if(atual != 0){
+                            return `${Number(countGrams+'.'+atual).toFixed(1).replace('.',',')}L`;
+                        }
+                        else {
+                            return `${countGrams}L`;
+                        }
+                    })() : `${item.weight}ml`}</p></span><span>${Number(item.price).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</span>
                 </div>
                 ${item.extra != undefined ? extraItem.join('\n') : ''}
                 ${item.comment != undefined ? `
@@ -320,6 +358,8 @@ if(main === 'index'){
             const CARDitemWait = document.querySelectorAll('.CARDitemWait')[JSwinAtt];
             const JSwinStatus = document.querySelectorAll('.CARDitemWait')[JSwinAtt].getAttribute('data-id');
 
+                
+            console.log(result.order[JSwinStatus])
 
             const orderCart = new Array();
             result.order[JSwinStatus].detail.map(function(item, i){
@@ -343,15 +383,50 @@ if(main === 'index'){
                     <li>
                         <span>${new Array(3 + 1 - (i + '').length).join('0') + ++i}</span>
                         <span>${item.id}</span>
-                        <span>${item.title}</span>
+                        <span><p>${item.title}</p><p>${item.weight === undefined ? item.grams >= 1000 ? (function(){
+
+                            var countGrams = 0;
+                            var atual = item.grams
+                            function decrementAgain(){
+                                countGrams = ++countGrams;
+                                atual = atual - 1000
+                                atual >= 1000 ? decrementAgain() : null;
+                            }
+        
+                            atual >= 1000 ? decrementAgain() : null
+        
+                            if(atual != 0){
+                                return `${Number(countGrams+'.'+atual).toFixed(1).replace('.',',')}kg`;
+                            }
+                            else {
+                                return `${countGrams}kg`;
+                            }
+                        })() : item.grams != 0 ? `${item.grams}g` : '' : item.weight >= 1000 ? (function(){
+        
+                            var countGrams = 0;
+                            var atual = item.weight
+        
+                            function decrementAgain(){
+                                countGrams = ++countGrams;
+                                atual = atual - 1000
+                                atual >= 1000 ? decrementAgain() : null;
+                            }
+        
+                            atual >= 1000 ? decrementAgain() : null
+        
+                            if(atual != 0){
+                                return `${Number(countGrams+'.'+atual).toFixed(1).replace('.',',')}L`;
+                            }
+                            else {
+                                return `${countGrams}L`;
+                            }
+                        })() : `${item.weight}ml`}</p></span>
                         <span>${item.amount}un</span>
                         <span>${Number(item.price * item.amount).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</span>
                     </li>
                     ${extraItem.length != 0 ? extraItem.join('\n') : ''}
                 `);
             });
-                
-            // console.log(orderCart)
 
             document.body.insertAdjacentHTML('beforeend', `
             <div class="MODALdefault WINDOWmodalComanda">
@@ -644,6 +719,8 @@ if(main === 'index'){
             if(!array.includes(data[0])){
                 const DETAILres = new Array();
                 data[1].detail.map(function(item){
+
+                    console.log(item)
                     const extraItem = new Array();
 
                     item.extra != undefined ?
@@ -657,7 +734,44 @@ if(main === 'index'){
                     DETAILres.push(`
                     <div>
                         <div>
-                            <span>${item.amount}un</span><span>${item.title}</span><span>${Number(item.price).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</span>
+                            <span>${item.amount}un</span><span><p>${item.title}</p><p>${item.weight === undefined ? item.grams >= 1000 ? (function(){
+
+                                var countGrams = 0;
+                                var atual = item.grams
+                                function decrementAgain(){
+                                    countGrams = ++countGrams;
+                                    atual = atual - 1000
+                                    atual >= 1000 ? decrementAgain() : null;
+                                }
+            
+                                atual >= 1000 ? decrementAgain() : null
+            
+                                if(atual != 0){
+                                    return `${Number(countGrams+'.'+atual).toFixed(1).replace('.',',')}kg`;
+                                }
+                                else {
+                                    return `${countGrams}kg`;
+                                }
+                            })() : item.grams != 0 ? `${item.grams}g` : '' : item.weight >= 1000 ? (function(){
+            
+                                var countGrams = 0;
+                                var atual = item.weight
+            
+                                function decrementAgain(){
+                                    countGrams = ++countGrams;
+                                    atual = atual - 1000
+                                    atual >= 1000 ? decrementAgain() : null;
+                                }
+            
+                                atual >= 1000 ? decrementAgain() : null
+            
+                                if(atual != 0){
+                                    return `${Number(countGrams+'.'+atual).toFixed(1).replace('.',',')}L`;
+                                }
+                                else {
+                                    return `${countGrams}L`;
+                                }
+                            })() : `${item.weight}ml`}</p></span><span>${Number(item.price).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</span>
                         </div>
                         ${item.extra != undefined ? extraItem.join('\n') : ''}
                         ${item.comment != undefined ? `
@@ -1213,12 +1327,12 @@ else if(main === 'item'){
         ifValidateFunction(itemObject.thumb != '')
         ifValidateFunction(document.body.contains(document.querySelector('.SPANelemSucess')))
         ifValidateFunction(feed[edit].category.includes('Promo') ? CATEGORYarrItem.filter(item => item !== 'Promo').length != 0 : true)
-        ifValidateFunction(feed[edit].category.includes('Drinks') ? itemObject.weight != 0 : itemObject.grams != 0)
+        ifValidateFunction(feed[edit].category.includes('Drinks') ? itemObject.weight != 0 : typeof itemObject.grams === 'number')
 
         if(ifValidate.every(elem => elem === true)){
-            database.ref(`feed/${edit}`).update(itemObject).then(()=>{
-                window.location.href = '?main=products'
-            });
+            // database.ref(`feed/${edit}`).update(itemObject).then(()=>{
+            //     window.location.href = '?main=products'
+            // });
             console.log('Sucesso!')
         }
         else {
@@ -1375,12 +1489,21 @@ else if(main === 'creatPost'){
                 "title": "${document.querySelector('[name="FORMinputTitle"]').value.trim()}"
             }`);
 
-            if(itemObject.category.length != 0 &&
-            itemObject.price != 0 &&
-            itemObject.title != '' &&
-            (itemObject.thumb != '' &&
-            document.body.contains(document.querySelector('.SPANelemSucess'))) &&
-            postCategory != 'Promo' ? true : CATEGORYarrItem.length != 0){
+            const ifValidate = new Array();
+            function ifValidateFunction(data){
+                ifValidate.push(data)
+            }
+
+            ifValidateFunction(itemObject.category.length != 0)
+            ifValidateFunction(itemObject.price != 0)
+            ifValidateFunction(itemObject.title != '')
+            ifValidateFunction(itemObject.thumb != '')
+            ifValidateFunction(document.body.contains(document.querySelector('.SPANelemSucess')))
+            ifValidateFunction(postCategory != 'Drinks' && postCategory != 'Dessert' ? itemObject.description != '' : true)
+            ifValidateFunction(postCategory != 'Promo' ? true : CATEGORYarrItem.length != 0)
+            ifValidateFunction(postCategory != 'Drinks' ? typeof itemObject.grams === 'number' : itemObject.weight != 0)
+
+            if(ifValidate.every(elem => elem === true)){
                 database.ref(`feed/${parseInt(Math.random()*1000000000, 10)}`).set(itemObject).then(()=>{
                     window.location.href = '?main=products'
                 });
