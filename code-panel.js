@@ -195,7 +195,44 @@ const bracael = {
         if(childCart[i].getAttribute('data-id') == product){
             childCart[i].querySelector('.POSTrt').innerHTML = `<span>${Number(Number(elem.price * elem.amount) + Number(reduceInc[0] != undefined ? reduceInc[0] : 0)).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}<small>${elem.amount}</small>${optionCart}</span>
             <span>${elem.title}</span>
-            <span>${elem.about}</span>`;
+            <span>${elem.weight === undefined ? elem.grams >= 1000 ? (function(){
+
+                var countGrams = 0;
+                var atual = elem.grams
+                function decrementAgain(){
+                    countGrams = ++countGrams;
+                    atual = atual - 1000
+                    atual >= 1000 ? decrementAgain() : null;
+                }
+    
+                atual >= 1000 ? decrementAgain() : null
+    
+                if(atual != 0){
+                    return `${Number(countGrams+'.'+atual).toFixed(1).replace('.',',')}kg`;
+                }
+                else {
+                    return countGrams != 1 ? `${countGrams} QUILOS` : `${countGrams} QUILO`;
+                }
+            })() : elem.grams != 0 ? `${elem.grams}g` : 'Peso não informado' : elem.weight >= 1000 ? (function(){
+        
+                var countGrams = 0;
+                var atual = elem.weight
+    
+                function decrementAgain(){
+                    countGrams = ++countGrams;
+                    atual = atual - 1000
+                    atual >= 1000 ? decrementAgain() : null;
+                }
+    
+                atual >= 1000 ? decrementAgain() : null
+    
+                if(atual != 0){
+                    return `${Number(countGrams+'.'+atual).toFixed(1).replace('.',',')}L`;
+                }
+                else {
+                    return countGrams != 1 ? `${countGrams} LITROS` : `${countGrams} LITRO`;
+                }
+            })() : `${elem.weight}ml`}</span>`;
         }}
     }
     }, // function incrementCart
@@ -222,7 +259,44 @@ const bracael = {
                     if(childCart[i].getAttribute('data-id') == product){
                         childCart[i].querySelector('.POSTrt').innerHTML = `<span>${Number(Number(elem.price * elem.amount) + Number(reduceInc[0] != undefined ? reduceInc[0] : 0)).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}<small>${elem.amount}</small>${optionCart}</span>
                         <span>${elem.title}</span>
-                        <span>${elem.about}</span>`;
+                        <span>${elem.weight === undefined ? elem.grams >= 1000 ? (function(){
+
+                            var countGrams = 0;
+                            var atual = elem.grams
+                            function decrementAgain(){
+                                countGrams = ++countGrams;
+                                atual = atual - 1000
+                                atual >= 1000 ? decrementAgain() : null;
+                            }
+                
+                            atual >= 1000 ? decrementAgain() : null
+                
+                            if(atual != 0){
+                                return `${Number(countGrams+'.'+atual).toFixed(1).replace('.',',')}kg`;
+                            }
+                            else {
+                                return countGrams != 1 ? `${countGrams} QUILOS` : `${countGrams} QUILO`;
+                            }
+                        })() : elem.grams != 0 ? `${elem.grams}g` : 'Peso não informado' : elem.weight >= 1000 ? (function(){
+                    
+                            var countGrams = 0;
+                            var atual = elem.weight
+                
+                            function decrementAgain(){
+                                countGrams = ++countGrams;
+                                atual = atual - 1000
+                                atual >= 1000 ? decrementAgain() : null;
+                            }
+                
+                            atual >= 1000 ? decrementAgain() : null
+                
+                            if(atual != 0){
+                                return `${Number(countGrams+'.'+atual).toFixed(1).replace('.',',')}L`;
+                            }
+                            else {
+                                return countGrams != 1 ? `${countGrams} LITROS` : `${countGrams} LITRO`;
+                            }
+                        })() : `${elem.weight}ml`}</span>`;
                     }}
                 }
                 else {
@@ -230,7 +304,44 @@ const bracael = {
                 if(childCart[i].getAttribute('data-id') == product){
                     childCart[i].querySelector('.POSTrt').innerHTML = `<span>${Number(Number(elem.price * elem.amount) + Number(reduceInc[0] != undefined ? reduceInc[0] : 0)).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}${optionCart}</span>
                     <span>${elem.title}</span>
-                    <span>${elem.about}</span>`;
+                    <span>${elem.weight === undefined ? elem.grams >= 1000 ? (function(){
+
+                        var countGrams = 0;
+                        var atual = elem.grams
+                        function decrementAgain(){
+                            countGrams = ++countGrams;
+                            atual = atual - 1000
+                            atual >= 1000 ? decrementAgain() : null;
+                        }
+            
+                        atual >= 1000 ? decrementAgain() : null
+            
+                        if(atual != 0){
+                            return `${Number(countGrams+'.'+atual).toFixed(1).replace('.',',')}kg`;
+                        }
+                        else {
+                            return countGrams != 1 ? `${countGrams} QUILOS` : `${countGrams} QUILO`;
+                        }
+                    })() : elem.grams != 0 ? `${elem.grams}g` : 'Peso não informado' : elem.weight >= 1000 ? (function(){
+                
+                        var countGrams = 0;
+                        var atual = elem.weight
+            
+                        function decrementAgain(){
+                            countGrams = ++countGrams;
+                            atual = atual - 1000
+                            atual >= 1000 ? decrementAgain() : null;
+                        }
+            
+                        atual >= 1000 ? decrementAgain() : null
+            
+                        if(atual != 0){
+                            return `${Number(countGrams+'.'+atual).toFixed(1).replace('.',',')}L`;
+                        }
+                        else {
+                            return countGrams != 1 ? `${countGrams} LITROS` : `${countGrams} LITRO`;
+                        }
+                    })() : `${elem.weight}ml`}</span>`;
                 }}
                 }
             }
@@ -256,7 +367,7 @@ const bracael = {
             "title":"${itemCart[ind].title}",
             "price": ${itemCart[ind].price},
             "thumb":"${itemCart[ind].thumb}",
-            "about":"${itemCart[ind].about}",
+            ${itemCart[ind].weight != undefined ? `"weight": ${itemCart[ind].weight}` : `"grams": ${itemCart[ind].grams}`},
             "extra":${JSON.stringify(itemCart[ind].extra)},
             "comment": ${itemCart[ind].comment != null ? `"${itemCart[ind].comment}"` : null},
             "amount": ${val}
@@ -336,7 +447,44 @@ const bracael = {
 
         document.querySelector(`.CARTbox[data-id="${product}"]`).querySelector('.POSTrt').innerHTML = `<span>${val.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}${optionCart}</span>
         <span>${elem.title}</span>
-        <span>${elem.about}</span>`;
+        <span>${elem.weight === undefined ? elem.grams >= 1000 ? (function(){
+
+            var countGrams = 0;
+            var atual = elem.grams
+            function decrementAgain(){
+                countGrams = ++countGrams;
+                atual = atual - 1000
+                atual >= 1000 ? decrementAgain() : null;
+            }
+
+            atual >= 1000 ? decrementAgain() : null
+
+            if(atual != 0){
+                return `${Number(countGrams+'.'+atual).toFixed(1).replace('.',',')}kg`;
+            }
+            else {
+                return countGrams != 1 ? `${countGrams} QUILOS` : `${countGrams} QUILO`;
+            }
+        })() : elem.grams != 0 ? `${elem.grams}g` : 'Peso não informado' : elem.weight >= 1000 ? (function(){
+    
+            var countGrams = 0;
+            var atual = elem.weight
+
+            function decrementAgain(){
+                countGrams = ++countGrams;
+                atual = atual - 1000
+                atual >= 1000 ? decrementAgain() : null;
+            }
+
+            atual >= 1000 ? decrementAgain() : null
+
+            if(atual != 0){
+                return `${Number(countGrams+'.'+atual).toFixed(1).replace('.',',')}L`;
+            }
+            else {
+                return countGrams != 1 ? `${countGrams} LITROS` : `${countGrams} LITRO`;
+            }
+        })() : `${elem.weight}ml`}</span>`;
     }, // function refreshItemAside
     refreshCommentAside: function(data){
         const elem = JSON.parse(sessionStorage.itemCart)[data];
