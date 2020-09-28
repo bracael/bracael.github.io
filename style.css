@@ -874,6 +874,10 @@ ARTICLE .ITEMinCommerce .OPTIONSbtn button[name="removeUnavailable"]::after {
     grid-template-rows: 1fr;
     grid-gap: 1.6rem;
 }
+.MODALdefault.WINDOWmodalComanda .CONTENTmodal .COMMANDlist LI SPAN {
+    display: flex;
+    grid-gap: 0.5rem;
+}
 .MODALdefault.WINDOWmodalComanda .CONTENTmodal > STRONG SPAN:last-child, .MODALdefault.WINDOWmodalComanda .CONTENTmodal .COMMANDlist LI SPAN:last-child {
     text-align: right;
 }
@@ -1525,6 +1529,13 @@ div#DASHBOARDit > DIV > DIV > P {
     display: grid;
     grid-template-columns: minmax(36px, 0fr) 1fr 0fr;
     grid-template-rows: max-content;
+}
+.CARDitemData .BASEinfoRequest .COMANDAitemData > DIV > DIV SPAN {
+    display: flex;
+    grid-gap: 0.5rem;
+}
+.CARDitemData .BASEinfoRequest .COMANDAitemData > DIV > DIV SPAN P, .MODALdefault.WINDOWmodalComanda .CONTENTmodal .COMMANDlist LI SPAN P {
+    width: max-content;
 }
 .CARDitemData .BASEinfoRequest .COMANDAitemData > P {
     background: darkgrey;
