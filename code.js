@@ -107,7 +107,7 @@ await fetch(firebaseConfig.databaseURL+'/.json')
         ${promo.join('\n')}
     </div>
     <div class="MESSAGEandes">
-        <p>Promoção disponível aos ${bracael.case.dotw[numberday]} por tempo indeterminado.</p>
+        <p>Promoção disponível ${numberday != 0 && numberday != 6 ? 'as' : `aos`} ${bracael.case.dotw[numberday].toLowerCase()}${numberday != 0 && numberday != 6 ? 's-feiras' : ''} por tempo indeterminado.</p>
     </div>` :
     `<small>Hoje não é dia de promoção.</small>`;
 
@@ -328,7 +328,44 @@ if(sessionStorage.itemCart != undefined){
         <section class="POSTrt">
             <span>${Number((elem[1].price * elem[1].amount) + total).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }) + amountCart + optionCart}</span>
             <span>${elem[1].title}</span>
-            <span>${elem[1].about}</span>
+            <span>${elem[1].weight === undefined ? elem[1].grams >= 1000 ? (function(){
+
+                var countGrams = 0;
+                var atual = elem[1].grams
+                function decrementAgain(){
+                    countGrams = ++countGrams;
+                    atual = atual - 1000
+                    atual >= 1000 ? decrementAgain() : null;
+                }
+
+                atual >= 1000 ? decrementAgain() : null
+
+                if(atual != 0){
+                    return `${Number(countGrams+'.'+atual).toFixed(1).replace('.',',')}kg`;
+                }
+                else {
+                    return countGrams != 1 ? `${countGrams} QUILOS` : `${countGrams} QUILO`;
+                }
+            })() : elem[1].grams != 0 ? `${elem[1].grams}g` : 'Peso não informado' : elem[1].weight >= 1000 ? (function(){
+
+                var countGrams = 0;
+                var atual = elem[1].weight
+
+                function decrementAgain(){
+                    countGrams = ++countGrams;
+                    atual = atual - 1000
+                    atual >= 1000 ? decrementAgain() : null;
+                }
+
+                atual >= 1000 ? decrementAgain() : null
+
+                if(atual != 0){
+                    return `${Number(countGrams+'.'+atual).toFixed(1).replace('.',',')}L`;
+                }
+                else {
+                    return countGrams != 1 ? `${countGrams} LITROS` : `${countGrams} LITRO`;
+                }
+            })() : `${elem[1].weight}ml`}</span>
         </section>
         </div>
         `);
@@ -346,7 +383,7 @@ if(sessionStorage.itemCart != undefined){
         ITEMcart.innerHTML = `<div class="ORDERitem CARTopen">
         <div class="OPENCARTinst">
         <h3>Todos os seus pedidos</h3>
-        <div class="TOTALcart"><strong>subtotal á pagar</strong><p>${Number(totalCart.reduce((acumulador, valorAtual) => acumulador + valorAtual)).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }).replace('R$', '<span>R$</span>')}</p></div>
+        <div class="TOTALcart"><strong>subtotal a pagar</strong><p>${Number(totalCart.reduce((acumulador, valorAtual) => acumulador + valorAtual)).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }).replace('R$', '<span>R$</span>')}</p></div>
         <div class="ITENScart">
         <div class="ITENSinst" id="CARTmap">
             ${boxCart.join('')}
@@ -418,48 +455,9 @@ document.querySelectorAll('.GETTINGit').forEach(card=>{
 
         const SETitem = JSON.parse(`{"${this.getAttribute('for')}":{
             "title":"${result.val().title}",
-            "price": ${result.val().price},
+            "price": ${Number(result.val().price).toFixed(2)},
             "thumb":"${result.val().thumb}",
-            "about":"${!result.val().category.includes('Drinks') ? result.val().grams >= 1000 ? (function(){
-
-                var countGrams = 0;
-                var atual = result.val().grams
-                function decrementAgain(){
-                    countGrams = ++countGrams;
-                    atual = atual - 1000
-                    atual >= 1000 ? decrementAgain() : null;
-                }
-
-                atual >= 1000 ? decrementAgain() : null
-
-                if(atual != 0){
-                    return `${Number(countGrams+'.'+atual).toFixed(1).replace('.',',')}kg`;
-                }
-                else {
-                    return countGrams != 1 ? `${countGrams} QUILOS` : `${countGrams} QUILO`;
-                }
-            })() : result.val().grams != 0 ? `${result.val().grams}g` : 'Peso não informado' : result.val().weight >= 1000 ? (function(){
-
-                var countGrams = 0;
-                var atual = result.val().weight
-
-                function decrementAgain(){
-                    countGrams = ++countGrams;
-                    atual = atual - 1000
-                    atual >= 1000 ? decrementAgain() : null;
-                }
-
-                atual >= 1000 ? decrementAgain() : null
-
-                if(atual != 0){
-                    return `${Number(countGrams+'.'+atual).toFixed(1).replace('.',',')}L`;
-                }
-                else {
-
-                    return countGrams != 1 ? `${countGrams} LITROS` : `${countGrams} LITRO`;
-
-                }
-            })() : `${result.val().weight}ml`}",
+            ${!result.val().category.includes('Drinks') ? `"grams": ${result.val().grams != '' ? result.val().grams : 0},` : `"weight": ${result.val().weight},`}
             "extra": ${result.val().extra != undefined ? `[${JSON.stringify(result.val().extra)},${JSON.stringify(dataNumber)}]` : '[[],[]]'},
             "comment": null,
             "amount": 1
@@ -475,11 +473,14 @@ document.querySelectorAll('.GETTINGit').forEach(card=>{
             // PRIMEIRA AÇÃO NO PRODUTO --- REAL
             sessionStorage.itemCart = JSON.stringify(SETitem);
 
+
+            console.log(result.val())
+
             // ITENS EXISTE ASIDE__ITEM_CART
             document.querySelector('ASIDE#ITEMcart').innerHTML = `    <div class="ORDERitem CARTopen">
     <div class="OPENCARTinst">
         <h3>Todos os seus pedidos</h3>
-        <div class="TOTALcart"><strong>subtotal á pagar</strong><p>${Number(result.val().price).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }).replace('R$', '<span>R$</span>')}</p></div>
+        <div class="TOTALcart"><strong>subtotal a pagar</strong><p>${Number(result.val().price).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }).replace('R$', '<span>R$</span>')}</p></div>
         <div class="ITENScart">
         <div class="ITENSinst">
             <div class="CARTbox" data-id="${this.getAttribute('for')}">
@@ -996,8 +997,45 @@ if(bracael.resumeCart() >= snapshot.val().info.minvalue && snapshot.val().status
             const orderCart = new Array();
             const comandCart = new Array();
             const detailCart = new Array();
-            Object.entries(JSON.parse(sessionStorage.itemCart)).map(function(data,ind,obj){
-                const lineComment = '*' +data[1].amount+ 'x* ```' +data[1].title+ '```';
+            Object.entries(JSON.parse(sessionStorage.itemCart)).map(function(data,ind){
+                const lineComment = '*' +data[1].amount+ 'x* ```' +data[1].title+`${data[1].weight === undefined ? data[1].grams >= 1000 ? (function(){
+
+                    var countGrams = 0;
+                    var atual = data[1].grams
+                    function decrementAgain(){
+                        countGrams = ++countGrams;
+                        atual = atual - 1000
+                        atual >= 1000 ? decrementAgain() : null;
+                    }
+        
+                    atual >= 1000 ? decrementAgain() : null
+        
+                    if(atual != 0){
+                        return ` ${Number(countGrams+'.'+atual).toFixed(1).replace('.',',')}kg`;
+                    }
+                    else {
+                        return ` ${countGrams}kg`;
+                    }
+                })() : data[1].grams != 0 ? ` ${data[1].grams}g` : '' : data[1].weight >= 1000 ? (function(){
+            
+                    var countGrams = 0;
+                    var atual = data[1].weight
+        
+                    function decrementAgain(){
+                        countGrams = ++countGrams;
+                        atual = atual - 1000
+                        atual >= 1000 ? decrementAgain() : null;
+                    }
+        
+                    atual >= 1000 ? decrementAgain() : null
+        
+                    if(atual != 0){
+                        return ` ${Number(countGrams+'.'+atual).toFixed(1).replace('.',',')}L`;
+                    }
+                    else {
+                        return ` ${countGrams}L`;
+                    }
+                })() : ` ${data[1].weight}ml`}`+ '```';
 
                 const lineExtra = new Array();
                 const extraItem = new Array();
@@ -1026,15 +1064,18 @@ if(bracael.resumeCart() >= snapshot.val().info.minvalue && snapshot.val().status
                     }
                 });
 
-                detailCart.push({
-                    amount: data[1].amount,
-                    price: data[1].price,
-                    title: data[1].title,
-                    extra: SYSTEMitemExtra,
-                    comment: data[1].comment,
-                    about: data[1].about,
-                    id: data[0]
-                })
+
+                detailCart.push(JSON.parse(`{
+                    "amount": ${data[1].amount},
+                    "price": ${data[1].price},
+                    "title": "${data[1].title}",
+                    "extra": ${JSON.stringify(SYSTEMitemExtra)},
+                    "comment": ${data[1].comment},
+                    ${data[1].weight != undefined ? `"weight": ${data[1].weight}` : `"grams": ${data[1].grams}`},
+                    "id": ${data[0]}
+                }`))
+
+
                 comandCart.push(`${lineComment}${data[1].comment != null ? `\n‼️ *${data[1].comment}*` : ''}${lineExtra.join('')}`);
                 orderCart.push(`
                     <li>
@@ -1177,7 +1218,6 @@ if(bracael.resumeCart() >= snapshot.val().info.minvalue && snapshot.val().status
                 });
             });
 
-
             var TRADEforCash = null;
             document.querySelector('.WHATSAPPbtn').addEventListener('click', function(){
                 if(document.getElementById('PAYCAHSHmethod').checked || document.getElementById('PAYCREDITmethod').checked){
@@ -1312,3 +1352,8 @@ else {
 
 
 }
+
+
+
+
+
