@@ -6,6 +6,10 @@ firebase.auth().onAuthStateChanged(function(user) {
 document.body.innerHTML = `
 <div id="root">
 <aside id="PUSHmenu">
+    <p class="BTNmenu">
+        <button class="BTNhref" type="button"><i class="CROSSicon"></i></button>
+    </p>
+    <div class="M-PUSHbox">
     <section class="LOGOmarc"></section>
     <ul>
         <ol>
@@ -22,11 +26,12 @@ document.body.innerHTML = `
             <li><a class="HREFfeedItem" href="javascript:void(0)" feedback="" onclick="alert('Bracael.COM\\nVersão Alpha, 16.09.2020\\nO Conteúdo para está página estará disponivel em breve.')">Enviar feedback</a></li>
         </ol>
         <footer>
-            <span>© COPYRIGTH 2020<br/>Bracael – Todos os direitos reservados.</span>
+            <span>BRACAEL 2020 ©<br/>Todos os direitos reservados.</span>
             <span>Painel administrativo para parceiros.</span>
             <span>Last time updated May 9, 2020</span>
         </footer>
     </ul>
+    </div>
 </aside>
 
 <main>
@@ -45,6 +50,18 @@ document.body.innerHTML = `
     </article>
 </main>
 </div>`;
+
+
+document.querySelector('.BTNhref').addEventListener('click', function SWITCHmain(){
+    document.body.contains(document.querySelector('.SWIPEopen')) ?
+    document.querySelector('.SWIPEopen').removeEventListener('click', SWITCHmain, false)
+    : null;
+    document.getElementById('PUSHmenu').classList.toggle('MENUactive');
+    document.querySelector('MAIN').classList.toggle('SWIPEopen');
+    document.body.contains(document.querySelector('.MENUactive')) ?
+    document.querySelector('.SWIPEopen').addEventListener('click', SWITCHmain, false)
+    : null;
+});
 
 document.querySelector('[name="userEnd"]').addEventListener('click', function(){
     firebase.auth().signOut()
@@ -161,6 +178,11 @@ if(main === 'index'){
 
         RECEBIDOSit.push(`
         <div class="CARDitemData" data-id="${data[0]}">
+        <div class="BTTMitemButton">
+            <button type="button" name="BTTNcomandConfirm" js-base="${i}">Aceitar pedido</button>
+            <button type="button" name="BTTNcomandCancel" js-base="${i}">Recusar</button>
+        </div>
+        <div class="CARDrequestContent">
             <div class="CLIENTinfoData">
                 <div class="BASEinfoClient">
                     <div class="INFOcliente">
@@ -176,10 +198,6 @@ if(main === 'index'){
                 </div>
             </div>
             <div class="BASEinfoRequest">
-                <div class="BTTMitemButton">
-                    <button type="button" name="BTTNcomandConfirm" js-base="${i}">Aceitar pedido</button>
-                    <button type="button" name="BTTNcomandCancel" js-base="${i}">Recusar</button>
-                </div>
                 <div class="COMANDAitemData">
                     <p>
                         <span>QTD.</span>
@@ -190,6 +208,7 @@ if(main === 'index'){
                 </div>
                 <div class="ITEMbox"><p>Total de ${Number(data[1].tovalue).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</p></div>
             </div>
+        </div>
         </div>`);
 
     }) : null;
@@ -210,12 +229,12 @@ if(main === 'index'){
             <div>
                 <div class="CARDleftIitem">
                     <div class="CLASSitemHead">
-                        <span>${data[1].client}</span>
-                        <p>${data[1].street}, ${data[1].number}${data[1].complement != '' ? ` - ${data[1].complement}` : ''}<br/>${data[1].region}${data[1].district != '' ? ` - ${data[1].district}` : ''}</p>
+                        <span class="CLIENTnameSPAN">${data[1].client}</span>
+                        <p><span>${data[1].street}, ${data[1].number}${data[1].complement != '' ? ` - ${data[1].complement}` : ''}</span><span>${data[1].region}${data[1].district != '' ? ` - ${data[1].district}` : ''}</span></p>
                     </div>
                     <div class="CLASSbttnModal">
-                        <button type="button" name="WINDOWmodalCliente" js-win="${i}"><i class="CROSSicon"></i>Cliente</button>
-                        <button type="button" name="WINDOWmodalComanda" js-win="${i}"><i class="CROSSicon"></i>Comanda</button>
+                        <button type="button" name="WINDOWmodalCliente" js-win="${i}"><i class="CROSSicon"></i><span>Cliente</span></button>
+                        <button type="button" name="WINDOWmodalComanda" js-win="${i}"><i class="CROSSicon"></i><span>Comanda</span></button>
                     </div>
                 </div>
                 <div class="CARDrightIitem">
@@ -223,23 +242,23 @@ if(main === 'index'){
                         <div class="CLASSitemSecond ITEMnone">
                             <button type="button" name="WINDOWmodalStatus" js-win="${i}">Editar status</button>
                         </div>
-                        <div class="CLASSitemFirst">
-                            <span>STATUS</span>
+                        <div class="CLASSitemFirst" data-status="${data[1].status == 'Em espera' ? 'WAITstt' : data[1].status == 'Em preparo' ? 'PREPstt' : data[1].status == 'Em retirada' ? 'DELYstt' : 'OKAYstt'}">
+                            <span><i class="CROSSicon"></i>STATUS</span>
                             <p>${data[1].status}</p>
                         </div>
                     </div>
                     <div class="RIGHTitemMaster">
                         <span>TOTAL: ${Number(data[1].tovalue).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</span>
-                        <button type="button" name="BTTNitemRemove" js-win="${i}"><svg class="SVGitemRemove" enable-background="new 0 0 515.556 515.556" height="12" viewBox="0 0 515.556 515.556" width="12" xmlns="http://www.w3.org/2000/svg"><path d="m64.444 451.111c0 35.526 28.902 64.444 64.444 64.444h257.778c35.542 0 64.444-28.918 64.444-64.444v-322.222h-386.666z"/><path d="m322.222 32.222v-32.222h-128.889v32.222h-161.111v64.444h451.111v-64.444z"/></svg>Remover pedido</button>
+                        <button type="button" name="BTTNitemRemove" js-win="${i}"><svg class="SVGitemRemove" enable-background="new 0 0 515.556 515.556" height="12" viewBox="0 0 515.556 515.556" width="12" xmlns="http://www.w3.org/2000/svg"><path d="m64.444 451.111c0 35.526 28.902 64.444 64.444 64.444h257.778c35.542 0 64.444-28.918 64.444-64.444v-322.222h-386.666z"/><path d="m322.222 32.222v-32.222h-128.889v32.222h-161.111v64.444h451.111v-64.444z"/></svg><span>Remover pedido</span></button>
                     </div>
                 </div>
             </div>
             <div>
                 <div class="CLASSitemBttns">
-                    <button type="button" name="WHATSsendContact" js-win="${i}"><i class="CROSSicon"></i>Enviar</button>
-                    <button type="button" name="BTTNcssRota" onclick="javascript:window.open('https://www.google.com/maps/dir/${info.address.replace(/ /gi,'+')},+${info.number}+-+${info.region.replace(/ /gi,'+')},+${info.region.replace(/ /gi,'+')}+-+${info.unity},+${info.zipcode}/${data[1].street.replace(/ /gi,'+')},+${data[1].number}+-+${data[1].region.replace(/ /gi,'+')},+${info.region.replace(/ /gi,'+')}+-+${info.unity}')"><i class="CROSSicon"></i>Rota</button>
-                    <button type="button" name="BTTNcssLocal" onclick="javascript:window.open('https://www.google.com/maps/place/${data[1].street.replace(/ /gi,'+')},+${data[1].number}+-+${data[1].region.replace(/ /gi,'+')},+${info.region.replace(/ /gi,'+')}+-+${info.unity}')"><i class="CROSSicon"></i>Local</button>
-                    <button type="button" name="BTTNcssPrint" onClick="alert('Estamos trabando, este recurso estará disponivel em breve.')"><i class="CROSSicon"></i>Imprimir</button>
+                    <button type="button" name="WHATSsendContact" js-win="${i}"><i class="CROSSicon"></i><span>Enviar</span></button>
+                    <button type="button" name="BTTNcssRota" onclick="javascript:window.open('https://www.google.com/maps/dir/${info.address.replace(/ /gi,'+')},+${info.number}+-+${info.region.replace(/ /gi,'+')},+${info.region.replace(/ /gi,'+')}+-+${info.unity},+${info.zipcode}/${data[1].street.replace(/ /gi,'+')},+${data[1].number}+-+${data[1].region.replace(/ /gi,'+')},+${info.region.replace(/ /gi,'+')}+-+${info.unity}')"><i class="CROSSicon"></i><span>Rota</span></button>
+                    <button type="button" name="BTTNcssLocal" onclick="javascript:window.open('https://www.google.com/maps/place/${data[1].street.replace(/ /gi,'+')},+${data[1].number}+-+${data[1].region.replace(/ /gi,'+')},+${info.region.replace(/ /gi,'+')}+-+${info.unity}')"><i class="CROSSicon"></i><span>Local</span></button>
+                    <button type="button" name="BTTNcssPrint" onClick="alert('Estamos trabando, este recurso estará disponivel em breve.')"><i class="CROSSicon"></i><span>Imprimir</span></button>
                 </div>
                 <div class="CLASSitemTimestamp">
                     ${day} ${month} ${year} ás ${hour}:${minute} ${hour12}
@@ -259,7 +278,7 @@ if(main === 'index'){
     </div>
     <div class="AREAofService">
         <div id="DASHBOARDit">
-        <input type="radio" id="RECEBIDOSfor" name="INPUTradio" value="huey">
+        <input type="radio" id="RECEBIDOSfor" name="INPUTradio" value="huey" checked>
         <input type="radio" id="ATENDIMENTOfor" name="INPUTradio" value="dewey">
             <div class="DASHBOARDinst">
                 <div id="RECEBIDOSit" class="SCREENit" checked>
@@ -272,9 +291,6 @@ if(main === 'index'){
         </div>
     </div>
     </div>`;
-
-
-
 
 
     document.querySelectorAll('[name="WINDOWmodalCliente"]').forEach(function(data){
@@ -302,7 +318,8 @@ if(main === 'index'){
                             </div>
                             <div class="DIVISORitemP">
                                 <p>Telefone</p>
-                                <p>${result.order[JSwinStatus].tel}</p>
+                                <p>${result.order[JSwinStatus].tel}<br/>
+                                <a href="tel:${result.order[JSwinStatus].tel.replace(/[^0-9]+/g, '')}">Ligar</a> ou <a rel="nofollow noopener noreferrer" target="_blank" href="https://api.whatsapp.com/send?phone=55${result.order[JSwinStatus].tel.replace(/[^0-9]+/g, '')}">Whatsapp</a></p>
                             </div>
                             <div class="DIVISORitemP">
                                 <p>Pagamento</p>
@@ -383,7 +400,7 @@ if(main === 'index'){
                     <li>
                         <span>${new Array(3 + 1 - (i + '').length).join('0') + ++i}</span>
                         <span>${item.id}</span>
-                        <span><p>${item.title}</p><p>${item.weight === undefined ? item.grams >= 1000 ? (function(){
+                        <span>${item.title} ${item.weight === undefined ? item.grams >= 1000 ? (function(){
 
                             var countGrams = 0;
                             var atual = item.grams
@@ -420,7 +437,7 @@ if(main === 'index'){
                             else {
                                 return `${countGrams}L`;
                             }
-                        })() : `${item.weight}ml`}</p></span>
+                        })() : `${item.weight}ml`}</span>
                         <span>${item.amount}un</span>
                         <span>${Number(item.price * item.amount).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</span>
                     </li>
@@ -537,7 +554,44 @@ if(main === 'index'){
 
             const comandCart = new Array();
             RESinClient.detail.map(function(item){
-                const lineComment = '*' +item.amount+ 'x* ```' +item.title+ '```';
+                const lineComment = '*' +item.amount+ 'x* ```' +item.title+`${item.weight === undefined ? item.grams >= 1000 ? (function(){
+
+                    var countGrams = 0;
+                    var atual = item.grams
+                    function decrementAgain(){
+                        countGrams = ++countGrams;
+                        atual = atual - 1000
+                        atual >= 1000 ? decrementAgain() : null;
+                    }
+        
+                    atual >= 1000 ? decrementAgain() : null
+        
+                    if(atual != 0){
+                        return ` ${Number(countGrams+'.'+atual).toFixed(1).replace('.',',')}kg`;
+                    }
+                    else {
+                        return ` ${countGrams}kg`;
+                    }
+                })() : item.grams != 0 ? ` ${item.grams}g` : '' : item.weight >= 1000 ? (function(){
+            
+                    var countGrams = 0;
+                    var atual = item.weight
+        
+                    function decrementAgain(){
+                        countGrams = ++countGrams;
+                        atual = atual - 1000
+                        atual >= 1000 ? decrementAgain() : null;
+                    }
+        
+                    atual >= 1000 ? decrementAgain() : null
+        
+                    if(atual != 0){
+                        return ` ${Number(countGrams+'.'+atual).toFixed(1).replace('.',',')}L`;
+                    }
+                    else {
+                        return ` ${countGrams}L`;
+                    }
+                })() : ` ${item.weight}ml`}`+ '```';
                 const lineExtra = new Array();
                 item.extra != undefined ?
                 item.extra.map(function(val){
@@ -603,11 +657,15 @@ if(main === 'index'){
 
             this.querySelector('[name="ACTIONitemRemove"]').addEventListener('click', function(){
                 for(let i = 0; i < document.querySelectorAll('[name="radioStatus"]').length; i++) {
+                    const ITEMstt = document.querySelectorAll('[name="radioStatus"]')[i].value;
+
                     document.querySelectorAll('[name="radioStatus"]')[i].checked ?
                     database.ref(`order/${JSwinStatus}`).update({
-                        status: document.querySelectorAll('[name="radioStatus"]')[i].value
+                        status: ITEMstt
                     }).then(()=>{
-                        CARDitemWait.querySelector('.CLASSitemFirst').children[1].innerHTML = document.querySelectorAll('[name="radioStatus"]')[i].value;
+                        CARDitemWait.querySelector('.CLASSitemFirst').setAttribute('data-status', `${ITEMstt == 'Em espera' ? 'WAITstt' : ITEMstt == 'Em preparo' ? 'PREPstt' : ITEMstt == 'Em retirada' ? 'DELYstt' : 'OKAYstt'}`);
+                        
+                        CARDitemWait.querySelector('.CLASSitemFirst').children[1].innerHTML = ITEMstt;
                         bracael.pushNotify(`Pedido de ${result.order[JSwinStatus].client} atualizado!`);
                     }) : null
                 }
@@ -786,6 +844,11 @@ if(main === 'index'){
 
                 const INSERTadHTML = `
                 <div class="CARDitemData" data-id="${data[0]}">
+                <div class="BTTMitemButton">
+                    <button type="button" name="BTTNcomandConfirm" js-base="${i}">Aceitar pedido</button>
+                    <button type="button" name="BTTNcomandCancel" js-base="${i}">Recusar</button>
+                </div>
+                <div class="CARDrequestContent">
                     <div class="CLIENTinfoData">
                         <div class="BASEinfoClient">
                             <div class="INFOcliente">
@@ -801,10 +864,6 @@ if(main === 'index'){
                         </div>
                     </div>
                     <div class="BASEinfoRequest">
-                        <div class="BTTMitemButton">
-                            <button type="button" name="BTTNcomandConfirm" js-base="${i}">Aceitar pedido</button>
-                            <button type="button" name="BTTNcomandCancel" js-base="${i}">Recusar</button>
-                        </div>
                         <div class="COMANDAitemData">
                             <p>
                                 <span>QTD.</span>
@@ -815,11 +874,16 @@ if(main === 'index'){
                         </div>
                         <div class="ITEMbox"><p>Total de ${Number(data[1].tovalue).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</p></div>
                     </div>
+                </div>
                 </div>`;
 
 
                 document.querySelectorAll('.CARDitemData').length != 0 ?
                 document.getElementById('RECEBIDOSit').insertAdjacentHTML('afterbegin', INSERTadHTML) : document.getElementById('RECEBIDOSit').innerHTML = INSERTadHTML;
+
+                var myAudio = new Audio('https://sites.google.com/site/holasoycael/u/to-the-point.mp3');
+                myAudio.play();
+                myAudio.muted = false;;
 
                 bracael.pushNotify('Novo pedido recebido!');
 
@@ -894,7 +958,7 @@ if(main === 'index'){
 
             }
             });
-        }) : null;
+        }) : document.getElementById('RECEBIDOSit').innerHTML = '<p>Por enquanto, não há nada por aqui.</p>';;
     });
 
 
@@ -924,8 +988,6 @@ if(main === 'index'){
             }
         });
     });
-
-
 }
 else if(main === 'statistic'){
     console.log('main=statistic')
@@ -972,13 +1034,13 @@ else if(main === 'products'){
     Promise.all(postProduct).then(function(item){
         document.querySelector('HEADER').getElementsByTagName('SPAN')[0].innerHTML = 'Meus produtos';
         document.getElementsByTagName('ARTICLE')[0].innerHTML = `
+        <div class="MAINbox">
         <div class="MASTERmain">
             <button type="button" onclick="window.location.href='?main=creatPost'" name="creatProduct">Novo produto</button>
             <div class="QUERYproduct">
                 <input type="text" name="inputSearch" placeholder="Buscar por...">
             </div>
         </div>
-        <div class="MAINbox">
             ${item.join('\n')}
         </div>`;
 
@@ -1658,7 +1720,7 @@ else if(main === 'settings'){
                     <div>
                         <div class="CLASSitemStatus">
                             <input type="checkbox" class="INPUTctrl" name="INPUTstatusCheckbox" id="SWITCHit"${result.business.status != false ? ' checked' : ''}>
-                            <label class="CUSTOMlabel" for="SWITCHit">Fechado</label>
+                            <label class="CUSTOMlabel" for="SWITCHit">${result.business.status ? 'Aberto' : 'Fechado'}</label>
                         </div>
                     </div>
                 </div>
