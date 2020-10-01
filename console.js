@@ -1413,7 +1413,7 @@ else if(main === 'item'){
 
         const itemObject = JSON.parse(`{
             ${feed[edit].category.includes('Promo') ? `"category": ["Promo"${CATEGORYarrItem.length != 0 ? `,${JSON.stringify(CATEGORYarrItem).substring(1, JSON.stringify(CATEGORYarrItem).length-1)}` : ''}],` : `"category": ${JSON.stringify(feed[edit].category)},`}
-            ${document.body.contains(document.querySelector('[name="FORMinputDesc"]')) ? `"description": "${document.querySelector('[name="FORMinputDesc"]').value.trim()}",` : ''}
+            ${document.body.contains(document.querySelector('[name="FORMinputDesc"]')) ? `"description": "${document.querySelector('[name="FORMinputDesc"]').value.trim().replace(/\n/gi, "\\n")}",` : ''}
             ${ARRAYexistItem.length != 0 ? `"extra": ${JSON.stringify(ARRAYexistItem)},` : ''}
             ${document.body.contains(document.querySelector('[name="FORMinputGrams"]')) ? `"grams": ${Number(document.querySelector('[name="FORMinputGrams"]').value)},` : ''}
             ${document.body.contains(document.querySelector('[name="FORMinputMl"]')) ? `"weight": ${Number(document.querySelector('[name="FORMinputMl"]').value)},` : ''}
@@ -1435,10 +1435,9 @@ else if(main === 'item'){
         ifValidateFunction(feed[edit].category.includes('Drinks') ? itemObject.weight != 0 : typeof itemObject.grams === 'number')
 
         if(ifValidate.every(elem => elem === true)){
-            // database.ref(`feed/${edit}`).update(itemObject).then(()=>{
-            //     window.location.href = '?main=products'
-            // });
-            console.log('Sucesso!')
+            database.ref(`feed/${edit}`).update(itemObject).then(()=>{
+                window.location.href = '?main=products'
+            });
         }
         else {
             bracael.pushNotify('Há algo de errado!');
