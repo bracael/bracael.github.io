@@ -38,8 +38,9 @@ document.body.innerHTML = `
     <header>
         <span>Carregando...</span>
         <div>
-            <button type="text" name="pushNotify"></button>
-            <button type="text" name="userEnd">Sair</button>
+            <button type="text" name="userHead">
+            <svg enable-background="new 0 0 515.556 515.556" height="18" viewBox="0 0 515.556 515.556" width="18" xmlns="http://www.w3.org/2000/svg" fill="#777777"><path d="m257.778 0c-142.137 0-257.778 115.641-257.778 257.778s115.641 257.778 257.778 257.778 257.778-115.641 257.778-257.778-115.642-257.778-257.778-257.778zm140.412 390.282c-88.007-44.093-194.425-45.965-284.592-4.146-30.464-34.181-49.153-79.073-49.153-128.358 0-106.61 86.723-193.333 193.333-193.333s193.333 86.723 193.333 193.333c0 51.296-20.213 97.861-52.921 132.504z"/><path d="m326.132 157.202c37.751 37.751 37.751 98.957 0 136.707s-98.957 37.751-136.707 0-37.751-98.957 0-136.707 98.956-37.751 136.707 0"/></svg>
+            </button>
         </div>
     </header>
     <article>
@@ -49,6 +50,11 @@ document.body.innerHTML = `
 
     </article>
 </main>
+
+<div class="HIDDENmenu">
+Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não só a cinco séculos, como também ao salto para a editoração eletrônica, permanecendo essencialmente inalterado. Se popularizou na década de 60, quando a Letraset lançou decalques contendo passagens de Lorem Ipsum, e mais recentemente quando passou a ser integrado a softwares de editoração eletrônica como Aldus PageMaker.
+</div>
+
 </div>`;
 
 
@@ -63,9 +69,17 @@ document.querySelector('.BTNhref').addEventListener('click', function SWITCHmain
     : null;
 });
 
-document.querySelector('[name="userEnd"]').addEventListener('click', function(){
-    firebase.auth().signOut()
+document.querySelector('[name="userHead"]').addEventListener('click', function(){
+
+    document.body.hasAttribute('style') ?
+    document.body.removeAttribute('style') :
+    document.body.style.transform = ("translate3d(-256px, 0, 0)");
+
 });
+
+// document.querySelector('[name="userEnd"]').addEventListener('click', function(){
+//     firebase.auth().signOut()
+// });
 
 const database = firebase.database();
 const ARRAYweek = ["Domingo", "Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado"]
@@ -998,188 +1012,217 @@ else if(main === 'products'){
     const postProduct = new Array();
     Object.entries(result.feed).sort(function (a, b) {
         return (a[1].published < b[1].published) ? 1 : ((b[1].published < a[1].published) ? -1 : 0);
-    }).map(function(data){
+    }).map(function(data, ii){
 
         const ARRAYdate = new Intl.DateTimeFormat('pt-BR', { weekday: 'long', day: 'numeric', month: 'short', year: 'numeric', hour: '2-digit', minute: 'numeric', hour12: true });
         const [{ value: weekday },,{ value: day },,{ value: month },,{ value: year },,{ value: hour },,{ value: minute },,{ value: hour12 }] = ARRAYdate.formatToParts(new Date(data[1].published));
 
         postProduct.push(`
-        <div class="ITEMinCommerce">
-            <div>
-                <div class="ITEMelemImg">
-                    <img src="${data[1].thumb}" height="64">
+        <div class="ITEMinCommerce" data-id="${data[0]}" data-x="${ii}">
+            <div class="THUMBandText">
+                <div class="ITEMelemImg" style="
+                background-image: url(${data[1].thumb});">
+                    <img src="https://1.bp.blogspot.com/-qYnZWWDOGSk/X3UMCgi69tI/AAAAAAAAHSk/NfAGsZwwS2ggwsEjtMSLzDMh7FWMNZkKQCLcBGAsYHQ/s0/blank.gif" height="72" width="72">
+                </div>
+                <div class="SECTIONtext">
+                    <div class="CHEVRONdown">
+                        <button type="button" name="CHEVRONbtn" data-x="${ii}"></button>
+                    </div>
+                    <div class="TITLEspan">
+                        <span>${data[1].title}</span>
+                    </div>
+                    <div class="SUBLIMtetx">
+                        <span class="CARDtextPrice">${data[1].price.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</span>
+                        ${data[1].category.includes('Unavailable') ? '<span class="CARDtextDraft">Indisponível</span>' : ''}
+                    </div>
                 </div>
             </div>
-            <div class="SECTIONtext">
-                <div class="TITLEspan">
-                    <span>${data[1].title}</span>
-                </div>
-                <div class="SUBLIMtetx">
-                    <span>${data[1].price.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</span>
-                </div>
-            </div>
-            <div class="EDITandDeleteOptions">
-                <div class="OPTIONSbtn" data-id="${data[0]}">
-                    <button type="button" name="editItem"></button>
-                    <button type="button" name="${data[1].category.includes('Unavailable') ? 'removeUnavailable' : 'draftItem'}"></button>
-                    <button type="button" name="deletItem"></button>
-                </div>
-                <div class="STATUScode">
-                    <span>${day} de ${month} ${year}</span>
-                </div>
-            </div>
+            <a href="?main=item&edit=${data[0]}" class="HREFedit"></a>
         </div>`);
     });
 
     Promise.all(postProduct).then(function(item){
         document.querySelector('HEADER').getElementsByTagName('SPAN')[0].innerHTML = 'Meus produtos';
         document.getElementsByTagName('ARTICLE')[0].innerHTML = `
-        <div class="MAINbox">
+        <div class="MAINbox PROCUDUCTmainBox">
         <div class="MASTERmain">
-            <button type="button" onclick="window.location.href='?main=creatPost'" name="creatProduct">Novo produto</button>
-            <div class="QUERYproduct">
-                <input type="text" name="inputSearch" placeholder="Buscar por...">
-            </div>
+            <button type="button" onclick="window.location.href='?main=creatPost'" name="creatProduct">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="#fff"><path d="M14,8H8v6H6V8H0V6H6V0H8V6h6V8Z"></path></svg>
+                <span>Novo produto</span>
+                </button>
         </div>
             ${item.join('\n')}
         </div>`;
 
-        document.querySelectorAll('[name="editItem"]').forEach(function(data){
-            data.addEventListener('click', function(){
-                console.log(this)
-                window.location.href = `?main=item&edit=${this.parentNode.getAttribute('data-id')}`;
-            });
-        });
+        function CHEVRONbtn(cardThis){
+            const CARDitemId = document.querySelector(`.ITEMinCommerce[data-x="${cardThis}"]`).getAttribute('data-id');
+            const CARDitemObject = result.feed[CARDitemId];
 
-        document.querySelectorAll('[name="deletItem"]').forEach(function(data){
-            data.addEventListener('click', function(){
-                restItem = this.parentNode.getAttribute('data-id')
-
-                document.body.insertAdjacentHTML('beforeend', `
-                <div class="MODALdefault" id="REMOVEitem">
-                    <div class="MODALinst">
-                        <div class="CONTENTmodal">
-                            <div class="MODALelemTitle">
-                                <span>Descartar produto?</span>
-                            </div>
-                            <div class="MODALelemMsg">Isso descartará este produto. Após o descarte, não será mais possível vê-lo nem editá-lo.</div>
-                            <div class="MODALelemFooter">
-                                <button type="button" name="ACTIONitemCancel">Cancelar</button>
-                                <button type="button" name="ACTIONitemRemove">Descartar produto</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>`);
-
-                $(REMOVEitem).fadeIn(200, function(){
-                    this.querySelector('[name="ACTIONitemCancel"]').addEventListener('click', function(){
-                        $(REMOVEitem).fadeOut(200, function(){
-                            this.remove();
-                            document.body.removeAttribute('style');
-                        });
-                    });
-
-                    this.querySelector('[name="ACTIONitemRemove"]').addEventListener('click', function(){
-                        database.ref(`feed/${restItem}`).remove().then(()=>{
-                            window.location.href = '?main=products';
-                        })
-                    });
-                });
-                REMOVEitem.querySelector('.CONTENTmodal').insertAdjacentHTML('beforebegin', '<div class="SCREENmodal CLOSEmodal"></div>');
-                document.body.style.overflow = "hidden";
-
-                if(document.body.contains(document.querySelector('.CLOSEmodal'))){
-                    document.querySelector('.CLOSEmodal').addEventListener('click', function click(e){
-                        $(REMOVEitem).fadeOut(200, function(){
-                            this.remove();
-                            document.body.removeAttribute('style');
-                            restItem = null;
-                        });
-                    });}
-            });
-        });
-
-
-        document.querySelectorAll('[name="draftItem"]').forEach(function(data){
-            data.addEventListener('click', function(){
-                restItem = this.parentNode.getAttribute('data-id')
-                console.log(this)
-                console.log(restItem)
-
-                document.body.insertAdjacentHTML('beforeend', `
-                <div class="MODALdefault" id="UNAVAILABLEitem">
-                    <div class="MODALinst">
-                        <div class="CONTENTmodal">
-                            <div class="MODALelemTitle">
-                                <span>Produto indisponível?</span>
-                            </div>
-                            <div class="MODALelemMsg">Isso exibirá aos seus clientes que o produto está indisponível. Significa que ele existirá na loja, porém ninguém poderá compra-lo.</div>
-                            <div class="MODALelemFooter">
-                                <button type="button" name="ACTIONitemCancel">Cancelar</button>
-                                <button type="button" name="ACTIONitemRemove">Confirmar</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>`);
-
-                $(UNAVAILABLEitem).fadeIn(200, function(){
-                    this.querySelector('[name="ACTIONitemCancel"]').addEventListener('click', function(){
-                        $(UNAVAILABLEitem).fadeOut(200, function(){
-                            this.remove();
-                            document.body.removeAttribute('style');
-                        });
-                    });
-
-                    this.querySelector('[name="ACTIONitemRemove"]').addEventListener('click', function(){
-                        database.ref(`feed/${restItem}`).once('value').then(function(item){
-                            const itemCategory = item.val().category;
-
-                            console.log(item.val())
-                            console.log(item.val().category)
-
-                            if(!item.val().category.includes('Unavailable')){
-                                itemCategory.push('Unavailable')
-
-                                database.ref(`feed/${restItem}`).update({
-                                    category: itemCategory
-                                }).then(()=>{
-                                    window.location.href = '?main=products';
-                                });
-                            }
-                        })
-                    });
-                });
-                UNAVAILABLEitem.querySelector('.CONTENTmodal').insertAdjacentHTML('beforebegin', '<div class="SCREENmodal CLOSEmodal"></div>');
-                document.body.style.overflow = "hidden";
-
-                if(document.body.contains(document.querySelector('.CLOSEmodal'))){
-                    document.querySelector('.CLOSEmodal').addEventListener('click', function click(e){
-                        $(UNAVAILABLEitem).fadeOut(200, function(){
-                            this.remove();
-                            document.body.removeAttribute('style');
-                            restItem = null;
-                        });
-                    });}
-
-            });
-        });
-
-        document.querySelectorAll('[name="removeUnavailable"]').forEach(function(data){
-            data.addEventListener('click', function(){
-
-                const itemCategory = feed[this.parentNode.getAttribute('data-id')].category;
-                console.log(itemCategory)
-
-                if(itemCategory.includes('Unavailable')){
-                    itemCategory.splice(itemCategory.indexOf('Unavailable'), 1);
-
-                    console.log(itemCategory)
-                    database.ref(`feed/${this.parentNode.getAttribute('data-id')}`).update({
-                        category: itemCategory
-                    }).then(()=>{
-                        window.location.href = '?main=products';
-                    });
+            if(document.querySelector('.MOREoptionCard')){
+                if(document.querySelector('.CARDopTitle').getElementsByTagName('SPAN')[0].innerText != CARDitemObject.title){
+                    document.querySelector('.MOREoptionCard').remove();
+                    CHEVRONbtn(cardThis)
+                    
                 }
+                else {
+                    document.querySelector('.MOREoptionCard').remove();
+                }
+            }
+            else {
+            document.body.insertAdjacentHTML('afterend', `
+            <div class="MOREoptionCard">
+            <div class="CARDopTitle">
+                    <button type="button" name="CANCELmoreOption">
+                        <svg height="16" viewBox="0 0 386.667 386.667" width="16" xmlns="http://www.w3.org/2000/svg" fill="#ffffff"><path d="m386.667 45.564-45.564-45.564-147.77 147.769-147.769-147.769-45.564 45.564 147.769 147.769-147.769 147.77 45.564 45.564 147.769-147.769 147.769 147.769 45.564-45.564-147.768-147.77z"/></svg>
+                    </button>
+                    <div>
+                        <span>${CARDitemObject.title}</span>
+                    </div>
+                </div>
+                <div class="OPTIONSbtn">
+                <button type="button" name="${CARDitemObject.category.includes('Unavailable') ? 'removeUnavailable' : 'draftItem'}">
+                        <svg height="16" viewBox="0 0 515.556 515.556" width="16" xmlns="http://www.w3.org/2000/svg" fill="#ffffff"><path d="m257.778 0c-142.137 0-257.778 115.641-257.778 257.778s115.641 257.778 257.778 257.778 257.778-115.641 257.778-257.778-115.642-257.778-257.778-257.778zm128.889 290h-257.778v-64.444h257.778z"/></svg>
+                    </button>
+                    <button type="button" name="deletItem">
+                        <svg height="16" xmlns="http://www.w3.org/2000/svg" width="16" viewBox="0 0 384 384" fill="#ffffff">
+                            <path d="M64,341.333C64,364.907,83.093,384,106.667,384h170.667C300.907,384,320,364.907,320,341.333v-256H64V341.333z"/>
+                            <polygon points="266.667,21.333 245.333,0 138.667,0 117.333,21.333 42.667,21.333 42.667,64 341.333,64 341.333,21.333"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>`)
+            
+            document.querySelector('[name="CANCELmoreOption"]').addEventListener('click', function(){
+                document.querySelector('.MOREoptionCard').remove()
+            })
+
+            document.querySelector('.MOREoptionCard').querySelector('[name="deletItem"]')
+            .addEventListener('click', function(){
+                document.body.insertAdjacentHTML('beforeend', `
+                    <div class="MODALdefault" id="REMOVEitem">
+                        <div class="MODALinst">
+                        <div class="CONTENTmodal">
+                                <div class="MODALelemTitle">
+                                <span>Descartar produto?</span>
+                                </div>
+                                <div class="MODALelemMsg">Isso descartará este produto. Após o descarte, não será mais possível vê-lo nem editá-lo.</div>
+                                <div class="MODALelemFooter">
+                                    <button type="button" name="ACTIONitemCancel">Cancelar</button>
+                                    <button type="button" name="ACTIONitemRemove">Descartar produto</button>
+                                    </div>
+                            </div>
+                            </div>
+                            </div>`);
+    
+                            $(REMOVEitem).fadeIn(200, function(){
+                        this.querySelector('[name="ACTIONitemCancel"]').addEventListener('click', function(){
+                            $(REMOVEitem).fadeOut(200, function(){
+                                this.remove();
+                                document.body.removeAttribute('style');
+                            });
+                        });
+
+                        this.querySelector('[name="ACTIONitemRemove"]').addEventListener('click', function(){
+                            database.ref(`feed/${CARDitemId}`).remove().then(()=>{
+                                window.location.href = '?main=products';
+                            })
+                        });
+                    });
+                    REMOVEitem.querySelector('.CONTENTmodal').insertAdjacentHTML('beforebegin', '<div class="SCREENmodal CLOSEmodal"></div>');
+                    document.body.style.overflow = "hidden";
+    
+                    if(document.body.contains(document.querySelector('.CLOSEmodal'))){
+                        document.querySelector('.CLOSEmodal').addEventListener('click', function click(e){
+                            $(REMOVEitem).fadeOut(200, function(){
+                                this.remove();
+                                document.body.removeAttribute('style');
+                            });
+                        });}
+            });
+
+            if(document.querySelector('[name="draftItem"]')){
+                document.querySelector('.MOREoptionCard')
+            .querySelector('[name="draftItem"]').addEventListener('click', function(){
+    
+                document.body.insertAdjacentHTML('beforeend', `
+                    <div class="MODALdefault" id="UNAVAILABLEitem">
+                        <div class="MODALinst">
+                        <div class="CONTENTmodal">
+                                <div class="MODALelemTitle">
+                                <span>Produto indisponível?</span>
+                                </div>
+                                <div class="MODALelemMsg">Isso exibirá aos seus clientes que o produto está indisponível. Significa que ele existirá na loja, porém ninguém poderá compra-lo.</div>
+                                <div class="MODALelemFooter">
+                                    <button type="button" name="ACTIONitemCancel">Cancelar</button>
+                                    <button type="button" name="ACTIONitemRemove">Confirmar</button>
+                                </div>
+                            </div>
+                            </div>
+                    </div>`);
+    
+                    $(UNAVAILABLEitem).fadeIn(200, function(){
+                        this.querySelector('[name="ACTIONitemCancel"]').addEventListener('click', function(){
+                            $(UNAVAILABLEitem).fadeOut(200, function(){
+                                this.remove();
+                                document.body.removeAttribute('style');
+                            });
+                        });
+                        
+                        this.querySelector('[name="ACTIONitemRemove"]').addEventListener('click', function(){
+                            database.ref(`feed/${CARDitemId}`).once('value').then(function(item){
+                                const itemCategory = item.val().category;
+                                
+                                console.log(item.val())
+                                console.log(item.val().category)
+    
+                                if(!item.val().category.includes('Unavailable')){
+                                    itemCategory.push('Unavailable')
+    
+                                    database.ref(`feed/${CARDitemId}`).update({
+                                        category: itemCategory
+                                    }).then(()=>{
+                                        window.location.href = '?main=products';
+                                    });
+                                }
+                            })
+                        });
+                    });
+                    UNAVAILABLEitem.querySelector('.CONTENTmodal').insertAdjacentHTML('beforebegin', '<div class="SCREENmodal CLOSEmodal"></div>');
+                    document.body.style.overflow = "hidden";
+    
+                    if(document.body.contains(document.querySelector('.CLOSEmodal'))){
+                        document.querySelector('.CLOSEmodal').addEventListener('click', function click(e){
+                            $(UNAVAILABLEitem).fadeOut(200, function(){
+                                this.remove();
+                                document.body.removeAttribute('style');
+                            });
+                        });}
+
+            });
+        }
+
+            if(document.querySelector('[name="removeUnavailable"]')){
+                document.querySelector('.MOREoptionCard')
+                .querySelector('[name="removeUnavailable"]').addEventListener('click', function(){
+    
+                    if(CARDitemObject.category.includes('Unavailable')){
+                        CARDitemObject.category.splice(CARDitemObject.category.indexOf('Unavailable'), 1);
+    
+                        database.ref(`feed/${CARDitemId}`).update({
+                            category: CARDitemObject.category
+                        }).then(()=>{
+                            window.location.href = '?main=products';
+                        });
+                    }
+                });
+            }
+        }
+        
+        }
+
+        document.querySelectorAll('[name="CHEVRONbtn"]').forEach(function(data){
+            data.addEventListener('click', function(){
+                CHEVRONbtn(this.getAttribute('data-x'))
             });
         });
 
@@ -1542,7 +1585,7 @@ else if(main === 'creatPost'){
             const itemObject = JSON.parse(`{
                 "category": [${postCategory != null ? `"${postCategory}"` : ''}${CATEGORYarrItem.length != 0 ? `,${JSON.stringify(CATEGORYarrItem).substring(1, JSON.stringify(CATEGORYarrItem).length-1)}` : ''}],
                 "class": "Publicado",
-                ${postCategory != 'Drinks' && postCategory != 'Dessert' ? `"description": "${document.querySelector('[name="FORMinputDesc"]').value.trim()}",` : ''}
+                ${postCategory != 'Drinks' && postCategory != 'Dessert' ? `"description": "${document.querySelector('[name="FORMinputDesc"]').value.trim().replace(/\n/gi, "\\n")}",` : ''}
                 ${ARRAYexistItem.length != 0 ? `"extra": ${JSON.stringify(ARRAYexistItem)},` : ''}
                 ${postCategory != 'Drinks' ? `"grams": ${Number(document.querySelector('[name="FORMinputGrams"]').value)},` : `"weight": ${Number(document.querySelector('[name="FORMinputMl"]').value)},`}
                 "price": ${Number(document.querySelector('[name="FORMinputPrice"]').value.replace(/\./g,'').replace(/\,/g,'.'))},
@@ -1559,12 +1602,11 @@ else if(main === 'creatPost'){
             ifValidateFunction(itemObject.category.length != 0)
             ifValidateFunction(itemObject.price != 0)
             ifValidateFunction(itemObject.title != '')
-            ifValidateFunction(itemObject.thumb != '')
-            ifValidateFunction(document.body.contains(document.querySelector('.SPANelemSucess')))
+            ifValidateFunction(itemObject.thumb != '' && document.body.contains(document.querySelector('.SPANelemSucess')))
             ifValidateFunction(postCategory != 'Drinks' && postCategory != 'Dessert' ? itemObject.description != '' : true)
             ifValidateFunction(postCategory != 'Promo' ? true : CATEGORYarrItem.length != 0)
             ifValidateFunction(postCategory != 'Drinks' ? typeof itemObject.grams === 'number' : itemObject.weight != 0)
-
+            
             if(ifValidate.every(elem => elem === true)){
                 database.ref(`feed/${parseInt(Math.random()*1000000000, 10)}`).set(itemObject).then(()=>{
                     window.location.href = '?main=products'
@@ -2369,6 +2411,9 @@ else {
     // redirecionar pagina para inicio;
     window.location.replace('?main=index');
 }
+}).catch(function(error){
+    document.getElementsByTagName('ARTICLE')[0].innerHTML = `
+    <span>Problema de conexão!</span>`;
 });
 }
 else {
