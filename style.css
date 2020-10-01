@@ -830,8 +830,16 @@ ARTICLE .ITEMinCommerce .SECTIONtext .TITLEspan SPAN {
     border-radius: 3px;
     padding: 1rem 1.4rem 1.6rem;
     display: flex;
-    grid-gap: 1.6rem;
     align-items: center;
+}
+.EDITindexMain .EDITmainAdd .GROUPexistItem > DIV {
+    width: 100%;
+}
+.EDITindexMain .EDITmainAdd .FATHERelemGroup.SECONDupSide {
+    max-width: 26%;
+}
+.EDITindexMain .EDITmainAdd .GROUPexistItem > DIV:not(:last-child) {
+    margin-right: 1.6rem;
 }
 .EDITindexMain .EDITmainAdd .GROUPexistItem > DIV > DIV {
     display: flex;
@@ -840,13 +848,17 @@ ARTICLE .ITEMinCommerce .SECTIONtext .TITLEspan SPAN {
     margin-bottom: 1.4rem;
 }
 
-
-.EDITindexMain .EDITmainAdd input {
+.EDITindexMain .EDITmainAdd INPUT {
     background: transparent;
     border-bottom-style: solid;
     border-bottom-width: 2px;
     border-bottom-color: rgb(0 0 0 / 0.15);
     padding: 0.4rem;
+    width: 100%;
+}
+.EDITindexMain .EDITmainAdd .CHILDelemGroup.FIRSTupSide INPUT[name="FORMtargetLimit"] {
+    width: 36%;
+    min-width: 58px;
 }
 .EDITindexMain .EDITmainAdd .GROUPicrmntItem {
     display: flex;
@@ -913,7 +925,6 @@ ARTICLE .ITEMinCommerce .SECTIONtext .TITLEspan SPAN {
 .EDITindexMain .EDITmainSemana > DIV {
     display: flex;
     align-items: center;
-    grid-gap: 1.6rem;
     max-width: 88%;
     width: 100%;
     margin: 0 auto;
@@ -1510,21 +1521,17 @@ div#DASHBOARDit > DIV > DIV > P {
 
 .CARDitemWait {
     font-size: 12px;
-    color: hsl(0, 0%, 60%);
-    box-shadow: hsl(0, 0%, 80%) 0 0 16px;
+    color: #999999;
+    box-shadow: #cccccc 0 0 16px;
     overflow: hidden;
-    background-color: hsl(0, 0%, 100%);
-    display: -ms-flexbox;
+    background-color: #ffffff;
     border-radius: 4px;
 }
 .CARDitemWait > DIV {
     padding: 1.2rem 1.6rem;
-    display: grid;
-    grid-template-columns: 1fr 40%;
-    grid-template-rows: 1fr;
-    grid-gap: 1.6rem;
+    display: flex;
 }
-.CARDitemWait > DIV:not(:first-child) {
+.CARDitemWait .CARDbttmElem {
     background: #FAFAFC;
     border-top: 1px solid #EFEEF9;
 }
@@ -1567,7 +1574,9 @@ div#DASHBOARDit > DIV > DIV > P {
 
 .CARDitemWait .CLASSitemBttns, .CARDitemWait .CLASSbttnModal {
     display: flex;
-    grid-gap: 1rem;
+}
+.CARDitemWait .CLASSitemBttns BUTTON:not(:last-child), .CARDitemWait .CLASSbttnModal BUTTON:not(:last-child) {
+    margin-right: 1rem;
 }
 .CARDitemWait .CLASSitemBttns BUTTON {
     display: flex;
@@ -1694,7 +1703,6 @@ div#DASHBOARDit > DIV > DIV > P {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: none;
-    grid-gap: 1.6rem;
     background: antiquewhite;
     padding: 1rem;
 }
@@ -1783,10 +1791,16 @@ div#DASHBOARDit > DIV > DIV > P {
 .CARDitemData .CARDrequestContent .ITEMbox {
     margin:  1.6rem 0 0;
 }
+.CARDitemWait .CARDmainElem > .CARDleftIitem {
+    width: 100%;
+    margin-right: 1.6rem;
+}
 .CARDitemData .BASEinfoClient, .CARDitemWait .CARDleftIitem {
     display: flex;
     flex-direction: column;
-    grid-gap: 1.6rem;
+}
+.CARDitemData .BASEinfoClient > DIV:not(:last-child) {
+    margin-bottom: 1.6rem;
 }
 .CARDitemData  .INFOcliente > *:not(:first-child) {
     margin-top: 0.6rem;
@@ -2197,7 +2211,6 @@ ASIDE#PUSHmenu SECTION.LOGOmarc {
     }
 
     .CARDitemWait .CARDleftIitem {
-        grid-gap: initial;
         justify-content: space-between;
     }
     .CARDitemWait .CLASSbttnModal BUTTON {
@@ -2226,12 +2239,11 @@ ASIDE#PUSHmenu SECTION.LOGOmarc {
     .CARDitemWait .CLASSitemBttns BUTTON SPAN {
         display: none;
     }
-    .CARDitemWait > DIV {
-        grid-template-columns: 1fr 0fr;
-    }
     .CARDitemWait .CARDrightIitem > DIV:not(:last-child) {
         margin-bottom: initial;
-        grid-gap: 0.8rem;
+    }
+    .CARDitemWait .CARDrightIitem .RIGHTitemBttm > DIV:not(:last-child) {
+        margin-top: 0.8rem;
     }
     .CARDitemWait .RIGHTitemMaster {
         margin-bottom: 0.5rem;
@@ -2247,14 +2259,14 @@ ASIDE#PUSHmenu SECTION.LOGOmarc {
         height: 26px;
         font-size: 1.4rem;
     }
-    .CARDitemWait > DIV:not(:first-child) {
+    .CARDitemWait .CARDbttmElem {
         padding: 0.6rem 1.6rem 1rem;
-        grid-template-columns: none;
-        grid-template-rows: none;
         flex-direction: column;
         align-items: center;
-        grid-gap: 0.5rem;
         display: flex;
+    }
+    .CARDitemWait .CARDbttmElem > DIV:not(:last-child) {
+        margin-bottom: 0.5rem;
     }
     .CARDitemWait .CLASSitemTimestamp {
         font-size: 1.3rem;
