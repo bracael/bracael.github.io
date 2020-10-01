@@ -240,7 +240,7 @@ if(main === 'index'){
         const info = result.business.info;
         WAITINGinst.push(`
         <div class="CARDitemWait" data-id="${data[0]}">
-            <div>
+            <div class="CARDmainElem">
                 <div class="CARDleftIitem">
                     <div class="CLASSitemHead">
                         <span class="CLIENTnameSPAN">${data[1].client}</span>
@@ -267,7 +267,7 @@ if(main === 'index'){
                     </div>
                 </div>
             </div>
-            <div>
+            <div class="CARDbttmElem">
                 <div class="CLASSitemBttns">
                     <button type="button" name="WHATSsendContact" js-win="${i}"><i class="CROSSicon"></i><span>Enviar</span></button>
                     <button type="button" name="BTTNcssRota" onclick="javascript:window.open('https://www.google.com/maps/dir/${info.address.replace(/ /gi,'+')},+${info.number}+-+${info.region.replace(/ /gi,'+')},+${info.region.replace(/ /gi,'+')}+-+${info.unity},+${info.zipcode}/${data[1].street.replace(/ /gi,'+')},+${data[1].number}+-+${data[1].region.replace(/ /gi,'+')},+${info.region.replace(/ /gi,'+')}+-+${info.unity}')"><i class="CROSSicon"></i><span>Rota</span></button>
@@ -1237,16 +1237,16 @@ else if(main === 'item'){
     feed[edit].extra.map(function(data, i){
         itemIngredient.push(`
         <div class="GROUPexistItem" row="${i}">
-            <div>
-                <div>
+            <div class="FATHERelemGroup FIRSTupSide">
+                <div class="CHILDelemGroup FIRSTupSide">
                     <input type="text" name="FORMtargetItem" placeholder="Item" maxlength="45" value="${data[0]}">
                     <input type="input" name="FORMtargetLimit" placeholder="Limite" maxlength="1" size="1" value="${data[1]}">
                 </div>
-                <div>
+                <div class="CHILDelemGroup SECONDupSide">
                     <input type="text" name="FORMtargetDesc" placeholder="Descrição" maxlength="60"${data[2] != null ? ` value="${data[2]}"` : ''}>
                 </div>
             </div>
-            <div>
+            <div class="FATHERelemGroup SECONDupSide">
                 ${i != 0 ? `
                 <div class="ELEMbtnRemove">
                     <button type="button" name="removeIcmntItem" js-row="${i}"></button>
@@ -1352,16 +1352,16 @@ else if(main === 'item'){
         </div>` : `
         <div class="EDITmainAdd">
             <div class="GROUPexistItem" row="0">
-                <div>
-                    <div>
+                <div class="FATHERelemGroup FIRSTupSide">
+                    <div class="CHILDelemGroup FIRSTupSide">
                         <input type="text" name="FORMtargetItem" placeholder="Item" maxlength="45">
                         <input type="input" name="FORMtargetLimit" placeholder="Limite" maxlength="1" size="1">
                     </div>
-                    <div>
+                    <div class="CHILDelemGroup SECONDupSide">
                         <input type="text" name="FORMtargetDesc" placeholder="Descrição" maxlength="60">
                     </div>
                 </div>
-                <div>
+                <div class="FATHERelemGroup SECONDupSide">
                     <div class="ELEMsessPrice">
                         <label>R$</label>
                         <input type="text" name="FORMtargetPrice" placeholder="0" size="3" js-price="true">
@@ -1527,16 +1527,16 @@ else if(main === 'creatPost'){
             ${postCategory != 'Combo' && postCategory != 'Drinks' && postCategory != 'Promo' && postCategory != 'Dessert' ? `
             <div class="EDITmainAdd">
                 <div class="GROUPexistItem" row="0">
-                    <div>
-                        <div>
+                    <div class="FATHERelemGroup FIRSTupSide">
+                        <div class="CHILDelemGroup FIRSTupSide">
                             <input type="text" name="FORMtargetItem" placeholder="Item" maxlength="45">
                             <input type="input" name="FORMtargetLimit" placeholder="Limite" maxlength="1" size="1">
                         </div>
-                        <div>
+                        <div class="CHILDelemGroup SECONDupSide">
                             <input type="text" name="FORMtargetDesc" placeholder="Descrição" maxlength="60">
                         </div>
                     </div>
-                    <div>
+                    <div class="FATHERelemGroup SECONDupSide">
                         <div class="ELEMsessPrice">
                             <label>R$</label>
                             <input type="text" name="FORMtargetPrice" placeholder="0" size="3" js-price="true">
