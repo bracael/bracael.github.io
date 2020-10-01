@@ -1298,10 +1298,11 @@ else if(main === 'item'){
     document.querySelector('HEADER').getElementsByTagName('SPAN')[0].innerHTML = 'Editar produto';
     document.getElementsByTagName('ARTICLE')[0].innerHTML = `
     <div class="EDITheadMain">
-        <div>
-            <span>Você está publicando para ${typePost === 'Dessert' ? 'Bomboniere' : typePost === 'Drinks' ? 'Bebidas' : typePost === 'Servings' ? 'Porções' : typePost}</span>
+        <div class="GROUPactText">
+            <span class="LABELtextShort">${typePost === 'Dessert' ? 'Bomboniere' : typePost === 'Drinks' ? 'Bebidas' : typePost === 'Servings' ? 'Porções' : typePost}</span>
+            <span class="LABELtextLong">Você está publicando para ${typePost === 'Dessert' ? 'Bomboniere' : typePost === 'Drinks' ? 'Bebidas' : typePost === 'Servings' ? 'Porções' : typePost}</span>
         </div>
-        <div>
+        <div class="GROUPactBttns">
             <button type="button" name="BTTNupdateItem">Atualizar</button>
             <button type="button" onclick="window.location.href='?main=products'" name="fecharItem">Fechar</button>
         </div>
@@ -1363,7 +1364,7 @@ else if(main === 'item'){
                 <div>
                     <div class="ELEMsessPrice">
                         <label>R$</label>
-                        <input type="text" name="FORMtargetPrice" size="3" js-price="true">
+                        <input type="text" name="FORMtargetPrice" placeholder="0" size="3" js-price="true">
                     </div>
                 </div>
             </div>
@@ -1453,12 +1454,12 @@ else if(main === 'creatPost'){
     document.getElementsByTagName('ARTICLE')[0].innerHTML = `
     <div class="MAINbox">
         <div class="CHOOSEbttn">
-            <button type="button" name="editBurger" data-class="Burger">Burger</button>
-            <button type="button" name="editServings" data-class="Servings">Porção</button>
-            <button type="button" name="editDrinks" data-class="Drinks">Bebida</button>
-            <button type="button" name="editCombo" data-class="Combo">Combo</button>
-            <button type="button" name="editPomo" data-class="Promo">Promoção</button>
-            <button type="button" name="editDessert" data-class="Dessert">Bomboniere</button>
+            <button type="button" name="editBurger" data-class="Burger"><span>Burger</span></button>
+            <button type="button" name="editServings" data-class="Servings"><span>Porção</span></button>
+            <button type="button" name="editDrinks" data-class="Drinks"><span>Bebida</span></button>
+            <button type="button" name="editCombo" data-class="Combo"><span>Combo</span></button>
+            <button type="button" name="editPomo" data-class="Promo"><span>Promoção</span></button>
+            <button type="button" name="editDessert" data-class="Dessert"><span>Bomboniere</span></button>
         </div>
     </div>`;
 
@@ -1483,10 +1484,11 @@ else if(main === 'creatPost'){
 
         document.getElementsByTagName('ARTICLE')[0].innerHTML = `
         <div class="EDITheadMain">
-            <div>
-                <span>Você está publicando para ${this.innerText}</span>
+            <div class="GROUPactText">
+                <span class="LABELtextShort">${this.innerText}</span>
+                <span class="LABELtextLong">Você está publicando para ${this.innerText}</span>
             </div>
-            <div>
+            <div class="GROUPactBttns">
                 <button type="button" name="BTTNpublicItem">Publicar</button>
                 <button type="button" onclick="window.location.href='?main=products'" name="fecharItem">Fechar</button>
             </div>
@@ -1537,7 +1539,7 @@ else if(main === 'creatPost'){
                     <div>
                         <div class="ELEMsessPrice">
                             <label>R$</label>
-                            <input type="text" name="FORMtargetPrice" size="3" js-price="true">
+                            <input type="text" name="FORMtargetPrice" placeholder="0" size="3" js-price="true">
                         </div>
                     </div>
                 </div>
