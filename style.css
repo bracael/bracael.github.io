@@ -653,9 +653,7 @@ ARTICLE .ITEMinCommerce .SECTIONtext .TITLEspan SPAN {
 /*-------- MEUS PRODUTOS --------*/
 /*-------------------------------*/
 .CHOOSEbttn {
-    display: grid;
-    grid-template-columns: repeat(3, 0fr);
-    grid-gap: 1.6rem;
+    display: flex;
     justify-content: center;
 }
 .CHOOSEbttn button[type="button"] {
@@ -668,11 +666,24 @@ ARTICLE .ITEMinCommerce .SECTIONtext .TITLEspan SPAN {
     background: linear-gradient(45deg, rgba(0, 0, 0, 0.3) 0%, transparent 90%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0000004d', endColorstr='#00000000',GradientType=1 );
 }
+.CHOOSEbttn {
+    padding: 1.6rem;
+    flex-direction: column;
+}
+.CHOOSEbttn BUTTON {
+    width: 100% !IMPORTANT;
+    height: 112px !IMPORTANT;
+    font-weight: 700;
+    font-size: 2rem;
+    color: #585858;
+}
+.CHOOSEbttn BUTTON:not(:last-child) {
+    margin-bottom: 1.6rem;
+}
 
 
 .EDITheadMain {
-    display: grid;
-    grid-template-columns: max-content max-content;
+    display: flex;
     justify-content: space-between;
     padding: 3rem;
 }
@@ -734,7 +745,7 @@ ARTICLE .ITEMinCommerce .SECTIONtext .TITLEspan SPAN {
     padding: 8px 0;
     text-indent: 1.2rem;
 }
-.EDITindexMain .EDITmainText input, .EDITindexMain .EDITmainText .GROUPinputClass textarea {
+.EDITindexMain .EDITmainText input, .EDITindexMain .EDITmainText .GROUPinputClass TEXTAREA {
     color: #797979;
     background: transparent;
     width: 100%;
@@ -746,12 +757,13 @@ ARTICLE .ITEMinCommerce .SECTIONtext .TITLEspan SPAN {
 .EDITindexMain .EDITmainText input:focus {
     box-shadow: inset 0 0 0 1px #1273EB;
 }
-.EDITindexMain .EDITmainText .GROUPinputClass textarea {
+.EDITindexMain .EDITmainText .GROUPinputClass TEXTAREA {
     padding: 1rem;
     min-height: 100px;
     resize: none;
+    float: left;
 }
-.EDITindexMain .EDITmainText .GROUPinputClass textarea:focus {
+.EDITindexMain .EDITmainText .GROUPinputClass TEXTAREA:focus {
     box-shadow: inset 0 0 0 1px #1273EB, 0 0 0 4px rgba(18, 115, 235, 0.15);
 }
 .EDITindexMain .EDITmainText .GROUPinputClass > *, .EDITindexMain .GROUPaddItem > DIV > * {
@@ -874,6 +886,7 @@ ARTICLE .ITEMinCommerce .SECTIONtext .TITLEspan SPAN {
     content: "";
 }
 .EDITindexMain .EDITmainAdd .GROUPexistItem .ELEMsessPrice label {
+    color: #777;
     font-weight: 300;
     margin-right: 0.7rem;
 }
@@ -1717,7 +1730,9 @@ div#DASHBOARDit > DIV > DIV > P {
     font-weight: bold;
     display: flex;
     justify-content: flex-end;
-    grid-gap: 0.81rem;
+}
+.CARDitemWait .CARDrightIitem .RIGHTitemBttm .CLASSitemFirst .CROSSicon {
+    margin-right: 0.8rem;
 }
 .CARDitemWait .RIGHTitemBttm .CLASSitemFirst P {
     text-align: right;
@@ -1813,7 +1828,6 @@ div#DASHBOARDit > DIV > DIV > P {
     display: flex;
     flex-direction: row-reverse;
     margin-bottom: 1.8rem;
-    grid-gap: 1rem;
 }
 .CARDitemData .BTTMitemButton BUTTON {
     border-radius: 2px;
@@ -1826,6 +1840,9 @@ div#DASHBOARDit > DIV > DIV > P {
     vertical-align: middle;
     font-size: 1.4rem;
     font-weight: bold;
+}
+.CARDitemData .BTTMitemButton BUTTON:not(:last-child) {
+    margin-left: 1rem;
 }
 .CARDitemData .BTTMitemButton BUTTON[name="BTTNcomandConfirm"] {
     color: #fff;
@@ -2378,5 +2395,54 @@ ASIDE#PUSHmenu SECTION.LOGOmarc {
         content: "";
         background-image: url("data:image/svg+xml;base64,PHN2ZyBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA1MTUuNTU1IDUxNS41NTUiIHZpZXdCb3g9IjAgMCA1MTUuNTU1IDUxNS41NTUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgZmlsbD0iIzc3Nzc3NyI+PHBhdGggZD0ibTMwMy4zNDcgMTguODc1YzI1LjE2NyAyNS4xNjcgMjUuMTY3IDY1Ljk3MSAwIDkxLjEzOHMtNjUuOTcxIDI1LjE2Ny05MS4xMzggMC0yNS4xNjctNjUuOTcxIDAtOTEuMTM4YzI1LjE2Ni0yNS4xNjcgNjUuOTctMjUuMTY3IDkxLjEzOCAwIi8+PHBhdGggZD0ibTMwMy4zNDcgMjEyLjIwOWMyNS4xNjcgMjUuMTY3IDI1LjE2NyA2NS45NzEgMCA5MS4xMzhzLTY1Ljk3MSAyNS4xNjctOTEuMTM4IDAtMjUuMTY3LTY1Ljk3MSAwLTkxLjEzOGMyNS4xNjYtMjUuMTY3IDY1Ljk3LTI1LjE2NyA5MS4xMzggMCIvPjxwYXRoIGQ9Im0zMDMuMzQ3IDQwNS41NDFjMjUuMTY3IDI1LjE2NyAyNS4xNjcgNjUuOTcxIDAgOTEuMTM4cy02NS45NzEgMjUuMTY3LTkxLjEzOCAwLTI1LjE2Ny02NS45NzEgMC05MS4xMzhjMjUuMTY2LTI1LjE2NyA2NS45Ny0yNS4xNjcgOTEuMTM4IDAiLz48L3N2Zz4=");
     }
+
+    .EDITindexMain {
+        flex-direction: column;
+        border-radius: initial;
+        padding: 3rem 1.6rem 1.6rem;
+        overflow-x: hidden;
+        overflow-y: overlay;
+        height: calc(100vh - 102px);
+        margin: initial;
+    }
+    .EDITindexMain > DIV:not(:first-child) {
+        margin-top: 1.6rem;
+    }
+    .EDITindexMain > DIV:not(:last-child) {
+        margin-right: initial;
+    }
+    .EDITindexMain .EDITmainSemana {
+        width: 100%;
+    }
+    .EDITheadMain {
+        padding: 1.6rem;
+        box-shadow: rgba(0, 0, 0, 0.25) 0 0 16px;
+        position: relative;
+        z-index: 2;
+    }
+    .EDITheadMain .GROUPactText SPAN {
+        color: var( --color-aside-border);
+        font-family: var(--font-lato);
+        font-style: italic;
+        font-weight: 700;
+        font-size: 2rem;
+    }
+    .EDITheadMain .GROUPactBttns {
+        display: flex;
+        flex-direction: row-reverse;
+        height: 28px;
+    }
+    .EDITheadMain button[type="button"]:not(:last-child) {
+        margin-left: 1rem;
+        margin-right: initial;
+    }
+    .EDITheadMain .GROUPactText SPAN.LABELtextLong {
+        display: none;
+    }
+    .EDITheadMain .GROUPactText {
+        display: flex;
+        align-items: center;
+    }
+    
 
 }
