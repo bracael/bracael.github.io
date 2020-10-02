@@ -49,6 +49,11 @@
 html, body {
     height: 100vh;
 }
+body {
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
 body,
 input,
 button,
@@ -2181,9 +2186,6 @@ ASIDE#PUSHmenu SECTION.LOGOmarc {
         grid-template-columns: initial;
         -ms-grid-template-rows: initial;
         grid-template-rows: initial;
-        -webkit-transition: all 0.3s ease-in-out;
-        -o-transition: all 0.3s ease-in-out;
-        transition: all 0.3s ease-in-out;
     }
     ASIDE#PUSHmenu {
         max-width: 240px;
