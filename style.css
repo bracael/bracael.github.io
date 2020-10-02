@@ -1337,7 +1337,24 @@ ARTICLE .ITEMinCommerce .CHEVRONdown BUTTON::after {
 .SETTINGelemColumn .CLASSitemJSKEY.DISTRICTelemInput {
     margin-top: 1rem;
 }
-.SETTINGelemColumn .CLASSinputString .CLASSitemSecond > DIV:not(.CLASSitemBttm), .SETTINGelemColumn .CLASSitemJSKEY {
+.SETTINGelemColumn .CLASSinputString .CLASSitemSecond > DIV:not(.CLASSitemBttm) {
+    display: table;
+}
+.SETTINGelemColumn .CLASSinputString input[type="text"] {
+    width: 100%;
+}
+.SETTINGelemColumn .CLASSinputString .CLASSitemSecond .CLASSitemAddress INPUT:nth-child(1), .SETTINGelemColumn .CLASSinputString .CLASSitemSecond .CLASSitemAddress INPUT:nth-child(3), .SETTINGelemColumn .CLASSinputString .CLASSitemSecond .CLASSitemAddress INPUT:nth-child(5) {
+    max-width: 72%;
+}
+.SETTINGelemColumn .CLASSinputString .CLASSitemSecond .CLASSitemAddress INPUT:nth-child(2), .SETTINGelemColumn .CLASSinputString .CLASSitemSecond .CLASSitemAddress INPUT:nth-child(4), .SETTINGelemColumn .CLASSinputString .CLASSitemSecond .CLASSitemAddress INPUT:nth-child(6) {
+    margin-left: 1rem;
+    max-width: calc(28% - 1rem);
+}
+.SETTINGelemColumn .CLASSinputString .CLASSitemSecond .CLASSitemAddress INPUT:not(:last-child):not(:nth-child(5)) {
+    margin-bottom: 1rem;
+}
+
+.SETTINGelemColumn .CLASSitemJSKEY {
     display: flex;
 }
 .SETTINGelemColumn .CLASSitemJSKEY:not(.DISTRICTelemInput) INPUT:not(:last-child) {
@@ -2084,7 +2101,9 @@ div#DASHBOARDit > DIV > DIV > P {
     color: #d50000;
     display: flex;
     padding-top: 1rem;
-    grid-gap: 1rem;
+}
+.LOGINuserSpot .MSGerror SVG {
+    margin-right: 1rem;
 }
 .LOGINuserSpot .GROUPinput * {
     transition: all 0.2s ease-in-out;
