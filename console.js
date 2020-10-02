@@ -38,7 +38,7 @@ document.body.innerHTML = `
     <header>
         <span>Carregando...</span>
         <div>
-            <button type="text" name="userHead">
+            <button type="text" name="USERactMenu">
             <svg enable-background="new 0 0 515.556 515.556" height="18" viewBox="0 0 515.556 515.556" width="18" xmlns="http://www.w3.org/2000/svg" fill="#777777"><path d="m257.778 0c-142.137 0-257.778 115.641-257.778 257.778s115.641 257.778 257.778 257.778 257.778-115.641 257.778-257.778-115.642-257.778-257.778-257.778zm140.412 390.282c-88.007-44.093-194.425-45.965-284.592-4.146-30.464-34.181-49.153-79.073-49.153-128.358 0-106.61 86.723-193.333 193.333-193.333s193.333 86.723 193.333 193.333c0 51.296-20.213 97.861-52.921 132.504z"/><path d="m326.132 157.202c37.751 37.751 37.751 98.957 0 136.707s-98.957 37.751-136.707 0-37.751-98.957 0-136.707 98.956-37.751 136.707 0"/></svg>
             </button>
         </div>
@@ -69,7 +69,7 @@ document.querySelector('.BTNhref').addEventListener('click', function SWITCHmain
     : null;
 });
 
-document.querySelector('[name="userHead"]').addEventListener('click', function(){
+document.querySelector('[name="USERactMenu"]').addEventListener('click', function(){
 
     document.body.hasAttribute('style') ?
     document.body.removeAttribute('style') :
@@ -77,7 +77,7 @@ document.querySelector('[name="userHead"]').addEventListener('click', function()
 
 });
 
-// document.querySelector('[name="userEnd"]').addEventListener('click', function(){
+// document.querySelector('[name="USERactSair"]').addEventListener('click', function(){
 //     firebase.auth().signOut()
 // });
 
@@ -139,7 +139,7 @@ if(main === 'index'){
             DETAILres.push(`
             <div>
                 <div>
-                    <span>${item.amount}un</span><span><p>${item.title}</p><p>${item.weight === undefined ? item.grams >= 1000 ? (function(){
+                    <span>${item.amount}un</span><span>${item.title} ${item.weight === undefined ? item.grams >= 1000 ? (function(){
 
                         var countGrams = 0;
                         var atual = item.grams
@@ -176,7 +176,7 @@ if(main === 'index'){
                         else {
                             return `${countGrams}L`;
                         }
-                    })() : `${item.weight}ml`}</p></span><span>${Number(item.price).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</span>
+                    })() : `${item.weight}ml`}</span><span>${Number(item.price).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</span>
                 </div>
                 ${item.extra != undefined ? extraItem.join('\n') : ''}
                 ${item.comment != undefined ? `
@@ -678,9 +678,16 @@ if(main === 'index'){
                         status: ITEMstt
                     }).then(()=>{
                         CARDitemWait.querySelector('.CLASSitemFirst').setAttribute('data-status', `${ITEMstt == 'Em espera' ? 'WAITstt' : ITEMstt == 'Em preparo' ? 'PREPstt' : ITEMstt == 'Em retirada' ? 'DELYstt' : 'OKAYstt'}`);
-                        
+
+                        result.order[JSwinStatus].status = ITEMstt;
+
                         CARDitemWait.querySelector('.CLASSitemFirst').children[1].innerHTML = ITEMstt;
                         bracael.pushNotify(`Pedido de ${result.order[JSwinStatus].client} atualizado!`);
+
+                        $('.MODALdefault').fadeOut(200, function(){
+                            this.remove();
+                            document.body.removeAttribute('style');
+                        });
                     }) : null
                 }
             });
@@ -806,7 +813,7 @@ if(main === 'index'){
                     DETAILres.push(`
                     <div>
                         <div>
-                            <span>${item.amount}un</span><span><p>${item.title}</p><p>${item.weight === undefined ? item.grams >= 1000 ? (function(){
+                            <span>${item.amount}un</span><span>${item.title} ${item.weight === undefined ? item.grams >= 1000 ? (function(){
 
                                 var countGrams = 0;
                                 var atual = item.grams
@@ -843,7 +850,7 @@ if(main === 'index'){
                                 else {
                                     return `${countGrams}L`;
                                 }
-                            })() : `${item.weight}ml`}</p></span><span>${Number(item.price).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</span>
+                            })() : `${item.weight}ml`}</span><span>${Number(item.price).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</span>
                         </div>
                         ${item.extra != undefined ? extraItem.join('\n') : ''}
                         ${item.comment != undefined ? `
@@ -1718,7 +1725,7 @@ else if(main === 'settings'){
             ARRAYitemTime.push(`
             <div class="CLASSitemChild">
                 <input type="time" id="OPENtime" name="sun"${item[0] != '' ? ` value="${item[0]}"` : ''}>
-                às
+                <span>às</span>
                 <input type="time" id="CLOSEDtime" name="sun"${item[1] != '' ? ` value="${item[1]}"` : ''}>
                 ${ii != 0 ? '<a href="javascript:void(0);" class="REMOVEthisElem">Excluir</a>' : ''}
             </div>`)
@@ -2313,7 +2320,7 @@ else if(main === 'settings'){
             document.querySelector(`.CLASSsemanaItem[data-item="${this.getAttribute('data-alvo')}"]`).querySelector('.CLASSitemTime').insertAdjacentHTML('beforeend', `
             <div class="CLASSitemChild">
             <input type="time" id="OPENtime" name="sun">
-            às
+            <span>às</span>
             <input type="time" id="CLOSEDtime" name="sun">
             <a href="javascript:void(0);" class="REMOVEthisElem">Excluir</a></div>`);
 
