@@ -49,11 +49,6 @@
 html, body {
     height: 100vh;
 }
-body {
-    -webkit-transition: all 0.3s ease-in-out;
-    -o-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
-}
 body,
 input,
 button,
@@ -477,13 +472,6 @@ ARTICLE > SPAN {
     font-weight: 900;
 }
 ARTICLE .MASTERmain {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: max-content max-content;
-    grid-template-columns: max-content max-content;
-    -ms-grid-template-rows: 1fr;
-    grid-template-rows: 1fr;
-    justify-content: space-between;
     padding: 0 0 2.2rem;
 }
 ARTICLE .MASTERmain button[name="creatProduct"] {
@@ -568,8 +556,13 @@ ARTICLE .ITEMinCommerce > DIV.SECTIONtext {
     justify-content: space-evenly;
 }
 ARTICLE .ITEMinCommerce > DIV {
+    width: 100%;
     display: flex;
     padding: 10px;
+}
+
+ARTICLE .ITEMinCommerce .SECTIONtext > DIV:not(:last-child):not(.CHEVRONdown) {
+    margin-bottom: 1.2rem;
 }
 ARTICLE .ITEMinCommerce .SECTIONtext .TITLEspan {
     display: inline-grid;
@@ -583,6 +576,38 @@ ARTICLE .ITEMinCommerce .SECTIONtext .TITLEspan SPAN {
     display: block;
 }
 
+ARTICLE .ITEMinCommerce .THUMBandText > DIV {
+    width: 100%;
+}
+ARTICLE .ITEMinCommerce .SECTIONtext {
+    margin-left: 1.6rem;
+    position: relative;
+}
+ARTICLE .ITEMinCommerce .CHEVRONdown {
+    position: absolute;
+    right: 0;
+    background: linear-gradient(90deg,rgba(198,223,178,0) 0,rgb(255 255 255) 50%);
+    padding-left: 22px;
+    -webkit-box-sizing: initial;
+    box-sizing: initial;
+}
+
+ARTICLE .ITEMinCommerce .CHEVRONdown BUTTON {
+    padding: 7px;
+    position: relative;
+    border-radius: 50%;
+    z-index: 2;
+}
+ARTICLE .ITEMinCommerce .CHEVRONdown BUTTON::after {
+    width: 18px;
+    height: 18px;
+    display: block;
+}
+
+ARTICLE .ITEMinCommerce .CHEVRONdown BUTTON::after {
+    content: "";
+    background-image: url("data:image/svg+xml;base64,PHN2ZyBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA1MTUuNTU1IDUxNS41NTUiIHZpZXdCb3g9IjAgMCA1MTUuNTU1IDUxNS41NTUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgZmlsbD0iIzc3Nzc3NyI+PHBhdGggZD0ibTMwMy4zNDcgMTguODc1YzI1LjE2NyAyNS4xNjcgMjUuMTY3IDY1Ljk3MSAwIDkxLjEzOHMtNjUuOTcxIDI1LjE2Ny05MS4xMzggMC0yNS4xNjctNjUuOTcxIDAtOTEuMTM4YzI1LjE2Ni0yNS4xNjcgNjUuOTctMjUuMTY3IDkxLjEzOCAwIi8+PHBhdGggZD0ibTMwMy4zNDcgMjEyLjIwOWMyNS4xNjcgMjUuMTY3IDI1LjE2NyA2NS45NzEgMCA5MS4xMzhzLTY1Ljk3MSAyNS4xNjctOTEuMTM4IDAtMjUuMTY3LTY1Ljk3MSAwLTkxLjEzOGMyNS4xNjYtMjUuMTY3IDY1Ljk3LTI1LjE2NyA5MS4xMzggMCIvPjxwYXRoIGQ9Im0zMDMuMzQ3IDQwNS41NDFjMjUuMTY3IDI1LjE2NyAyNS4xNjcgNjUuOTcxIDAgOTEuMTM4cy02NS45NzEgMjUuMTY3LTkxLjEzOCAwLTI1LjE2Ny02NS45NzEgMC05MS4xMzhjMjUuMTY2LTI1LjE2NyA2NS45Ny0yNS4xNjcgOTEuMTM4IDAiLz48L3N2Zz4=");
+}
 
 
 
@@ -1067,13 +1092,15 @@ ARTICLE .ITEMinCommerce .SECTIONtext .TITLEspan SPAN {
     margin-bottom: 1rem;
 }
 .MODALdefault.WINDOWmodalCliente .MODALelemMsg .DIVISORitemP {
-    display: grid;
-    grid-template-columns: minmax(76px, 0fr) 1fr;
-    grid-gap: 1.6rem;
+    display: flex;
+}
+.MODALdefault.WINDOWmodalCliente .MODALelemMsg .DIVISORitemP P:not(:first-child) {
+    margin-left: 1.6rem;
 }
 .MODALdefault.WINDOWmodalCliente .MODALelemMsg .DIVISORitemP P:first-child {
     text-align: right;
     font-weight: bold;
+    min-width: 76px;
 }
 .MODALdefault.WINDOWmodalCliente .MODALelemMsg P {
     font-weight: 500;
@@ -1108,15 +1135,33 @@ ARTICLE .ITEMinCommerce .SECTIONtext .TITLEspan SPAN {
     line-height: 1.6;
     text-align: center;
 }
+
+
 .MODALdefault.WINDOWmodalComanda .CONTENTmodal > STRONG, .MODALdefault.WINDOWmodalComanda .CONTENTmodal .COMMANDlist LI {
-    display: grid;
-    grid-template-columns: minmax(20px,0fr) minmax(52px,0fr) 1fr minmax(24px,0fr) minmax(50px,0fr);
-    grid-template-rows: 1fr;
-    grid-gap: 1.6rem;
+    display: flex;
 }
+.MODALdefault.WINDOWmodalComanda .CONTENTmodal > STRONG SPAN:not(:last-child), .MODALdefault.WINDOWmodalComanda .CONTENTmodal .COMMANDlist LI SPAN:not(:last-child) {
+    margin-right: 1.6rem;
+}
+.MODALdefault.WINDOWmodalComanda .CONTENTmodal > STRONG SPAN, .MODALdefault.WINDOWmodalComanda .CONTENTmodal .COMMANDlist LI SPAN {
+    width: 100%;
+}
+.MODALdefault.WINDOWmodalComanda .CONTENTmodal > STRONG SPAN:nth-child(1), .MODALdefault.WINDOWmodalComanda .CONTENTmodal .COMMANDlist LI SPAN:nth-child(1) {
+    max-width: 20px;
+}
+.MODALdefault.WINDOWmodalComanda .CONTENTmodal > STRONG SPAN:nth-child(2), .MODALdefault.WINDOWmodalComanda .CONTENTmodal .COMMANDlist LI SPAN:nth-child(2) {
+    max-width: 56px;
+}
+.MODALdefault.WINDOWmodalComanda .CONTENTmodal > STRONG SPAN:nth-child(4), .MODALdefault.WINDOWmodalComanda .CONTENTmodal .COMMANDlist LI SPAN:nth-child(4) {
+    max-width: 24px;
+}
+.MODALdefault.WINDOWmodalComanda .CONTENTmodal > STRONG SPAN:nth-child(5), .MODALdefault.WINDOWmodalComanda .CONTENTmodal .COMMANDlist LI SPAN:nth-child(5) {
+    max-width: 50px;
+}
+
+
+
 .MODALdefault.WINDOWmodalComanda .CONTENTmodal .COMMANDlist LI SPAN {
-    display: block;
-    grid-gap: 0.5rem;
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
@@ -1136,8 +1181,8 @@ ARTICLE .ITEMinCommerce .SECTIONtext .TITLEspan SPAN {
     border-top-width: 1px;
     border-top-style: dashed;
     border-top-color: initial;
-    padding: 0.7rem 0 0;
-    margin: 0.6rem 0 0;
+    padding: 0.9rem 0 0;
+    margin: 0.9rem 0 0;
 }
 .MODALdefault.WINDOWmodalComanda .CONTENTmodal .COMMANDsend {
     margin-top: 1rem;
@@ -1285,14 +1330,15 @@ ARTICLE .ITEMinCommerce .SECTIONtext .TITLEspan SPAN {
 .SETTINGelemColumn .CLASSitemJSKEY.DISTRICTelemInput {
     margin-top: 1rem;
 }
-.SETTINGelemColumn .CLASSinputString .CLASSitemSecond > DIV:not(.CLASSitemBttm), .SETTINGelemColumn .CLASSitemJSKEY:not(.DISTRICTelemInput) {
-    display: grid;
-    grid-gap: 1rem;
+.SETTINGelemColumn .CLASSinputString .CLASSitemSecond > DIV:not(.CLASSitemBttm), .SETTINGelemColumn .CLASSitemJSKEY {
+    display: flex;
 }
-.SETTINGelemColumn .CLASSinputString .CLASSitemAddress {
-    grid-template-columns: 1fr minmax(26%, 0fr);
+.SETTINGelemColumn .CLASSitemJSKEY:not(.DISTRICTelemInput) INPUT:not(:last-child) {
+    margin-right: 1rem;
 }
-
+.SETTINGelemColumn .CLASSitemJSKEY input[type="text"][js-key="rate"] {
+    max-width: 26%;
+}
 .SETTINGelemColumn .CLASSitemMedia .CLASSitemSecond .CLASSitemCEP {
     margin-bottom: 1rem;
 }
@@ -1316,9 +1362,12 @@ ARTICLE .ITEMinCommerce .SECTIONtext .TITLEspan SPAN {
 }
 .SETTINGelemColumn .CLASSitemMedia .CLASSitemSecond > DIV > DIV {
     display: flex;
-    grid-gap: 1.3rem;
     align-items: center;
 }
+.SETTINGelemColumn .CLASSitemMedia .CLASSitemSecond .CLASSitemTime > DIV > *:not(:last-child) {
+    margin-right: 1.3rem;
+}
+
 .SETTINGelemColumn .CLASSitemMedia .CLASSitemSecond > DIV > DIV:not(:last-child) {
     margin-bottom: 1rem;
 }
@@ -1336,7 +1385,6 @@ ARTICLE .ITEMinCommerce .SECTIONtext .TITLEspan SPAN {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    grid-gap: 1rem;
 }
 .SETTINGelemColumn .CLASSitemMedia .CLASSitemSecond input[type="time"] {
     background: rgb(0 0 0 / 0.1);
@@ -1383,15 +1431,15 @@ ARTICLE .ITEMinCommerce .SECTIONtext .TITLEspan SPAN {
     z-index: 101;
 }
 
-.SETTINGelemColumn .CLASSitemMedia .CLASSitemMessage > SPAN {
-    font-weight: bold;
-    font-size: 2rem;
-}
 .SETTINGelemColumn .CLASSitemMedia .CLASSitemMessage {
     flex-direction: column;
     align-items: center;
-    grid-gap: 1rem;
     padding: 3rem;
+}
+.SETTINGelemColumn .CLASSitemMedia .CLASSitemMessage > SPAN {
+    margin-bottom: 1rem;
+    font-weight: bold;
+    font-size: 2rem;
 }
 
 
@@ -1401,7 +1449,7 @@ ARTICLE .ITEMinCommerce .SECTIONtext .TITLEspan SPAN {
 .HEADERnavScreen {
     display: flex;
     background: var(--color-clean);
-    box-shadow: hsl(0, 0%, 80%) 0 0 16px;
+    box-shadow: #cccccc 0 0 16px;
     margin-bottom: 1rem;
     position: -webkit-sticky;
     position: -moz-sticky;
@@ -1534,6 +1582,7 @@ div#DASHBOARDit > DIV > DIV > P {
 .CARDitemWait .CARDbttmElem {
     background: #FAFAFC;
     border-top: 1px solid #EFEEF9;
+    justify-content: space-between;
 }
 .CARDitemWait .CLASSitemTimestamp {
     display: flex;
@@ -1582,7 +1631,6 @@ div#DASHBOARDit > DIV > DIV > P {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    grid-gap: 1.2rem;
     height: 26px;
     padding: 0 1rem 2px;
     padding-right: 1.3rem;
@@ -1592,6 +1640,9 @@ div#DASHBOARDit > DIV > DIV > P {
     box-shadow: inset 0px -2px 0px 0px rgb(0 0 0 / 0.15);
     color: rgb(0 0 0 / 50%);
     font-weight: 500;
+}
+.CARDitemWait .CLASSitemBttns BUTTON SPAN {
+    margin-left: 1.2rem;
 }
 .CARDitemWait .CLASSitemBttns BUTTON[name="WHATSsendContact"]:hover {
     color: #fff;
@@ -1684,7 +1735,6 @@ div#DASHBOARDit > DIV > DIV > P {
     font-weight: bold;
     display: flex;
     align-items: center;
-    grid-gap: 1rem;
 }
 .CARDitemWait .RIGHTitemMaster BUTTON:hover {
     background: #a20a0a;
@@ -1693,17 +1743,22 @@ div#DASHBOARDit > DIV > DIV > P {
     color: #fff;
     fill: #fff;
 }
-
+.CARDitemWait .RIGHTitemMaster BUTTON SPAN {
+    margin-left: 1rem;
+    white-space: nowrap;
+}
 .CARDitemWait .CARDrightIitem {
     display: grid;
     grid-template-columns: none;
     grid-template-rows: 1fr max-content;
+    width: max-content;
+    min-width: 33%;
 }
 .CARDitemWait .CARDrightIitem .RIGHTitemBttm {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: none;
-    background: antiquewhite;
+    background: #fad7d7;
     padding: 1rem;
 }
 .CARDitemWait .CARDrightIitem .RIGHTitemBttm .CLASSitemSecond {
@@ -1716,9 +1771,10 @@ div#DASHBOARDit > DIV > DIV > P {
     background-color: #279acc;
     border-bottom: 2px solid #1682b5;
     height: 30px;
-    padding-top: 4px;
+    padding: 0 1.3rem;
     margin: 0 1rem;
     font-weight: 500;
+    white-space: nowrap;
 }
 
 .CARDitemWait .CARDrightIitem .RIGHTitemBttm .CLASSitemSecond button[name="WINDOWmodalStatus"]:hover {
@@ -1743,6 +1799,7 @@ div#DASHBOARDit > DIV > DIV > P {
     margin-right: 0.8rem;
 }
 .CARDitemWait .RIGHTitemBttm .CLASSitemFirst P {
+    color: #777;
     text-align: right;
 }
 .CARDitemWait .CARDrightIitem .RIGHTitemBttm .CLASSitemFirst[data-status="WAITstt"] .CROSSicon::after {
@@ -1781,12 +1838,12 @@ div#DASHBOARDit > DIV > DIV > P {
 }
 .CARDitemData .CARDrequestContent {
     display: flex;
-    grid-gap: 1.6rem;
 }
-
-
 .CARDitemData .CARDrequestContent > DIV {
     width: 100%;
+}
+.CARDitemData .CARDrequestContent > DIV:not(:last-child) {
+    margin-right: 1.6rem;
 }
 .CARDitemData .CARDrequestContent .ITEMbox {
     margin:  1.6rem 0 0;
@@ -1794,6 +1851,10 @@ div#DASHBOARDit > DIV > DIV > P {
 .CARDitemWait .CARDmainElem > .CARDleftIitem {
     width: 100%;
     margin-right: 1.6rem;
+    justify-content: space-between;
+}
+.CARDitemWait .CARDleftIitem .CLASSitemHead {
+    margin-bottom: 1.6rem;
 }
 .CARDitemData .BASEinfoClient, .CARDitemWait .CARDleftIitem {
     display: flex;
@@ -1812,6 +1873,9 @@ div#DASHBOARDit > DIV > DIV > P {
 .CARDitemData .BASEinfoRequest {
     color: #444;
 }
+.CARDitemData .CARDrequestContent .BASEinfoRequest .COMANDAitemData {
+    font-size: 1.4rem;
+}
 .CARDitemData .BASEinfoRequest .COMANDAitemData > DIV, .CARDitemData .BASEinfoRequest .COMANDAitemData > P {
     padding: 8px 12px;
     line-height: 20px;
@@ -1823,17 +1887,30 @@ div#DASHBOARDit > DIV > DIV > P {
     background-color: #f5f5f5;
 }
 .CARDitemData .BASEinfoRequest .COMANDAitemData > DIV > DIV, .CARDitemData .BASEinfoRequest .COMANDAitemData > P {
-    display: grid;
-    grid-template-columns: minmax(36px, 0fr) 1fr 0fr;
-    grid-template-rows: max-content;
-}
-.CARDitemData .BASEinfoRequest .COMANDAitemData > DIV > DIV SPAN {
     display: flex;
-    grid-gap: 0.5rem;
 }
-.CARDitemData .BASEinfoRequest .COMANDAitemData > DIV > DIV SPAN P, .MODALdefault.WINDOWmodalComanda .CONTENTmodal .COMMANDlist LI SPAN P {
-    width: max-content;
+.CARDitemData .BASEinfoRequest .COMANDAitemData > DIV > DIV SPAN:not(:last-child), .CARDitemData .BASEinfoRequest .COMANDAitemData > P SPAN:not(:last-child) {
+    margin-right: 1.6rem;
 }
+.CARDitemData .BASEinfoRequest .COMANDAitemData > DIV > DIV SPAN, .CARDitemData .BASEinfoRequest .COMANDAitemData > P SPAN {
+    width: 100%;
+}
+.CARDitemData .BASEinfoRequest .COMANDAitemData > DIV > DIV SPAN:nth-child(1), .CARDitemData .BASEinfoRequest .COMANDAitemData > P SPAN:nth-child(1) {
+    max-width: 32px;
+}
+.CARDitemData .BASEinfoRequest .COMANDAitemData > DIV > DIV SPAN:nth-child(2) {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.CARDitemData .BASEinfoRequest .COMANDAitemData > DIV > DIV SPAN:nth-child(3), .CARDitemData .BASEinfoRequest .COMANDAitemData > P SPAN:nth-child(3) {
+    width: initial;
+    white-space: nowrap;
+}
+.CARDitemData .BASEinfoRequest .COMANDAitemData > DIV > DIV SPAN:last-child, .CARDitemData .BASEinfoRequest .COMANDAitemData > P SPAN:last-child {
+    text-align: right;
+}
+
 .CARDitemData .BASEinfoRequest .COMANDAitemData > P {
     background: darkgrey;
     color: #fff;
@@ -1911,7 +1988,6 @@ div#DASHBOARDit > DIV > DIV > P {
     display: flex;
     padding: 0.4rem;
     align-items: center;
-    grid-gap: 0.6rem;
 }
 .CHANGEradioStatus .MODALelemMsg DIV LABEL {
     font-size: 1.5rem;
@@ -2092,6 +2168,9 @@ ASIDE#PUSHmenu SECTION.LOGOmarc {
         background: initial;
         z-index: initial;
     }
+    ARTICLE .MASTERmain button[name="creatProduct"] SVG {
+        display: none;
+    }
 }
 
 @media screen and (max-width: 720px){
@@ -2102,6 +2181,9 @@ ASIDE#PUSHmenu SECTION.LOGOmarc {
         grid-template-columns: initial;
         -ms-grid-template-rows: initial;
         grid-template-rows: initial;
+        -webkit-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
     }
     ASIDE#PUSHmenu {
         max-width: 240px;
@@ -2204,15 +2286,16 @@ ASIDE#PUSHmenu SECTION.LOGOmarc {
         line-height: 30px;
     }
 
+    .CARDitemWait .CARDleftIitem .CLASSitemHead {
+        margin-bottom: initial;
+    }
     .CARDitemWait .CARDrightIitem {
         display: flex;
         grid-template-rows: none;
         flex-direction: column-reverse;
+        min-width: initial;
     }
 
-    .CARDitemWait .CARDleftIitem {
-        justify-content: space-between;
-    }
     .CARDitemWait .CLASSbttnModal BUTTON {
         box-shadow: initial;
         width: initial;
@@ -2252,10 +2335,11 @@ ASIDE#PUSHmenu SECTION.LOGOmarc {
     .CARDitemWait .CARDrightIitem .RIGHTitemBttm .CLASSitemFirst {
         text-align: right;
     }
+    .CARDitemWait .RIGHTitemBttm .CLASSitemFirst P {
+        color: inherit;
+    }
     .CARDitemWait .CARDrightIitem .RIGHTitemBttm .CLASSitemSecond button[name="WINDOWmodalStatus"] {
         margin: initial;
-        white-space: nowrap;
-        padding: 3px 1.3rem 0;
         height: 26px;
         font-size: 1.4rem;
     }
@@ -2263,6 +2347,7 @@ ASIDE#PUSHmenu SECTION.LOGOmarc {
         padding: 0.6rem 1.6rem 1rem;
         flex-direction: column;
         align-items: center;
+        justify-content: initial;
         display: flex;
     }
     .CARDitemWait .CARDbttmElem > DIV:not(:last-child) {
@@ -2306,13 +2391,11 @@ ASIDE#PUSHmenu SECTION.LOGOmarc {
         min-width: 60vw;
     }
     .CARDitemData .CARDrequestContent .BASEinfoRequest {
-        min-width: 83.66vw;
+        min-width: 84vw;
     }
     .CARDitemData .CARDrequestContent {
         overflow-x: overlay;
         overflow-y: hidden;
-        display: grid;
-        grid-template-columns: max-content max-content;
     }
     .CARDitemData .CARDrequestContent .ITEMbox {
         margin: 1.6rem 0;
@@ -2324,9 +2407,7 @@ ASIDE#PUSHmenu SECTION.LOGOmarc {
     ARTICLE .MASTERmain {
         bottom: 20px;
         right: 20px;
-        align-items: center;
         display: flex;
-        flex-direction: row-reverse;
         position: fixed;
         z-index: 118;
         padding: initial;
@@ -2359,9 +2440,6 @@ ASIDE#PUSHmenu SECTION.LOGOmarc {
         flex-direction: column;
         padding: 1.4rem;
     }
-    ARTICLE .ITEMinCommerce .SECTIONtext > DIV:not(:last-child):not(.CHEVRONdown) {
-        margin-bottom: 1.2rem;
-    }
 
     .LOGINuserSpot {
         background: #fff;
@@ -2375,38 +2453,6 @@ ASIDE#PUSHmenu SECTION.LOGOmarc {
         padding: initial;
     }
 
-    ARTICLE .ITEMinCommerce .THUMBandText > DIV {
-        width: 100%;
-    }
-    ARTICLE .ITEMinCommerce .SECTIONtext {
-        margin-left: 1.6rem;
-        position: relative;
-    }
-    ARTICLE .ITEMinCommerce .CHEVRONdown {
-        position: absolute;
-        right: 0;
-        background: linear-gradient(90deg,rgba(198,223,178,0) 0,rgb(255 255 255) 50%);
-        padding-left: 22px;
-        -webkit-box-sizing: initial;
-        box-sizing: initial;
-    }
-    
-    ARTICLE .ITEMinCommerce .CHEVRONdown BUTTON {
-        padding: 7px;
-        position: relative;
-        border-radius: 50%;
-        z-index: 2;
-    }
-    ARTICLE .ITEMinCommerce .CHEVRONdown BUTTON::after {
-        width: 18px;
-        height: 18px;
-        display: block;
-    }
-    
-    ARTICLE .ITEMinCommerce .CHEVRONdown BUTTON::after {
-        content: "";
-        background-image: url("data:image/svg+xml;base64,PHN2ZyBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA1MTUuNTU1IDUxNS41NTUiIHZpZXdCb3g9IjAgMCA1MTUuNTU1IDUxNS41NTUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgZmlsbD0iIzc3Nzc3NyI+PHBhdGggZD0ibTMwMy4zNDcgMTguODc1YzI1LjE2NyAyNS4xNjcgMjUuMTY3IDY1Ljk3MSAwIDkxLjEzOHMtNjUuOTcxIDI1LjE2Ny05MS4xMzggMC0yNS4xNjctNjUuOTcxIDAtOTEuMTM4YzI1LjE2Ni0yNS4xNjcgNjUuOTctMjUuMTY3IDkxLjEzOCAwIi8+PHBhdGggZD0ibTMwMy4zNDcgMjEyLjIwOWMyNS4xNjcgMjUuMTY3IDI1LjE2NyA2NS45NzEgMCA5MS4xMzhzLTY1Ljk3MSAyNS4xNjctOTEuMTM4IDAtMjUuMTY3LTY1Ljk3MSAwLTkxLjEzOGMyNS4xNjYtMjUuMTY3IDY1Ljk3LTI1LjE2NyA5MS4xMzggMCIvPjxwYXRoIGQ9Im0zMDMuMzQ3IDQwNS41NDFjMjUuMTY3IDI1LjE2NyAyNS4xNjcgNjUuOTcxIDAgOTEuMTM4cy02NS45NzEgMjUuMTY3LTkxLjEzOCAwLTI1LjE2Ny02NS45NzEgMC05MS4xMzhjMjUuMTY2LTI1LjE2NyA2NS45Ny0yNS4xNjcgOTEuMTM4IDAiLz48L3N2Zz4=");
-    }
 
     .EDITindexMain {
         flex-direction: column;
