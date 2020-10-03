@@ -38,6 +38,7 @@ document.body.innerHTML = `
     <header>
         <span>Carregando...</span>
         <div>
+            <span class="STATUScode">Carregando...</span>
             <button type="text" name="USERactMenu">
             <svg enable-background="new 0 0 515.556 515.556" height="18" viewBox="0 0 515.556 515.556" width="18" xmlns="http://www.w3.org/2000/svg" fill="#777777"><path d="m257.778 0c-142.137 0-257.778 115.641-257.778 257.778s115.641 257.778 257.778 257.778 257.778-115.641 257.778-257.778-115.642-257.778-257.778-257.778zm140.412 390.282c-88.007-44.093-194.425-45.965-284.592-4.146-30.464-34.181-49.153-79.073-49.153-128.358 0-106.61 86.723-193.333 193.333-193.333s193.333 86.723 193.333 193.333c0 51.296-20.213 97.861-52.921 132.504z"/><path d="m326.132 157.202c37.751 37.751 37.751 98.957 0 136.707s-98.957 37.751-136.707 0-37.751-98.957 0-136.707 98.956-37.751 136.707 0"/></svg>
             </button>
@@ -52,10 +53,20 @@ document.body.innerHTML = `
 </main>
 
 <div class="HIDDENmenu">
-Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não só a cinco séculos, como também ao salto para a editoração eletrônica, permanecendo essencialmente inalterado. Se popularizou na década de 60, quando a Letraset lançou decalques contendo passagens de Lorem Ipsum, e mais recentemente quando passou a ser integrado a softwares de editoração eletrônica como Aldus PageMaker.
+        <small>Carregando...<small>
 </div>
 
 </div>`;
+
+
+// if(window.innerWidth < 921){
+//     //MOBILE
+//     console.log(window.innerWidth, 'IF')
+// }
+// else {
+//     //DESKTOP
+//     console.log(window.innerWidth, 'ELSE')
+// }
 
 
 document.querySelector('.BTNhref').addEventListener('click', function SWITCHmain(){
@@ -76,10 +87,6 @@ document.querySelector('[name="USERactMenu"]').addEventListener('click', functio
     document.body.style.transform = ("translate3d(-256px, 0, 0)");
 
 });
-
-// document.querySelector('[name="USERactSair"]').addEventListener('click', function(){
-//     firebase.auth().signOut()
-// });
 
 const database = firebase.database();
 const ARRAYweek = ["Domingo", "Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado"]
@@ -104,12 +111,97 @@ var url = new URL(window.location.href);
 var main = url.searchParams.get('main');
 var edit = url.searchParams.get('edit');
 
-console.log(parseInt(Math.random()*1000000000, 10))
+// console.log(parseInt(Math.random()*1000000000, 10))
 
 fetch(firebaseConfig.databaseURL+'/.json')
 .then((response) => response.json())
 .then((result) => {
     const feed = result.feed;
+
+    if(result.business.status){
+        document.querySelector('.STATUScode').innerHTML = 'Delivery aberto!';
+        document.querySelector('.STATUScode').classList.add('ABERTOit');
+    }
+    else {
+        document.querySelector('.STATUScode').innerHTML = 'Delivery fechado!';
+        document.querySelector('.STATUScode').classList.add('FECHADOit');
+    }
+
+    fetch('https://bracaelcom.firebaseio.com/client/'+firebaseConfig.projectId+'/.json')
+    .then((response) => response.json())
+    .then((data) => {
+
+        document.querySelector('.HIDDENmenu').innerHTML = `
+        <div class="TITLEmenuHidden">
+            <span>Ferramentas</span>
+        </div>
+
+        <div class="GRIDelemInput">
+            <span>Razão social</span>
+            <p>${data.brand}</p>
+        </div>
+
+        <div class="GRIDelemInput">
+            <span>Comércio</span>
+            <p>${data.commerce === 'hamburger' ? 'Hambúrgueria' : 'ERRO 500'}</p>
+        </div>
+
+        <div class="GRIDelemInput">
+            <span>Status</span>
+            <p>${data.invoice ? 'Ativo' : 'Pendente'}</p>
+        </div>
+
+        <div class="GRIDelemInput">
+            <button type="text" name="USERactSair">Sair</button>
+        </div>`;
+
+        document.querySelector('[name="USERactSair"]').addEventListener('click', function(){
+            document.body.insertAdjacentHTML('beforeend', `
+            <div class="MODALdefault WINDOWsairAccount" id="REMOVEitem">
+                <div class="MODALinst">
+                <div class="CONTENTmodal">
+                    <div class="MODALelemTitle">
+                        <span>Sair da conta?</span>
+                    </div>
+                    <div class="MODALelemMsg">Confirme para sair da conta.</div>
+                    <div class="MODALelemFooter">
+                        <button type="button" name="ACTIONitemCancel">Cancelar</button>
+                        <button type="button" name="ACTIONitemRemove">Confirmar</button>
+                    </div>
+                </div>
+                </div>
+            </div>`);
+
+            document.body.classList.add('WINDOWopenAccount')
+
+            $(REMOVEitem).fadeIn(200, function(){
+                this.querySelector('[name="ACTIONitemCancel"]').addEventListener('click', function(){
+                    $(REMOVEitem).fadeOut(200, function(){
+                        this.remove();
+                        document.body.classList.remove('WINDOWopenAccount');
+                    });
+                });
+
+                this.querySelector('[name="ACTIONitemRemove"]').addEventListener('click', function(){
+                    firebase.auth().signOut()
+                    document.body.removeAttribute('style');
+                    setTimeout(()=>{
+                        document.body.classList.remove('WINDOWopenAccount')
+                    }, 3000)
+                });
+            });
+
+            document.querySelector('.MODALdefault').querySelector('.CONTENTmodal').insertAdjacentHTML('beforebegin', '<div class="SCREENmodal CLOSEmodal"></div>');
+            if(document.body.contains(document.querySelector('.CLOSEmodal'))){
+                document.querySelector('.CLOSEmodal').addEventListener('click', function click(e){
+                    $(REMOVEitem).fadeOut(200, function(){
+                        this.remove();
+                        document.body.classList.remove('WINDOWopenAccount');
+                    });
+                });}
+        });
+    });
+
 
 if(main != null && main != ''){
 if(main === 'index'){
@@ -1977,9 +2069,14 @@ else if(main === 'settings'){
         }).then(()=>{
             if(this.checked){
                 document.querySelector('[for="SWITCHit"]').innerText = 'Aberto';
+                document.querySelector('.STATUScode').innerText = 'Delivery aberto!';
+                document.querySelector('.STATUScode').setAttribute('class', 'STATUScode ABERTOit')
+
             }
             else {
                 document.querySelector('[for="SWITCHit"]').innerText = 'Fechado';
+                document.querySelector('.STATUScode').innerText = 'Delivery fechado!';
+                document.querySelector('.STATUScode').setAttribute('class', 'STATUScode FECHADOit')
             }
         })
     })
@@ -2108,21 +2205,57 @@ else if(main === 'settings'){
 
             if(!IFitemBase.includes(false)){
                 database.ref('business/info').update(OBJitemBase).then(()=>{
+
+                    const data = result.business.info;
                     var ITEMstrConst = null;
                     if(CLASSjs === 'CLASSitemMinmax'){
                         ITEMstrConst = OBJitemBase.minvalue.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })
+                        data.minvalue != OBJitemBase.minvalue ?
+                        data.minvalue = OBJitemBase.minvalue :
+                        null;
                     }
                     else if(CLASSjs === 'CLASSitemTitle'){
                         ITEMstrConst = OBJitemBase.brand
+                        data.brand != OBJitemBase.brand ?
+                        data.brand = OBJitemBase.brand :
+                        null;
                     }
                     else if(CLASSjs === 'CLASSitemWhatsapp'){
                         ITEMstrConst = OBJitemBase.whatsapp
+                        data.whatsapp != OBJitemBase.whatsapp ?
+                        data.whatsapp = OBJitemBase.whatsapp :
+                        null;
                     }
                     else if(CLASSjs === 'CLASSitemCNPJ'){
                         ITEMstrConst = OBJitemBase.cnpj
+                        data.cnpj != OBJitemBase.cnpj ?
+                        data.cnpj = OBJitemBase.cnpj :
+                        null;
                     }
                     else if(CLASSjs === 'CLASSitemAddress'){
                         ITEMstrConst = `${OBJitemBase.address}, ${OBJitemBase.number}`
+                        data.address != OBJitemBase.address ?
+                        dataaddress = OBJitemBase.address :
+                        null;
+                        data.district != OBJitemBase.district ?
+                        data.district = OBJitemBase.district :
+                        null;
+                        data.number != OBJitemBase.number ?
+                        data.number = OBJitemBase.number :
+                        null;
+                        data.optional != OBJitemBase.optional ?
+                        data.optional = OBJitemBase.optional :
+                        null;
+                        data.region != OBJitemBase.region ?
+                        data.region = OBJitemBase.region :
+                        null;
+                        data.unity != OBJitemBase.unity ?
+                        data.unity = OBJitemBase.unity :
+                        null;
+
+                        document.querySelector('.CLASSitemJSKEY.DISTRICTelemInput').classList.contains('ITEMnone') ?
+                        document.querySelector('.CLASShrefJSKEY').innerHTML = `Fora de ${OBJitemBase.region}?` :
+                        document.querySelector('.CLASShrefJSKEY').innerHTML = `Para ${OBJitemBase.region}?`
                     }
 
                     document.querySelector(`.${CLASSjs}`).parentNode.parentNode.children[0].querySelector('SPAN').innerText = ITEMstrConst;
@@ -2475,7 +2608,7 @@ document.querySelector('[name="USERlogIn"]').addEventListener('click', function(
     const DOMpasswordInput = document.querySelector('[name="DOMpasswordInput"]');
 
 	firebase.auth()
-	.signInWithEmailAndPassword(DOMemailInput.value, DOMpasswordInput.value)
+    .signInWithEmailAndPassword(DOMemailInput.value, DOMpasswordInput.value)
 	.catch(function(error) {
         var MSGfail = null;
         DOMemailInput.value.length != 0 ?
@@ -2492,7 +2625,7 @@ document.querySelector('[name="USERlogIn"]').addEventListener('click', function(
     DOMpasswordInput.removeAttribute('style')
 
     !GROUPall.hasAttribute('ELEMinptFail') && !document.body.contains(document.querySelector('.MSGerror')) ?
-    GROUPall.insertAdjacentHTML('afterend', '<div class="MSGerror"><div class="CROSSicon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="#d50000" fill-rule="evenodd"><path id="Retângulo_2" data-name="Retângulo 2" class="cls-1" d="M8,0A8,8,0,1,1,0,8,8,8,0,0,1,8,0ZM7,3H9v7H7V3Zm0,8H9v2H7V11Z"></path></svg></div><span>' +MSGfail+ '</span></div>')
+    GROUPall.insertAdjacentHTML('afterend', '<div class="MSGerror"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="#d50000" fill-rule="evenodd"><path id="Retângulo_2" data-name="Retângulo 2" class="cls-1" d="M8,0A8,8,0,1,1,0,8,8,8,0,0,1,8,0ZM7,3H9v7H7V3Zm0,8H9v2H7V11Z"></path></svg><span>' +MSGfail+ '</span></div>')
     : null;
 
     });
