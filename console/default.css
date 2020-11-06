@@ -1,0 +1,2579 @@
+/*----------- SETTINGS ----------*/
+:root {
+    font-size: 50%;
+    --font-open: 'Open Sans', Helvetica, sans-serif;
+    --font-poppins: 'Poppins', sans-serif;
+    --font-oswald: 'Oswald',arial,helvetica,sans-serif;
+    --font-lato: 'Lato', Calibri, Arial, sans-serif;
+    --color-clean: #fff;
+    --color-silver: #e4e4e4;
+    --color-clean-solid: #efefef;
+    --color-clean-gray: #f6f7f9;
+    --color-white-op07: rgba(255, 255, 255, 0.7);
+    --color-white-op008: rgba(255, 255, 255, 0.08);
+    --color-single-text: #37474f;
+    --color-white-header: #f6f7f9;
+    --color-aside-bg: #051e34;
+    --color-aside-border: #2a4865;
+    --color-master-border: #009412;
+    --color-black: 0,0,0;
+}
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    list-style: none;
+    border: none;
+    text-decoration: none;
+}
+*, ::after, ::before {
+    -webkit-box-sizing: border-box; /* Safari and Chrome */
+    -moz-box-sizing: border-box; /* Firefox */
+    -ms-box-sizing: border-box; /* IE 9 */
+    -o-box-sizing: border-box; /* Opera */
+    box-sizing: border-box;
+}
+::after, ::before {
+    white-space: pre-wrap;
+}
+
+::-webkit-scrollbar {
+    width: 0px!important;
+    height: 0px!important;
+}
+.QUERYdeliverySelect .QUERYinstSelect::-webkit-scrollbar, textarea::-webkit-scrollbar {
+    width: 6px!important;
+    height: 6px!important;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(var(--color-black), 0.15);
+    border-radius: 6px;
+}
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+html, body {
+    overflow: hidden;
+}
+html, body, #root {
+    height: 100vh;
+}
+body #root {
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+body #root {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 0fr 1fr;
+    grid-template-columns: 0fr 1fr;
+    -ms-grid-template-rows: 1fr;
+    grid-template-rows: 1fr;
+}
+
+body,
+input,
+button,
+textarea {
+    font: 300 1.6rem var(--font-poppins);
+}
+input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+}
+input[type="radio"], input[type="checkbox"] {
+    display: none;
+}
+
+button {
+    cursor: pointer;
+    background: transparent;
+}
+
+.POSTbox:not(.BEBIDAitemBox) SECTION.POSTbt > DIV:first-of-type H3 {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+button[name="userEnd"], button[name="creatProduct"], ARTICLE .ITEMinCommerce, ARTICLE .ITEMinCommerce .ITEMelemImg, .CHOOSEbttn button[type="button"], .EDITindexMain, .EDITindexMain .EDITmainText .GROUPinputClass input, .EDITindexMain .EDITmainText .GROUPinputClass textarea, .EDITindexMain .GROUPimageClass, .MODALdefault .MODALinst .CONTENTmodal, .PUSHnotifyBttm, .SETTINGelemColumn .CLASSinputString input[type="text"], .SETTINGelemColumn .CLASSitemJSKEY input[type="text"], .CARDitemWait .CARDrightIitem .RIGHTitemBttm .CLASSitemSecond button[name="WINDOWmodalStatus"], .LOGINuserSpot .FOOTERlogin BUTTON[name="USERlogIn"], .CARDitemWait .CLASSitemBttns BUTTON {
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    border-radius: 3px;
+}
+.EDITheadMain button[type="button"], .CARDitemWait .CARDrightIitem .RIGHTitemBttm {
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+    border-radius: 2px;
+}
+
+body {
+    background: var(--color-clean-gray);
+    overflow: hidden;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* //LOAD PAGE */
+.CARGAelem {
+    z-index: 99999;
+    position: fixed;
+    top: 0;
+    right: -6px;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+}
+.CARGAelem .CIRCLEon, .CARGAelem .CIRCLEon::after {
+    width: 60px;
+    height: 60px;
+    display: block;
+}
+.CARGAelem .CIRCLEon {
+    animation: arrow 0.7s steps(360) infinite;
+}
+.CARGAelem .CIRCLEon {
+    z-index: 1;
+    position: absolute;
+    top: calc(50% - 30px);
+    left: calc(50% - 30px);
+    transform: translate(-50%, -50%);
+}
+.CARGAelem::after {
+    content: '';
+    background: rgba(255, 255, 255, 0.3);
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.CARGAelem .CIRCLEon::after {
+    content: '';
+}
+@keyframes arrow{
+0% {
+	-webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+}
+100% {
+	-webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+}
+}
+.CARGAelem .CIRCLEon::after {
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAYAAAFN++nkAAABN2lDQ1BBZG9iZSBSR0IgKDE5OTgpAAAokZWPv0rDUBSHvxtFxaFWCOLgcCdRUGzVwYxJW4ogWKtDkq1JQ5ViEm6uf/oQjm4dXNx9AidHwUHxCXwDxamDQ4QMBYvf9J3fORzOAaNi152GUYbzWKt205Gu58vZF2aYAoBOmKV2q3UAECdxxBjf7wiA10277jTG+38yH6ZKAyNguxtlIYgK0L/SqQYxBMygn2oQD4CpTto1EE9AqZf7G1AKcv8ASsr1fBBfgNlzPR+MOcAMcl8BTB1da4Bakg7UWe9Uy6plWdLuJkEkjweZjs4zuR+HiUoT1dFRF8jvA2AxH2w3HblWtay99X/+PRHX82Vun0cIQCw9F1lBeKEuf1UYO5PrYsdwGQ7vYXpUZLs3cLcBC7dFtlqF8hY8Dn8AwMZP/fNTP8gAAAAJcEhZcwAALiMAAC4jAXilP3YAAAmLaVRYdFhNTDpjb20uYWRvYmUueG1wAAAAAAA8P3hwYWNrZXQgYmVnaW49Iu+7vyIgaWQ9Ilc1TTBNcENlaGlIenJlU3pOVGN6a2M5ZCI/PiA8eDp4bXBtZXRhIHhtbG5zOng9ImFkb2JlOm5zOm1ldGEvIiB4OnhtcHRrPSJBZG9iZSBYTVAgQ29yZSA1LjYtYzE0NSA3OS4xNjM0OTksIDIwMTgvMDgvMTMtMTY6NDA6MjIgICAgICAgICI+IDxyZGY6UkRGIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+IDxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PSIiIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyIgeG1sbnM6ZGM9Imh0dHA6Ly9wdXJsLm9yZy9kYy9lbGVtZW50cy8xLjEvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RFdnQ9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZUV2ZW50IyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtbG5zOnBob3Rvc2hvcD0iaHR0cDovL25zLmFkb2JlLmNvbS9waG90b3Nob3AvMS4wLyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ0MgMjAxOSAoV2luZG93cykiIHhtcDpDcmVhdGVEYXRlPSIyMDIwLTA4LTAxVDEzOjA4OjI4LTAzOjAwIiB4bXA6TWV0YWRhdGFEYXRlPSIyMDIwLTA4LTAxVDIwOjQ1OjM2LTAzOjAwIiB4bXA6TW9kaWZ5RGF0ZT0iMjAyMC0wOC0wMVQyMDo0NTozNi0wMzowMCIgZGM6Zm9ybWF0PSJpbWFnZS9wbmciIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6YjIzOWMxZWUtNGM1MS0wMTQzLTljYmUtNGI3ZDljMjBiODdhIiB4bXBNTTpEb2N1bWVudElEPSJhZG9iZTpkb2NpZDpwaG90b3Nob3A6NjQ4MjAyNWEtYTk5MS0xZDQ2LTljNWQtN2IyMTgxYjg2ODlmIiB4bXBNTTpPcmlnaW5hbERvY3VtZW50SUQ9InhtcC5kaWQ6ZDkwMmU1ZGItMjk3Ni05NzQ3LTg4NWMtNmJmNWUzYmRiMGMxIiBwaG90b3Nob3A6Q29sb3JNb2RlPSIzIiBwaG90b3Nob3A6SUNDUHJvZmlsZT0iQWRvYmUgUkdCICgxOTk4KSI+IDx4bXBNTTpIaXN0b3J5PiA8cmRmOlNlcT4gPHJkZjpsaSBzdEV2dDphY3Rpb249ImNyZWF0ZWQiIHN0RXZ0Omluc3RhbmNlSUQ9InhtcC5paWQ6ZDkwMmU1ZGItMjk3Ni05NzQ3LTg4NWMtNmJmNWUzYmRiMGMxIiBzdEV2dDp3aGVuPSIyMDIwLTA4LTAxVDEzOjA4OjI4LTAzOjAwIiBzdEV2dDpzb2Z0d2FyZUFnZW50PSJBZG9iZSBQaG90b3Nob3AgQ0MgMjAxOSAoV2luZG93cykiLz4gPHJkZjpsaSBzdEV2dDphY3Rpb249InNhdmVkIiBzdEV2dDppbnN0YW5jZUlEPSJ4bXAuaWlkOjNjM2Q3OGRiLWQ5ZWUtZGE0Yi1iZDU5LTllNzk4ZGQ4NDQwZiIgc3RFdnQ6d2hlbj0iMjAyMC0wOC0wMVQxMzoxNjo1NC0wMzowMCIgc3RFdnQ6c29mdHdhcmVBZ2VudD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTkgKFdpbmRvd3MpIiBzdEV2dDpjaGFuZ2VkPSIvIi8+IDxyZGY6bGkgc3RFdnQ6YWN0aW9uPSJzYXZlZCIgc3RFdnQ6aW5zdGFuY2VJRD0ieG1wLmlpZDpiZmY1Nzk3MC03ZWE2LTcyNGUtOWRiMy1iYWZjZWEwNGVkMjYiIHN0RXZ0OndoZW49IjIwMjAtMDgtMDFUMjA6NDU6MzYtMDM6MDAiIHN0RXZ0OnNvZnR3YXJlQWdlbnQ9IkFkb2JlIFBob3Rvc2hvcCBDQyAyMDE5IChXaW5kb3dzKSIgc3RFdnQ6Y2hhbmdlZD0iLyIvPiA8cmRmOmxpIHN0RXZ0OmFjdGlvbj0iY29udmVydGVkIiBzdEV2dDpwYXJhbWV0ZXJzPSJmcm9tIGFwcGxpY2F0aW9uL3ZuZC5hZG9iZS5waG90b3Nob3AgdG8gaW1hZ2UvcG5nIi8+IDxyZGY6bGkgc3RFdnQ6YWN0aW9uPSJkZXJpdmVkIiBzdEV2dDpwYXJhbWV0ZXJzPSJjb252ZXJ0ZWQgZnJvbSBhcHBsaWNhdGlvbi92bmQuYWRvYmUucGhvdG9zaG9wIHRvIGltYWdlL3BuZyIvPiA8cmRmOmxpIHN0RXZ0OmFjdGlvbj0ic2F2ZWQiIHN0RXZ0Omluc3RhbmNlSUQ9InhtcC5paWQ6YjIzOWMxZWUtNGM1MS0wMTQzLTljYmUtNGI3ZDljMjBiODdhIiBzdEV2dDp3aGVuPSIyMDIwLTA4LTAxVDIwOjQ1OjM2LTAzOjAwIiBzdEV2dDpzb2Z0d2FyZUFnZW50PSJBZG9iZSBQaG90b3Nob3AgQ0MgMjAxOSAoV2luZG93cykiIHN0RXZ0OmNoYW5nZWQ9Ii8iLz4gPC9yZGY6U2VxPiA8L3htcE1NOkhpc3Rvcnk+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOmJmZjU3OTcwLTdlYTYtNzI0ZS05ZGIzLWJhZmNlYTA0ZWQyNiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpkOTAyZTVkYi0yOTc2LTk3NDctODg1Yy02YmY1ZTNiZGIwYzEiIHN0UmVmOm9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDpkOTAyZTVkYi0yOTc2LTk3NDctODg1Yy02YmY1ZTNiZGIwYzEiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz5uEL9tAAAE+ElEQVRogd2aTWhdRRTHf+8lpjSkxtaYElKwVIoiuBApXViDcVM/ET/qQpCK4EoFpa7UnUhdubAKgrirqMUPtAsrVK0tSgsVQbRSUFpNPyC0vCbPNknbl+Pi3DGT69zPd2du6h8OyZv7zvuf/5kzc+fOHQSw7BWBCbvN/HOdgMS+jAANAfO9Bg40gZeTLhrXCddPxykS0Yz+ttIojH3goog3tF0XReC7uGcvGdozo0682Em72Atc67xqRfez9f9oUipd2XWq6XU4JfdqgnNirtLQBNpFnWznx8o6m+zNCJxMK9I8VXVS4PqyzsYGBQ5G1diX13ln5GDbC0nOrn4mak+sSQNT1cZxG9rfmY7/ekXhPVE02w0pUZbxsAeLOmIxF2a1mUuha+eLpE2bGc7LgL6yzgDvAGcKe1ud/onAX90MSQSOCNzvaF+ed0jGbbdjtNk20+1EYqwvg+hbga0Ca9PmijSzpwLQ3p6LtZ0CRnN0WzFYUXwaU3VHGSVFU2334W8+CW3iQYt0XwhSQ3zIIg5CKiyesKHk9FkGTeCjUGSLEEkXgXmBsZB9jOjQmROYFcf05pMY0RVoW2BK4KGQxMb2C0wKnPapPu3ifQLHBP4Q2F6SoJF0LfMxycKTwLPoquwMsBPYD0wC/cANwAhwEDib+WsFFdwt+hQ2ISBRTbxbdaqNjQlcjoiSrKcocVqqR9BbYh6UXqbGsSOF9AKwHdgErCpDCjjTcDghnY/6HE5f+yZ0EW+JEV7yQegqLrvO2sDV+TqrHExxHYi1eyWFxXtIBsuBWd/ETeB56/NnIUhBFV8GesznEKSgig1pfCHvndjg1ZDEWOP2Rp/j1jWOTUUH619YnOqVdRFvrIv46ZDEiK4q5wU6IYsLgeHoTnRJYCBkVYNuHM2jq451laQyA6aPN0eBDANDIYjt+/EJ9HYolNwqLAK7qteg6e7w3/uzV2LQ/u0A64H3vTI7Km6F6APbhMAe31Xtwi/oM1EHuA2YrlJwVmQbBY4K/Cq6JZV3F29tN4ptjACvAzejK5Y9wJfAUfTJYgjYgGZlXxWKi9oagW0C30v2g17c3goxY3b7A3eK3mOKCEuyyaUqeIvAuYpEGntDUnZL6hC8QmBvQRGnRMt0XOCqEGKqEDwo8GNOgT8IbKpbUDeC384hcpfAyrpFdCt4VKCVIvK8wOa6A69K8HiK0DmBu+oOuErBYylid9QdaNWCzWOTS+x43UH6EHwgQeytdQfoQ/A9CWIfrzs4X4I/dIj9qu7AfAo2r41su7fuwHxZ/B25wSpKnttZ6miIvukYiLfXEUwINIEjjvb1oQMJhSaw29H+YOhAQqEhull4loV3L0SfV5P3aOQVhCYwBbyIblqajctr0CN//z9YU/bnosvLi5HNCTxT923Ex33Ytm9EzxTNip5uvCDwXN1B+hSM6MrrfGRtgWmB9+oO1KdgBB6OhE6Jbti1BI4LrKs74G4tbUO8D/gYuN0kB53UDgOPADPJrksXed4ADAG70N1/k6h54BCwFfjbX3geUKAc+gReEzghesD8T9GTez/JFbT1U+REoI1h4CXgAbS3Ta9PAm+ix2R8LVqWoWv/VsRZCGUFx7EBeAod77CQhBbwBbAXXbMXDbAHPVrZD5wDjncbaFWCXRgAbgFuQoNejb777kd7qYO+AZxGxZwGjgG/s/B2sHL8A/eeGTpXPvFxAAAAAElFTkSuQmCC");
+}
+
+
+
+.HIDDENmenu {
+    -webkit-transform: translate3d(100vw, 0, 0);
+    -moz-transform: translate3d(100vw, 0, 0);
+    transform: translate3d(100vw, 0, 0);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.HIDDENmenu {
+    width: 100vw;
+    max-width: 256px;
+    z-index: 101;
+    color: #383838;
+    background: #eceff1;
+    -webkit-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+    height: 100vh;
+    border-left: 1px solid #ffffff;
+}
+
+.HIDDENmenu .GRIDelemInput:not(:last-child) {
+    border-style: solid;
+    border-width: 0 0 1px;
+    border-color: #fff;
+}
+.HIDDENmenu .GRIDelemInput {
+    padding: 1.6rem;
+}
+.HIDDENmenu .GRIDelemInput SPAN {
+    font-weight: 500;
+}
+.HIDDENmenu .GRIDelemInput BUTTON {
+    font-weight: 500;
+    color: #343434;
+}
+.HIDDENmenu .TITLEmenuHidden {
+    background-color: rgb(255 255 255);
+    height: 48px;
+    border-bottom-width: 1px;
+    border-left-width: 1px;
+    border-top-width: 0;
+    border-right-width: 0;
+    border-style: solid;
+    border-color: rgb(236, 239, 241);
+    display: flex;
+    align-items: center;
+}
+.HIDDENmenu .TITLEmenuHidden SPAN {
+    font-size: 2rem;
+    padding: 1.6rem;
+    font-weight: 500;
+}
+.HIDDENmenu .GRIDelemInput P {
+    text-transform: uppercase;
+}
+
+
+
+/*---------- PUSH MENU ----------*/
+ASIDE#PUSHmenu {
+    width: 100vw;
+    max-width: 256px;
+    z-index: 101;
+    color: var(--color-clean-solid);
+    background: var(--color-aside-bg);
+    -webkit-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+    height: 100vh;
+    z-index: 1100;
+}
+ASIDE#PUSHmenu.MENUactive {
+    transform: translate3d(0,0,0);
+}
+ASIDE#PUSHmenu P.BTNmenu {
+    width: 32px;
+    right: calc(-32px + -1.6rem);
+    display: none;
+    z-index: 3;
+    position: absolute;
+    border-radius: 50%;
+    height: 32px;
+    top: 0;
+}
+ASIDE#PUSHmenu P.BTNmenu:focus:hover {
+    background-color: rgba(60,64,67,0.1);
+}
+ASIDE#PUSHmenu P.BTNmenu:hover {
+    background-color: rgba(60,64,67,0.08);
+}
+ASIDE#PUSHmenu P.BTNmenu:active {
+    background-color: rgba(60,64,67,0.12);
+}
+ASIDE#PUSHmenu.MENUactive P.BTNmenu {
+    margin: initial;
+    right: -48px;
+    width: 48px;
+    height: 48px;
+}
+ASIDE#PUSHmenu.MENUactive P.BTNmenu {
+    background: var(--color-aside-bg);
+    -webkit-border-radius: 0 0 3px 0;
+    -moz-border-radius: 0 0 3px 0;
+    -ms-border-radius: 0 0 3px 0;
+    -o-border-radius: 0 0 3px 0;
+    border-radius: 0 0 3px 0;
+}
+ASIDE#PUSHmenu P.BTNmenu {
+    -webkit-transition: transform .3s linear, top .3s linear;
+    -o-transition: transform .3s linear, top .3s linear;
+    transition: transform .3s linear, top .3s linear;
+}
+ASIDE#PUSHmenu P.BTNmenu, ASIDE#PUSHmenu P.BTNmenu *, HEADER BUTTON {
+    -webkit-transition: .25s linear;
+    -o-transition: .25s linear;
+    transition: .25s linear;
+}
+.BTNhref.HREFactive {
+    padding: 0 18px;
+}
+.BTNhref {
+    width: 18px;
+    height: 18px;
+    display: block;
+    -webkit-box-sizing: initial;
+    box-sizing: initial;
+    position: relative;
+    border-radius: 50%;
+    padding: 7px;
+}
+.BTNhref I.CROSSicon, .BTNhref I.CROSSicon::before, .BTNhref I.CROSSicon::after {
+    position: absolute;
+    width: 18px;
+    height: 2px;
+    -webkit-transition: transform .3s linear, top .3s linear, background .25s linear;
+    -o-transition: transform .3s linear, top .3s linear, background .25s linear;
+    transition: transform .3s linear, top .3s linear, background .25s linear;
+    background: #777777;
+}
+ASIDE#PUSHmenu.MENUactive P.BTNmenu .BTNhref {
+    padding: 15px;
+}
+ASIDE#PUSHmenu.MENUactive P.BTNmenu I.CROSSicon {
+    top: 23px;
+    background: none;
+    left: 12px;
+}
+ASIDE#PUSHmenu.MENUactive .BTNhref I.CROSSicon, ASIDE#PUSHmenu.MENUactive .BTNhref I.CROSSicon::before, ASIDE#PUSHmenu.MENUactive .BTNhref I.CROSSicon::after {
+    background: #ffffff;
+}
+ASIDE#PUSHmenu P.BTNmenu I.CROSSicon {
+    top: 15px;
+    left: 7px;
+}
+ASIDE#PUSHmenu.MENUactive P.BTNmenu I.CROSSicon::before, ASIDE#PUSHmenu.MENUactive P.BTNmenu I.CROSSicon::after {
+    top: 0;
+    width: 24px;
+}
+ASIDE#PUSHmenu.MENUactive P.BTNmenu I.CROSSicon::before {
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+.BTNhref I.CROSSicon::before, .BTNhref I.CROSSicon::after {
+    content: '';
+    left: 0;
+}
+.BTNhref I.CROSSicon::before {
+    top: 5px;
+}
+ASIDE#PUSHmenu.MENUactive P.BTNmenu I.CROSSicon::after {
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+.BTNhref I.CROSSicon::after {
+    top: -5px;
+}
+
+ASIDE#PUSHmenu SECTION.LOGOmarc {
+    align-items: center;
+    display: flex;
+    background-size: 112px;
+    background-repeat: no-repeat;
+    background-position: 26px center;
+    height: 48px;
+}
+ASIDE#PUSHmenu UL, ARTICLE {
+    overflow-x: hidden;
+    overflow-y: overlay;
+    height: calc(100vh - 48px);
+}
+ASIDE#PUSHmenu UL {
+    box-shadow: 0 1px 0 var(--color-aside-border) inset;
+}
+ASIDE#PUSHmenu OL {
+    box-shadow: 0 -1px 0 var(--color-aside-border) inset;
+}
+ASIDE#PUSHmenu OL {
+    font-weight: 500;
+    padding: 12px 0;
+}
+ASIDE#PUSHmenu OL BUTTON {
+    width: 100%;
+    color: var(--color-clean);
+    text-decoration: none;
+    display: flex;
+    padding: 7px 10px 7px 26px;
+    line-height: 26px;
+    font-size: 1.8rem;
+    align-items: center;
+    font-weight: 400;
+}
+ASIDE#PUSHmenu OL BUTTON:hover {
+    background: var(--color-white-op008);
+}
+ASIDE#PUSHmenu OL BUTTON SVG {
+    margin-right: 2rem;
+}
+ASIDE#PUSHmenu FOOTER {
+    font-family: var(--font-open);
+    padding: 2.2rem 1.6rem;
+    font-size: 1.4rem;
+}
+ASIDE#PUSHmenu FOOTER SPAN {
+    color: var(--color-white-op07);
+    letter-spacing: 0.5px;
+}
+ASIDE#PUSHmenu FOOTER > * {
+    display: block;
+}
+ASIDE#PUSHmenu FOOTER > *:not(:last-child) {
+    padding-bottom: 0.7rem;
+}
+
+.SWIPEopenModal {
+    background: rgba(0, 0, 0, 0.4);
+}
+.MENUopLateral {
+    backdrop-filter: blur(2px);
+    background: rgba(255, 255, 255, 0.6);
+}
+.SWIPEopenModal, .MENUopLateral {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    display: none;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 999;
+}
+
+
+/*------------ HEADER -----------*/
+HEADER {
+    width: 100%;
+    background: var(--color-white-header);
+    position: relative;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: max-content max-content;
+    grid-template-columns: max-content max-content;
+    -ms-grid-template-rows: 1fr;
+    grid-template-rows: 1fr;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px;
+    height: 48px;
+    z-index: 5;
+}
+HEADER > DIV {
+    display: flex;
+    align-items: center;
+}
+HEADER > SPAN {
+    font-size: 2rem;
+    font-weight: 900;
+}
+HEADER BUTTON {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+HEADER BUTTON:focus:hover, ARTICLE .ITEMinCommerce .CHEVRONdown BUTTON:focus:hover {
+    background-color: rgba(60,64,67,0.1);
+}
+HEADER BUTTON:hover, ARTICLE .ITEMinCommerce .CHEVRONdown BUTTON:hover {
+    background-color: rgba(60,64,67,0.08);
+}
+HEADER BUTTON:active, ARTICLE .ITEMinCommerce .CHEVRONdown BUTTON:active {
+    background-color: rgba(60,64,67,0.12);
+}
+HEADER BUTTON:not(:last-child) {
+    margin-right: 1.6rem;
+}
+HEADER SPAN.STATUScode {
+    border-radius: 3px;
+    transition: box-shadow 0.3s, color 0.3s;
+    font-style: italic;
+    font-family: var(--font-lato);
+    padding: 0 1rem;
+    font-weight: 400;
+    line-height: 22px;
+    margin-right: 0.8rem;
+    font-size: 1.4rem;
+    height: 22px;
+}
+HEADER SPAN.STATUScode.ABERTOit {
+    box-shadow: inset 0 0 0 1px #23d45a;
+    color: #23d45a;
+}
+HEADER SPAN.STATUScode.FECHADOit {
+    box-shadow: inset 0 0 0 1px #ff4e45;
+    color: #ff4e45;
+}
+
+
+MAIN::before, ARTICLE.DISABLEmain::before {
+    content: '';
+    width: 100vw;
+    height: 100vh;
+    -webkit-transition: background .3s ease-in-out, z-index .3s linear;
+    -o-transition: background .3s ease-in-out, z-index .3s linear;
+    transition: background .3s ease-in-out, z-index .3s linear;
+    position: fixed;
+    display: block;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+MAIN.SWIPEopen::before {
+    background: rgba(0,0,0,0.6);
+    z-index: 99;
+}
+ARTICLE.DISABLEmain::before {
+    z-index: 99;
+}
+
+/*-------- MEUS PRODUTOS --------*/
+ARTICLE {
+    font-weight: 500;
+}
+ARTICLE > SPAN {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    font-weight: 900;
+}
+ARTICLE .MASTERmain {
+    padding: 0 0 2.2rem;
+}
+ARTICLE .MASTERmain button[name="creatProduct"] {
+    color: #fff;
+    background: -webkit-gradient(linear,left top,left bottom,from(#0db722),to(#0e9c20));
+    border: 1px solid var(--color-master-border);
+    font-size: 1.4rem;
+    font-weight: 500;
+    padding: 4.5px 1.6rem;
+    text-align: center;
+}
+ARTICLE .ITEMinCommerce {
+    display: flex;
+    font-family: var(--font-lato);
+    background: var(--color-clean);
+    border-bottom: 1px solid var(--color-silver);
+    transition: border-bottom 0.3s, box-shadow 0.3s;
+    position: relative;
+}
+ARTICLE .ITEMinCommerce:hover {
+    border-bottom: 1px solid transparent;
+    box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.30), 0 2px 6px 2px rgba(60, 64, 67, 0.15);
+}
+ARTICLE .ITEMinCommerce:first-child {
+    margin-top: 1.6rem;
+}
+ARTICLE .ITEMinCommerce:not(:last-child) {
+    margin-bottom: 1.6rem;
+}
+ARTICLE .ITEMinCommerce .ITEMelemImg {
+    min-width: 72px;
+    max-width: 72px;
+    height: 72px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    background-color: #e8e8e8;
+}
+
+ARTICLE .ITEMinCommerce > DIV IMG {
+    float: left;
+}
+ARTICLE .ITEMinCommerce .BTTNabs {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+ARTICLE .ITEMinCommerce .SECTIONtext SPAN {
+    color: var(--color-single-text);
+    font-size: 1.6rem;
+    font-weight: 400;
+    letter-spacing: .4px;
+}
+ARTICLE .ITEMinCommerce .SECTIONtext .SUBLIMtetx SPAN.CARDtextPrice {
+    font-family: var(--font-oswald);
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: #a00;
+}
+ARTICLE .ITEMinCommerce .SECTIONtext .SUBLIMtetx SPAN.CARDtextDraft {
+    font-style: italic;
+    box-shadow: 0 0 0 1px #00000078;
+    font-size: 1.4rem;
+    padding: 0.2rem 0.4rem;
+    line-height: 11px;
+    height: 16px;
+    display: inline-flex;
+    top: -2px;
+    position: relative;
+    border-radius: 3px;
+    margin-left: 1rem;
+}
+ARTICLE .ITEMinCommerce > DIV.SECTIONtext {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+ARTICLE .ITEMinCommerce > DIV {
+    width: 100%;
+    display: flex;
+    padding: 10px;
+}
+
+ARTICLE .ITEMinCommerce .SECTIONtext > DIV:not(:last-child):not(.CHEVRONdown) {
+    margin-bottom: 1.2rem;
+}
+ARTICLE .ITEMinCommerce .SECTIONtext .TITLEspan {
+    display: inline-grid;
+}
+ARTICLE .ITEMinCommerce .SECTIONtext .TITLEspan SPAN {
+    font-size: 2rem;
+    font-weight: 700;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: block;
+}
+
+ARTICLE .ITEMinCommerce .THUMBandText > DIV {
+    width: 100%;
+}
+ARTICLE .ITEMinCommerce .SECTIONtext {
+    margin-left: 1.6rem;
+    position: relative;
+}
+ARTICLE .ITEMinCommerce .CHEVRONdown {
+    position: absolute;
+    right: 0;
+    background: linear-gradient(90deg,rgba(198,223,178,0) 0,rgb(255 255 255) 50%);
+    padding-left: 22px;
+    -webkit-box-sizing: initial;
+    box-sizing: initial;
+}
+
+ARTICLE .ITEMinCommerce .CHEVRONdown BUTTON {
+    padding: 7px;
+    position: relative;
+    border-radius: 50%;
+    height: 32px;
+    width: 32px;
+    z-index: 2;
+}
+
+
+
+
+.MAINbox {
+    padding: 3rem;
+}
+
+.MOREoptionCard {
+    background-color: #a00;
+    position: fixed;
+    display: flex;
+    top: 0;
+    height: 48px;
+    width: 100vw;
+    padding: 0 1.6rem;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10000;
+}
+.MOREoptionCard .CARDopTitle {
+    display: flex;
+    font-size: 1.6rem;
+    font-weight: 500;
+    font-family: var(--font-poppins);
+    align-items: center;
+    color: #fff;
+}
+.MOREoptionCard .CARDopTitle DIV {
+    display: grid;
+}
+.MOREoptionCard .CARDopTitle SPAN {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: block;
+}
+.MOREoptionCard .CARDopTitle BUTTON, .MOREoptionCard .OPTIONSbtn BUTTON {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+.MOREoptionCard .CARDopTitle BUTTON:focus:hover, .MOREoptionCard .OPTIONSbtn BUTTON:focus:hover {
+    background-color: rgba(255,255,255,0.1);
+}
+.MOREoptionCard .CARDopTitle BUTTON:hover, .MOREoptionCard .OPTIONSbtn BUTTON:hover {
+    background-color: rgba(255,255,255,0.08);
+}
+.MOREoptionCard .CARDopTitle BUTTON:active, .MOREoptionCard .OPTIONSbtn BUTTON:active {
+    background-color: rgba(255,255,255,0.12);
+}
+.MOREoptionCard .CARDopTitle BUTTON:not(:last-child) {
+    margin-right: 1.6rem;
+}
+
+.MOREoptionCard .OPTIONSbtn {
+    display: flex;
+}
+.MOREoptionCard .OPTIONSbtn BUTTON:not(:last-child) {
+    margin-right: 0.4rem;
+}
+
+
+/*-------------------------------*/
+/*-------- MEUS PRODUTOS --------*/
+/*-------------------------------*/
+.CHOOSEbttn {
+    display: flex;
+    justify-content: center;
+}
+.CHOOSEbttn button[type="button"] {
+    width: 190px;
+    height: 190px;
+}
+.CHOOSEbttn button[type="button"] {
+    background: -moz-linear-gradient(45deg, rgba(0, 0, 0, 0.3) 0%, transparent 90%);
+    background: -webkit-linear-gradient(45deg, rgba(0, 0, 0, 0.3) 0%, transparent 90%);
+    background: linear-gradient(45deg, rgba(0, 0, 0, 0.3) 0%, transparent 90%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0000004d', endColorstr='#00000000',GradientType=1 );
+}
+.CHOOSEbttn {
+    padding: 1.6rem;
+    flex-direction: column;
+}
+.CHOOSEbttn BUTTON {
+    width: 100% !IMPORTANT;
+    height: 112px !IMPORTANT;
+    font-weight: 700;
+    font-size: 2rem;
+    color: #585858;
+}
+.CHOOSEbttn BUTTON:not(:last-child) {
+    margin-bottom: 1.6rem;
+}
+
+
+.EDITheadMain {
+    display: flex;
+    justify-content: space-between;
+    padding: 3rem;
+}
+.EDITheadMain button[type="button"] {
+    padding: 0.6rem 1.6rem;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+.EDITheadMain button[type="button"]:not(:last-child) {
+    margin-right: 1rem;
+}
+.EDITheadMain button[name="fecharItem"] {
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+    color: #222;
+}
+.EDITheadMain button[name="BTTNpublicItem"], .EDITheadMain button[name="BTTNupdateItem"] {
+    color: #fff;
+    background: -webkit-gradient(linear,left top,left bottom,from(#0db722),to(#0e9c20));
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+}
+
+.EDITindexMain {
+    background: #fff;
+    display: flex;
+    margin-top: 1.6rem;
+    padding: 1.6rem;
+    margin: auto 3rem;
+}
+.EDITindexMain > DIV {
+    width: 100%;
+}
+.EDITindexMain > DIV:not(:last-child) {
+    margin-right: 1.6rem;
+}
+.EDITindexMain .GROUPinputClass, .EDITindexMain .GROUPimageClass, .EDITindexMain .GROUPaddItem > DIV {
+    position: relative;
+    display: flow-root;
+}
+.EDITindexMain .GROUPinputClass:not(:last-child) {
+    margin-bottom: 1.6rem;
+}
+.EDITindexMain .EDITmainText .GROUPinputClass input:focus ~ label, .EDITindexMain .EDITmainText .GROUPinputClass input.INPUThasText ~ label {
+    color: #b7b7b7;
+    background: #fff;
+    padding: 0 0.8rem;
+    z-index: 1;
+    top: -1rem;
+}
+.EDITindexMain .EDITmainText .GROUPinputClass input:focus ~ label {
+    color: #1273EB;
+}
+.EDITindexMain .EDITmainText .GROUPinputClass label {
+    font-weight: 300;
+    position: absolute;
+    font-size: 1.4rem;
+    left: 1.3rem;
+    top: 1.1rem;
+}
+.EDITindexMain .EDITmainText .GROUPinputClass input {
+    padding: 8px 0;
+    text-indent: 1.2rem;
+}
+.EDITindexMain .EDITmainText .GROUPinputClass input, .EDITindexMain .EDITmainText .GROUPinputClass TEXTAREA {
+    color: #797979;
+    background: transparent;
+    width: 100%;
+    font-size: 1.6rem;
+    box-shadow: inset 0 0 0 1px #dadce0;
+    position: relative;
+    z-index: 1;
+}
+.EDITindexMain .EDITmainText .GROUPinputClass input:focus {
+    box-shadow: inset 0 0 0 1px #1273EB;
+}
+.EDITindexMain .EDITmainText .GROUPinputClass TEXTAREA {
+    padding: 1rem;
+    min-height: 100px;
+    resize: none;
+    float: left;
+}
+.EDITindexMain .EDITmainText .GROUPinputClass TEXTAREA:focus {
+    box-shadow: inset 0 0 0 1px #1273EB, 0 0 0 4px rgba(18, 115, 235, 0.15);
+}
+.EDITindexMain .EDITmainText .GROUPinputClass > *, .EDITindexMain .GROUPaddItem > DIV > * {
+    transition: all 0.15s ease-in-out;
+}
+.EDITindexMain .GROUPimageClass {
+    height: calc(100% - 34px - 1.6rem);
+    min-height: 260px;
+    display: flex;
+    align-items: center;
+    background: #e0e0e0;
+    overflow: hidden;
+    width: 100%;
+}
+.EDITindexMain .GROUPimageClass > IMG {
+    width: 100%;
+    float: left;
+    position: relative;
+    z-index: 1;
+}
+.EDITindexMain .GROUPimageClass > SPAN.SPANelemFailure {
+    color: var(--color-clean);
+    background: rgba(255, 0, 0, 0.6);
+}
+.EDITindexMain .GROUPimageClass > SPAN.SPANelemSucess {
+    color: #000000;
+    background: rgba(255, 255, 255, 0.3);
+    flex-direction: column;
+    z-index: 2;
+    font-weight: bold;
+    font-size: 2rem;
+}
+.EDITindexMain .GROUPimageClass > SPAN.SPANelemAwait {
+    color: #fff;
+    background: rgba(0, 0, 0, 0.3);
+}
+.EDITindexMain .GROUPimageClass > SPAN, .EDITindexMain .GROUPimageClass > SPAN.SPANelemAwait {
+    width: 100%;
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+    left: 0;
+    top: 0;
+}
+.EDITindexMain .GROUPimageClass .ELEMimageShadow {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: block;
+    filter: blur(4px);
+    backdrop-filter: blur(10px);
+    z-index: 1;
+    background-size: cover;
+    background-position: center;
+    transform: scale(1.1);
+}
+
+
+.EDITindexMain .EDITmainAdd .GROUPexistItem {
+    background: #efefef;
+    border-radius: 3px;
+    padding: 1rem 1.4rem 1.6rem;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 26%;
+}
+.EDITindexMain .EDITmainAdd .FATHERelemGroup.SECONDupSide {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+.EDITindexMain .EDITmainAdd .GROUPexistItem > DIV:not(:last-child) {
+    margin-right: 1.6rem;
+}
+.EDITindexMain .EDITmainAdd .GROUPexistItem > DIV > DIV {
+    display: flex;
+}
+.EDITindexMain .EDITmainAdd .GROUPexistItem > DIV > DIV:not(:last-child):not(.ELEMbtnRemove) {
+    margin-bottom: 1.4rem;
+}
+.EDITindexMain .EDITmainAdd .GROUPexistItem .ELEMsessPrice {
+    height: 100%;
+    align-items: flex-end;
+}
+
+.EDITindexMain .EDITmainAdd INPUT {
+    background: transparent;
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+    border-bottom-color: rgb(0 0 0 / 0.15);
+    padding: 0.4rem;
+    width: 100%;
+}
+.EDITindexMain .EDITmainAdd .CHILDelemGroup.FIRSTupSide INPUT[name="FORMtargetLimit"] {
+    width: 36%;
+    min-width: 58px;
+}
+.EDITindexMain .EDITmainAdd .GROUPicrmntItem {
+    display: flex;
+    justify-content: center;
+    margin-top: 1.6rem;
+}
+.EDITindexMain .EDITmainAdd .GROUPicrmntItem button {
+    background: #0db221;
+    padding: 1rem 1.6rem;
+    letter-spacing: 0.4px;
+    color: #fff;
+    font-weight: 500;
+    border-radius: 3px;
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+}
+.EDITindexMain .EDITmainAdd .GROUPexistItem > DIV > DIV input:not(:last-child) {
+    margin-right: 0.4rem;
+}
+.EDITindexMain .EDITmainAdd input[name="FORMtargetDesc"] {
+    width: 100%;
+}
+.EDITindexMain .EDITmainAdd .GROUPexistItem:not(:last-child) {
+    margin-bottom: 1.6rem;
+}
+
+
+.EDITindexMain .EDITmainAdd .GROUPexistItem .ELEMbtnRemove {
+    justify-content: flex-end;
+}
+.EDITindexMain .EDITmainAdd .GROUPexistItem button[name="removeIcmntItem"] {
+    display: block;
+}
+
+.EDITindexMain .EDITmainAdd .GROUPexistItem .ELEMsessPrice label {
+    color: #777;
+    font-weight: 300;
+    margin-right: 0.7rem;
+    margin-bottom: 1rem;
+}
+.EDITindexMain .EDITmainAdd .GROUPexistItem .ELEMsessPrice input[type="number"] {
+    width: 100%;
+}
+
+.EDITindexMain[js-item="Drinks"], .EDITindexMain[js-item="Combo"], .EDITindexMain[js-item="Dessert"] {
+    max-width: 680px;
+    margin: auto;
+}
+.EDITindexMain[js-item="Promo"] {
+    max-width: 820px;
+    margin: auto;
+}
+
+
+.EDITindexMain .EDITmainSemana {
+    background: #efefef;
+    border-radius: 3px;
+    padding: 1.6rem;
+    width: 80%;
+}
+.EDITindexMain .EDITmainSemana > DIV {
+    display: flex;
+    align-items: center;
+    max-width: 88%;
+    width: 100%;
+    margin: 0 auto;
+}
+.EDITindexMain .EDITmainSemana > DIV:not(:last-child) {
+    margin-bottom: 1rem;
+}
+.EDITindexMain .EDITmainSemana P {
+    margin-bottom: 2.2rem;
+    font-size: 1.4rem;
+}
+.EDITindexMain .EDITmainSemana input[type="checkbox"] ~ label:before {
+    content: '';
+    background: #f4f4f4;
+    border-radius: 100%;
+    border: 1px solid #b4b4b4;
+    display: inline-block;
+    width: 1.4em;
+    height: 1.4em;
+    position: relative;
+    margin-right: 1em;
+    vertical-align: top;
+    cursor: pointer;
+    text-align: center;
+    -webkit-transition: all 250ms ease;
+    transition: all 250ms ease;
+}
+.EDITindexMain .EDITmainSemana input[type="checkbox"]:checked ~ label:before {
+    background-color: #3197EE;
+    box-shadow: inset 0 0 0 3px #f4f4f4;
+}
+.EDITindexMain .EDITmainSemana input[type="checkbox"]:focus ~ label:before {
+    outline: none;
+    border-color: #3197EE;
+}
+.EDITindexMain .EDITmainSemana input[type="checkbox"]:disabled ~ label:before {
+    box-shadow: inset 0 0 0 4px #f4f4f4;
+    border-color: #b4b4b4;
+    background: #b4b4b4;
+}
+.EDITindexMain .EDITmainSemana input[type="checkbox"] ~ label:empty:before {
+    margin-right: 0;
+}
+.EDITindexMain .EDITmainSemana input[type="checkbox"] {
+    display: none;
+}
+.EDITindexMain .EDITmainSemana label {
+    cursor: pointer;
+}
+
+
+
+.MODALdefault {
+    z-index: 100001;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: none;
+    overflow: hidden;
+    outline: 0;
+}
+.MODALdefault::after {
+    content: '';
+    background: rgba(0, 0, 0, 0.5);
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.MODALdefault .MODALinst {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    z-index: 1;
+    justify-content: center;
+    align-items: center;
+}
+.MODALdefault .MODALinst .CONTENTmodal {
+    background: #fff;
+    /* font-weight: 100; */
+    z-index: 99;
+    width: calc(100vw - 3.6rem);
+    max-width: 500px;
+    overflow: hidden;
+    font-size: 1.43rem;
+    box-shadow: inset 0 0 15px 0 rgba(0,0,0,0.24), 0 12px 15px 0 rgba(0,0,0,0.24);
+}
+.MODALdefault .SCREENmodal {
+    bottom: 0;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 2;
+    background: transparent;
+    width: 100vw;
+    height: 100vh;
+}
+.MODALdefault .CONTENTmodal {
+    max-width: 384px !IMPORTANT;
+}
+.MODALdefault .CONTENTmodal > * {
+    width: 100%;
+}
+.MODALdefault .CONTENTmodal .MODALelemTitle {
+    font-size: 2.2rem;
+    font-weight: 500;
+    padding: 2.4rem;
+}
+.MODALdefault .CONTENTmodal .MODALelemMsg {
+    padding: 0 2.4rem;
+}
+.MODALdefault .CONTENTmodal .MODALelemFooter {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 2.4rem;
+}
+.MODALdefault .CONTENTmodal .MODALelemFooter button:not(:last-child) {
+    margin-right: 1.6rem;
+}
+.MODALdefault .CONTENTmodal .MODALelemFooter button {
+    text-transform: uppercase;
+    font-weight: 900;
+    padding: 8px;
+}
+.MODALdefault .CONTENTmodal .MODALelemFooter button[name="ACTIONitemRemove"] {
+    color: #ff2222;
+}
+
+.MODALdefault.WINDOWmodalCliente .MODALelemMsg .DIVISORitemP:not(:last-child) {
+    margin-bottom: 1rem;
+}
+.MODALdefault.WINDOWmodalCliente .MODALelemMsg .DIVISORitemP {
+    display: flex;
+}
+.MODALdefault.WINDOWmodalCliente .MODALelemMsg .DIVISORitemP P:not(:first-child) {
+    margin-left: 1.6rem;
+}
+.MODALdefault.WINDOWmodalCliente .MODALelemMsg .DIVISORitemP P:first-child {
+    text-align: right;
+    font-weight: bold;
+    min-width: 76px;
+}
+.MODALdefault.WINDOWmodalCliente .MODALelemMsg P {
+    font-weight: 500;
+}
+.MODALdefault.WINDOWmodalCliente .MODALelemMsg P A {
+    color: var(--color-aside-border);
+    text-decoration: underline;
+}
+.MODALdefault.WINDOWmodalCliente .MODALelemFooter {
+    justify-content: space-between;
+    font-weight: 500;
+}
+
+.MODALdefault.WINDOWmodalComanda .CONTENTmodal {
+    font-family: var(--font-oswald);
+    font-weight: 500;
+    padding: 1.6rem;
+    max-height: 90vh;
+    overflow-y: overlay;
+    overflow-x: hidden;
+}
+.MODALdefault.WINDOWmodalComanda .CONTENTmodal > P:not(.IMPORTANTline),
+.MODALdefault.WINDOWmodalComanda .CONTENTmodal .COMMANDlist {
+    border-width: 1px 0;
+    border-style: dashed;
+    border-color: initial;
+    padding: 0.7rem 0 1rem;
+    margin: 0.6rem 0;
+}
+.MODALdefault.WINDOWmodalComanda .CONTENTmodal > P.IMPORTANTline {
+    text-transform: uppercase;
+    line-height: 1.6;
+    text-align: center;
+}
+
+
+.MODALdefault.WINDOWmodalComanda .CONTENTmodal > STRONG, .MODALdefault.WINDOWmodalComanda .CONTENTmodal .COMMANDlist LI {
+    display: flex;
+}
+.MODALdefault.WINDOWmodalComanda .CONTENTmodal > STRONG SPAN:not(:last-child), .MODALdefault.WINDOWmodalComanda .CONTENTmodal .COMMANDlist LI SPAN:not(:last-child) {
+    margin-right: 1.6rem;
+}
+.MODALdefault.WINDOWmodalComanda .CONTENTmodal > STRONG SPAN, .MODALdefault.WINDOWmodalComanda .CONTENTmodal .COMMANDlist LI SPAN {
+    width: 100%;
+}
+.MODALdefault.WINDOWmodalComanda .CONTENTmodal > STRONG SPAN:nth-child(1), .MODALdefault.WINDOWmodalComanda .CONTENTmodal .COMMANDlist LI SPAN:nth-child(1) {
+    max-width: 20px;
+}
+.MODALdefault.WINDOWmodalComanda .CONTENTmodal > STRONG SPAN:nth-child(2), .MODALdefault.WINDOWmodalComanda .CONTENTmodal .COMMANDlist LI SPAN:nth-child(2) {
+    max-width: 56px;
+}
+.MODALdefault.WINDOWmodalComanda .CONTENTmodal > STRONG SPAN:nth-child(4), .MODALdefault.WINDOWmodalComanda .CONTENTmodal .COMMANDlist LI SPAN:nth-child(4) {
+    max-width: 24px;
+}
+.MODALdefault.WINDOWmodalComanda .CONTENTmodal > STRONG SPAN:nth-child(5), .MODALdefault.WINDOWmodalComanda .CONTENTmodal .COMMANDlist LI SPAN:nth-child(5) {
+    max-width: 50px;
+}
+
+
+
+.MODALdefault.WINDOWmodalComanda .CONTENTmodal .COMMANDlist LI SPAN {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.MODALdefault.WINDOWmodalComanda .CONTENTmodal > STRONG SPAN:last-child, .MODALdefault.WINDOWmodalComanda .CONTENTmodal .COMMANDlist LI SPAN:last-child {
+    text-align: right;
+}
+.MODALdefault.WINDOWmodalComanda .CONTENTmodal .COMMANDfrete, .MODALdefault.WINDOWmodalComanda .CONTENTmodal .COMMANDfooter, .MODALdefault.WINDOWmodalComanda .CONTENTmodal .COMMANDsubtotal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.MODALdefault.WINDOWmodalComanda .CONTENTmodal .COMMANDfrete SPAN SMALL {
+    display: block;
+}
+.MODALdefault.WINDOWmodalComanda .CONTENTmodal .COMMANDsubtotal, .MODALdefault.WINDOWmodalComanda .CONTENTmodal .COMMANDfooter {
+    border-top-width: 1px;
+    border-top-style: dashed;
+    border-top-color: initial;
+    padding: 0.9rem 0 0;
+    margin: 0.9rem 0 0;
+}
+.MODALdefault.WINDOWmodalComanda .CONTENTmodal .COMMANDsend {
+    margin-top: 1rem;
+}
+.MODALdefault.WINDOWmodalComanda .CONTENTmodal .COMMANDsend EM {
+    width: 70%;
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.SETTINGelemColumn:not(:last-child) {
+    margin-bottom: 1.6rem;
+    border-bottom: 1px solid #e6e6e6;
+    padding-bottom: 1.6rem;
+}
+.SETTINGelemColumn .MASTERtitle {
+    padding: 0 10px 10px;
+}
+.SETTINGelemColumn .MASTERtitle SPAN {
+    color: #333;
+    font-size: 18px;
+    font-weight: 400;
+    font-family: var(--font-open);
+}
+.SETTINGelemColumn .CLASSitemMedia > DIV {
+    display: flex;
+}
+.SETTINGelemColumn .CLASSitemMedia > DIV:not(.CLASSitemMessage):hover, .SETTINGelemColumn .CLASSitemMedia .CLASSitemDistrict.FIXEDitem {
+    background-color: #e4e4e4;
+}
+.SETTINGelemColumn .CLASSitemMedia .CLASSitemDistrict.FIXEDitem {
+    flex-direction: column;
+    align-items: center;
+}
+.SETTINGelemColumn .CLASSitemMedia .CLASSitemDistrict.FIXEDitem > DIV:first-child {
+    text-align: center;
+    padding-top: 3rem;
+    font-weight: bold;
+}
+.SETTINGelemColumn .CLASSitemMedia > DIV > DIV {
+    width: 100%;
+    padding: 10px;
+}
+.SETTINGelemColumn .CLASSitemMedia > DIV > DIV:first-child {
+    max-width: 250px;
+}
+.SETTINGelemColumn .CLASSitemMedia > DIV > DIV:last-child {
+    max-width: 440px;
+}
+.SETTINGelemColumn .CLASSitemMedia > DIV > DIV:last-child > *:not(:last-child):not(.CLASSitemFirst), .SETTINGelemColumn .CLASSitemMedia .CLASSitemFirst > DIV > *:not(:last-child), .SETTINGelemColumn .CLASSitemFirst > *:not(:last-child) {
+    margin-right: 10px;
+}
+.SETTINGelemColumn .CLASSitemMedia BUTTON:not(.CSSbtnClass) {
+    color: #00838f;
+    font-family: var(--font-lato);
+}
+.SETTINGelemColumn .CLASSitemMedia BUTTON:not(.CSSbtnClass):hover {
+    text-decoration: underline;
+}
+
+
+.SETTINGelemColumn .CLASSitemMedia .CLASSitemStatus {
+    position: relative;
+    display: flex;
+}
+.SETTINGelemColumn .CLASSitemMedia .CLASSitemStatus > INPUT {
+    display: none;
+}
+.SETTINGelemColumn .CLASSitemMedia .CLASSitemStatus > INPUT:checked ~ .CUSTOMlabel::before {
+    color: #fff;
+    border-color: rgba(25, 145, 107, 0.3);
+    background-color: rgba(25, 145, 107, 0.6);
+}
+.SETTINGelemColumn .CLASSitemMedia .CLASSitemStatus > INPUT:checked ~ .CUSTOMlabel::after {
+    background-color: #fff;
+    -webkit-transform: translateX(2.2rem);
+    transform: translateX(2.2rem);
+}
+.SETTINGelemColumn .CLASSitemMedia .CLASSitemStatus > INPUT:not(:disabled):active ~ .CUSTOMlabel::before {
+    color: #fff;
+    background-color: #75e7c3;
+    border-color: #75e7c3;
+}
+.SETTINGelemColumn .CLASSitemMedia .CLASSitemStatus > INPUT:focus:not(:checked) ~ .CUSTOMlabel::before {
+    border-color: #4ae0b0;
+}
+.SETTINGelemColumn .CLASSitemMedia .CLASSitemStatus > INPUT:focus ~ .CUSTOMlabel::before {
+    -webkit-box-shadow: 0 0 0 0.2rem rgba(25,145,107,0.25);
+    box-shadow: 0 0 0 0.2rem rgba(25,145,107,0.25);
+}
+.SETTINGelemColumn .CLASSitemMedia .CLASSitemStatus .CUSTOMlabel {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+}
+.SETTINGelemColumn .CLASSitemMedia .CLASSitemStatus .CUSTOMlabel::before {
+    pointer-events: all;
+    border-radius: 1.8rem;
+    margin-right: 1.2rem;
+    float: left;
+}
+.SETTINGelemColumn .CLASSitemMedia .CLASSitemStatus .CUSTOMlabel::before {
+    -webkit-transition: background-color 0.15s ease-in-out,border-color 0.15s ease-in-out,-webkit-box-shadow 0.15s ease-in-out;
+    transition: background-color 0.15s ease-in-out,border-color 0.15s ease-in-out,-webkit-box-shadow 0.15s ease-in-out;
+    transition: background-color 0.15s ease-in-out,border-color 0.15s ease-in-out,box-shadow 0.15s ease-in-out;
+    transition: background-color 0.15s ease-in-out,border-color 0.15s ease-in-out,box-shadow 0.15s ease-in-out,-webkit-box-shadow 0.15s ease-in-out;
+}
+.CUSTOMlabel::before {
+    display: block;
+    width: 5rem;
+    height: 2.4rem;
+    pointer-events: none;
+    content: "";
+    background-color: #fff;
+    border: #aebcca solid 1px;
+}
+.SETTINGelemColumn .CLASSitemMedia .CLASSitemStatus .CUSTOMlabel::after {
+    background-color: #aebcca;
+    border-radius: 1.5rem;
+    -webkit-transition: background-color 0.15s ease-in-out,border-color 0.15s ease-in-out,-webkit-transform 0.15s ease-in-out,-webkit-box-shadow 0.15s ease-in-out;
+    transition: background-color 0.15s ease-in-out,border-color 0.15s ease-in-out,-webkit-transform 0.15s ease-in-out,-webkit-box-shadow 0.15s ease-in-out;
+    transition: transform 0.15s ease-in-out,background-color 0.15s ease-in-out,border-color 0.15s ease-in-out,box-shadow 0.15s ease-in-out;
+    transition: transform 0.15s ease-in-out,background-color 0.15s ease-in-out,border-color 0.15s ease-in-out,box-shadow 0.15s ease-in-out,-webkit-transform 0.15s ease-in-out,-webkit-box-shadow 0.15s ease-in-out;
+}
+.CUSTOMlabel::after {
+    position: absolute;
+    top: 0.4rem;
+    left: .4rem;
+    display: block;
+    width: 2rem;
+    height: 1.6rem;
+    content: "";
+    background: no-repeat 50% / 50% 50%;
+}
+
+.SETTINGelemColumn .CLASSitemMedia .CLASSitemStatus:not(:last-child) {
+    margin-bottom: 1rem;
+}
+
+.SETTINGelemColumn .CLASSitemJSKEY:not(.DISTRICTelemInput) {
+    grid-template-columns: 1fr minmax(26%, 0fr);
+}
+.SETTINGelemColumn .CLASSitemJSKEY.DISTRICTelemInput {
+    margin-top: 1rem;
+}
+.SETTINGelemColumn .CLASSinputString .CLASSitemSecond > DIV:not(.CLASSitemBttm) {
+    display: table;
+}
+.SETTINGelemColumn .CLASSinputString input[type="text"] {
+    width: 100%;
+}
+.SETTINGelemColumn .CLASSinputString .CLASSitemSecond .CLASSitemAddress INPUT:nth-child(1), .SETTINGelemColumn .CLASSinputString .CLASSitemSecond .CLASSitemAddress INPUT:nth-child(3), .SETTINGelemColumn .CLASSinputString .CLASSitemSecond .CLASSitemAddress INPUT:nth-child(5) {
+    max-width: 72%;
+}
+.SETTINGelemColumn .CLASSinputString .CLASSitemSecond .CLASSitemAddress INPUT:nth-child(2), .SETTINGelemColumn .CLASSinputString .CLASSitemSecond .CLASSitemAddress INPUT:nth-child(4), .SETTINGelemColumn .CLASSinputString .CLASSitemSecond .CLASSitemAddress INPUT:nth-child(6) {
+    margin-left: 1rem;
+    max-width: calc(28% - 1rem);
+}
+.SETTINGelemColumn .CLASSinputString .CLASSitemSecond .CLASSitemAddress INPUT:not(:last-child):not(:nth-child(5)) {
+    margin-bottom: 1rem;
+}
+
+.SETTINGelemColumn .CLASSitemJSKEY {
+    display: flex;
+}
+.SETTINGelemColumn .CLASSitemJSKEY:not(.DISTRICTelemInput) INPUT:not(:last-child) {
+    margin-right: 1rem;
+}
+.SETTINGelemColumn .CLASSitemJSKEY input[type="text"][js-key="rate"] {
+    max-width: 26%;
+}
+.SETTINGelemColumn .CLASSitemMedia .CLASSitemSecond .CLASSitemCEP {
+    margin-bottom: 1rem;
+}
+.SETTINGelemColumn .CLASSitemMedia .CLASSitemSecond .CLASSitemCEP input[type="text"] {
+    max-width: 90px;
+}
+.SETTINGelemColumn .CLASSinputString input[type="text"], .SETTINGelemColumn .CLASSitemJSKEY  input[type="text"] {
+    height: 30px;
+    text-indent: 1rem;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    width: 100%;
+}
+.SETTINGelemColumn .CLASSinputString .ITEMnone, .SETTINGelemColumn .CLASSitemDistrict .ITEMnone {
+    display: none;
+}
+.SETTINGelemColumn .CLASSsemanaItem .CLASSitemFirst > DIV:not(:last-child) {
+    margin-bottom: 4px;
+}
+.SETTINGelemColumn .CLASSsemanaItem .ITEMnone {
+    display: none;
+}
+.SETTINGelemColumn .CLASSitemMedia .CLASSitemSecond > DIV > DIV {
+    display: flex;
+    align-items: center;
+}
+.SETTINGelemColumn .CLASSitemMedia .CLASSitemSecond .CLASSitemTime > DIV > *:not(:last-child) {
+    margin-right: 1.3rem;
+}
+
+.SETTINGelemColumn .CLASSitemMedia .CLASSitemSecond > DIV > DIV:not(:last-child) {
+    margin-bottom: 1rem;
+}
+.SETTINGelemColumn .CLASSitemMedia .CLASSitemSecond .CREATEnewTime {
+    margin: 1rem 0;
+    display: inline-block;
+}
+.SETTINGelemColumn .CLASSitemMedia .CLASSitemSecond > P {
+    font-size: 1.4rem;
+    font-style: italic;
+    line-height: 1.3;
+}
+.SETTINGelemColumn .CLASSitemMedia .CLASSitemSecond .CLASSitemBttm {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.SETTINGelemColumn .CLASSitemMedia .CLASSitemSecond input[type="time"] {
+    background: rgb(0 0 0 / 0.1);
+    padding-left: 3px;
+    border-radius: 3px;
+    width: 70px;
+}
+
+.SETTINGelemColumn .CLASSitemMedia BUTTON.CSSbtnClass {
+    border-radius: 2px;
+    border: 1px solid rgba(0,0,0,0.1);
+    cursor: pointer;
+    height: 26px;
+    padding: 0 1.6rem;
+    line-height: 26px;
+    box-sizing: content-box;
+    vertical-align: middle;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+.SETTINGelemColumn .CLASSitemMedia BUTTON.CSSbtnClass.btn1 {
+    color: #fff;
+    background: -webkit-gradient(linear,left top,left bottom,from(#0db722),to(#0e9c20));
+}
+.SETTINGelemColumn .CLASSitemMedia BUTTON.CSSbtnClass.btn2 {
+    color: #222;
+    background: -webkit-gradient(linear,left top,left bottom,from(#ffffff),to(#ececec));
+    border: 1px solid rgba(0,0,0,0.2) !IMPORTANT;
+}
+.SETTINGelemColumn .CLASSinputString .CLASSitemMinmax {
+    margin-bottom: 1rem;
+}
+
+.PUSHnotifyBttm {
+    position: fixed;
+    padding: 1.6rem 2rem;
+    left: 0;
+    bottom: -70px;
+    background: #fff;
+    margin: 1.6rem;
+    font-weight: bold;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+    transform: translate3d(0px, 70px, 0px);
+    z-index: 101;
+}
+
+.SETTINGelemColumn .CLASSitemMedia .CLASSitemMessage {
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem;
+}
+.SETTINGelemColumn .CLASSitemMedia .CLASSitemMessage > SPAN {
+    margin-bottom: 1rem;
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+
+
+.HEADERnavScreen {
+    display: flex;
+    background: var(--color-clean);
+    box-shadow: #cccccc 0 0 16px;
+    margin-bottom: 1rem;
+    position: -webkit-sticky;
+    position: -moz-sticky;
+    position: -ms-sticky;
+    position: -o-sticky;
+    position: sticky;
+    z-index: 4;
+    top: 0;
+}
+.HEADERnavScreen UL {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    margin: 0 auto;
+}
+.HEADERnavScreen UL LI {
+    position: relative;
+}
+.HEADERnavScreen UL LI LABEL {
+    color: hsl(0, 0%, 60%);
+    max-width: 150px;
+    padding: 1.6rem;
+    float: left;
+    width: 100%;
+    cursor: pointer;
+    text-align: center;
+    transition: color .3s;
+}
+.HEADERnavScreen UL LI LABEL:hover {
+    color: #404040;
+}
+.HEADERnavScreen UL LI LABEL::after {
+    content: "";
+    display: block;
+    width: 20%;
+    height: 3px;
+    left: 40%;
+    right: 40%;
+    transition: 0.3s;
+    background-color: transparent;
+    position: absolute;
+    bottom: 0;
+}
+.HEADERnavScreen input:checked ~ label::after {
+    background-color: #cc0000;
+    width: 100%;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    left: 0;
+    right: 0;
+}
+.HEADERnavScreen input:not(:checked) ~ label:hover::after {
+    background-color: rgba(170, 170, 170, 0.45);
+    width: 60%;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    left: 20%;
+    right: 20%;
+}
+
+.AREAofService {
+    display: flex;
+    padding: 1.6rem;
+    margin: auto 3rem;
+}
+
+.DASHBOARDinst {
+    width: 200%;
+    position: relative;
+    transition: .3s;
+    overflow: hidden;
+    left: 0;
+}
+
+.DASHBOARDinst > DIV {
+    width: 50%;
+    float: left;
+    transition: opacity 1.5s;
+}
+.DASHBOARDinst > DIV:not(.WINDOWopenScreen) {
+    opacity: 0;
+}
+.DASHBOARDinst > DIV.WINDOWopenScreen {
+    opacity: 1;
+}
+.DASHBOARDinst .CARDitemData:not(:last-child), .DASHBOARDinst .CARDitemWait:not(:last-child) {
+    margin-bottom: 2.2rem;
+}
+
+.AREAofService {
+    display: flow-root;
+}
+.AREAofService .SCROLLview {
+    display: flex;
+    flex-direction: column;
+    padding: 2.6rem 2rem;
+    position: relative;
+}
+.AREAofService .SCREENit > P {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    color: #aaa;
+    height: 100%;
+}
+
+.CARDitemWait {
+    font-size: 12px;
+    color: #999999;
+    box-shadow: #cccccc 0 0 16px;
+    overflow: hidden;
+    background-color: #ffffff;
+    border-radius: 4px;
+}
+.CARDitemWait > DIV {
+    padding: 1.2rem 1.6rem;
+    display: flex;
+}
+.CARDitemWait .CARDbttmElem {
+    background: #FAFAFC;
+    border-top: 1px solid #EFEEF9;
+    justify-content: space-between;
+}
+.CARDitemWait .CLASSitemTimestamp {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.CARDitemWait .CLASSbttnModal BUTTON {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: .4rem 1rem;
+    max-width: 120px;
+    border-radius: 3px;
+    transition: .1s;
+    box-shadow: inset 0px 0 0px 1px #1a73e8;
+    color: #1a73e8;
+    font-weight: 500;
+}
+.CARDitemWait .CLASSbttnModal BUTTON:hover {
+    background: rgb(26 115 232 / 0.1);
+}
+.CARDitemWait .CLASSbttnModal BUTTON .CROSSicon::after {
+    content: "";
+}
+.CARDitemWait .CLASSbttnModal BUTTON .CROSSicon, .CARDitemWait .CLASSbttnModal BUTTON .CROSSicon::after {
+    width: 12px;
+    height: 12px;
+    display: block;
+}
+.CARDitemWait .CLASSbttnModal BUTTON[name="WINDOWmodalCliente"] .CROSSicon::after {
+    background-image: url("data:image/svg+xml;base64,PHN2ZyBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA1MTUuNTU2IDUxNS41NTYiIHZpZXdCb3g9IjAgMCA1MTUuNTU2IDUxNS41NTYiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgZmlsbD0iIzFhNzNlOCI+PHBhdGggZD0ibTM0OC45MTggMzcuNzUxYzUwLjMzNCA1MC4zMzQgNTAuMzM0IDEzMS45NDIgMCAxODIuMjc2cy0xMzEuOTQyIDUwLjMzNC0xODIuMjc2IDAtNTAuMzM0LTEzMS45NDIgMC0xODIuMjc2YzUwLjMzNC01MC4zMzUgMTMxLjk0Mi01MC4zMzUgMTgyLjI3NiAwIi8+PHBhdGggZD0ibTQ1NS40ODYgMzUwLjY2OWMtMTE3LjQ5OC03OS4zOTEtMjc3LjkxNy03OS4zOTEtMzk1LjQxNSAwLTE3LjQzMyAxMS43NjktMjcuODQ4IDMxLjY1Ni0yNy44NDggNTMuMjExdjExMS42NzZoNDUxLjExMXYtMTExLjY3NmMwLTIxLjU1NS0xMC40MTYtNDEuNDQyLTI3Ljg0OC01My4yMTF6Ii8+PC9zdmc+")
+}
+.CARDitemWait .CLASSbttnModal BUTTON[name="WINDOWmodalComanda"] .CROSSicon::after {
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMiIgaGVpZ2h0PSIxMiIgdmlld0JveD0iMCAwIDEyIDEyIj4KICA8ZGVmcz4KICAgIDxzdHlsZT4KICAgICAgLmNscy0xIHsKICAgICAgICBmaWxsOiAjMWE3M2U4OwogICAgICAgIGZpbGwtcnVsZTogZXZlbm9kZDsKICAgICAgfQogICAgPC9zdHlsZT4KICA8L2RlZnM+CiAgPHBhdGggaWQ9ImNvbWFuZCIgY2xhc3M9ImNscy0xIiBkPSJNMiwwaDhhMiwyLDAsMCwxLDIsMnY4YTIsMiwwLDAsMS0yLDJIMmEyLDIsMCwwLDEtMi0yVjJBMiwyLDAsMCwxLDIsMFpNOCwzaDJWNUg4VjNaTTIsM0g3VjVIMlYzWk04LDdoMlY5SDhWN1pNMiw3SDdWOUgyVjdaIi8+Cjwvc3ZnPgo=")
+}
+
+.CARDitemWait .CLASSitemBttns, .CARDitemWait .CLASSbttnModal {
+    display: flex;
+}
+.CARDitemWait .CLASSitemBttns BUTTON:not(:last-child), .CARDitemWait .CLASSbttnModal BUTTON:not(:last-child) {
+    margin-right: 1rem;
+}
+.CARDitemWait .CLASSitemBttns BUTTON {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 26px;
+    padding: 0 1rem 2px;
+    padding-right: 1.3rem;
+    line-height: 27px;
+    transition: .1s;
+    background: #d8d8d8;
+    box-shadow: inset 0px -2px 0px 0px rgb(0 0 0 / 0.15);
+    color: rgb(0 0 0 / 50%);
+    font-weight: 500;
+}
+.CARDitemWait .CLASSitemBttns BUTTON SPAN {
+    margin-left: 1.2rem;
+}
+.CARDitemWait .CLASSitemBttns BUTTON[name="WHATSsendContact"]:hover {
+    color: #fff;
+    background: #6fbd66;
+}
+.CARDitemWait .CLASSitemBttns BUTTON[name="BTTNcssRota"]:hover {
+    color: #fff;
+    background: #bdb666;
+}
+.CARDitemWait .CLASSitemBttns BUTTON[name="BTTNcssLocal"]:hover {
+    color: #fff;
+    background: #668dbd;
+}
+.CARDitemWait .CLASSitemBttns BUTTON[name="BTTNcssPrint"]:hover {
+    color: #fff;
+    background: #bd6676;
+}
+.CARDitemWait .CLASSitemBttns BUTTON[name="WHATSsendContact"] .CROSSicon::after {
+    background-image: url("data:image/svg+xml;base64,PHN2ZyBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA0NjUuODgyIDQ2NS44ODIiIHZpZXdCb3g9IjAgMCA0NjUuODgyIDQ2NS44ODIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgZmlsbD0iIzg4ODg4OCI+PHBhdGggZD0ibTQ2NS44ODIgMC00NjUuODgyIDI2Mi4wNTkgMTQ4Ljg4NyA1NS4xNDMgMjI5LjY0My0yMTUuMjktMTc0LjY3NCAyMzUuNjUuMTQyLjA1My0uMTc0LS4wNTN2MTI4LjMyMWw4My40OTUtOTcuNDEgMTA1Ljc3IDM5LjE3NXoiLz48L3N2Zz4=")
+}
+.CARDitemWait .CLASSitemBttns BUTTON[name="WHATSsendContact"]:hover .CROSSicon::after {
+    background-image: url("data:image/svg+xml;base64,PHN2ZyBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA0NjUuODgyIDQ2NS44ODIiIHZpZXdCb3g9IjAgMCA0NjUuODgyIDQ2NS44ODIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgZmlsbD0iI2ZmZmZmZiI+PHBhdGggZD0ibTQ2NS44ODIgMC00NjUuODgyIDI2Mi4wNTkgMTQ4Ljg4NyA1NS4xNDMgMjI5LjY0My0yMTUuMjktMTc0LjY3NCAyMzUuNjUuMTQyLjA1My0uMTc0LS4wNTN2MTI4LjMyMWw4My40OTUtOTcuNDEgMTA1Ljc3IDM5LjE3NXoiLz48L3N2Zz4=")
+}
+.CARDitemWait .CLASSitemBttns BUTTON[name="BTTNcssRota"] .CROSSicon::after {
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMTYgMTYiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgZmlsbD0iIzg4ODg4OCI+PHBhdGggZD0ibTUuNDE0MjEgMS4xNzE1N2MxLjE3MTU3IDEuMTcxNTcgMS4xNzE1NyAzLjA3MTA3IDAgNC4yNDI2NHMtMy4wNzEwNyAxLjE3MTU3LTQuMjQyNjQgMGMtMS4xNzE1Ny0xLjE3MTU3LTEuMTcxNTctMy4wNzEwNyAwLTQuMjQyNjQgMS4xNzE1Ny0xLjE3MTU3IDMuMDcxMDctMS4xNzE1NyA0LjI0MjY0IDAiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDQuNzA3IDQuNzA3KSIvPjxwYXRoIGQ9Im0xNiA3aC0xLjA3OTgzYy0uNDQwNjEzLTMuMDU5MDgtMi44NjEwOC01LjQ3OTU1LTUuOTIwMTctNS45MjAxN3YtMS4wNzk4M2gtMnYxLjA3OTgzYy0zLjA1OTA4LjQ0MDYxMy01LjQ3OTU1IDIuODYxMDgtNS45MjAxNyA1LjkyMDE3aC0xLjA3OTgzdjJoMS4wNzk4M2MuNDQwNjEzIDMuMDU5MDggMi44NjEwOCA1LjQ3OTU1IDUuOTIwMTcgNS45MjAxN3YxLjA3OTgzaDJ2LTEuMDc5ODNjMy4wNTkwOC0uNDQwNjEzIDUuNDc5NTUtMi44NjEwOCA1LjkyMDE3LTUuOTIwMTdoMS4wNzk4M3ptLTggNmMtMi43NTY4NCAwLTUtMi4yNDMxNi01LTVzMi4yNDMxNi01IDUtNSA1IDIuMjQzMTYgNSA1LTIuMjQzMTYgNS01IDV6Ii8+PC9zdmc+")
+}
+.CARDitemWait .CLASSitemBttns BUTTON[name="BTTNcssRota"]:hover .CROSSicon::after {
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMTYgMTYiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgZmlsbD0iI2ZmZmZmZiI+PHBhdGggZD0ibTUuNDE0MjEgMS4xNzE1N2MxLjE3MTU3IDEuMTcxNTcgMS4xNzE1NyAzLjA3MTA3IDAgNC4yNDI2NHMtMy4wNzEwNyAxLjE3MTU3LTQuMjQyNjQgMGMtMS4xNzE1Ny0xLjE3MTU3LTEuMTcxNTctMy4wNzEwNyAwLTQuMjQyNjQgMS4xNzE1Ny0xLjE3MTU3IDMuMDcxMDctMS4xNzE1NyA0LjI0MjY0IDAiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDQuNzA3IDQuNzA3KSIvPjxwYXRoIGQ9Im0xNiA3aC0xLjA3OTgzYy0uNDQwNjEzLTMuMDU5MDgtMi44NjEwOC01LjQ3OTU1LTUuOTIwMTctNS45MjAxN3YtMS4wNzk4M2gtMnYxLjA3OTgzYy0zLjA1OTA4LjQ0MDYxMy01LjQ3OTU1IDIuODYxMDgtNS45MjAxNyA1LjkyMDE3aC0xLjA3OTgzdjJoMS4wNzk4M2MuNDQwNjEzIDMuMDU5MDggMi44NjEwOCA1LjQ3OTU1IDUuOTIwMTcgNS45MjAxN3YxLjA3OTgzaDJ2LTEuMDc5ODNjMy4wNTkwOC0uNDQwNjEzIDUuNDc5NTUtMi44NjEwOCA1LjkyMDE3LTUuOTIwMTdoMS4wNzk4M3ptLTggNmMtMi43NTY4NCAwLTUtMi4yNDMxNi01LTVzMi4yNDMxNi01IDUtNSA1IDIuMjQzMTYgNSA1LTIuMjQzMTYgNS01IDV6Ii8+PC9zdmc+")
+}
+.CARDitemWait .CLASSitemBttns BUTTON[name="BTTNcssLocal"] .CROSSicon::after {
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1NC43NTcgNTQuNzU3IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA1NC43NTcgNTQuNzU3OyIgZmlsbD0iIzg4ODg4OCI+PHBhdGggZD0iTTQwLjk0LDUuNjE3QzM3LjMxOCwxLjk5NSwzMi41MDIsMCwyNy4zOCwwYy01LjEyMywwLTkuOTM4LDEuOTk1LTEzLjU2LDUuNjE3Yy02LjcwMyw2LjcwMi03LjUzNiwxOS4zMTItMS44MDQsMjYuOTUyIEwyNy4zOCw1NC43NTdMNDIuNzIxLDMyLjZDNDguNDc2LDI0LjkyOSw0Ny42NDMsMTIuMzE5LDQwLjk0LDUuNjE3eiBNMjcuNTU3LDI2Yy0zLjg1OSwwLTctMy4xNDEtNy03czMuMTQxLTcsNy03czcsMy4xNDEsNyw3IFMzMS40MTYsMjYsMjcuNTU3LDI2eiIvPjwvc3ZnPg0K")
+}
+.CARDitemWait .CLASSitemBttns BUTTON[name="BTTNcssLocal"]:hover .CROSSicon::after {
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1NC43NTcgNTQuNzU3IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA1NC43NTcgNTQuNzU3OyIgZmlsbD0iI2ZmZmZmZiI+PHBhdGggZD0iTTQwLjk0LDUuNjE3QzM3LjMxOCwxLjk5NSwzMi41MDIsMCwyNy4zOCwwYy01LjEyMywwLTkuOTM4LDEuOTk1LTEzLjU2LDUuNjE3Yy02LjcwMyw2LjcwMi03LjUzNiwxOS4zMTItMS44MDQsMjYuOTUyIEwyNy4zOCw1NC43NTdMNDIuNzIxLDMyLjZDNDguNDc2LDI0LjkyOSw0Ny42NDMsMTIuMzE5LDQwLjk0LDUuNjE3eiBNMjcuNTU3LDI2Yy0zLjg1OSwwLTctMy4xNDEtNy03czMuMTQxLTcsNy03czcsMy4xNDEsNyw3IFMzMS40MTYsMjYsMjcuNTU3LDI2eiIvPjwvc3ZnPg0K")
+}
+.CARDitemWait .CLASSitemBttns BUTTON[name="BTTNcssPrint"] .CROSSicon::after {
+    background-image: url("data:image/svg+xml;base64,PHN2ZyBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA1MTIgNTEyIiB2aWV3Qm94PSIwIDAgNTEyIDUxMiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiBmaWxsPSIjNzM3MzczIj48cGF0aCBkPSJtNDE0IDgwaC0zMTZjLTUuNTIzIDAtMTAtNC40NzctMTAtMTB2LTI2YzAtMjQuMzAxIDE5LjY5OS00NCA0NC00NGgyNDhjMjQuMzAxIDAgNDQgMTkuNjk5IDQ0IDQ0djI2YzAgNS41MjMtNC40NzcgMTAtMTAgMTB6Ii8+PHBhdGggZD0ibTQ1OCAxMTJoLTQwNGMtMjkuNzc2IDAtNTQgMjQuMjI0LTU0IDU0djE4OGMwIDI5Ljc3NiAyNC4yMjQgNTQgNTQgNTRoMzR2LTgwYzAtMzkuNzAxIDMyLjI5OS03MiA3Mi03MmgxOTJjMzkuNzAxIDAgNzIgMzIuMjk5IDcyIDcydjgwaDM0YzI5Ljc3NiAwIDU0LTI0LjIyNCA1NC01NHYtMTg4YzAtMjkuNzc2LTI0LjIyNC01NC01NC01NHptLTM2MS45OCAxMjBjLTEzLjI1NSAwLTI0LjAwNS0xMC43NDUtMjQuMDA1LTI0czEwLjc0LTI0IDIzLjk5NS0yNGguMDFjMTMuMjU1IDAgMjQgMTAuNzQ1IDI0IDI0cy0xMC43NDUgMjQtMjQgMjR6Ii8+PHBhdGggZD0ibTM1MiAzMDRoLTE5MmMtMTMuMjU1IDAtMjQgMTAuNzQ1LTI0IDI0djgwIDMyYzAgMTMuMjU1IDEwLjc0NSAyNCAyNCAyNGgxOTJjMTMuMjU1IDAgMjQtMTAuNzQ1IDI0LTI0di0zMi04MGMwLTEzLjI1NS0xMC43NDUtMjQtMjQtMjR6Ii8+PC9zdmc+")
+}
+.CARDitemWait .CLASSitemBttns BUTTON[name="BTTNcssPrint"]:hover .CROSSicon::after {
+    background-image: url("data:image/svg+xml;base64,PHN2ZyBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA1MTIgNTEyIiB2aWV3Qm94PSIwIDAgNTEyIDUxMiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiBmaWxsPSIjZmZmZmZmIj48cGF0aCBkPSJtNDE0IDgwaC0zMTZjLTUuNTIzIDAtMTAtNC40NzctMTAtMTB2LTI2YzAtMjQuMzAxIDE5LjY5OS00NCA0NC00NGgyNDhjMjQuMzAxIDAgNDQgMTkuNjk5IDQ0IDQ0djI2YzAgNS41MjMtNC40NzcgMTAtMTAgMTB6Ii8+PHBhdGggZD0ibTQ1OCAxMTJoLTQwNGMtMjkuNzc2IDAtNTQgMjQuMjI0LTU0IDU0djE4OGMwIDI5Ljc3NiAyNC4yMjQgNTQgNTQgNTRoMzR2LTgwYzAtMzkuNzAxIDMyLjI5OS03MiA3Mi03MmgxOTJjMzkuNzAxIDAgNzIgMzIuMjk5IDcyIDcydjgwaDM0YzI5Ljc3NiAwIDU0LTI0LjIyNCA1NC01NHYtMTg4YzAtMjkuNzc2LTI0LjIyNC01NC01NC01NHptLTM2MS45OCAxMjBjLTEzLjI1NSAwLTI0LjAwNS0xMC43NDUtMjQuMDA1LTI0czEwLjc0LTI0IDIzLjk5NS0yNGguMDFjMTMuMjU1IDAgMjQgMTAuNzQ1IDI0IDI0cy0xMC43NDUgMjQtMjQgMjR6Ii8+PHBhdGggZD0ibTM1MiAzMDRoLTE5MmMtMTMuMjU1IDAtMjQgMTAuNzQ1LTI0IDI0djgwIDMyYzAgMTMuMjU1IDEwLjc0NSAyNCAyNCAyNGgxOTJjMTMuMjU1IDAgMjQtMTAuNzQ1IDI0LTI0di0zMi04MGMwLTEzLjI1NS0xMC43NDUtMjQtMjQtMjR6Ii8+PC9zdmc+")
+}
+
+
+
+/* .CARDitemWait .CLASSitemBttns BUTTON .CROSSicon {
+    background: aqua;
+} */
+.CARDitemWait .CLASSitemBttns BUTTON .CROSSicon, .CARDitemWait .CLASSitemBttns BUTTON .CROSSicon::after {
+    width: 14px;
+    height: 14px;
+    display: block;
+}
+.CARDitemWait .CLASSitemBttns BUTTON .CROSSicon::after {
+    content: "";
+}
+
+.CARDitemWait .CLASSitemHead SPAN.CLIENTnameSPAN {
+    font-size: 2.2rem;
+    color: #323232;
+    display: block;
+}
+.CARDitemWait .CLASSitemHead P {
+    display: inline-grid;
+}
+.CARDitemWait .CLASSitemHead P SPAN {
+    display: block;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.CARDitemWait .RIGHTitemMaster {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.CARDitemWait .RIGHTitemMaster BUTTON {
+    color: #fff;
+    background: #b70d0d;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.4);
+}
+.CARDitemWait .RIGHTitemMaster BUTTON {
+    border-radius: 2px;
+    cursor: pointer;
+    height: 22px;
+    padding: 2px 1.6rem;
+    line-height: 24px;
+    box-sizing: content-box;
+    vertical-align: middle;
+    font-size: 1.4rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+.CARDitemWait .RIGHTitemMaster BUTTON:hover {
+    background: #a20a0a;
+}
+.CARDitemWait .RIGHTitemMaster BUTTON .SVGitemRemove {
+    color: #fff;
+    fill: #fff;
+}
+.CARDitemWait .RIGHTitemMaster BUTTON SPAN {
+    margin-left: 1rem;
+    white-space: nowrap;
+}
+.CARDitemWait .CARDrightIitem {
+    display: grid;
+    grid-template-columns: none;
+    grid-template-rows: 1fr max-content;
+    width: max-content;
+    min-width: 33%;
+}
+.CARDitemWait .CARDrightIitem .RIGHTitemBttm {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: none;
+    background: #fad7d7;
+    padding: 1rem;
+}
+.CARDitemWait .CARDrightIitem .RIGHTitemBttm .CLASSitemSecond {
+    display: flex;
+    align-items: center;
+}
+.CARDitemWait .CARDrightIitem .RIGHTitemBttm .CLASSitemSecond button[name="WINDOWmodalStatus"] {
+    width: 100%;
+    color: #fff;
+    background-color: #279acc;
+    border-bottom: 2px solid #1682b5;
+    height: 30px;
+    padding: 0 1.3rem;
+    margin: 0 1rem;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.CARDitemWait .CARDrightIitem .RIGHTitemBttm .CLASSitemSecond button[name="WINDOWmodalStatus"]:hover {
+    background-color: #2da5da;
+}
+.CARDitemWait .CARDrightIitem > DIV:not(:last-child) {
+    margin-bottom: 1.6rem;
+}
+.CARDitemWait .CARDrightIitem .RIGHTitemBttm .CLASSitemFirst {
+    align-items: flex-end;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.CARDitemWait .RIGHTitemBttm .CLASSitemFirst SPAN {
+    color: #000;
+    font-weight: bold;
+    display: flex;
+    justify-content: flex-end;
+}
+.CARDitemWait .CARDrightIitem .RIGHTitemBttm .CLASSitemFirst .CROSSicon {
+    margin-right: 0.8rem;
+}
+.CARDitemWait .RIGHTitemBttm .CLASSitemFirst P {
+    color: #777;
+    text-align: right;
+}
+.CARDitemWait .CARDrightIitem .RIGHTitemBttm .CLASSitemFirst[data-status="WAITstt"] .CROSSicon::after {
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMTYgMTYiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgZmlsbD0iIzAwMDAwMCI+PHBhdGggZD0ibTggMGMtNC40MTExMyAwLTggMy41ODg4Ny04IDhzMy41ODg4NyA4IDggOCA4LTMuNTg4ODcgOC04LTMuNTg4ODctOC04LTh6bTEuNDE0NTUgMTAuODI4Ni0yLjQxNDU1LTIuNDE0NTV2LTQuNDE0MDZoMnYzLjU4NTk0bDEuODI4NjEgMS44Mjg2MXoiLz48L3N2Zz4=")
+}
+.CARDitemWait .CARDrightIitem .RIGHTitemBttm .CLASSitemFirst[data-status="PREPstt"] .CROSSicon::after {
+    background-image: url("data:image/svg+xml;base64,PHN2ZyBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA1MTIuMDgxIDUxMi4wODEiIHZpZXdCb3g9IjAgMCA1MTIuMDgxIDUxMi4wODEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgZmlsbD0iI2I3MjgwZCI+PHBhdGggZD0ibTMyNy40MjIgNDkwLjMxYzE4LjU1Mi0zNy4xMDQgNDAuNjYtMTAwLjI4NCA5Ljc3Ni0xMjcuNTI4LTI4LjQ2OCA0LjI3NS01MS40ODggNC4zMDEtNzAuMjE4LjA5Ni00Ny4xNjQtMTAuNTktNjIuMDkzLTQ3Ljk1Ny00OS4xMDgtOTUuODEtNjMuNDU2IDU3Ljk4OS02Ni4xMzUgMTQzLjQ5NC00Mi42MTEgMjI1LjgzIDMuODIxIDEzLjM3NS0xMS4xNSAyNC4zMy0yMi43NDMgMTYuNjAyLTMuOTQ4LTIuNjMyLTk2LjY4LTY1LjU2Ny05Ni42OC0xNjIuNDgxIDAtMTU4Ljc2OSAxODAtMTY1LjYgMTgwLTMzMiAwLTEyLjcxMSAxNC44OTQtMTkuNjY4IDI0LjY0MS0xMS40OTIgNzEuOTI4IDYwLjMzNyAyMDIuODEyIDIwNS4zNzggMTk1LjQ2NyAzMzguNzc2LTMuNjQxIDY2LjEzMi0zOS41NyAxMjIuMzg1LTEwNi43ODggMTY3LjE5Ny0xMi43MTQgOC40NzMtMjguNTktNS40ODMtMjEuNzM2LTE5LjE5eiIvPjwvc3ZnPg==")
+}
+.CARDitemWait .CARDrightIitem .RIGHTitemBttm .CLASSitemFirst[data-status="OKAYstt"] .CROSSicon::after {
+    background-image: url("data:image/svg+xml;base64,PHN2ZyBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA1MTUuNTU2IDUxNS41NTYiIHZpZXdCb3g9IjAgMCA1MTUuNTU2IDUxNS41NTYiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgZmlsbD0iIzBkYjczZCI+PHBhdGggZD0ibTI1Ny43NzggMGMtMTQyLjEzNyAwLTI1Ny43NzggMTE1LjY0MS0yNTcuNzc4IDI1Ny43NzhzMTE1LjY0MSAyNTcuNzc4IDI1Ny43NzggMjU3Ljc3OCAyNTcuNzc4LTExNS42NDEgMjU3Ljc3OC0yNTcuNzc4LTExNS42NDItMjU3Ljc3OC0yNTcuNzc4LTI1Ny43Nzh6bS0zMi4yMjIgMzgzLjg5OS0xMDMuMzM4LTEwMy4zMzggNDUuNTY0LTQ1LjU2NCA1Ny43NzQgNTcuNzc0IDEyMi4yMTgtMTIyLjIxOCA0NS41NjQgNDUuNTY0cy0xNjcuNzgyIDE2Ny43ODItMTY3Ljc4MiAxNjcuNzgyeiIvPjwvc3ZnPg==")
+}
+.CARDitemWait .CARDrightIitem .RIGHTitemBttm .CLASSitemFirst[data-status="DELYstt"] .CROSSicon::after {
+    background-image: url("data:image/svg+xml;base64,PHN2ZyBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAzOTIuODI0IDM5Mi44MjQiIHZpZXdCb3g9IjAgMCAzOTIuODI0IDM5Mi44MjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgZmlsbD0iIzJmODM5ZSI+PHBhdGggZD0ibTMwOC42NDcgODQuMTc2di00Mi4wODhsLTQyLjA4OC00Mi4wODhoLTE0MC4yOTRsLTQyLjA4OSA0Mi4wODh2NDIuMDg4aC04NC4xNzZ2MjUyLjUyOWMwIDMwLjk1IDI1LjE2OCA1Ni4xMTggNTYuMTE4IDU2LjExOGgyODAuNTg4YzMwLjk1IDAgNTYuMTE4LTI1LjE2OCA1Ni4xMTgtNTYuMTE4di0yNTIuNTI5em0tMTY4LjM1My0yOC4wNThoMTEyLjIzNXYyOC4wNTloLTExMi4yMzV6Ii8+PC9zdmc+")
+}
+.CARDitemWait .CARDrightIitem .RIGHTitemBttm .CLASSitemFirst .CROSSicon, .CARDitemWait .CARDrightIitem .RIGHTitemBttm .CLASSitemFirst .CROSSicon::after {
+    width: 16px;
+    height: 16px;
+    display: block;
+}
+.CARDitemWait .CARDrightIitem .RIGHTitemBttm .CLASSitemFirst .CROSSicon::after {
+    content: "";
+}
+
+
+
+
+
+.CARDitemData {
+    color: hsl(0, 0%, 60%);
+    background-color: hsl(0, 0%, 100%);
+    box-shadow: hsl(0, 0%, 80%) 0 0 16px;
+    font-size: 12px;
+    border-radius: 4px;
+    overflow: hidden;
+    padding: 1.6rem;
+}
+.CARDitemData .CARDrequestContent {
+    display: flex;
+}
+.CARDitemData .CARDrequestContent::-webkit-scrollbar {
+    width: 6px!important;
+    height: 6px!important;
+}
+.CARDitemData .CARDrequestContent::-webkit-scrollbar-thumb {
+    background: rgba(0,0,0, 0.15);
+}
+.CARDitemData .CARDrequestContent > DIV {
+    width: 100%;
+}
+.CARDitemData .CARDrequestContent > DIV:not(:last-child) {
+    margin-right: 1.6rem;
+}
+.CARDitemData .CARDrequestContent .ITEMbox {
+    margin:  1.6rem 0 0;
+}
+.CARDitemWait .CARDmainElem > .CARDleftIitem {
+    width: 100%;
+    margin-right: 1.6rem;
+    justify-content: space-between;
+}
+.CARDitemWait .CARDleftIitem .CLASSitemHead {
+    margin-bottom: 1.6rem;
+}
+.CARDitemData .BASEinfoClient, .CARDitemWait .CARDleftIitem {
+    display: flex;
+    flex-direction: column;
+}
+.CARDitemData .BASEinfoClient > DIV:not(:last-child) {
+    margin-bottom: 1.6rem;
+}
+.CARDitemData  .INFOcliente > *:not(:first-child) {
+    margin-top: 0.6rem;
+}
+.CARDitemData .INFOcliente SPAN {
+    font-size: 2.2rem;
+    color: #323232;
+}
+.CARDitemData .BASEinfoRequest {
+    color: #444;
+}
+.CARDitemData .CARDrequestContent .BASEinfoRequest .COMANDAitemData {
+    font-size: 1.4rem;
+}
+.CARDitemData .BASEinfoRequest .COMANDAitemData > DIV, .CARDitemData .BASEinfoRequest .COMANDAitemData > P {
+    padding: 8px 12px;
+    line-height: 20px;
+}
+.CARDitemData .BASEinfoRequest .COMANDAitemData > DIV:nth-child(even) {
+    background-color: #e6e6e6;
+}
+.CARDitemData .BASEinfoRequest .COMANDAitemData > DIV:nth-child(odd) {
+    background-color: #f5f5f5;
+}
+.CARDitemData .BASEinfoRequest .COMANDAitemData > DIV > DIV, .CARDitemData .BASEinfoRequest .COMANDAitemData > P {
+    display: flex;
+}
+.CARDitemData .BASEinfoRequest .COMANDAitemData > DIV > DIV SPAN:not(:last-child), .CARDitemData .BASEinfoRequest .COMANDAitemData > P SPAN:not(:last-child) {
+    margin-right: 1.6rem;
+}
+.CARDitemData .BASEinfoRequest .COMANDAitemData > DIV > DIV SPAN, .CARDitemData .BASEinfoRequest .COMANDAitemData > P SPAN {
+    width: 100%;
+}
+.CARDitemData .BASEinfoRequest .COMANDAitemData > DIV > DIV SPAN:nth-child(1), .CARDitemData .BASEinfoRequest .COMANDAitemData > P SPAN:nth-child(1) {
+    max-width: 32px;
+}
+.CARDitemData .BASEinfoRequest .COMANDAitemData > DIV > DIV SPAN:nth-child(2) {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.CARDitemData .BASEinfoRequest .COMANDAitemData > DIV > DIV SPAN:nth-child(3), .CARDitemData .BASEinfoRequest .COMANDAitemData > P SPAN:nth-child(3) {
+    width: initial;
+    white-space: nowrap;
+}
+.CARDitemData .BASEinfoRequest .COMANDAitemData > DIV > DIV SPAN:last-child, .CARDitemData .BASEinfoRequest .COMANDAitemData > P SPAN:last-child {
+    text-align: right;
+}
+
+.CARDitemData .BASEinfoRequest .COMANDAitemData > P {
+    background: darkgrey;
+    color: #fff;
+}
+.CARDitemData .BTTMitemButton {
+    display: flex;
+    flex-direction: row-reverse;
+    margin-bottom: 1.8rem;
+}
+.CARDitemData .BTTMitemButton BUTTON {
+    border-radius: 2px;
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    height: 26px;
+    padding: 0 1.6rem;
+    line-height: 26px;
+    box-sizing: content-box;
+    vertical-align: middle;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+.CARDitemData .BTTMitemButton BUTTON:not(:last-child) {
+    margin-left: 1rem;
+}
+.CARDitemData .BTTMitemButton BUTTON[name="BTTNcomandConfirm"] {
+    color: #fff;
+    background: -webkit-gradient(linear,left top,left bottom,from(#0db722),to(#0e9c20));
+}
+.CARDitemData .BTTMitemButton BUTTON[name="BTTNcomandCancel"] {
+    color: #222;
+    background: -webkit-gradient(linear,left top,left bottom,from(#ffffff),to(#ececec));
+}
+
+
+
+.CHANGEradioStatus input[type="radio"] ~ label:before {
+    content: '';
+    background: #f4f4f4;
+    border-radius: 100%;
+    border: 1px solid #b4b4b4;
+    display: inline-block;
+    width: 1.4em;
+    height: 1.4em;
+    position: relative;
+    margin-right: 1em;
+    vertical-align: top;
+    cursor: pointer;
+    text-align: center;
+    -webkit-transition: all 250ms ease;
+    transition: all 250ms ease;
+}
+.CHANGEradioStatus input[type="radio"]:checked ~ label:before {
+    background-color: #3197EE;
+    box-shadow: inset 0 0 0 3px #f4f4f4;
+}
+.CHANGEradioStatus input[type="radio"]:focus ~ label:before {
+    outline: none;
+    border-color: #3197EE;
+}
+.CHANGEradioStatus input[type="radio"]:disabled ~ label:before {
+    box-shadow: inset 0 0 0 4px #f4f4f4;
+    border-color: #b4b4b4;
+    background: #b4b4b4;
+}
+.CHANGEradioStatus input[type="radio"] ~ label:empty:before {
+    margin-right: 0;
+}
+.CHANGEradioStatus input[type="radio"] {
+    display: none;
+}
+.CHANGEradioStatus label {
+    cursor: pointer;
+}
+.CHANGEradioStatus .MODALelemMsg > DIV {
+    display: flex;
+    padding: 0.4rem;
+    align-items: center;
+}
+.CHANGEradioStatus .MODALelemMsg DIV LABEL {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+.CHANGEradioStatus button[name="ACTIONitemRemove"] {
+    color: #19c556 !IMPORTANT;
+}
+
+
+
+.LOGINuserSpot {
+    font-family: var(--font-lato);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-y: overlay;
+    overflow-x: hidden;
+    height: 100vh;
+}
+.LOGINuserSpot > DIV {
+    width: 100%;
+    padding: 46px 46px 32px;
+    max-width: 632px;
+    background: #fff;
+    border-radius: 6px;
+}
+.LOGINuserSpot .DISPLAYnone[name="SCREENin"] {
+    display: none;
+}
+.LOGINuserSpot .COMPANYlogin {
+    margin: 0 0 32px;
+    color: #3c3c3c;
+    font-size: 18px;
+    font-weight: 500;
+    display: block;
+    text-align: center;
+    font-style: italic;
+}
+.LOGINuserSpot .COMPANYlogin .COMPANYit {
+    width: 164px;
+    height: 41px;
+    margin: 0 auto 16px;
+}
+.LOGINuserSpot .GROUPinput:not(:first-child) {
+    margin-top: 2.2rem;
+}
+.LOGINuserSpot .GROUPinput {
+    position: relative;
+}
+.LOGINuserSpot input {
+    width: 100%;
+    background: transparent;
+    padding: 16px 0;
+    display: block;
+    font-weight: 400;
+    color: #797979;
+    font-size: 1.75rem;
+    box-shadow: inset 0 0 0 1px #dadce0;
+    font-family: var(--font-poppins);
+    text-indent: 16px;
+    border-radius: 3px;
+    position: relative;
+    z-index: 10;
+}
+.LOGINuserSpot input:focus {
+    box-shadow: inset 0 0 0 1px #1273EB;
+}
+.LOGINuserSpot input:focus ~ label {
+    color: #1273EB;
+}
+.LOGINuserSpot input:focus ~ label, .LOGINuserSpot input.HAScontent ~ label {
+    padding: 0 10px;
+    font-size: 1em;
+    background: #fff;
+    z-index: 20;
+    top: -8px;
+}
+.LOGINuserSpot .GROUPinput.ELEMinptFail input {
+    box-shadow: inset 0 0 0 1px #d50000;
+}
+.LOGINuserSpot .GROUPinput.ELEMinptFail input:focus ~ label, .LOGINuserSpot .GROUPinput.ELEMinptFail input.HAScontent ~ label {
+    color: #d50000;
+}
+.LOGINuserSpot .MSGerror {
+    color: #d50000;
+    display: flex;
+    padding-top: 1rem;
+}
+.LOGINuserSpot .MSGerror SVG {
+    margin-right: 1rem;
+}
+.LOGINuserSpot .GROUPinput * {
+    transition: all 0.2s ease-in-out;
+}
+.LOGINuserSpot label {
+    color: #676767;
+    font-weight: 100;
+    position: absolute;
+    font-size: 2rem;
+    top: 16px;
+    left: 1em;
+}
+
+.GROUPinput .SHOWpass {
+    color: #aaa;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    height: 24px;
+    width: 24px;
+    z-index: 10;
+}
+.GROUPinput .SHOWpass:hover {
+    color: rgb(121, 121, 121);
+}
+.SHOWpass, .SHOWpass * {
+    cursor: pointer;
+    transition: all 0.08s ease-in-out !IMPORTANT;
+}
+.FOOTERlogin {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2.6rem 0 0;
+}
+.LOGINuserSpot .FOOTERlogin BUTTON[name="SCREENitemNext"] {
+    font-size: 1.75rem;
+    color: #1a73e8;
+    font-weight: 700;
+    font-family: var(--font-lato);
+}
+.LOGINuserSpot .FOOTERlogin BUTTON[name="USERlogIn"] {
+    color: #fff;
+    min-height: 40px;
+    background-color: #0161cd;
+    font-weight: 500;
+    text-align: center;
+    max-width: 132px;
+    width: 100%;
+}
+.LOGINuserSpot .FOOTERlogin BUTTON[name="USERlogIn"]:hover {
+    background: #0e75e8;
+}
+.LOGINuserSpot .FOOTERlogin BUTTON[name="USERlogIn"]:focus {
+    -webkit-box-shadow: rgb(151, 200, 255) 0px 0px 4px 2px;
+    box-shadow: rgb(151, 200, 255) 0px 0px 4px 2px;
+}
+.LOGINuserSpot .FOOTERlogin BUTTON[name="USERlogIn"]:active {
+    background: #00f;
+}
+
+
+
+
+
+
+
+.LOGINuserSpot .COMPANYlogin .COMPANYit {
+    background-image: url("data:image/svg+xml;base64,PHN2ZyBpZD0ibWFyY2EiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjE2NC4xODgiIGhlaWdodD0iNDAuODc1IiB2aWV3Qm94PSIwIDAgMTY0LjE4OCA0MC44NzUiPgogIDxkZWZzPgogICAgPHN0eWxlPgogICAgICAuY2xzLTEgewogICAgICAgIGZpbGw6ICNjMDA7CiAgICAgIH0KCiAgICAgIC5jbHMtMSwgLmNscy0yIHsKICAgICAgICBmaWxsLXJ1bGU6IGV2ZW5vZGQ7CiAgICAgIH0KCiAgICAgIC5jbHMtMiB7CiAgICAgICAgZmlsbDogIzIwMjAyMDsKICAgICAgfQogICAgPC9zdHlsZT4KICA8L2RlZnM+CiAgPHBhdGggaWQ9IkZvcm1hXzFfY29waWFyIiBkYXRhLW5hbWU9IkZvcm1hIDEgY29waWFyIiBjbGFzcz0iY2xzLTEiIGQ9Ik00Ny43MTYsMjYuNTIyYTUuOTc4LDUuOTc4LDAsMCwwLC41MjctMi45YzAtLjA5NCwwLTAuNDM3LDAtMC41MjcsMC0yLjYzOS0yLjYzMy00Ljc0LTQuMjItNC43NDctMC41MzIsMC02LjMyOSwwLTYuMzI5LDBMMjcuNDA5LDguMDYxSDQxLjM4NmMzLjEsMCw4LjEuNTYzLDEwLjI4NSw0Ljc0NywwLjkxMiwxLjQ4MiwxLjIwNyw1Ljc2MSwxLjIxMiw3Ljk4NywwLjAyMSwwLjcyNiwwLDUuMzY3LDAsNS43NDdDNTIuMzQsMjYuNTQxLDQ4LjEsMjYuNTIsNDcuNzE2LDI2LjUyMloiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0yNi40MDYgLTguMDYzKSIvPgogIDxwYXRoIGlkPSJGb3JtYV8xIiBkYXRhLW5hbWU9IkZvcm1hIDEiIGNsYXNzPSJjbHMtMSIgZD0iTTM2LjY5NCw0OC45MzlMMjYuNjczLDM4LjY1M3MxNi4wNjgsMCwxNi4zNTEsMGMxLjU4MiwwLDQuMjI1LTIuNjM5LDQuMjItNS4yNzQsMC0uMDk0LDAtMC40MzcsMC0wLjUyNywwLTIuNjM5LTIuNjMzLTQuNzQtNC4yMi00Ljc0Ny0wLjUzMiwwLTYuMzI5LDAtNi4zMjksMEwyNi40MDksMTcuODE5SDQzLjAyM2ExMy43NzEsMTMuNzcxLDAsMCwxLDEwLjAyMiw0Ljc0N2M0LjI4NSw0LjU0Nyw0LjQ4Myw4Ljk2Nyw0LjQ4Myw4Ljk2NywwLjAwNSwwLjc2MSwwLDMuNDI4LDAsMy40MjhhMTMuNDUsMTMuNDUsMCwwLDEtMy45NTYsOC45NjdjLTQuNjQ3LDQuNzUzLTguOTcxLDUuMDEtMTAuNTQ5LDUuMDExQzQyLjc1Niw0OC45NCwzNi42OTQsNDguOTM5LDM2LjY5NCw0OC45MzlaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMjYuNDA2IC04LjA2MykiLz4KICA8cGF0aCBpZD0iQnJhY2FlbCIgY2xhc3M9ImNscy0yIiBkPSJNOTEuMzMsMzIuNzExYzAsMi4wMS0xLjQxLDMuMTgtMy43MiwzLjE4SDgyLjk5di02LjUxaDQuNUM4OS43NywyOS4zODEsOTEuMzMsMzAuNjQxLDkxLjMzLDMyLjcxMVptLTAuNTQtOS4wOWMwLDEuOTItMS4zNSwyLjk3LTMuNTcsMi45N0g4Mi45OXYtNS45N2g0LjIzQzg5LjQ0LDIwLjYyMiw5MC43OSwyMS43MzIsOTAuNzksMjMuNjIyWm0zLjk2LDkuNDVhNS4xODUsNS4xODUsMCwwLDAtNC4wMi01LjEsNC44NzgsNC44NzgsMCwwLDAsMy41NC00Ljc3YzAtMi45NC0yLjM0LTUuMzctNi43NS01LjM3SDc5LjU3VjM4LjY4MWg4LjM0QzkyLjE2OSwzOC42ODEsOTQuNzQ5LDM2LjI1MSw5NC43NDksMzMuMDcxWm03LjE0LTMuMDljMC0zLjUxLDEuNTYtNC41Niw0LjA4LTQuNTZoMC44N3YtMy41NGE1LjM4NCw1LjM4NCwwLDAsMC00Ljk1LDIuNjd2LTIuNEg5OC40N1YzOC42ODFoMy40MTl2LTguN1ptNi45NiwwLjM2YzAsNS4xLDMuNDUsOC42MSw3Ljc0LDguNjFhNy4xMTUsNy4xMTUsMCwwLDAsNS43OS0yLjczdjIuNDZoMy40NVYyMi4xNTJoLTMuNDV2Mi40YTcuMDM2LDcuMDM2LDAsMCwwLTUuNzMtMi42N0MxMTIuMywyMS44ODIsMTA4Ljg0OSwyNS4yNDEsMTA4Ljg0OSwzMC4zNDFabTEzLjUzLDAuMDZjMCwzLjU3LTIuNDMsNS41OC01LjAxLDUuNTgtMi41NSwwLTUuMDEtMi4wNy01LjAxLTUuNjRzMi40Ni01LjQ5LDUuMDEtNS40OUMxMTkuOTQ5LDI0Ljg1MSwxMjIuMzc5LDI2Ljg2MSwxMjIuMzc5LDMwLjRabTYuODEsMGMwLDUuMTksMy4zNiw4LjU1LDguMSw4LjU1YTcuNDIzLDcuNDIzLDAsMCwwLDcuNjE5LTUuNDloLTMuNjg5YTMuNzc1LDMuNzc1LDAsMCwxLTMuOTMsMi42MWMtMi43NiwwLTQuNTktMi4wNC00LjU5LTUuNjcsMC0zLjYsMS44My01LjY0LDQuNTktNS42NGEzLjg2MywzLjg2MywwLDAsMSwzLjkzLDIuNjFoMy42ODljLTAuOTI5LTMuNDgtMy41NjktNS40OS03LjYxOS01LjQ5QzEzMi41NDksMjEuODgyLDEyOS4xODksMjUuMjQxLDEyOS4xODksMzAuNFptMTgtLjA2YzAsNS4xLDMuNDUsOC42MSw3Ljc0LDguNjFhNy4xMTQsNy4xMTQsMCwwLDAsNS43ODktMi43M3YyLjQ2aDMuNDVWMjIuMTUyaC0zLjQ1djIuNGE3LjAzNiw3LjAzNiwwLDAsMC01LjcyOS0yLjY3QzE1MC42MzksMjEuODgyLDE0Ny4xODksMjUuMjQxLDE0Ny4xODksMzAuMzQxWm0xMy41MjksMC4wNmMwLDMuNTctMi40Myw1LjU4LTUuMDEsNS41OC0yLjU0OSwwLTUuMDA5LTIuMDctNS4wMDktNS42NHMyLjQ2LTUuNDksNS4wMDktNS40OUMxNTguMjg4LDI0Ljg1MSwxNjAuNzE4LDI2Ljg2MSwxNjAuNzE4LDMwLjRabTE0LjkxLTUuNjRhNC4yOTIsNC4yOTIsMCwwLDEsNC42Miw0LjE3SDE3MS4xQTQuNSw0LjUsMCwwLDEsMTc1LjYyOCwyNC43NjFabTcuNzQsOWgtMy42OWE0LDQsMCwwLDEtMy45LDIuMzEsNC41NDYsNC41NDYsMCwwLDEtNC43MDktNC4zOEgxODMuN2ExMC41NDgsMTAuNTQ4LDAsMCwwLC4xMi0xLjY4LDcuNzA5LDcuNzA5LDAsMCwwLTguMDQtOC4xM2MtNC44ODksMC04LjI0OSwzLjMzLTguMjQ5LDguNTJzMy41MSw4LjU1LDguMjQ5LDguNTVBNy41NTMsNy41NTMsMCwwLDAsMTgzLjM2OCwzMy43NjFabTMuODEsNC45MmgzLjQydi0yMi4yaC0zLjQydjIyLjJaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMjYuNDA2IC04LjA2MykiLz4KPC9zdmc+Cg==");
+}
+ASIDE#PUSHmenu SECTION.LOGOmarc {
+    background-image: url("data:image/svg+xml;base64,PHN2ZyBpZD0ibWFyY2EiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjE2NC4xODgiIGhlaWdodD0iNDAuODc1IiB2aWV3Qm94PSIwIDAgMTY0LjE4OCA0MC44NzUiPgogIDxkZWZzPgogICAgPHN0eWxlPgogICAgICAuY2xzLTEgewogICAgICAgIGZpbGw6ICNjMDA7CiAgICAgIH0KCiAgICAgIC5jbHMtMSwgLmNscy0yIHsKICAgICAgICBmaWxsLXJ1bGU6IGV2ZW5vZGQ7CiAgICAgIH0KCiAgICAgIC5jbHMtMiB7CiAgICAgICAgZmlsbDogI2ZmZjsKICAgICAgfQogICAgPC9zdHlsZT4KICA8L2RlZnM+CiAgPHBhdGggaWQ9IkZvcm1hXzFfY29waWFyIiBkYXRhLW5hbWU9IkZvcm1hIDEgY29waWFyIiBjbGFzcz0iY2xzLTEiIGQ9Ik00Ny43MTYsMjYuNTIyYTUuOTc4LDUuOTc4LDAsMCwwLC41MjctMi45YzAtLjA5NCwwLTAuNDM3LDAtMC41MjcsMC0yLjYzOS0yLjYzMy00Ljc0LTQuMjItNC43NDctMC41MzIsMC02LjMyOSwwLTYuMzI5LDBMMjcuNDA5LDguMDYxSDQxLjM4NmMzLjEsMCw4LjEuNTYzLDEwLjI4NSw0Ljc0NywwLjkxMiwxLjQ4MiwxLjIwNyw1Ljc2MSwxLjIxMiw3Ljk4NywwLjAyMSwwLjcyNiwwLDUuMzY3LDAsNS43NDdDNTIuMzQsMjYuNTQxLDQ4LjEsMjYuNTIsNDcuNzE2LDI2LjUyMloiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0yNi40MDYgLTguMDYzKSIvPgogIDxwYXRoIGlkPSJGb3JtYV8xIiBkYXRhLW5hbWU9IkZvcm1hIDEiIGNsYXNzPSJjbHMtMSIgZD0iTTM2LjY5NCw0OC45MzlMMjYuNjczLDM4LjY1M3MxNi4wNjgsMCwxNi4zNTEsMGMxLjU4MiwwLDQuMjI1LTIuNjM5LDQuMjItNS4yNzQsMC0uMDk0LDAtMC40MzcsMC0wLjUyNywwLTIuNjM5LTIuNjMzLTQuNzQtNC4yMi00Ljc0Ny0wLjUzMiwwLTYuMzI5LDAtNi4zMjksMEwyNi40MDksMTcuODE5SDQzLjAyM2ExMy43NzEsMTMuNzcxLDAsMCwxLDEwLjAyMiw0Ljc0N2M0LjI4NSw0LjU0Nyw0LjQ4Myw4Ljk2Nyw0LjQ4Myw4Ljk2NywwLjAwNSwwLjc2MSwwLDMuNDI4LDAsMy40MjhhMTMuNDUsMTMuNDUsMCwwLDEtMy45NTYsOC45NjdjLTQuNjQ3LDQuNzUzLTguOTcxLDUuMDEtMTAuNTQ5LDUuMDExQzQyLjc1Niw0OC45NCwzNi42OTQsNDguOTM5LDM2LjY5NCw0OC45MzlaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMjYuNDA2IC04LjA2MykiLz4KICA8cGF0aCBpZD0iQnJhY2FlbCIgY2xhc3M9ImNscy0yIiBkPSJNOTEuMzMsMzIuNzExYzAsMi4wMS0xLjQxLDMuMTgtMy43MiwzLjE4SDgyLjk5di02LjUxaDQuNUM4OS43NywyOS4zODEsOTEuMzMsMzAuNjQxLDkxLjMzLDMyLjcxMVptLTAuNTQtOS4wOWMwLDEuOTItMS4zNSwyLjk3LTMuNTcsMi45N0g4Mi45OXYtNS45N2g0LjIzQzg5LjQ0LDIwLjYyMiw5MC43OSwyMS43MzIsOTAuNzksMjMuNjIyWm0zLjk2LDkuNDVhNS4xODUsNS4xODUsMCwwLDAtNC4wMi01LjEsNC44NzgsNC44NzgsMCwwLDAsMy41NC00Ljc3YzAtMi45NC0yLjM0LTUuMzctNi43NS01LjM3SDc5LjU3VjM4LjY4MWg4LjM0QzkyLjE2OSwzOC42ODEsOTQuNzQ5LDM2LjI1MSw5NC43NDksMzMuMDcxWm03LjE0MS0zLjA5YzAtMy41MSwxLjU1OS00LjU2LDQuMDc5LTQuNTZoMC44N3YtMy41NGE1LjM4Miw1LjM4MiwwLDAsMC00Ljk0OSwyLjY3di0yLjRIOTguNDdWMzguNjgxaDMuNDJ2LTguN1ptNi45NTksMC4zNmMwLDUuMSwzLjQ1LDguNjEsNy43NCw4LjYxYTcuMTE1LDcuMTE1LDAsMCwwLDUuNzktMi43M3YyLjQ2aDMuNDVWMjIuMTUyaC0zLjQ1djIuNGE3LjAzNiw3LjAzNiwwLDAsMC01LjczLTIuNjdDMTEyLjMsMjEuODgyLDEwOC44NDksMjUuMjQxLDEwOC44NDksMzAuMzQxWm0xMy41MywwLjA2YzAsMy41Ny0yLjQzLDUuNTgtNS4wMSw1LjU4LTIuNTUsMC01LjAxLTIuMDctNS4wMS01LjY0czIuNDYtNS40OSw1LjAxLTUuNDlDMTE5Ljk0OSwyNC44NTEsMTIyLjM3OSwyNi44NjEsMTIyLjM3OSwzMC40Wm02LjgxLDBjMCw1LjE5LDMuMzYsOC41NSw4LjEsOC41NWE3LjQyMyw3LjQyMywwLDAsMCw3LjYxOS01LjQ5aC0zLjY4OWEzLjc3NSwzLjc3NSwwLDAsMS0zLjkzLDIuNjFjLTIuNzYsMC00LjU5LTIuMDQtNC41OS01LjY3LDAtMy42LDEuODMtNS42NCw0LjU5LTUuNjRhMy44NjMsMy44NjMsMCwwLDEsMy45MywyLjYxaDMuNjg5Yy0wLjkyOS0zLjQ4LTMuNTY5LTUuNDktNy42MTktNS40OUMxMzIuNTQ5LDIxLjg4MiwxMjkuMTg5LDI1LjI0MSwxMjkuMTg5LDMwLjRabTE4LS4wNmMwLDUuMSwzLjQ1LDguNjEsNy43NCw4LjYxYTcuMTE0LDcuMTE0LDAsMCwwLDUuNzg5LTIuNzN2Mi40NmgzLjQ1VjIyLjE1MmgtMy40NXYyLjRhNy4wMzYsNy4wMzYsMCwwLDAtNS43MjktMi42N0MxNTAuNjM5LDIxLjg4MiwxNDcuMTg5LDI1LjI0MSwxNDcuMTg5LDMwLjM0MVptMTMuNTI5LDAuMDZjMCwzLjU3LTIuNDMsNS41OC01LjAwOSw1LjU4LTIuNTUsMC01LjAxLTIuMDctNS4wMS01LjY0czIuNDYtNS40OSw1LjAxLTUuNDlDMTU4LjI4OCwyNC44NTEsMTYwLjcxOCwyNi44NjEsMTYwLjcxOCwzMC40Wm0xNC45MS01LjY0YTQuMjkyLDQuMjkyLDAsMCwxLDQuNjIsNC4xN0gxNzEuMUE0LjUsNC41LDAsMCwxLDE3NS42MjgsMjQuNzYxWm03Ljc0LDloLTMuNjlhNCw0LDAsMCwxLTMuOSwyLjMxLDQuNTQ2LDQuNTQ2LDAsMCwxLTQuNzA5LTQuMzhIMTgzLjdhMTAuNTQ4LDEwLjU0OCwwLDAsMCwuMTItMS42OCw3LjcwOSw3LjcwOSwwLDAsMC04LjA0LTguMTNjLTQuODg5LDAtOC4yNDksMy4zMy04LjI0OSw4LjUyczMuNTEsOC41NSw4LjI0OSw4LjU1QTcuNTUzLDcuNTUzLDAsMCwwLDE4My4zNjgsMzMuNzYxWm0zLjgxLDQuOTJoMy40MnYtMjIuMmgtMy40MnYyMi4yWiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTI2LjQwNiAtOC4wNjMpIi8+Cjwvc3ZnPgo=");
+}
+
+
+
+
+
+
+@media screen and (min-width: 721px){
+    MAIN.SWIPEopen::before {
+        background: initial;
+        z-index: initial;
+    }
+    ARTICLE .MASTERmain button[name="creatProduct"] SVG {
+        display: none;
+    }
+}
+
+
+MAIN {
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (max-width: 720px){
+    body #root {
+        display: inherit;
+        display: inherit;
+        -ms-grid-columns: initial;
+        grid-template-columns: initial;
+        -ms-grid-template-rows: initial;
+        grid-template-rows: initial;
+    }
+    ASIDE#PUSHmenu {
+        max-width: 240px;
+        -webkit-transform: translate3d(-100%, 0, 0);
+        -moz-transform: translate3d(-100%, 0, 0);
+        transform: translate3d(-100%, 0, 0);
+        position: fixed;
+        left: 0;
+    }
+    ASIDE#PUSHmenu P.BTNmenu {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 7.5px auto;
+    }
+    HEADER {
+        background-color: rgba(255, 255, 255);
+        border-bottom: 1px solid rgba(236, 239, 241);
+        padding: 0 1.6rem;
+    }
+    HEADER > SPAN {
+        visibility: hidden;
+    }
+    ARTICLE {
+        overflow-x: initial;
+        overflow-y: initial;
+    }
+    .HEADERnavScreen {
+        margin-bottom: initial;
+        box-shadow: rgba(0, 0, 0, 0.25) 0 0 16px;
+    }
+    .AREAofService {
+        margin: initial;
+        padding: initial;
+    }
+    .DASHBOARDinst > DIV {
+        overflow-x: hidden;
+        overflow-y: overlay;
+        height: calc(100vh - 92px);
+    }
+    .MAINbox {
+        overflow-x: hidden;
+        overflow-y: overlay;
+        height: calc(100vh - 48px);
+        padding: initial;
+    }
+
+    
+    .SETTINGelemColumn {
+        font-family: var(--font-lato);
+        padding: 2.6rem 0 !IMPORTANT;
+    }
+    .SETTINGelemColumn .CLASSitemMedia > DIV > DIV:first-child {
+        font-weight: 700;
+        color: rgba(0, 0, 0, 0.87);
+    }
+    .SETTINGelemColumn .CLASSitemFirst, .SETTINGelemColumn .CLASSitemMedia .CLASSitemStatus .CUSTOMlabel {
+        color: rgba(0, 0, 0, 0.65);
+    }
+    .SETTINGelemColumn .CLASSitemFirst, .SETTINGelemColumn .CLASSitemMedia .CLASSitemStatus .CUSTOMlabel, .SETTINGelemColumn .CLASSitemMedia BUTTON:not(.CSSbtnClass) {
+        font-weight: 700;
+        font-style: italic;
+    }
+    .SETTINGelemColumn .CLASSitemMedia > DIV {
+        flex-direction: column;
+        padding: 1.2rem 3rem;
+    }
+    .SETTINGelemColumn .CLASSitemMedia > DIV > DIV:not(:last-child) {
+        margin-bottom: 1.2rem;
+    }
+    .SETTINGelemColumn .CLASSitemMedia .CLASSitemDistrict.FIXEDitem {
+        background: initial;
+    }
+    .SETTINGelemColumn .MASTERtitle {
+        padding: 1.2rem 3rem;
+    }
+    .SETTINGelemColumn .MASTERtitle SPAN {
+        color: #263238;
+        letter-spacing: .5px;
+        font-weight: 700;
+        font-family: var(--font-lato);
+    }
+
+    .SETTINGelemColumn .CLASSitemMedia > DIV > DIV {
+        max-width: initial !IMPORTANT;
+        padding: initial;
+    }
+    .SETTINGelemColumn .CLASSitemMedia > DIV:not(.CLASSitemMessage):hover {
+        background-color: initial;
+    }
+    .SETTINGelemColumn .CLASSitemMedia .CLASSmethodCash SPAN {
+        margin-bottom: 0.4rem;
+        display: block;
+    }
+    .SETTINGelemColumn .CLASSinputString input[type="text"], .SETTINGelemColumn .CLASSitemJSKEY input[type="text"] {
+        font-weight: 500;
+        font-size: 1.4rem;
+        line-height: 30px;
+    }
+
+    .CARDitemWait .CARDleftIitem .CLASSitemHead {
+        margin-bottom: initial;
+    }
+    .CARDitemWait .CARDrightIitem {
+        display: flex;
+        grid-template-rows: none;
+        flex-direction: column-reverse;
+        min-width: initial;
+    }
+
+    .CARDitemWait .CLASSbttnModal BUTTON {
+        box-shadow: initial;
+        width: initial;
+        padding: 1rem;
+        border-radius: 50%;
+    }
+    .CARDitemWait .CLASSbttnModal BUTTON SPAN {
+        display: none;
+    }
+    .CARDitemWait .CLASSitemBttns BUTTON {
+        padding: 0 1rem;
+        -webkit-box-sizing: initial;
+        box-sizing: border-box;
+        background: border-box;
+        box-shadow: initial;
+        border-radius: 50%;
+        color: initial;
+        height: 30px;
+        width: 30px;
+    }
+    .CARDitemWait .CLASSitemBttns BUTTON:hover {
+        background: #888888 !IMPORTANT;
+    }
+    .CARDitemWait .CLASSitemBttns BUTTON SPAN {
+        display: none;
+    }
+    .CARDitemWait .CARDrightIitem > DIV:not(:last-child) {
+        margin-bottom: initial;
+    }
+    .CARDitemWait .CARDrightIitem .RIGHTitemBttm > DIV:not(:last-child) {
+        margin-top: 0.8rem;
+    }
+    .CARDitemWait .RIGHTitemMaster {
+        margin-bottom: 0.5rem;
+        justify-content: flex-end;
+    }
+    .CARDitemWait .CARDrightIitem .RIGHTitemBttm .CLASSitemFirst {
+        text-align: right;
+    }
+    .CARDitemWait .RIGHTitemBttm .CLASSitemFirst P {
+        color: inherit;
+    }
+    .CARDitemWait .CARDrightIitem .RIGHTitemBttm .CLASSitemSecond button[name="WINDOWmodalStatus"] {
+        margin: initial;
+        height: 26px;
+        font-size: 1.4rem;
+    }
+    .CARDitemWait .CARDbttmElem {
+        padding: 0.6rem 1.6rem 1rem;
+        flex-direction: column;
+        align-items: center;
+        justify-content: initial;
+        display: flex;
+    }
+    .CARDitemWait .CARDbttmElem > DIV:not(:last-child) {
+        margin-bottom: 0.5rem;
+    }
+    .CARDitemWait .CLASSitemTimestamp {
+        font-size: 1.3rem;
+    }
+    .CARDitemWait .RIGHTitemMaster SPAN {
+        display: none;
+    }
+    .CARDitemWait .CARDrightIitem .RIGHTitemBttm {
+        display: flex;
+        flex-direction: column-reverse;
+        padding: initial;
+        background: initial;
+    }
+    .CARDitemWait .RIGHTitemMaster BUTTON {
+        background: initial;
+        border-bottom: initial;
+        padding: initial;
+    }
+    .CARDitemWait .RIGHTitemMaster BUTTON .SVGitemRemove {
+        color: #b70d0d;
+        fill: #b70d0d;
+        height: 16px;
+        width: 16px;
+    }
+    .CARDitemWait .RIGHTitemMaster BUTTON:hover {
+        background: initial;
+    }
+    .CARDitemWait .RIGHTitemMaster BUTTON .SVGitemRemove:hover {
+        color: #f00;
+        fill: #f00;
+    }
+
+    .CARDitemData {
+        flex-direction: column-reverse;
+    }
+    .CARDitemData .CARDrequestContent .CLIENTinfoData {
+        min-width: 60vw;
+    }
+    .CARDitemData .CARDrequestContent .BASEinfoRequest {
+        min-width: 84vw;
+    }
+    .CARDitemData .CARDrequestContent {
+        overflow-x: overlay;
+        overflow-y: hidden;
+    }
+    .CARDitemData .CARDrequestContent .ITEMbox {
+        margin: 1.6rem 0;
+    }
+    .CARDitemData .BASEinfoClient {
+        margin-bottom: 1.6rem;
+    }
+
+    ARTICLE .MASTERmain {
+        bottom: 20px;
+        right: 20px;
+        display: flex;
+        position: fixed;
+        z-index: 118;
+        padding: initial;
+    }
+    ARTICLE .MASTERmain BUTTON {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        border: initial !IMPORTANT;
+        padding: initial !IMPORTANT;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 6px 10px 0 rgba(0,0,0,0.14), 0 1px 18px 0 rgba(0,0,0,0.12), 0 3px 5px -1px rgba(0,0,0,0.2);
+        background: var(--color-single-text) !IMPORTANT;
+    }
+    ARTICLE .MASTERmain BUTTON:hover {
+        background: #4c5e67 !IMPORTANT;
+    }
+    ARTICLE .MASTERmain BUTTON:focus {
+        background: #36454d !IMPORTANT;
+    }
+    ARTICLE .MASTERmain BUTTON SPAN {
+        display: none;
+    }
+    .MAINbox.PROCUDUCTmainBox {
+        padding: 1.6rem;
+    }
+    ARTICLE .ITEMinCommerce {
+        flex-direction: column;
+        padding: 1.4rem;
+    }
+
+    .LOGINuserSpot {
+        background: #fff;
+    }
+    .LOGINuserSpot > DIV {
+        padding: 0 2rem;
+        background: initial;
+    }
+
+    ARTICLE .ITEMinCommerce > DIV {
+        padding: initial;
+    }
+
+
+    .EDITindexMain {
+        flex-direction: column;
+        border-radius: initial;
+        padding: 3rem 1.6rem 1.6rem;
+        overflow-x: hidden;
+        overflow-y: overlay;
+        height: calc(100vh - 102px);
+        margin: initial;
+    }
+    .EDITindexMain > DIV:not(:first-child) {
+        margin-top: 1.6rem;
+    }
+    .EDITindexMain > DIV:not(:last-child) {
+        margin-right: initial;
+    }
+    .EDITindexMain .EDITmainSemana {
+        width: 100%;
+    }
+    .EDITheadMain {
+        padding: 1.6rem;
+        box-shadow: rgba(0, 0, 0, 0.25) 0 0 16px;
+        position: relative;
+        z-index: 2;
+    }
+    .EDITheadMain .GROUPactText SPAN {
+        color: var( --color-aside-border);
+        font-family: var(--font-lato);
+        font-style: italic;
+        font-weight: 700;
+        font-size: 2rem;
+    }
+    .EDITheadMain .GROUPactBttns {
+        display: flex;
+        flex-direction: row-reverse;
+        height: 28px;
+    }
+    .EDITheadMain button[type="button"]:not(:last-child) {
+        margin-left: 1rem;
+        margin-right: initial;
+    }
+    .EDITheadMain .GROUPactText SPAN.LABELtextLong {
+        display: none;
+    }
+    .EDITheadMain .GROUPactText {
+        display: flex;
+        align-items: center;
+    }
+    
+
+}
