@@ -32,6 +32,9 @@
     -ms-box-sizing: border-box; /* IE 9 */
     -o-box-sizing: border-box; /* Opera */
     box-sizing: border-box;
+    
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-tap-highlight-color: transparent;
 }
 ::after, ::before {
     white-space: pre-wrap;
