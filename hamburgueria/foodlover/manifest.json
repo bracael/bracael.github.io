@@ -3,17 +3,17 @@
   "name": "@foodloverpoa",
   "icons": [
     {
-      "src": "favicon.ico",
+      "src": "https://www.foodlover.poa.br/favicon.ico",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     },
     {
-      "src": "logo192.png",
+      "src": "https://1.bp.blogspot.com/-oUITTnpSVRk/X9YmOPzUatI/AAAAAAAAHZg/eWQG2hOlCqEHMeotU_zAl5brcSWdRJ-CQCLcBGAsYHQ/s0/manifest-192.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "logo512.png",
+      "src": "https://1.bp.blogspot.com/-RnvW-5xLEUU/X9YmOdQW8eI/AAAAAAAAHZc/uqjZGMp88w8K1MM-u2FLiPomdg6nd2wkACLcBGAsYHQ/s0/manifest-512.png",
       "type": "image/png",
       "sizes": "512x512"
     }
