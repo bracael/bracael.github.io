@@ -850,7 +850,7 @@ top: 0;
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-Fe.a.registerVersion("firebase","8.0.1","app");n(32),n(34);Fe.a.initializeApp({apiKey:"AIzaSyBXXtJkgddDtDNxIDFueSLnpWn0S9ktZt4",authDomain:"bracael-burger.firebaseapp.com",databaseURL:"https://bracael-burger.firebaseio.com",projectId:"bracael-burger",storageBucket:"bracael-burger.appspot.com",messagingSenderId:"734837434311",appId:"1:734837434311:web:d7fd92fa6edd6d75e81be2"});const ze=Fe.a.database(),Ue=Fe.a.auth();function We(e,t){return ze.ref(e).set(t)}function Be(e){return ze.ref(e).remove()}function qe(e){return ze.ref().update(e)}function He(e,t){return ze.ref(e).update(t)}const Ve=ge.a.div`
+Fe.a.registerVersion("firebase","8.0.1","app");n(32),n(34);Fe.a.initializeApp({apiKey:"AIzaSyA3x4KZjUXZA_y1YeSYbmhqFkwO5dQHLgI",authDomain:"foodlover-bed93.firebaseapp.com",databaseURL:"https://foodlover-bed93.firebaseio.com",projectId:"foodlover-bed93",storageBucket:"foodlover-bed93.appspot.com",messagingSenderId:"458721261997",appId:"1:458721261997:web:65fc4ed33a98a731f78924"});const ze=Fe.a.database(),Ue=Fe.a.auth();function We(e,t){return ze.ref(e).set(t)}function Be(e){return ze.ref(e).remove()}function qe(e){return ze.ref().update(e)}function He(e,t){return ze.ref(e).update(t)}const Ve=ge.a.div`
     color: #999999;
     background-color: #ffffff;
     box-shadow: #cccccc 0 0 16px;
