@@ -188,9 +188,9 @@ html, body {
 .push-alert {
   width: 100%;
   position: fixed;
-  left: 0;
   top: -70px;
-  transform: translate3d(0px, 0px, 0px);
+  left: 50%;
+  transform: translate3d(-50%, 0px, 0px);
   z-index: 1000001;
   display: flex;
   justify-content: center;
