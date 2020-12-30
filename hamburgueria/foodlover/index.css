@@ -186,7 +186,6 @@ html, body {
 }
 
 .push-alert {
-  width: 100%;
   position: fixed;
   top: -70px;
   left: 50%;
