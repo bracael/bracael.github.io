@@ -949,7 +949,7 @@ var ln,un=function(){function e(e,t){var n=this;this.app_=e,this.authProvider_=t
 `,Be=ge.a.button`
     ${({active:e})=>e&&"\n        color: rgba(0,0,0,1) !IMPORTANT;\n\n        &::after {\n            width: 90% !IMPORTANT;\n            background-color: rgba(0,0,0,1) !IMPORTANT;\n            left: 5% !IMPORTANT;\n            right: 5% !IMPORTANT;\n        }\n    "}
 `,We=ge.a.span`
-    background: transparent;
+    background: rgba(255, 255, 255, 0);
     padding: 0.9rem 1.2rem 0.8rem;
     font-weight: 900;
     border-radius: 3px;
@@ -975,7 +975,7 @@ var ln,un=function(){function e(e,t){var n=this;this.app_=e,this.authProvider_=t
   width: 100vw;
   height: 100%;
   position: fixed;
-  background: transparent;
+  background: rgba(255, 255, 255, 0);
 `,et=ge.a.div`
   z-index: 99;
   background: rgb(255,255,255);
@@ -1018,7 +1018,7 @@ var ln,un=function(){function e(e,t){var n=this;this.app_=e,this.authProvider_=t
   }
 `,nt=ge.a.button`
   color: ${({amountActive:e})=>e?"#ea1d2c":"#efefef"};
-  background: transparent;
+  background: rgba(255, 255, 255, 0);
   border-style: solid;
   border-width: 1px;
   border-color: ${({amountActive:e})=>e?"#ea1d2c":"#efefef"};
@@ -1499,7 +1499,7 @@ var ln,un=function(){function e(e,t){var n=this;this.app_=e,this.authProvider_=t
     justify-content: space-between;
 
     & > button:first-child {
-        background: transparent;
+        background: rgba(255, 255, 255, 0);
         font-size: 1.3rem;
         transition: color .5s;
         font-weight: 400;
@@ -1587,18 +1587,18 @@ var ln,un=function(){function e(e,t){var n=this;this.app_=e,this.authProvider_=t
     &::before {
         top: 1rem;
         background: #e5e5e5;
-        background: -moz-linear-gradient(bottom, #e5e5e5 0%, transparent 100%);
-        background: -webkit-linear-gradient(bottom, #e5e5e5 0%,transparent 100%);
-        background: linear-gradient(to bottom, #e5e5e5 0%,transparent 100%);
+        background: -moz-linear-gradient(bottom, #e5e5e5 0%, rgba(255, 255, 255, 0) 100%);
+        background: -webkit-linear-gradient(bottom, #e5e5e5 0%, rgba(255, 255, 255, 0) 100%);
+        background: linear-gradient(to bottom, #e5e5e5 0%, rgba(255, 255, 255, 0) 100%);
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e5e5e5', endColorstr='#ffffff00',GradientType=0 );
     }
 
     &::after {
         bottom: 1rem;
         background: #e5e5e5;
-        background: -moz-linear-gradient(top, #e5e5e5 0%, transparent 100%);
-        background: -webkit-linear-gradient(top, #e5e5e5 0%,transparent 100%);
-        background: linear-gradient(to top, #e5e5e5 0%,transparent 100%);
+        background: -moz-linear-gradient(top, #e5e5e5 0%, rgba(255, 255, 255, 0) 100%);
+        background: -webkit-linear-gradient(top, #e5e5e5 0%, rgba(255, 255, 255, 0) 100%);
+        background: linear-gradient(to top, #e5e5e5 0%, rgba(255, 255, 255, 0) 100%);
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e5e5e5', endColorstr='#ffffff00',GradientType=0 );
     }
 
@@ -1709,7 +1709,7 @@ var ln,un=function(){function e(e,t){var n=this;this.app_=e,this.authProvider_=t
 
         & textarea {
             width: 100%;
-            background: transparent;
+            background: rgba(255, 255, 255, 0);
             display: inline-grid;
             resize: none;
             margin-right: 1.6rem;
@@ -1746,7 +1746,7 @@ var ln,un=function(){function e(e,t){var n=this;this.app_=e,this.authProvider_=t
   width: 100vw;
   height: 100vh;
   position: fixed;
-  background: transparent;
+  background: rgba(255, 255, 255, 0);
 `,Cn=ge.a.div`
   font-family: var(--font-oswald);
   font-weight: 500;
@@ -1948,7 +1948,7 @@ var ln,un=function(){function e(e,t){var n=this;this.app_=e,this.authProvider_=t
   max-width: 120px;
   margin: 0 auto;
   text-align: center;
-  background: transparent;
+  background: rgba(255, 255, 255, 0);
   text-transform: uppercase;
   border-radius: 3px;
   font-weight: 900;
@@ -1997,7 +1997,7 @@ var ln,un=function(){function e(e,t){var n=this;this.app_=e,this.authProvider_=t
   min-height: 40px;
   resize: none;
 
-  background: transparent;
+  background: rgba(255, 255, 255, 0);
   border: 1px solid #000;
   width: initial;
   margin: 0 0.6rem;
@@ -2047,7 +2047,7 @@ var ln,un=function(){function e(e,t){var n=this;this.app_=e,this.authProvider_=t
 
   & input {
     text-shadow: 0 0 0 #333;
-    background: transparent;
+    background: rgba(255, 255, 255, 0);
     border-bottom: 2px solid;
     margin: 0 0.4rem;
     font-weight: 100;
@@ -2302,7 +2302,7 @@ er.a.registerVersion("firebase","8.2.1","app");n(31),n(33);er.a.initializeApp({a
     position: absolute;
     width: 32px;
     height: 32px;
-    background-color: transparent;
+    background-color: rgba(255, 255, 255, 0);
     margin-left: auto;
     margin-right: auto;
     z-index: 1;
@@ -2659,17 +2659,17 @@ er.a.registerVersion("firebase","8.2.1","app");n(31),n(33);er.a.initializeApp({a
   font-weight: 500;
   height: 100%;
 `;var li=function(){const{useCart:e,setCart:t}=he();return Object.entries(e).sort((function(e,t){return e[1].moment<t[1].moment?1:t[1].moment<e[1].moment?-1:0})).map((function(e){const t=e[1].extra?e[1].extra[1].map(e=>e[0]&&e[0]*e[1]).reduce((e,t)=>e+t,0):0;return i.a.createElement("div",{key:e[0]},i.a.createElement(ni,null,i.a.createElement("img",{src:(e=>{const{protocol:t,hostname:n,pathname:r}=new URL(e);return["i.imgur.com"].includes(n)?`${t}//${n}${(()=>{const e=r.split(".");return`${e[0]}b.${e[1]}`})()}`:e})(e[1].thumb),alt:e[1].title})),i.a.createElement(ri,null,i.a.createElement(ii,null,Number(e[1].price*e[1].amount+t).toLocaleString("pt-BR",{style:"currency",currency:"BRL"}),e[1].amount>1?i.a.createElement("small",null,e[1].amount):null,t||e[1].comment?i.a.createElement("div",null,t?i.a.createElement("svg",{xmlns:"http://www.w3.org/2000/svg",width:"16",height:"16",viewBox:"0 0 16 16",fill:"#e47a2e"},i.a.createElement("path",{fillRule:"evenodd","data-name":"Plus",d:"M14,10H10v4a2,2,0,0,1-4,0V10H2A2,2,0,1,1,2,6H6V2a2,2,0,1,1,4,0V6h4A2,2,0,0,1,14,10Z"})):null,e[1].comment?i.a.createElement("svg",{xmlns:"http://www.w3.org/2000/svg",width:"16",height:"16",viewBox:"0 0 16 16",fill:"#e47a2e"},i.a.createElement("path",{fillRule:"evenodd","data-name":"Comment",d:"M14,12H7L3,16V12H2a2,2,0,0,1-2-2V2A2,2,0,0,1,2,0H14a2,2,0,0,1,2,2v8A2,2,0,0,1,14,12ZM3,3H13V5H3V3ZM3,7H13V9H3V7Z"})):null):null),i.a.createElement("span",null,e[1].title),i.a.createElement("span",null,void 0!==e[1].weight?fe.unitSize({ml:e[1].weight,str:!0}):fe.unitSize({gm:e[1].grams,str:!0}))))}))};var ui=function(){const{pathname:e}=K(),t=G(),{useBag:n,setBag:r}=ce(),{useCart:o,setCart:a}=he(),s=Object.entries(o).map(e=>Number(e[1].price*e[1].amount+(e[1].extra?e[1].extra[1].map(e=>e[0]&&e[0]*e[1]).reduce((e,t)=>e+t,0):0))).reduce((e,t)=>e+t,0);return i.a.createElement(Xr,null,Object.keys(o).length?i.a.createElement(Zr,null,i.a.createElement(Jr,null,"Todos os seus pedidos"),i.a.createElement(oi,null,i.a.createElement("strong",null,"subtotal a pagar"),i.a.createElement("p",null,i.a.createElement("span",null,"R$"),Number(s).toLocaleString("pt-BR",{style:"currency",currency:"BRL"}).replace("R$","").trim())),i.a.createElement(ei,null,i.a.createElement("div",null,i.a.createElement(li,null))),"/confirma"!==e?i.a.createElement(ai,null,i.a.createElement("button",{type:"button",onClick:()=>(t.push("/confirma"),void r(!1))},i.a.createElement("svg",{xmlns:"http://www.w3.org/2000/svg",width:"18",height:"18",viewBox:"0 0 78.369 78.369",fill:"#fff"},i.a.createElement("path",{d:"M78.049,19.015L29.458,67.606c-0.428,0.428-1.121,0.428-1.548,0L0.32,40.015c-0.427-0.426-0.427-1.119,0-1.547l6.704-6.704 c0.428-0.427,1.121-0.427,1.548,0l20.113,20.112l41.113-41.113c0.429-0.427,1.12-0.427,1.548,0l6.703,6.704 C78.477,17.894,78.477,18.586,78.049,19.015z"})),i.a.createElement("span",null,"Confirmar"))):null):i.a.createElement(si,null,"Por enquanto, não há nada por aqui."))};const ci=ge.a.div`
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    display: none;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 999;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  display: none;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999;
 
-    & {
-        background: rgba(0, 0, 0, 0.4);
-    }
+  & {
+    background: rgba(0, 0, 0, 0.4);
+  }
 `,{jQuery:hi}=window;var di=function(){const{useSwipe:e,setSwipe:t}=ue(),n=Object(r.useRef)(null),[o,a]=Object(r.useState)(!1);return Object(r.useEffect)(()=>{const{current:e}=n;o&&hi(e).fadeIn(300)},[o]),Object(r.useEffect)(()=>{const{current:t}=n;e?a(!0):hi(t).fadeOut(300,()=>a(!1))},[e]),o&&i.a.createElement(ci,{ref:n,onClick:()=>t(!1)})};var pi=function(e){const[t,n]=Object(r.useState)(e),[o,a]=Object(r.useState)(!1),[s,l]=Object(r.useState)(!1),[u,c]=Object(r.useState)(()=>{const{itemCart:e="{}"}=sessionStorage;return JSON.parse(e)});return sessionStorage.setItem("itemCart",JSON.stringify(u)),tr().ref().on("value",e=>{JSON.stringify(e.val())!==JSON.stringify(t)&&n(e.val())}),i.a.createElement(X,null,i.a.createElement(se,{useConn:t,setConn:n,useSwipe:o,setSwipe:a,useBag:s,setBag:l,useCart:u,setCart:c},i.a.createElement(Me,{useActive:s},i.a.createElement(Ur,null),i.a.createElement(Kr,null),i.a.createElement(ui,null),i.a.createElement(di,null))))};Promise.resolve(tr().ref().once("value").then(e=>e.val())).then((function(e){const{hostname:t,protocol:n}=new URL(window.location.href);return"www.foodlover.poa.br"===t&&"https:"===n&&void 0!==e?Promise.resolve(e):Promise.reject()})).then((function(e){a.a.render(i.a.createElement(i.a.StrictMode,null,i.a.createElement(pi,e)),document.getElementById("root"))})).catch((function(){a.a.render(i.a.createElement("div",null,"ERRO 500"),document.getElementById("root"))}))}]);
