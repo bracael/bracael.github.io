@@ -135,7 +135,7 @@ html, body {
 #root .spinner > div {
   width: 12px;
   height: 12px;
-  background-color: #f4b135;
+  background-color: #c61e10;
   border-radius: 100%;
   display: inline-block;
   -webkit-animation: treo-bouncedelay 1s infinite ease-in-out both;
