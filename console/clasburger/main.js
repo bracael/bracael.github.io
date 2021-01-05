@@ -2642,7 +2642,7 @@ Fe.a.registerVersion("firebase","8.0.1","app");n(32),n(34);Fe.a.initializeApp({a
     @media (max-width: 720px) {
         overflow-x: hidden;
         overflow-y: overlay;
-        height: 100%;
+        height: calc(100% - 48px);
         padding: initial;
     }
 
