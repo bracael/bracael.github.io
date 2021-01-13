@@ -3037,7 +3037,90 @@ We.a.registerVersion("firebase","8.2.2","app");n(30),n(32);We.a.initializeApp({a
       font-family: var(--font-lato);
     }
   }
-`;function aa(){return(aa=Object.assign||function(e){for(var t=1;t<arguments.length;t++){var n=arguments[t];for(var r in n)Object.prototype.hasOwnProperty.call(n,r)&&(e[r]=n[r])}return e}).apply(this,arguments)}var sa=function(){const[e,t]=Object(r.useState)(-1),[n,o]=Object(r.useState)(-1);return i.a.createElement(ia,null,i.a.createElement("div",null,i.a.createElement(oa,null,i.a.createElement("span",null,"Básico")),i.a.createElement("div",null,i.a.createElement(To,null),i.a.createElement(Io,{useScreenBasic:e,setScreenBasic:t}),i.a.createElement(No,{useScreenBasic:e,setScreenBasic:t}),i.a.createElement(Lo,{useScreenBasic:e,setScreenBasic:t}),i.a.createElement(Mo,{useScreenBasic:e,setScreenBasic:t}),i.a.createElement(Do,{useScreenBasic:e,setScreenBasic:t}))),i.a.createElement("div",null,i.a.createElement(oa,null,i.a.createElement("span",null,"Formas de pagamento")),i.a.createElement("div",null,i.a.createElement(Bo,null))),i.a.createElement("div",null,i.a.createElement(oa,null,i.a.createElement("span",null,"Área de entrega")),i.a.createElement("div",null,i.a.createElement(Go,null))),i.a.createElement("div",null,i.a.createElement(oa,null,i.a.createElement("span",null,"Horário de atendimento")),i.a.createElement("div",null,Fe.u.b.map((e,t)=>i.a.createElement(ra,aa({key:t},{i:t,useScreenTime:n,setScreenTime:o}))))))};var la=function(){return i.a.createElement($,null,i.a.createElement(B,{path:"/",exact:!0,component:Xn}),i.a.createElement(B,{path:"/products",exact:!0,component:dr}),i.a.createElement(B,{path:"/products/:id",component:uo}),i.a.createElement(B,{path:"/edit",exact:!0,component:ho}),i.a.createElement(B,{path:"/edit/:key",component:fo}),i.a.createElement(B,{path:"/settings",component:sa}))};var ua=function(){return i.a.createElement(we,null,i.a.createElement(Pe,null),i.a.createElement(Ee,null,i.a.createElement(la,null)))};var ca=function(){return i.a.createElement("div",null)};const ha=de.a.div`
+`;function aa(){return(aa=Object.assign||function(e){for(var t=1;t<arguments.length;t++){var n=arguments[t];for(var r in n)Object.prototype.hasOwnProperty.call(n,r)&&(e[r]=n[r])}return e}).apply(this,arguments)}var sa=function(){const[e,t]=Object(r.useState)(-1),[n,o]=Object(r.useState)(-1);return i.a.createElement(ia,null,i.a.createElement("div",null,i.a.createElement(oa,null,i.a.createElement("span",null,"Básico")),i.a.createElement("div",null,i.a.createElement(To,null),i.a.createElement(Io,{useScreenBasic:e,setScreenBasic:t}),i.a.createElement(No,{useScreenBasic:e,setScreenBasic:t}),i.a.createElement(Lo,{useScreenBasic:e,setScreenBasic:t}),i.a.createElement(Mo,{useScreenBasic:e,setScreenBasic:t}),i.a.createElement(Do,{useScreenBasic:e,setScreenBasic:t}))),i.a.createElement("div",null,i.a.createElement(oa,null,i.a.createElement("span",null,"Formas de pagamento")),i.a.createElement("div",null,i.a.createElement(Bo,null))),i.a.createElement("div",null,i.a.createElement(oa,null,i.a.createElement("span",null,"Área de entrega")),i.a.createElement("div",null,i.a.createElement(Go,null))),i.a.createElement("div",null,i.a.createElement(oa,null,i.a.createElement("span",null,"Horário de atendimento")),i.a.createElement("div",null,Fe.u.b.map((e,t)=>i.a.createElement(ra,aa({key:t},{i:t,useScreenTime:n,setScreenTime:o}))))))};var la=function(){return i.a.createElement($,null,i.a.createElement(B,{path:"/",exact:!0,component:Xn}),i.a.createElement(B,{path:"/products",exact:!0,component:dr}),i.a.createElement(B,{path:"/products/:id",component:uo}),i.a.createElement(B,{path:"/edit",exact:!0,component:ho}),i.a.createElement(B,{path:"/edit/:key",component:fo}),i.a.createElement(B,{path:"/settings",component:sa}))};var ua=function(){return i.a.createElement(we,null,i.a.createElement(Pe,null),i.a.createElement(Ee,null,i.a.createElement(la,null)))};const ca=de.a.div`
+  background-color: rgb(255 255 255);
+  height: 48px;
+  border-bottom-width: 1px;
+  border-left-width: 1px;
+  border-top-width: 0;
+  border-right-width: 0;
+  border-style: solid;
+  border-color: rgb(236, 239, 241);
+  display: flex;
+  align-items: center;
+
+  & span {
+    width: 100%;
+    font-size: 2rem;
+    padding: 1.6rem;
+    font-weight: 500;
+  }
+`,ha=de.a.div`
+  width: 100vw;
+  max-width: 256px;
+  z-index: 101;
+  color: #383838;
+  background: #eceff1;
+  -webkit-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+  height: 100vh;
+  border-left: 1px solid #ffffff;
+
+  & {
+    -webkit-transform: translate3d(100vw, 0, 0);
+    -moz-transform: translate3d(100vw, 0, 0);
+    transform: translate3d(100vw, 0, 0);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  & > div {
+    padding: 1.6rem;
+
+    &:not(:last-child) {
+      border-style: solid;
+      border-width: 0 0 1px;
+      border-color: #fff;
+    }
+  }
+
+  & button {
+    display: flex;
+    align-items: center;
+
+    & span {
+        margin-left: 1rem;
+    }
+  }
+`,da=de.a.div`
+
+  & li {
+
+    & span {
+      font-weight: 500;
+    }
+
+    & p {
+      text-transform: uppercase;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+  }
+`,fa=de.a.div`
+
+  & button {
+
+    &:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+  }
+`;var pa=function(){const e=G(),{useOverlay:t,setOverlay:n}=ce(),r=(()=>{const e=document.createElement("div");return e.setAttribute("role","modal"),e})(),o=e=>{a.a.render(i.a.createElement(rt,e),document.body.appendChild(r))};return i.a.createElement(ha,null,i.a.createElement(ca,null,i.a.createElement("span",null,"Ferramentas")),i.a.createElement("div",null,i.a.createElement(da,null,i.a.createElement("li",null,i.a.createElement("span",null,"Razão social"),i.a.createElement("p",null,"brand")),i.a.createElement("li",null,i.a.createElement("span",null,"Comércio"),i.a.createElement("p",null,"commerce")),i.a.createElement("li",null,i.a.createElement("span",null,"Status"),i.a.createElement("p",null,"Ativo")))),i.a.createElement("div",null,i.a.createElement(fa,null,i.a.createElement("button",{type:"button",onClick:()=>alert("Página em desenvolvimento...")},"Pedidos arquivados"),i.a.createElement("button",{type:"button",onClick:()=>alert("Página em desenvolvimento...")},"Pedidos excluídos"))),i.a.createElement("div",null,i.a.createElement("small",null,"Controle as configurações do seu comércio e gerencie todos os pedidos recebidos até a entrega para o cliente com uma excelente experiência.")),i.a.createElement("div",null,i.a.createElement("button",{type:"text",onClick:()=>{o({title:"Sair da conta?",message:"Confirme para sair da conta.",button:["Cancelar","Confirmar"],buttonColor:"#ff2222",action:function(){n(e=>!e),e.push("/"),He().signOut().then(()=>{Be("Desconectado com sucesso!")})}})}},i.a.createElement("svg",{xmlns:"http://www.w3.org/2000/svg",height:"16",viewBox:"0 0 515.556 515.556",width:"16"},i.a.createElement("path",{d:"m225.556 0h64.444v257.778h-64.444z"}),i.a.createElement("path",{d:"m322.222 73.944v68.602c56.798 24.932 96.667 81.559 96.667 147.454 0 88.832-72.28 161.111-161.111 161.111s-161.111-72.279-161.111-161.111c0-65.896 39.869-122.523 96.667-147.454v-68.602c-93.051 27.813-161.112 114.097-161.112 216.056 0 124.358 101.182 225.556 225.556 225.556s225.556-101.198 225.556-225.556c0-101.959-68.061-188.243-161.112-216.056z"})),i.a.createElement("span",null,"Sair"))))};const ma=de.a.div`
   width: 100vw;
   height: 100%;
   position: fixed;
@@ -3052,7 +3135,7 @@ We.a.registerVersion("firebase","8.2.2","app");n(30),n(32);We.a.initializeApp({a
     backdrop-filter: blur(2px);
     background: rgba(255, 255, 255, 0.6);
   }
-`,{jQuery:da}=window;var fa=function(){const{useOverlay:e,setOverlay:t}=ce(),n=Object(r.useRef)(null),[o,a]=Object(r.useState)(!1);return Object(r.useEffect)(()=>{const{current:e}=n;o&&(document.querySelector("#root").style.transform="translate3d(-256px, 0, 0)",da(e).fadeIn(300))},[o]),Object(r.useEffect)(()=>{const{current:t}=n;e?a(!0):(""!==document.querySelector("#root").style.transform&&document.querySelector("#root").removeAttribute("style"),da(t).fadeOut(300,(function(){a(!1)})))},[e]),o&&i.a.createElement(ha,{ref:n,onClick:()=>t(!1)})};const pa=de.a.div`
+`,{jQuery:ga}=window;var va=function(){const{useOverlay:e,setOverlay:t}=ce(),n=Object(r.useRef)(null),[o,a]=Object(r.useState)(!1);return Object(r.useEffect)(()=>{const{current:e}=n;o&&(document.querySelector("#root").style.transform="translate3d(-256px, 0, 0)",ga(e).fadeIn(300))},[o]),Object(r.useEffect)(()=>{const{current:t}=n;e?a(!0):(""!==document.querySelector("#root").style.transform&&document.querySelector("#root").removeAttribute("style"),ga(t).fadeOut(300,(function(){a(!1)})))},[e]),o&&i.a.createElement(ma,{ref:n,onClick:()=>t(!1)})};const ya=de.a.div`
   width: 100vw;
   height: 100%;
   position: fixed;
@@ -3066,7 +3149,7 @@ We.a.registerVersion("firebase","8.2.2","app");n(30),n(32);We.a.initializeApp({a
   & {
     background: rgba(0, 0, 0, 0.4);
   }
-`,{jQuery:ma}=window;var ga=function({data:e}){const{useSwipe:t,setSwipe:n}=he(),o=Object(r.useRef)(null),[a,s]=Object(r.useState)(!1);return Object(r.useEffect)(()=>{const{current:e}=o;a&&ma(e).fadeIn(300)},[a]),Object(r.useEffect)(()=>{const{current:e}=o;t?s(!0):ma(e).fadeOut(300,()=>s(!1))},[t]),a&&i.a.createElement(pa,{ref:o,onClick:()=>n(!1)})},va=new Audio("https://sites.google.com/site/holasoycael/u/to-the-point.mp3");var ya=function(e){const[t,n]=Object(r.useState)(e),[o,a]=Object(r.useState)(!1),[s,l]=Object(r.useState)(!1),{request:u={}}=t;return Ve().ref().on("value",e=>{const{request:r={}}=e.val();JSON.stringify(e.val())!==JSON.stringify(t)&&(Object.keys(r).map(e=>Object.keys(u).includes(e)).includes(!1)&&va.play(),va.muted=!1,n(e.val()))}),i.a.createElement(J,null,i.a.createElement(le,{useConn:t,setConn:n,useOverlay:o,setOverlay:a,useSwipe:s,setSwipe:l},i.a.createElement(Ie,null),i.a.createElement(ua,null),i.a.createElement(ca,null),i.a.createElement(fa,null),i.a.createElement(ga,null)))};const ba=Object(r.createContext)();function wa({children:e,useToggle:t,setToggle:n,useInputEmail:r,setInputEmail:o,useInputPassword:a,setInputPassword:s}){return i.a.createElement(ba.Provider,{value:{useToggle:t,setToggle:n,useInputEmail:r,setInputEmail:o,useInputPassword:a,setInputPassword:s}},e)}const Ea=de.a.div`
+`,{jQuery:ba}=window;var wa=function({data:e}){const{useSwipe:t,setSwipe:n}=he(),o=Object(r.useRef)(null),[a,s]=Object(r.useState)(!1);return Object(r.useEffect)(()=>{const{current:e}=o;a&&ba(e).fadeIn(300)},[a]),Object(r.useEffect)(()=>{const{current:e}=o;t?s(!0):ba(e).fadeOut(300,()=>s(!1))},[t]),a&&i.a.createElement(ya,{ref:o,onClick:()=>n(!1)})},Ea=new Audio("https://sites.google.com/site/holasoycael/u/to-the-point.mp3");var _a=function(e){const[t,n]=Object(r.useState)(e),[o,a]=Object(r.useState)(!1),[s,l]=Object(r.useState)(!1),{request:u={}}=t;return Ve().ref().on("value",e=>{const{request:r={}}=e.val();JSON.stringify(e.val())!==JSON.stringify(t)&&(Object.keys(r).map(e=>Object.keys(u).includes(e)).includes(!1)&&Ea.play(),Ea.muted=!1,n(e.val()))}),i.a.createElement(J,null,i.a.createElement(le,{useConn:t,setConn:n,useOverlay:o,setOverlay:a,useSwipe:s,setSwipe:l},i.a.createElement(Ie,null),i.a.createElement(ua,null),i.a.createElement(pa,null),i.a.createElement(va,null),i.a.createElement(wa,null)))};const Ca=Object(r.createContext)();function xa({children:e,useToggle:t,setToggle:n,useInputEmail:r,setInputEmail:o,useInputPassword:a,setInputPassword:s}){return i.a.createElement(Ca.Provider,{value:{useToggle:t,setToggle:n,useInputEmail:r,setInputEmail:o,useInputPassword:a,setInputPassword:s}},e)}const Sa=de.a.div`
   width: 100%;
   background: #fff;
   font-family: var(--font-lato);
@@ -3090,7 +3173,7 @@ We.a.registerVersion("firebase","8.2.2","app");n(30),n(32);We.a.initializeApp({a
       background: initial;
     }
   }
-`,_a=de.a.div`
+`,ka=de.a.div`
   margin: 0 0 32px;
   color: #3c3c3c;
   font-size: 18px;
@@ -3106,7 +3189,7 @@ We.a.registerVersion("firebase","8.2.2","app");n(30),n(32);We.a.initializeApp({a
 
     background-image: url("data:image/svg+xml;base64,PHN2ZyBpZD0ibWFyY2EiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjE2NC4xODgiIGhlaWdodD0iNDAuODc1IiB2aWV3Qm94PSIwIDAgMTY0LjE4OCA0MC44NzUiPgogIDxkZWZzPgogICAgPHN0eWxlPgogICAgICAuY2xzLTEgewogICAgICAgIGZpbGw6ICNjMDA7CiAgICAgIH0KCiAgICAgIC5jbHMtMSwgLmNscy0yIHsKICAgICAgICBmaWxsLXJ1bGU6IGV2ZW5vZGQ7CiAgICAgIH0KCiAgICAgIC5jbHMtMiB7CiAgICAgICAgZmlsbDogIzIwMjAyMDsKICAgICAgfQogICAgPC9zdHlsZT4KICA8L2RlZnM+CiAgPHBhdGggaWQ9IkZvcm1hXzFfY29waWFyIiBkYXRhLW5hbWU9IkZvcm1hIDEgY29waWFyIiBjbGFzcz0iY2xzLTEiIGQ9Ik00Ny43MTYsMjYuNTIyYTUuOTc4LDUuOTc4LDAsMCwwLC41MjctMi45YzAtLjA5NCwwLTAuNDM3LDAtMC41MjcsMC0yLjYzOS0yLjYzMy00Ljc0LTQuMjItNC43NDctMC41MzIsMC02LjMyOSwwLTYuMzI5LDBMMjcuNDA5LDguMDYxSDQxLjM4NmMzLjEsMCw4LjEuNTYzLDEwLjI4NSw0Ljc0NywwLjkxMiwxLjQ4MiwxLjIwNyw1Ljc2MSwxLjIxMiw3Ljk4NywwLjAyMSwwLjcyNiwwLDUuMzY3LDAsNS43NDdDNTIuMzQsMjYuNTQxLDQ4LjEsMjYuNTIsNDcuNzE2LDI2LjUyMloiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0yNi40MDYgLTguMDYzKSIvPgogIDxwYXRoIGlkPSJGb3JtYV8xIiBkYXRhLW5hbWU9IkZvcm1hIDEiIGNsYXNzPSJjbHMtMSIgZD0iTTM2LjY5NCw0OC45MzlMMjYuNjczLDM4LjY1M3MxNi4wNjgsMCwxNi4zNTEsMGMxLjU4MiwwLDQuMjI1LTIuNjM5LDQuMjItNS4yNzQsMC0uMDk0LDAtMC40MzcsMC0wLjUyNywwLTIuNjM5LTIuNjMzLTQuNzQtNC4yMi00Ljc0Ny0wLjUzMiwwLTYuMzI5LDAtNi4zMjksMEwyNi40MDksMTcuODE5SDQzLjAyM2ExMy43NzEsMTMuNzcxLDAsMCwxLDEwLjAyMiw0Ljc0N2M0LjI4NSw0LjU0Nyw0LjQ4Myw4Ljk2Nyw0LjQ4Myw4Ljk2NywwLjAwNSwwLjc2MSwwLDMuNDI4LDAsMy40MjhhMTMuNDUsMTMuNDUsMCwwLDEtMy45NTYsOC45NjdjLTQuNjQ3LDQuNzUzLTguOTcxLDUuMDEtMTAuNTQ5LDUuMDExQzQyLjc1Niw0OC45NCwzNi42OTQsNDguOTM5LDM2LjY5NCw0OC45MzlaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMjYuNDA2IC04LjA2MykiLz4KICA8cGF0aCBpZD0iQnJhY2FlbCIgY2xhc3M9ImNscy0yIiBkPSJNOTEuMzMsMzIuNzExYzAsMi4wMS0xLjQxLDMuMTgtMy43MiwzLjE4SDgyLjk5di02LjUxaDQuNUM4OS43NywyOS4zODEsOTEuMzMsMzAuNjQxLDkxLjMzLDMyLjcxMVptLTAuNTQtOS4wOWMwLDEuOTItMS4zNSwyLjk3LTMuNTcsMi45N0g4Mi45OXYtNS45N2g0LjIzQzg5LjQ0LDIwLjYyMiw5MC43OSwyMS43MzIsOTAuNzksMjMuNjIyWm0zLjk2LDkuNDVhNS4xODUsNS4xODUsMCwwLDAtNC4wMi01LjEsNC44NzgsNC44NzgsMCwwLDAsMy41NC00Ljc3YzAtMi45NC0yLjM0LTUuMzctNi43NS01LjM3SDc5LjU3VjM4LjY4MWg4LjM0QzkyLjE2OSwzOC42ODEsOTQuNzQ5LDM2LjI1MSw5NC43NDksMzMuMDcxWm03LjE0LTMuMDljMC0zLjUxLDEuNTYtNC41Niw0LjA4LTQuNTZoMC44N3YtMy41NGE1LjM4NCw1LjM4NCwwLDAsMC00Ljk1LDIuNjd2LTIuNEg5OC40N1YzOC42ODFoMy40MTl2LTguN1ptNi45NiwwLjM2YzAsNS4xLDMuNDUsOC42MSw3Ljc0LDguNjFhNy4xMTUsNy4xMTUsMCwwLDAsNS43OS0yLjczdjIuNDZoMy40NVYyMi4xNTJoLTMuNDV2Mi40YTcuMDM2LDcuMDM2LDAsMCwwLTUuNzMtMi42N0MxMTIuMywyMS44ODIsMTA4Ljg0OSwyNS4yNDEsMTA4Ljg0OSwzMC4zNDFabTEzLjUzLDAuMDZjMCwzLjU3LTIuNDMsNS41OC01LjAxLDUuNTgtMi41NSwwLTUuMDEtMi4wNy01LjAxLTUuNjRzMi40Ni01LjQ5LDUuMDEtNS40OUMxMTkuOTQ5LDI0Ljg1MSwxMjIuMzc5LDI2Ljg2MSwxMjIuMzc5LDMwLjRabTYuODEsMGMwLDUuMTksMy4zNiw4LjU1LDguMSw4LjU1YTcuNDIzLDcuNDIzLDAsMCwwLDcuNjE5LTUuNDloLTMuNjg5YTMuNzc1LDMuNzc1LDAsMCwxLTMuOTMsMi42MWMtMi43NiwwLTQuNTktMi4wNC00LjU5LTUuNjcsMC0zLjYsMS44My01LjY0LDQuNTktNS42NGEzLjg2MywzLjg2MywwLDAsMSwzLjkzLDIuNjFoMy42ODljLTAuOTI5LTMuNDgtMy41NjktNS40OS03LjYxOS01LjQ5QzEzMi41NDksMjEuODgyLDEyOS4xODksMjUuMjQxLDEyOS4xODksMzAuNFptMTgtLjA2YzAsNS4xLDMuNDUsOC42MSw3Ljc0LDguNjFhNy4xMTQsNy4xMTQsMCwwLDAsNS43ODktMi43M3YyLjQ2aDMuNDVWMjIuMTUyaC0zLjQ1djIuNGE3LjAzNiw3LjAzNiwwLDAsMC01LjcyOS0yLjY3QzE1MC42MzksMjEuODgyLDE0Ny4xODksMjUuMjQxLDE0Ny4xODksMzAuMzQxWm0xMy41MjksMC4wNmMwLDMuNTctMi40Myw1LjU4LTUuMDEsNS41OC0yLjU0OSwwLTUuMDA5LTIuMDctNS4wMDktNS42NHMyLjQ2LTUuNDksNS4wMDktNS40OUMxNTguMjg4LDI0Ljg1MSwxNjAuNzE4LDI2Ljg2MSwxNjAuNzE4LDMwLjRabTE0LjkxLTUuNjRhNC4yOTIsNC4yOTIsMCwwLDEsNC42Miw0LjE3SDE3MS4xQTQuNSw0LjUsMCwwLDEsMTc1LjYyOCwyNC43NjFabTcuNzQsOWgtMy42OWE0LDQsMCwwLDEtMy45LDIuMzEsNC41NDYsNC41NDYsMCwwLDEtNC43MDktNC4zOEgxODMuN2ExMC41NDgsMTAuNTQ4LDAsMCwwLC4xMi0xLjY4LDcuNzA5LDcuNzA5LDAsMCwwLTguMDQtOC4xM2MtNC44ODksMC04LjI0OSwzLjMzLTguMjQ5LDguNTJzMy41MSw4LjU1LDguMjQ5LDguNTVBNy41NTMsNy41NTMsMCwwLDAsMTgzLjM2OCwzMy43NjFabTMuODEsNC45MmgzLjQydi0yMi4yaC0zLjQydjIyLjJaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMjYuNDA2IC04LjA2MykiLz4KPC9zdmc+Cg==");
   }
-`,Ca=de.a.div`
+`,Ta=de.a.div`
   position: relative;
 
   & * {
@@ -3116,7 +3199,7 @@ We.a.registerVersion("firebase","8.2.2","app");n(30),n(32);We.a.initializeApp({a
   &:not(:last-child) {
     margin-top: 2.2rem;
   }
-`,xa=de.a.svg`
+`,Ia=de.a.svg`
   color: #aaa;
   position: absolute;
   top: 15px;
@@ -3134,7 +3217,7 @@ We.a.registerVersion("firebase","8.2.2","app");n(30),n(32);We.a.initializeApp({a
   &:hover {
     color: rgba(121, 121, 121);
   }
-`,Sa=de.a.input`
+`,Oa=de.a.input`
   width: 100%;
   background: transparent;
   padding: 16px 0;
@@ -3166,21 +3249,21 @@ We.a.registerVersion("firebase","8.2.2","app");n(30),n(32);We.a.initializeApp({a
     z-index: 20;
     top: -8px;
   }
-`,ka=de.a.label`
+`,Na=de.a.label`
   color: #676767;
   font-weight: 100;
   position: absolute;
   font-size: 2rem;
   top: 16px;
   left: 1em;
-`,Ta=de.a.label`
+`,Aa=de.a.label`
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: 2.6rem 0 0;
-`,Ia=de.a.button`
+`,La=de.a.button`
   ${"\n  font-size: 1.75rem;\n  color: #1a73e8;\n  font-weight: 700;\n  font-family: var(--font-lato);\n"}
-`,Oa=de.a.button`
+`,Pa=de.a.button`
   ${fe(3)}
   ${"\n  color: #fff;\n  min-height: 40px;\n  background-color: #0161cd;\n  font-weight: 500;\n  text-align: center;\n  max-width: 132px;\n  width: 100%;\n\n  &:hover {\n    background: #0e75e8;\n  }\n\n  &:focus {\n    -webkit-box-shadow: rgb(151, 200, 255) 0px 0px 4px 2px;\n    box-shadow: rgb(151, 200, 255) 0px 0px 4px 2px;\n  }\n\n  &:active {\n    background: #00f;\n  }\n"}
-`;var Na=function(){const{useToggle:e,setToggle:t}=function(){const e=Object(r.useContext)(ba),{useToggle:t,setToggle:n}=e;return{useToggle:t,setToggle:n}}(),n=()=>t(e=>!e);return e?i.a.createElement(xa,{onClick:()=>n(),fill:"currentColor",focusable:"false",width:"24",height:"24",viewBox:"0 0 24 24",xmlns:"https://www.w3.org/2000/svg"},i.a.createElement("path",{d:"M10.58,7.25l1.56,1.56c1.38,0.07,2.47,1.17,2.54,2.54l1.56,1.56C16.4,12.47,16.5,12,16.5,11.5C16.5,9.02,14.48,7,12,7 C11.5,7,11.03,7.1,10.58,7.25z"}),i.a.createElement("path",{d:"M12,6c3.79,0,7.17,2.13,8.82,5.5c-0.64,1.32-1.56,2.44-2.66,3.33l1.42,1.42c1.51-1.26,2.7-2.89,3.43-4.74 C21.27,7.11,17,4,12,4c-1.4,0-2.73,0.25-3.98,0.7L9.63,6.3C10.4,6.12,11.19,6,12,6z"}),i.a.createElement("path",{d:"M16.43,15.93l-1.25-1.25l-1.27-1.27l-3.82-3.82L8.82,8.32L7.57,7.07L6.09,5.59L3.31,2.81L1.89,4.22l2.53,2.53 C2.92,8.02,1.73,9.64,1,11.5C2.73,15.89,7,19,12,19c1.4,0,2.73-0.25,3.98-0.7l4.3,4.3l1.41-1.41l-3.78-3.78L16.43,15.93z M11.86,14.19c-1.38-0.07-2.47-1.17-2.54-2.54L11.86,14.19z M12,17c-3.79,0-7.17-2.13-8.82-5.5c0.64-1.32,1.56-2.44,2.66-3.33 l1.91,1.91C7.6,10.53,7.5,11,7.5,11.5c0,2.48,2.02,4.5,4.5,4.5c0.5,0,0.97-0.1,1.42-0.25l0.95,0.95C13.6,16.88,12.81,17,12,17z"})):i.a.createElement(xa,{onClick:()=>n(),fill:"currentColor",focusable:"false",width:"24",height:"24",viewBox:"0 0 24 24",xmlns:"https://www.w3.org/2000/svg"},i.a.createElement("path",{d:"M12,7c-2.48,0-4.5,2.02-4.5,4.5S9.52,16,12,16s4.5-2.02,4.5-4.5S14.48,7,12,7z M12,14.2c-1.49,0-2.7-1.21-2.7-2.7 c0-1.49,1.21-2.7,2.7-2.7s2.7,1.21,2.7,2.7C14.7,12.99,13.49,14.2,12,14.2z"}),i.a.createElement("path",{d:"M12,4C7,4,2.73,7.11,1,11.5C2.73,15.89,7,19,12,19s9.27-3.11,11-7.5C21.27,7.11,17,4,12,4z M12,17 c-3.79,0-7.17-2.13-8.82-5.5C4.83,8.13,8.21,6,12,6s7.17,2.13,8.82,5.5C19.17,14.87,15.79,17,12,17z"}))};var Aa=function(){const[e,t]=Object(r.useState)(!1),[n,o]=Object(r.useState)(""),[a,s]=Object(r.useState)("");return i.a.createElement(wa,{useToggle:e,setToggle:t},i.a.createElement(Ea,null,i.a.createElement("div",null,i.a.createElement(_a,null,i.a.createElement("section",null),i.a.createElement("span",null,"Use uma conta Bracael")),i.a.createElement("form",{autoComplete:"off"},i.a.createElement(Ca,null,i.a.createElement(Sa,{type:"email",autoComplete:"off",autoCapitalize:"off",autoCorrect:"off",hasText:n,onChange:e=>o(e.target.value),value:n}),i.a.createElement(ka,null,"E-mail")),i.a.createElement(Ca,null,i.a.createElement(Sa,{type:e?"password":"text",hasText:a,onChange:e=>s(e.target.value),value:a}),i.a.createElement(Na,null),i.a.createElement(ka,null,"Senha")),i.a.createElement(Ta,null,i.a.createElement(Ia,{type:"button",onClick:()=>alert("Entre em contato conosco pelo WhatsApp ou Instagram!")},"Esqueceu a sua senha?"),i.a.createElement(Oa,{type:"submit",onClick:e=>(e.preventDefault(),void He().signInWithEmailAndPassword(n,a).then(()=>Be("Seja bem-vindo!")).catch((function(){alert("E-mail ou senha invalidos")})))},"Fazer login"))))))};He().onAuthStateChanged((function(e){e?Promise.resolve(Ve().ref().once("value").then(e=>e.val())).then((function(e){const{hostname:t,protocol:n}=new URL(window.location.href);return"console.bracael.com"===t&&"https:"===n&&void 0!==e?Promise.resolve(e):Promise.reject()})).then((function(e){a.a.render(i.a.createElement(i.a.StrictMode,null,i.a.createElement(ya,e)),document.getElementById("root"))})).catch((function(){a.a.render(i.a.createElement("div",null,"ERRO 500"),document.getElementById("root"))})):a.a.render(i.a.createElement(i.a.StrictMode,null,i.a.createElement(Aa,null)),document.getElementById("root"))}))}]);
+`;var Ma=function(){const{useToggle:e,setToggle:t}=function(){const e=Object(r.useContext)(Ca),{useToggle:t,setToggle:n}=e;return{useToggle:t,setToggle:n}}(),n=()=>t(e=>!e);return e?i.a.createElement(Ia,{onClick:()=>n(),fill:"currentColor",focusable:"false",width:"24",height:"24",viewBox:"0 0 24 24",xmlns:"https://www.w3.org/2000/svg"},i.a.createElement("path",{d:"M10.58,7.25l1.56,1.56c1.38,0.07,2.47,1.17,2.54,2.54l1.56,1.56C16.4,12.47,16.5,12,16.5,11.5C16.5,9.02,14.48,7,12,7 C11.5,7,11.03,7.1,10.58,7.25z"}),i.a.createElement("path",{d:"M12,6c3.79,0,7.17,2.13,8.82,5.5c-0.64,1.32-1.56,2.44-2.66,3.33l1.42,1.42c1.51-1.26,2.7-2.89,3.43-4.74 C21.27,7.11,17,4,12,4c-1.4,0-2.73,0.25-3.98,0.7L9.63,6.3C10.4,6.12,11.19,6,12,6z"}),i.a.createElement("path",{d:"M16.43,15.93l-1.25-1.25l-1.27-1.27l-3.82-3.82L8.82,8.32L7.57,7.07L6.09,5.59L3.31,2.81L1.89,4.22l2.53,2.53 C2.92,8.02,1.73,9.64,1,11.5C2.73,15.89,7,19,12,19c1.4,0,2.73-0.25,3.98-0.7l4.3,4.3l1.41-1.41l-3.78-3.78L16.43,15.93z M11.86,14.19c-1.38-0.07-2.47-1.17-2.54-2.54L11.86,14.19z M12,17c-3.79,0-7.17-2.13-8.82-5.5c0.64-1.32,1.56-2.44,2.66-3.33 l1.91,1.91C7.6,10.53,7.5,11,7.5,11.5c0,2.48,2.02,4.5,4.5,4.5c0.5,0,0.97-0.1,1.42-0.25l0.95,0.95C13.6,16.88,12.81,17,12,17z"})):i.a.createElement(Ia,{onClick:()=>n(),fill:"currentColor",focusable:"false",width:"24",height:"24",viewBox:"0 0 24 24",xmlns:"https://www.w3.org/2000/svg"},i.a.createElement("path",{d:"M12,7c-2.48,0-4.5,2.02-4.5,4.5S9.52,16,12,16s4.5-2.02,4.5-4.5S14.48,7,12,7z M12,14.2c-1.49,0-2.7-1.21-2.7-2.7 c0-1.49,1.21-2.7,2.7-2.7s2.7,1.21,2.7,2.7C14.7,12.99,13.49,14.2,12,14.2z"}),i.a.createElement("path",{d:"M12,4C7,4,2.73,7.11,1,11.5C2.73,15.89,7,19,12,19s9.27-3.11,11-7.5C21.27,7.11,17,4,12,4z M12,17 c-3.79,0-7.17-2.13-8.82-5.5C4.83,8.13,8.21,6,12,6s7.17,2.13,8.82,5.5C19.17,14.87,15.79,17,12,17z"}))};var ja=function(){const[e,t]=Object(r.useState)(!1),[n,o]=Object(r.useState)(""),[a,s]=Object(r.useState)("");return i.a.createElement(xa,{useToggle:e,setToggle:t},i.a.createElement(Sa,null,i.a.createElement("div",null,i.a.createElement(ka,null,i.a.createElement("section",null),i.a.createElement("span",null,"Use uma conta Bracael")),i.a.createElement("form",{autoComplete:"off"},i.a.createElement(Ta,null,i.a.createElement(Oa,{type:"email",autoComplete:"off",autoCapitalize:"off",autoCorrect:"off",hasText:n,onChange:e=>o(e.target.value),value:n}),i.a.createElement(Na,null,"E-mail")),i.a.createElement(Ta,null,i.a.createElement(Oa,{type:e?"password":"text",hasText:a,onChange:e=>s(e.target.value),value:a}),i.a.createElement(Ma,null),i.a.createElement(Na,null,"Senha")),i.a.createElement(Aa,null,i.a.createElement(La,{type:"button",onClick:()=>alert("Entre em contato conosco pelo WhatsApp ou Instagram!")},"Esqueceu a sua senha?"),i.a.createElement(Pa,{type:"submit",onClick:e=>(e.preventDefault(),void He().signInWithEmailAndPassword(n,a).then(()=>Be("Seja bem-vindo!")).catch((function(){alert("E-mail ou senha invalidos")})))},"Fazer login"))))))};He().onAuthStateChanged((function(e){e?Promise.resolve(Ve().ref().once("value").then(e=>e.val())).then((function(e){const{hostname:t,protocol:n}=new URL(window.location.href);return"console.bracael.com"===t&&"https:"===n&&void 0!==e?Promise.resolve(e):Promise.reject()})).then((function(e){a.a.render(i.a.createElement(i.a.StrictMode,null,i.a.createElement(_a,e)),document.getElementById("root"))})).catch((function(){a.a.render(i.a.createElement("div",null,"ERRO 500"),document.getElementById("root"))})):a.a.render(i.a.createElement(i.a.StrictMode,null,i.a.createElement(ja,null)),document.getElementById("root"))}))}]);
