@@ -97,7 +97,13 @@ html, body {
   overflow: hidden;
 }
 
-
+body #root {
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
 #root {
   display: flex;
 }
@@ -131,6 +137,22 @@ html, body {
   animation-delay: -0.16s;
 }
 
+@media print {
+  html, body {
+      margin: 0;
+      padding: 0;
+      border: 0;
+  }
+  #printable {
+      margin: 0;
+      padding: 0;
+      border: 0;
+      font-size: 14px;
+  }
+  #printable ~ * {
+      display: none;
+  }
+}
 
 
 [role="modal"] {
