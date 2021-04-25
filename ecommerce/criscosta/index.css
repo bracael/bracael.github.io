@@ -1,0 +1,216 @@
+/*----------- SETTINGS ----------*/
+:root {
+  font-size: 50%;
+  --font-roboto: 'Roboto', sans-serif;
+  --font-mont: 'Montserrat', sans-serif;
+  --font-poopins: 'Poppins', sans-serif;
+  --color-background: #ffffff;
+  --color-white: #ffffff;
+  --color-clean: #e8e8e8;
+  --color-gray: #999999;
+  --color-dark: #a9a9a9;
+  --color-default: #0088CC;
+  --color-dark-gray: #333333;
+}
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  list-style: none;
+  border: none;
+  text-decoration: none;
+}
+*, ::after, ::before {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-tap-highlight-color: transparent;
+  -webkit-box-sizing: border-box; /* Safari and Chrome */
+  -moz-box-sizing: border-box; /* Firefox */
+  -ms-box-sizing: border-box; /* IE 9 */
+  -o-box-sizing: border-box; /* Opera */
+  box-sizing: border-box;
+}
+::after, ::before {
+  white-space: pre-wrap;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0,0,0, 0.15);
+  border-radius: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+
+body,
+input,
+button,
+textarea {
+  font: 500 1.6rem var(--font-roboto);
+}
+input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+input[type="radio"], input[type="checkbox"], input[type="file"] {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+  background: transparent;
+}
+
+
+
+body {
+  background: var(--color-background);
+  overflow-y: overlay;
+  overflow-x: hidden;
+}
+
+body, input[disabled] {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+html, body {
+  overflow: hidden;
+}
+
+#root .spinner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: auto;
+  width: 56px;
+  height: 100%;
+}
+
+#root .spinner > div {
+  width: 12px;
+  height: 12px;
+  background-color: #000000;
+  border-radius: 100%;
+  display: inline-block;
+  -webkit-animation: treo-bouncedelay 1s infinite ease-in-out both;
+  animation: treo-bouncedelay 1s infinite ease-in-out both;
+}
+
+#root .spinner .bounce1 {
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+
+#root .spinner .bounce2 {
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+
+
+[role="modal"], [role="over"] {
+  z-index: 100001;
+}
+
+[role="modal"], [role="over"] {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: none;
+  overflow: hidden;
+  outline: 0;
+}
+
+[role="over"]::after {
+  z-index: 0;
+}
+
+[role="modal"]::after {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+[role="over"]::after {
+  background: #fff;
+}
+
+[role="modal"]::after, [role="over"]::after {
+  content: "";
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+
+.push-alert {
+  position: fixed;
+  top: -70px;
+  left: 50%;
+  transform: translate3d(-50%, 0px, 0px);
+  z-index: 1000001;
+  display: flex;
+  justify-content: center;
+  margin-top: 1.6rem;
+}
+.push-alert p {
+  padding: 1.6rem 2rem;
+  background: #fff;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+  font-weight: bold;
+  border-radius: 3px;
+  white-space: nowrap;
+  float: left;
+}
+.push-alert[rule="error"] p {
+  background: #f56464;
+  box-shadow: 0 2px 5px 0 rgba(156,3,3, 0.26);
+}
+.push-alert[rule="sucess"] p {
+  background: #64f588;
+  box-shadow: 0 2px 5px 0 rgba(3, 156, 36, 0.26);
+}
+.push-alert[rule="warning"] p {
+  background: #f5f364;
+  box-shadow: 0 2px 5px 0 rgba(156, 154, 3, 0.26);
+}
+
+
+@-webkit-keyframes treo-bouncedelay {
+  0%, 80%, 100% {
+      -webkit-transform: scale(0)
+  }
+  40% {
+      -webkit-transform: scale(1.0)
+  }
+}
+
+@keyframes treo-bouncedelay {
+  0%, 80%, 100% {
+      -webkit-transform: scale(0);
+      transform: scale(0);
+  }
+  40% {
+      -webkit-transform: scale(1.0);
+      transform: scale(1.0);
+  }
+}
+@keyframes IGCoreSpinnerSpin12{0%{-webkit-transform:rotate(0deg);transform:rotate(0deg)}to{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}
+
+@keyframes changewidth{0%{left:-100%;opacity:0}10%{left:-100%;opacity:.2}25%{left:100%;opacity:.2}90%{opacity:0;left:100%}100%{left:-100%;opacity:0}}
