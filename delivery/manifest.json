@@ -1,25 +1,25 @@
 {
-  "short_name": "Food Lover ®",
-  "name": "@foodloverpoa",
+  "short_name": "Cardápio Online",
+  "name": "App de demonstração",
   "icons": [
     {
-      "src": "https://www.foodlover.poa.br/favicon.ico",
+      "src": "https://www.bracael.com/favicon.ico",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     },
     {
-      "src": "https://1.bp.blogspot.com/-oUITTnpSVRk/X9YmOPzUatI/AAAAAAAAHZg/eWQG2hOlCqEHMeotU_zAl5brcSWdRJ-CQCLcBGAsYHQ/s0/manifest-192.png",
+      "src": "https://1.bp.blogspot.com/-7DafX-IKM1A/X7hnDO3r1RI/AAAAAAAAHYU/hCp110Omj7cL8hL0PB_1cJiY_8py9dEqQCLcBGAsYHQ/s0/logo192.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "https://1.bp.blogspot.com/-RnvW-5xLEUU/X9YmOdQW8eI/AAAAAAAAHZc/uqjZGMp88w8K1MM-u2FLiPomdg6nd2wkACLcBGAsYHQ/s0/manifest-512.png",
+      "src": "https://1.bp.blogspot.com/-pk_rRRKaSWM/X7hs83f-COI/AAAAAAAAHYk/MHjBQa-bxFIqcLrje7czHhPucxBkE-1JwCLcBGAsYHQ/s0/logo512.png",
       "type": "image/png",
       "sizes": "512x512"
     }
   ],
   "start_url": ".",
-  "display": "standalone",
+  "display": "fullscren",
   "theme_color": "#ffffff",
   "background_color": "#ffffff"
 }
