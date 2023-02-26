@@ -1,0 +1,185 @@
+/*----------- SETTINGS ----------*/
+:root {
+  font-size: 62.5%;
+  --font-default: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  --font-poppins: 'Poppins', var(--font-default);
+  --font-lato: 'Lato', var(--font-default);
+  --font-open-sans: 'Open Sans', Helvetica, sans-serif;
+  --color-primary: #f1808a;
+  --color-text: #737373;
+  --color-background: #ffffff;
+  color-scheme: light;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  list-style: none;
+  border: none;
+  text-decoration: none;
+}
+
+*, ::after, ::before {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-tap-highlight-color: transparent;
+  -webkit-box-sizing: border-box; /* Safari and Chrome */
+  -moz-box-sizing: border-box; /* Firefox */
+  -ms-box-sizing: border-box; /* IE 9 */
+  -o-box-sizing: border-box; /* Opera */
+  box-sizing: border-box;
+}
+
+::after, ::before {
+  white-space: pre-wrap;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(0,0,0, 0.15);
+  border-radius: 0;
+}
+::-webkit-scrollbar-track {
+  background: rgba(0,0,0,0);
+}
+
+body,
+input,
+button,
+textarea {
+  font: 300 1.4rem var(--font-poppins);
+}
+input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+input[type="radio"], input[type="checkbox"] {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+  background: transparent;
+}
+
+body {
+  background: #fff !important;
+  overflow-y: overlay;
+  overflow-x: hidden;
+  touch-action: pan-x pan-y;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+body {
+  /* overflow: hidden; */
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+html, body, #root {
+  width: 100vw;
+  height: 100%;
+}
+
+html, body {
+  overflow: hidden;
+}
+
+
+#root .spinner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: auto;
+  width: 56px;
+  height: 100%;
+}
+
+#root .spinner > div {
+  width: 12px;
+  height: 12px;
+  background-color: var(--color-primary);
+  border-radius: 100%;
+  display: inline-block;
+  -webkit-animation: treo-bouncedelay 1s infinite ease-in-out both;
+  animation: treo-bouncedelay 1s infinite ease-in-out both;
+}
+
+#root .spinner .bounce1 {
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+
+#root .spinner .bounce2 {
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+
+@-webkit-keyframes treo-bouncedelay {
+  0%, 80%, 100% {
+      -webkit-transform: scale(0)
+  }
+  40% {
+      -webkit-transform: scale(1.0)
+  }
+}
+
+@keyframes treo-bouncedelay {
+  0%, 80%, 100% {
+      -webkit-transform: scale(0);
+      transform: scale(0);
+  }
+  40% {
+      -webkit-transform: scale(1.0);
+      transform: scale(1.0);
+  }
+}
+
+@keyframes changewidth {
+  0% {
+    left: -100%;
+    opacity: 0;
+  }
+  10% {
+    left: -100%;
+    opacity: 0.2;
+  }
+  25% {
+    left: 100%;
+    opacity: 0.2;
+  }
+  90% {
+    opacity: 0;
+    left: 100%;
+  }
+  100% {
+    left: -100%;
+    opacity: 0;
+  }
+}
+
+.ripple__effect {
+  border-radius: 50%;
+  background-color: #f8bbc0;
+  position: absolute;
+  transform: scale(0);
+  animation: ripple 0.6s linear;
+}
+
+@keyframes ripple {
+  to {
+    transform: scale(2.5);
+    opacity: 0;
+  }
+}
