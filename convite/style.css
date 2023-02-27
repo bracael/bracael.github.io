@@ -97,13 +97,19 @@ html, body {
 }
 
 
+.root__load {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  height: 100%;
+}
 #root .spinner {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: auto;
   width: 56px;
-  height: 100%;
 }
 
 #root .spinner > div {
@@ -124,6 +130,16 @@ html, body {
 #root .spinner .bounce2 {
   -webkit-animation-delay: -0.16s;
   animation-delay: -0.16s;
+}
+
+.root__text {
+  color: var(--color-primary);
+  font-family: var(--font-lato);
+  font-style: italic;
+  font-weight: 600;
+  font-size: 1.3rem;
+  letter-spacing: 0.08rem;
+  margin-top: 1.6rem;
 }
 
 @-webkit-keyframes treo-bouncedelay {
