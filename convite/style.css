@@ -21,15 +21,15 @@
 
 @font-face {
   font-family: 'Bakerie';
-  src: url('/fonts/Bakerie-Bold.woff2') format('woff2');
+  src: url('./fonts/Bakerie-Bold.woff2') format('woff2');
 }
 @font-face {
   font-family: 'Gliker';
-  src: url('/fonts/Gliker-Regular.woff2') format('woff2');
+  src: url('./fonts/Gliker-Regular.woff2') format('woff2');
 }
 @font-face {
   font-family: 'Best Light';
-  src: url('/fonts/Best-Light.woff2') format('woff2');
+  src: url('./fonts/Best-Light.woff2') format('woff2');
 }
 
 * {
